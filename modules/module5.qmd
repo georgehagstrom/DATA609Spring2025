@@ -1,0 +1,52 @@
+---
+title: "Module 5 - Convex Sets"
+editor: source
+---
+
+<!-- 
+See issue with underscores in MathJax equations here: https://gohugo.io/content-management/formats/#issues-with-markdown
+The solution, put backticks (`) around the LaTeX equation
+-->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+## Homework:
+
+Homework 3 is due in two weeks, Sunday at midnight
+
+
+### Learning Objectives
+
+* Definition of Affine and Convex Sets
+* Examples of Convex Sets
+* Operations that Preserve Convexity of Sets
+
+### Readings
+
+Sections 2.1-2.3 of [Convex Optimization](https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
+
+Section 2.1 of Introduction to Algorithms for Machine Learning
+
+
+
+
+
+
+
+

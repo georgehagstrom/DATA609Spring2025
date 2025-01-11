@@ -1,0 +1,59 @@
+---
+title: "Homework 1: "
+format: html 
+editor: source
+---
+
+
+## Instructions
+
+
+
+
+## Problem 1: Gradient Descent
+
+
+(a) Consider the mathematical function defined on $f: \mathbb{R}^2 -> \mathbb{R}$:
+
+$$
+f(x,y) = (x-1)^2 + (y+2)^2,
+$$
+
+Find the single critical point of this function and show that it is a global minimum.
+
+(b) Suppose we wanted to find the global minimum of this function using
+gradient descent instead of the direct calculation from part (a). Write code to perform the gradient descent algorithm, that is perform
+the iteration:
+$$
+\mathbf{v}_{n+1} = \mathbf{v}_n - \nu \nabla f(\mathbf{v}_n),
+$$
+
+where the vector $\mathbf{v} = [x y]^T$ and $\nu$ is the learning rate.
+
+Then test the
+performance of your algorithm for the learning rates $\nu = 1, 0.1, 0.01$, by determining the number of steps required for the algorithm to satisfy the condition $\|\mathbf{v}_n-\mathbf{v}_{\mathrm{opt}}\leq 10^{-8}$. Start with an initial guess
+of $\mathbf{v}_0 = [0 0]^T$. Does the algorithm converge for all the values of the learning rate?
+
+(c) Now consider a modification to $f$ which depends on a parameter $b$:
+
+$$
+f(x,y) = (x-1)^2 + b(y+2)^2
+$$
+
+This function has its global minimum at the same location as the original $f$. Make contour plots of the function $f$ in the vicinity of its global minimum for $b=1$, $b=3$, and $b=10$. Then use gradient descent to find the global minimum, starting from the same initial guess as in part $b$, but restricting to the learning rate $\nu=0.1$.
+Plot the trajectories of the points $mathbf{v}$ that gradient descent
+finds on top of the contour plots and compare the number of steps
+needed for the error to be lower than $10^{-8}$ for the $b=1$ case
+that you studied in part (b).
+
+The differences that you observe here are a special case of a more general phenomenon: the speed of convergence of gradient descent 
+depends on something called the _condition number_ of the
+_Hessian_ matrix (the matrix of the 2nd order partial derivatives) of the target function. The condition number for a symmetric matrix is just the ratio of the largest to smallest eigenvalues, in this case the condition number is $b$ (or 1/$b$). 
+Gradient descent performs worse and worse the larger the condition number (and large condition numbers are problematic for a wide variety of other numerical methods).
+
+
+## Problem 2: Solving Least Squares Problems
+
+
+
+## Problem 3: Iterative Solutions to Least Squares

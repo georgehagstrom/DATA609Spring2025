@@ -1,0 +1,46 @@
+---
+title: "Module 3: Statistical Applications of Least Squares"
+editor: source
+---
+
+<!-- 
+See issue with underscores in MathJax equations here: https://gohugo.io/content-management/formats/#issues-with-markdown
+The solution, put backticks (`) around the LaTeX equation
+-->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+### Deliverables
+
+Homework 2 will be due two Sundays from now.
+
+### Learning Objectives
+
+* Least Squares and Linear Regression
+* Generalized Least Squares 
+* Recursive/Online Least Squares
+* Regularization and Multi-Objective Least Squares
+
+
+### Readings
+
+Chapters 13 and 15 of [Introduction to Applied Linear Algebra](https://web.stanford.edu/~boyd/vmls/)
+
+Sections 4.2 and 4.5 of _Introduction to Algorithms for Data Mining and Machine Learning_
+

@@ -1,0 +1,11 @@
+---
+title: "Acknowledgements"
+format: html
+editor: source
+---
+
+This website would not be possible without the [quarto](https://quarto.org/) package. This course draws inspiration from several open educational resources on the internet, including 
+Stanford Open Education and MIT OpenCourseWare 
+
+
+
