@@ -1,0 +1,144 @@
+project:
+  type: website
+  output-dir: "../docs/"
+
+website:
+  page-navigation: true
+  title: "DATA 609 Spring 2025"
+  description: "DATA 609 - Math Modeling Techniques CUNY School of Professional Studies"
+  site-url: "https://georgehagstrom.github.io/DATA609/"
+
+  repo-url: https://github.com/georgehagstrom/DATA609
+  repo-actions: [edit, issue]
+
+  open-graph: true
+ 
+  page-footer:
+    left:
+    - text: "License"
+      href: license.qmd    
+    background: "#A3C9FF"
+
+  sidebar:
+    background: "#A3C9FF"
+    logo: "images/course_logo.png"
+    pinned: true
+    align: center
+    # List of available icons: https://icons.getbootstrap.com
+    tools:
+      #  - icon: calendar-check
+      #  href: course/schedule.qmd
+      #  text: "Schedule"
+      - icon: github
+        href: https://github.com/georgehagstrom/DATA609
+        text: "Github"
+        target: _blank
+      - icon: slack
+        href: https://data609spring2025.slack.com
+        text: "Slack"
+        target: _blank
+      - icon: link-45deg
+        text: "CUNY"
+        menu:
+          - text: Brightspace LMS
+            url: https://brightspace.cuny.edu
+            target: _blank
+          - text: MSDS Program Page
+            url: https://sps.cuny.edu/academics/graduate/master-science-data-science-ms
+            target: _blank
+          - text: CUNYfirst
+            url: https://cunyfirst.cuny.edu
+            target: _blank
+      - icon: envelope
+        text: "Email"
+        url: mailto:george.hagstrom@cuny.edu?subject=DATA609
+
+    style: "docked"
+    search: true
+    collapse-level: 2
+    contents:
+      - href: "index.qmd"
+        text: "Announcements"
+      - section: "Course information"
+        contents:
+          - href: course/overview.qmd
+            text: Overview
+          - href: course/syllabus.qmd
+            text: Syllabus
+          - href: course/instructors.qmd
+            text: Instructors
+          - href: course/schedule.qmd
+            text: Schedule
+          - href: course/textbooks.qmd
+            text: Textbooks
+          - href: course/software.qmd
+            text: Software
+          # - href: course/materials.qmd
+          # text: Materials
+      - section: "Assignments"
+        contents:
+          - href: assignments/labs.qmd
+            text: "Labs"
+          - href: assignments/project.qmd
+            text: "Project"
+      - section: "Topics"
+        contents:
+          - href: modules/module1.qmd
+            text: "1 - Introduction to Optimization Theory "
+          - href: modules/module2.qmd
+            text: "2 - Least Squares Optimization"
+          - href: modules/module3.qmd
+            text: "3 - Least Squares and Statistics"
+          - href: modules/module4.qmd
+            text: "4 - Constrained Least Squares and Applications"
+          - href: modules/module5.qmd
+            text: "5 - Convex Sets"
+          - href: modules/module6.qmd
+            text: "6 - Convex Sets II"
+          - href: modules/module7.qmd
+            text: "7 - Convex Functions"
+          - href: modules/module8.qmd
+            text: "8 - Convex Functions II"
+          - href: modules/module9.qmd
+            text: "9 - Convex Optimization and Disciplined Convex Programming"
+          - href: modules/module10.qmd
+            text: "10 - Data Fitting"
+          - href: modules/module11.qmd
+            text: "11 - Convex Optimization in Statistics"
+          - href: modules/module12.qmd
+            text: "12 - Duality and Classifiers"
+          - href: modules/module13.qmd
+            text: "13 - Local Optimization and Neural Networks"
+          - href: modules/module14.qmd
+            text: "14 - Stochastic Gradient Descent"
+          - href: modules/module15.qmd
+            text: "15 - Training Deep Neural Networks"
+
+
+
+
+      - href: "acknowledgements.qmd"
+        text: "Acknowledgements"
+
+
+format:
+  html:
+    embed-resources: true
+    self-contained-math: true  
+    theme:
+      light: [cosmo, theme.scss]
+      dark: [cosmo, theme-dark.scss]
+    mainfont: "Atkinson Hyperlegible"
+    code-copy: true
+    code-overflow: wrap
+    toc: false
+    include-in-header:
+      text: |
+        <link href="/fullcalendar-lib/main.css" rel="stylesheet" />
+        <script type="text/javascript" src="/fullcalendar-lib/main.js"></script>
+
+freeze: false
+
+editor: source
+
+

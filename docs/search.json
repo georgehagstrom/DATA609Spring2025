@@ -1,0 +1,361 @@
+[
+  {
+    "objectID": "course/instructors.html",
+    "href": "course/instructors.html",
+    "title": "Instructor",
+    "section": "",
+    "text": "George Hagstrom, Ph.D.\nEmail: george.hagstrom@cuny.edu\nI am currently a Doctoral Lecturer in Data Science and Information Systems at the City University of New York. Additionally, I am a consultant with Princeton University where I development mathematical models of marine phytoplankton and heterotrophic bacteria to improve our understanding of the Earth’s Biogeochemical Cycles. Prior to joining CUNY, I was a Research Scientist at Princeton University in the Levin lab at the Department of Ecology and Evolutionary Biology and a postdoctoral researcher in the Magneto Fluids Division at the Courant Institute for Mathematical Sciences. My research interests include the application of Bayesian statistics and Machine Learning to incorporate nontraditional datasets (such as from ’omics) into mechanistic models of marine ecosystems and biogeochemical cycling, trait-based modeling, and critical transitions in complex ecological, social, or economic systems. In my free time, I enjoy cycling and exploring New York City.\n\nContact\nOffice Hours (Zoom is preferred): By appointment. You’re encouraged to schedule an appointment and I have time nearly everyday. You are also encouraged to ask us questions on Slack. If you wish to ask a question in private, you can email me directly.\nFor the most part, you can expect me to respond to questions by email within 24 hours. If you do not hear back from me within 48 hours of sending an email, please resend your message. I will be checking in on the course regularly, just about every day and likely several times each day. Please do not hesitate to ask if you have questions or concerns.",
+    "crumbs": [
+      "Course information",
+      "Instructors"
+    ]
+  },
+  {
+    "objectID": "course/textbooks.html",
+    "href": "course/textbooks.html",
+    "title": "Textbooks",
+    "section": "",
+    "text": "Required",
+    "crumbs": [
+      "Course information",
+      "Textbooks"
+    ]
+  },
+  {
+    "objectID": "modules/module4.html",
+    "href": "modules/module4.html",
+    "title": "Module 4 - Constrained Least Squares and Applications",
+    "section": "",
+    "text": "Homework\nHomework 2 is due this Sunday at midnight\n\n\nLearning Objectives\n\nSolving Least Squares problems with Linear Equality Constraints\nApplications to Portfolio Optimization\nKalman Filters and Recursive State Estimation\n\n\n\nReadings\nChapters 16 and 17 of Introduction to Applied Linear Algebra",
+    "crumbs": [
+      "Topics",
+      "4 - Constrained Least Squares and Applications"
+    ]
+  },
+  {
+    "objectID": "modules/module13.html",
+    "href": "modules/module13.html",
+    "title": "Module 13: Local Optimization Algorithms and Neural Networks",
+    "section": "",
+    "text": "Homework\nHomework 7 is due in two weeks, Sunday at midnight\n\n\nLearning Objectives\n\nNeural Network Learning and Backpropagation\nGradient Descent\nNewton’s Method\nConvergence Rates and Condition Number\nAcceleration Using Momentum\n\n\n\nReadings\nChapter 9 of Convex Optimization\nChapter 8.1-8.4 of Introduction to Algorithms for Data Mining Machine Learning\nOr alternatively deeplearningbook Chapter 6",
+    "crumbs": [
+      "Topics",
+      "13 - Local Optimization and Neural Networks"
+    ]
+  },
+  {
+    "objectID": "modules/module3.html",
+    "href": "modules/module3.html",
+    "title": "Module 3: Statistical Applications of Least Squares",
+    "section": "",
+    "text": "Deliverables\nHomework 2 will be due two Sundays from now.\n\n\nLearning Objectives\n\nLeast Squares and Linear Regression\nGeneralized Least Squares\nRecursive/Online Least Squares\nRegularization and Multi-Objective Least Squares\n\n\n\nReadings\nChapters 13 and 15 of Introduction to Applied Linear Algebra\nSections 4.2 and 4.5 of Introduction to Algorithms for Data Mining and Machine Learning",
+    "crumbs": [
+      "Topics",
+      "3 - Least Squares and Statistics"
+    ]
+  },
+  {
+    "objectID": "modules/module6.html",
+    "href": "modules/module6.html",
+    "title": "Module 6 - Convex Sets II",
+    "section": "",
+    "text": "Homework 3 is due this Sunday at midnight\n\n\n\nGeneralized Inequalities\nSupporting and Separating Hyperplanes\nDual Cones\n\n\n\n\nSections 2.4-2.6 of Convex Optimization",
+    "crumbs": [
+      "Topics",
+      "6 - Convex Sets II"
+    ]
+  },
+  {
+    "objectID": "modules/module6.html#homework",
+    "href": "modules/module6.html#homework",
+    "title": "Module 6 - Convex Sets II",
+    "section": "",
+    "text": "Homework 3 is due this Sunday at midnight\n\n\n\nGeneralized Inequalities\nSupporting and Separating Hyperplanes\nDual Cones\n\n\n\n\nSections 2.4-2.6 of Convex Optimization",
+    "crumbs": [
+      "Topics",
+      "6 - Convex Sets II"
+    ]
+  },
+  {
+    "objectID": "modules/module10.html",
+    "href": "modules/module10.html",
+    "title": "Module 10 - Convex Problems in Data Fitting",
+    "section": "",
+    "text": "Homework 5 is due this Sunday at midnight\n\n\n\nRegularization- lasso and Huber penalties\nFunction fitting, splines, and interpolation\n\n\n\n\nChapter 6 of Convex Optimization",
+    "crumbs": [
+      "Topics",
+      "10 - Data Fitting"
+    ]
+  },
+  {
+    "objectID": "modules/module10.html#homework",
+    "href": "modules/module10.html#homework",
+    "title": "Module 10 - Convex Problems in Data Fitting",
+    "section": "",
+    "text": "Homework 5 is due this Sunday at midnight\n\n\n\nRegularization- lasso and Huber penalties\nFunction fitting, splines, and interpolation\n\n\n\n\nChapter 6 of Convex Optimization",
+    "crumbs": [
+      "Topics",
+      "10 - Data Fitting"
+    ]
+  },
+  {
+    "objectID": "modules/module9.html",
+    "href": "modules/module9.html",
+    "title": "Module 9: Convex Optimization Problems and Disciplined Convex Programming",
+    "section": "",
+    "text": "Homework\nHomework 5 is due next week, Sunday at midnight.\n\n\nLearning Objectives\n\nDefinition of Convex Optimization Problem\nProblem Transformations\nImportant Subclasses of Convex Optimization Problems\nDiscilined Convex Programming and CVX\nVector Optimization and Scalarization\n\n\n\nReadings\nSections 4.1-4.4, 4.6-4.7 of Convex Optimization\nCVX users guide, read one of these: -python -R -julia",
+    "crumbs": [
+      "Topics",
+      "9 - Convex Optimization and Disciplined Convex Programming"
+    ]
+  },
+  {
+    "objectID": "modules/module12.html",
+    "href": "modules/module12.html",
+    "title": "Module 12: Duality and Classifiers",
+    "section": "",
+    "text": "Learning Objectives\n\nDual Formulation of Optimization Problems\nLagrange Multipliers\nLinear and Nonlinear Classifiers, LDA\nSupport Vector Machines\n\n\n\nReadings\nSections 8.1, 8.2, 8.6, 8.7, 8.8 Convex Optimization",
+    "crumbs": [
+      "Topics",
+      "12 - Duality and Classifiers"
+    ]
+  },
+  {
+    "objectID": "modules/module5.html",
+    "href": "modules/module5.html",
+    "title": "Module 5 - Convex Sets",
+    "section": "",
+    "text": "Homework 3 is due in two weeks, Sunday at midnight\n\n\n\nDefinition of Affine and Convex Sets\nExamples of Convex Sets\nOperations that Preserve Convexity of Sets\n\n\n\n\nSections 2.1-2.3 of Convex Optimization\nSection 2.1 of Introduction to Algorithms for Machine Learning",
+    "crumbs": [
+      "Topics",
+      "5 - Convex Sets"
+    ]
+  },
+  {
+    "objectID": "modules/module5.html#homework",
+    "href": "modules/module5.html#homework",
+    "title": "Module 5 - Convex Sets",
+    "section": "",
+    "text": "Homework 3 is due in two weeks, Sunday at midnight\n\n\n\nDefinition of Affine and Convex Sets\nExamples of Convex Sets\nOperations that Preserve Convexity of Sets\n\n\n\n\nSections 2.1-2.3 of Convex Optimization\nSection 2.1 of Introduction to Algorithms for Machine Learning",
+    "crumbs": [
+      "Topics",
+      "5 - Convex Sets"
+    ]
+  },
+  {
+    "objectID": "acknowledgements.html",
+    "href": "acknowledgements.html",
+    "title": "Acknowledgements",
+    "section": "",
+    "text": "This website would not be possible without the quarto package. This course draws inspiration from several open educational resources on the internet, including Stanford Open Education and MIT OpenCourseWare",
+    "crumbs": [
+      "Acknowledgements"
+    ]
+  },
+  {
+    "objectID": "assignments/labs/Lab1.html#problem-1-gradient-descent",
+    "href": "assignments/labs/Lab1.html#problem-1-gradient-descent",
+    "title": "Homework 1:",
+    "section": "Problem 1: Gradient Descent",
+    "text": "Problem 1: Gradient Descent\n\nConsider the mathematical function defined on \\(f: \\mathbb{R}^2 -&gt; \\mathbb{R}\\):\n\n\\[\nf(x,y) = (x-1)^2 + (y+2)^2,\n\\]\nFind the single critical point of this function and show that it is a global minimum.\n\nSuppose we wanted to find the global minimum of this function using gradient descent instead of the direct calculation from part (a). Write code to perform the gradient descent algorithm, that is perform the iteration: \\[\n\\mathbf{v}_{n+1} = \\mathbf{v}_n - \\nu \\nabla f(\\mathbf{v}_n),\n\\]\n\nwhere the vector \\(\\mathbf{v} = [x y]^T\\) and \\(\\nu\\) is the learning rate.\nThen test the performance of your algorithm for the learning rates \\(\\nu = 1, 0.1, 0.01\\), by determining the number of steps required for the algorithm to satisfy the condition \\(\\|\\mathbf{v}_n-\\mathbf{v}_{\\mathrm{opt}}\\leq 10^{-8}\\). Start with an initial guess of \\(\\mathbf{v}_0 = [0 0]^T\\). Does the algorithm converge for all the values of the learning rate?\n\nNow consider a modification to \\(f\\) which depends on a parameter \\(b\\):\n\n\\[\nf(x,y) = (x-1)^2 + b(y+2)^2\n\\]\nThis function has its global minimum at the same location as the original \\(f\\). Make contour plots of the function \\(f\\) in the vicinity of its global minimum for \\(b=1\\), \\(b=3\\), and \\(b=10\\). Then use gradient descent to find the global minimum, starting from the same initial guess as in part \\(b\\), but restricting to the learning rate \\(\\nu=0.1\\). Plot the trajectories of the points \\(mathbf{v}\\) that gradient descent finds on top of the contour plots and compare the number of steps needed for the error to be lower than \\(10^{-8}\\) for the \\(b=1\\) case that you studied in part (b).\nThe differences that you observe here are a special case of a more general phenomenon: the speed of convergence of gradient descent depends on something called the condition number of the Hessian matrix (the matrix of the 2nd order partial derivatives) of the target function. The condition number for a symmetric matrix is just the ratio of the largest to smallest eigenvalues, in this case the condition number is \\(b\\) (or 1/\\(b\\)). Gradient descent performs worse and worse the larger the condition number (and large condition numbers are problematic for a wide variety of other numerical methods)."
+  },
+  {
+    "objectID": "assignments/labs/Lab1.html#problem-2-solving-least-squares-problems",
+    "href": "assignments/labs/Lab1.html#problem-2-solving-least-squares-problems",
+    "title": "Homework 1:",
+    "section": "Problem 2: Solving Least Squares Problems",
+    "text": "Problem 2: Solving Least Squares Problems"
+  },
+  {
+    "objectID": "assignments/labs/Lab1.html#problem-3-iterative-solutions-to-least-squares",
+    "href": "assignments/labs/Lab1.html#problem-3-iterative-solutions-to-least-squares",
+    "title": "Homework 1:",
+    "section": "Problem 3: Iterative Solutions to Least Squares",
+    "text": "Problem 3: Iterative Solutions to Least Squares"
+  },
+  {
+    "objectID": "assignments/labs.html",
+    "href": "assignments/labs.html",
+    "title": "Labs",
+    "section": "",
+    "text": "The homework assignments in this course are lab assignments where you will solve the problem using a combination of mathematics and computer code.\nPlease submit a PDF and either a quarto file or jupyter notebook or other code that generates your homework. Labs should be submitted on Blackboard.\n\n\nGradient Descent and Least Squares (PDF Download)\n\n\nLeast Squares Applications (PDF Download)\n\n\nConvex Sets (PDF Download)\n\n\nConvex Functions (PDF Download)\n\n\nConvex Optimizations Problems (PDF Download)\n\n\nApplications to Statistics and Machine Learning (PDF Download)\n\n\nNonconvex Optimization and Stochastic Gradient Descent (PDF Download)\n\n\nTraining Deep Neural Networks (PDF Download)",
+    "crumbs": [
+      "Assignments",
+      "Labs"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Announcements",
+    "section": "",
+    "text": "Be sure to check this page regularly for updates. In addition to periodic updates about the course, slides and recordings of the weekly meetups will be posted here.\n\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Announcements"
+    ]
+  },
+  {
+    "objectID": "assignments/project.html",
+    "href": "assignments/project.html",
+    "title": "Data Project",
+    "section": "",
+    "text": "The idea of this project is for you to find data and do something interesting with it that relates to the skills you have developed in this course.\nThe project is intentionally open ended- this is an opportunity for you to explore your interests, through using techniques or technologies that branch off those that were introduced in this class, datasets related to problems you face in your career or that you are curious about, or both.\nA great project will demonstrate a complete “Data Science Workflow”, such as the one introduced at the beginning of the textbook, starting from multiple distinct datasets from public sources (if you have a private dataset that you want to use you may discuss that with me), data tidying, exploratory data analysis, cleaning, hypothesis generation, and lastly modeling. This course has not focused on modeling and the mathematical sophistication of your model will not factor heavily in your evaluation, but by this point in the semester you will have been exposed to enough modeling techniques in other courses to incorporate models within your project.\nThe output of your project should software that allows me to reproduce your work and a research report which describes what you did with the data and your findings, which could be contained within a github repository. You will also present your project in a short presentation in the final week of the semester.\n\n\nThe first step of your project is to submit an initial proposal, which will help to ensure that your project is both worthwhile and feasible in the time frame of the last half of the semester. Your proposal should describe the area that you are interested in (and if you have a specific question already you can describe that too), the datasets you are going to use, and your data analysis plan. Your proposal should be a maximum of 2 pages (excluding figures and references), and should include three sections (each with target length 1-2 paragraphs):\n\nSection 1 - Introduction: The introduction should describe the motivation for your project, the subject matter area of your dataset, and any general research questions you may already have.\nSection 2 - Data: At the time of submitting the proposal you should have already identified some datasets that you plan to use in your analysis. Give a quick description of those datasets here, describe where the data can be found, the number of variables and observations, and/or the output of the glimpse() or skim() functions on the data.\nSection 3 - Data analysis plan: Describe your initial approach to analyzing your data. How will your datasets need to be processed in for your to make use of all of them in the analysis? Which sort of comparisons do you plan to make in your exploratory data analysis (you can share early visualizations of this is you have them)? What statistical methods do you think are appropriate to address the questions that motivated your interest?\n\nThe proposal is preliminary, and you can include additional data or a different analysis as needs require.\n\n\n\nWhen writing proposals, I’ve found the following set of considerations, called “Heilmeier's Questions”, to be helpful to consider. Although this is just a short project, you might find them helpful as well, and useful for formulating future projects and proposals that you might have to complete. These questions were developed by Dr. George Heilmeier, who was the director of DARPA from 1975-1977. Heilmeier said that every proposal to DARPA needed to answer these questions clearly and completely in order to receive funding:\n\nWhat are you trying to do? Articulate your objectives using absolutely no jargon. What is the problem? Why is it hard?\nHow is it done today, and what are the limits of current practice?\nWhat is new in your approach, and why do you think it will be successful?\nWho cares?\nIf you’re successful, what difference will it make? What applications are enabled as a result?\nWhat are the risks?\nHow much will it cost?\nHow long will it take?\nWhat are the midterm and final “exams” to check for success? How will progress be measured?",
+    "crumbs": [
+      "Assignments",
+      "Project"
+    ]
+  },
+  {
+    "objectID": "assignments/project.html#heilmeiers-questions",
+    "href": "assignments/project.html#heilmeiers-questions",
+    "title": "Data Project",
+    "section": "",
+    "text": "When writing proposals, I’ve found the following set of considerations, called “Heilmeier's Questions”, to be helpful to consider. Although this is just a short project, you might find them helpful as well, and useful for formulating future projects and proposals that you might have to complete. These questions were developed by Dr. George Heilmeier, who was the director of DARPA from 1975-1977. Heilmeier said that every proposal to DARPA needed to answer these questions clearly and completely in order to receive funding:\n\nWhat are you trying to do? Articulate your objectives using absolutely no jargon. What is the problem? Why is it hard?\nHow is it done today, and what are the limits of current practice?\nWhat is new in your approach, and why do you think it will be successful?\nWho cares?\nIf you’re successful, what difference will it make? What applications are enabled as a result?\nWhat are the risks?\nHow much will it cost?\nHow long will it take?\nWhat are the midterm and final “exams” to check for success? How will progress be measured?",
+    "crumbs": [
+      "Assignments",
+      "Project"
+    ]
+  },
+  {
+    "objectID": "assignments/labs/tbd.html",
+    "href": "assignments/labs/tbd.html",
+    "title": "Lab TBD",
+    "section": "",
+    "text": "Check back later\nThis assignment is not available to view yet. Please check back closer to the assignment due date/week of the module this assignment is based on."
+  },
+  {
+    "objectID": "license.html",
+    "href": "license.html",
+    "title": "Attribution-ShareAlike 4.0 International",
+    "section": "",
+    "text": "Creative Commons Corporation (“Creative Commons”) is not a law firm and does not provide legal services or legal advice. Distribution of Creative Commons public licenses does not create a lawyer-client or other relationship. Creative Commons makes its licenses and related information available on an “as-is” basis. Creative Commons gives no warranties regarding its licenses, any material licensed under their terms and conditions, or any related information. Creative Commons disclaims all liability for damages resulting from their use to the fullest extent possible."
+  },
+  {
+    "objectID": "license.html#creative-commons-attribution-sharealike-4.0-international-public-license",
+    "href": "license.html#creative-commons-attribution-sharealike-4.0-international-public-license",
+    "title": "Attribution-ShareAlike 4.0 International",
+    "section": "Creative Commons Attribution-ShareAlike 4.0 International Public License",
+    "text": "Creative Commons Attribution-ShareAlike 4.0 International Public License\nBy exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and conditions of this Creative Commons Attribution-ShareAlike 4.0 International Public License (“Public License”). To the extent this Public License may be interpreted as a contract, You are granted the Licensed Rights in consideration of Your acceptance of these terms and conditions, and the Licensor grants You such rights in consideration of benefits the Licensor receives from making the Licensed Material available under these terms and conditions.\n\nSection 1 – Definitions.\n\nAdapted Material means material subject to Copyright and Similar Rights that is derived from or based upon the Licensed Material and in which the Licensed Material is translated, altered, arranged, transformed, or otherwise modified in a manner requiring permission under the Copyright and Similar Rights held by the Licensor. For purposes of this Public License, where the Licensed Material is a musical work, performance, or sound recording, Adapted Material is always produced where the Licensed Material is synched in timed relation with a moving image.\nAdapter’s License means the license You apply to Your Copyright and Similar Rights in Your contributions to Adapted Material in accordance with the terms and conditions of this Public License.\nBY-SA Compatible License means a license listed at creativecommons.org/compatiblelicenses, approved by Creative Commons as essentially the equivalent of this Public License.\nCopyright and Similar Rights means copyright and/or similar rights closely related to copyright including, without limitation, performance, broadcast, sound recording, and Sui Generis Database Rights, without regard to how the rights are labeled or categorized. For purposes of this Public License, the rights specified in Section 2(b)(1)-(2) are not Copyright and Similar Rights.\nEffective Technological Measures means those measures that, in the absence of proper authority, may not be circumvented under laws fulfilling obligations under Article 11 of the WIPO Copyright Treaty adopted on December 20, 1996, and/or similar international agreements.\nExceptions and Limitations means fair use, fair dealing, and/or any other exception or limitation to Copyright and Similar Rights that applies to Your use of the Licensed Material.\nLicense Elements means the license attributes listed in the name of a Creative Commons Public License. The License Elements of this Public License are Attribution and ShareAlike.\nLicensed Material means the artistic or literary work, database, or other material to which the Licensor applied this Public License.\nLicensed Rights means the rights granted to You subject to the terms and conditions of this Public License, which are limited to all Copyright and Similar Rights that apply to Your use of the Licensed Material and that the Licensor has authority to license.\nLicensor means the individual(s) or entity(ies) granting rights under this Public License.\nShare means to provide material to the public by any means or process that requires permission under the Licensed Rights, such as reproduction, public display, public performance, distribution, dissemination, communication, or importation, and to make material available to the public including in ways that members of the public may access the material from a place and at a time individually chosen by them.\nSui Generis Database Rights means rights other than copyright resulting from Directive 96/9/EC of the European Parliament and of the Council of 11 March 1996 on the legal protection of databases, as amended and/or succeeded, as well as other essentially equivalent rights anywhere in the world.\nYou means the individual or entity exercising the Licensed Rights under this Public License. Your has a corresponding meaning.\n\n\n\nSection 2 – Scope.\n\nLicense grant.\n\nSubject to the terms and conditions of this Public License, the Licensor hereby grants You a worldwide, royalty-free, non-sublicensable, non-exclusive, irrevocable license to exercise the Licensed Rights in the Licensed Material to:\n\nreproduce and Share the Licensed Material, in whole or in part; and\nproduce, reproduce, and Share Adapted Material.\n\nExceptions and Limitations. For the avoidance of doubt, where Exceptions and Limitations apply to Your use, this Public License does not apply, and You do not need to comply with its terms and conditions.\nTerm. The term of this Public License is specified in Section 6(a).\nMedia and formats; technical modifications allowed. The Licensor authorizes You to exercise the Licensed Rights in all media and formats whether now known or hereafter created, and to make technical modifications necessary to do so. The Licensor waives and/or agrees not to assert any right or authority to forbid You from making technical modifications necessary to exercise the Licensed Rights, including technical modifications necessary to circumvent Effective Technological Measures. For purposes of this Public License, simply making modifications authorized by this Section 2(a)(4) never produces Adapted Material.\nDownstream recipients.\nA. Offer from the Licensor – Licensed Material. Every recipient of the Licensed Material automatically receives an offer from the Licensor to exercise the Licensed Rights under the terms and conditions of this Public License.\n\n__Additional offer from the Licensor – Adapted Material. Every recipient of Adapted Material from You automatically receives an offer from the Licensor to exercise the Licensed Rights in the Adapted Material under the conditions of the Adapter’s License You apply.\n\nC. No downstream restrictions. You may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, the Licensed Material if doing so restricts exercise of the Licensed Rights by any recipient of the Licensed Material.\nNo endorsement. Nothing in this Public License constitutes or may be construed as permission to assert or imply that You are, or that Your use of the Licensed Material is, connected with, or sponsored, endorsed, or granted official status by, the Licensor or others designated to receive attribution as provided in Section 3(a)(1)(A)(i).\n\nOther rights.\n\nMoral rights, such as the right of integrity, are not licensed under this Public License, nor are publicity, privacy, and/or other similar personality rights; however, to the extent possible, the Licensor waives and/or agrees not to assert any such rights held by the Licensor to the limited extent necessary to allow You to exercise the Licensed Rights, but not otherwise.\nPatent and trademark rights are not licensed under this Public License.\nTo the extent possible, the Licensor waives any right to collect royalties from You for the exercise of the Licensed Rights, whether directly or through a collecting society under any voluntary or waivable statutory or compulsory licensing scheme. In all other cases the Licensor expressly reserves any right to collect such royalties.\n\n\n\n\nSection 3 – License Conditions.\nYour exercise of the Licensed Rights is expressly made subject to the following conditions.\n\nAttribution.\n\nIf You Share the Licensed Material (including in modified form), You must:\n\nretain the following if it is supplied by the Licensor with the Licensed Material:\n\n\n\nidentification of the creator(s) of the Licensed Material and any others designated to receive attribution, in any reasonable manner requested by the Licensor (including by pseudonym if designated);\na copyright notice;\na notice that refers to this Public License;\na notice that refers to the disclaimer of warranties;\na URI or hyperlink to the Licensed Material to the extent reasonably practicable;\n\n\n\nindicate if You modified the Licensed Material and retain an indication of any previous modifications; and\nindicate the Licensed Material is licensed under this Public License, and include the text of, or the URI or hyperlink to, this Public License.\n\nYou may satisfy the conditions in Section 3(a)(1) in any reasonable manner based on the medium, means, and context in which You Share the Licensed Material. For example, it may be reasonable to satisfy the conditions by providing a URI or hyperlink to a resource that includes the required information.\nIf requested by the Licensor, You must remove any of the information required by Section 3(a)(1)(A) to the extent reasonably practicable.\n\nShareAlike.\n\nIn addition to the conditions in Section 3(a), if You Share Adapted Material You produce, the following conditions also apply.\n\nThe Adapter’s License You apply must be a Creative Commons license with the same License Elements, this version or later, or a BY-SA Compatible License.\nYou must include the text of, or the URI or hyperlink to, the Adapter’s License You apply. You may satisfy this condition in any reasonable manner based on the medium, means, and context in which You Share Adapted Material.\nYou may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, Adapted Material that restrict exercise of the rights granted under the Adapter’s License You apply.\n\n\n\nSection 4 – Sui Generis Database Rights.\nWhere the Licensed Rights include Sui Generis Database Rights that apply to Your use of the Licensed Material:\n\nfor the avoidance of doubt, Section 2(a)(1) grants You the right to extract, reuse, reproduce, and Share all or a substantial portion of the contents of the database;\nif You include all or a substantial portion of the database contents in a database in which You have Sui Generis Database Rights, then the database in which You have Sui Generis Database Rights (but not its individual contents) is Adapted Material, including for purposes of Section 3(b); and\nYou must comply with the conditions in Section 3(a) if You Share all or a substantial portion of the contents of the database.\n\nFor the avoidance of doubt, this Section 4 supplements and does not replace Your obligations under this Public License where the Licensed Rights include other Copyright and Similar Rights.\n\n\nSection 5 – Disclaimer of Warranties and Limitation of Liability.\n\nUnless otherwise separately undertaken by the Licensor, to the extent possible, the Licensor offers the Licensed Material as-is and as-available, and makes no representations or warranties of any kind concerning the Licensed Material, whether express, implied, statutory, or other. This includes, without limitation, warranties of title, merchantability, fitness for a particular purpose, non-infringement, absence of latent or other defects, accuracy, or the presence or absence of errors, whether or not known or discoverable. Where disclaimers of warranties are not allowed in full or in part, this disclaimer may not apply to You.\nTo the extent possible, in no event will the Licensor be liable to You on any legal theory (including, without limitation, negligence) or otherwise for any direct, special, indirect, incidental, consequential, punitive, exemplary, or other losses, costs, expenses, or damages arising out of this Public License or use of the Licensed Material, even if the Licensor has been advised of the possibility of such losses, costs, expenses, or damages. Where a limitation of liability is not allowed in full or in part, this limitation may not apply to You.\nThe disclaimer of warranties and limitation of liability provided above shall be interpreted in a manner that, to the extent possible, most closely approximates an absolute disclaimer and waiver of all liability.\n\n\n\nSection 6 – Term and Termination.\n\nThis Public License applies for the term of the Copyright and Similar Rights licensed here. However, if You fail to comply with this Public License, then Your rights under this Public License terminate automatically.\nWhere Your right to use the Licensed Material has terminated under Section 6(a), it reinstates:\n\nautomatically as of the date the violation is cured, provided it is cured within 30 days of Your discovery of the violation; or\nupon express reinstatement by the Licensor.\n\nFor the avoidance of doubt, this Section 6(b) does not affect any right the Licensor may have to seek remedies for Your violations of this Public License.\nFor the avoidance of doubt, the Licensor may also offer the Licensed Material under separate terms or conditions or stop distributing the Licensed Material at any time; however, doing so will not terminate this Public License.\nSections 1, 5, 6, 7, and 8 survive termination of this Public License.\n\n\n\nSection 7 – Other Terms and Conditions.\n\nThe Licensor shall not be bound by any additional or different terms or conditions communicated by You unless expressly agreed.\nAny arrangements, understandings, or agreements regarding the Licensed Material not stated herein are separate from and independent of the terms and conditions of this Public License.t stated herein are separate from and independent of the terms and conditions of this Public License.\n\n\n\nSection 8 – Interpretation.\n\nFor the avoidance of doubt, this Public License does not, and shall not be interpreted to, reduce, limit, restrict, or impose conditions on any use of the Licensed Material that could lawfully be made without permission under this Public License.\nTo the extent possible, if any provision of this Public License is deemed unenforceable, it shall be automatically reformed to the minimum extent necessary to make it enforceable. If the provision cannot be reformed, it shall be severed from this Public License without affecting the enforceability of the remaining terms and conditions.\nNo term or condition of this Public License will be waived and no failure to comply consented to unless expressly agreed to by the Licensor.\nNothing in this Public License constitutes or may be interpreted as a limitation upon, or waiver of, any privileges and immunities that apply to the Licensor or You, including from the legal processes of any jurisdiction or authority.\n\n\nCreative Commons is not a party to its public licenses. Notwithstanding, Creative Commons may elect to apply one of its public licenses to material it publishes and in those instances will be considered the “Licensor.” Except for the limited purpose of indicating that material is shared under a Creative Commons public license or as otherwise permitted by the Creative Commons policies published at creativecommons.org/policies, Creative Commons does not authorize the use of the trademark “Creative Commons” or any other trademark or logo of Creative Commons without its prior written consent including, without limitation, in connection with any unauthorized modifications to any of its public licenses or any other arrangements, understandings, or agreements concerning use of licensed material. For the avoidance of doubt, this paragraph does not form part of the public licenses.\nCreative Commons may be contacted at creativecommons.org"
+  },
+  {
+    "objectID": "modules/module11.html",
+    "href": "modules/module11.html",
+    "title": "Module 11 - Convex Optimization Problems in Statistics",
+    "section": "",
+    "text": "Homework\nHomework 6 is due in two weeks, next Sunday at midnight\n\n\nLearning Objectives\n\nMaximum Likelihood and Maximum Entropy Methods\nMaximum Posterior Probability and Bayesian Inference\nLogistic Regression\nExperiment Design\n\n\n\nReadings\nSections 7.1, 7.2, and 7.5 of Convex Optimization",
+    "crumbs": [
+      "Topics",
+      "11 - Convex Optimization in Statistics"
+    ]
+  },
+  {
+    "objectID": "modules/module8.html",
+    "href": "modules/module8.html",
+    "title": "Module 8: Convex Functions II",
+    "section": "",
+    "text": "Learning Objectives\n\nQuasiconvex Functions\nLog-Convexity/Concavity\nGeneralized Inequalities and Convexity\n\n\n\nReadings\nSections 3.4-3.6 of Convex Optimization",
+    "crumbs": [
+      "Topics",
+      "8 - Convex Functions II"
+    ]
+  },
+  {
+    "objectID": "modules/module14.html",
+    "href": "modules/module14.html",
+    "title": "Module 14: Stochastic Gradient Descent",
+    "section": "",
+    "text": "Homework\nHomework 7 is due this Sunday at midnight\n\n\nLearning Objectives\n\nStochastic Gradient Descent\nHyperparameter Tuning\nSaddle Points and Convergence\n\n\n\nReadings\nSection 8.5 Introduction to Algorithms for Data Mining and Machine Learning\nChapter 8 of deeplearningbook",
+    "crumbs": [
+      "Topics",
+      "14 - Stochastic Gradient Descent"
+    ]
+  },
+  {
+    "objectID": "modules/module15.html",
+    "href": "modules/module15.html",
+    "title": "Module 15 - Deep Learning Applications",
+    "section": "",
+    "text": "Learning Objectives\n\nTraining Deep Neural Networks\n\n\n\nReadings\nGoodfellow Chapter 11 of the deeplearningbook",
+    "crumbs": [
+      "Topics",
+      "15 - Training Deep Neural Networks"
+    ]
+  },
+  {
+    "objectID": "modules/module2.html",
+    "href": "modules/module2.html",
+    "title": "Module 2 - Introduction to Least Squares Problems",
+    "section": "",
+    "text": "Overview and Deliverables\nHomework 1 is due this Sunday at midnight\n\n\nLearning Objectives\n\nSolving unconstrained least squares problems\n\nProperties of the Gram matrix and the pseudoinverse\n\nApplications:\n\nOptimization\nLinear Regression\nFunction Fitting\n\n\n\n\nReadings\nChapter 12 and 13 of Introduction to Applied Linear Algebra",
+    "crumbs": [
+      "Topics",
+      "2 - Least Squares Optimization"
+    ]
+  },
+  {
+    "objectID": "modules/module7.html",
+    "href": "modules/module7.html",
+    "title": "Module 7: Convex Functions",
+    "section": "",
+    "text": "Learning Objectives\n\nDefinitions of Convex Functions\nImportant Examples of Convex Functions\nJensen’s Inequality\nOperations that Preserve Convexity\nConvex Conjugates\n\n\n\nReadings\nSections 3.1-2.3 of Convex Optimization",
+    "crumbs": [
+      "Topics",
+      "7 - Convex Functions"
+    ]
+  },
+  {
+    "objectID": "modules/module1.html",
+    "href": "modules/module1.html",
+    "title": "Module 1 - Introduction to Optimization Problems",
+    "section": "",
+    "text": "Overview and Deliverables\n\nLearning Objectives\n\nYou will learn about how optimization problems are formalized and the terminology used to describe them\nUbiquity of Optimization problems in data science\nWe will define several important classes of optimization problems:\n\nUnconstrained versus Constrained\nConvex versus Non-Convex\nGlobal versus Local\n\nWhy optimization is hard\n\n\n\nReadings\nChapter 1 Introduction to Algorithms for Data Mining and Machine Learning\nChapter 1 of Convex Optimization\nIf you want to brush up on your linear algebra skills:\nEssential Linear Algebra for Machine Learning\nAppendix A1, A3-A5 of Convex Optimization\nThe mathematical level of those appendices are above what I expect from you in the course, I think the essential linear algebra notes are less intimidating.",
+    "crumbs": [
+      "Topics",
+      "1 - Introduction to Optimization Theory "
+    ]
+  },
+  {
+    "objectID": "course/syllabus.html",
+    "href": "course/syllabus.html",
+    "title": "Syllabus",
+    "section": "",
+    "text": "Instructor: George Hagstrom, Ph.D. Class Meetup: Monday 7:00-8:00 Eastern Office Hours: By appointment Email: george.hagstrom@cuny.edu\n\nDescription\nOptimization underlies nearly everything in statistics and machine learning, and has a wealth of applications across many different applied fields. Learning how to recognize and solve optimization problems will allow you to select the best algorithms to solve a given data science problem, give you a deeper understanding of statistics and machine learning tools, and enable you to find reformulations or approximations of problems that are substantially easier or more useful to solve.\nIn this course you will learn optimization theory through its practical applications to statistics and machine learning. The first half of the course will cover convex optimization (including least squares and linear programming as special cases), and the second half will cover methods for non-convex problems, primarily stochastic gradient descent and Markov-Chain Monte Carlo Methods. Applications will include large-scale linear and logistic regression, regularization, maximum likelihood methods, support vector machines, neural networks, Bayesian statistics, and optimization problems arising in an operations research or other business context.\n\n\nCourse Learning Outcomes\nBy the end of the course, students should be able to:\n\nUnderstand how to formulate major statistical and machine learning algorithms as optimization problems\nLearn how to recognize and solve least squares, linear programming, and convex optimization problems.\nLearn how to represent convex optimization problems in the CVX package\nUnderstand the basics of algorithmic complexity theory and use it to understand how quickly different algorithms will converge to the solution of an optimization problem\nImplement stochastic gradient descent for neural networks and other non-convex problems, understand trade-offs in algorithm design\n\n\n\nProgram Learning Outcomes\n\nBusiness Understanding. Apply frameworks and processes to build out data analytics solutions from understanding of business goals.\nSolid foundational data programming skills, using industry standard tools, essential algorithms, and design patterns for working with structured data, unstructured data and big data.\nSolid foundational math and statistics skills, with emphasis on linear algebra, probability, Bayesian statistics, and numerical methods.\nData understanding. Collect, describe, model, explore and verify data.\nData preparation. Selecting, cleaning, constructing, integrating, and formatting data.\nOptimization Modeling. Selecting optimization modeling techniques, generating test designs, building and assessing models.\nModel implementation and deployment.\nCommunicating results.\n\n\n\nGrading\n\nLabs (80%)\nProject (20%)\n\n\nGrade Distribution\n\n\n\n\n\n\n\n\n\nQuality of Performance\nLetter Grade\nRange %\nGPA\n\n\n\n\nExcellent - work is of exceptional quality\nA\n93 - 100\n4\n\n\nExcellent\nA-\n90 - 92.9\n3.7\n\n\nGood - work is above average\nB+\n87 - 89.9\n3.3\n\n\nSatisfactory\nB\n83 - 86.9\n3\n\n\nBelow Average\nB-\n80 - 82.9\n2.7\n\n\nPoor\nC+\n77 - 79.9\n2.3\n\n\nPoor\nC\n70 - 76.9\n2\n\n\nFailure\nF\n&lt; 70\n0\n\n\n\n\n\n\nHow This Course Works\nThis course is conducted entirely online. Each week, you will have various resources made available, including weekly readings from the textbooks and occasionally additional readings provided by the instructor. A homework assignment will be due every other week, see the schedule for details). There will also be a final project required. You are expected to complete all assignments by their due dates.\nYou are expected to attend or watch every Meetup. I highly recommend attending the Meetups live if possible but understand that may not be possible for everyone. Recordings will be made available by the next morning on the Meetups page. In addition to highlighting key concepts from each learning module, some topics will be discussed that are not in the textbook. Moreover, we regularly make announcements in the Meetups that will be important to being successful in this course.\n\n\nTextbooks and Course Materials\nIntroduction to Algorithms for Data Mining and Machine Learning, 1st Edition. Xin-She Yang. ISBN: 978-0-12-817216-2\nConvex Optimization. Vanderberghe and Boyd (available free)\nInformation Theory, Inference, and Learning Algorithms. David MacKay (available free)\nOptimization for Modern Data Analysis. Recht and Wright (available free)\n\n\nAccessibility and Accommodations\nThe CUNY School of Professional Studies is firmly committed to making higher education accessible to students with disabilities by removing architectural barriers and providing programs and support services necessary for them to benefit from the instruction and resources of the University. Early planning is essential for many of the resources and accommodations provided. Please see: http://sps.cuny.edu/student_services/disabilityservices.html\n\n\nOnline Etiquette and Anti-Harassment Policy\nThe University strictly prohibits the use of University online resources or facilities, including Brightspace, for the purpose of harassment of any individual or for the posting of any material that is scandalous, libelous, offensive or otherwise against the University’s policies. Please see: http://media.sps.cuny.edu/filestore/8/4/9_d018dae29d76f89/849_3c7d075b32c268e.pdf\n\n\nAcademic Integrity\nAcademic dishonesty is unacceptable and will not be tolerated. Cheating, forgery, plagiarism and collusion in dishonest acts undermine the educational mission of the City University of New York and the students’ personal and intellectual growth. Please see: http://media.sps.cuny.edu/filestore/8/3/9_dea303d5822ab91/839_1753cee9c9d90e9.pdf\n\n\nPolicy on Generative AI\n\n\nStudent Support Services\nIf you need any additional help, please visit Student Support Services: http://sps.cuny.edu/student_resources/",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "course/schedule.html",
+    "href": "course/schedule.html",
+    "title": "DATA607 - Data Acquisition and Management",
+    "section": "",
+    "text": "Click Here to Join the Meetups on Zoom\n\nCourse Schedule\n\n\n\n\n\n\n\n\n\nDate\nStart Time\nModule\nSlides\nVideo\n\n\n\n\nJan 27\n07:00PM\nIntroduction to Optimization Theory\n\n\n\n\nFeb 3\n07:00PM\nLeast Squares Optimization\n\n\n\n\nFeb 10\n07:00PM\nLeast Squares and Statistics\n\n\n\n\nFeb 18\n07:00PM\nConstrained Least Squares and Applications\n\n\n\n\nFeb 24\n07:00PM\nConvex Sets\n\n\n\n\nMar 3\n07:00PM\nConvex Sets II\n\n\n\n\nMar 10\n07:00PM\nConvex Functions\n\n\n\n\nMar 17\n07:00PM\nConvex Functions II\n\n\n\n\nMar 24\n07:0PM\nConvex Optimization Problems\n\n\n\n\nMar 31\n07:00PM\nData Fitting\n\n\n\n\nApr 7\n07:00PM\nApplications to Statistics and Machine Learning\n\n\n\n\nApr 14\n07:00PM\nDuality and Classifiers\n\n\n\n\nApr 21\n\nNo Meetup (Spring Break)\n\n\n\n\nApr 28\n07:00PM\nGradient Descent and Neural Networks\nLab 7\n\n\n\nMay 5\n07:00PM\nStochastic Gradient Descent\n\n\n\n\nMay 12\n07:00PM\nTraining Deep Neural Networks",
+    "crumbs": [
+      "Course information",
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "course/schedule.html#meetup-link",
+    "href": "course/schedule.html#meetup-link",
+    "title": "DATA607 - Data Acquisition and Management",
+    "section": "",
+    "text": "Click Here to Join the Meetups on Zoom\n\nCourse Schedule\n\n\n\n\n\n\n\n\n\nDate\nStart Time\nModule\nSlides\nVideo\n\n\n\n\nJan 27\n07:00PM\nIntroduction to Optimization Theory\n\n\n\n\nFeb 3\n07:00PM\nLeast Squares Optimization\n\n\n\n\nFeb 10\n07:00PM\nLeast Squares and Statistics\n\n\n\n\nFeb 18\n07:00PM\nConstrained Least Squares and Applications\n\n\n\n\nFeb 24\n07:00PM\nConvex Sets\n\n\n\n\nMar 3\n07:00PM\nConvex Sets II\n\n\n\n\nMar 10\n07:00PM\nConvex Functions\n\n\n\n\nMar 17\n07:00PM\nConvex Functions II\n\n\n\n\nMar 24\n07:0PM\nConvex Optimization Problems\n\n\n\n\nMar 31\n07:00PM\nData Fitting\n\n\n\n\nApr 7\n07:00PM\nApplications to Statistics and Machine Learning\n\n\n\n\nApr 14\n07:00PM\nDuality and Classifiers\n\n\n\n\nApr 21\n\nNo Meetup (Spring Break)\n\n\n\n\nApr 28\n07:00PM\nGradient Descent and Neural Networks\nLab 7\n\n\n\nMay 5\n07:00PM\nStochastic Gradient Descent\n\n\n\n\nMay 12\n07:00PM\nTraining Deep Neural Networks",
+    "crumbs": [
+      "Course information",
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "course/overview.html",
+    "href": "course/overview.html",
+    "title": "DATA 609 - Math Modeling Techniques",
+    "section": "",
+    "text": "Optimization underlies nearly everything in statistics and machine learning, and has a wealth of applications across many different applied fields. Learning how to recognize and solve optimization problems will allow you to select the best algorithms to solve a given data science problem, give you a deeper understanding of statistics and machine learning tools, and enable you to find reformulations or approximations of problems that are substantially easier or more useful to solve.",
+    "crumbs": [
+      "Course information",
+      "Overview"
+    ]
+  }
+]

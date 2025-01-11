@@ -1,0 +1,98 @@
+
+---
+title: "Syllabus"
+---
+
+**Instructor:** George Hagstrom, Ph.D.
+**Class Meetup:** Monday 7:00-8:00 Eastern
+**Office Hours:** By appointment
+**Email:** <a href="mailto:george.hagstrom@cuny.edu">george.hagstrom@cuny.edu</a>
+
+
+### Description
+
+Optimization underlies nearly everything in statistics and machine learning, and has a wealth of applications across many different applied fields. Learning how to recognize and solve optimization problems will allow you to select the best algorithms to solve a given data science problem, give you a deeper understanding of statistics and machine learning tools, and enable you to find reformulations or approximations of problems that are substantially easier or more useful to solve. 
+
+In this course you will learn optimization theory through its practical applications to statistics and machine learning. The first half of the course will cover convex optimization (including least squares and linear programming as special cases), and the second half will cover methods for non-convex problems, primarily stochastic gradient descent and Markov-Chain Monte Carlo Methods. Applications will include large-scale linear and logistic regression, regularization, maximum likelihood methods, support vector machines, neural networks, Bayesian statistics, and optimization problems arising in an operations research or other business context.
+
+### Course Learning Outcomes
+
+By the end of the course, students should be able to:
+
+- Understand how to formulate major statistical and machine learning algorithms as optimization problems
+- Learn how to recognize and solve least squares, linear programming, and convex optimization problems.
+- Learn how to represent convex optimization problems in the CVX package
+- Understand the basics of algorithmic complexity theory and use it to understand how quickly different algorithms will converge to the solution of an optimization problem
+- Implement stochastic gradient descent for neural networks and other non-convex problems, understand trade-offs in algorithm design
+
+
+### Program Learning Outcomes
+
+
+- Business Understanding. Apply frameworks and processes to build out data analytics solutions from understanding of business goals.
+- Solid foundational data programming skills, using industry standard tools, essential algorithms, and design patterns for working with structured data, unstructured data and big data.
+- Solid foundational math and statistics skills, with emphasis on linear algebra, probability, Bayesian statistics, and numerical methods.
+- Data understanding. Collect, describe, model, explore and verify data.
+- Data preparation. Selecting, cleaning, constructing, integrating, and formatting data.
+- Optimization Modeling. Selecting optimization modeling techniques, generating test designs, building and assessing models.
+- Model implementation and deployment.
+- Communicating results.
+
+### Grading
+
+* [Labs](/assignments/labs) (80%)
+* [Project](/assignments/project) (20%)
+
+
+
+#### Grade Distribution
+
+Quality of Performance                     | Letter Grade | Range %   | GPA  |
+-------------------------------------------|:------------:|:---------:|:----:|
+Excellent - work is of exceptional quality |      A       | 93 - 100  |  4   |
+Excellent                                  |      A-      | 90 - 92.9 | 3.7  |
+Good - work is above average               |      B+      | 87 - 89.9 | 3.3  |
+Satisfactory                               |      B       | 83 - 86.9 |  3   |
+Below Average                              |      B-      | 80 - 82.9 | 2.7  |
+Poor                                       |      C+      | 77 - 79.9 | 2.3  |
+Poor                                       |      C       | 70 - 76.9 |  2   |
+Failure                                    |      F       |   < 70    |  0   |
+
+### How This Course Works
+
+This course is conducted entirely online. Each week, you will have various resources made available, including weekly readings from the textbooks and occasionally additional readings provided by the instructor. A homework assignment will be due every other week, see the [schedule](/course-overview/schedule/) for details). 
+There will also be a final project required. You are expected to complete all assignments by their due dates.
+
+**You are expected to attend or watch every Meetup.** I highly recommend attending the Meetups live if possible but understand that may not be possible for everyone. Recordings will be made available by the next morning on the [Meetups page](/course-overview/meetups/). In addition to highlighting key concepts from each learning module, some topics will be discussed that are not in the textbook. Moreover, we regularly make announcements in the Meetups that will be important to being successful in this course. 
+
+### Textbooks and Course Materials
+
+Introduction to Algorithms for Data Mining and Machine Learning, 1st Edition. Xin-She Yang. ISBN: 978-0-12-817216-2 
+
+Convex Optimization. Vanderberghe and Boyd (available free)
+
+Information Theory, Inference, and Learning Algorithms. David MacKay (available free) 
+
+Optimization for Modern Data Analysis. Recht and Wright (available free)
+
+### Accessibility and Accommodations
+
+The CUNY School of Professional Studies is firmly committed to making higher education accessible to students with disabilities by removing architectural barriers and providing programs and support services necessary for them to benefit from the instruction and resources of the University. Early planning is essential for many of the resources and accommodations provided. Please see: [http://sps.cuny.edu/student_services/disabilityservices.html](http://sps.cuny.edu/student_services/disabilityservices.html)
+
+### Online Etiquette and Anti-Harassment Policy
+
+The University strictly prohibits the use of University online resources or facilities, including Brightspace, for the purpose of harassment of any individual or for the posting of any material that is scandalous, libelous, offensive or otherwise against the University’s policies.  Please see: [http://media.sps.cuny.edu/filestore/8/4/9_d018dae29d76f89/849_3c7d075b32c268e.pdf](http://media.sps.cuny.edu/filestore/8/4/9_d018dae29d76f89/849_3c7d075b32c268e.pdf)
+
+### Academic Integrity
+
+Academic dishonesty is unacceptable and will not be tolerated. Cheating, forgery, plagiarism and collusion in dishonest acts undermine the educational mission of the City University of New York and the students' personal and intellectual growth. Please see: [http://media.sps.cuny.edu/filestore/8/3/9_dea303d5822ab91/839_1753cee9c9d90e9.pdf](http://media.sps.cuny.edu/filestore/8/3/9_dea303d5822ab91/839_1753cee9c9d90e9.pdf)
+
+### Policy on Generative AI
+
+
+
+
+### Student Support Services
+
+If you need any additional help, please visit Student Support Services: 
+[http://sps.cuny.edu/student_resources/](http://sps.cuny.edu/student_resources/)

@@ -1,0 +1,60 @@
+---
+title: "Module 1 - Introduction to Optimization Problems"
+editor: source
+---
+
+<!-- 
+See issue with underscores in MathJax equations here: https://gohugo.io/content-management/formats/#issues-with-markdown
+The solution, put backticks (`) around the LaTeX equation
+-->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+# Overview and Deliverables
+
+
+### Learning Objectives
+
+* You will learn about how optimization problems are formalized and the terminology used to describe them
+* Ubiquity of Optimization problems in data science
+* We will define several important classes of optimization problems:
+  - Unconstrained versus Constrained
+  - Convex versus Non-Convex
+  - Global versus Local
+* Why optimization is hard
+
+
+
+### Readings
+
+Chapter 1 Introduction to Algorithms for Data Mining and Machine Learning
+
+Chapter 1 of [Convex Optimization](https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
+
+If you want to brush up on your linear algebra skills:
+
+[Essential Linear Algebra for Machine Learning](https://www.cs.cmu.edu/~zkolter/course/linalg/linalg_notes.pdf)
+
+
+Appendix A1, A3-A5 of [Convex Optimization](https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
+
+The mathematical level of those appendices are above what I expect from you in the course, I think the essential linear algebra notes are less intimidating.
+
+
+
+

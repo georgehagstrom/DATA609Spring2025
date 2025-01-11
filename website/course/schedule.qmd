@@ -1,0 +1,35 @@
+---
+title: "DATA607 - Data Acquisition and Management"
+tbl-colwidths: [10,10,20,5,5,5,5,5,5,5]
+editor_options: 
+  chunk_output_type: console
+---
+
+## Meetup Link:
+
+[Click Here to Join the Meetups on Zoom](https://us02web.zoom.us/j/81858708616?pwd=eE9ZGJFco9iicq3BsmANIfWUVLwy0x.1#success)
+
+
+
+| Date  | Start Time  | Module    | Slides |  Video  | Main Deliverables |
+|--------|--------|------|------|------|
+| Jan 27 | 07:00PM | [Introduction to Optimization Theory](../modules/module1) |  |   |    |
+| Feb 3 | 07:00PM | [Least Squares Optimization](../modules/module2) |    |   | 	[Lab 1](../assignments/labs/Lab1)   |
+| Feb 10 | 07:00PM | [Least Squares and Statistics](../modules/module3) |  |  |   |
+| Feb 18 | 07:00PM | [Constrained Least Squares and Applications ](../modules/module4) |   |  | [Lab 2](../assignments/labs/Lab2)  |
+| Feb 24 | 07:00PM | [Convex Sets](../modules/module5) |  |   |    |
+| Mar 3 | 07:00PM | [Convex Sets II ](../modules/module6) |  |   | [Lab 3](../assignments/labs/Lab3.qmd)  |
+| Mar 10 | 07:00PM | [Convex Functions](../modules/module7) |  |   |   |
+| Mar 17 | 07:00PM | [Convex Functions II](../modules/module8) |  |   | [Lab 4](../assignments/labs/Lab4.qmd)  |
+| Mar 24 | 07:0PM | [Convex Optimization Problems](../modules/module9) |  |  |    |
+| Mar 31 | 07:00PM | [Data Fitting](../modules/module10) | |  | [Lab 5](../assignments/labs/Lab5.qmd) |
+| Apr 7 | 07:00PM | [Applications to Statistics and Machine Learning](../modules/module11) |  |  |   |
+| Apr 14 | 07:00PM | [Duality and Classifiers](../modules/module12) |  |  | [Lab 6](../assignments/labs/Lab6)   |
+| Apr 21 | | No Meetup (Spring Break) |   |   |   |
+| Apr 28 | 07:00PM        | [Gradient Descent and Neural Networks](../modules/module13) | [Lab 7](../assignments/labs/Lab7)  | | |
+| May 5  | 07:00PM | [Stochastic Gradient Descent](../modules/module14) |   |    |   |
+| May 12  | 07:00PM | [Training Deep Neural Networks](../modules/module15)  | | | [Lab 8](../assignments/Lab8) [Final project](../assignments/project.qmd)  | 
+
+: Course Schedule {.striped .hover}
+
+

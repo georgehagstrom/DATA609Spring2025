@@ -1,0 +1,56 @@
+---
+title: "Module 9: Convex Optimization Problems and Disciplined Convex Programming"
+editor: source
+---
+
+<!-- 
+See issue with underscores in MathJax equations here: https://gohugo.io/content-management/formats/#issues-with-markdown
+The solution, put backticks (`) around the LaTeX equation
+-->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+### Homework
+
+Homework 5 is due next week, Sunday at midnight.
+
+
+
+### Learning Objectives
+
+* Definition of Convex Optimization Problem
+* Problem Transformations
+* Important Subclasses of Convex Optimization Problems
+* Discilined Convex Programming and CVX
+* Vector Optimization and Scalarization
+
+### Readings
+
+
+Sections 4.1-4.4, 4.6-4.7 of [Convex Optimization](https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
+
+CVX users guide, read one of these:
+  -[python](https://www.cvxpy.org/tutorial/index.html)
+  -[R](https://cvxr.rbind.io/cvxr_examples/cvxr_intro/)
+  -[julia](https://jump.dev/Convex.jl/stable/)
+
+
+
+
+
+

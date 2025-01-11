@@ -1,0 +1,47 @@
+---
+title: "Module 2 - Introduction to Least Squares Problems"
+editor: source
+---
+
+<!-- 
+See issue with underscores in MathJax equations here: https://gohugo.io/content-management/formats/#issues-with-markdown
+The solution, put backticks (`) around the LaTeX equation
+-->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+### Overview and Deliverables
+
+Homework 1 is due this Sunday at midnight
+
+### Learning Objectives
+
+* Solving unconstrained least squares problems
+  - Properties of the Gram matrix and the pseudoinverse
+* Applications:
+  - Optimization 
+  - Linear Regression
+  - Function Fitting
+
+
+### Readings
+
+Chapter 12 and 13 of [Introduction to Applied Linear Algebra](https://web.stanford.edu/~boyd/vmls/vmls.pdf)
+
+
+

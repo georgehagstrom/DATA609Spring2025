@@ -1,0 +1,6 @@
+---
+title: "DATA 609 - Math Modeling Techniques"
+---
+
+Optimization underlies nearly everything in statistics and machine learning, and has a wealth of applications across many different applied fields. Learning how to recognize and solve optimization problems will allow you to select the best algorithms to solve a given data science problem, give you a deeper understanding of statistics and machine learning tools, and enable you to find reformulations or approximations of problems that are substantially easier or more useful to solve.
+

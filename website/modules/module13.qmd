@@ -1,0 +1,57 @@
+---
+title: "Module 13: Local Optimization Algorithms and Neural Networks"
+editor: source
+---
+
+<!-- 
+See issue with underscores in MathJax equations here: https://gohugo.io/content-management/formats/#issues-with-markdown
+The solution, put backticks (`) around the LaTeX equation
+-->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+### Homework
+
+Homework 7 is due in two weeks, Sunday at midnight
+
+
+### Learning Objectives
+
+
+* Neural Network Learning and Backpropagation
+* Gradient Descent
+* Newton's Method
+* Convergence Rates and Condition Number
+* Acceleration Using Momentum
+
+
+### Readings
+
+Chapter 9 of [Convex Optimization](https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
+
+
+Chapter 8.1-8.4 of Introduction to Algorithms for Data Mining Machine Learning
+
+Or alternatively [deeplearningbook Chapter 6](https://www.deeplearningbook.org/contents/mlp.html)
+
+
+
+
+
+
+
