@@ -2,5 +2,32 @@
 title: "Textbooks"
 ---
 
-#### Required
+### Required
+
+This course makes use of several textbooks. I have attempted when possible to choose resources which are freely available.
+
+1. Stephen Boyd and Lieven Vandenberghe. [Introduction to Applied Linear Algebra: Vectors, Matrices, and Least Squares](https://web.stanford.edu/~boyd/vmls/)
+
+This book provides a strong practical introduction to Linear Algebra. We are primarily using the later parts of the book to learn about applications of least squares. However, you 
+are encouraged to use earlier parts of the book to review linear algebra if needed.
+
+
+2. Lieven Vandenberghe and Stephen Boyd. [Convex Optimization](https://web.stanford.edu/~boyd/cvxbook/)
+
+This is an excellent book on practical applications of convex optimization. We will use the first half of the book, which focuses on identifying convex optimization problems. 
+
+3. Ian Goodfellow, Yoshua Bengio, and Aaron Courville. [Deep Learning](https://www.deeplearningbook.org/)
+
+This is a good introduction to neural networks and deep learning.
+
+### Optional
+
+1. Yang Xin-She. Introduction to algorithms for data mining and machine learning. Academic press, 2019.
+
+This textbook provides a concise introduction to optimization for machine learning.
+
+2. David Mackay [Information Theory, Inference, and Learning Algorithms](https://www.inference.org.uk/itprnn/book.pdf)
+
+This is free textbook covers a large number of topics that are of relevance to data science, often from a slightly different perspective than standard treatments. It provides an
+excellent introduction to Bayesian Inference and Neural Networks, but applies ideas from information theory too.
 

@@ -67,13 +67,20 @@ There will also be a final project required. You are expected to complete all as
 
 ### Textbooks and Course Materials
 
-Introduction to Algorithms for Data Mining and Machine Learning, 1st Edition. Xin-She Yang. ISBN: 978-0-12-817216-2 
 
-Convex Optimization. Vanderberghe and Boyd (available free)
+This course makes use of several textbooks. I have attempted when possible to choose resources which are freely available.
 
-Information Theory, Inference, and Learning Algorithms. David MacKay (available free) 
+1. Stephen Boyd and Lieven Vandenberghe. [Introduction to Applied Linear Algebra: Vectors, Matrices, and Least Squares](https://web.stanford.edu/~boyd/vmls/)
 
-Optimization for Modern Data Analysis. Recht and Wright (available free)
+2. Lieven Vandenberghe and Stephen Boyd. [Convex Optimization](https://web.stanford.edu/~boyd/cvxbook/)
+
+4. Ian Goodfellow, Yoshua Bengio, and Aaron Courville. [Deep Learning](https://www.deeplearningbook.org/)
+
+#### Optional
+
+1. Yang Xin-She. Introduction to algorithms for data mining and machine learning. Academic press, 2019.
+
+2. David Mackay [Information Theory, Inference, and Learning Algorithms](https://www.inference.org.uk/itprnn/book.pdf)
 
 ### Accessibility and Accommodations
 
@@ -86,10 +93,6 @@ The University strictly prohibits the use of University online resources or faci
 ### Academic Integrity
 
 Academic dishonesty is unacceptable and will not be tolerated. Cheating, forgery, plagiarism and collusion in dishonest acts undermine the educational mission of the City University of New York and the students' personal and intellectual growth. Please see: [http://media.sps.cuny.edu/filestore/8/3/9_dea303d5822ab91/839_1753cee9c9d90e9.pdf](http://media.sps.cuny.edu/filestore/8/3/9_dea303d5822ab91/839_1753cee9c9d90e9.pdf)
-
-### Policy on Generative AI
-
-
 
 
 ### Student Support Services
