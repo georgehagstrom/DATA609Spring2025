@@ -75,8 +75,6 @@ website:
             text: Software
           # - href: course/materials.qmd
           # text: Materials
-          - href: course/calendar.qmd
-            text: Calendar
       - section: "Assignments"
         contents:
           - href: assignments/labs.qmd
