@@ -1,0 +1,33 @@
+---
+title: "Homework 5: Disciplined Convex Programming and Data Fitting"
+format: html 
+editor: source
+---
+
+
+## Instructions
+
+Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file,
+I recommend python, julia, or R. 
+
+
+## Problem 1: 
+
+Exercise 4.2 in Convex Optimization
+
+## Problem 2: 
+
+4.2 ‘Hello World’ in CVX. Use CVX to verify the optimal values you obtained (analytically) for
+exercise 4.2 in Convex Optimization
+
+## Problem 3: 
+
+Exercise 4.60 in Convex Optimization
+
+## Problem 4: 
+
+Exercise 6.4 in Convex Optimization Extended Exercises 
+
+## Problem 5: 
+
+Exercise 6.13 in Convex Optimization Extended Exercises 

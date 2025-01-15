@@ -164,46 +164,116 @@
     ]
   },
   {
+    "objectID": "assignments/labs/Lab1.html",
+    "href": "assignments/labs/Lab1.html",
+    "title": "Homework 1: Introduction to Optimization and Least Squares",
+    "section": "",
+    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
+  },
+  {
+    "objectID": "assignments/labs/Lab1.html#instructions",
+    "href": "assignments/labs/Lab1.html#instructions",
+    "title": "Homework 1: Introduction to Optimization and Least Squares",
+    "section": "",
+    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
+  },
+  {
     "objectID": "assignments/labs/Lab1.html#problem-1-gradient-descent",
     "href": "assignments/labs/Lab1.html#problem-1-gradient-descent",
-    "title": "Homework 1:",
+    "title": "Homework 1: Introduction to Optimization and Least Squares",
     "section": "Problem 1: Gradient Descent",
-    "text": "Problem 1: Gradient Descent\n\nConsider the mathematical function defined on \\(f: \\mathbb{R}^2 -&gt; \\mathbb{R}\\):\n\n\\[\nf(x,y) = (x-1)^2 + (y+2)^2,\n\\]\nFind the single critical point of this function and show that it is a global minimum.\n\nSuppose we wanted to find the global minimum of this function using gradient descent instead of the direct calculation from part (a). Write code to perform the gradient descent algorithm, that is perform the iteration: \\[\n\\mathbf{v}_{n+1} = \\mathbf{v}_n - \\nu \\nabla f(\\mathbf{v}_n),\n\\]\n\nwhere the vector \\(\\mathbf{v} = [x y]^T\\) and \\(\\nu\\) is the learning rate.\nThen test the performance of your algorithm for the learning rates \\(\\nu = 1, 0.1, 0.01\\), by determining the number of steps required for the algorithm to satisfy the condition \\(\\|\\mathbf{v}_n-\\mathbf{v}_{\\mathrm{opt}}\\leq 10^{-8}\\). Start with an initial guess of \\(\\mathbf{v}_0 = [0 0]^T\\). Does the algorithm converge for all the values of the learning rate?\n\nNow consider a modification to \\(f\\) which depends on a parameter \\(b\\):\n\n\\[\nf(x,y) = (x-1)^2 + b(y+2)^2\n\\]\nThis function has its global minimum at the same location as the original \\(f\\). Make contour plots of the function \\(f\\) in the vicinity of its global minimum for \\(b=1\\), \\(b=3\\), and \\(b=10\\). Then use gradient descent to find the global minimum, starting from the same initial guess as in part \\(b\\), but restricting to the learning rate \\(\\nu=0.1\\). Plot the trajectories of the points \\(mathbf{v}\\) that gradient descent finds on top of the contour plots and compare the number of steps needed for the error to be lower than \\(10^{-8}\\) for the \\(b=1\\) case that you studied in part (b).\nThe differences that you observe here are a special case of a more general phenomenon: the speed of convergence of gradient descent depends on something called the condition number of the Hessian matrix (the matrix of the 2nd order partial derivatives) of the target function. The condition number for a symmetric matrix is just the ratio of the largest to smallest eigenvalues, in this case the condition number is \\(b\\) (or 1/\\(b\\)). Gradient descent performs worse and worse the larger the condition number (and large condition numbers are problematic for a wide variety of other numerical methods)."
+    "text": "Problem 1: Gradient Descent\n\nConsider the mathematical function defined on \\(f: \\mathbb{R}^2 \\rarrow \\mathbb{R}\\):\n\n\\[\nf(x,y) = (x-1)^2 + (y+2)^2,\n\\]\nFind the single critical point of this function and show that it is a global minimum.\n\nSuppose we wanted to find the global minimum of this function using gradient descent instead of the direct calculation from part (a). Write code to perform the gradient descent algorithm, that is perform the iteration: \\[\n\\mathbf{v}_{n+1} = \\mathbf{v}_n - \\nu \\nabla f(\\mathbf{v}_n),\n\\]\n\nwhere the vector \\(\\mathbf{v} = [x y]^T\\) and \\(\\nu\\) is the learning rate.\nThen test the performance of your algorithm for the learning rates \\(\\nu = 1, 0.1, 0.01\\), by determining the number of steps required for the algorithm to satisfy the condition \\(\\|\\mathbf{v}_n-\\mathbf{v}_{\\mathrm{opt}}\\leq 10^{-8}\\). Start with an initial guess of \\(\\mathbf{v}_0 = [0 0]^T\\). Does the algorithm converge for all the values of the learning rate?\n\nNow consider a modification to \\(f\\) which depends on a parameter \\(b\\):\n\n\\[\nf(x,y) = (x-1)^2 + b(y+2)^2\n\\]\nThis function has its global minimum at the same location as the original \\(f\\). Make contour plots of the function \\(f\\) in the vicinity of its global minimum for \\(b=1\\), \\(b=3\\), and \\(b=10\\). Then use gradient descent to find the global minimum, starting from the same initial guess as in part \\(b\\), but restricting to the learning rate \\(\\nu=0.1\\). Plot the trajectories of the points \\(mathbf{v}\\) that gradient descent finds on top of the contour plots and compare the number of steps needed for the error to be lower than \\(10^{-8}\\) for the \\(b=1\\) case that you studied in part (b).\nThe differences that you observe here are a special case of a more general phenomenon: the speed of convergence of gradient descent depends on something called the condition number of the Hessian matrix (the matrix of the 2nd order partial derivatives) of the target function. The condition number for a symmetric matrix is just the ratio of the largest to smallest eigenvalues, in this case the condition number is \\(b\\) (or 1/\\(b\\)). Gradient descent performs worse and worse the larger the condition number (and large condition numbers are problematic for a wide variety of other numerical methods)."
   },
   {
     "objectID": "assignments/labs/Lab1.html#problem-2-solving-least-squares-problems",
     "href": "assignments/labs/Lab1.html#problem-2-solving-least-squares-problems",
-    "title": "Homework 1:",
+    "title": "Homework 1: Introduction to Optimization and Least Squares",
     "section": "Problem 2: Solving Least Squares Problems",
-    "text": "Problem 2: Solving Least Squares Problems"
+    "text": "Problem 2: Solving Least Squares Problems\nGenerate a random \\(20\\times 10\\) matrix \\(A\\) and a random 20-vector \\(b\\). Then, solve the least squares problem: \\[\n\\min_{\\mathbf{x}\\in \\mathbb{R}^{10}} \\|A\\mathbf{x} - \\mathbf{b}\\|^2\n\\] in the following ways:\n\nMultiply \\(\\mathbf{b}\\) by the Morse-Penrose Pseudoinverse \\(A^+\\).\nUse built in functions to solve the least squares problem (i.e. in python numpy.lstsq, in R lm, and in Julia the backslash operator).\nUsing the \\(QR\\) factorization of \\(A\\). This factorization rewrites \\(A\\) as: \\[\nA = [Q\\quad 0] [R\\quad 0]^T,\n\\] where \\(Q\\) is an orthonormal matrix and \\(R\\) is upper triangular. The least squares solution equals: \\[\n\\mathbf{x} = R^{-1}Q^T\\mathbf{b}\n\\]\nVerify that each of these solutions are nearly equal and that the residuals \\(A\\mathbf{x}-\\mathbf{b}\\) are orthogonal to the vector \\(\\mathbf{b}\\)"
   },
   {
     "objectID": "assignments/labs/Lab1.html#problem-3-iterative-solutions-to-least-squares",
     "href": "assignments/labs/Lab1.html#problem-3-iterative-solutions-to-least-squares",
-    "title": "Homework 1:",
+    "title": "Homework 1: Introduction to Optimization and Least Squares",
     "section": "Problem 3: Iterative Solutions to Least Squares",
-    "text": "Problem 3: Iterative Solutions to Least Squares"
+    "text": "Problem 3: Iterative Solutions to Least Squares\nAlthough the pseudoinverse provides an exact formula for the least squares solutions, there are some situations in which using the exact solution is computationally difficult, particularly when the matrix \\(A\\) and vector \\(\\mathbf{b}\\) have a large number of entries. In this case, \\(AA^T\\), which is an \\(m\\times m\\) matrix, may require an enormous amount of memory. In these cases it may be better to use an approximate solution instead of the exact formula. There are many different approximate methods for solving least squares problems, here we will use an iterative method developed by Richardson.\nThis method begins with an initial guess \\(\\mathbf{x}^{(0)} = 0\\) and calculates successive approximations as follows:\n\\[\n    \\mathbf{x}^{(k+1)} = \\mathbf{x}^{(k)} - \\mu A^T\\left(A\\mathbf{x}^{(k)}-\\mathbf{b}\\right)\n\\]\nHere \\(\\mu\\) is a positive paramter that has a similar interpretation to the learning rate for gradient descent. A choice that guarantees convergence is \\(\\mu \\leq \\frac{1}{\\|A\\|}\\). The iteration is terminated when \\(\\|A^T(Ax^{(k)} − b)\\|\\) is below a user determine threshold, which indicates that the least squares optimality conditions are nearly satisfied.\n\nSuppose that \\(\\mathbf{x}\\) is a solution to the least squares problem: \\[\n\\mathbf{x} = A^+\\mathbf{b}\n\\]\n\nShow that \\(\\mathbf{x}\\) is a of the iteration scheme, i.e. that: \\[\n\\mathbf{x} = \\mathbf{x}^{(k)} - \\mu A^T\\left(A\\mathbf{x}^{(k)}-\\mathbf{b}\\right)\n\\]\n\nGenerate a random 20 × 10 matrix \\(A\\) and 20-vector \\(\\mathbf{b}\\), and compute the least squares solution \\(\\mathbf{x} = A^+\\mathbf{b}\\). Then run the Richardson algorithm with \\(\\mu = \\frac{1}{\\|A\\|^2}\\) for 500 iterations, and plot \\(\\|\\mathbf{x}^{(k)}-\\mathbf{x}\\|\\) to verify that \\(\\mathbf{x}^{(k)}\\) is converging to \\(\\mathbf{x}\\)"
   },
   {
-    "objectID": "assignments/labs.html",
-    "href": "assignments/labs.html",
-    "title": "Labs",
+    "objectID": "assignments/labs/Lab4.html",
+    "href": "assignments/labs/Lab4.html",
+    "title": "Homework 3: Convex Functions",
     "section": "",
-    "text": "The homework assignments in this course are lab assignments where you will solve the problem using a combination of mathematics and computer code.\nPlease submit a and either a quarto file or jupyter notebook or other code that generates your homework. Labs should be submitted on Blackboard.\n\n\nGradient Descent and Least Squares (Download)\n\n\nLeast Squares Applications (Download)\n\n\nConvex Sets (Download)\n\n\nConvex Functions (Download)\n\n\nConvex Optimizations Problems (Download)\n\n\nApplications to Statistics and Machine Learning (Download)\n\n\nNonconvex Optimization and Stochastic Gradient Descent (Download)\n\n\nTraining Deep Neural Networks (Download)",
-    "crumbs": [
-      "Assignments",
-      "Labs"
-    ]
+    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Announcements",
+    "objectID": "assignments/labs/Lab4.html#instructions",
+    "href": "assignments/labs/Lab4.html#instructions",
+    "title": "Homework 3: Convex Functions",
     "section": "",
-    "text": "Be sure to check this page regularly for updates. In addition to periodic updates about the course, slides and recordings of the weekly meetups will be posted here.\n\n\n\n\n\n\n\n\n\nNo matching items",
-    "crumbs": [
-      "Announcements"
-    ]
+    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
+  },
+  {
+    "objectID": "assignments/labs/Lab4.html#problem-1",
+    "href": "assignments/labs/Lab4.html#problem-1",
+    "title": "Homework 3: Convex Functions",
+    "section": "Problem 1:",
+    "text": "Problem 1:\nExercise 3.2 in Convex Optimization"
+  },
+  {
+    "objectID": "assignments/labs/Lab4.html#problem-2",
+    "href": "assignments/labs/Lab4.html#problem-2",
+    "title": "Homework 3: Convex Functions",
+    "section": "Problem 2:",
+    "text": "Problem 2:\nExercise 3.6 in Convex Optimization"
+  },
+  {
+    "objectID": "assignments/labs/Lab4.html#problem-3",
+    "href": "assignments/labs/Lab4.html#problem-3",
+    "title": "Homework 3: Convex Functions",
+    "section": "Problem 3:",
+    "text": "Problem 3:\nExercise 3.16 in Convex Optimization"
+  },
+  {
+    "objectID": "assignments/labs/Lab4.html#problem-4",
+    "href": "assignments/labs/Lab4.html#problem-4",
+    "title": "Homework 3: Convex Functions",
+    "section": "Problem 4:",
+    "text": "Problem 4:\nExercise 3.22 in Convex Optimization"
+  },
+  {
+    "objectID": "assignments/labs/Lab4.html#problem-5",
+    "href": "assignments/labs/Lab4.html#problem-5",
+    "title": "Homework 3: Convex Functions",
+    "section": "Problem 5:",
+    "text": "Problem 5:\nExercise 3.24 in Convex Optimization"
+  },
+  {
+    "objectID": "assignments/labs/Lab2.html",
+    "href": "assignments/labs/Lab2.html",
+    "title": "Homework 2: Applications of Least Squares",
+    "section": "",
+    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
+  },
+  {
+    "objectID": "assignments/labs/Lab2.html#instructions",
+    "href": "assignments/labs/Lab2.html#instructions",
+    "title": "Homework 2: Applications of Least Squares",
+    "section": "",
+    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
+  },
+  {
+    "objectID": "assignments/labs/Lab2.html#problem-1-online-updating-for-least-squares",
+    "href": "assignments/labs/Lab2.html#problem-1-online-updating-for-least-squares",
+    "title": "Homework 2: Applications of Least Squares",
+    "section": "Problem 1: Online Updating for Least Squares",
+    "text": "Problem 1: Online Updating for Least Squares\nMany applications of least squares (and other statistical methods) involve , in which data is collected over a time period and the statistical model is updated as new data arrives. If the quantity of data arriving is very large, it may not be possible to refit the entire model on the entire dataset. Instead, we use techniques (often referred to as which take the current model as a starting point and update them to incorporate the new data. Solve exercise 12.14 from VMLS"
+  },
+  {
+    "objectID": "assignments/labs/Lab2.html#problem-2-weighted-least-squares",
+    "href": "assignments/labs/Lab2.html#problem-2-weighted-least-squares",
+    "title": "Homework 2: Applications of Least Squares",
+    "section": "Problem 2: Weighted Least Squares",
+    "text": "Problem 2: Weighted Least Squares\nThe file social-mobility.csv contains data on the fraction of individuals born in the years 1980-1982 to parents in the bottom 20% of the income distribution who reach the top 20% of the income distribution by the time they turn 30 in a large number of municipalities throughout the United States. The dataset also contains additional variables that describe other socio-economic differences between the cities in the dataset.\n\nMake a scatter-plot of mobility versus population (use a log-scale for population). What do you notice about the variance of social mobility as a function of population? This is a common feature of nearly every dataset containing geographic regions with widely different populations.\nAssume that the number of children born in families making below the 20th percentile of the income distribution in each city is linearly proportional to the city population. Write down a formula for how the variance of each measurement of the social mobility based on the measured social mobility and the population. Hint: start with either the formula for the variance of binomial counts or look up the variance of a proportion derived from a binomial distribution. Don’t worry about constant factors when deriving this formula.\nUse weighted least squares to calculate an estimate of how social mobility depends on commute time and student-teacher ratio, using weights calculated based on the variance estimate derived in (b). Compare the coefficients to those derived from ordinary least squares with no weights.\n\n##Problem 3: Markowitz Portfolio Optimization\nIn this problem you will use Markowitz Portfolio Optimization to construct a set of portfolios that aim to achieve certain target rates of return while minimizing risk. The file prices.csv contains information on daily asset returns from 2020-2024 for a group of assets. The data is divided into two time periods, a training period (2020-2022) and a testing period (2022-2024).\n\nConstruct a vector of annual returns \\(\\mu\\) and return covariance \\(\\Gamma\\). Then solve the following constrained least squares problem to calculate optimal portfolios achieving a fixed rate of return with minimum variance: \\[\n    \\min_{w} x^T\\Gamma x,\\\\\n    w^T\\mu = r\n\\]\n\nCalculate optimal portfolios based on the 2020-2022 data for targeted rates of return \\(r=5\\%\\), \\(r=10\\%\\), and \\(r=20\\%\\).\n\nPlot the cumulative value of each portfolio over time, starting from an initial investment of \\(\\$10000\\), for both the training and test sets of returns.\n\nFor each of the 3 portfolios report:\n\nThe annualized return on the training and test sets;\nThe annualized risk on the training and test sets;\nThe asset with the minimum allocation weight (can be the most negative), and its weight;\nThe asset with the maximum allocation weight, and its weight;\nThe leverage, defined as |w1| + · · · + |wn|. (Several other definitions of leverage are used.) This number is always at least one, and it is exactly one only if the portfolio has no short positions.\n\nComment briefly on your observations about the different portfolios and the difference between their training and testing performance.\n\nIt is well known that optimal portfolios constructed using the Markowitz procedure perform much more poorly out of sample compared to in sample. This is due to a variety of reasons, one of which is that it assumes that future returns are equal to past returns, another that the correlation structure of the market might change over time, and finally, when there are many assets there is the potential for overfitting. Repeat the previous problem but introduce a ridge regression/\\(l_2\\) norm penalty term to the objective function, with a hyperparameter \\(\\lamba\\) governing the size of the penalty term.\n\nSelect 10 positive values of \\(\\lamba\\) on a log scale between \\(1e-1\\) and \\(10\\) and for each value of \\(\\lamba\\) solve the following penalized regression problem:\n\\[\n    \\min_{w} w^T(\\Gamma+\\lambda I) w ,\\\\\n    w^T\\mu = r\n\\]\nfor just the single value of \\(r=20\\%\\). Then calculate the performance of each of these regularized Markowitz strategies on both the training and test datasets and plot the values of:\n\nThe annualized return on the training and test sets;\nThe annualized risk on the training and test sets;\nThe minimum allocation weight;\nThe maximum allocation weight;\nThe leverage\n\nComment on how the different values of \\(\\lambda\\) changed the optimal portfolios and the difference between in-sample and out-of-sample return and variance."
   },
   {
     "objectID": "assignments/project.html",
@@ -226,6 +296,174 @@
       "Assignments",
       "Project"
     ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Announcements",
+    "section": "",
+    "text": "Be sure to check this page regularly for updates. In addition to periodic updates about the course, slides and recordings of the weekly meetups will be posted here.\n\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Announcements"
+    ]
+  },
+  {
+    "objectID": "assignments/labs.html",
+    "href": "assignments/labs.html",
+    "title": "Labs",
+    "section": "",
+    "text": "The homework assignments in this course are lab assignments where you will solve the problem using a combination of mathematics and computer code.\nPlease submit a and either a quarto file or jupyter notebook or other code that generates your homework. Labs should be submitted on Blackboard.\n\n\nGradient Descent and Least Squares (Download)\n\n\nLeast Squares Applications (Download)\n\n\nConvex Sets (Download)\n\n\nConvex Functions (Download)\n\n\nConvex Optimizations Problems (Download)\n\n\nApplications to Statistics and Machine Learning (Download)\n\n\nNonconvex Optimization and Stochastic Gradient Descent (Download)\n\n\nTraining Deep Neural Networks (Download)",
+    "crumbs": [
+      "Assignments",
+      "Labs"
+    ]
+  },
+  {
+    "objectID": "assignments/labs/Lab3.html",
+    "href": "assignments/labs/Lab3.html",
+    "title": "Homework 3: Convex Sets",
+    "section": "",
+    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
+  },
+  {
+    "objectID": "assignments/labs/Lab3.html#instructions",
+    "href": "assignments/labs/Lab3.html#instructions",
+    "title": "Homework 3: Convex Sets",
+    "section": "",
+    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
+  },
+  {
+    "objectID": "assignments/labs/Lab3.html#problem-1",
+    "href": "assignments/labs/Lab3.html#problem-1",
+    "title": "Homework 3: Convex Sets",
+    "section": "Problem 1:",
+    "text": "Problem 1:\nExercise 2.5 in Convex Optimization"
+  },
+  {
+    "objectID": "assignments/labs/Lab3.html#problem-2",
+    "href": "assignments/labs/Lab3.html#problem-2",
+    "title": "Homework 3: Convex Sets",
+    "section": "Problem 2:",
+    "text": "Problem 2:\nExercise 2.7 in Convex Optimization"
+  },
+  {
+    "objectID": "assignments/labs/Lab3.html#problem-3",
+    "href": "assignments/labs/Lab3.html#problem-3",
+    "title": "Homework 3: Convex Sets",
+    "section": "Problem 3:",
+    "text": "Problem 3:\nExercise 2.12 in Convex Optimization"
+  },
+  {
+    "objectID": "assignments/labs/Lab3.html#problem-4",
+    "href": "assignments/labs/Lab3.html#problem-4",
+    "title": "Homework 3: Convex Sets",
+    "section": "Problem 4:",
+    "text": "Problem 4:\nExercise 2.15 in Convex Optimization"
+  },
+  {
+    "objectID": "assignments/labs/Lab3.html#problem-5",
+    "href": "assignments/labs/Lab3.html#problem-5",
+    "title": "Homework 3: Convex Sets",
+    "section": "Problem 5:",
+    "text": "Problem 5:\nExercise 2.28 in Convex Optimization"
+  },
+  {
+    "objectID": "assignments/labs/Lab6.html",
+    "href": "assignments/labs/Lab6.html",
+    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
+    "section": "",
+    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
+  },
+  {
+    "objectID": "assignments/labs/Lab6.html#instructions",
+    "href": "assignments/labs/Lab6.html#instructions",
+    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
+    "section": "",
+    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
+  },
+  {
+    "objectID": "assignments/labs/Lab6.html#problem-1",
+    "href": "assignments/labs/Lab6.html#problem-1",
+    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
+    "section": "Problem 1:",
+    "text": "Problem 1:\nExercise 7.4 in Convex Optimization Extended Exercises"
+  },
+  {
+    "objectID": "assignments/labs/Lab6.html#problem-2",
+    "href": "assignments/labs/Lab6.html#problem-2",
+    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
+    "section": "Problem 2:",
+    "text": "Problem 2:\nExercise 7.6 in Convex Optimization Extended Exercises"
+  },
+  {
+    "objectID": "assignments/labs/Lab6.html#problem-3",
+    "href": "assignments/labs/Lab6.html#problem-3",
+    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
+    "section": "Problem 3:",
+    "text": "Problem 3:\nExercise 7.14 in Convex Optimization"
+  },
+  {
+    "objectID": "assignments/labs/Lab6.html#problem-4",
+    "href": "assignments/labs/Lab6.html#problem-4",
+    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
+    "section": "Problem 4:",
+    "text": "Problem 4:\nExercise 7.48 in Convex Optimization Extended Exercises"
+  },
+  {
+    "objectID": "assignments/labs/Lab6.html#problem-5",
+    "href": "assignments/labs/Lab6.html#problem-5",
+    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
+    "section": "Problem 5:",
+    "text": "Problem 5:\nExercise 8.6 in Convex Optimization Extended Exercises"
+  },
+  {
+    "objectID": "assignments/labs/Lab5.html",
+    "href": "assignments/labs/Lab5.html",
+    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
+    "section": "",
+    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
+  },
+  {
+    "objectID": "assignments/labs/Lab5.html#instructions",
+    "href": "assignments/labs/Lab5.html#instructions",
+    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
+    "section": "",
+    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
+  },
+  {
+    "objectID": "assignments/labs/Lab5.html#problem-1",
+    "href": "assignments/labs/Lab5.html#problem-1",
+    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
+    "section": "Problem 1:",
+    "text": "Problem 1:\nExercise 4.2 in Convex Optimization"
+  },
+  {
+    "objectID": "assignments/labs/Lab5.html#problem-2",
+    "href": "assignments/labs/Lab5.html#problem-2",
+    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
+    "section": "Problem 2:",
+    "text": "Problem 2:\n4.2 ‘Hello World’ in CVX. Use CVX to verify the optimal values you obtained (analytically) for exercise 4.2 in Convex Optimization"
+  },
+  {
+    "objectID": "assignments/labs/Lab5.html#problem-3",
+    "href": "assignments/labs/Lab5.html#problem-3",
+    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
+    "section": "Problem 3:",
+    "text": "Problem 3:\nExercise 4.60 in Convex Optimization"
+  },
+  {
+    "objectID": "assignments/labs/Lab5.html#problem-4",
+    "href": "assignments/labs/Lab5.html#problem-4",
+    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
+    "section": "Problem 4:",
+    "text": "Problem 4:\nExercise 6.4 in Convex Optimization Extended Exercises"
+  },
+  {
+    "objectID": "assignments/labs/Lab5.html#problem-5",
+    "href": "assignments/labs/Lab5.html#problem-5",
+    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
+    "section": "Problem 5:",
+    "text": "Problem 5:\nExercise 6.13 in Convex Optimization Extended Exercises"
   },
   {
     "objectID": "assignments/labs/tbd.html",

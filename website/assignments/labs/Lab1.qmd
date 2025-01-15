@@ -1,5 +1,5 @@
 ---
-title: "Homework 1: "
+title: "Homework 1: Introduction to Optimization and Least Squares"
 format: html 
 editor: source
 ---
@@ -7,13 +7,13 @@ editor: source
 
 ## Instructions
 
-
-
+Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file,
+I recommend python, julia, or R. 
 
 ## Problem 1: Gradient Descent
 
 
-(a) Consider the mathematical function defined on $f: \mathbb{R}^2 -> \mathbb{R}$:
+(a) Consider the mathematical function defined on $f: \mathbb{R}^2 \rarrow \mathbb{R}$:
 
 $$
 f(x,y) = (x-1)^2 + (y+2)^2,
@@ -55,5 +55,69 @@ Gradient descent performs worse and worse the larger the condition number (and l
 ## Problem 2: Solving Least Squares Problems
 
 
+Generate a random $20\times 10$ matrix $A$ and a random 20-vector $b$.
+Then, solve the least squares problem:
+$$
+\min_{\mathbf{x}\in \mathbb{R}^{10}} \|A\mathbf{x} - \mathbf{b}\|^2
+$$
+in the following ways:
+
+(a) Multiply $\mathbf{b}$ by the Morse-Penrose Pseudoinverse $A^+$.
+
+(b) Use built in functions to solve the least squares problem (i.e. in python numpy.lstsq, in R lm, and in Julia the backslash operator). 
+
+(c) Using the $QR$ factorization of $A$. This factorization
+rewrites $A$ as:
+$$
+A = [Q\quad 0] [R\quad 0]^T,
+$$
+where $Q$ is an orthonormal matrix and $R$ is upper triangular. The
+least squares solution equals:
+$$
+\mathbf{x} = R^{-1}Q^T\mathbf{b}
+$$
+
+(d) Verify that each of these solutions are nearly equal and that 
+the residuals $A\mathbf{x}-\mathbf{b}$ are orthogonal to the vector
+$\mathbf{b}$
+
+
 
 ## Problem 3: Iterative Solutions to Least Squares
+
+Although the pseudoinverse provides an exact formula for the least
+squares solutions, there are some situations in which using the exact
+solution is computationally difficult, particularly when the matrix $A$ 
+and vector $\mathbf{b}$ have a large number of entries. In this case,
+$AA^T$, which is an $m\times m$ matrix, may require an enormous amount of memory. In these cases it may be better to use an
+approximate solution instead of the exact formula. There are many
+different approximate methods for solving least squares problems, 
+here we will use an iterative method developed by Richardson.
+
+This method begins with an initial guess $\mathbf{x}^{(0)} = 0$ 
+and calculates successive approximations as follows:
+
+$$
+    \mathbf{x}^{(k+1)} = \mathbf{x}^{(k)} - \mu A^T\left(A\mathbf{x}^{(k)}-\mathbf{b}\right)
+$$
+
+Here $\mu$ is a positive paramter that has a similar interpretation to the learning rate for 
+gradient descent. A choice that guarantees convergence is $\mu \leq \frac{1}{\|A\|}$. The iteration is terminated when
+$\|A^T(Ax^{(k)} − b)\|$ is below a user determine threshold, which
+indicates that the least squares optimality conditions are nearly satisfied.
+
+(a) Suppose that $\mathbf{x}$ is a solution to the least squares problem:
+$$
+\mathbf{x} = A^+\mathbf{b}
+$$
+
+Show that $\mathbf{x}$ is a \emph{fixed point} of the iteration scheme, i.e. that:
+$$
+\mathbf{x} = \mathbf{x}^{(k)} - \mu A^T\left(A\mathbf{x}^{(k)}-\mathbf{b}\right)
+$$
+
+(b) Generate a random 20 × 10 matrix $A$ and 20-vector $\mathbf{b}$, and compute the least squares solution $\mathbf{x} = A^+\mathbf{b}$.
+Then run the Richardson algorithm with $\mu = \frac{1}{\|A\|^2}$ for
+500 iterations, and plot $\|\mathbf{x}^{(k)}-\mathbf{x}\|$ to verify
+that $\mathbf{x}^{(k)}$ is converging to $\mathbf{x}$
+

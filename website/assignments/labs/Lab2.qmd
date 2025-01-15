@@ -1,0 +1,100 @@
+---
+title: "Homework 2: Applications of Least Squares"
+format: html 
+editor: source
+---
+
+
+## Instructions
+
+Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file,
+I recommend python, julia, or R. 
+
+## Problem 1: Online Updating for Least Squares
+
+Many applications of least squares (and other statistical methods)
+involve \emph{streaming data}, in which data is collected over a time
+period and the statistical model is updated as new data arrives. If
+the quantity of data arriving is very large, it may not be possible to
+refit the entire model on the entire dataset. Instead, we use
+techniques (often referred to as \emph{online learning} which take the current model as a starting point and 
+update them to incorporate the new data. Solve exercise 12.14 from VMLS
+
+## Problem 2: Weighted Least Squares
+
+The file [social-mobility.csv]() contains data on the fraction of 
+individuals born in the years 1980-1982 to parents in the bottom 20\% of the income distribution who reach the top 20\% of the income distribution by the time they turn 30 in a large number of municipalities throughout the United States. The dataset also contains 
+additional variables that describe other socio-economic differences 
+between the cities in the dataset.
+
+(a) Make a scatter-plot of mobility versus population (use a log-scale for population). What do you 
+notice about the variance of social mobility as a function of population? This is a common feature of nearly every dataset containing geographic regions with widely different populations.
+
+(b) Assume that the number of children born in families making below the 20th percentile of the income distribution in each city is linearly proportional to the city population. Write down a formula 
+for how the variance of each measurement of the social mobility based
+on the measured social mobility and the population. Hint: start with
+either the formula for the variance of binomial counts or look up the
+variance of a proportion derived from a binomial distribution. Don't
+worry about constant factors when deriving this formula.
+
+(c) Use weighted least squares to calculate an estimate of how 
+social mobility depends on commute time and student-teacher ratio, using weights calculated based on the variance estimate derived in (b).
+Compare the coefficients to those derived from ordinary least squares with no weights.
+
+##Problem 3: Markowitz Portfolio Optimization
+
+In this problem you will use _Markowitz Portfolio Optimization_ to construct a set of portfolios that aim to achieve certain target rates of return while minimizing risk. The file [prices.csv]() contains information on daily asset returns from 2020-2024 for a group of assets. The data is divided into two time periods, a training period (2020-2022) and a testing period (2022-2024).
+
+(a)  Construct a vector of annual returns $\mu$ and return covariance
+$\Gamma$. Then solve the following constrained least squares problem
+to calculate optimal portfolios achieving a fixed rate of return
+with minimum variance:
+$$
+    \min_{w} x^T\Gamma x,\\
+    w^T\mu = r
+$$
+
+Calculate optimal portfolios based on the 2020-2022 data for targeted
+rates of return $r=5\%$, $r=10\%$, and $r=20\%$.
+
+(b) Plot the cumulative value of each portfolio over time,
+starting from an initial investment of $\$10000$, for both the 
+training and test sets of returns.
+
+For each of the 3 portfolios report:
+
+- The annualized return on the training and test sets;
+- The annualized risk on the training and test sets;
+- The asset with the minimum allocation weight (can be the most negative), and its weight;
+- The asset with the maximum allocation weight, and its weight;
+- The leverage, defined as |w1| + · · · + |wn|. (Several other definitions of leverage are used.) This
+number is always at least one, and it is exactly one only if the portfolio has no short positions.
+
+Comment briefly on your observations about the different portfolios and the difference between their training and testing performance.
+
+(c) It is well known that optimal portfolios constructed using the
+Markowitz procedure perform much more poorly out of sample compared to in sample. This is due to a variety of reasons, one of which is that it assumes that future returns are equal to past returns, another that
+the correlation structure of the market might change over time, and
+finally, when there are many assets there is the potential for overfitting. Repeat the previous problem but introduce a ridge regression/$l_2$ norm penalty term to the objective function, with
+a hyperparameter $\lamba$ governing the size of the penalty term. 
+
+Select 10 positive values of $\lamba$ on a log scale between $1e-1$ and $10$ and for each value of $\lamba$ solve the following penalized
+regression problem:
+
+$$
+    \min_{w} w^T(\Gamma+\lambda I) w ,\\
+    w^T\mu = r
+$$
+
+for just the single value of $r=20\%$. Then calculate the performance
+of each of these regularized Markowitz strategies on both the training and test datasets
+and plot the values of:
+
+- The annualized return on the training and test sets;
+- The annualized risk on the training and test sets;
+- The minimum allocation weight;
+- The maximum allocation weight;
+- The leverage
+
+Comment on how the different values of $\lambda$ changed the optimal
+portfolios and the difference between in-sample and out-of-sample return and variance.

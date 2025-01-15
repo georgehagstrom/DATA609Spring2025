@@ -1,0 +1,32 @@
+---
+title: "Homework 3: Convex Sets"
+format: html 
+editor: source
+---
+
+
+## Instructions
+
+Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file,
+I recommend python, julia, or R. 
+
+
+## Problem 1: 
+
+Exercise 2.5 in Convex Optimization
+
+## Problem 2: 
+
+Exercise 2.7 in Convex Optimization
+
+## Problem 3: 
+
+Exercise 2.12 in Convex Optimization
+
+## Problem 4: 
+
+Exercise 2.15 in Convex Optimization 
+
+## Problem 5: 
+
+Exercise 2.28 in Convex Optimization
