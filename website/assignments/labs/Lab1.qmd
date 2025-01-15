@@ -13,7 +13,7 @@ I recommend python, julia, or R.
 ## Problem 1: Gradient Descent
 
 
-(a) Consider the mathematical function defined on $f: \mathbb{R}^2 \rarrow \mathbb{R}$:
+(a) Consider the mathematical function defined on $f: \mathbb{R}^2\,\to\, \mathbb{R}$:
 
 $$
 f(x,y) = (x-1)^2 + (y+2)^2,
