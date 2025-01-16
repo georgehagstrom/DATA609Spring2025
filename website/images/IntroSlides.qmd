@@ -1,0 +1,174 @@
+---
+title: "Welcome to DATA 609"
+author: "George Hagstrom"
+format: revealjs
+---
+
+## About Me {.smaller}
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+- Doctoral Lecturer at CUNY SPS
+- [Past research experience](https://scholar.google.com/citations?user=2La77skAAAAJ&hl=en):
+  - Plasma physics and Applied Mathematics (NYU)
+  - Ecology and Evolutionary Biology (Princeton)
+- Research using Bayesian methods and genomic data to improve
+global scale ocean and climate models
+- Taught math at NYU
+
+:::
+
+::: {.column width="40%"}
+
+![](GeorgeHagstromHeadshot.jpg)
+
+
+:::
+
+::::
+
+
+## Why Optimization?
+
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+- Optimization theory underlies most methods in data science
+- Three foci:
+  - Least Squares Optimization
+  - Convex Optimization
+  - Local Optimization and Stochastic Gradient Descent
+
+:::
+
+::: {.column width="40%"}
+![](netsurfaces.png)
+
+:::
+
+::::
+
+
+## Course Website(s)
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+-  Brightspace to submit homework
+- [Course Website](https://georgehagstrom.github.io/DATA609Spring2025/) 
+
+
+:::
+
+::: {.column width="50%"}
+
+![](brightspace.png)
+
+:::
+
+::::
+
+## Course Website and Meetup
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+-  Brightspace to submit homework
+- [Course Website](https://georgehagstrom.github.io/DATA609Spring2025/) 
+- Course Meetup: Monday 6:45-7:45PM
+- [Zoom Link](
+https://us02web.zoom.us/j/6211354884?omn=86938044575)
+
+:::
+
+::: {.column width=50%"}
+
+![](coursewebsite.png)
+
+:::
+
+::::
+
+
+## Slack Channel
+
+:::: {.columns}
+::: {.column width="50%"}
+- Course slack channel for messaging and rapid communications
+- [https://data609-spring-2025.slack.com](https://data609-spring-2025.slack.com)
+- [Invite Link](https://join.slack.com/t/data609-spring-2025/shared_invite/zt-2xqbc0zqu-ptZ2vNJ49AHZ1Xy0AQvKag)
+
+:::
+
+::: {.column width="50%"}
+![](slack.png)
+:::
+
+::::
+
+
+## Textbooks
+
+:::: {.columns}
+::: {.column width="50%"}
+Two most important textbooks:
+
+1. Introduction to Applied Linear Algebra
+  - Available free online [VMLS](https://web.stanford.edu/~boyd/vmls/)
+
+2. Convex Optimization
+  - Available free online [cvxbook](https://web.stanford.edu/~boyd/cvxbook/)
+:::
+
+::: {.column width="50%"}
+
+![](vmls.png)
+
+:::
+
+::::
+
+## Textbooks
+
+:::: {.columns}
+::: {.column width="50%"}
+Two most important textbooks:
+
+1. Introduction to Applied Linear Algebra
+  - Available free online [VMLS](https://web.stanford.edu/~boyd/vmls/)
+
+2. Convex Optimization
+  - Available free online [cvxbook](https://web.stanford.edu/~boyd/cvxbook/)
+:::
+
+::: {.column width="50%"}
+
+![](cvxbook.png)
+:::
+
+::::
+
+## Assignments
+
+:::: {.columns}
+::: {.column width="50%"}
+- 8 Lab Assignments (80\%)
+- Final Project (20\%)
+:::
+
+::: {.column width="50%"}
+![](hw1.png)
+:::
+::::
+
+## Looking forward to a great semester!
+
+Thanks for watching
+
+

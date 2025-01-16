@@ -1,0 +1,29 @@
+---
+title: "Welcome to DATA 609"
+author: "George I. Hagstrom"
+date: 2025-01-26
+draft: false
+description: "Important information on how to get started with this course. Click this post now for instructions on getting started."
+image: "2024-01-26-Welcome_to_DATA_609.png"
+image-height: "300px"
+
+---
+
+
+Welcome to DATA 609, Math Modeling Techniques.
+
+Click this post now to get started!
+
+Here are the first steps:
+
+* Read the [syllabus](course/syllabus).
+* Go through the course overview materials, and complete the [week 1 readings](modules/module1).
+* [Join our Slack channel:](https://join.slack.com/t/data609-spring-2025/shared_invite/zt-2xqbc0zqu-ptZ2vNJ49AHZ1Xy0AQvKag)   
+* Attend our first meetup on Monday at 6:45 p.m. ET on [Zoom](https://us02web.zoom.us/j/81858708616?pwd=eE9ZGJFco9iicq3BsmANIfWUVLwy0x.1)
+
+I recorded a short video which introduces me and gives you more background on the course:
+
+{{< video    https://youtu.be/fIr_GToQm94
+    title='Intro to DATA 609' 
+>}}
+
