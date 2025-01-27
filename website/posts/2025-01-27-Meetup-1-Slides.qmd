@@ -1,5 +1,5 @@
 ---
-title: "Meetup 1: Introduction to Optimization""
+title: "Meetup 1: Introduction to Optimization"
 author: "George I. Hagstrom"
 date: 2025-01-27
 draft: false
@@ -16,5 +16,5 @@ Here is the information you need for the first meetup:
 
 * Go through the course overview materials, and complete the [week 1 readings](modules/module1).
 * Attend our first meetup on Monday at 6:45 p.m. ET on [Zoom](https://us02web.zoom.us/j/81858708616?pwd=eE9ZGJFco9iicq3BsmANIfWUVLwy0x.1)
-* [Click here](../meetups/Meetup1/meetup-1.qmd) for slides
+* [Click here](../meetups/Meetup1/meetup-1.html) for slides
 
