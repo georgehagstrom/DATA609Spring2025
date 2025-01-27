@@ -19,34 +19,35 @@ $$
 f(x,y) = (x-1)^2 + (y+2)^2,
 $$
 
-Find the single critical point of this function and show that it is a global minimum.
+Find the single critical point of this function and show that it is a local minimum (in this case, this will also be a global minimum).
 
-(b) Suppose we wanted to find the global minimum of this function using
-gradient descent instead of the direct calculation from part (a). Write code to perform the gradient descent algorithm, that is perform
+(b) Now consider a new objective function that depends on a parameter $b$:
+$$
+f(x,y) = x^2 + by^2
+$$
+Here we will look at two different values of $b$, $b=3$ and $b=10$. The global minimum of this function occurs at the point $x^* = 0$, $y^*=0$ no matter what the value of $b$. 
+Suppose that we didn't know this and wanted to find the minimum of this 
+function using gradient descent instead of direct calculation.
+
+- First write code to perform the gradient descent algorithm, that is perform
 the iteration:
 $$
-\mathbf{v}_{n+1} = \mathbf{v}_n - \nu \nabla f(\mathbf{v}_n),
+\mathbf{v}_{n+1} = \mathbf{v}_n - k \nabla f(\mathbf{v}_n),
 $$
 
-where the vector $\mathbf{v} = [x y]^T$ and $\nu$ is the learning rate.
+where the vector $\mathbf{v} = \begin{bmatrix} x & y\end{bmatrix}^T$ and $k$ is the learning rate.
 
-Then test the
-performance of your algorithm for the learning rates $\nu = 1, 0.1, 0.01$, by determining the number of steps required for the algorithm to satisfy the condition $\|\mathbf{v}_n-\mathbf{v}_{\mathrm{opt}}\leq 10^{-8}$. Start with an initial guess
-of $\mathbf{v}_0 = [0 0]^T$. Does the algorithm converge for all the values of the learning rate?
+- Then test the
+performance of your algorithm as a function of the learning rates $k$ by performing 100 iterations of the algorithm for 100 values of $k$ equally spaced between $k=0.01$ and $k=0.3$. Start with an initial guess
+of $\mathbf{v}_0 = \begin{bmatrix} b & 1\end{bmatrix}^T$. Do this for $b=3$ and $b=10$. Make separate plots for $b=3$ and $b=10$ of the log base 10 of the error (in this case it is $\sqrt{x_{100}^2+y_{100}^2}$) for the final value of
+the iteration versus the value of $k$. How does learning rate relate to the final value of the error? For which value of $b$ does the algorithm have the ability to converge fastest (have the lowest value of the error at the end)?
 
-(c) Now consider a modification to $f$ which depends on a parameter $b$:
+Note: For some combinations of $k$ and $b$, the algorithm won't converge to the right answer, i.e. the error will grow with time. To make your plot easier to read, don't plot the error for iterations that didn't converge. 
 
-$$
-f(x,y) = (x-1)^2 + b(y+2)^2
-$$
+- As $k$ increases, for one or both values of $b$, you will observe a point where the trend of final error versus learning rate reverses direction. Pick a value of $k$ very close to the point where this occurs, and make a contour plot
+of the function $f$ and the trajectory of the iterations for the gradient descent algorithm for that value of $k$ superimposed over the contour plot. What do you observe?
 
-This function has its global minimum at the same location as the original $f$. Make contour plots of the function $f$ in the vicinity of its global minimum for $b=1$, $b=3$, and $b=10$. Then use gradient descent to find the global minimum, starting from the same initial guess as in part $b$, but restricting to the learning rate $\nu=0.1$.
-Plot the trajectories of the points $mathbf{v}$ that gradient descent
-finds on top of the contour plots and compare the number of steps
-needed for the error to be lower than $10^{-8}$ for the $b=1$ case
-that you studied in part (b).
-
-The differences that you observe here are a special case of a more general phenomenon: the speed of convergence of gradient descent 
+Note: The differences that you observe here are a special case of a more general phenomenon: the speed of convergence of gradient descent 
 depends on something called the _condition number_ of the
 _Hessian_ matrix (the matrix of the 2nd order partial derivatives) of the target function. The condition number for a symmetric matrix is just the ratio of the largest to smallest eigenvalues, in this case the condition number is $b$ (or 1/$b$). 
 Gradient descent performs worse and worse the larger the condition number (and large condition numbers are problematic for a wide variety of other numerical methods).
@@ -55,7 +56,7 @@ Gradient descent performs worse and worse the larger the condition number (and l
 ## Problem 2: Solving Least Squares Problems
 
 
-Generate a random $20\times 10$ matrix $A$ and a random 20-vector $b$.
+Generate a random $20\times 10$ matrix $A$ and a random 20-vector $b$ (use a Gaussian distribution).
 Then, solve the least squares problem:
 $$
 \min_{\mathbf{x}\in \mathbb{R}^{10}} \|A\mathbf{x} - \mathbf{b}\|^2
@@ -69,7 +70,7 @@ in the following ways:
 (c) Using the $QR$ factorization of $A$. This factorization
 rewrites $A$ as:
 $$
-A = [Q\quad 0] [R\quad 0]^T,
+A = \begin{bmatrix} Q & 0\end{bmatrix} \begin{bmatrix} R & 0 \end{bmatrix}^T,
 $$
 where $Q$ is an orthonormal matrix and $R$ is upper triangular. The
 least squares solution equals:
@@ -79,7 +80,7 @@ $$
 
 (d) Verify that each of these solutions are nearly equal and that 
 the residuals $A\mathbf{x}-\mathbf{b}$ are orthogonal to the vector
-$\mathbf{b}$
+$A\mathbf{x}$
 
 
 
@@ -89,7 +90,7 @@ Although the pseudoinverse provides an exact formula for the least
 squares solutions, there are some situations in which using the exact
 solution is computationally difficult, particularly when the matrix $A$ 
 and vector $\mathbf{b}$ have a large number of entries. In this case,
-$AA^T$, which is an $m\times m$ matrix, may require an enormous amount of memory. In these cases it may be better to use an
+$AA^T$, which is an $m\times m$ matrix if $A$ is $m\times n$, may require an enormous amount of memory. In these cases it may be better to use an
 approximate solution instead of the exact formula. There are many
 different approximate methods for solving least squares problems, 
 here we will use an iterative method developed by Richardson.
@@ -102,19 +103,20 @@ $$
 $$
 
 Here $\mu$ is a positive paramter that has a similar interpretation to the learning rate for 
-gradient descent. A choice that guarantees convergence is $\mu \leq \frac{1}{\|A\|}$. The iteration is terminated when
-$\|A^T(Ax^{(k)} − b)\|$ is below a user determine threshold, which
-indicates that the least squares optimality conditions are nearly satisfied.
+gradient descent. A choice that guarantees convergence is $\mu \leq \frac{1}{\|A\|}$. The iteration is terminated when the change in the residual
+$\|A^T(Ax^{(k)} − b)\|$ after successive steps is below a user determined threshold, which indicates that the least squares optimality conditions are nearly satisfied.
 
 (a) Suppose that $\mathbf{x}$ is a solution to the least squares problem:
 $$
 \mathbf{x} = A^+\mathbf{b}
 $$
 
-Show that $\mathbf{x}$ is a \emph{fixed point} of the iteration scheme, i.e. that:
+Show by substitution of the formula for the pseudoinverse that $\mathbf{x}$ is a \emph{fixed point} of the iteration scheme, i.e. that:
 $$
-\mathbf{x} = \mathbf{x}^{(k)} - \mu A^T\left(A\mathbf{x}^{(k)}-\mathbf{b}\right)
+\mathbf{x} = \mathbf{x} - \mu A^T\left(A\mathbf{x}-\mathbf{b}\right)
 $$
+
+
 
 (b) Generate a random 20 × 10 matrix $A$ and 20-vector $\mathbf{b}$, and compute the least squares solution $\mathbf{x} = A^+\mathbf{b}$.
 Then run the Richardson algorithm with $\mu = \frac{1}{\|A\|^2}$ for
