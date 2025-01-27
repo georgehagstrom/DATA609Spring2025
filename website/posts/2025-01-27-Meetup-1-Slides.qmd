@@ -1,0 +1,20 @@
+---
+title: "Meetup 1: Introduction to Optimization""
+author: "George I. Hagstrom"
+date: 2025-01-27
+draft: false
+description: "Click here to read more about Meetup 1 and view/download the lecture slides."
+image: "2025-01-27-Meetup-1.png"
+image-height: "300px"
+
+---
+
+Meetup 1 is tonight at 6:45PM. We are going to talk about what optimization is, some of its 
+applications, the course structure, and some very basic facts about its theory.
+
+Here is the information you need for the first meetup:
+
+* Go through the course overview materials, and complete the [week 1 readings](modules/module1).
+* Attend our first meetup on Monday at 6:45 p.m. ET on [Zoom](https://us02web.zoom.us/j/81858708616?pwd=eE9ZGJFco9iicq3BsmANIfWUVLwy0x.1)
+* [Click here](../meetups/Meetup1/meetup-1.qmd) for slides
+

@@ -27,3 +27,5 @@ I recorded a short video which introduces me and gives you more background on th
     title='Intro to DATA 609' 
 >}}
 
+[Click here](../images/IntroSlides.qmd) for slides
+
