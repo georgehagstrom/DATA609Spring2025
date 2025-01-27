@@ -1,0 +1,448 @@
+---
+title: "Meetup 1: Introduction to Optimization"
+author: "George Hagstrom"
+format: revealjs
+jupyter: python3
+logo: CUNY_SPS_Logo_Wide.png
+footer: "DATA 609"
+---
+
+
+
+## What is Optimization?
+
+- What is the __decision__ that leads to the best __outcome__?
+- "What is the value of our __decision variable $\mathbf{x}$__ 
+that minimizes our __objective function f(\mathbf{x})__?
+
+$$
+\textrm{minimize}\quad f(\mathbf{x}), \\
+\textrm{subject to}\quad g_i(\mathbf{x}) \leq 0, \\
+\textrm{and}\quad h_j(\mathbf{x}) = 0,\\
+\mathbf{x}\in \mathbb{R}^n, \, f, \, g_i, \, h_j: \mathbb{R}^n\mapsto \mathbb{R}
+$$
+
+## Constraint Terminology 
+
+- A _feasible point_ $\mathbf{x}$ for the optimization problem is a point that satisfies all the constraints:
+$$
+g_i(\mathbf{x}) \leq 0 \\
+h_j(\mathbf{x}) = 0
+$$
+- Technically we don't need the $h_j$ terms
+- Can get greater than constraints with $-g_i$
+
+## Optimum Terminology
+
+- $\mathbf{x}$ is called a _local minimum_ if there is some region $\Gamma$ surrounding $\mathbf{x}$ where $f(\mathbf{x})\leq f(\mathbf{x'})$ for all $\mathbf{x}'$ in $\Gamma$.
+- $\mathbf{x}$ is a _global minimum_ if there is no feasible point $x'$ with
+$f(\mathbf{x'})<f(\mathbf{x})$
+- Can turn a maximization problem into a minimization problem by replacing the objective function $f$ with $-f$
+
+
+## Meaning of the math
+
+- $\mathbf{x}$ represents something we control:
+  - Coefficients of a linear regression
+  - Weights of a neural network
+  - Allocation of $ to advertising channels
+  - Investment allocations in a portfolio
+  
+## Meaning of the math
+
+- $f$ models how the decision $\mathbf{x}$ impacts us
+  - RMS error of the regression
+  - cross-entropy plus a penalty for the weights
+  - Ad impressions on target demographic
+  - Expected variance of your portfolio
+  
+## Meaning of the math  
+
+- $g_i$ and $h_j$ constrain your decisions $\mathbf{x}$ so they are realistic
+  - Can't put negative $ in an ad channel
+  - Regulatory limits on leverage, short positions
+  - Valid probability distribution
+  - Prior constraints on parameters
+
+
+
+## Optimization underlies nearly all data science algorithms
+
+Going in depth brings some benefits:
+
+1. Recognize what problem you are facing, can enable you to solve it 1000 times easier in some cases 
+2. Understand how the tools you use work and what can go wrong
+3. Absolutely indispensable for some cutting edge methods (i.e. deep learning)
+4. Useful non-stats applications
+
+## Examples: Least Squares
+
+- $i$th observation is vector $\mathbf{a}_i$
+
+- Obs of target function $b_i$
+
+- Linear model $b \sim a^t x$
+
+$$
+\textrm{minimize RMS error:}\quad \min_{x\in\mathbb{R}^n} \sum_{i} \left(\mathbf{a}_i^t \mathbf{x}-b_i\right)^2 $$
+or let $A$ be the matrix whose rows are the vectors $\mathbf{a}_i^t$:
+$$\min_{\mathbf{x}\in\mathbb{R}^n} \|A\mathbf{x}-\mathbf{b}\|^2 $$
+
+## Examples: Least Squares
+
+Add penalty terms for regularization or constraints
+
+$$ \min_{\mathbf{x}\in\mathbb{R}^n} \|A\mathbf{x}-\mathbf{b}\|^2 \\
+f_i(\mathbf{x}) > 0 \\
+g_i(\mathbf{x}) = 0
+$$
+
+## Examples: Maximum Likelihood
+
+- $p(\mathbf{y}|\mathbf{x})$ is likelihood of data given parameters 
+- maximum likelihood is the optimization problem
+
+$$ 
+\textrm{find:}\quad \min_{\mathbf{x}\in\mathbb{R}^n} -\log\left(p(\mathbf{y}|\mathbf{x})\right) \\
+\textrm{subject to:}\quad g_i(\mathbf{x}) < 0 \\
+\textrm{and:}\quad h_j(\mathbf{x}) = 0
+$$ 
+
+## Example: Deep Learning
+
+- Training examples $\mathbf{x}_i$ and labels $y_i$
+
+- Neural network defined by a function $\phi$ that depends on weights $\mathbf{w}$
+
+- Learning problem:
+
+$$ \min_w \sum_i C(\phi(\mathbf{x}_i,\mathbf{w}),y_i), $$
+
+- $C$ is a cost function
+
+## Optimization outside data sciece
+
+- Orgs and Companies face constant optimization problems 
+
+- Learning how to handle them can be a superpower
+
+![](lucrative.png)
+
+## Course Structure
+
+:::: {.columns}
+
+::: {.column}
+
+1. Least Squares
+- Oldest, easiest, most mature technologies, first four weeks
+- Primary book is [VMLS](https://web.stanford.edu/~boyd/vmls/)
+
+
+:::
+
+::: {.column}
+
+![](vmls.jpg){width=60%}
+:::
+
+::::
+
+
+## Course Structure
+
+:::: {.columns}
+
+::: {.column}
+2. Convex Optimization
+- Non-negative curvature
+- Incredibly useful, difficult, weeks 5-12
+- Subsumes many special cases (least squares, linear programs, etc)
+- Growing field, especially with advent of AI
+
+:::
+
+::: {.column}
+![](cvxbook.jpg){width=60%}
+
+:::
+
+::::
+
+## Course Structure
+
+:::: {.columns}
+
+::: {.column}
+
+3. Nonconvex Optimization
+- Can't solve these but can come close
+- Useful for things like deep learning
+- Last 3 weeks
+- More based on lectures but also [https://www.deeplearningbook.org/](https://www.deeplearningbook.org/)
+:::
+
+::: {.column width="40%"}
+![](deepbook.jpg){width=60%}
+:::
+
+::::
+
+## Other Textbook
+:::: {.columns}
+
+::: {.column}
+- We have one more good book, unforunately not free
+- Also doesn't cover anything in depth
+- Great for overall picture
+:::
+
+::: {.column}
+![](optalg.jpg)
+:::
+
+::::
+
+## Homework Assignments
+
+- Due every two weeks
+- Mostly solving problems with data but some math
+- Preferred format: quarto file accompanied with rendered pdf
+- Choice of language, Recommended python, Julia, R
+- 80\% of your grade
+
+## Final Project
+
+- Final Project will be to explore an aspect of the course in a little more depth.
+- Intentionally open ended, but could be as simple as picking an application area of interest to you and designing and solving a problem in that area
+- 20\% of your grade
+
+## Course Website and Slack Channel
+
+- Key annoucements, homework, readings, etc will be posted to: [https://georgehagstrom.github.io/DATA609Spring2025/](https://georgehagstrom.github.io/DATA609Spring2025/)
+
+- Course will have a slack channel to enable rapid communication:
+[invite link](https://join.slack.com/t/data609-spring-2025/shared_invite/zt-2xqbc0zqu-ptZ2vNJ49AHZ1Xy0AQvKag)
+
+- Turn in assignments on Brightspace
+
+
+## Generative AI Policy
+
+- AI is useful, you can ask it questions, have it generate code, etc
+- It is great at easy problems, but that is a trap
+- It makes lots of mistakes
+- Research shows it helps people who know the material well much more than those who don't
+- Policy: You should understand everything that you turn in completely. I'll will be generous with grades for genuine effort but will penalize AI-driven mistakes harshly
+
+## What to do this week?
+
+- Read:
+  - Chapter 1 Introduction to Algorithms for Data Mining and Machine Learning
+  - Chapter 1 of [Convex Optimization](https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
+
+- I needed review linear algebra:
+  - [Essential Linear Algebra for Machine Learning](https://www.cs.cmu.edu/~zkolter/course/linalg/linalg_notes.pdf)
+  -Appendix A1, A3-A5 of [Convex Optimization](https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
+- Start [Lab 1](https://htmlpreview.github.io/?https://georgehagstrom.github.io/DATA609Spring2025/assignments/labs/Lab1.html)
+  - Problem 1 is covered this week, 2 and 3 are more for next week
+
+
+## Optimization: Needles in a haystack?
+
+- General optimization is a hard problem
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+```{python}
+#| width: 10
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+
+N = 10
+means = np.random.uniform(-5, 5, size=(N, 2))  
+amplitudes = -np.random.uniform(3, 5, size=N)  
+std_devs = np.random.uniform(0.1, 1.0, size=N)   
+
+# Define the grid
+x = np.linspace(-7, 7, 100)
+y = np.linspace(-7, 7, 100)
+x, y = np.meshgrid(x, y)
+z = np.zeros_like(x)
+
+# Sum the Gaussian functions
+for i in  range(N):
+    z += amplitudes[i] * np.exp(-((x - means[i, 0])**2 + (y - means[i, 1])**2) / (2 * std_devs[i]**2))
+
+# Plot the result in 3D
+fig = plt.figure(figsize=(10, 7))
+ax = fig.add_subplot(111, projection='3d')
+ax.plot_surface(x, y, z, cmap='viridis', edgecolor='none')
+ax.set_title('Cost')
+plt.show()
+ 
+```
+:::
+
+::: {.column width="50%"}
+
+- Error proportional to # boxes sampled:
+$$\mathrm{Num Boxes} \sim \frac{C}{\epsilon^N}$$ 
+- N is num. parameters
+- Modest N, problem takes longer than age of universe
+
+:::
+
+::::
+
+## Only Local Optimization is Possible
+
+:::: {.columns}
+
+::: {.column width="50%"}
+- Can't find lowest valley, but can find a valley
+- Often, this is still very useful in practice
+- No guarantees, sensitive to initial guess
+- For __convex__ problems, only one valley!
+:::
+
+::: {.column width="50%"}
+
+
+```{python}
+#| width: 10
+def f(x,y):
+  return -np.exp(-(x**2 + 6.0*y**2))
+
+xx = np.linspace(-2,2,100)
+yy = np.linspace(-2,2,100)
+x, y = np.meshgrid(xx, yy)
+fvals = np.zeros_like(x)
+
+fvals = f(x,y)
+
+fig = plt.figure(figsize=(10, 7))
+ax = fig.add_subplot(111, projection='3d')
+ax.plot_surface(x, y, fvals, cmap='viridis', edgecolor='none')
+
+```
+:::
+::::
+## What is a local minimum?
+
+- value $\mathbf{x}_0$ where $f(\mathbf{x})>f(\mathbf{x}_0)$ close
+```{python}
+
+# Define the grid
+x = np.linspace(-7, 7, 100)
+y = -np.exp(-x**2/2.0)+1.0
+
+fig = plt.figure(figsize=(8, 6))
+ax = fig.add_subplot(111)
+ax.plot(x, y)
+ax.axhline(y=0, color='r', linestyle='--')
+
+```
+
+
+## What is a local minimum?
+
+- value $\mathbf{x}_0$ where $f(\mathbf{x})>f(\mathbf{x}_0)$ close
+- In calculus need two things:
+$$
+\frac{df}{dx} = 0,
+\frac{d^2f}{dx^2} > 0
+$$
+- Function is "flat"
+- Curvature is "up"
+
+
+## What is a local minimum?
+
+- value $\mathbf{x}_0$ where $f(\mathbf{x})>f(\mathbf{x}_0)$ close
+- Higher dimensions
+$$
+\nabla f(\mathbf{x}) = 0 \\ 
+(\nabla^2 f)_{ij} = \frac{\partial^2 f(\mathbf{x})}{\partial x_i \partial x_j} \succ 0
+$$
+- Vanishing gradient
+- Positive Definite "Hessian"
+
+## How to find local maxima in practice?
+
+- Iterative methods:
+  - Gradient Descent, Newton's Method, ....
+- Start with initial guess $\mathbf{x}_0$
+- Calculate gradient $\nabla f$
+- Take a "step" in direction of $\nabla f$
+$$ \mathbf{x}_{n+1} = \mathbf{x}_n - k\nabla f(\mathbf{x}_{n})$$
+- $k$ is _step size_ or _learning rate_
+
+## How to find local maxima in practice?
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+```{python}
+
+def f(x,y):
+  return np.exp(-(x**2 + 6.0*y**2))
+
+xx = np.linspace(-2,2,100)
+yy = np.linspace(-2,2,100)
+x, y = np.meshgrid(xx, yy)
+fvals = np.zeros_like(x)
+
+fvals = f(x,y)
+
+n_steps = 100
+k = 0.1
+def grad_f(x,y):
+  return np.array([2*x*np.exp(-(x**2 + 3.0*y**2)), 6*y*np.exp(-(x**2 + 3.0*y**2))])
+
+xVec = np.zeros(n_steps)
+yVec = np.zeros(n_steps)
+
+xVec[0] = 1.0
+yVec[0] = 1.0
+
+for i in range(n_steps-1):
+  xVec[i+1], yVec[i+1] = [xVec[i],yVec[i]] - k * grad_f(xVec[i],yVec[i])
+
+
+fig = plt.figure(figsize=(8, 6))
+ax = fig.add_subplot(111)
+
+ax.contourf(x,y,fvals,cmap = "viridis",levels=20)
+ax.plot(xVec,yVec)
+```
+:::
+
+::: {.column width="50%"}
+
+- $f(x,y) = \exp\left(-x^2-3y^2\right)$
+- $k=0.1$
+- 100 steps
+:::
+
+::::
+
+
+## Advert
+
+- Once per month (Tuesday, Wedneday, Thursday) "field trips" to New York Open Statistical Computing Meetup
+- Send me a DM I'll add you to the email list
+- [nyhackr.org](nyhackr.org)
+![](nyhackr.png)
+
+## Thanks!
+
+
+
+
+
+
