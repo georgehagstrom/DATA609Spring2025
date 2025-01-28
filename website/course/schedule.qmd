@@ -1,5 +1,5 @@
 --
-title: "DATA607 - Data Acquisition and Management"
+title: "DATA609 - Math Modeling Techniques"
 tbl-colwidths: [10,10,20,5,5,5,5,5,5,5]
 editor_options: 
   chunk_output_type: console
