@@ -343,13 +343,13 @@ George Hagstrom
 <h2>What is Optimization?</h2>
 <ul>
 <li>What is the <strong>decision</strong> that leads to the best <strong>outcome</strong>?</li>
-<li>“What is the value of our <strong>decision variable <span class="math inline">\(\mathbf{x}\)</span></strong> that minimizes our <strong>objective function f()</strong>?</li>
+<li>What is the value of our <strong>decision variable <span class="math inline">\(\mathbf{x}\)</span></strong> that minimizes our <strong>objective function f()</strong>?</li>
 </ul>
 <p><span class="math display">\[
 \textrm{minimize}\quad f(\mathbf{x}), \\
 \textrm{subject to}\quad g_i(\mathbf{x}) \leq 0, \\
 \textrm{and}\quad h_j(\mathbf{x}) = 0,\\
-\mathbf{x}\in \mathbb{R}^n, \, f, \, g_i, \, h_j: \mathbb{R}^n\mapsto \mathbb{R}
+\mathbf{x}\in \mathbb{R}^n, \quad f,\, g_i,\, h_j: \mathbb{R}^n\mapsto \mathbb{R}
 \]</span></p>
 </section>
 <section id="constraint-terminology" class="slide level2">
@@ -430,9 +430,9 @@ h_j(\mathbf{x}) = 0
 <section id="examples-least-squares-1" class="slide level2">
 <h2>Examples: Least Squares</h2>
 <p>Add penalty terms for regularization or constraints</p>
-<p><span class="math display">\[ \min_{\mathbf{x}\in\mathbb{R}^n} \|A\mathbf{x}-\mathbf{b}\|^2 \\
-f_i(\mathbf{x}) &gt; 0 \\
-g_i(\mathbf{x}) = 0
+<p><span class="math display">\[ \min_{\mathbf{x}\in\mathbb{R}^n} \|A\mathbf{x}-\mathbf{b}\|^2 +k\|x\|^2 \\
+g_i(\mathbf{x}) \leq 0 \\
+h_j(\mathbf{x}) = 0
 \]</span></p>
 </section>
 <section id="examples-maximum-likelihood" class="slide level2">
@@ -443,7 +443,7 @@ g_i(\mathbf{x}) = 0
 </ul>
 <p><span class="math display">\[
 \textrm{find:}\quad \min_{\mathbf{x}\in\mathbb{R}^n} -\log\left(p(\mathbf{y}|\mathbf{x})\right) \\
-\textrm{subject to:}\quad g_i(\mathbf{x}) &lt; 0 \\
+\textrm{subject to:}\quad g_i(\mathbf{x}) \leq 0 \\
 \textrm{and:}\quad h_j(\mathbf{x}) = 0
 \]</span></p>
 </section>
@@ -502,7 +502,7 @@ g_i(\mathbf{x}) = 0
 <section id="course-structure-2" class="slide level2">
 <h2>Course Structure</h2>
 <div class="columns">
-<div class="column">
+<div class="column" style="width:60%;">
 <ol start="3" type="1">
 <li>Nonconvex Optimization</li>
 </ol>
@@ -568,18 +568,15 @@ g_i(\mathbf{x}) = 0
 <section id="what-to-do-this-week" class="slide level2">
 <h2>What to do this week?</h2>
 <ul>
-<li>Read:
-<ul>
-<li>Chapter 1 Introduction to Algorithms for Data Mining and Machine Learning</li>
-<li>Chapter 1 of <a href="https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf">Convex Optimization</a></li>
-</ul></li>
-<li>I needed review linear algebra:
+<li><p>Chapter 1 Introduction to Algorithms for Data Mining and Machine Learning</p></li>
+<li><p>Chapter 1 of <a href="https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf">Convex Optimization</a></p></li>
+<li><p>If needed review linear algebra:</p>
 <ul>
 <li><a href="https://www.cs.cmu.edu/~zkolter/course/linalg/linalg_notes.pdf">Essential Linear Algebra for Machine Learning</a> -Appendix A1, A3-A5 of <a href="https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf">Convex Optimization</a></li>
 </ul></li>
-<li>Start <a href="https://htmlpreview.github.io/?https://georgehagstrom.github.io/DATA609Spring2025/assignments/labs/Lab1.html">Lab 1</a>
+<li><p>Start <a href="https://htmlpreview.github.io/?https://georgehagstrom.github.io/DATA609Spring2025/assignments/labs/Lab1.html">Lab 1</a></p>
 <ul>
-<li>Problem 1 is covered this week, 2 and 3 are more for next week</li>
+<li>Problem 1 this week, 2 and 3 next week</li>
 </ul></li>
 </ul>
 </section>
@@ -590,7 +587,7 @@ g_i(\mathbf{x}) = 0
 </ul>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div id="f4762520" class="cell" width="10" data-execution_count="1">
+<div id="02e180db" class="cell" width="10" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -618,7 +615,7 @@ g_i(\mathbf{x}) = 0
 <li>For <strong>convex</strong> problems, only one valley!</li>
 </ul>
 </div><div class="column" style="width:50%;">
-<div id="be7c9b21" class="cell" width="10" data-execution_count="2">
+<div id="b9a98370" class="cell" width="10" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -634,7 +631,7 @@ g_i(\mathbf{x}) = 0
 <ul>
 <li>value <span class="math inline">\(\mathbf{x}_0\)</span> where <span class="math inline">\(f(\mathbf{x})&gt;f(\mathbf{x}_0)\)</span> close</li>
 </ul>
-<div id="c3c24492" class="cell" data-execution_count="3">
+<div id="82cad48a" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -668,8 +665,8 @@ g_i(\mathbf{x}) = 0
 <li>Positive Definite “Hessian”</li>
 </ul>
 </section>
-<section id="how-to-find-local-maxima-in-practice" class="slide level2">
-<h2>How to find local maxima in practice?</h2>
+<section id="how-to-find-local-minimum-in-practice" class="slide level2">
+<h2>How to find local minimum in practice?</h2>
 <ul>
 <li>Iterative methods:
 <ul>
@@ -681,11 +678,11 @@ g_i(\mathbf{x}) = 0
 <li><span class="math inline">\(k\)</span> is <em>step size</em> or <em>learning rate</em></li>
 </ul>
 </section>
-<section id="how-to-find-local-maxima-in-practice-1" class="slide level2">
-<h2>How to find local maxima in practice?</h2>
+<section id="how-to-find-local-minimum-in-practice-1" class="slide level2">
+<h2>How to find local minimum in practice?</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div id="ba359ff4" class="cell" data-execution_count="4">
+<div id="9f9cc802" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-display">
 <div>
 <figure>

@@ -547,7 +547,7 @@
     "href": "meetups/Meetup-1/meetup-1.html#what-is-optimization",
     "title": "Meetup 1: Introduction to Optimization",
     "section": "What is Optimization?",
-    "text": "What is Optimization?\n\nWhat is the decision that leads to the best outcome?\n“What is the value of our decision variable \\(\\mathbf{x}\\) that minimizes our objective function f()?\n\n\\[\n\\textrm{minimize}\\quad f(\\mathbf{x}), \\\\\n\\textrm{subject to}\\quad g_i(\\mathbf{x}) \\leq 0, \\\\\n\\textrm{and}\\quad h_j(\\mathbf{x}) = 0,\\\\\n\\mathbf{x}\\in \\mathbb{R}^n, \\, f, \\, g_i, \\, h_j: \\mathbb{R}^n\\mapsto \\mathbb{R}\n\\]"
+    "text": "What is Optimization?\n\nWhat is the decision that leads to the best outcome?\nWhat is the value of our decision variable \\(\\mathbf{x}\\) that minimizes our objective function f()?\n\n\\[\n\\textrm{minimize}\\quad f(\\mathbf{x}), \\\\\n\\textrm{subject to}\\quad g_i(\\mathbf{x}) \\leq 0, \\\\\n\\textrm{and}\\quad h_j(\\mathbf{x}) = 0,\\\\\n\\mathbf{x}\\in \\mathbb{R}^n, \\quad f,\\, g_i,\\, h_j: \\mathbb{R}^n\\mapsto \\mathbb{R}\n\\]"
   },
   {
     "objectID": "meetups/Meetup-1/meetup-1.html#constraint-terminology",
@@ -603,14 +603,14 @@
     "href": "meetups/Meetup-1/meetup-1.html#examples-least-squares-1",
     "title": "Meetup 1: Introduction to Optimization",
     "section": "Examples: Least Squares",
-    "text": "Examples: Least Squares\nAdd penalty terms for regularization or constraints\n\\[ \\min_{\\mathbf{x}\\in\\mathbb{R}^n} \\|A\\mathbf{x}-\\mathbf{b}\\|^2 \\\\\nf_i(\\mathbf{x}) &gt; 0 \\\\\ng_i(\\mathbf{x}) = 0\n\\]"
+    "text": "Examples: Least Squares\nAdd penalty terms for regularization or constraints\n\\[ \\min_{\\mathbf{x}\\in\\mathbb{R}^n} \\|A\\mathbf{x}-\\mathbf{b}\\|^2 +k\\|x\\|^2 \\\\\ng_i(\\mathbf{x}) \\leq 0 \\\\\nh_j(\\mathbf{x}) = 0\n\\]"
   },
   {
     "objectID": "meetups/Meetup-1/meetup-1.html#examples-maximum-likelihood",
     "href": "meetups/Meetup-1/meetup-1.html#examples-maximum-likelihood",
     "title": "Meetup 1: Introduction to Optimization",
     "section": "Examples: Maximum Likelihood",
-    "text": "Examples: Maximum Likelihood\n\n\\(p(\\mathbf{y}|\\mathbf{x})\\) is likelihood of data given parameters\nmaximum likelihood is the optimization problem\n\n\\[\n\\textrm{find:}\\quad \\min_{\\mathbf{x}\\in\\mathbb{R}^n} -\\log\\left(p(\\mathbf{y}|\\mathbf{x})\\right) \\\\\n\\textrm{subject to:}\\quad g_i(\\mathbf{x}) &lt; 0 \\\\\n\\textrm{and:}\\quad h_j(\\mathbf{x}) = 0\n\\]"
+    "text": "Examples: Maximum Likelihood\n\n\\(p(\\mathbf{y}|\\mathbf{x})\\) is likelihood of data given parameters\nmaximum likelihood is the optimization problem\n\n\\[\n\\textrm{find:}\\quad \\min_{\\mathbf{x}\\in\\mathbb{R}^n} -\\log\\left(p(\\mathbf{y}|\\mathbf{x})\\right) \\\\\n\\textrm{subject to:}\\quad g_i(\\mathbf{x}) \\leq 0 \\\\\n\\textrm{and:}\\quad h_j(\\mathbf{x}) = 0\n\\]"
   },
   {
     "objectID": "meetups/Meetup-1/meetup-1.html#example-deep-learning",
@@ -687,7 +687,7 @@
     "href": "meetups/Meetup-1/meetup-1.html#what-to-do-this-week",
     "title": "Meetup 1: Introduction to Optimization",
     "section": "What to do this week?",
-    "text": "What to do this week?\n\nRead:\n\nChapter 1 Introduction to Algorithms for Data Mining and Machine Learning\nChapter 1 of Convex Optimization\n\nI needed review linear algebra:\n\nEssential Linear Algebra for Machine Learning -Appendix A1, A3-A5 of Convex Optimization\n\nStart Lab 1\n\nProblem 1 is covered this week, 2 and 3 are more for next week"
+    "text": "What to do this week?\n\nChapter 1 Introduction to Algorithms for Data Mining and Machine Learning\nChapter 1 of Convex Optimization\nIf needed review linear algebra:\n\nEssential Linear Algebra for Machine Learning -Appendix A1, A3-A5 of Convex Optimization\n\nStart Lab 1\n\nProblem 1 this week, 2 and 3 next week"
   },
   {
     "objectID": "meetups/Meetup-1/meetup-1.html#optimization-needles-in-a-haystack",
@@ -725,18 +725,18 @@
     "text": "What is a local minimum?\n\nvalue \\(\\mathbf{x}_0\\) where \\(f(\\mathbf{x})&gt;f(\\mathbf{x}_0)\\) close\nHigher dimensions \\[\n\\nabla f(\\mathbf{x}) = 0 \\\\\n(\\nabla^2 f)_{ij} = \\frac{\\partial^2 f(\\mathbf{x})}{\\partial x_i \\partial x_j} \\succ 0\n\\]\nVanishing gradient\nPositive Definite “Hessian”"
   },
   {
-    "objectID": "meetups/Meetup-1/meetup-1.html#how-to-find-local-maxima-in-practice",
-    "href": "meetups/Meetup-1/meetup-1.html#how-to-find-local-maxima-in-practice",
+    "objectID": "meetups/Meetup-1/meetup-1.html#how-to-find-local-minimum-in-practice",
+    "href": "meetups/Meetup-1/meetup-1.html#how-to-find-local-minimum-in-practice",
     "title": "Meetup 1: Introduction to Optimization",
-    "section": "How to find local maxima in practice?",
-    "text": "How to find local maxima in practice?\n\nIterative methods:\n\nGradient Descent, Newton’s Method, ….\n\nStart with initial guess \\(\\mathbf{x}_0\\)\nCalculate gradient \\(\\nabla f\\)\nTake a “step” in direction of \\(\\nabla f\\) \\[ \\mathbf{x}_{n+1} = \\mathbf{x}_n - k\\nabla f(\\mathbf{x}_{n})\\]\n\\(k\\) is step size or learning rate"
+    "section": "How to find local minimum in practice?",
+    "text": "How to find local minimum in practice?\n\nIterative methods:\n\nGradient Descent, Newton’s Method, ….\n\nStart with initial guess \\(\\mathbf{x}_0\\)\nCalculate gradient \\(\\nabla f\\)\nTake a “step” in direction of \\(\\nabla f\\) \\[ \\mathbf{x}_{n+1} = \\mathbf{x}_n - k\\nabla f(\\mathbf{x}_{n})\\]\n\\(k\\) is step size or learning rate"
   },
   {
-    "objectID": "meetups/Meetup-1/meetup-1.html#how-to-find-local-maxima-in-practice-1",
-    "href": "meetups/Meetup-1/meetup-1.html#how-to-find-local-maxima-in-practice-1",
+    "objectID": "meetups/Meetup-1/meetup-1.html#how-to-find-local-minimum-in-practice-1",
+    "href": "meetups/Meetup-1/meetup-1.html#how-to-find-local-minimum-in-practice-1",
     "title": "Meetup 1: Introduction to Optimization",
-    "section": "How to find local maxima in practice?",
-    "text": "How to find local maxima in practice?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\(f(x,y) = \\exp\\left(-x^2-3y^2\\right)\\)\n\\(k=0.1\\)\n100 steps"
+    "section": "How to find local minimum in practice?",
+    "text": "How to find local minimum in practice?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\(f(x,y) = \\exp\\left(-x^2-3y^2\\right)\\)\n\\(k=0.1\\)\n100 steps"
   },
   {
     "objectID": "meetups/Meetup-1/meetup-1.html#advert",
@@ -864,9 +864,9 @@
   {
     "objectID": "course/schedule.html",
     "href": "course/schedule.html",
-    "title": "DATA607 - Data Acquisition and Management",
+    "title": "DATA 609 Spring 2025",
     "section": "",
-    "text": "Click Here to Join the Meetups on Zoom\n\nCourse Schedule\n\n\n\n\n\n\n\n\n\nDate\nStart Time\nModule\nSlides\nVideo\n\n\n\n\nJan 27\n07:00PM\nIntroduction to Optimization Theory\n\n\n\n\nFeb 3\n07:00PM\nLeast Squares Optimization\n\n\n\n\nFeb 10\n07:00PM\nLeast Squares and Statistics\n\n\n\n\nFeb 18\n07:00PM\nConstrained Least Squares and Applications\n\n\n\n\nFeb 24\n07:00PM\nConvex Sets\n\n\n\n\nMar 3\n07:00PM\nConvex Sets II\n\n\n\n\nMar 10\n07:00PM\nConvex Functions\n\n\n\n\nMar 17\n07:00PM\nConvex Functions II\n\n\n\n\nMar 24\n07:0PM\nConvex Optimization Problems\n\n\n\n\nMar 31\n07:00PM\nData Fitting\n\n\n\n\nApr 7\n07:00PM\nApplications to Statistics and Machine Learning\n\n\n\n\nApr 14\n07:00PM\nDuality and Classifiers\n\n\n\n\nApr 21\n\nNo Meetup (Spring Break)\n\n\n\n\nApr 28\n07:00PM\nGradient Descent and Neural Networks\nLab 7\n\n\n\nMay 5\n07:00PM\nStochastic Gradient Descent\n\n\n\n\nMay 12\n07:00PM\nTraining Deep Neural Networks",
+    "text": "title: “DATA607 - Data Acquisition and Management” tbl-colwidths: [10,10,20,5,5,5,5,5,5,5] editor_options: chunk_output_type: console",
     "crumbs": [
       "Course information",
       "Schedule"
@@ -875,9 +875,9 @@
   {
     "objectID": "course/schedule.html#meetup-link",
     "href": "course/schedule.html#meetup-link",
-    "title": "DATA607 - Data Acquisition and Management",
-    "section": "",
-    "text": "Click Here to Join the Meetups on Zoom\n\nCourse Schedule\n\n\n\n\n\n\n\n\n\nDate\nStart Time\nModule\nSlides\nVideo\n\n\n\n\nJan 27\n07:00PM\nIntroduction to Optimization Theory\n\n\n\n\nFeb 3\n07:00PM\nLeast Squares Optimization\n\n\n\n\nFeb 10\n07:00PM\nLeast Squares and Statistics\n\n\n\n\nFeb 18\n07:00PM\nConstrained Least Squares and Applications\n\n\n\n\nFeb 24\n07:00PM\nConvex Sets\n\n\n\n\nMar 3\n07:00PM\nConvex Sets II\n\n\n\n\nMar 10\n07:00PM\nConvex Functions\n\n\n\n\nMar 17\n07:00PM\nConvex Functions II\n\n\n\n\nMar 24\n07:0PM\nConvex Optimization Problems\n\n\n\n\nMar 31\n07:00PM\nData Fitting\n\n\n\n\nApr 7\n07:00PM\nApplications to Statistics and Machine Learning\n\n\n\n\nApr 14\n07:00PM\nDuality and Classifiers\n\n\n\n\nApr 21\n\nNo Meetup (Spring Break)\n\n\n\n\nApr 28\n07:00PM\nGradient Descent and Neural Networks\nLab 7\n\n\n\nMay 5\n07:00PM\nStochastic Gradient Descent\n\n\n\n\nMay 12\n07:00PM\nTraining Deep Neural Networks",
+    "title": "DATA 609 Spring 2025",
+    "section": "Meetup Link:",
+    "text": "Meetup Link:\nClick Here to Join the Meetups on Zoom\n\nCourse Schedule\n\n\nDate\nStart Time\nModule\nSlides\nVideo\n\n\n\n\nJan 27\n06:45PM\nIntroduction to Optimization Theory\nMeetup 1 Slides\nMeetup 1 Video\n\n\nFeb 3\n06:45PM\nLeast Squares Optimization\n\n\n\n\nFeb 10\n06:45PM\nLeast Squares and Statistics\n\n\n\n\nFeb 18\n06:45PM\nConstrained Least Squares and Applications\n\n\n\n\nFeb 24\n06:45PM\nConvex Sets\n\n\n\n\nMar 3\n06:45PM\nConvex Sets II\n\n\n\n\nMar 10\n06:45PM\nConvex Functions\n\n\n\n\nMar 17\n06:45PM\nConvex Functions II\n\n\n\n\nMar 24\n07:0PM\nConvex Optimization Problems\n\n\n\n\nMar 31\n06:45PM\nData Fitting\n\n\n\n\nApr 7\n06:45PM\nApplications to Statistics and Machine Learning\n\n\n\n\nApr 14\n06:45PM\nDuality and Classifiers\n\n\n\n\nApr 21\n\nNo Meetup (Spring Break)\n\n\n\n\nApr 28\n06:45PM\nGradient Descent and Neural Networks\nLab 7\n\n\n\nMay 5\n06:45PM\nStochastic Gradient Descent\n\n\n\n\nMay 12\n06:45PM\nTraining Deep Neural Networks",
     "crumbs": [
       "Course information",
       "Schedule"
