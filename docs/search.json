@@ -47,642 +47,135 @@
     "text": "Meetup 1 is tonight at 6:45PM. We are going to talk about what optimization is, some of its applications, the course structure, and some very basic facts about its theory.\nHere is the information you need for the first meetup:\n\nGo through the course overview materials, and complete the week 1 readings.\nAttend our first meetup on Monday at 6:45 p.m. ET on Zoom\nClick here for slides"
   },
   {
-    "objectID": "modules/module1.html",
-    "href": "modules/module1.html",
-    "title": "Module 1 - Introduction to Optimization Problems",
+    "objectID": "modules/module4.html",
+    "href": "modules/module4.html",
+    "title": "Module 4 - Constrained Least Squares and Applications",
     "section": "",
-    "text": "Overview and Deliverables\n\nLearning Objectives\n\nYou will learn about how optimization problems are formalized and the terminology used to describe them\nUbiquity of Optimization problems in data science\nWe will define several important classes of optimization problems:\n\nUnconstrained versus Constrained\nConvex versus Non-Convex\nGlobal versus Local\n\nWhy optimization is hard\n\n\n\nReadings\nChapter 1 Introduction to Algorithms for Data Mining and Machine Learning\nChapter 1 of Convex Optimization\nIf you want to brush up on your linear algebra skills:\nEssential Linear Algebra for Machine Learning\nAppendix A1, A3-A5 of Convex Optimization\nThe mathematical level of those appendices are above what I expect from you in the course, I think the essential linear algebra notes are less intimidating.",
+    "text": "Homework\nHomework 2 is due this Sunday at midnight\n\n\nLearning Objectives\n\nSolving Least Squares problems with Linear Equality Constraints\nApplications to Portfolio Optimization\nKalman Filters and Recursive State Estimation\n\n\n\nReadings\nChapters 16 and 17 of Introduction to Applied Linear Algebra",
     "crumbs": [
       "Topics",
-      "1 - Introduction to Optimization Theory "
+      "4 - Constrained Least Squares and Applications"
     ]
   },
   {
-    "objectID": "modules/module7.html",
-    "href": "modules/module7.html",
-    "title": "Module 7: Convex Functions",
+    "objectID": "modules/module13.html",
+    "href": "modules/module13.html",
+    "title": "Module 13: Local Optimization Algorithms and Neural Networks",
     "section": "",
-    "text": "Learning Objectives\n\nDefinitions of Convex Functions\nImportant Examples of Convex Functions\nJensen’s Inequality\nOperations that Preserve Convexity\nConvex Conjugates\n\n\n\nReadings\nSections 3.1-2.3 of Convex Optimization",
+    "text": "Homework\nHomework 7 is due in two weeks, Sunday at midnight\n\n\nLearning Objectives\n\nNeural Network Learning and Backpropagation\nGradient Descent\nNewton’s Method\nConvergence Rates and Condition Number\nAcceleration Using Momentum\n\n\n\nReadings\nChapter 9 of Convex Optimization\nChapter 8.1-8.4 of Introduction to Algorithms for Data Mining Machine Learning\nOr alternatively deeplearningbook Chapter 6",
     "crumbs": [
       "Topics",
-      "7 - Convex Functions"
+      "13 - Local Optimization and Neural Networks"
     ]
   },
   {
-    "objectID": "modules/module2.html",
-    "href": "modules/module2.html",
-    "title": "Module 2 - Introduction to Least Squares Problems",
+    "objectID": "modules/module3.html",
+    "href": "modules/module3.html",
+    "title": "Module 3: Statistical Applications of Least Squares",
     "section": "",
-    "text": "Overview and Deliverables\nHomework 1 is due this Sunday at midnight\n\n\nLearning Objectives\n\nSolving unconstrained least squares problems\n\nProperties of the Gram matrix and the pseudoinverse\n\nApplications:\n\nOptimization\nLinear Regression\nFunction Fitting\n\n\n\n\nReadings\nChapter 12 and 13 of Introduction to Applied Linear Algebra",
+    "text": "Deliverables\nHomework 2 will be due two Sundays from now.\n\n\nLearning Objectives\n\nLeast Squares and Linear Regression\nGeneralized Least Squares\nRecursive/Online Least Squares\nRegularization and Multi-Objective Least Squares\n\n\n\nReadings\nChapters 13 and 15 of Introduction to Applied Linear Algebra\nSections 4.2 and 4.5 of Introduction to Algorithms for Data Mining and Machine Learning",
     "crumbs": [
       "Topics",
-      "2 - Least Squares Optimization"
+      "3 - Least Squares and Statistics"
     ]
   },
   {
-    "objectID": "modules/module15.html",
-    "href": "modules/module15.html",
-    "title": "Module 15 - Deep Learning Applications",
+    "objectID": "modules/module6.html",
+    "href": "modules/module6.html",
+    "title": "Module 6 - Convex Sets II",
     "section": "",
-    "text": "Learning Objectives\n\nTraining Deep Neural Networks\n\n\n\nReadings\nGoodfellow Chapter 11 of the deeplearningbook",
+    "text": "Homework 3 is due this Sunday at midnight\n\n\n\nGeneralized Inequalities\nSupporting and Separating Hyperplanes\nDual Cones\n\n\n\n\nSections 2.4-2.6 of Convex Optimization",
     "crumbs": [
       "Topics",
-      "15 - Training Deep Neural Networks"
+      "6 - Convex Sets II"
     ]
   },
   {
-    "objectID": "modules/module14.html",
-    "href": "modules/module14.html",
-    "title": "Module 14: Stochastic Gradient Descent",
+    "objectID": "modules/module6.html#homework",
+    "href": "modules/module6.html#homework",
+    "title": "Module 6 - Convex Sets II",
     "section": "",
-    "text": "Homework\nHomework 7 is due this Sunday at midnight\n\n\nLearning Objectives\n\nStochastic Gradient Descent\nHyperparameter Tuning\nSaddle Points and Convergence\n\n\n\nReadings\nSection 8.5 Introduction to Algorithms for Data Mining and Machine Learning\nChapter 8 of deeplearningbook",
+    "text": "Homework 3 is due this Sunday at midnight\n\n\n\nGeneralized Inequalities\nSupporting and Separating Hyperplanes\nDual Cones\n\n\n\n\nSections 2.4-2.6 of Convex Optimization",
     "crumbs": [
       "Topics",
-      "14 - Stochastic Gradient Descent"
+      "6 - Convex Sets II"
     ]
   },
   {
-    "objectID": "modules/module8.html",
-    "href": "modules/module8.html",
-    "title": "Module 8: Convex Functions II",
+    "objectID": "modules/module10.html",
+    "href": "modules/module10.html",
+    "title": "Module 10 - Convex Problems in Data Fitting",
     "section": "",
-    "text": "Learning Objectives\n\nQuasiconvex Functions\nLog-Convexity/Concavity\nGeneralized Inequalities and Convexity\n\n\n\nReadings\nSections 3.4-3.6 of Convex Optimization",
+    "text": "Homework 5 is due this Sunday at midnight\n\n\n\nRegularization- lasso and Huber penalties\nFunction fitting, splines, and interpolation\n\n\n\n\nChapter 6 of Convex Optimization",
     "crumbs": [
       "Topics",
-      "8 - Convex Functions II"
+      "10 - Data Fitting"
     ]
   },
   {
-    "objectID": "modules/module11.html",
-    "href": "modules/module11.html",
-    "title": "Module 11 - Convex Optimization Problems in Statistics",
+    "objectID": "modules/module10.html#homework",
+    "href": "modules/module10.html#homework",
+    "title": "Module 10 - Convex Problems in Data Fitting",
     "section": "",
-    "text": "Homework\nHomework 6 is due in two weeks, next Sunday at midnight\n\n\nLearning Objectives\n\nMaximum Likelihood and Maximum Entropy Methods\nMaximum Posterior Probability and Bayesian Inference\nLogistic Regression\nExperiment Design\n\n\n\nReadings\nSections 7.1, 7.2, and 7.5 of Convex Optimization",
+    "text": "Homework 5 is due this Sunday at midnight\n\n\n\nRegularization- lasso and Huber penalties\nFunction fitting, splines, and interpolation\n\n\n\n\nChapter 6 of Convex Optimization",
     "crumbs": [
       "Topics",
-      "11 - Convex Optimization in Statistics"
+      "10 - Data Fitting"
     ]
   },
   {
-    "objectID": "license.html",
-    "href": "license.html",
-    "title": "Attribution-ShareAlike 4.0 International",
+    "objectID": "modules/module9.html",
+    "href": "modules/module9.html",
+    "title": "Module 9: Convex Optimization Problems and Disciplined Convex Programming",
     "section": "",
-    "text": "Creative Commons Corporation (“Creative Commons”) is not a law firm and does not provide legal services or legal advice. Distribution of Creative Commons public licenses does not create a lawyer-client or other relationship. Creative Commons makes its licenses and related information available on an “as-is” basis. Creative Commons gives no warranties regarding its licenses, any material licensed under their terms and conditions, or any related information. Creative Commons disclaims all liability for damages resulting from their use to the fullest extent possible."
-  },
-  {
-    "objectID": "license.html#creative-commons-attribution-sharealike-4.0-international-public-license",
-    "href": "license.html#creative-commons-attribution-sharealike-4.0-international-public-license",
-    "title": "Attribution-ShareAlike 4.0 International",
-    "section": "Creative Commons Attribution-ShareAlike 4.0 International Public License",
-    "text": "Creative Commons Attribution-ShareAlike 4.0 International Public License\nBy exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and conditions of this Creative Commons Attribution-ShareAlike 4.0 International Public License (“Public License”). To the extent this Public License may be interpreted as a contract, You are granted the Licensed Rights in consideration of Your acceptance of these terms and conditions, and the Licensor grants You such rights in consideration of benefits the Licensor receives from making the Licensed Material available under these terms and conditions.\n\nSection 1 – Definitions.\n\nAdapted Material means material subject to Copyright and Similar Rights that is derived from or based upon the Licensed Material and in which the Licensed Material is translated, altered, arranged, transformed, or otherwise modified in a manner requiring permission under the Copyright and Similar Rights held by the Licensor. For purposes of this Public License, where the Licensed Material is a musical work, performance, or sound recording, Adapted Material is always produced where the Licensed Material is synched in timed relation with a moving image.\nAdapter’s License means the license You apply to Your Copyright and Similar Rights in Your contributions to Adapted Material in accordance with the terms and conditions of this Public License.\nBY-SA Compatible License means a license listed at creativecommons.org/compatiblelicenses, approved by Creative Commons as essentially the equivalent of this Public License.\nCopyright and Similar Rights means copyright and/or similar rights closely related to copyright including, without limitation, performance, broadcast, sound recording, and Sui Generis Database Rights, without regard to how the rights are labeled or categorized. For purposes of this Public License, the rights specified in Section 2(b)(1)-(2) are not Copyright and Similar Rights.\nEffective Technological Measures means those measures that, in the absence of proper authority, may not be circumvented under laws fulfilling obligations under Article 11 of the WIPO Copyright Treaty adopted on December 20, 1996, and/or similar international agreements.\nExceptions and Limitations means fair use, fair dealing, and/or any other exception or limitation to Copyright and Similar Rights that applies to Your use of the Licensed Material.\nLicense Elements means the license attributes listed in the name of a Creative Commons Public License. The License Elements of this Public License are Attribution and ShareAlike.\nLicensed Material means the artistic or literary work, database, or other material to which the Licensor applied this Public License.\nLicensed Rights means the rights granted to You subject to the terms and conditions of this Public License, which are limited to all Copyright and Similar Rights that apply to Your use of the Licensed Material and that the Licensor has authority to license.\nLicensor means the individual(s) or entity(ies) granting rights under this Public License.\nShare means to provide material to the public by any means or process that requires permission under the Licensed Rights, such as reproduction, public display, public performance, distribution, dissemination, communication, or importation, and to make material available to the public including in ways that members of the public may access the material from a place and at a time individually chosen by them.\nSui Generis Database Rights means rights other than copyright resulting from Directive 96/9/EC of the European Parliament and of the Council of 11 March 1996 on the legal protection of databases, as amended and/or succeeded, as well as other essentially equivalent rights anywhere in the world.\nYou means the individual or entity exercising the Licensed Rights under this Public License. Your has a corresponding meaning.\n\n\n\nSection 2 – Scope.\n\nLicense grant.\n\nSubject to the terms and conditions of this Public License, the Licensor hereby grants You a worldwide, royalty-free, non-sublicensable, non-exclusive, irrevocable license to exercise the Licensed Rights in the Licensed Material to:\n\nreproduce and Share the Licensed Material, in whole or in part; and\nproduce, reproduce, and Share Adapted Material.\n\nExceptions and Limitations. For the avoidance of doubt, where Exceptions and Limitations apply to Your use, this Public License does not apply, and You do not need to comply with its terms and conditions.\nTerm. The term of this Public License is specified in Section 6(a).\nMedia and formats; technical modifications allowed. The Licensor authorizes You to exercise the Licensed Rights in all media and formats whether now known or hereafter created, and to make technical modifications necessary to do so. The Licensor waives and/or agrees not to assert any right or authority to forbid You from making technical modifications necessary to exercise the Licensed Rights, including technical modifications necessary to circumvent Effective Technological Measures. For purposes of this Public License, simply making modifications authorized by this Section 2(a)(4) never produces Adapted Material.\nDownstream recipients.\nA. Offer from the Licensor – Licensed Material. Every recipient of the Licensed Material automatically receives an offer from the Licensor to exercise the Licensed Rights under the terms and conditions of this Public License.\n\n__Additional offer from the Licensor – Adapted Material. Every recipient of Adapted Material from You automatically receives an offer from the Licensor to exercise the Licensed Rights in the Adapted Material under the conditions of the Adapter’s License You apply.\n\nC. No downstream restrictions. You may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, the Licensed Material if doing so restricts exercise of the Licensed Rights by any recipient of the Licensed Material.\nNo endorsement. Nothing in this Public License constitutes or may be construed as permission to assert or imply that You are, or that Your use of the Licensed Material is, connected with, or sponsored, endorsed, or granted official status by, the Licensor or others designated to receive attribution as provided in Section 3(a)(1)(A)(i).\n\nOther rights.\n\nMoral rights, such as the right of integrity, are not licensed under this Public License, nor are publicity, privacy, and/or other similar personality rights; however, to the extent possible, the Licensor waives and/or agrees not to assert any such rights held by the Licensor to the limited extent necessary to allow You to exercise the Licensed Rights, but not otherwise.\nPatent and trademark rights are not licensed under this Public License.\nTo the extent possible, the Licensor waives any right to collect royalties from You for the exercise of the Licensed Rights, whether directly or through a collecting society under any voluntary or waivable statutory or compulsory licensing scheme. In all other cases the Licensor expressly reserves any right to collect such royalties.\n\n\n\n\nSection 3 – License Conditions.\nYour exercise of the Licensed Rights is expressly made subject to the following conditions.\n\nAttribution.\n\nIf You Share the Licensed Material (including in modified form), You must:\n\nretain the following if it is supplied by the Licensor with the Licensed Material:\n\n\n\nidentification of the creator(s) of the Licensed Material and any others designated to receive attribution, in any reasonable manner requested by the Licensor (including by pseudonym if designated);\na copyright notice;\na notice that refers to this Public License;\na notice that refers to the disclaimer of warranties;\na URI or hyperlink to the Licensed Material to the extent reasonably practicable;\n\n\n\nindicate if You modified the Licensed Material and retain an indication of any previous modifications; and\nindicate the Licensed Material is licensed under this Public License, and include the text of, or the URI or hyperlink to, this Public License.\n\nYou may satisfy the conditions in Section 3(a)(1) in any reasonable manner based on the medium, means, and context in which You Share the Licensed Material. For example, it may be reasonable to satisfy the conditions by providing a URI or hyperlink to a resource that includes the required information.\nIf requested by the Licensor, You must remove any of the information required by Section 3(a)(1)(A) to the extent reasonably practicable.\n\nShareAlike.\n\nIn addition to the conditions in Section 3(a), if You Share Adapted Material You produce, the following conditions also apply.\n\nThe Adapter’s License You apply must be a Creative Commons license with the same License Elements, this version or later, or a BY-SA Compatible License.\nYou must include the text of, or the URI or hyperlink to, the Adapter’s License You apply. You may satisfy this condition in any reasonable manner based on the medium, means, and context in which You Share Adapted Material.\nYou may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, Adapted Material that restrict exercise of the rights granted under the Adapter’s License You apply.\n\n\n\nSection 4 – Sui Generis Database Rights.\nWhere the Licensed Rights include Sui Generis Database Rights that apply to Your use of the Licensed Material:\n\nfor the avoidance of doubt, Section 2(a)(1) grants You the right to extract, reuse, reproduce, and Share all or a substantial portion of the contents of the database;\nif You include all or a substantial portion of the database contents in a database in which You have Sui Generis Database Rights, then the database in which You have Sui Generis Database Rights (but not its individual contents) is Adapted Material, including for purposes of Section 3(b); and\nYou must comply with the conditions in Section 3(a) if You Share all or a substantial portion of the contents of the database.\n\nFor the avoidance of doubt, this Section 4 supplements and does not replace Your obligations under this Public License where the Licensed Rights include other Copyright and Similar Rights.\n\n\nSection 5 – Disclaimer of Warranties and Limitation of Liability.\n\nUnless otherwise separately undertaken by the Licensor, to the extent possible, the Licensor offers the Licensed Material as-is and as-available, and makes no representations or warranties of any kind concerning the Licensed Material, whether express, implied, statutory, or other. This includes, without limitation, warranties of title, merchantability, fitness for a particular purpose, non-infringement, absence of latent or other defects, accuracy, or the presence or absence of errors, whether or not known or discoverable. Where disclaimers of warranties are not allowed in full or in part, this disclaimer may not apply to You.\nTo the extent possible, in no event will the Licensor be liable to You on any legal theory (including, without limitation, negligence) or otherwise for any direct, special, indirect, incidental, consequential, punitive, exemplary, or other losses, costs, expenses, or damages arising out of this Public License or use of the Licensed Material, even if the Licensor has been advised of the possibility of such losses, costs, expenses, or damages. Where a limitation of liability is not allowed in full or in part, this limitation may not apply to You.\nThe disclaimer of warranties and limitation of liability provided above shall be interpreted in a manner that, to the extent possible, most closely approximates an absolute disclaimer and waiver of all liability.\n\n\n\nSection 6 – Term and Termination.\n\nThis Public License applies for the term of the Copyright and Similar Rights licensed here. However, if You fail to comply with this Public License, then Your rights under this Public License terminate automatically.\nWhere Your right to use the Licensed Material has terminated under Section 6(a), it reinstates:\n\nautomatically as of the date the violation is cured, provided it is cured within 30 days of Your discovery of the violation; or\nupon express reinstatement by the Licensor.\n\nFor the avoidance of doubt, this Section 6(b) does not affect any right the Licensor may have to seek remedies for Your violations of this Public License.\nFor the avoidance of doubt, the Licensor may also offer the Licensed Material under separate terms or conditions or stop distributing the Licensed Material at any time; however, doing so will not terminate this Public License.\nSections 1, 5, 6, 7, and 8 survive termination of this Public License.\n\n\n\nSection 7 – Other Terms and Conditions.\n\nThe Licensor shall not be bound by any additional or different terms or conditions communicated by You unless expressly agreed.\nAny arrangements, understandings, or agreements regarding the Licensed Material not stated herein are separate from and independent of the terms and conditions of this Public License.t stated herein are separate from and independent of the terms and conditions of this Public License.\n\n\n\nSection 8 – Interpretation.\n\nFor the avoidance of doubt, this Public License does not, and shall not be interpreted to, reduce, limit, restrict, or impose conditions on any use of the Licensed Material that could lawfully be made without permission under this Public License.\nTo the extent possible, if any provision of this Public License is deemed unenforceable, it shall be automatically reformed to the minimum extent necessary to make it enforceable. If the provision cannot be reformed, it shall be severed from this Public License without affecting the enforceability of the remaining terms and conditions.\nNo term or condition of this Public License will be waived and no failure to comply consented to unless expressly agreed to by the Licensor.\nNothing in this Public License constitutes or may be interpreted as a limitation upon, or waiver of, any privileges and immunities that apply to the Licensor or You, including from the legal processes of any jurisdiction or authority.\n\n\nCreative Commons is not a party to its public licenses. Notwithstanding, Creative Commons may elect to apply one of its public licenses to material it publishes and in those instances will be considered the “Licensor.” Except for the limited purpose of indicating that material is shared under a Creative Commons public license or as otherwise permitted by the Creative Commons policies published at creativecommons.org/policies, Creative Commons does not authorize the use of the trademark “Creative Commons” or any other trademark or logo of Creative Commons without its prior written consent including, without limitation, in connection with any unauthorized modifications to any of its public licenses or any other arrangements, understandings, or agreements concerning use of licensed material. For the avoidance of doubt, this paragraph does not form part of the public licenses.\nCreative Commons may be contacted at creativecommons.org"
-  },
-  {
-    "objectID": "meetups/Meetup-2/meetup-2.html#system-of-linear-equations",
-    "href": "meetups/Meetup-2/meetup-2.html#system-of-linear-equations",
-    "title": "Meetup 2: Least Squares",
-    "section": "System of Linear Equations",
-    "text": "System of Linear Equations\n\nWhen can we solve: \\[ A\\mathbf{x} = \\mathbf{b}\\,?\\]\n\\(A\\) is an \\(m\\times n\\) matrix\n\\(\\mathbf{x}\\) is an \\(n\\)-vector\n\\(\\mathbf{b}\\) is an \\(m\\)-vector"
-  },
-  {
-    "objectID": "meetups/Meetup-2/meetup-2.html#tall-wide-and-square-matrices",
-    "href": "meetups/Meetup-2/meetup-2.html#tall-wide-and-square-matrices",
-    "title": "Meetup 2: Least Squares",
-    "section": "Tall, Wide, and Square Matrices",
-    "text": "Tall, Wide, and Square Matrices\n\n\\(m=n\\)\n\\(A\\) is square\nExact solution if rows/columns are independent \\[ A = \\begin{pmatrix} a_{11} & \\cdots & \\cdots & a_{1n} \\\\\n                     \\vdots &   \\cdots     &    \\cdots   & \\vdots \\\\\n                    \\vdots & \\cdots & \\cdots & \\vdots \\\\\n                    a_{n1} & \\cdots & \\cdots & a_{nn}\n                    \\end{pmatrix}\n                    \\]\n\\(\\mathbf{x} = A^{-1}\\mathbf{b}\\)"
-  },
-  {
-    "objectID": "meetups/Meetup-2/meetup-2.html#tall-wide-and-square-matrices-1",
-    "href": "meetups/Meetup-2/meetup-2.html#tall-wide-and-square-matrices-1",
-    "title": "Meetup 2: Least Squares",
-    "section": "Tall, Wide, and Square Matrices",
-    "text": "Tall, Wide, and Square Matrices\n\n\\(m&lt;n\\)\n\\(A\\) is wide\nGenerally multiple solutions because dependent columns \\[ A = \\begin{pmatrix} a_{11} & \\cdots & \\cdots & \\cdots & a_{1n} \\\\\n                     \\vdots &   \\cdots     & \\cdots &   \\cdots   & \\vdots \\\\\n                    a_{m1} & \\cdots & \\cdots & \\cdots & a_{mn}\n                    \\end{pmatrix}\n                    \\]\nCommon ML situation (more parameters than data points)\nParticular solution plus the null space"
-  },
-  {
-    "objectID": "meetups/Meetup-2/meetup-2.html#tall-wide-and-square-matrices-2",
-    "href": "meetups/Meetup-2/meetup-2.html#tall-wide-and-square-matrices-2",
-    "title": "Meetup 2: Least Squares",
-    "section": "Tall, Wide, and Square Matrices",
-    "text": "Tall, Wide, and Square Matrices\n\n\\(m&gt;n\\)\n\\(A\\) is tall\nGenerally no exact solution \\[ A = \\begin{pmatrix} a_{11} & \\cdots &  a_{1n} \\\\\n                     \\vdots &   \\cdots   & \\vdots \\\\\n                     \\vdots &   \\cdots   & \\vdots \\\\\n                     \\vdots &   \\cdots   & \\vdots \\\\\n                    a_{m1} & \\cdots & a_{mn}\n                    \\end{pmatrix}\n                    \\]"
-  },
-  {
-    "objectID": "meetups/Meetup-2/meetup-2.html#inspiration-for-least-squares",
-    "href": "meetups/Meetup-2/meetup-2.html#inspiration-for-least-squares",
-    "title": "Meetup 2: Least Squares",
-    "section": "Inspiration for Least Squares",
-    "text": "Inspiration for Least Squares\n\nIf we can’t solve, next best thing is to minimize the square of the residual/error \\[ \\mathbf{r} = A\\mathbf{x}-\\mathbf{b}\\]\nOptimization problem is: \\[\\textrm{Find:}\\quad \\min_{\\mathbf{x}} \\|A\\mathbf{x} - \\mathbf{b}\\|^2\\]\nThe \\(\\mathbf{x}\\) that minimizes this objective (the squared residual) is the least squares solution\nLinear regression"
-  },
-  {
-    "objectID": "meetups/Meetup-2/meetup-2.html#how-to-solve-it",
-    "href": "meetups/Meetup-2/meetup-2.html#how-to-solve-it",
-    "title": "Meetup 2: Least Squares",
-    "section": "How to Solve It?",
-    "text": "How to Solve It?\n\nTake derivative with respect to components of \\(\\mathbf{x}\\) and set to 0: \\[\n\\frac{\\partial}{\\partial \\mathbf{x}}\\|A\\mathbf{x}-\\mathbf{b}\\|^2 =\nA^T A\\left(\\mathbf{x} - A^T\\mathbf{b}\\right)\n\\]\nTwo ways to get that:"
-  },
-  {
-    "objectID": "meetups/Meetup-2/meetup-2.html#how-to-solve-it-1",
-    "href": "meetups/Meetup-2/meetup-2.html#how-to-solve-it-1",
-    "title": "Meetup 2: Least Squares",
-    "section": "How to Solve It?",
-    "text": "How to Solve It?\n\nTake derivative with respect to components of \\(\\mathbf{x}\\) and set to 0: \\[\n\\frac{\\partial}{\\partial \\mathbf{x}}\\|A\\mathbf{x}-\\mathbf{b}\\|^2 =\n2A^T A\\left(\\mathbf{x} - A^T\\mathbf{b}\\right)\n\\]\nTwo ways to get that\n\nmatrixcalculus.org\nTake derivatives, work with indices"
-  },
-  {
-    "objectID": "meetups/Meetup-2/meetup-2.html#how-to-solve-it-2",
-    "href": "meetups/Meetup-2/meetup-2.html#how-to-solve-it-2",
-    "title": "Meetup 2: Least Squares",
-    "section": "How to Solve It?",
-    "text": "How to Solve It?\n\nGet System of Linear Equations: \\[ A^TA\\mathbf{x} = A^T\\mathbf{b} \\]\n\\(A^TA\\) is an \\(n\\times n\\) symmetric matrix called the Gram matrix\nInvertible if columns of \\(A\\) are independent:\n\n\\[ \\mathbf{x} = \\left(A^T A\\right)^{-1}A^T\\mathbf{b}\\] - This is the exact formula for the least squares solution"
-  },
-  {
-    "objectID": "meetups/Meetup-2/meetup-2.html#properties",
-    "href": "meetups/Meetup-2/meetup-2.html#properties",
-    "title": "Meetup 2: Least Squares",
-    "section": "Properties",
-    "text": "Properties\n\nMorse-Penrose Pseudoinverse: \\[A^+ = (A^TA)^{-1}A^T\\]\n\\(n\\times m\\) matrix\nIf \\(A\\) is invertible, \\(A^+ = A^{-1}\\)"
-  },
-  {
-    "objectID": "meetups/Meetup-2/meetup-2.html#applications-linear-regression",
-    "href": "meetups/Meetup-2/meetup-2.html#applications-linear-regression",
-    "title": "Meetup 2: Least Squares",
-    "section": "Applications: Linear Regression",
-    "text": "Applications: Linear Regression\n\nSuppose you have \\(m\\) observations, each with \\(n\\) features\n\\(a_{ij}\\) is \\(i\\)th obs. of \\(j\\)th component\nWant to predict the variable \\(\\mathbf{b}\\) using an Affine function: \\[\n\\sum_{i=1}^n a_{ij} x_i + c = b_j\n\\]"
-  },
-  {
-    "objectID": "meetups/Meetup-2/meetup-2.html#linear-regression",
-    "href": "meetups/Meetup-2/meetup-2.html#linear-regression",
-    "title": "Meetup 2: Least Squares",
-    "section": "Linear Regression",
-    "text": "Linear Regression\n\nAugmented matrix \\(A\\) and coefficients \\(\\mathbf{x}\\): \\[\nA = \\begin{pmatrix} a_{11} & \\cdots & a_{1n} & 1 \\\\\n                  \\vdots & \\cdots & \\vdots & 1 \\\\\n                  a_{m1} & \\cdots & a_{mn} & 1\n                  \\end{pmatrix}\n\\] \\[\n\\mathbf{x} = \\begin{pmatrix} x_1 & x_2 & \\cdots & x_n & c \\end{pmatrix}^T\n\\]\nNow get standard least squares problem:\n\n\\[ \\min_{\\mathbf{x}}\\|A\\mathbf{x}-\\mathbf{b}\\|^2\\]"
-  },
-  {
-    "objectID": "meetups/Meetup-2/meetup-2.html#applications-marketing-budget",
-    "href": "meetups/Meetup-2/meetup-2.html#applications-marketing-budget",
-    "title": "Meetup 2: Least Squares",
-    "section": "Applications: Marketing Budget",
-    "text": "Applications: Marketing Budget\n\n\n\nYou are tasked with spending a marketing budget\nThere are \\(10\\) different demographic groups to target\n\n\n\n\n\n\nGroup\n\n\n\n\n1\n18-25, play sports\n\n\n2\n26-30, play sports\n\n\n3\n31-35, play sports\n\n\n4\n36-40, play sports\n\n\n5\n41-45, play sports\n\n\n6\n18-25, no sports\n\n\n7\n26-30, no sports\n\n\n8\n31-35, no sports\n\n\n9\n36-40, no sports\n\n\n10\n41-45, no sports"
-  },
-  {
-    "objectID": "meetups/Meetup-2/meetup-2.html#applications-marketing-budget-1",
-    "href": "meetups/Meetup-2/meetup-2.html#applications-marketing-budget-1",
-    "title": "Meetup 2: Least Squares",
-    "section": "Applications: Marketing Budget",
-    "text": "Applications: Marketing Budget\n\n\n\nYou are tasked with spending a marketing budget\nThere are \\(10\\) different demographic groups to target\n4 different marketing channels\n\n\n\n\n\n\nChannel\n\n\n\n\n1\nInstagram\n\n\n2\nWine Mag\n\n\n3\nFacebook\n\n\n4\nUFC"
-  },
-  {
-    "objectID": "meetups/Meetup-2/meetup-2.html#applications-marketing-budget-2",
-    "href": "meetups/Meetup-2/meetup-2.html#applications-marketing-budget-2",
-    "title": "Meetup 2: Least Squares",
-    "section": "Applications: Marketing Budget",
-    "text": "Applications: Marketing Budget\n\nViews: $1 on channel \\(i\\) gets \\(R_{ij}\\) views in group \\(j\\)\n\n\n\n    Instagram  Wine Mag  Facebook   UFC      Demo\n1         3.0       0.1       0.4  6.00   18-25 S\n2         2.5       0.3       0.6  6.00   26-30 S\n3         2.3       0.4       1.0  5.50   31-35 S\n4         1.8       0.6       1.3  5.00   36-40 S\n5         1.0       0.6       2.0  4.50   41-45 S\n6         3.3       0.8       0.5  0.20  18-25 NS\n7         2.6       1.1       0.8  0.12  26-30 NS\n8         2.2       1.3       1.1  0.10  31-35 NS\n9         1.4       2.3       1.3  0.40  36-40 NS\n10        1.2       4.2       1.7  0.20  41-45 NS"
-  },
-  {
-    "objectID": "meetups/Meetup-2/meetup-2.html#applications-marketing-budget-3",
-    "href": "meetups/Meetup-2/meetup-2.html#applications-marketing-budget-3",
-    "title": "Meetup 2: Least Squares",
-    "section": "Applications: Marketing Budget",
-    "text": "Applications: Marketing Budget\n\nViews: $1 on channel \\(i\\) gets \\(R_{ij}\\) views in group \\(j\\)"
-  },
-  {
-    "objectID": "meetups/Meetup-2/meetup-2.html#marketing-budget",
-    "href": "meetups/Meetup-2/meetup-2.html#marketing-budget",
-    "title": "Meetup 2: Least Squares",
-    "section": "Marketing Budget",
-    "text": "Marketing Budget\n\nProblem: spend money to get \\(\\mathbf{v}_{dem}\\) impressions\nDecision variable \\(\\mathbf{s}\\) is spending in each channel\nSolve least squares problem: \\[\n\\min_{\\mathbf{s}} \\|R\\mathbf{s} - \\mathbf{v}_{dem}\\|^2\n\\]\n\\(R\\mathbf{s}\\) is views"
-  },
-  {
-    "objectID": "meetups/Meetup-2/meetup-2.html#marketing-budget-1",
-    "href": "meetups/Meetup-2/meetup-2.html#marketing-budget-1",
-    "title": "Meetup 2: Least Squares",
-    "section": "Marketing Budget",
-    "text": "Marketing Budget\n\nSuppose \\(\\mathbf{v}_{dem}\\) is uniform\n\n\nv_dem = np.ones(10)\n\ns = np.linalg.lstsq(R,v_dem)[0]\n\ns_dat = pd.DataFrame(s, columns = [\"Spending\"])\ns_dat[\"Channel\"] = ['Instagram','Wine Mag','Facebook','UFC'] \n\n(\n  ggplot(s_dat,aes(x=\"Channel\",y=\"Spending\"))\n  + geom_point() \n  + theme_gray()\n)"
-  },
-  {
-    "objectID": "meetups/Meetup-2/meetup-2.html#marketing-budget-2",
-    "href": "meetups/Meetup-2/meetup-2.html#marketing-budget-2",
-    "title": "Meetup 2: Least Squares",
-    "section": "Marketing Budget",
-    "text": "Marketing Budget\n\nSuppose \\(\\mathbf{v}_{dem}\\) is uniform"
-  },
-  {
-    "objectID": "meetups/Meetup-2/meetup-2.html#marketing-budget-3",
-    "href": "meetups/Meetup-2/meetup-2.html#marketing-budget-3",
-    "title": "Meetup 2: Least Squares",
-    "section": "Marketing Budget",
-    "text": "Marketing Budget\n\nSuppose we want to target only 41-45 Non-Sports Players\nMaybe the ad repels other demos?"
-  },
-  {
-    "objectID": "meetups/Meetup-2/meetup-2.html#marketing-budget-4",
-    "href": "meetups/Meetup-2/meetup-2.html#marketing-budget-4",
-    "title": "Meetup 2: Least Squares",
-    "section": "Marketing Budget",
-    "text": "Marketing Budget\n\nSuppose we want to target only 41-45 Non-Sports Players\nMaybe the ad repels other demos?"
-  },
-  {
-    "objectID": "meetups/Meetup-2/meetup-2.html#marketing-budget-5",
-    "href": "meetups/Meetup-2/meetup-2.html#marketing-budget-5",
-    "title": "Meetup 2: Least Squares",
-    "section": "Marketing Budget",
-    "text": "Marketing Budget\n\nSuppose \\(\\mathbf{v}_{dem}\\) is uniform"
-  },
-  {
-    "objectID": "meetups/Meetup-2/meetup-2.html#marketing-budget-issues",
-    "href": "meetups/Meetup-2/meetup-2.html#marketing-budget-issues",
-    "title": "Meetup 2: Least Squares",
-    "section": "Marketing Budget Issues",
-    "text": "Marketing Budget Issues\n\nNeed Constraints\n\nNo negative money in adds: \\(\\mathbf{s} \\geq 0\\)\nNo infinite budget: \\(\\sum_{i}s_i \\leq s_{max}\\)\n\nNeed a better objective function\n\nWeird to target precise \\(\\mathbf{v}_{dem}\\)\nBetter to have different value for each ad impression"
-  },
-  {
-    "objectID": "meetups/Meetup-2/meetup-2.html#numerical-issues-with-least-squares",
-    "href": "meetups/Meetup-2/meetup-2.html#numerical-issues-with-least-squares",
-    "title": "Meetup 2: Least Squares",
-    "section": "Numerical Issues With Least Squares",
-    "text": "Numerical Issues With Least Squares"
-  },
-  {
-    "objectID": "meetups/Meetup-2/meetup-2.html#interpretations-of-least-squares",
-    "href": "meetups/Meetup-2/meetup-2.html#interpretations-of-least-squares",
-    "title": "Meetup 2: Least Squares",
-    "section": "Interpretations of Least Squares",
-    "text": "Interpretations of Least Squares"
-  },
-  {
-    "objectID": "meetups/Meetup-2/meetup-2.html#practical-computation-of-least-squares-solution",
-    "href": "meetups/Meetup-2/meetup-2.html#practical-computation-of-least-squares-solution",
-    "title": "Meetup 2: Least Squares",
-    "section": "Practical Computation of Least Squares Solution",
-    "text": "Practical Computation of Least Squares Solution\n\n\n\n\nDATA 609"
-  },
-  {
-    "objectID": "images/IntroSlides.html#about-me",
-    "href": "images/IntroSlides.html#about-me",
-    "title": "Welcome to DATA 609",
-    "section": "About Me",
-    "text": "About Me\n\n\n\nDoctoral Lecturer at CUNY SPS\nPast research experience:\n\nPlasma physics and Applied Mathematics (NYU)\nEcology and Evolutionary Biology (Princeton)\n\nResearch using Bayesian methods and genomic data to improve global scale ocean and climate models\nTaught math at NYU"
-  },
-  {
-    "objectID": "images/IntroSlides.html#why-optimization",
-    "href": "images/IntroSlides.html#why-optimization",
-    "title": "Welcome to DATA 609",
-    "section": "Why Optimization?",
-    "text": "Why Optimization?\n\n\n\nOptimization theory underlies most methods in data science\nThree foci:\n\nLeast Squares Optimization\nConvex Optimization\nLocal Optimization and Stochastic Gradient Descent"
-  },
-  {
-    "objectID": "images/IntroSlides.html#course-websites",
-    "href": "images/IntroSlides.html#course-websites",
-    "title": "Welcome to DATA 609",
-    "section": "Course Website(s)",
-    "text": "Course Website(s)\n\n\n\nBrightspace to submit homework\nCourse Website"
-  },
-  {
-    "objectID": "images/IntroSlides.html#course-website-and-meetup",
-    "href": "images/IntroSlides.html#course-website-and-meetup",
-    "title": "Welcome to DATA 609",
-    "section": "Course Website and Meetup",
-    "text": "Course Website and Meetup\n\n\n\nBrightspace to submit homework\nCourse Website\nCourse Meetup: Monday 6:45-7:45PM\nZoom Link"
-  },
-  {
-    "objectID": "images/IntroSlides.html#slack-channel",
-    "href": "images/IntroSlides.html#slack-channel",
-    "title": "Welcome to DATA 609",
-    "section": "Slack Channel",
-    "text": "Slack Channel\n\n\n\nCourse slack channel for messaging and rapid communications\nhttps://data609-spring-2025.slack.com\nInvite Link"
-  },
-  {
-    "objectID": "images/IntroSlides.html#textbooks",
-    "href": "images/IntroSlides.html#textbooks",
-    "title": "Welcome to DATA 609",
-    "section": "Textbooks",
-    "text": "Textbooks\n\n\nTwo most important textbooks:\n\nIntroduction to Applied Linear Algebra\n\n\nAvailable free online VMLS\n\n\nConvex Optimization\n\n\nAvailable free online cvxbook"
-  },
-  {
-    "objectID": "images/IntroSlides.html#textbooks-1",
-    "href": "images/IntroSlides.html#textbooks-1",
-    "title": "Welcome to DATA 609",
-    "section": "Textbooks",
-    "text": "Textbooks\n\n\nTwo most important textbooks:\n\nIntroduction to Applied Linear Algebra\n\n\nAvailable free online VMLS\n\n\nConvex Optimization\n\n\nAvailable free online cvxbook"
-  },
-  {
-    "objectID": "images/IntroSlides.html#assignments",
-    "href": "images/IntroSlides.html#assignments",
-    "title": "Welcome to DATA 609",
-    "section": "Assignments",
-    "text": "Assignments\n\n\n\n8 Lab Assignments (80%)\nFinal Project (20%)"
-  },
-  {
-    "objectID": "images/IntroSlides.html#looking-forward-to-a-great-semester",
-    "href": "images/IntroSlides.html#looking-forward-to-a-great-semester",
-    "title": "Welcome to DATA 609",
-    "section": "Looking forward to a great semester!",
-    "text": "Looking forward to a great semester!\nThanks for watching"
-  },
-  {
-    "objectID": "assignments/labs/Lab1.html",
-    "href": "assignments/labs/Lab1.html",
-    "title": "Homework 1: Introduction to Optimization and Least Squares",
-    "section": "",
-    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
-  },
-  {
-    "objectID": "assignments/labs/Lab1.html#instructions",
-    "href": "assignments/labs/Lab1.html#instructions",
-    "title": "Homework 1: Introduction to Optimization and Least Squares",
-    "section": "",
-    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
-  },
-  {
-    "objectID": "assignments/labs/Lab1.html#problem-1-gradient-descent",
-    "href": "assignments/labs/Lab1.html#problem-1-gradient-descent",
-    "title": "Homework 1: Introduction to Optimization and Least Squares",
-    "section": "Problem 1: Gradient Descent",
-    "text": "Problem 1: Gradient Descent\n\nConsider the mathematical function defined on \\(f: \\mathbb{R}^2\\,\\to\\, \\mathbb{R}\\):\n\n\\[\nf(x,y) = (x-1)^2 + (y+2)^2,\n\\]\nFind the single critical point of this function and show that it is a local minimum (in this case, this will also be a global minimum).\n\nNow consider a new objective function that depends on a parameter \\(b\\): \\[\nf(x,y) = x^2 + by^2\n\\] Here we will look at two different values of \\(b\\), \\(b=3\\) and \\(b=10\\). The global minimum of this function occurs at the point \\(x^* = 0\\), \\(y^*=0\\) no matter what the value of \\(b\\). Suppose that we didn’t know this and wanted to find the minimum of this function using gradient descent instead of direct calculation.\n\n\nFirst write code to perform the gradient descent algorithm, that is perform the iteration: \\[\n\\mathbf{v}_{n+1} = \\mathbf{v}_n - k \\nabla f(\\mathbf{v}_n),\n\\]\n\nwhere the vector \\(\\mathbf{v} = \\begin{bmatrix} x & y\\end{bmatrix}^T\\) and \\(k\\) is the learning rate.\n\nThen test the performance of your algorithm as a function of the learning rates \\(k\\) by performing 100 iterations of the algorithm for 100 values of \\(k\\) equally spaced between \\(k=0.01\\) and \\(k=0.3\\). Start with an initial guess of \\(\\mathbf{v}_0 = \\begin{bmatrix} b & 1\\end{bmatrix}^T\\). Do this for \\(b=3\\) and \\(b=10\\). Make separate plots for \\(b=3\\) and \\(b=10\\) of the log base 10 of the error (in this case it is \\(\\sqrt{x_{100}^2+y_{100}^2}\\)) for the final value of the iteration versus the value of \\(k\\). How does learning rate relate to the final value of the error? For which value of \\(b\\) does the algorithm have the ability to converge fastest (have the lowest value of the error at the end)?\n\nNote: For some combinations of \\(k\\) and \\(b\\), the algorithm won’t converge to the right answer, i.e. the error will grow with time. To make your plot easier to read, don’t plot the error for iterations that didn’t converge.\n\nAs \\(k\\) increases, for one or both values of \\(b\\), you will observe a point where the trend of final error versus learning rate reverses direction. Pick a value of \\(k\\) very close to the point where this occurs, and make a contour plot of the function \\(f\\) and the trajectory of the iterations for the gradient descent algorithm for that value of \\(k\\) superimposed over the contour plot. What do you observe?\n\nNote: The differences that you observe here are a special case of a more general phenomenon: the speed of convergence of gradient descent depends on something called the condition number of the Hessian matrix (the matrix of the 2nd order partial derivatives) of the target function. The condition number for a symmetric matrix is just the ratio of the largest to smallest eigenvalues, in this case the condition number is \\(b\\) (or 1/\\(b\\)). Gradient descent performs worse and worse the larger the condition number (and large condition numbers are problematic for a wide variety of other numerical methods)."
-  },
-  {
-    "objectID": "assignments/labs/Lab1.html#problem-2-solving-least-squares-problems",
-    "href": "assignments/labs/Lab1.html#problem-2-solving-least-squares-problems",
-    "title": "Homework 1: Introduction to Optimization and Least Squares",
-    "section": "Problem 2: Solving Least Squares Problems",
-    "text": "Problem 2: Solving Least Squares Problems\nGenerate a random \\(20\\times 10\\) matrix \\(A\\) and a random 20-vector \\(b\\) (use a Gaussian distribution). Then, solve the least squares problem: \\[\n\\min_{\\mathbf{x}\\in \\mathbb{R}^{10}} \\|A\\mathbf{x} - \\mathbf{b}\\|^2\n\\] in the following ways:\n\nMultiply \\(\\mathbf{b}\\) by the Morse-Penrose Pseudoinverse \\(A^+\\).\nUse built in functions to solve the least squares problem (i.e. in python numpy.lstsq, in R lm, and in Julia the backslash operator).\nUsing the \\(QR\\) factorization of \\(A\\). This factorization rewrites \\(A\\) as: \\[\nA = \\begin{bmatrix} Q & 0\\end{bmatrix} \\begin{bmatrix} R & 0 \\end{bmatrix}^T,\n\\] where \\(Q\\) is an orthonormal matrix and \\(R\\) is upper triangular. The least squares solution equals: \\[\n\\mathbf{x} = R^{-1}Q^T\\mathbf{b}\n\\]\nVerify that each of these solutions are nearly equal and that the residuals \\(A\\mathbf{x}-\\mathbf{b}\\) are orthogonal to the vector \\(A\\mathbf{x}\\)"
-  },
-  {
-    "objectID": "assignments/labs/Lab1.html#problem-3-iterative-solutions-to-least-squares",
-    "href": "assignments/labs/Lab1.html#problem-3-iterative-solutions-to-least-squares",
-    "title": "Homework 1: Introduction to Optimization and Least Squares",
-    "section": "Problem 3: Iterative Solutions to Least Squares",
-    "text": "Problem 3: Iterative Solutions to Least Squares\nAlthough the pseudoinverse provides an exact formula for the least squares solutions, there are some situations in which using the exact solution is computationally difficult, particularly when the matrix \\(A\\) and vector \\(\\mathbf{b}\\) have a large number of entries. In this case, \\(AA^T\\), which is an \\(m\\times m\\) matrix if \\(A\\) is \\(m\\times n\\), may require an enormous amount of memory. In these cases it may be better to use an approximate solution instead of the exact formula. There are many different approximate methods for solving least squares problems, here we will use an iterative method developed by Richardson.\nThis method begins with an initial guess \\(\\mathbf{x}^{(0)} = 0\\) and calculates successive approximations as follows:\n\\[\n    \\mathbf{x}^{(k+1)} = \\mathbf{x}^{(k)} - \\mu A^T\\left(A\\mathbf{x}^{(k)}-\\mathbf{b}\\right)\n\\]\nHere \\(\\mu\\) is a positive paramter that has a similar interpretation to the learning rate for gradient descent. A choice that guarantees convergence is \\(\\mu \\leq \\frac{1}{\\|A\\|}\\). The iteration is terminated when the change in the residual \\(\\|A^T(Ax^{(k)} − b)\\|\\) after successive steps is below a user determined threshold, which indicates that the least squares optimality conditions are nearly satisfied.\n\nSuppose that \\(\\mathbf{x}\\) is a solution to the least squares problem: \\[\n\\mathbf{x} = A^+\\mathbf{b}\n\\]\n\nShow by substitution of the formula for the pseudoinverse that \\(\\mathbf{x}\\) is a of the iteration scheme, i.e. that: \\[\n\\mathbf{x} = \\mathbf{x} - \\mu A^T\\left(A\\mathbf{x}-\\mathbf{b}\\right)\n\\]\n\nGenerate a random 20 × 10 matrix \\(A\\) and 20-vector \\(\\mathbf{b}\\), and compute the least squares solution \\(\\mathbf{x} = A^+\\mathbf{b}\\). Then run the Richardson algorithm with \\(\\mu = \\frac{1}{\\|A\\|^2}\\) for 500 iterations, and plot \\(\\|\\mathbf{x}^{(k)}-\\mathbf{x}\\|\\) to verify that \\(\\mathbf{x}^{(k)}\\) is converging to \\(\\mathbf{x}\\)"
-  },
-  {
-    "objectID": "assignments/labs/Lab4.html",
-    "href": "assignments/labs/Lab4.html",
-    "title": "Homework 3: Convex Functions",
-    "section": "",
-    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
-  },
-  {
-    "objectID": "assignments/labs/Lab4.html#instructions",
-    "href": "assignments/labs/Lab4.html#instructions",
-    "title": "Homework 3: Convex Functions",
-    "section": "",
-    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
-  },
-  {
-    "objectID": "assignments/labs/Lab4.html#problem-1",
-    "href": "assignments/labs/Lab4.html#problem-1",
-    "title": "Homework 3: Convex Functions",
-    "section": "Problem 1:",
-    "text": "Problem 1:\nExercise 3.2 in Convex Optimization"
-  },
-  {
-    "objectID": "assignments/labs/Lab4.html#problem-2",
-    "href": "assignments/labs/Lab4.html#problem-2",
-    "title": "Homework 3: Convex Functions",
-    "section": "Problem 2:",
-    "text": "Problem 2:\nExercise 3.6 in Convex Optimization"
-  },
-  {
-    "objectID": "assignments/labs/Lab4.html#problem-3",
-    "href": "assignments/labs/Lab4.html#problem-3",
-    "title": "Homework 3: Convex Functions",
-    "section": "Problem 3:",
-    "text": "Problem 3:\nExercise 3.16 in Convex Optimization"
-  },
-  {
-    "objectID": "assignments/labs/Lab4.html#problem-4",
-    "href": "assignments/labs/Lab4.html#problem-4",
-    "title": "Homework 3: Convex Functions",
-    "section": "Problem 4:",
-    "text": "Problem 4:\nExercise 3.22 in Convex Optimization"
-  },
-  {
-    "objectID": "assignments/labs/Lab4.html#problem-5",
-    "href": "assignments/labs/Lab4.html#problem-5",
-    "title": "Homework 3: Convex Functions",
-    "section": "Problem 5:",
-    "text": "Problem 5:\nExercise 3.24 in Convex Optimization"
-  },
-  {
-    "objectID": "assignments/labs/Lab2.html",
-    "href": "assignments/labs/Lab2.html",
-    "title": "Homework 2: Applications of Least Squares",
-    "section": "",
-    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
-  },
-  {
-    "objectID": "assignments/labs/Lab2.html#instructions",
-    "href": "assignments/labs/Lab2.html#instructions",
-    "title": "Homework 2: Applications of Least Squares",
-    "section": "",
-    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
-  },
-  {
-    "objectID": "assignments/labs/Lab2.html#problem-1-online-updating-for-least-squares",
-    "href": "assignments/labs/Lab2.html#problem-1-online-updating-for-least-squares",
-    "title": "Homework 2: Applications of Least Squares",
-    "section": "Problem 1: Online Updating for Least Squares",
-    "text": "Problem 1: Online Updating for Least Squares\nMany applications of least squares (and other statistical methods) involve , in which data is collected over a time period and the statistical model is updated as new data arrives. If the quantity of data arriving is very large, it may not be possible to refit the entire model on the entire dataset. Instead, we use techniques (often referred to as which take the current model as a starting point and update them to incorporate the new data. Solve exercise 12.14 from VMLS"
-  },
-  {
-    "objectID": "assignments/labs/Lab2.html#problem-2-weighted-least-squares",
-    "href": "assignments/labs/Lab2.html#problem-2-weighted-least-squares",
-    "title": "Homework 2: Applications of Least Squares",
-    "section": "Problem 2: Weighted Least Squares",
-    "text": "Problem 2: Weighted Least Squares\nThe file social-mobility.csv contains data on the fraction of individuals born in the years 1980-1982 to parents in the bottom 20% of the income distribution who reach the top 20% of the income distribution by the time they turn 30 in a large number of municipalities throughout the United States. The dataset also contains additional variables that describe other socio-economic differences between the cities in the dataset.\n\nMake a scatter-plot of mobility versus population (use a log-scale for population). What do you notice about the variance of social mobility as a function of population? This is a common feature of nearly every dataset containing geographic regions with widely different populations.\nAssume that the number of children born in families making below the 20th percentile of the income distribution in each city is linearly proportional to the city population. Write down a formula for how the variance of each measurement of the social mobility based on the measured social mobility and the population. Hint: start with either the formula for the variance of binomial counts or look up the variance of a proportion derived from a binomial distribution. Don’t worry about constant factors when deriving this formula.\nUse weighted least squares to calculate an estimate of how social mobility depends on commute time and student-teacher ratio, using weights calculated based on the variance estimate derived in (b). Compare the coefficients to those derived from ordinary least squares with no weights.\n\n##Problem 3: Markowitz Portfolio Optimization\nIn this problem you will use Markowitz Portfolio Optimization to construct a set of portfolios that aim to achieve certain target rates of return while minimizing risk. The file prices.csv contains information on daily asset returns from 2020-2024 for a group of assets. The data is divided into two time periods, a training period (2020-2022) and a testing period (2022-2024).\n\nConstruct a vector of annual returns \\(\\mu\\) and return covariance \\(\\Gamma\\). Then solve the following constrained least squares problem to calculate optimal portfolios achieving a fixed rate of return with minimum variance: \\[\n    \\min_{w} x^T\\Gamma x,\\\\\n    w^T\\mu = r\n\\]\n\nCalculate optimal portfolios based on the 2020-2022 data for targeted rates of return \\(r=5\\%\\), \\(r=10\\%\\), and \\(r=20\\%\\).\n\nPlot the cumulative value of each portfolio over time, starting from an initial investment of \\(\\$10000\\), for both the training and test sets of returns.\n\nFor each of the 3 portfolios report:\n\nThe annualized return on the training and test sets;\nThe annualized risk on the training and test sets;\nThe asset with the minimum allocation weight (can be the most negative), and its weight;\nThe asset with the maximum allocation weight, and its weight;\nThe leverage, defined as |w1| + · · · + |wn|. (Several other definitions of leverage are used.) This number is always at least one, and it is exactly one only if the portfolio has no short positions.\n\nComment briefly on your observations about the different portfolios and the difference between their training and testing performance.\n\nIt is well known that optimal portfolios constructed using the Markowitz procedure perform much more poorly out of sample compared to in sample. This is due to a variety of reasons, one of which is that it assumes that future returns are equal to past returns, another that the correlation structure of the market might change over time, and finally, when there are many assets there is the potential for overfitting. Repeat the previous problem but introduce a ridge regression/\\(l_2\\) norm penalty term to the objective function, with a hyperparameter \\(\\lamba\\) governing the size of the penalty term.\n\nSelect 10 positive values of \\(\\lamba\\) on a log scale between \\(1e-1\\) and \\(10\\) and for each value of \\(\\lamba\\) solve the following penalized regression problem:\n\\[\n    \\min_{w} w^T(\\Gamma+\\lambda I) w ,\\\\\n    w^T\\mu = r\n\\]\nfor just the single value of \\(r=20\\%\\). Then calculate the performance of each of these regularized Markowitz strategies on both the training and test datasets and plot the values of:\n\nThe annualized return on the training and test sets;\nThe annualized risk on the training and test sets;\nThe minimum allocation weight;\nThe maximum allocation weight;\nThe leverage\n\nComment on how the different values of \\(\\lambda\\) changed the optimal portfolios and the difference between in-sample and out-of-sample return and variance."
-  },
-  {
-    "objectID": "assignments/project.html",
-    "href": "assignments/project.html",
-    "title": "Project",
-    "section": "",
-    "text": "The idea of this project is for you to find data and do something interesting with it that relates to the skills you have developed in this course.\nThe project is intentionally open ended- this is an opportunity for you to explore your interests, through using techniques or technologies that branch off those that were introduced in this class, datasets related to problems you face in your career or that you are curious about, or both.\nMy expectation for your project is that it has the length and sophistication of a complete homework assignment, but will all the work focused on the topic. It should include an introduction to contextualize the topic, but otherwise you can structure it how you like.\nThe output of your project should software that allows me to reproduce your work and a research report which describes what you did with the data and your findings, which could be contained within a github repository.\n\n\nThe first step of your project is to submit an initial proposal, which will help to ensure that your project is both worthwhile and feasible in the time frame of the last half of the semester. Your proposal should describe the area that you are interested in, the datasets you are going to use/mathematical problems you want to solve, and the link to the topics of this course. The proposal length should be around one page (excluding figures and references),\nThe proposal is preliminary, and you can include additional data or a different analysis as needs require.\n\n\n\nWhen writing proposals, I’ve found the following set of considerations, called “Heilmeier's Questions”, to be helpful to consider. Although this is just a very short project, you might find them helpful as well, and useful for formulating future projects and proposals that you might have to complete. These questions were developed by Dr. George Heilmeier, who was the director of DARPA from 1975-1977. Heilmeier said that every proposal to DARPA needed to answer these questions clearly and completely in order to receive funding:\n\nWhat are you trying to do? Articulate your objectives using absolutely no jargon. What is the problem? Why is it hard?\nHow is it done today, and what are the limits of current practice?\nWhat is new in your approach, and why do you think it will be successful?\nWho cares?\nIf you’re successful, what difference will it make? What applications are enabled as a result?\nWhat are the risks?\nHow long will it take?\nWhat are the midterm and final “exams” to check for success? How will progress be measured?",
+    "text": "Homework\nHomework 5 is due next week, Sunday at midnight.\n\n\nLearning Objectives\n\nDefinition of Convex Optimization Problem\nProblem Transformations\nImportant Subclasses of Convex Optimization Problems\nDiscilined Convex Programming and CVX\nVector Optimization and Scalarization\n\n\n\nReadings\nSections 4.1-4.4, 4.6-4.7 of Convex Optimization\nCVX users guide, read one of these: -python -R -julia",
     "crumbs": [
-      "Assignments",
-      "Project"
+      "Topics",
+      "9 - Convex Optimization and Disciplined Convex Programming"
     ]
   },
   {
-    "objectID": "assignments/project.html#heilmeiers-questions",
-    "href": "assignments/project.html#heilmeiers-questions",
-    "title": "Project",
+    "objectID": "modules/module12.html",
+    "href": "modules/module12.html",
+    "title": "Module 12: Duality and Classifiers",
     "section": "",
-    "text": "When writing proposals, I’ve found the following set of considerations, called “Heilmeier's Questions”, to be helpful to consider. Although this is just a very short project, you might find them helpful as well, and useful for formulating future projects and proposals that you might have to complete. These questions were developed by Dr. George Heilmeier, who was the director of DARPA from 1975-1977. Heilmeier said that every proposal to DARPA needed to answer these questions clearly and completely in order to receive funding:\n\nWhat are you trying to do? Articulate your objectives using absolutely no jargon. What is the problem? Why is it hard?\nHow is it done today, and what are the limits of current practice?\nWhat is new in your approach, and why do you think it will be successful?\nWho cares?\nIf you’re successful, what difference will it make? What applications are enabled as a result?\nWhat are the risks?\nHow long will it take?\nWhat are the midterm and final “exams” to check for success? How will progress be measured?",
+    "text": "Learning Objectives\n\nDual Formulation of Optimization Problems\nLagrange Multipliers\nLinear and Nonlinear Classifiers, LDA\nSupport Vector Machines\n\n\n\nReadings\nSections 8.1, 8.2, 8.6, 8.7, 8.8 Convex Optimization",
     "crumbs": [
-      "Assignments",
-      "Project"
+      "Topics",
+      "12 - Duality and Classifiers"
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Announcements",
+    "objectID": "modules/module5.html",
+    "href": "modules/module5.html",
+    "title": "Module 5 - Convex Sets",
     "section": "",
-    "text": "Be sure to check this page regularly for updates. In addition to periodic updates about the course, slides and recordings of the weekly meetups will be posted here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 2- Least Squares\n\n\n\n\n\nClick here to read about Week 2.\n\n\n\n\n\nFeb 2, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 1: Introduction to Optimization\n\n\n\n\n\nClick here to read more about Meetup 1 and view/download the lecture slides.\n\n\n\n\n\nJan 27, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome to DATA 609\n\n\n\n\n\nImportant information on how to get started with this course. Click this post now for instructions on getting started.\n\n\n\n\n\nJan 26, 2025\n\n\n\n\n\n\nNo matching items",
+    "text": "Homework 3 is due in two weeks, Sunday at midnight\n\n\n\nDefinition of Affine and Convex Sets\nExamples of Convex Sets\nOperations that Preserve Convexity of Sets\n\n\n\n\nSections 2.1-2.3 of Convex Optimization\nSection 2.1 of Introduction to Algorithms for Machine Learning",
     "crumbs": [
-      "Announcements"
+      "Topics",
+      "5 - Convex Sets"
     ]
   },
   {
-    "objectID": "assignments/labs.html",
-    "href": "assignments/labs.html",
-    "title": "Labs",
+    "objectID": "modules/module5.html#homework",
+    "href": "modules/module5.html#homework",
+    "title": "Module 5 - Convex Sets",
     "section": "",
-    "text": "The homework assignments in this course are lab assignments where you will solve the problem using a combination of mathematics and computer code.\nPlease submit a and either a quarto file or jupyter notebook or other code that generates your homework. Labs should be submitted on Blackboard.\n\n\nGradient Descent and Least Squares (Download)\n\n\nLeast Squares Applications (Download)\n\n\nConvex Sets (Download)\n\n\nConvex Functions (Download)\n\n\nConvex Optimizations Problems (Download)\n\n\nApplications to Statistics and Machine Learning (Download)\n\n\nNonconvex Optimization and Stochastic Gradient Descent (Download)\n\n\nTraining Deep Neural Networks (Download)",
+    "text": "Homework 3 is due in two weeks, Sunday at midnight\n\n\n\nDefinition of Affine and Convex Sets\nExamples of Convex Sets\nOperations that Preserve Convexity of Sets\n\n\n\n\nSections 2.1-2.3 of Convex Optimization\nSection 2.1 of Introduction to Algorithms for Machine Learning",
     "crumbs": [
-      "Assignments",
-      "Labs"
+      "Topics",
+      "5 - Convex Sets"
     ]
   },
   {
-    "objectID": "assignments/labs/Lab3.html",
-    "href": "assignments/labs/Lab3.html",
-    "title": "Homework 3: Convex Sets",
+    "objectID": "acknowledgements.html",
+    "href": "acknowledgements.html",
+    "title": "Acknowledgements",
     "section": "",
-    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
-  },
-  {
-    "objectID": "assignments/labs/Lab3.html#instructions",
-    "href": "assignments/labs/Lab3.html#instructions",
-    "title": "Homework 3: Convex Sets",
-    "section": "",
-    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
-  },
-  {
-    "objectID": "assignments/labs/Lab3.html#problem-1",
-    "href": "assignments/labs/Lab3.html#problem-1",
-    "title": "Homework 3: Convex Sets",
-    "section": "Problem 1:",
-    "text": "Problem 1:\nExercise 2.5 in Convex Optimization"
-  },
-  {
-    "objectID": "assignments/labs/Lab3.html#problem-2",
-    "href": "assignments/labs/Lab3.html#problem-2",
-    "title": "Homework 3: Convex Sets",
-    "section": "Problem 2:",
-    "text": "Problem 2:\nExercise 2.7 in Convex Optimization"
-  },
-  {
-    "objectID": "assignments/labs/Lab3.html#problem-3",
-    "href": "assignments/labs/Lab3.html#problem-3",
-    "title": "Homework 3: Convex Sets",
-    "section": "Problem 3:",
-    "text": "Problem 3:\nExercise 2.12 in Convex Optimization"
-  },
-  {
-    "objectID": "assignments/labs/Lab3.html#problem-4",
-    "href": "assignments/labs/Lab3.html#problem-4",
-    "title": "Homework 3: Convex Sets",
-    "section": "Problem 4:",
-    "text": "Problem 4:\nExercise 2.15 in Convex Optimization"
-  },
-  {
-    "objectID": "assignments/labs/Lab3.html#problem-5",
-    "href": "assignments/labs/Lab3.html#problem-5",
-    "title": "Homework 3: Convex Sets",
-    "section": "Problem 5:",
-    "text": "Problem 5:\nExercise 2.28 in Convex Optimization"
-  },
-  {
-    "objectID": "assignments/labs/Lab6.html",
-    "href": "assignments/labs/Lab6.html",
-    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
-    "section": "",
-    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
-  },
-  {
-    "objectID": "assignments/labs/Lab6.html#instructions",
-    "href": "assignments/labs/Lab6.html#instructions",
-    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
-    "section": "",
-    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
-  },
-  {
-    "objectID": "assignments/labs/Lab6.html#problem-1",
-    "href": "assignments/labs/Lab6.html#problem-1",
-    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
-    "section": "Problem 1:",
-    "text": "Problem 1:\nExercise 7.4 in Convex Optimization Extended Exercises"
-  },
-  {
-    "objectID": "assignments/labs/Lab6.html#problem-2",
-    "href": "assignments/labs/Lab6.html#problem-2",
-    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
-    "section": "Problem 2:",
-    "text": "Problem 2:\nExercise 7.6 in Convex Optimization Extended Exercises"
-  },
-  {
-    "objectID": "assignments/labs/Lab6.html#problem-3",
-    "href": "assignments/labs/Lab6.html#problem-3",
-    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
-    "section": "Problem 3:",
-    "text": "Problem 3:\nExercise 7.14 in Convex Optimization"
-  },
-  {
-    "objectID": "assignments/labs/Lab6.html#problem-4",
-    "href": "assignments/labs/Lab6.html#problem-4",
-    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
-    "section": "Problem 4:",
-    "text": "Problem 4:\nExercise 7.48 in Convex Optimization Extended Exercises"
-  },
-  {
-    "objectID": "assignments/labs/Lab6.html#problem-5",
-    "href": "assignments/labs/Lab6.html#problem-5",
-    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
-    "section": "Problem 5:",
-    "text": "Problem 5:\nExercise 8.6 in Convex Optimization Extended Exercises"
-  },
-  {
-    "objectID": "assignments/labs/Lab5.html",
-    "href": "assignments/labs/Lab5.html",
-    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
-    "section": "",
-    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
-  },
-  {
-    "objectID": "assignments/labs/Lab5.html#instructions",
-    "href": "assignments/labs/Lab5.html#instructions",
-    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
-    "section": "",
-    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
-  },
-  {
-    "objectID": "assignments/labs/Lab5.html#problem-1",
-    "href": "assignments/labs/Lab5.html#problem-1",
-    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
-    "section": "Problem 1:",
-    "text": "Problem 1:\nExercise 4.2 in Convex Optimization"
-  },
-  {
-    "objectID": "assignments/labs/Lab5.html#problem-2",
-    "href": "assignments/labs/Lab5.html#problem-2",
-    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
-    "section": "Problem 2:",
-    "text": "Problem 2:\n4.2 ‘Hello World’ in CVX. Use CVX to verify the optimal values you obtained (analytically) for exercise 4.2 in Convex Optimization"
-  },
-  {
-    "objectID": "assignments/labs/Lab5.html#problem-3",
-    "href": "assignments/labs/Lab5.html#problem-3",
-    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
-    "section": "Problem 3:",
-    "text": "Problem 3:\nExercise 4.60 in Convex Optimization"
-  },
-  {
-    "objectID": "assignments/labs/Lab5.html#problem-4",
-    "href": "assignments/labs/Lab5.html#problem-4",
-    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
-    "section": "Problem 4:",
-    "text": "Problem 4:\nExercise 6.4 in Convex Optimization Extended Exercises"
-  },
-  {
-    "objectID": "assignments/labs/Lab5.html#problem-5",
-    "href": "assignments/labs/Lab5.html#problem-5",
-    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
-    "section": "Problem 5:",
-    "text": "Problem 5:\nExercise 6.13 in Convex Optimization Extended Exercises"
-  },
-  {
-    "objectID": "assignments/labs/tbd.html",
-    "href": "assignments/labs/tbd.html",
-    "title": "Lab TBD",
-    "section": "",
-    "text": "Check back later\nThis assignment is not available to view yet. Please check back closer to the assignment due date/week of the module this assignment is based on."
+    "text": "This website would not be possible without the quarto package. This course draws inspiration from several open educational resources on the internet, including two books and accompanying materials by Stephen Boyd and Lieven Vandenberghe: Introduction to Applied Linear Algebra and Convex Optimization",
+    "crumbs": [
+      "Acknowledgements"
+    ]
   },
   {
     "objectID": "meetups/Meetup-1/meetup-1.html#what-is-optimization",
@@ -895,135 +388,733 @@
     "text": "Thanks!\n\n\n\n\nDATA 609"
   },
   {
-    "objectID": "acknowledgements.html",
-    "href": "acknowledgements.html",
-    "title": "Acknowledgements",
+    "objectID": "assignments/labs/tbd.html",
+    "href": "assignments/labs/tbd.html",
+    "title": "Lab TBD",
     "section": "",
-    "text": "This website would not be possible without the quarto package. This course draws inspiration from several open educational resources on the internet, including two books and accompanying materials by Stephen Boyd and Lieven Vandenberghe: Introduction to Applied Linear Algebra and Convex Optimization",
+    "text": "Check back later\nThis assignment is not available to view yet. Please check back closer to the assignment due date/week of the module this assignment is based on."
+  },
+  {
+    "objectID": "assignments/labs/Lab5.html",
+    "href": "assignments/labs/Lab5.html",
+    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
+    "section": "",
+    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
+  },
+  {
+    "objectID": "assignments/labs/Lab5.html#instructions",
+    "href": "assignments/labs/Lab5.html#instructions",
+    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
+    "section": "",
+    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
+  },
+  {
+    "objectID": "assignments/labs/Lab5.html#problem-1",
+    "href": "assignments/labs/Lab5.html#problem-1",
+    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
+    "section": "Problem 1:",
+    "text": "Problem 1:\nExercise 4.2 in Convex Optimization"
+  },
+  {
+    "objectID": "assignments/labs/Lab5.html#problem-2",
+    "href": "assignments/labs/Lab5.html#problem-2",
+    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
+    "section": "Problem 2:",
+    "text": "Problem 2:\n4.2 ‘Hello World’ in CVX. Use CVX to verify the optimal values you obtained (analytically) for exercise 4.2 in Convex Optimization"
+  },
+  {
+    "objectID": "assignments/labs/Lab5.html#problem-3",
+    "href": "assignments/labs/Lab5.html#problem-3",
+    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
+    "section": "Problem 3:",
+    "text": "Problem 3:\nExercise 4.60 in Convex Optimization"
+  },
+  {
+    "objectID": "assignments/labs/Lab5.html#problem-4",
+    "href": "assignments/labs/Lab5.html#problem-4",
+    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
+    "section": "Problem 4:",
+    "text": "Problem 4:\nExercise 6.4 in Convex Optimization Extended Exercises"
+  },
+  {
+    "objectID": "assignments/labs/Lab5.html#problem-5",
+    "href": "assignments/labs/Lab5.html#problem-5",
+    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
+    "section": "Problem 5:",
+    "text": "Problem 5:\nExercise 6.13 in Convex Optimization Extended Exercises"
+  },
+  {
+    "objectID": "assignments/labs/Lab6.html",
+    "href": "assignments/labs/Lab6.html",
+    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
+    "section": "",
+    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
+  },
+  {
+    "objectID": "assignments/labs/Lab6.html#instructions",
+    "href": "assignments/labs/Lab6.html#instructions",
+    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
+    "section": "",
+    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
+  },
+  {
+    "objectID": "assignments/labs/Lab6.html#problem-1",
+    "href": "assignments/labs/Lab6.html#problem-1",
+    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
+    "section": "Problem 1:",
+    "text": "Problem 1:\nExercise 7.4 in Convex Optimization Extended Exercises"
+  },
+  {
+    "objectID": "assignments/labs/Lab6.html#problem-2",
+    "href": "assignments/labs/Lab6.html#problem-2",
+    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
+    "section": "Problem 2:",
+    "text": "Problem 2:\nExercise 7.6 in Convex Optimization Extended Exercises"
+  },
+  {
+    "objectID": "assignments/labs/Lab6.html#problem-3",
+    "href": "assignments/labs/Lab6.html#problem-3",
+    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
+    "section": "Problem 3:",
+    "text": "Problem 3:\nExercise 7.14 in Convex Optimization"
+  },
+  {
+    "objectID": "assignments/labs/Lab6.html#problem-4",
+    "href": "assignments/labs/Lab6.html#problem-4",
+    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
+    "section": "Problem 4:",
+    "text": "Problem 4:\nExercise 7.48 in Convex Optimization Extended Exercises"
+  },
+  {
+    "objectID": "assignments/labs/Lab6.html#problem-5",
+    "href": "assignments/labs/Lab6.html#problem-5",
+    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
+    "section": "Problem 5:",
+    "text": "Problem 5:\nExercise 8.6 in Convex Optimization Extended Exercises"
+  },
+  {
+    "objectID": "assignments/labs/Lab3.html",
+    "href": "assignments/labs/Lab3.html",
+    "title": "Homework 3: Convex Sets",
+    "section": "",
+    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
+  },
+  {
+    "objectID": "assignments/labs/Lab3.html#instructions",
+    "href": "assignments/labs/Lab3.html#instructions",
+    "title": "Homework 3: Convex Sets",
+    "section": "",
+    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
+  },
+  {
+    "objectID": "assignments/labs/Lab3.html#problem-1",
+    "href": "assignments/labs/Lab3.html#problem-1",
+    "title": "Homework 3: Convex Sets",
+    "section": "Problem 1:",
+    "text": "Problem 1:\nExercise 2.5 in Convex Optimization"
+  },
+  {
+    "objectID": "assignments/labs/Lab3.html#problem-2",
+    "href": "assignments/labs/Lab3.html#problem-2",
+    "title": "Homework 3: Convex Sets",
+    "section": "Problem 2:",
+    "text": "Problem 2:\nExercise 2.7 in Convex Optimization"
+  },
+  {
+    "objectID": "assignments/labs/Lab3.html#problem-3",
+    "href": "assignments/labs/Lab3.html#problem-3",
+    "title": "Homework 3: Convex Sets",
+    "section": "Problem 3:",
+    "text": "Problem 3:\nExercise 2.12 in Convex Optimization"
+  },
+  {
+    "objectID": "assignments/labs/Lab3.html#problem-4",
+    "href": "assignments/labs/Lab3.html#problem-4",
+    "title": "Homework 3: Convex Sets",
+    "section": "Problem 4:",
+    "text": "Problem 4:\nExercise 2.15 in Convex Optimization"
+  },
+  {
+    "objectID": "assignments/labs/Lab3.html#problem-5",
+    "href": "assignments/labs/Lab3.html#problem-5",
+    "title": "Homework 3: Convex Sets",
+    "section": "Problem 5:",
+    "text": "Problem 5:\nExercise 2.28 in Convex Optimization"
+  },
+  {
+    "objectID": "assignments/labs.html",
+    "href": "assignments/labs.html",
+    "title": "Labs",
+    "section": "",
+    "text": "The homework assignments in this course are lab assignments where you will solve the problem using a combination of mathematics and computer code.\nPlease submit a and either a quarto file or jupyter notebook or other code that generates your homework. Labs should be submitted on Blackboard.\n\n\nGradient Descent and Least Squares (Download)\n\n\nLeast Squares Applications (Download)\n\n\nConvex Sets (Download)\n\n\nConvex Functions (Download)\n\n\nConvex Optimizations Problems (Download)\n\n\nApplications to Statistics and Machine Learning (Download)\n\n\nNonconvex Optimization and Stochastic Gradient Descent (Download)\n\n\nTraining Deep Neural Networks (Download)",
     "crumbs": [
-      "Acknowledgements"
+      "Assignments",
+      "Labs"
     ]
   },
   {
-    "objectID": "modules/module5.html",
-    "href": "modules/module5.html",
-    "title": "Module 5 - Convex Sets",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Announcements",
     "section": "",
-    "text": "Homework 3 is due in two weeks, Sunday at midnight\n\n\n\nDefinition of Affine and Convex Sets\nExamples of Convex Sets\nOperations that Preserve Convexity of Sets\n\n\n\n\nSections 2.1-2.3 of Convex Optimization\nSection 2.1 of Introduction to Algorithms for Machine Learning",
+    "text": "Be sure to check this page regularly for updates. In addition to periodic updates about the course, slides and recordings of the weekly meetups will be posted here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 2: Least Squares Optimization\n\n\n\n\n\nClick here to read more about Meetup 1 and view/download the lecture slides.\n\n\n\n\n\nFeb 3, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 2- Least Squares\n\n\n\n\n\nClick here to read about Week 2.\n\n\n\n\n\nFeb 2, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 1: Introduction to Optimization\n\n\n\n\n\nClick here to read more about Meetup 1 and view/download the lecture slides.\n\n\n\n\n\nJan 27, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome to DATA 609\n\n\n\n\n\nImportant information on how to get started with this course. Click this post now for instructions on getting started.\n\n\n\n\n\nJan 26, 2025\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
-      "Topics",
-      "5 - Convex Sets"
+      "Announcements"
     ]
   },
   {
-    "objectID": "modules/module5.html#homework",
-    "href": "modules/module5.html#homework",
-    "title": "Module 5 - Convex Sets",
+    "objectID": "assignments/project.html",
+    "href": "assignments/project.html",
+    "title": "Project",
     "section": "",
-    "text": "Homework 3 is due in two weeks, Sunday at midnight\n\n\n\nDefinition of Affine and Convex Sets\nExamples of Convex Sets\nOperations that Preserve Convexity of Sets\n\n\n\n\nSections 2.1-2.3 of Convex Optimization\nSection 2.1 of Introduction to Algorithms for Machine Learning",
+    "text": "The idea of this project is for you to find data and do something interesting with it that relates to the skills you have developed in this course.\nThe project is intentionally open ended- this is an opportunity for you to explore your interests, through using techniques or technologies that branch off those that were introduced in this class, datasets related to problems you face in your career or that you are curious about, or both.\nMy expectation for your project is that it has the length and sophistication of a complete homework assignment, but will all the work focused on the topic. It should include an introduction to contextualize the topic, but otherwise you can structure it how you like.\nThe output of your project should software that allows me to reproduce your work and a research report which describes what you did with the data and your findings, which could be contained within a github repository.\n\n\nThe first step of your project is to submit an initial proposal, which will help to ensure that your project is both worthwhile and feasible in the time frame of the last half of the semester. Your proposal should describe the area that you are interested in, the datasets you are going to use/mathematical problems you want to solve, and the link to the topics of this course. The proposal length should be around one page (excluding figures and references),\nThe proposal is preliminary, and you can include additional data or a different analysis as needs require.\n\n\n\nWhen writing proposals, I’ve found the following set of considerations, called “Heilmeier's Questions”, to be helpful to consider. Although this is just a very short project, you might find them helpful as well, and useful for formulating future projects and proposals that you might have to complete. These questions were developed by Dr. George Heilmeier, who was the director of DARPA from 1975-1977. Heilmeier said that every proposal to DARPA needed to answer these questions clearly and completely in order to receive funding:\n\nWhat are you trying to do? Articulate your objectives using absolutely no jargon. What is the problem? Why is it hard?\nHow is it done today, and what are the limits of current practice?\nWhat is new in your approach, and why do you think it will be successful?\nWho cares?\nIf you’re successful, what difference will it make? What applications are enabled as a result?\nWhat are the risks?\nHow long will it take?\nWhat are the midterm and final “exams” to check for success? How will progress be measured?",
     "crumbs": [
-      "Topics",
-      "5 - Convex Sets"
+      "Assignments",
+      "Project"
     ]
   },
   {
-    "objectID": "modules/module12.html",
-    "href": "modules/module12.html",
-    "title": "Module 12: Duality and Classifiers",
+    "objectID": "assignments/project.html#heilmeiers-questions",
+    "href": "assignments/project.html#heilmeiers-questions",
+    "title": "Project",
     "section": "",
-    "text": "Learning Objectives\n\nDual Formulation of Optimization Problems\nLagrange Multipliers\nLinear and Nonlinear Classifiers, LDA\nSupport Vector Machines\n\n\n\nReadings\nSections 8.1, 8.2, 8.6, 8.7, 8.8 Convex Optimization",
+    "text": "When writing proposals, I’ve found the following set of considerations, called “Heilmeier's Questions”, to be helpful to consider. Although this is just a very short project, you might find them helpful as well, and useful for formulating future projects and proposals that you might have to complete. These questions were developed by Dr. George Heilmeier, who was the director of DARPA from 1975-1977. Heilmeier said that every proposal to DARPA needed to answer these questions clearly and completely in order to receive funding:\n\nWhat are you trying to do? Articulate your objectives using absolutely no jargon. What is the problem? Why is it hard?\nHow is it done today, and what are the limits of current practice?\nWhat is new in your approach, and why do you think it will be successful?\nWho cares?\nIf you’re successful, what difference will it make? What applications are enabled as a result?\nWhat are the risks?\nHow long will it take?\nWhat are the midterm and final “exams” to check for success? How will progress be measured?",
     "crumbs": [
-      "Topics",
-      "12 - Duality and Classifiers"
+      "Assignments",
+      "Project"
     ]
   },
   {
-    "objectID": "modules/module9.html",
-    "href": "modules/module9.html",
-    "title": "Module 9: Convex Optimization Problems and Disciplined Convex Programming",
+    "objectID": "assignments/labs/Lab2.html",
+    "href": "assignments/labs/Lab2.html",
+    "title": "Homework 2: Applications of Least Squares",
     "section": "",
-    "text": "Homework\nHomework 5 is due next week, Sunday at midnight.\n\n\nLearning Objectives\n\nDefinition of Convex Optimization Problem\nProblem Transformations\nImportant Subclasses of Convex Optimization Problems\nDiscilined Convex Programming and CVX\nVector Optimization and Scalarization\n\n\n\nReadings\nSections 4.1-4.4, 4.6-4.7 of Convex Optimization\nCVX users guide, read one of these: -python -R -julia",
+    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
+  },
+  {
+    "objectID": "assignments/labs/Lab2.html#instructions",
+    "href": "assignments/labs/Lab2.html#instructions",
+    "title": "Homework 2: Applications of Least Squares",
+    "section": "",
+    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
+  },
+  {
+    "objectID": "assignments/labs/Lab2.html#problem-1-online-updating-for-least-squares",
+    "href": "assignments/labs/Lab2.html#problem-1-online-updating-for-least-squares",
+    "title": "Homework 2: Applications of Least Squares",
+    "section": "Problem 1: Online Updating for Least Squares",
+    "text": "Problem 1: Online Updating for Least Squares\nMany applications of least squares (and other statistical methods) involve , in which data is collected over a time period and the statistical model is updated as new data arrives. If the quantity of data arriving is very large, it may not be possible to refit the entire model on the entire dataset. Instead, we use techniques (often referred to as which take the current model as a starting point and update them to incorporate the new data. Solve exercise 12.14 from VMLS"
+  },
+  {
+    "objectID": "assignments/labs/Lab2.html#problem-2-weighted-least-squares",
+    "href": "assignments/labs/Lab2.html#problem-2-weighted-least-squares",
+    "title": "Homework 2: Applications of Least Squares",
+    "section": "Problem 2: Weighted Least Squares",
+    "text": "Problem 2: Weighted Least Squares\nThe file social-mobility.csv contains data on the fraction of individuals born in the years 1980-1982 to parents in the bottom 20% of the income distribution who reach the top 20% of the income distribution by the time they turn 30 in a large number of municipalities throughout the United States. The dataset also contains additional variables that describe other socio-economic differences between the cities in the dataset.\n\nMake a scatter-plot of mobility versus population (use a log-scale for population). What do you notice about the variance of social mobility as a function of population? This is a common feature of nearly every dataset containing geographic regions with widely different populations.\nAssume that the number of children born in families making below the 20th percentile of the income distribution in each city is linearly proportional to the city population. Write down a formula for how the variance of each measurement of the social mobility based on the measured social mobility and the population. Hint: start with either the formula for the variance of binomial counts or look up the variance of a proportion derived from a binomial distribution. Don’t worry about constant factors when deriving this formula.\nUse weighted least squares to calculate an estimate of how social mobility depends on commute time and student-teacher ratio, using weights calculated based on the variance estimate derived in (b). Compare the coefficients to those derived from ordinary least squares with no weights.\n\n##Problem 3: Markowitz Portfolio Optimization\nIn this problem you will use Markowitz Portfolio Optimization to construct a set of portfolios that aim to achieve certain target rates of return while minimizing risk. The file prices.csv contains information on daily asset returns from 2020-2024 for a group of assets. The data is divided into two time periods, a training period (2020-2022) and a testing period (2022-2024).\n\nConstruct a vector of annual returns \\(\\mu\\) and return covariance \\(\\Gamma\\). Then solve the following constrained least squares problem to calculate optimal portfolios achieving a fixed rate of return with minimum variance: \\[\n    \\min_{w} x^T\\Gamma x,\\\\\n    w^T\\mu = r\n\\]\n\nCalculate optimal portfolios based on the 2020-2022 data for targeted rates of return \\(r=5\\%\\), \\(r=10\\%\\), and \\(r=20\\%\\).\n\nPlot the cumulative value of each portfolio over time, starting from an initial investment of \\(\\$10000\\), for both the training and test sets of returns.\n\nFor each of the 3 portfolios report:\n\nThe annualized return on the training and test sets;\nThe annualized risk on the training and test sets;\nThe asset with the minimum allocation weight (can be the most negative), and its weight;\nThe asset with the maximum allocation weight, and its weight;\nThe leverage, defined as |w1| + · · · + |wn|. (Several other definitions of leverage are used.) This number is always at least one, and it is exactly one only if the portfolio has no short positions.\n\nComment briefly on your observations about the different portfolios and the difference between their training and testing performance.\n\nIt is well known that optimal portfolios constructed using the Markowitz procedure perform much more poorly out of sample compared to in sample. This is due to a variety of reasons, one of which is that it assumes that future returns are equal to past returns, another that the correlation structure of the market might change over time, and finally, when there are many assets there is the potential for overfitting. Repeat the previous problem but introduce a ridge regression/\\(l_2\\) norm penalty term to the objective function, with a hyperparameter \\(\\lamba\\) governing the size of the penalty term.\n\nSelect 10 positive values of \\(\\lamba\\) on a log scale between \\(1e-1\\) and \\(10\\) and for each value of \\(\\lamba\\) solve the following penalized regression problem:\n\\[\n    \\min_{w} w^T(\\Gamma+\\lambda I) w ,\\\\\n    w^T\\mu = r\n\\]\nfor just the single value of \\(r=20\\%\\). Then calculate the performance of each of these regularized Markowitz strategies on both the training and test datasets and plot the values of:\n\nThe annualized return on the training and test sets;\nThe annualized risk on the training and test sets;\nThe minimum allocation weight;\nThe maximum allocation weight;\nThe leverage\n\nComment on how the different values of \\(\\lambda\\) changed the optimal portfolios and the difference between in-sample and out-of-sample return and variance."
+  },
+  {
+    "objectID": "assignments/labs/Lab4.html",
+    "href": "assignments/labs/Lab4.html",
+    "title": "Homework 3: Convex Functions",
+    "section": "",
+    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
+  },
+  {
+    "objectID": "assignments/labs/Lab4.html#instructions",
+    "href": "assignments/labs/Lab4.html#instructions",
+    "title": "Homework 3: Convex Functions",
+    "section": "",
+    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
+  },
+  {
+    "objectID": "assignments/labs/Lab4.html#problem-1",
+    "href": "assignments/labs/Lab4.html#problem-1",
+    "title": "Homework 3: Convex Functions",
+    "section": "Problem 1:",
+    "text": "Problem 1:\nExercise 3.2 in Convex Optimization"
+  },
+  {
+    "objectID": "assignments/labs/Lab4.html#problem-2",
+    "href": "assignments/labs/Lab4.html#problem-2",
+    "title": "Homework 3: Convex Functions",
+    "section": "Problem 2:",
+    "text": "Problem 2:\nExercise 3.6 in Convex Optimization"
+  },
+  {
+    "objectID": "assignments/labs/Lab4.html#problem-3",
+    "href": "assignments/labs/Lab4.html#problem-3",
+    "title": "Homework 3: Convex Functions",
+    "section": "Problem 3:",
+    "text": "Problem 3:\nExercise 3.16 in Convex Optimization"
+  },
+  {
+    "objectID": "assignments/labs/Lab4.html#problem-4",
+    "href": "assignments/labs/Lab4.html#problem-4",
+    "title": "Homework 3: Convex Functions",
+    "section": "Problem 4:",
+    "text": "Problem 4:\nExercise 3.22 in Convex Optimization"
+  },
+  {
+    "objectID": "assignments/labs/Lab4.html#problem-5",
+    "href": "assignments/labs/Lab4.html#problem-5",
+    "title": "Homework 3: Convex Functions",
+    "section": "Problem 5:",
+    "text": "Problem 5:\nExercise 3.24 in Convex Optimization"
+  },
+  {
+    "objectID": "assignments/labs/Lab1.html",
+    "href": "assignments/labs/Lab1.html",
+    "title": "Homework 1: Introduction to Optimization and Least Squares",
+    "section": "",
+    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
+  },
+  {
+    "objectID": "assignments/labs/Lab1.html#instructions",
+    "href": "assignments/labs/Lab1.html#instructions",
+    "title": "Homework 1: Introduction to Optimization and Least Squares",
+    "section": "",
+    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
+  },
+  {
+    "objectID": "assignments/labs/Lab1.html#problem-1-gradient-descent",
+    "href": "assignments/labs/Lab1.html#problem-1-gradient-descent",
+    "title": "Homework 1: Introduction to Optimization and Least Squares",
+    "section": "Problem 1: Gradient Descent",
+    "text": "Problem 1: Gradient Descent\n\nConsider the mathematical function defined on \\(f: \\mathbb{R}^2\\,\\to\\, \\mathbb{R}\\):\n\n\\[\nf(x,y) = (x-1)^2 + (y+2)^2,\n\\]\nFind the single critical point of this function and show that it is a local minimum (in this case, this will also be a global minimum).\n\nNow consider a new objective function that depends on a parameter \\(b\\): \\[\nf(x,y) = x^2 + by^2\n\\] Here we will look at two different values of \\(b\\), \\(b=3\\) and \\(b=10\\). The global minimum of this function occurs at the point \\(x^* = 0\\), \\(y^*=0\\) no matter what the value of \\(b\\). Suppose that we didn’t know this and wanted to find the minimum of this function using gradient descent instead of direct calculation.\n\n\nFirst write code to perform the gradient descent algorithm, that is perform the iteration: \\[\n\\mathbf{v}_{n+1} = \\mathbf{v}_n - k \\nabla f(\\mathbf{v}_n),\n\\]\n\nwhere the vector \\(\\mathbf{v} = \\begin{bmatrix} x & y\\end{bmatrix}^T\\) and \\(k\\) is the learning rate.\n\nThen test the performance of your algorithm as a function of the learning rates \\(k\\) by performing 100 iterations of the algorithm for 100 values of \\(k\\) equally spaced between \\(k=0.01\\) and \\(k=0.3\\). Start with an initial guess of \\(\\mathbf{v}_0 = \\begin{bmatrix} b & 1\\end{bmatrix}^T\\). Do this for \\(b=3\\) and \\(b=10\\). Make separate plots for \\(b=3\\) and \\(b=10\\) of the log base 10 of the error (in this case it is \\(\\sqrt{x_{100}^2+y_{100}^2}\\)) for the final value of the iteration versus the value of \\(k\\). How does learning rate relate to the final value of the error? For which value of \\(b\\) does the algorithm have the ability to converge fastest (have the lowest value of the error at the end)?\n\nNote: For some combinations of \\(k\\) and \\(b\\), the algorithm won’t converge to the right answer, i.e. the error will grow with time. To make your plot easier to read, don’t plot the error for iterations that didn’t converge.\n\nAs \\(k\\) increases, for one or both values of \\(b\\), you will observe a point where the trend of final error versus learning rate reverses direction. Pick a value of \\(k\\) very close to the point where this occurs, and make a contour plot of the function \\(f\\) and the trajectory of the iterations for the gradient descent algorithm for that value of \\(k\\) superimposed over the contour plot. What do you observe?\n\nNote: The differences that you observe here are a special case of a more general phenomenon: the speed of convergence of gradient descent depends on something called the condition number of the Hessian matrix (the matrix of the 2nd order partial derivatives) of the target function. The condition number for a symmetric matrix is just the ratio of the largest to smallest eigenvalues, in this case the condition number is \\(b\\) (or 1/\\(b\\)). Gradient descent performs worse and worse the larger the condition number (and large condition numbers are problematic for a wide variety of other numerical methods)."
+  },
+  {
+    "objectID": "assignments/labs/Lab1.html#problem-2-solving-least-squares-problems",
+    "href": "assignments/labs/Lab1.html#problem-2-solving-least-squares-problems",
+    "title": "Homework 1: Introduction to Optimization and Least Squares",
+    "section": "Problem 2: Solving Least Squares Problems",
+    "text": "Problem 2: Solving Least Squares Problems\nGenerate a random \\(20\\times 10\\) matrix \\(A\\) and a random 20-vector \\(b\\) (use a Gaussian distribution). Then, solve the least squares problem: \\[\n\\min_{\\mathbf{x}\\in \\mathbb{R}^{10}} \\|A\\mathbf{x} - \\mathbf{b}\\|^2\n\\] in the following ways:\n\nMultiply \\(\\mathbf{b}\\) by the Morse-Penrose Pseudoinverse \\(A^+\\).\nUse built in functions to solve the least squares problem (i.e. in python numpy.lstsq, in R lm, and in Julia the backslash operator).\nUsing the \\(QR\\) factorization of \\(A\\). This factorization rewrites \\(A\\) as: \\[\nA = \\begin{bmatrix} Q & 0\\end{bmatrix} \\begin{bmatrix} R & 0 \\end{bmatrix}^T,\n\\] where \\(Q\\) is an orthonormal matrix and \\(R\\) is upper triangular. The least squares solution equals: \\[\n\\mathbf{x} = R^{-1}Q^T\\mathbf{b}\n\\]\nVerify that each of these solutions are nearly equal and that the residuals \\(A\\mathbf{x}-\\mathbf{b}\\) are orthogonal to the vector \\(A\\mathbf{x}\\)"
+  },
+  {
+    "objectID": "assignments/labs/Lab1.html#problem-3-iterative-solutions-to-least-squares",
+    "href": "assignments/labs/Lab1.html#problem-3-iterative-solutions-to-least-squares",
+    "title": "Homework 1: Introduction to Optimization and Least Squares",
+    "section": "Problem 3: Iterative Solutions to Least Squares",
+    "text": "Problem 3: Iterative Solutions to Least Squares\nAlthough the pseudoinverse provides an exact formula for the least squares solutions, there are some situations in which using the exact solution is computationally difficult, particularly when the matrix \\(A\\) and vector \\(\\mathbf{b}\\) have a large number of entries. In isn’t out of the ordinary for \\(A^TA\\) to be more than a terabyte, for example . In these cases it may be better to use an approximate solution instead of the exact formula. There are many different approximate methods for solving least squares problems, here we will use an iterative method developed by Richardson.\nThis method begins with an initial guess \\(\\mathbf{x}^{(0)} = 0\\) and calculates successive approximations as follows:\n\\[\n    \\mathbf{x}^{(k+1)} = \\mathbf{x}^{(k)} - \\mu A^T\\left(A\\mathbf{x}^{(k)}-\\mathbf{b}\\right)\n\\]\nHere \\(\\mu\\) is a positive paramter that has a similar interpretation to the learning rate for gradient descent. A choice that guarantees convergence is \\(\\mu \\leq \\frac{1}{\\|A\\|}\\). The iteration is terminated when the change in the residual \\(\\|A^T(Ax^{(k)} − b)\\|\\) after successive steps is below a user determined threshold, which indicates that the least squares optimality conditions are nearly satisfied.\n\nSuppose that \\(\\mathbf{x}\\) is a solution to the least squares problem: \\[\n\\mathbf{x} = A^+\\mathbf{b}\n\\]\n\nShow by substitution of the formula for the pseudoinverse that \\(\\mathbf{x}\\) is a of the iteration scheme, i.e. that: \\[\n\\mathbf{x} = \\mathbf{x} - \\mu A^T\\left(A\\mathbf{x}-\\mathbf{b}\\right)\n\\]\n\nGenerate a random 20 × 10 matrix \\(A\\) and 20-vector \\(\\mathbf{b}\\), and compute the least squares solution \\(\\mathbf{x} = A^+\\mathbf{b}\\). Then run the Richardson algorithm with \\(\\mu = \\frac{1}{\\|A\\|^2}\\) for 500 iterations, and plot \\(\\|\\mathbf{x}^{(k)}-\\mathbf{x}\\|\\) to verify that \\(\\mathbf{x}^{(k)}\\) is converging to \\(\\mathbf{x}\\)"
+  },
+  {
+    "objectID": "images/IntroSlides.html#about-me",
+    "href": "images/IntroSlides.html#about-me",
+    "title": "Welcome to DATA 609",
+    "section": "About Me",
+    "text": "About Me\n\n\n\nDoctoral Lecturer at CUNY SPS\nPast research experience:\n\nPlasma physics and Applied Mathematics (NYU)\nEcology and Evolutionary Biology (Princeton)\n\nResearch using Bayesian methods and genomic data to improve global scale ocean and climate models\nTaught math at NYU"
+  },
+  {
+    "objectID": "images/IntroSlides.html#why-optimization",
+    "href": "images/IntroSlides.html#why-optimization",
+    "title": "Welcome to DATA 609",
+    "section": "Why Optimization?",
+    "text": "Why Optimization?\n\n\n\nOptimization theory underlies most methods in data science\nThree foci:\n\nLeast Squares Optimization\nConvex Optimization\nLocal Optimization and Stochastic Gradient Descent"
+  },
+  {
+    "objectID": "images/IntroSlides.html#course-websites",
+    "href": "images/IntroSlides.html#course-websites",
+    "title": "Welcome to DATA 609",
+    "section": "Course Website(s)",
+    "text": "Course Website(s)\n\n\n\nBrightspace to submit homework\nCourse Website"
+  },
+  {
+    "objectID": "images/IntroSlides.html#course-website-and-meetup",
+    "href": "images/IntroSlides.html#course-website-and-meetup",
+    "title": "Welcome to DATA 609",
+    "section": "Course Website and Meetup",
+    "text": "Course Website and Meetup\n\n\n\nBrightspace to submit homework\nCourse Website\nCourse Meetup: Monday 6:45-7:45PM\nZoom Link"
+  },
+  {
+    "objectID": "images/IntroSlides.html#slack-channel",
+    "href": "images/IntroSlides.html#slack-channel",
+    "title": "Welcome to DATA 609",
+    "section": "Slack Channel",
+    "text": "Slack Channel\n\n\n\nCourse slack channel for messaging and rapid communications\nhttps://data609-spring-2025.slack.com\nInvite Link"
+  },
+  {
+    "objectID": "images/IntroSlides.html#textbooks",
+    "href": "images/IntroSlides.html#textbooks",
+    "title": "Welcome to DATA 609",
+    "section": "Textbooks",
+    "text": "Textbooks\n\n\nTwo most important textbooks:\n\nIntroduction to Applied Linear Algebra\n\n\nAvailable free online VMLS\n\n\nConvex Optimization\n\n\nAvailable free online cvxbook"
+  },
+  {
+    "objectID": "images/IntroSlides.html#textbooks-1",
+    "href": "images/IntroSlides.html#textbooks-1",
+    "title": "Welcome to DATA 609",
+    "section": "Textbooks",
+    "text": "Textbooks\n\n\nTwo most important textbooks:\n\nIntroduction to Applied Linear Algebra\n\n\nAvailable free online VMLS\n\n\nConvex Optimization\n\n\nAvailable free online cvxbook"
+  },
+  {
+    "objectID": "images/IntroSlides.html#assignments",
+    "href": "images/IntroSlides.html#assignments",
+    "title": "Welcome to DATA 609",
+    "section": "Assignments",
+    "text": "Assignments\n\n\n\n8 Lab Assignments (80%)\nFinal Project (20%)"
+  },
+  {
+    "objectID": "images/IntroSlides.html#looking-forward-to-a-great-semester",
+    "href": "images/IntroSlides.html#looking-forward-to-a-great-semester",
+    "title": "Welcome to DATA 609",
+    "section": "Looking forward to a great semester!",
+    "text": "Looking forward to a great semester!\nThanks for watching"
+  },
+  {
+    "objectID": "meetups/Meetup-2/meetup-2.html#week-summary",
+    "href": "meetups/Meetup-2/meetup-2.html#week-summary",
+    "title": "Meetup 2: Least Squares",
+    "section": "Week Summary",
+    "text": "Week Summary\n\nStarting on Least Squares\nChapter 12 of VMLS\nKeep working on Lab 1, due this Sunday at midnight"
+  },
+  {
+    "objectID": "meetups/Meetup-2/meetup-2.html#system-of-linear-equations",
+    "href": "meetups/Meetup-2/meetup-2.html#system-of-linear-equations",
+    "title": "Meetup 2: Least Squares",
+    "section": "System of Linear Equations",
+    "text": "System of Linear Equations\n\nWhen can we solve: \\[ A\\mathbf{x} = \\mathbf{b}\\,?\\]\n\\(A\\) is an \\(m\\times n\\) matrix\n\\(\\mathbf{x}\\) is an \\(n\\)-vector\n\\(\\mathbf{b}\\) is an \\(m\\)-vector"
+  },
+  {
+    "objectID": "meetups/Meetup-2/meetup-2.html#tall-wide-and-square-matrices",
+    "href": "meetups/Meetup-2/meetup-2.html#tall-wide-and-square-matrices",
+    "title": "Meetup 2: Least Squares",
+    "section": "Tall, Wide, and Square Matrices",
+    "text": "Tall, Wide, and Square Matrices\n\n\\(m=n\\) square\nExact solution if rows/columns are independent \\[ A = \\begin{pmatrix} a_{11} & \\cdots & \\cdots & a_{1n} \\\\\n                     \\vdots &   \\cdots     &    \\cdots   & \\vdots \\\\\n                    \\vdots & \\cdots & \\cdots & \\vdots \\\\\n                    a_{n1} & \\cdots & \\cdots & a_{nn}\n                    \\end{pmatrix}\n                    \\]\n\\(\\mathbf{x} = A^{-1}\\mathbf{b}\\)"
+  },
+  {
+    "objectID": "meetups/Meetup-2/meetup-2.html#tall-wide-and-square-matrices-1",
+    "href": "meetups/Meetup-2/meetup-2.html#tall-wide-and-square-matrices-1",
+    "title": "Meetup 2: Least Squares",
+    "section": "Tall, Wide, and Square Matrices",
+    "text": "Tall, Wide, and Square Matrices\n\n\\(m&lt;n\\) wide\nGenerally multiple solutions because dependent columns \\[ A = \\begin{pmatrix} a_{11} & \\cdots & \\cdots & \\cdots & a_{1n} \\\\\n                     \\vdots &   \\cdots     & \\cdots &   \\cdots   & \\vdots \\\\\n                    a_{m1} & \\cdots & \\cdots & \\cdots & a_{mn}\n                    \\end{pmatrix}\n                    \\]\nCommon ML situation (more parameters than data points)\nParticular solution plus the null space"
+  },
+  {
+    "objectID": "meetups/Meetup-2/meetup-2.html#tall-wide-and-square-matrices-2",
+    "href": "meetups/Meetup-2/meetup-2.html#tall-wide-and-square-matrices-2",
+    "title": "Meetup 2: Least Squares",
+    "section": "Tall, Wide, and Square Matrices",
+    "text": "Tall, Wide, and Square Matrices\n\n\\(m&gt;n\\) tall\nGenerally no exact solution \\[ A = \\begin{pmatrix} a_{11} & \\cdots &  a_{1n} \\\\\n                     \\vdots &   \\cdots   & \\vdots \\\\\n                     \\vdots &   \\cdots   & \\vdots \\\\\n                     \\vdots &   \\cdots   & \\vdots \\\\\n                    a_{m1} & \\cdots & a_{mn}\n                    \\end{pmatrix}\n                    \\]"
+  },
+  {
+    "objectID": "meetups/Meetup-2/meetup-2.html#inspiration-for-least-squares",
+    "href": "meetups/Meetup-2/meetup-2.html#inspiration-for-least-squares",
+    "title": "Meetup 2: Least Squares",
+    "section": "Inspiration for Least Squares",
+    "text": "Inspiration for Least Squares\n\nCan’t solve? Minimize the error \\[ \\mathbf{r} = A\\mathbf{x}-\\mathbf{b}\\]\nOptimization problem is: \\[\\textrm{Find:}\\quad \\min_{\\mathbf{x}} \\|A\\mathbf{x} - \\mathbf{b}\\|^2\\]\nThe \\(\\mathbf{x}\\) that minimizes this objective (the squared residual) is the least squares solution\nLinear regression"
+  },
+  {
+    "objectID": "meetups/Meetup-2/meetup-2.html#how-to-solve-it",
+    "href": "meetups/Meetup-2/meetup-2.html#how-to-solve-it",
+    "title": "Meetup 2: Least Squares",
+    "section": "How to Solve It?",
+    "text": "How to Solve It?\n\nTake derivative and set to 0: \\[\n\\frac{\\partial}{\\partial \\mathbf{x}}\\|A\\mathbf{x}-\\mathbf{b}\\|^2 =\nA^T A\\left(\\mathbf{x} - A^T\\mathbf{b}\\right)\n\\]\nTwo ways to get that:"
+  },
+  {
+    "objectID": "meetups/Meetup-2/meetup-2.html#how-to-solve-it-1",
+    "href": "meetups/Meetup-2/meetup-2.html#how-to-solve-it-1",
+    "title": "Meetup 2: Least Squares",
+    "section": "How to Solve It?",
+    "text": "How to Solve It?\n\nTake derivative with respect to components of \\(\\mathbf{x}\\) and set to 0: \\[\n\\frac{\\partial}{\\partial \\mathbf{x}}\\|A\\mathbf{x}-\\mathbf{b}\\|^2 =\n2A^T A\\left(\\mathbf{x} - A^T\\mathbf{b}\\right)\n\\]\nTwo ways to get that\n\nmatrixcalculus.org\nTake derivatives, work with indices"
+  },
+  {
+    "objectID": "meetups/Meetup-2/meetup-2.html#how-to-solve-it-2",
+    "href": "meetups/Meetup-2/meetup-2.html#how-to-solve-it-2",
+    "title": "Meetup 2: Least Squares",
+    "section": "How to Solve It?",
+    "text": "How to Solve It?\n\nGet System of Linear Equations: \\[ A^TA\\mathbf{x} = A^T\\mathbf{b} \\]\n\\(A^TA\\) is an \\(n\\times n\\) symmetric matrix called the Gram matrix\nInvertible if columns of \\(A\\) are independent:\n\n\\[ \\mathbf{x} = \\left(A^T A\\right)^{-1}A^T\\mathbf{b}\\]\n\nThis is the exact formula for the least squares solution"
+  },
+  {
+    "objectID": "meetups/Meetup-2/meetup-2.html#properties",
+    "href": "meetups/Meetup-2/meetup-2.html#properties",
+    "title": "Meetup 2: Least Squares",
+    "section": "Properties",
+    "text": "Properties\n\nMorse-Penrose Pseudoinverse: \\[A^+ = (A^TA)^{-1}A^T\\]\n\\(n\\times m\\) matrix\nIf \\(A\\) is invertible, \\(A^+ = A^{-1}\\)"
+  },
+  {
+    "objectID": "meetups/Meetup-2/meetup-2.html#applications-linear-regression",
+    "href": "meetups/Meetup-2/meetup-2.html#applications-linear-regression",
+    "title": "Meetup 2: Least Squares",
+    "section": "Applications: Linear Regression",
+    "text": "Applications: Linear Regression\n\nSuppose you have \\(m\\) observations, each with \\(n\\) features\n\\(a_{ij}\\) is \\(i\\)th obs. of \\(j\\)th component\nWant to predict the variable \\(\\mathbf{b}\\) using an Affine function: \\[\n\\sum_{i=1}^n a_{ij} x_i + c = b_j\n\\]"
+  },
+  {
+    "objectID": "meetups/Meetup-2/meetup-2.html#linear-regression",
+    "href": "meetups/Meetup-2/meetup-2.html#linear-regression",
+    "title": "Meetup 2: Least Squares",
+    "section": "Linear Regression",
+    "text": "Linear Regression\n\nAugmented matrix \\(A\\) and coefficients \\(\\mathbf{x}\\): \\[\nA = \\begin{pmatrix} a_{11} & \\cdots & a_{1n} & 1 \\\\\n                  \\vdots & \\cdots & \\vdots & 1 \\\\\n                  a_{m1} & \\cdots & a_{mn} & 1\n                  \\end{pmatrix}\n\\] \\[\n\\mathbf{x} = \\begin{pmatrix} x_1 & x_2 & \\cdots & x_n & c \\end{pmatrix}^T\n\\]\nNow get standard least squares problem:\n\n\\[ \\min_{\\mathbf{x}}\\|A\\mathbf{x}-\\mathbf{b}\\|^2\\]"
+  },
+  {
+    "objectID": "meetups/Meetup-2/meetup-2.html#applications-marketing-budget",
+    "href": "meetups/Meetup-2/meetup-2.html#applications-marketing-budget",
+    "title": "Meetup 2: Least Squares",
+    "section": "Applications: Marketing Budget",
+    "text": "Applications: Marketing Budget\n\n\n\nYou are tasked with spending a marketing budget\nThere are \\(10\\) different demographic groups to target\n\n\n\n\n\n\nGroup\n\n\n\n\n1\n18-25, play sports\n\n\n2\n26-30, play sports\n\n\n3\n31-35, play sports\n\n\n4\n36-40, play sports\n\n\n5\n41-45, play sports\n\n\n6\n18-25, no sports\n\n\n7\n26-30, no sports\n\n\n8\n31-35, no sports\n\n\n9\n36-40, no sports\n\n\n10\n41-45, no sports"
+  },
+  {
+    "objectID": "meetups/Meetup-2/meetup-2.html#applications-marketing-budget-1",
+    "href": "meetups/Meetup-2/meetup-2.html#applications-marketing-budget-1",
+    "title": "Meetup 2: Least Squares",
+    "section": "Applications: Marketing Budget",
+    "text": "Applications: Marketing Budget\n\n\n\nYou are tasked with spending a marketing budget\nThere are \\(10\\) different demographic groups to target\n4 different marketing channels\n\n\n\n\n\n\nChannel\n\n\n\n\n1\nInstagram\n\n\n2\nWine Mag\n\n\n3\nFacebook\n\n\n4\nUFC"
+  },
+  {
+    "objectID": "meetups/Meetup-2/meetup-2.html#applications-marketing-budget-2",
+    "href": "meetups/Meetup-2/meetup-2.html#applications-marketing-budget-2",
+    "title": "Meetup 2: Least Squares",
+    "section": "Applications: Marketing Budget",
+    "text": "Applications: Marketing Budget\n\nViews: $1 on channel \\(i\\) gets \\(R_{ij}\\) views in group \\(j\\)\n\n\n\n   Instagram  Wine Mag  Facebook   UFC      Demo\n0        3.0       0.1       0.4  6.00   18-25 S\n1        2.5       0.3       0.6  6.00   26-30 S\n2        2.3       0.4       1.0  5.50   31-35 S\n3        1.8       0.6       1.3  5.00   36-40 S\n4        1.0       0.6       2.0  4.50   41-45 S\n5        3.3       0.8       0.5  0.20  18-25 NS\n6        2.6       1.1       0.8  0.12  26-30 NS\n7        2.2       1.3       1.1  0.10  31-35 NS\n8        1.4       2.3       1.3  0.40  36-40 NS\n9        1.2       4.2       1.7  0.20  41-45 NS"
+  },
+  {
+    "objectID": "meetups/Meetup-2/meetup-2.html#applications-marketing-budget-3",
+    "href": "meetups/Meetup-2/meetup-2.html#applications-marketing-budget-3",
+    "title": "Meetup 2: Least Squares",
+    "section": "Applications: Marketing Budget",
+    "text": "Applications: Marketing Budget\n\nViews: $1 on channel \\(i\\) gets \\(R_{ij}\\) views in group \\(j\\)"
+  },
+  {
+    "objectID": "meetups/Meetup-2/meetup-2.html#marketing-budget",
+    "href": "meetups/Meetup-2/meetup-2.html#marketing-budget",
+    "title": "Meetup 2: Least Squares",
+    "section": "Marketing Budget",
+    "text": "Marketing Budget\n\nProblem: spend money to get \\(\\mathbf{v}_{dem}\\) impressions\nDecision variable \\(\\mathbf{s}\\) is spending in each channel\nSolve least squares problem: \\[\n\\min_{\\mathbf{s}} \\|R\\mathbf{s} - \\mathbf{v}_{dem}\\|^2\n\\]\n\\(R\\mathbf{s}\\) is views"
+  },
+  {
+    "objectID": "meetups/Meetup-2/meetup-2.html#marketing-budget-1",
+    "href": "meetups/Meetup-2/meetup-2.html#marketing-budget-1",
+    "title": "Meetup 2: Least Squares",
+    "section": "Marketing Budget",
+    "text": "Marketing Budget\n\nSuppose \\(\\mathbf{v}_{dem}\\) is uniform\n\n\nv_dem = np.ones(10)\n\ns = np.linalg.lstsq(R,v_dem)[0]\n\ns_dat = pd.DataFrame(s, columns = [\"Spending\"])\ns_dat[\"Channel\"] = ['Instagram','Wine Mag','Facebook','UFC'] \n\n(\n  ggplot(s_dat,aes(x=\"Channel\",y=\"Spending\"))\n  + geom_point(size=5) \n  + theme_bw(base_size=14)\n)"
+  },
+  {
+    "objectID": "meetups/Meetup-2/meetup-2.html#marketing-budget-2",
+    "href": "meetups/Meetup-2/meetup-2.html#marketing-budget-2",
+    "title": "Meetup 2: Least Squares",
+    "section": "Marketing Budget",
+    "text": "Marketing Budget\n\nSuppose \\(\\mathbf{v}_{dem}\\) is uniform"
+  },
+  {
+    "objectID": "meetups/Meetup-2/meetup-2.html#marketing-budget-3",
+    "href": "meetups/Meetup-2/meetup-2.html#marketing-budget-3",
+    "title": "Meetup 2: Least Squares",
+    "section": "Marketing Budget",
+    "text": "Marketing Budget\n\nSuppose \\(\\mathbf{v}_{dem}\\) is uniform"
+  },
+  {
+    "objectID": "meetups/Meetup-2/meetup-2.html#marketing-budget-4",
+    "href": "meetups/Meetup-2/meetup-2.html#marketing-budget-4",
+    "title": "Meetup 2: Least Squares",
+    "section": "Marketing Budget",
+    "text": "Marketing Budget\n\nSuppose we want to target only 41-45 Non-Sports Players"
+  },
+  {
+    "objectID": "meetups/Meetup-2/meetup-2.html#marketing-budget-5",
+    "href": "meetups/Meetup-2/meetup-2.html#marketing-budget-5",
+    "title": "Meetup 2: Least Squares",
+    "section": "Marketing Budget",
+    "text": "Marketing Budget\n\nSuppose we want to target only 41-45 Non-Sports Players"
+  },
+  {
+    "objectID": "meetups/Meetup-2/meetup-2.html#marketing-budget-issues",
+    "href": "meetups/Meetup-2/meetup-2.html#marketing-budget-issues",
+    "title": "Meetup 2: Least Squares",
+    "section": "Marketing Budget Issues",
+    "text": "Marketing Budget Issues\n\nNeed Constraints\n\nNo negative money in adds: \\(\\mathbf{s} \\geq 0\\)\nNo infinite budget: \\(\\sum_{i}s_i \\leq s_{max}\\)\n\nNeed a better objective function\n\nWeird to target precise \\(\\mathbf{v}_{dem}\\)\nBetter to have different value for each ad impression"
+  },
+  {
+    "objectID": "meetups/Meetup-2/meetup-2.html#network-tomography",
+    "href": "meetups/Meetup-2/meetup-2.html#network-tomography",
+    "title": "Meetup 2: Least Squares",
+    "section": "Network Tomography",
+    "text": "Network Tomography\n\n\n\n\n\nUrban Transit\nInternet\nKnow when people enter and leave\nKnow path they took\nHow long does it take to cross each link?"
+  },
+  {
+    "objectID": "meetups/Meetup-2/meetup-2.html#network-tomography-1",
+    "href": "meetups/Meetup-2/meetup-2.html#network-tomography-1",
+    "title": "Meetup 2: Least Squares",
+    "section": "Network Tomography",
+    "text": "Network Tomography"
+  },
+  {
+    "objectID": "meetups/Meetup-2/meetup-2.html#network-tomography-2",
+    "href": "meetups/Meetup-2/meetup-2.html#network-tomography-2",
+    "title": "Meetup 2: Least Squares",
+    "section": "Network Tomography",
+    "text": "Network Tomography"
+  },
+  {
+    "objectID": "meetups/Meetup-2/meetup-2.html#network-tomography-3",
+    "href": "meetups/Meetup-2/meetup-2.html#network-tomography-3",
+    "title": "Meetup 2: Least Squares",
+    "section": "Network Tomography",
+    "text": "Network Tomography"
+  },
+  {
+    "objectID": "meetups/Meetup-2/meetup-2.html#network-tomography-4",
+    "href": "meetups/Meetup-2/meetup-2.html#network-tomography-4",
+    "title": "Meetup 2: Least Squares",
+    "section": "Network Tomography",
+    "text": "Network Tomography\n\nFor trip \\(j\\) vector \\(\\mathbf{r}_j\\)\n\n\\(r_{ij} = 1\\) if \\(i\\)th “link” traversed on \\(j\\)th trip\n\\(r_{ij} = 0\\) otherwise\nMatrix \\(R\\) contains \\(r_{ij}\\)\n\nFor \\(t_j\\) is the time taken on trip \\(j\\)\nDecision variables \\(d_i\\) is the time taken on the \\(i\\)th link\nTime is \\(\\sum r_{ij}d_i\\)"
+  },
+  {
+    "objectID": "meetups/Meetup-2/meetup-2.html#network-tomography-5",
+    "href": "meetups/Meetup-2/meetup-2.html#network-tomography-5",
+    "title": "Meetup 2: Least Squares",
+    "section": "Network Tomography",
+    "text": "Network Tomography\n\nMinimize Least Squares Error:\n\n\\[\n\\textrm{Find:}\\quad \\min_{\\mathbf{d}} \\|R\\mathbf{d} - \\mathbf{t}\\|^2\n\\]\n\nMany similar problems in optimization theory\nThis one is the simplest"
+  },
+  {
+    "objectID": "meetups/Meetup-2/meetup-2.html#numerical-issues-with-least-squares",
+    "href": "meetups/Meetup-2/meetup-2.html#numerical-issues-with-least-squares",
+    "title": "Meetup 2: Least Squares",
+    "section": "Numerical Issues With Least Squares",
+    "text": "Numerical Issues With Least Squares\n\nSuppose you need to solve a system of linear equations: \\[\nA\\mathbf{x} = \\mathbf{b}\n\\]\nWhich of these is better?\n\nnp.linalg.inv(A) @ b\nnp.linalg.solve(A, b)"
+  },
+  {
+    "objectID": "meetups/Meetup-2/meetup-2.html#matrix-inverses",
+    "href": "meetups/Meetup-2/meetup-2.html#matrix-inverses",
+    "title": "Meetup 2: Least Squares",
+    "section": "Matrix Inverses",
+    "text": "Matrix Inverses\n\nConsider Singular Value Decomposition of \\(A\\): \\[\nA = U\\Sigma V^T\n\\]\n\\(U\\) and \\(V\\) are orthonormal matrices\n\\(\\Sigma\\) contains the singular values \\[\n\\Sigma = \\begin{bmatrix}\n  \\sigma_{1} & & \\\\\n  & \\ddots & \\\\\n  & & \\sigma_{n}\n\\end{bmatrix}\n\\]"
+  },
+  {
+    "objectID": "meetups/Meetup-2/meetup-2.html#condition-number-and-accuracy",
+    "href": "meetups/Meetup-2/meetup-2.html#condition-number-and-accuracy",
+    "title": "Meetup 2: Least Squares",
+    "section": "Condition Number and Accuracy",
+    "text": "Condition Number and Accuracy\n\nAccuracy of np.matmul(A.inv(),b) related to \\(\\frac{\\sigma_{max}}{\\sigma_{min}}\\)\nThis is called the “condition number” of the matrix \\(A\\)\n\n\n%timeit np.linalg.inv(A) @ b\n%timeit np.linalg.solve(A,b)\n\nx1 = np.linalg.inv(A) @ b\nx2 = np.linalg.solve(A,b)\n\nprint(\"Matrix Inverse Error: \",np.linalg.norm(A @ x1 - b))\nprint(\"Linear Solve Error: \",np.linalg.norm(A @ x2 - b))\n\n3.92 ms ± 383 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)\n1.1 ms ± 336 µs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)\nMatrix Inverse Error:  3.0587155507926386e-07\nLinear Solve Error:  2.034233822668894e-15\n\n\n\n100 million times more accurate, 5 times faster"
+  },
+  {
+    "objectID": "meetups/Meetup-2/meetup-2.html#issue-is-worse-for-ata",
+    "href": "meetups/Meetup-2/meetup-2.html#issue-is-worse-for-ata",
+    "title": "Meetup 2: Least Squares",
+    "section": "Issue is worse for \\(A^TA\\)",
+    "text": "Issue is worse for \\(A^TA\\)\n\nWhat about \\((A^TA)^{-1}\\)?\nLet’s look at SVD: \\[ A^TA = V \\Sigma^T\\Sigma U^T\\] \\[ \\Sigma^T\\Sigma = \\begin{bmatrix}\n  \\sigma_{1}^2 & & \\\\\n  & \\ddots & \\\\\n  & & \\sigma_{n}^2\n\\end{bmatrix}\n\\]\nCondition number problems 💀 💀 💀 💀"
+  },
+  {
+    "objectID": "meetups/Meetup-2/meetup-2.html#do-ill-conditioned-matrices-occur",
+    "href": "meetups/Meetup-2/meetup-2.html#do-ill-conditioned-matrices-occur",
+    "title": "Meetup 2: Least Squares",
+    "section": "Do Ill-Conditioned Matrices Occur?",
+    "text": "Do Ill-Conditioned Matrices Occur?\n\nVery Common\nCollinear predictors in linear regression\nMain issue in Deep Learning\nNoisy Inverse Problems\nSome of the solutions are basically just regularization"
+  },
+  {
+    "objectID": "meetups/Meetup-2/meetup-2.html#alternatives",
+    "href": "meetups/Meetup-2/meetup-2.html#alternatives",
+    "title": "Meetup 2: Least Squares",
+    "section": "Alternatives",
+    "text": "Alternatives\n\nSoftware packages generally have routines to solve least squares without computing ill-conditioned matrix inverse\nGood example is \\(A = QR\\) factorization\nHere \\(Q\\) is orthogonal and \\(R\\) is upper triangular\nThen \\[\nA^+ = (A^TA)^{-1}A^T = R^{-1} Q\n\\]\nIn practice np.linalg.linsolve(R,Q @ b)"
+  },
+  {
+    "objectID": "meetups/Meetup-2/meetup-2.html#what-if-a-is-really-big",
+    "href": "meetups/Meetup-2/meetup-2.html#what-if-a-is-really-big",
+    "title": "Meetup 2: Least Squares",
+    "section": "What if \\(A\\) is really big?",
+    "text": "What if \\(A\\) is really big?\n\nConstructing \\(A^TA\\) costs \\(mn^2\\) operations\nSolving \\(A^TA\\mathbf{x} = A^T\\mathbf{b}\\) costs \\(n^3\\) operations\n\\(A^TA\\) could be a TB or larger…..\nSolution 1- variety of iterative methods (HW)\nSolution 2- Randomized Algorithms (Random Kaczmarz)"
+  },
+  {
+    "objectID": "meetups/Meetup-2/meetup-2.html#thanks",
+    "href": "meetups/Meetup-2/meetup-2.html#thanks",
+    "title": "Meetup 2: Least Squares",
+    "section": "Thanks!",
+    "text": "Thanks!\n\n\n\n\nDATA 609"
+  },
+  {
+    "objectID": "license.html",
+    "href": "license.html",
+    "title": "Attribution-ShareAlike 4.0 International",
+    "section": "",
+    "text": "Creative Commons Corporation (“Creative Commons”) is not a law firm and does not provide legal services or legal advice. Distribution of Creative Commons public licenses does not create a lawyer-client or other relationship. Creative Commons makes its licenses and related information available on an “as-is” basis. Creative Commons gives no warranties regarding its licenses, any material licensed under their terms and conditions, or any related information. Creative Commons disclaims all liability for damages resulting from their use to the fullest extent possible."
+  },
+  {
+    "objectID": "license.html#creative-commons-attribution-sharealike-4.0-international-public-license",
+    "href": "license.html#creative-commons-attribution-sharealike-4.0-international-public-license",
+    "title": "Attribution-ShareAlike 4.0 International",
+    "section": "Creative Commons Attribution-ShareAlike 4.0 International Public License",
+    "text": "Creative Commons Attribution-ShareAlike 4.0 International Public License\nBy exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and conditions of this Creative Commons Attribution-ShareAlike 4.0 International Public License (“Public License”). To the extent this Public License may be interpreted as a contract, You are granted the Licensed Rights in consideration of Your acceptance of these terms and conditions, and the Licensor grants You such rights in consideration of benefits the Licensor receives from making the Licensed Material available under these terms and conditions.\n\nSection 1 – Definitions.\n\nAdapted Material means material subject to Copyright and Similar Rights that is derived from or based upon the Licensed Material and in which the Licensed Material is translated, altered, arranged, transformed, or otherwise modified in a manner requiring permission under the Copyright and Similar Rights held by the Licensor. For purposes of this Public License, where the Licensed Material is a musical work, performance, or sound recording, Adapted Material is always produced where the Licensed Material is synched in timed relation with a moving image.\nAdapter’s License means the license You apply to Your Copyright and Similar Rights in Your contributions to Adapted Material in accordance with the terms and conditions of this Public License.\nBY-SA Compatible License means a license listed at creativecommons.org/compatiblelicenses, approved by Creative Commons as essentially the equivalent of this Public License.\nCopyright and Similar Rights means copyright and/or similar rights closely related to copyright including, without limitation, performance, broadcast, sound recording, and Sui Generis Database Rights, without regard to how the rights are labeled or categorized. For purposes of this Public License, the rights specified in Section 2(b)(1)-(2) are not Copyright and Similar Rights.\nEffective Technological Measures means those measures that, in the absence of proper authority, may not be circumvented under laws fulfilling obligations under Article 11 of the WIPO Copyright Treaty adopted on December 20, 1996, and/or similar international agreements.\nExceptions and Limitations means fair use, fair dealing, and/or any other exception or limitation to Copyright and Similar Rights that applies to Your use of the Licensed Material.\nLicense Elements means the license attributes listed in the name of a Creative Commons Public License. The License Elements of this Public License are Attribution and ShareAlike.\nLicensed Material means the artistic or literary work, database, or other material to which the Licensor applied this Public License.\nLicensed Rights means the rights granted to You subject to the terms and conditions of this Public License, which are limited to all Copyright and Similar Rights that apply to Your use of the Licensed Material and that the Licensor has authority to license.\nLicensor means the individual(s) or entity(ies) granting rights under this Public License.\nShare means to provide material to the public by any means or process that requires permission under the Licensed Rights, such as reproduction, public display, public performance, distribution, dissemination, communication, or importation, and to make material available to the public including in ways that members of the public may access the material from a place and at a time individually chosen by them.\nSui Generis Database Rights means rights other than copyright resulting from Directive 96/9/EC of the European Parliament and of the Council of 11 March 1996 on the legal protection of databases, as amended and/or succeeded, as well as other essentially equivalent rights anywhere in the world.\nYou means the individual or entity exercising the Licensed Rights under this Public License. Your has a corresponding meaning.\n\n\n\nSection 2 – Scope.\n\nLicense grant.\n\nSubject to the terms and conditions of this Public License, the Licensor hereby grants You a worldwide, royalty-free, non-sublicensable, non-exclusive, irrevocable license to exercise the Licensed Rights in the Licensed Material to:\n\nreproduce and Share the Licensed Material, in whole or in part; and\nproduce, reproduce, and Share Adapted Material.\n\nExceptions and Limitations. For the avoidance of doubt, where Exceptions and Limitations apply to Your use, this Public License does not apply, and You do not need to comply with its terms and conditions.\nTerm. The term of this Public License is specified in Section 6(a).\nMedia and formats; technical modifications allowed. The Licensor authorizes You to exercise the Licensed Rights in all media and formats whether now known or hereafter created, and to make technical modifications necessary to do so. The Licensor waives and/or agrees not to assert any right or authority to forbid You from making technical modifications necessary to exercise the Licensed Rights, including technical modifications necessary to circumvent Effective Technological Measures. For purposes of this Public License, simply making modifications authorized by this Section 2(a)(4) never produces Adapted Material.\nDownstream recipients.\nA. Offer from the Licensor – Licensed Material. Every recipient of the Licensed Material automatically receives an offer from the Licensor to exercise the Licensed Rights under the terms and conditions of this Public License.\n\n__Additional offer from the Licensor – Adapted Material. Every recipient of Adapted Material from You automatically receives an offer from the Licensor to exercise the Licensed Rights in the Adapted Material under the conditions of the Adapter’s License You apply.\n\nC. No downstream restrictions. You may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, the Licensed Material if doing so restricts exercise of the Licensed Rights by any recipient of the Licensed Material.\nNo endorsement. Nothing in this Public License constitutes or may be construed as permission to assert or imply that You are, or that Your use of the Licensed Material is, connected with, or sponsored, endorsed, or granted official status by, the Licensor or others designated to receive attribution as provided in Section 3(a)(1)(A)(i).\n\nOther rights.\n\nMoral rights, such as the right of integrity, are not licensed under this Public License, nor are publicity, privacy, and/or other similar personality rights; however, to the extent possible, the Licensor waives and/or agrees not to assert any such rights held by the Licensor to the limited extent necessary to allow You to exercise the Licensed Rights, but not otherwise.\nPatent and trademark rights are not licensed under this Public License.\nTo the extent possible, the Licensor waives any right to collect royalties from You for the exercise of the Licensed Rights, whether directly or through a collecting society under any voluntary or waivable statutory or compulsory licensing scheme. In all other cases the Licensor expressly reserves any right to collect such royalties.\n\n\n\n\nSection 3 – License Conditions.\nYour exercise of the Licensed Rights is expressly made subject to the following conditions.\n\nAttribution.\n\nIf You Share the Licensed Material (including in modified form), You must:\n\nretain the following if it is supplied by the Licensor with the Licensed Material:\n\n\n\nidentification of the creator(s) of the Licensed Material and any others designated to receive attribution, in any reasonable manner requested by the Licensor (including by pseudonym if designated);\na copyright notice;\na notice that refers to this Public License;\na notice that refers to the disclaimer of warranties;\na URI or hyperlink to the Licensed Material to the extent reasonably practicable;\n\n\n\nindicate if You modified the Licensed Material and retain an indication of any previous modifications; and\nindicate the Licensed Material is licensed under this Public License, and include the text of, or the URI or hyperlink to, this Public License.\n\nYou may satisfy the conditions in Section 3(a)(1) in any reasonable manner based on the medium, means, and context in which You Share the Licensed Material. For example, it may be reasonable to satisfy the conditions by providing a URI or hyperlink to a resource that includes the required information.\nIf requested by the Licensor, You must remove any of the information required by Section 3(a)(1)(A) to the extent reasonably practicable.\n\nShareAlike.\n\nIn addition to the conditions in Section 3(a), if You Share Adapted Material You produce, the following conditions also apply.\n\nThe Adapter’s License You apply must be a Creative Commons license with the same License Elements, this version or later, or a BY-SA Compatible License.\nYou must include the text of, or the URI or hyperlink to, the Adapter’s License You apply. You may satisfy this condition in any reasonable manner based on the medium, means, and context in which You Share Adapted Material.\nYou may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, Adapted Material that restrict exercise of the rights granted under the Adapter’s License You apply.\n\n\n\nSection 4 – Sui Generis Database Rights.\nWhere the Licensed Rights include Sui Generis Database Rights that apply to Your use of the Licensed Material:\n\nfor the avoidance of doubt, Section 2(a)(1) grants You the right to extract, reuse, reproduce, and Share all or a substantial portion of the contents of the database;\nif You include all or a substantial portion of the database contents in a database in which You have Sui Generis Database Rights, then the database in which You have Sui Generis Database Rights (but not its individual contents) is Adapted Material, including for purposes of Section 3(b); and\nYou must comply with the conditions in Section 3(a) if You Share all or a substantial portion of the contents of the database.\n\nFor the avoidance of doubt, this Section 4 supplements and does not replace Your obligations under this Public License where the Licensed Rights include other Copyright and Similar Rights.\n\n\nSection 5 – Disclaimer of Warranties and Limitation of Liability.\n\nUnless otherwise separately undertaken by the Licensor, to the extent possible, the Licensor offers the Licensed Material as-is and as-available, and makes no representations or warranties of any kind concerning the Licensed Material, whether express, implied, statutory, or other. This includes, without limitation, warranties of title, merchantability, fitness for a particular purpose, non-infringement, absence of latent or other defects, accuracy, or the presence or absence of errors, whether or not known or discoverable. Where disclaimers of warranties are not allowed in full or in part, this disclaimer may not apply to You.\nTo the extent possible, in no event will the Licensor be liable to You on any legal theory (including, without limitation, negligence) or otherwise for any direct, special, indirect, incidental, consequential, punitive, exemplary, or other losses, costs, expenses, or damages arising out of this Public License or use of the Licensed Material, even if the Licensor has been advised of the possibility of such losses, costs, expenses, or damages. Where a limitation of liability is not allowed in full or in part, this limitation may not apply to You.\nThe disclaimer of warranties and limitation of liability provided above shall be interpreted in a manner that, to the extent possible, most closely approximates an absolute disclaimer and waiver of all liability.\n\n\n\nSection 6 – Term and Termination.\n\nThis Public License applies for the term of the Copyright and Similar Rights licensed here. However, if You fail to comply with this Public License, then Your rights under this Public License terminate automatically.\nWhere Your right to use the Licensed Material has terminated under Section 6(a), it reinstates:\n\nautomatically as of the date the violation is cured, provided it is cured within 30 days of Your discovery of the violation; or\nupon express reinstatement by the Licensor.\n\nFor the avoidance of doubt, this Section 6(b) does not affect any right the Licensor may have to seek remedies for Your violations of this Public License.\nFor the avoidance of doubt, the Licensor may also offer the Licensed Material under separate terms or conditions or stop distributing the Licensed Material at any time; however, doing so will not terminate this Public License.\nSections 1, 5, 6, 7, and 8 survive termination of this Public License.\n\n\n\nSection 7 – Other Terms and Conditions.\n\nThe Licensor shall not be bound by any additional or different terms or conditions communicated by You unless expressly agreed.\nAny arrangements, understandings, or agreements regarding the Licensed Material not stated herein are separate from and independent of the terms and conditions of this Public License.t stated herein are separate from and independent of the terms and conditions of this Public License.\n\n\n\nSection 8 – Interpretation.\n\nFor the avoidance of doubt, this Public License does not, and shall not be interpreted to, reduce, limit, restrict, or impose conditions on any use of the Licensed Material that could lawfully be made without permission under this Public License.\nTo the extent possible, if any provision of this Public License is deemed unenforceable, it shall be automatically reformed to the minimum extent necessary to make it enforceable. If the provision cannot be reformed, it shall be severed from this Public License without affecting the enforceability of the remaining terms and conditions.\nNo term or condition of this Public License will be waived and no failure to comply consented to unless expressly agreed to by the Licensor.\nNothing in this Public License constitutes or may be interpreted as a limitation upon, or waiver of, any privileges and immunities that apply to the Licensor or You, including from the legal processes of any jurisdiction or authority.\n\n\nCreative Commons is not a party to its public licenses. Notwithstanding, Creative Commons may elect to apply one of its public licenses to material it publishes and in those instances will be considered the “Licensor.” Except for the limited purpose of indicating that material is shared under a Creative Commons public license or as otherwise permitted by the Creative Commons policies published at creativecommons.org/policies, Creative Commons does not authorize the use of the trademark “Creative Commons” or any other trademark or logo of Creative Commons without its prior written consent including, without limitation, in connection with any unauthorized modifications to any of its public licenses or any other arrangements, understandings, or agreements concerning use of licensed material. For the avoidance of doubt, this paragraph does not form part of the public licenses.\nCreative Commons may be contacted at creativecommons.org"
+  },
+  {
+    "objectID": "modules/module11.html",
+    "href": "modules/module11.html",
+    "title": "Module 11 - Convex Optimization Problems in Statistics",
+    "section": "",
+    "text": "Homework\nHomework 6 is due in two weeks, next Sunday at midnight\n\n\nLearning Objectives\n\nMaximum Likelihood and Maximum Entropy Methods\nMaximum Posterior Probability and Bayesian Inference\nLogistic Regression\nExperiment Design\n\n\n\nReadings\nSections 7.1, 7.2, and 7.5 of Convex Optimization",
     "crumbs": [
       "Topics",
-      "9 - Convex Optimization and Disciplined Convex Programming"
+      "11 - Convex Optimization in Statistics"
     ]
   },
   {
-    "objectID": "modules/module10.html",
-    "href": "modules/module10.html",
-    "title": "Module 10 - Convex Problems in Data Fitting",
+    "objectID": "modules/module8.html",
+    "href": "modules/module8.html",
+    "title": "Module 8: Convex Functions II",
     "section": "",
-    "text": "Homework 5 is due this Sunday at midnight\n\n\n\nRegularization- lasso and Huber penalties\nFunction fitting, splines, and interpolation\n\n\n\n\nChapter 6 of Convex Optimization",
+    "text": "Learning Objectives\n\nQuasiconvex Functions\nLog-Convexity/Concavity\nGeneralized Inequalities and Convexity\n\n\n\nReadings\nSections 3.4-3.6 of Convex Optimization",
     "crumbs": [
       "Topics",
-      "10 - Data Fitting"
+      "8 - Convex Functions II"
     ]
   },
   {
-    "objectID": "modules/module10.html#homework",
-    "href": "modules/module10.html#homework",
-    "title": "Module 10 - Convex Problems in Data Fitting",
+    "objectID": "modules/module14.html",
+    "href": "modules/module14.html",
+    "title": "Module 14: Stochastic Gradient Descent",
     "section": "",
-    "text": "Homework 5 is due this Sunday at midnight\n\n\n\nRegularization- lasso and Huber penalties\nFunction fitting, splines, and interpolation\n\n\n\n\nChapter 6 of Convex Optimization",
+    "text": "Homework\nHomework 7 is due this Sunday at midnight\n\n\nLearning Objectives\n\nStochastic Gradient Descent\nHyperparameter Tuning\nSaddle Points and Convergence\n\n\n\nReadings\nSection 8.5 Introduction to Algorithms for Data Mining and Machine Learning\nChapter 8 of deeplearningbook",
     "crumbs": [
       "Topics",
-      "10 - Data Fitting"
+      "14 - Stochastic Gradient Descent"
     ]
   },
   {
-    "objectID": "modules/module6.html",
-    "href": "modules/module6.html",
-    "title": "Module 6 - Convex Sets II",
+    "objectID": "modules/module15.html",
+    "href": "modules/module15.html",
+    "title": "Module 15 - Deep Learning Applications",
     "section": "",
-    "text": "Homework 3 is due this Sunday at midnight\n\n\n\nGeneralized Inequalities\nSupporting and Separating Hyperplanes\nDual Cones\n\n\n\n\nSections 2.4-2.6 of Convex Optimization",
+    "text": "Learning Objectives\n\nTraining Deep Neural Networks\n\n\n\nReadings\nGoodfellow Chapter 11 of the deeplearningbook",
     "crumbs": [
       "Topics",
-      "6 - Convex Sets II"
+      "15 - Training Deep Neural Networks"
     ]
   },
   {
-    "objectID": "modules/module6.html#homework",
-    "href": "modules/module6.html#homework",
-    "title": "Module 6 - Convex Sets II",
+    "objectID": "modules/module2.html",
+    "href": "modules/module2.html",
+    "title": "Module 2 - Introduction to Least Squares Problems",
     "section": "",
-    "text": "Homework 3 is due this Sunday at midnight\n\n\n\nGeneralized Inequalities\nSupporting and Separating Hyperplanes\nDual Cones\n\n\n\n\nSections 2.4-2.6 of Convex Optimization",
+    "text": "Overview and Deliverables\nHomework 1 is due this Sunday at midnight\n\n\nLearning Objectives\n\nSolving unconstrained least squares problems\n\nProperties of the Gram matrix and the pseudoinverse\nBasic Numerical Linear Algebra Considerations\n\nApplications:\n\nOptimization\nLinear Regression\n\n\n\n\nReadings\nChapter 12 of Introduction to Applied Linear Algebra",
     "crumbs": [
       "Topics",
-      "6 - Convex Sets II"
+      "2 - Least Squares Optimization"
     ]
   },
   {
-    "objectID": "modules/module3.html",
-    "href": "modules/module3.html",
-    "title": "Module 3: Statistical Applications of Least Squares",
+    "objectID": "modules/module7.html",
+    "href": "modules/module7.html",
+    "title": "Module 7: Convex Functions",
     "section": "",
-    "text": "Deliverables\nHomework 2 will be due two Sundays from now.\n\n\nLearning Objectives\n\nLeast Squares and Linear Regression\nGeneralized Least Squares\nRecursive/Online Least Squares\nRegularization and Multi-Objective Least Squares\n\n\n\nReadings\nChapters 13 and 15 of Introduction to Applied Linear Algebra\nSections 4.2 and 4.5 of Introduction to Algorithms for Data Mining and Machine Learning",
+    "text": "Learning Objectives\n\nDefinitions of Convex Functions\nImportant Examples of Convex Functions\nJensen’s Inequality\nOperations that Preserve Convexity\nConvex Conjugates\n\n\n\nReadings\nSections 3.1-2.3 of Convex Optimization",
     "crumbs": [
       "Topics",
-      "3 - Least Squares and Statistics"
+      "7 - Convex Functions"
     ]
   },
   {
-    "objectID": "modules/module13.html",
-    "href": "modules/module13.html",
-    "title": "Module 13: Local Optimization Algorithms and Neural Networks",
+    "objectID": "modules/module1.html",
+    "href": "modules/module1.html",
+    "title": "Module 1 - Introduction to Optimization Problems",
     "section": "",
-    "text": "Homework\nHomework 7 is due in two weeks, Sunday at midnight\n\n\nLearning Objectives\n\nNeural Network Learning and Backpropagation\nGradient Descent\nNewton’s Method\nConvergence Rates and Condition Number\nAcceleration Using Momentum\n\n\n\nReadings\nChapter 9 of Convex Optimization\nChapter 8.1-8.4 of Introduction to Algorithms for Data Mining Machine Learning\nOr alternatively deeplearningbook Chapter 6",
+    "text": "Overview and Deliverables\n\nLearning Objectives\n\nYou will learn about how optimization problems are formalized and the terminology used to describe them\nUbiquity of Optimization problems in data science\nWe will define several important classes of optimization problems:\n\nUnconstrained versus Constrained\nConvex versus Non-Convex\nGlobal versus Local\n\nWhy optimization is hard\n\n\n\nReadings\nChapter 1 Introduction to Algorithms for Data Mining and Machine Learning\nChapter 1 of Convex Optimization\nIf you want to brush up on your linear algebra skills:\nEssential Linear Algebra for Machine Learning\nAppendix A1, A3-A5 of Convex Optimization\nThe mathematical level of those appendices are above what I expect from you in the course, I think the essential linear algebra notes are less intimidating.",
     "crumbs": [
       "Topics",
-      "13 - Local Optimization and Neural Networks"
+      "1 - Introduction to Optimization Theory "
     ]
   },
   {
-    "objectID": "modules/module4.html",
-    "href": "modules/module4.html",
-    "title": "Module 4 - Constrained Least Squares and Applications",
+    "objectID": "posts/2025-02-03-Meetup-2-Slides.html",
+    "href": "posts/2025-02-03-Meetup-2-Slides.html",
+    "title": "Meetup 2: Least Squares Optimization",
     "section": "",
-    "text": "Homework\nHomework 2 is due this Sunday at midnight\n\n\nLearning Objectives\n\nSolving Least Squares problems with Linear Equality Constraints\nApplications to Portfolio Optimization\nKalman Filters and Recursive State Estimation\n\n\n\nReadings\nChapters 16 and 17 of Introduction to Applied Linear Algebra",
-    "crumbs": [
-      "Topics",
-      "4 - Constrained Least Squares and Applications"
-    ]
+    "text": "Meetup 2 is tonight at 6:45PM. We will introduce least squares optimization, which is the most commonly used and possibly most important type of optimization problem. We will go through a few applications to illustrate least squares in its simplest formulation, and discuss some practical issues with solving least squares problems.\nHere is the information you need for the first meetup:\n\nGo through the course overview materials, and complete the week 2 readings.\nAttend our first meetup on Monday at 6:45 p.m. ET on Zoom\nClick here for slides"
   },
   {
     "objectID": "posts/2025-01-26-Welcome_to_DATA_609.html",

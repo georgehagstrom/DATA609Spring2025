@@ -404,6 +404,14 @@ George Hagstrom
 </div>
 
 </section>
+<section id="week-summary" class="slide level2">
+<h2>Week Summary</h2>
+<ul>
+<li>Starting on Least Squares</li>
+<li>Chapter 12 of VMLS</li>
+<li>Keep working on Lab 1, due this Sunday at midnight</li>
+</ul>
+</section>
 <section id="system-of-linear-equations" class="slide level2">
 <h2>System of Linear Equations</h2>
 <ul>
@@ -416,8 +424,7 @@ George Hagstrom
 <section id="tall-wide-and-square-matrices" class="slide level2">
 <h2>Tall, Wide, and Square Matrices</h2>
 <ul>
-<li><p><span class="math inline">\(m=n\)</span></p></li>
-<li><p><span class="math inline">\(A\)</span> is <strong>square</strong></p></li>
+<li><p><span class="math inline">\(m=n\)</span> <strong>square</strong></p></li>
 <li><p>Exact solution if rows/columns are independent <span class="math display">\[ A = \begin{pmatrix} a_{11} &amp; \cdots &amp; \cdots &amp; a_{1n} \\
                      \vdots &amp;   \cdots     &amp;    \cdots   &amp; \vdots \\
                     \vdots &amp; \cdots &amp; \cdots &amp; \vdots \\
@@ -430,8 +437,7 @@ George Hagstrom
 <section id="tall-wide-and-square-matrices-1" class="slide level2">
 <h2>Tall, Wide, and Square Matrices</h2>
 <ul>
-<li><span class="math inline">\(m&lt;n\)</span></li>
-<li><span class="math inline">\(A\)</span> is <strong>wide</strong></li>
+<li><span class="math inline">\(m&lt;n\)</span> <strong>wide</strong></li>
 <li>Generally multiple solutions because dependent columns <span class="math display">\[ A = \begin{pmatrix} a_{11} &amp; \cdots &amp; \cdots &amp; \cdots &amp; a_{1n} \\
                      \vdots &amp;   \cdots     &amp; \cdots &amp;   \cdots   &amp; \vdots \\
                     a_{m1} &amp; \cdots &amp; \cdots &amp; \cdots &amp; a_{mn}
@@ -444,8 +450,7 @@ George Hagstrom
 <section id="tall-wide-and-square-matrices-2" class="slide level2">
 <h2>Tall, Wide, and Square Matrices</h2>
 <ul>
-<li><span class="math inline">\(m&gt;n\)</span></li>
-<li><span class="math inline">\(A\)</span> is <strong>tall</strong></li>
+<li><span class="math inline">\(m&gt;n\)</span> <strong>tall</strong></li>
 <li>Generally no exact solution <span class="math display">\[ A = \begin{pmatrix} a_{11} &amp; \cdots &amp;  a_{1n} \\
                      \vdots &amp;   \cdots   &amp; \vdots \\
                      \vdots &amp;   \cdots   &amp; \vdots \\
@@ -458,7 +463,7 @@ George Hagstrom
 <section id="inspiration-for-least-squares" class="slide level2">
 <h2>Inspiration for Least Squares</h2>
 <ul>
-<li>If we can’t solve, next best thing is to minimize the square of the residual/error <span class="math display">\[ \mathbf{r} = A\mathbf{x}-\mathbf{b}\]</span></li>
+<li>Can’t solve? Minimize the error <span class="math display">\[ \mathbf{r} = A\mathbf{x}-\mathbf{b}\]</span></li>
 <li>Optimization problem is: <span class="math display">\[\textrm{Find:}\quad \min_{\mathbf{x}} \|A\mathbf{x} - \mathbf{b}\|^2\]</span></li>
 <li>The <span class="math inline">\(\mathbf{x}\)</span> that minimizes this objective (the squared residual) is the least squares solution</li>
 <li>Linear regression</li>
@@ -467,11 +472,11 @@ George Hagstrom
 <section id="how-to-solve-it" class="slide level2">
 <h2>How to Solve It?</h2>
 <ul>
-<li>Take derivative with respect to components of <span class="math inline">\(\mathbf{x}\)</span> and set to 0: <span class="math display">\[
+<li>Take derivative and set to 0: <span class="math display">\[
 \frac{\partial}{\partial \mathbf{x}}\|A\mathbf{x}-\mathbf{b}\|^2 =
 A^T A\left(\mathbf{x} - A^T\mathbf{b}\right)
 \]</span></li>
-<li>Two ways to get that: <img data-src="matrix_calc.png" alt="www.matrixcalculus.org"></li>
+<li>Two ways to get that: <img data-src="matrix_calc.png" style="width:50.0%" alt="www.matrixcalculus.org"></li>
 </ul>
 </section>
 <section id="how-to-solve-it-1" class="slide level2">
@@ -495,7 +500,10 @@ A^T A\left(\mathbf{x} - A^T\mathbf{b}\right)
 <li><span class="math inline">\(A^TA\)</span> is an <span class="math inline">\(n\times n\)</span> symmetric matrix called the <strong>Gram</strong> matrix</li>
 <li>Invertible if columns of <span class="math inline">\(A\)</span> are independent:</li>
 </ul>
-<p><span class="math display">\[ \mathbf{x} = \left(A^T A\right)^{-1}A^T\mathbf{b}\]</span> - This is the exact formula for the least squares solution</p>
+<p><span class="math display">\[ \mathbf{x} = \left(A^T A\right)^{-1}A^T\mathbf{b}\]</span></p>
+<ul>
+<li>This is the exact formula for the least squares solution</li>
+</ul>
 </section>
 <section id="properties" class="slide level2">
 <h2>Properties</h2>
@@ -515,7 +523,7 @@ A^T A\left(\mathbf{x} - A^T\mathbf{b}\right)
 \]</span></li>
 </ul>
 </section>
-<section id="linear-regression" class="slide level2">
+<section id="linear-regression" class="slide level2 smaller">
 <h2>Linear Regression</h2>
 <ul>
 <li>Augmented matrix <span class="math inline">\(A\)</span> and coefficients <span class="math inline">\(\mathbf{x}\)</span>: <span class="math display">\[
@@ -634,19 +642,19 @@ A = \begin{pmatrix} a_{11} &amp; \cdots &amp; a_{1n} &amp; 1 \\
 <ul>
 <li>Views: $1 on channel <span class="math inline">\(i\)</span> gets <span class="math inline">\(R_{ij}\)</span> views in group <span class="math inline">\(j\)</span></li>
 </ul>
-<div id="8ee30b17" class="cell" data-execution_count="1">
+<div id="553c26f4" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-stdout">
-<pre><code>    Instagram  Wine Mag  Facebook   UFC      Demo
-1         3.0       0.1       0.4  6.00   18-25 S
-2         2.5       0.3       0.6  6.00   26-30 S
-3         2.3       0.4       1.0  5.50   31-35 S
-4         1.8       0.6       1.3  5.00   36-40 S
-5         1.0       0.6       2.0  4.50   41-45 S
-6         3.3       0.8       0.5  0.20  18-25 NS
-7         2.6       1.1       0.8  0.12  26-30 NS
-8         2.2       1.3       1.1  0.10  31-35 NS
-9         1.4       2.3       1.3  0.40  36-40 NS
-10        1.2       4.2       1.7  0.20  41-45 NS</code></pre>
+<pre><code>   Instagram  Wine Mag  Facebook   UFC      Demo
+0        3.0       0.1       0.4  6.00   18-25 S
+1        2.5       0.3       0.6  6.00   26-30 S
+2        2.3       0.4       1.0  5.50   31-35 S
+3        1.8       0.6       1.3  5.00   36-40 S
+4        1.0       0.6       2.0  4.50   41-45 S
+5        3.3       0.8       0.5  0.20  18-25 NS
+6        2.6       1.1       0.8  0.12  26-30 NS
+7        2.2       1.3       1.1  0.10  31-35 NS
+8        1.4       2.3       1.3  0.40  36-40 NS
+9        1.2       4.2       1.7  0.20  41-45 NS</code></pre>
 </div>
 </div>
 </section>
@@ -655,7 +663,7 @@ A = \begin{pmatrix} a_{11} &amp; \cdots &amp; a_{1n} &amp; 1 \\
 <ul>
 <li>Views: $1 on channel <span class="math inline">\(i\)</span> gets <span class="math inline">\(R_{ij}\)</span> views in group <span class="math inline">\(j\)</span></li>
 </ul>
-<div id="ff19033d" class="cell" data-execution_count="2">
+<div id="083a0863" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -681,7 +689,7 @@ A = \begin{pmatrix} a_{11} &amp; \cdots &amp; a_{1n} &amp; 1 \\
 <ul>
 <li>Suppose <span class="math inline">\(\mathbf{v}_{dem}\)</span> is uniform</li>
 </ul>
-<div id="9413d48d" class="cell" data-execution_count="3">
+<div id="b68e7b6f" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>v_dem <span class="op">=</span> np.ones(<span class="dv">10</span>)</span>
 <span id="cb2-2"><a></a></span>
 <span id="cb2-3"><a></a>s <span class="op">=</span> np.linalg.lstsq(R,v_dem)[<span class="dv">0</span>]</span>
@@ -691,8 +699,8 @@ A = \begin{pmatrix} a_{11} &amp; \cdots &amp; a_{1n} &amp; 1 \\
 <span id="cb2-7"><a></a></span>
 <span id="cb2-8"><a></a>(</span>
 <span id="cb2-9"><a></a>  ggplot(s_dat,aes(x<span class="op">=</span><span class="st">"Channel"</span>,y<span class="op">=</span><span class="st">"Spending"</span>))</span>
-<span id="cb2-10"><a></a>  <span class="op">+</span> geom_point() </span>
-<span id="cb2-11"><a></a>  <span class="op">+</span> theme_gray()</span>
+<span id="cb2-10"><a></a>  <span class="op">+</span> geom_point(size<span class="op">=</span><span class="dv">5</span>) </span>
+<span id="cb2-11"><a></a>  <span class="op">+</span> theme_bw(base_size<span class="op">=</span><span class="dv">14</span>)</span>
 <span id="cb2-12"><a></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
@@ -701,7 +709,7 @@ A = \begin{pmatrix} a_{11} &amp; \cdots &amp; a_{1n} &amp; 1 \\
 <ul>
 <li>Suppose <span class="math inline">\(\mathbf{v}_{dem}\)</span> is uniform</li>
 </ul>
-<div id="8aac16a6" class="cell" data-execution_count="4">
+<div id="06f3d60c" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -714,10 +722,9 @@ A = \begin{pmatrix} a_{11} &amp; \cdots &amp; a_{1n} &amp; 1 \\
 <section id="marketing-budget-3" class="slide level2">
 <h2>Marketing Budget</h2>
 <ul>
-<li>Suppose we want to target only 41-45 Non-Sports Players</li>
-<li>Maybe the ad repels other demos?</li>
+<li>Suppose <span class="math inline">\(\mathbf{v}_{dem}\)</span> is uniform</li>
 </ul>
-<div id="c5e5819f" class="cell" data-execution_count="5">
+<div id="26fc5ca3" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -731,9 +738,8 @@ A = \begin{pmatrix} a_{11} &amp; \cdots &amp; a_{1n} &amp; 1 \\
 <h2>Marketing Budget</h2>
 <ul>
 <li>Suppose we want to target only 41-45 Non-Sports Players</li>
-<li>Maybe the ad repels other demos?</li>
 </ul>
-<div id="22411f8f" class="cell" data-execution_count="6">
+<div id="1f23ed80" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -746,9 +752,9 @@ A = \begin{pmatrix} a_{11} &amp; \cdots &amp; a_{1n} &amp; 1 \\
 <section id="marketing-budget-5" class="slide level2">
 <h2>Marketing Budget</h2>
 <ul>
-<li>Suppose <span class="math inline">\(\mathbf{v}_{dem}\)</span> is uniform</li>
+<li>Suppose we want to target only 41-45 Non-Sports Players</li>
 </ul>
-<div id="91b75dc9" class="cell" data-execution_count="7">
+<div id="654e9d06" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -773,17 +779,162 @@ A = \begin{pmatrix} a_{11} &amp; \cdots &amp; a_{1n} &amp; 1 \\
 </ul></li>
 </ul>
 </section>
+<section id="network-tomography" class="slide level2">
+<h2>Network Tomography</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="metro1.png"></p>
+</div><div class="column" style="width:50%;">
+<ul>
+<li>Urban Transit</li>
+<li>Internet</li>
+<li>Know when people enter and leave</li>
+<li>Know path they took</li>
+<li>How long does it take to cross each link?</li>
+</ul>
+</div></div>
+</section>
+<section id="network-tomography-1" class="slide level2">
+<h2>Network Tomography</h2>
+
+<img data-src="metro2.png" class="r-stretch"></section>
+<section id="network-tomography-2" class="slide level2">
+<h2>Network Tomography</h2>
+
+<img data-src="metro3.png" class="r-stretch"></section>
+<section id="network-tomography-3" class="slide level2">
+<h2>Network Tomography</h2>
+
+<img data-src="metro4.png" class="r-stretch"></section>
+<section id="network-tomography-4" class="slide level2">
+<h2>Network Tomography</h2>
+<ul>
+<li>For trip <span class="math inline">\(j\)</span> vector <span class="math inline">\(\mathbf{r}_j\)</span>
+<ul>
+<li><span class="math inline">\(r_{ij} = 1\)</span> if <span class="math inline">\(i\)</span>th “link” traversed on <span class="math inline">\(j\)</span>th trip</li>
+<li><span class="math inline">\(r_{ij} = 0\)</span> otherwise</li>
+<li>Matrix <span class="math inline">\(R\)</span> contains <span class="math inline">\(r_{ij}\)</span></li>
+</ul></li>
+<li>For <span class="math inline">\(t_j\)</span> is the time taken on trip <span class="math inline">\(j\)</span></li>
+<li>Decision variables <span class="math inline">\(d_i\)</span> is the time taken on the <span class="math inline">\(i\)</span>th link</li>
+<li>Time is <span class="math inline">\(\sum r_{ij}d_i\)</span></li>
+</ul>
+</section>
+<section id="network-tomography-5" class="slide level2">
+<h2>Network Tomography</h2>
+<ul>
+<li>Minimize Least Squares Error:</li>
+</ul>
+<p><span class="math display">\[
+\textrm{Find:}\quad \min_{\mathbf{d}} \|R\mathbf{d} - \mathbf{t}\|^2
+\]</span></p>
+<ul>
+<li>Many similar problems in optimization theory</li>
+<li>This one is the simplest</li>
+</ul>
+</section>
 <section id="numerical-issues-with-least-squares" class="slide level2">
 <h2>Numerical Issues With Least Squares</h2>
 <ul>
-<li></li>
+<li><p>Suppose you need to solve a system of linear equations: <span class="math display">\[
+A\mathbf{x} = \mathbf{b}
+\]</span></p></li>
+<li><p>Which of these is better?</p>
+<ul>
+<li><code>np.linalg.inv(A) @ b</code></li>
+<li><code>np.linalg.solve(A, b)</code></li>
+</ul></li>
 </ul>
 </section>
-<section id="interpretations-of-least-squares" class="slide level2">
-<h2>Interpretations of Least Squares</h2>
+<section id="matrix-inverses" class="slide level2">
+<h2>Matrix Inverses</h2>
+<ul>
+<li>Consider Singular Value Decomposition of <span class="math inline">\(A\)</span>: <span class="math display">\[
+A = U\Sigma V^T
+\]</span></li>
+<li><span class="math inline">\(U\)</span> and <span class="math inline">\(V\)</span> are orthonormal matrices</li>
+<li><span class="math inline">\(\Sigma\)</span> contains the singular values <span class="math display">\[
+\Sigma = \begin{bmatrix}
+  \sigma_{1} &amp; &amp; \\
+  &amp; \ddots &amp; \\
+  &amp; &amp; \sigma_{n}
+\end{bmatrix}
+\]</span></li>
+</ul>
 </section>
-<section id="practical-computation-of-least-squares-solution" class="slide level2">
-<h2>Practical Computation of Least Squares Solution</h2>
+<section id="condition-number-and-accuracy" class="slide level2">
+<h2>Condition Number and Accuracy</h2>
+<ul>
+<li>Accuracy of <code>np.matmul(A.inv(),b)</code> related to <span class="math inline">\(\frac{\sigma_{max}}{\sigma_{min}}\)</span></li>
+<li>This is called the “condition number” of the matrix <span class="math inline">\(A\)</span></li>
+</ul>
+<div id="c24dcc33" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="op">%</span>timeit np.linalg.inv(A) <span class="op">@</span> b</span>
+<span id="cb3-2"><a></a><span class="op">%</span>timeit np.linalg.solve(A,b)</span>
+<span id="cb3-3"><a></a></span>
+<span id="cb3-4"><a></a>x1 <span class="op">=</span> np.linalg.inv(A) <span class="op">@</span> b</span>
+<span id="cb3-5"><a></a>x2 <span class="op">=</span> np.linalg.solve(A,b)</span>
+<span id="cb3-6"><a></a></span>
+<span id="cb3-7"><a></a><span class="bu">print</span>(<span class="st">"Matrix Inverse Error: "</span>,np.linalg.norm(A <span class="op">@</span> x1 <span class="op">-</span> b))</span>
+<span id="cb3-8"><a></a><span class="bu">print</span>(<span class="st">"Linear Solve Error: "</span>,np.linalg.norm(A <span class="op">@</span> x2 <span class="op">-</span> b))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>3.92 ms ± 383 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
+1.1 ms ± 336 µs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)
+Matrix Inverse Error:  3.0587155507926386e-07
+Linear Solve Error:  2.034233822668894e-15</code></pre>
+</div>
+</div>
+<ul>
+<li>100 million times more accurate, 5 times faster</li>
+</ul>
+</section>
+<section id="issue-is-worse-for-ata" class="slide level2">
+<h2>Issue is worse for <span class="math inline">\(A^TA\)</span></h2>
+<ul>
+<li>What about <span class="math inline">\((A^TA)^{-1}\)</span>?</li>
+<li>Let’s look at SVD: <span class="math display">\[ A^TA = V \Sigma^T\Sigma U^T\]</span> <span class="math display">\[ \Sigma^T\Sigma = \begin{bmatrix}
+  \sigma_{1}^2 &amp; &amp; \\
+  &amp; \ddots &amp; \\
+  &amp; &amp; \sigma_{n}^2
+\end{bmatrix}
+\]</span></li>
+<li>Condition number problems 💀 💀 💀 💀</li>
+</ul>
+</section>
+<section id="do-ill-conditioned-matrices-occur" class="slide level2">
+<h2>Do Ill-Conditioned Matrices Occur?</h2>
+<ul>
+<li>Very Common</li>
+<li>Collinear predictors in linear regression</li>
+<li>Main issue in Deep Learning</li>
+<li>Noisy Inverse Problems</li>
+<li>Some of the solutions are basically just regularization</li>
+</ul>
+</section>
+<section id="alternatives" class="slide level2">
+<h2>Alternatives</h2>
+<ul>
+<li>Software packages generally have routines to solve least squares without computing ill-conditioned matrix inverse</li>
+<li>Good example is <span class="math inline">\(A = QR\)</span> factorization</li>
+<li>Here <span class="math inline">\(Q\)</span> is orthogonal and <span class="math inline">\(R\)</span> is upper triangular</li>
+<li>Then <span class="math display">\[
+A^+ = (A^TA)^{-1}A^T = R^{-1} Q
+\]</span></li>
+<li>In practice <code>np.linalg.linsolve(R,Q @ b)</code></li>
+</ul>
+</section>
+<section id="what-if-a-is-really-big" class="slide level2">
+<h2>What if <span class="math inline">\(A\)</span> is really big?</h2>
+<ul>
+<li>Constructing <span class="math inline">\(A^TA\)</span> costs <span class="math inline">\(mn^2\)</span> operations</li>
+<li>Solving <span class="math inline">\(A^TA\mathbf{x} = A^T\mathbf{b}\)</span> costs <span class="math inline">\(n^3\)</span> operations</li>
+<li><span class="math inline">\(A^TA\)</span> could be a TB or larger…..</li>
+<li>Solution 1- variety of iterative methods (HW)</li>
+<li>Solution 2- Randomized Algorithms (Random Kaczmarz)</li>
+</ul>
+</section>
+<section id="thanks" class="slide level2">
+<h2>Thanks!</h2>
 
 <div class="quarto-auto-generated-content">
 <p><img src="CUNY_SPS_Logo_Wide.png" class="slide-logo"></p>
