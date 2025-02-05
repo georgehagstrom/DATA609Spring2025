@@ -21,6 +21,10 @@
     <lastmod>2025-01-27T04:24:31.552Z</lastmod>
   </url>
   <url>
+    <loc>https://georgehagstrom.github.io/DATA609/posts/2025-02-05-Linear-Algebra-In-Python.html</loc>
+    <lastmod>2025-02-05T23:21:09.438Z</lastmod>
+  </url>
+  <url>
     <loc>https://georgehagstrom.github.io/DATA609/modules/module4.html</loc>
     <lastmod>2025-01-10T20:44:27.979Z</lastmod>
   </url>
@@ -57,56 +61,68 @@
     <lastmod>2025-01-11T16:54:14.239Z</lastmod>
   </url>
   <url>
-    <loc>https://georgehagstrom.github.io/DATA609/meetups/Meetup-1/meetup-1.html</loc>
-    <lastmod>2025-01-27T23:33:49.851Z</lastmod>
+    <loc>https://georgehagstrom.github.io/DATA609/meetups/Meetup-2/Untitled.html</loc>
+    <lastmod>2025-02-05T22:55:54.237Z</lastmod>
   </url>
   <url>
-    <loc>https://georgehagstrom.github.io/DATA609/assignments/labs/tbd.html</loc>
-    <lastmod>2025-01-10T20:57:38.151Z</lastmod>
-  </url>
-  <url>
-    <loc>https://georgehagstrom.github.io/DATA609/assignments/labs/Lab5.html</loc>
-    <lastmod>2025-01-15T14:10:08.908Z</lastmod>
-  </url>
-  <url>
-    <loc>https://georgehagstrom.github.io/DATA609/assignments/labs/Lab6.html</loc>
-    <lastmod>2025-01-15T14:18:26.181Z</lastmod>
-  </url>
-  <url>
-    <loc>https://georgehagstrom.github.io/DATA609/assignments/labs/Lab3.html</loc>
-    <lastmod>2025-01-15T00:16:32.792Z</lastmod>
-  </url>
-  <url>
-    <loc>https://georgehagstrom.github.io/DATA609/assignments/labs.html</loc>
-    <lastmod>2025-01-15T14:19:47.740Z</lastmod>
-  </url>
-  <url>
-    <loc>https://georgehagstrom.github.io/DATA609/index.html</loc>
-    <lastmod>2025-01-10T21:47:36.620Z</lastmod>
-  </url>
-  <url>
-    <loc>https://georgehagstrom.github.io/DATA609/assignments/project.html</loc>
-    <lastmod>2025-01-28T04:37:05.913Z</lastmod>
-  </url>
-  <url>
-    <loc>https://georgehagstrom.github.io/DATA609/assignments/labs/Lab2.html</loc>
-    <lastmod>2025-01-14T23:51:07.159Z</lastmod>
-  </url>
-  <url>
-    <loc>https://georgehagstrom.github.io/DATA609/assignments/labs/Lab4.html</loc>
-    <lastmod>2025-01-15T01:56:18.841Z</lastmod>
-  </url>
-  <url>
-    <loc>https://georgehagstrom.github.io/DATA609/assignments/labs/Lab1.html</loc>
-    <lastmod>2025-02-03T20:16:51.720Z</lastmod>
+    <loc>https://georgehagstrom.github.io/DATA609/meetups/Meetup-2/meetup-2.html</loc>
+    <lastmod>2025-02-03T23:25:40.293Z</lastmod>
   </url>
   <url>
     <loc>https://georgehagstrom.github.io/DATA609/images/IntroSlides.html</loc>
     <lastmod>2025-01-15T23:03:54.278Z</lastmod>
   </url>
   <url>
-    <loc>https://georgehagstrom.github.io/DATA609/meetups/Meetup-2/meetup-2.html</loc>
-    <lastmod>2025-02-03T23:25:40.293Z</lastmod>
+    <loc>https://georgehagstrom.github.io/DATA609/assignments/labs/Lab1.html</loc>
+    <lastmod>2025-02-03T20:16:51.720Z</lastmod>
+  </url>
+  <url>
+    <loc>https://georgehagstrom.github.io/DATA609/assignments/labs/Lab4.html</loc>
+    <lastmod>2025-01-15T01:56:18.841Z</lastmod>
+  </url>
+  <url>
+    <loc>https://georgehagstrom.github.io/DATA609/assignments/labs/Lab2.html</loc>
+    <lastmod>2025-01-14T23:51:07.159Z</lastmod>
+  </url>
+  <url>
+    <loc>https://georgehagstrom.github.io/DATA609/assignments/project.html</loc>
+    <lastmod>2025-01-28T04:37:05.913Z</lastmod>
+  </url>
+  <url>
+    <loc>https://georgehagstrom.github.io/DATA609/index.html</loc>
+    <lastmod>2025-01-10T21:47:36.620Z</lastmod>
+  </url>
+  <url>
+    <loc>https://georgehagstrom.github.io/DATA609/assignments/labs.html</loc>
+    <lastmod>2025-01-15T14:19:47.740Z</lastmod>
+  </url>
+  <url>
+    <loc>https://georgehagstrom.github.io/DATA609/assignments/labs/Lab3.html</loc>
+    <lastmod>2025-01-15T00:16:32.792Z</lastmod>
+  </url>
+  <url>
+    <loc>https://georgehagstrom.github.io/DATA609/assignments/labs/Lab6.html</loc>
+    <lastmod>2025-01-15T14:18:26.181Z</lastmod>
+  </url>
+  <url>
+    <loc>https://georgehagstrom.github.io/DATA609/assignments/labs/Lab5.html</loc>
+    <lastmod>2025-01-15T14:10:08.908Z</lastmod>
+  </url>
+  <url>
+    <loc>https://georgehagstrom.github.io/DATA609/assignments/labs/tbd.html</loc>
+    <lastmod>2025-01-10T20:57:38.151Z</lastmod>
+  </url>
+  <url>
+    <loc>https://georgehagstrom.github.io/DATA609/meetups/Meetup-1/meetup-1.html</loc>
+    <lastmod>2025-01-27T23:33:49.851Z</lastmod>
+  </url>
+  <url>
+    <loc>https://georgehagstrom.github.io/DATA609/meetups/Meetup-2/LinearAlgebraTutorial.html</loc>
+    <lastmod>2025-02-05T21:52:37.436Z</lastmod>
+  </url>
+  <url>
+    <loc>https://georgehagstrom.github.io/DATA609/meetups/Meetup-2/LatexTutorial.html</loc>
+    <lastmod>2025-02-05T22:15:34.753Z</lastmod>
   </url>
   <url>
     <loc>https://georgehagstrom.github.io/DATA609/license.html</loc>
@@ -139,6 +155,10 @@
   <url>
     <loc>https://georgehagstrom.github.io/DATA609/modules/module1.html</loc>
     <lastmod>2025-01-11T22:28:19.081Z</lastmod>
+  </url>
+  <url>
+    <loc>https://georgehagstrom.github.io/DATA609/posts/2025-02-05-Writing-Math-In-Markdown-Vid.html</loc>
+    <lastmod>2025-02-05T23:11:30.386Z</lastmod>
   </url>
   <url>
     <loc>https://georgehagstrom.github.io/DATA609/posts/2025-02-03-Meetup-2-Slides.html</loc>
