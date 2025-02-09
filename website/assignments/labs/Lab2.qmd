@@ -10,28 +10,111 @@ editor: source
 Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file,
 I recommend python, julia, or R. 
 
-## Problem 1: Online Updating for Least Squares
+## Problem 1: Online Updating for Least Squares and Autoregressive Time Series Models
 
 Many applications of least squares (and other statistical methods)
 involve \emph{streaming data}, in which data is collected over a time
 period and the statistical model is updated as new data arrives. If
-the quantity of data arriving is very large, it may not be possible to
+the quantity of data arriving is very large, it may be inefficient or even impossible to
 refit the entire model on the entire dataset. Instead, we use
 techniques (often referred to as \emph{online learning} which take the current model as a starting point and 
-update them to incorporate the new data. Solve exercise 12.14 from VMLS
+update them to incorporate the new data. 
+
+The structure of least squares problems makes them amenable to online updating (sometimes this is called "recursive" least squares).
+The structure of the problem is as follows, at time $t$ we receive a vector of observations $\mathbf{a}_t$ and an observation of our 
+target variable $b_t$.
+
+The full set of all observations and target variable data that we have received up to time $t$ is contained in the following matrix and vector:
+
+$$
+A_{(t)} = \begin{bmatrix} \cdots\, \mathbf{a}_1^T\, \cdots \\ 
+\cdots\, \mathbf{a}_2^T\, \cdots \\ \vdots \\ \cdots\, \mathbf{a}_t^T\, \cdots \end{bmatrix},\quad 
+\mathbf{b}_{(t)} = \begin{bmatrix} b_1 \\ b_2 \\ \vdots \\ b_t \end{bmatrix}
+$$
+
+
+
+which says that row $j$ of the matrix $A_{(t)}$ is the $j$th observation $\mathbf{a}_j^T$, and the $j$th entry of $\mathbf{b}_{(t)}$ is $b_j$.
+
+
+Here we assume that the vectors $\mathbf{a}$ each contain $n$ observations, so that $A_{(t)}$ is a $t\times n$ matrix and the vector
+$\mathbf{b}_{(t)}$ is a $t$-vector.
+
+As long as $t>n$, i.e. the number of time observations is greater than the number of features/data points in each observation, we can fit a linear model predicting the target
+as a function of the features $\mathbf{a}$ by solving the following system of equations:
+
+$$
+(A^T_{(t)}A_{(t)})\mathbf{x}_{(t)} = A_{(t)}^T\mathbf{b}_{(t)}
+$$
+
+As the length of the time series increases, the computational difficulty of solving this problem also increases. However, it is possible to re-use work done on the previous
+time step to avoid solving the full system at each step.
+
+This algorithm is based on the fact that the _Gram Matrix_ $A^T_{(t+1)}A_{(t+1)}$ can be calculated from the Gram matrix $A^T_{(t)}A_{(t)}$ from the previous time step.
+$$
+A^T_{(t+1)}A_{(t+1)} = A^T_{(t)}A_{(t)} + \mathbf{a}_{t+1}\mathbf{a}_{t+1}^T
+$$
+Similarly, the product $A^T_{(t+1)} \mathbf{b}_{(t+1)}$ can also be updated from the
+value on the previous time step:
+$$
+A^T_{(t+1)}\mathbf{b}_{(t+1)} = A^T_{(t)}\mathbf{b}_{(t)} + b_{t+1}\mathbf{a}_{t+1}
+$$
+
+We can write an efficient algorithm to compute the updated least squares solution as follows:
+
+- Step 1: Pick an initial time $t$ such that $A_{t}$ is square or tall so that the 
+least squares problem can be solved (i.e. wait for enough data to have built up before your start) and then calculate the Gram matrix and the product $A^T_{t} \mathbf{b}_t$
+$$
+G_{(t)} = A^T_{(t)}A_{(t)}, \quad \mathbf{h}_{(t)} = A^T_{t}\mathbf{b}_t
+$$
+- Step 2: Find the least squares solution at time $t$ by solving the linear 
+system:
+$$
+G_{(t)}\mathbf{x}_{(t)} = \mathbf{h}_{(t+1)}
+$$
+
+- Step 3: When the next data points $\mathbf{a}_{t+1}$ and $b_{t+1}$, update
+$G_{(t+1)}$ and $\mathbf{h}_{(t+1)}$:
+
+$$ G_{(t+1)} = G_{(t)} + \mathbf{a}_{t+1}\mathbf{a}^T_{t+1},\quad 
+\mathbf{h}_{(t+1)} = \mathbf{h}_{(t)} + b_{t+1}\mathbf{a}_{t+1}
+$$
+Then you can repeat Step 2 to find $\mathbf{x}_{t+1}$. This algorithm can be improved upon slightly using the Matrix Inversion Lemma/Woodbury Formula, which could be a topic for a project (see note at the end which mentions Kalman filters).
+
+(a) You are going to use this algorithm to make a linear, autoregressive model that predicts total day-ahead citibike trips from the daily high temperature and the number of daily citibike trips taken each of the past 7 days. The data is contained in the file [daily_citibike_trips.csv](https://github.com/georgehagstrom/DATA609Spring2025/blob/main/website/assignments/labs/labData/daily_citibike_trips.csv). 
+
+Specifically, for each time point $t>7$ , fit the following
+model as a least squares estimation problem:
+$$
+N_{trips,\tau} = \sum_{i=1}^7 C_i N_{trips,\tau-i} + C_T T,
+$$
+Here, each $N_{trips,\tau}$ stands for the number of citibike trips on the $t$th day of the time series, $T$ stands for the forecast high temperature in New York City that day, and the coefficients $C_i$ and $C_T$ are the decision variables. 
+
+Find the coefficients $C_{i,t}$ and $C_{T,t}$ that minimize the mean square errors on all the observed citibike trips prior to time $t$. Use the recursive least squares optimization outlined in the preamble to this problem to calculate the coefficients for each time point, and plot how they and the $R^2$ of the model change over time.
+
+What patterns do you notice in how the regression coefficients and $R^2$ change over time?
+
+Tip: Be very cautious when coding about the dimensionality of matrices and arrays.
+In python, `a @ a.T` will be an 8x8 matrix if `a.shape = (8,1)`. However, by default
+`a.shape = (8,)`, indicating that `a` is not being treated as either a row or column vector. For this problem it is important that the vectors are either row or column vectors, and not arrays without such an orientation. In python, you can use `numpy.reshape` to adjust. 
+
+(b) We have included temperature as a variable because it probably influences the decision to ride a citibike. However, the relationship could be nonlinear, as both extreme high and low temperatures make bike riding less comfortable. With this idea in mind, create
+a new feature by choosing a nonlinear function of the temperature $T$ that represents
+the potential for both high and low values of $T$ to the same impact on predicted
+ridership. Use least squares optimization to fit an autoregressive time series model, replacing $T$ with the value of your 
+new feature $f(T)$ in the time series. How does the temperature dependence coefficient differ between this model and the one you fit in (a)? Does the accuracy of the model improve or get worse using the new feature?
 
 ## Problem 2: Weighted Least Squares
 
-The file [social-mobility.csv]() contains data on the fraction of 
+The file [social-mobility.csv](https://github.com/georgehagstrom/DATA609Spring2025/blob/main/website/assignments/labs/labData/social_mobility.csv) contains data on the fraction of 
 individuals born in the years 1980-1982 to parents in the bottom 20\% of the income distribution who reach the top 20\% of the income distribution by the time they turn 30 in a large number of municipalities throughout the United States. The dataset also contains 
 additional variables that describe other socio-economic differences 
 between the cities in the dataset.
 
-(a) Make a scatter-plot of mobility versus population (use a log-scale for population). What do you 
-notice about the variance of social mobility as a function of population? This is a common feature of nearly every dataset containing geographic regions with widely different populations.
+(a) Make a scatter-plot of mobility versus population (use a log-scale for population). What do you notice about the variance of social mobility as a function of population? This is a common feature of nearly every dataset containing geographic regions with widely different populations.
 
 (b) Assume that the number of children born in families making below the 20th percentile of the income distribution in each city is linearly proportional to the city population. Write down a formula 
-for how the variance of each measurement of the social mobility based
+for how the variance of each measurement of the social mobility should depend
 on the measured social mobility and the population. Hint: start with
 either the formula for the variance of binomial counts or look up the
 variance of a proportion derived from a binomial distribution. Don't
@@ -41,60 +124,90 @@ worry about constant factors when deriving this formula.
 social mobility depends on commute time and student-teacher ratio, using weights calculated based on the variance estimate derived in (b).
 Compare the coefficients to those derived from ordinary least squares with no weights.
 
-##Problem 3: Markowitz Portfolio Optimization
+## Problem 3: Markowitz Portfolio Optimization
 
-In this problem you will use _Markowitz Portfolio Optimization_ to construct a set of portfolios that aim to achieve certain target rates of return while minimizing risk. The file [prices.csv]() contains information on daily asset returns from 2020-2024 for a group of assets. The data is divided into two time periods, a training period (2020-2022) and a testing period (2022-2024).
+In this problem you will use _Markowitz Portfolio Optimization_ to construct a set of portfolios that aim to achieve target expected rates of return while minimizing risk. The file [stock_returns.csv](https://github.com/georgehagstrom/DATA609Spring2025/blob/main/website/assignments/labs/labData/stock_returns.csv) contains information on daily asset returns from 2020-2024 for a group of assets, consisting mostly of large-cap stocks but also a handful of exchange traded funds that correspond to US Treasury Bonds and Notes with varying maturities.
 
-(a)  Construct a vector of annual returns $\mu$ and return covariance
-$\Gamma$. Then solve the following constrained least squares problem
+You will divide the data into two time periods, a training period (2020-2022) and a testing period (2022-2024). The data in the `stock_returns.csv` is stored in a long format, with the 
+following variables:
+
+  1. `Company` - The ticker symbol that identifies the stock
+  2. `date` - The date to which the data corresponds
+  3. `adjusted`- the closing price of the stock, adjusted for special events like   dividends and stock splits
+  4. `return` - the ratio of the current adjusted close to the adjusted close on the previous trading day
+  5. `log_return`- the natural logarithm of the return
+
+
+(a)  Construct a vector (we call it $\mu$) containing the annualized rate of return over the training period (for the $i$th stock, you can use the formula: $\mu_i = \exp\left(0.5\sum_{t} \mathrm{log\_return}_i(t)\right)$), or the square root of the total return over the first two years of data,  and daily return covariance
+$\Gamma$. 
+
+__Hint__: Possible workflow if  working in python: convert your data to a wide format using `pandas`, extract the values into a `numpy ndarray`, and then use the function `np.cov`. 
+
+Then solve the following constrained least squares problem
 to calculate optimal portfolios achieving a fixed rate of return
 with minimum variance:
-$$
-    \min_{w} x^T\Gamma x,\\
-    w^T\mu = r
-$$
 
-Calculate optimal portfolios based on the 2020-2022 data for targeted
-rates of return $r=5\%$, $r=10\%$, and $r=20\%$.
+$$
+\begin{aligned}
+    \min_{w} \mathbf{x}^T\Gamma \mathbf{x}, \\
+    \mathbf{w}^T\mathbf{\mu} = r, \\
+    \sum_{i} w_i = 1
+\end{aligned}
+$$
+Here $\mathbf{w}$ is a vector containing the investment allocations into different
+assets, and $r$ is the target rate of return.
 
-(b) Plot the cumulative value of each portfolio over time,
-starting from an initial investment of $\$10000$, for both the 
+Calculate optimal portfolios based on the 2020-2022 data for $r=1.05$, $r=1.10$, and $r=1.20$.
+
+(b) Plot the cumulative value of each portfolio over time, assuming that an 
+initial investment is made at the start of the period and that there is no rebalancing of the portfolio, i.e. $r_{T} = \sum_{i=1}^n w_i\Pi_{t=1}^T r_{it}$, where $r_{it}$ is the return of asset $i$ on trading day $t$, (hint: `np.cumprod` allows you to efficiently calculate this quantity).
+Make the plot for both the 
 training and test sets of returns.
 
-For each of the 3 portfolios report:
+For each of the 3 portfolios also report:
 
 - The annualized return on the training and test sets;
-- The annualized risk on the training and test sets;
-- The asset with the minimum allocation weight (can be the most negative), and its weight;
+- The risk on the training and test sets, defined as the 
+realized variance of the daily return;
 - The asset with the maximum allocation weight, and its weight;
-- The leverage, defined as |w1| + · · · + |wn|. (Several other definitions of leverage are used.) This
+- The initial leverage, defined as $\sum_{i=1}^n |w_i|$. This
 number is always at least one, and it is exactly one only if the portfolio has no short positions.
 
 Comment briefly on your observations about the different portfolios and the difference between their training and testing performance.
 
 (c) It is well known that optimal portfolios constructed using the
-Markowitz procedure perform much more poorly out of sample compared to in sample. This is due to a variety of reasons, one of which is that it assumes that future returns are equal to past returns, another that
+Markowitz procedure perform much more poorly out of sample compared to in sample. This is due to a variety of reasons, one of which is that the procedure assumes that future returns are equal to past returns, another that
 the correlation structure of the market might change over time, and
-finally, when there are many assets there is the potential for overfitting. Repeat the previous problem but introduce a ridge regression/$l_2$ norm penalty term to the objective function, with
-a hyperparameter $\lamba$ governing the size of the penalty term. 
+finally, when there are many assets there is the potential for overfitting. Repeat the previous problem but introduce a ridge regression/$l_2$ norm penalty term to the objective function, with a hyperparameter $\lambda$ governing the size of the penalty term. 
 
-Select 10 positive values of $\lamba$ on a log scale between $1e-1$ and $10$ and for each value of $\lamba$ solve the following penalized
+Specifically, you will select 10 positive values of $\lambda$ on a log scale between $1e-1$ and $10$ and for each value of $\lambda$ solve the following penalized
 regression problem:
 
 $$
+\begin{aligned}
     \min_{w} w^T(\Gamma+\lambda I) w ,\\
-    w^T\mu = r
+    w^T\mu = r,\\
+    \sum_{i=1}^n w_i = 1
+\end{aligned}
 $$
 
 for just the single value of $r=20\%$. Then calculate the performance
 of each of these regularized Markowitz strategies on both the training and test datasets
-and plot the values of:
+and plot the the return of the portfolios over both the training and testing period.
+
+For each portfolio, also report:
 
 - The annualized return on the training and test sets;
-- The annualized risk on the training and test sets;
-- The minimum allocation weight;
-- The maximum allocation weight;
-- The leverage
+- The risk on the training and test sets;
+- The maximum allocation weight and the asset with maximum allocation;
+- The initial leverage
 
 Comment on how the different values of $\lambda$ changed the optimal
 portfolios and the difference between in-sample and out-of-sample return and variance.
+
+
+## Potential Projects Based on this Homework:
+
+Recursive least squares is a gateway to several important
+techniques that would lead to good projects. The Kalman Filter or Bayes Filter is an algorithm that recursively estimates a statistical model while allowing the underlying coefficients (or state) of that model to undergo dynamical evolution (as a simple example, think of correcting noisy measurements of the GPS location of a drone using Newtownian physics). These are some of the most useful prediction algorithms and can be applied to many areas, including econometrics, web traffic prediction, and vehicle location. For a more math related project, studying the accuracy of the Woodbury formula could be interesting. 
+

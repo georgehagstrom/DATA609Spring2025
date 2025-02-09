@@ -89,8 +89,8 @@ $A\mathbf{x}$
 Although the pseudoinverse provides an exact formula for the least
 squares solutions, there are some situations in which using the exact
 solution is computationally difficult, particularly when the matrix $A$ 
-and vector $\mathbf{b}$ have a large number of entries. In this case,
-$AA^T$, which is an $m\times m$ matrix if $A$ is $m\times n$, may require an enormous amount of memory. In these cases it may be better to use an
+and vector $\mathbf{b}$ have a large number of entries. In isn't out of the ordinary
+for $A^TA$ to be more than a terabyte, for example . In these cases it may be better to use an
 approximate solution instead of the exact formula. There are many
 different approximate methods for solving least squares problems, 
 here we will use an iterative method developed by Richardson.
@@ -111,7 +111,7 @@ $$
 \mathbf{x} = A^+\mathbf{b}
 $$
 
-Show by substitution of the formula for the pseudoinverse that $\mathbf{x}$ is a \emph{fixed point} of the iteration scheme, i.e. that:
+Show by substitution of the formula for the pseudoinverse that $\mathbf{x}$ is a _fixed-point_ of the iteration scheme, i.e. that:
 $$
 \mathbf{x} = \mathbf{x} - \mu A^T\left(A\mathbf{x}-\mathbf{b}\right)
 $$
