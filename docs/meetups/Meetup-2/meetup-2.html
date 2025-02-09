@@ -644,7 +644,7 @@ A = \begin{pmatrix} a_{11} &amp; \cdots &amp; a_{1n} &amp; 1 \\
 <ul>
 <li>Views: $1 on channel <span class="math inline">\(i\)</span> gets <span class="math inline">\(R_{ij}\)</span> views in group <span class="math inline">\(j\)</span></li>
 </ul>
-<div id="1c09cd9a" class="cell" data-execution_count="1">
+<div id="a2dcf5df" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-stdout">
 <pre><code>   Instagram  Wine Mag  Facebook   UFC      Demo
 0        3.0       0.1       0.4  6.00   18-25 S
@@ -665,7 +665,7 @@ A = \begin{pmatrix} a_{11} &amp; \cdots &amp; a_{1n} &amp; 1 \\
 <ul>
 <li>Views: $1 on channel <span class="math inline">\(i\)</span> gets <span class="math inline">\(R_{ij}\)</span> views in group <span class="math inline">\(j\)</span></li>
 </ul>
-<div id="eaccf6eb" class="cell" data-execution_count="2">
+<div id="359e3954" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -691,7 +691,7 @@ A = \begin{pmatrix} a_{11} &amp; \cdots &amp; a_{1n} &amp; 1 \\
 <ul>
 <li>Suppose <span class="math inline">\(\mathbf{v}_{dem}\)</span> is uniform</li>
 </ul>
-<div id="dcfef436" class="cell" data-execution_count="3">
+<div id="80cdfbde" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>v_dem <span class="op">=</span> np.ones(<span class="dv">10</span>)</span>
 <span id="cb2-2"><a></a></span>
 <span id="cb2-3"><a></a>s <span class="op">=</span> np.linalg.lstsq(R,v_dem)[<span class="dv">0</span>]</span>
@@ -711,7 +711,7 @@ A = \begin{pmatrix} a_{11} &amp; \cdots &amp; a_{1n} &amp; 1 \\
 <ul>
 <li>Suppose <span class="math inline">\(\mathbf{v}_{dem}\)</span> is uniform</li>
 </ul>
-<div id="ad5988ee" class="cell" data-execution_count="4">
+<div id="d80895bf" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -726,7 +726,7 @@ A = \begin{pmatrix} a_{11} &amp; \cdots &amp; a_{1n} &amp; 1 \\
 <ul>
 <li>Suppose <span class="math inline">\(\mathbf{v}_{dem}\)</span> is uniform</li>
 </ul>
-<div id="17f33981" class="cell" data-execution_count="5">
+<div id="c9c654c4" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -741,7 +741,7 @@ A = \begin{pmatrix} a_{11} &amp; \cdots &amp; a_{1n} &amp; 1 \\
 <ul>
 <li>Suppose we want to target only 41-45 Non-Sports Players</li>
 </ul>
-<div id="ed53cfc9" class="cell" data-execution_count="6">
+<div id="3beee384" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -756,7 +756,7 @@ A = \begin{pmatrix} a_{11} &amp; \cdots &amp; a_{1n} &amp; 1 \\
 <ul>
 <li>Suppose we want to target only 41-45 Non-Sports Players</li>
 </ul>
-<div id="bdc4f710" class="cell" data-execution_count="7">
+<div id="2601dfb9" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -870,7 +870,7 @@ A = U\Sigma V^T
 <li>Accuracy of <code>np.linalg.inv(A) @ b</code> related to <span class="math inline">\(\frac{\sigma_{max}}{\sigma_{min}}\)</span></li>
 <li>This is called the “condition number” of the matrix <span class="math inline">\(A\)</span></li>
 </ul>
-<div id="8258169e" class="cell" data-execution_count="9">
+<div id="adc85ce1" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="op">%</span>timeit np.linalg.inv(A) <span class="op">@</span> b</span>
 <span id="cb3-2"><a></a><span class="op">%</span>timeit np.linalg.solve(A,b)</span>
 <span id="cb3-3"><a></a></span>
@@ -880,10 +880,10 @@ A = U\Sigma V^T
 <span id="cb3-7"><a></a><span class="bu">print</span>(<span class="st">"Matrix Inverse Error: "</span>,np.linalg.norm(A <span class="op">@</span> x1 <span class="op">-</span> b))</span>
 <span id="cb3-8"><a></a><span class="bu">print</span>(<span class="st">"Linear Solve Error: "</span>,np.linalg.norm(A <span class="op">@</span> x2 <span class="op">-</span> b))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>3.98 ms ± 691 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
-1.27 ms ± 234 µs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)
-Matrix Inverse Error:  1.789044273454871e-07
-Linear Solve Error:  2.2795264842599822e-15</code></pre>
+<pre><code>4.25 ms ± 1.02 ms per loop (mean ± std. dev. of 7 runs, 100 loops each)
+1.48 ms ± 373 µs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)
+Matrix Inverse Error:  3.3353430373039867e-07
+Linear Solve Error:  2.0924089383230886e-15</code></pre>
 </div>
 </div>
 <ul>
