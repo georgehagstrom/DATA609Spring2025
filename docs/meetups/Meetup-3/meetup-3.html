@@ -414,7 +414,7 @@ George I. Hagstrom
 </section>
 <section id="case-study-homoscedasticity" class="slide level2">
 <h2>Case Study: Homoscedasticity</h2>
-<div id="2e1421cc" class="cell" data-execution_count="1">
+<div id="c38c75ab" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -555,7 +555,7 @@ y_t = \theta_1 y_{t-1} + \theta_2 y_{t-2}+\cdots+\theta_n y_{t-n}
 <ul>
 <li>Hourly Central Park Temperature from Jan-March 2023</li>
 </ul>
-<div id="58cb7e66" class="cell" data-execution_count="2">
+<div id="5fe05b25" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -583,7 +583,7 @@ T_t = \sum_{i=1}^8 \theta_i T_{t-i}
 </section>
 <section id="setting-up-the-model" class="slide level2">
 <h2>Setting up the model</h2>
-<div id="85ae88b9" class="cell" data-execution_count="3">
+<div id="44fbaa25" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>A <span class="op">=</span> np.array([central_park[<span class="st">"temp"</span>].values[i:i<span class="op">+</span><span class="dv">8</span>].T </span>
 <span id="cb1-2"><a></a><span class="cf">for</span> i <span class="kw">in</span>  <span class="bu">range</span>(<span class="bu">len</span>(central_park)<span class="op">-</span><span class="dv">8</span>)])</span>
 <span id="cb1-3"><a></a>x <span class="op">=</span> central_park[<span class="st">"temp"</span>].values[<span class="dv">8</span>:]</span>
@@ -595,7 +595,7 @@ T_t = \sum_{i=1}^8 \theta_i T_{t-i}
 </section>
 <section id="predictions" class="slide level2">
 <h2>Predictions</h2>
-<div id="7ce08adb" class="cell" data-execution_count="4">
+<div id="d100651b" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>Text(0, 0.5, 'Temperature')</code></pre>
 </div>
@@ -634,7 +634,7 @@ T_t = \theta_{m}\mathrm{Month}(i) + \sum_{i=1}^8 \theta_i T_{t-i}
 y_i = \sum_{j=1}^n \theta_j x^{j-1}
 \]</span></li>
 </ul>
-<div id="ae3747a2" class="cell" data-execution_count="5">
+<div id="2ef6f7ea" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display" data-execution_count="5">
 <pre><code>Text(0, 0.5, 'y')</code></pre>
 </div>
@@ -652,7 +652,7 @@ y_i = \sum_{j=1}^n \theta_j x^{j-1}
 <ul>
 <li>Curve develops unnecessary features at higher order</li>
 </ul>
-<div id="40d097c2" class="cell" data-execution_count="6">
+<div id="5fa9d667" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -667,11 +667,11 @@ y_i = \sum_{j=1}^n \theta_j x^{j-1}
 <ul>
 <li>At high order, generalization fails</li>
 </ul>
-<div id="fce0b707" class="cell" data-execution_count="7">
+<div id="6bb2fe5e" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
-<p><img data-src="meetup-3_files/figure-revealjs/cell-8-output-1.png" width="821" height="429"></p>
+<p><img data-src="meetup-3_files/figure-revealjs/cell-8-output-1.png" width="799" height="429"></p>
 </figure>
 </div>
 </div>
@@ -695,11 +695,11 @@ y_i = \sum_{j=1}^n \theta_j x^{j-1}
 \left(A^TA + \lambda I\right)\mathbf{\theta} = A^T\mathbf{y}
 \]</span></li>
 </ul>
-<div id="c3e0fb79" class="cell" data-execution_count="8">
+<div id="bc090d97" class="cell" data-execution_count="8">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
-<p><img data-src="meetup-3_files/figure-revealjs/cell-9-output-1.png" width="821" height="429"></p>
+<p><img data-src="meetup-3_files/figure-revealjs/cell-9-output-1.png" width="821" height="432"></p>
 </figure>
 </div>
 </div>
@@ -709,12 +709,18 @@ y_i = \sum_{j=1}^n \theta_j x^{j-1}
 <h2>Feature Engineering</h2>
 <ul>
 <li>Can use domain knowledge to create custom features in your data</li>
-<li>Generalized Additive Models (or GAMs)</li>
-<li></li>
+<li>New feature vectors: <span class="math inline">\(f_1(\mathbf{x})\)</span>, <span class="math inline">\(f_2(\mathbf{x}), \cdots\)</span></li>
+<li>Examples:
+<ul>
+<li>Standard data transforms, <code>log</code>, z-score</li>
+<li>Thresholding: <span class="math display">\[
+f(x) = \max(0,x)
+\]</span></li>
+<li>Domain Knowledge: <span class="math display">\[
+\mathrm{BMI} = \frac{\left(\mathrm{Weight}\right)}{\left(\mathrm{Height}\right)^2}
+\]</span></li>
+</ul></li>
 </ul>
-</section>
-<section id="example" class="slide level2">
-<h2>Example</h2>
 </section>
 <section id="thanks" class="slide level2">
 <h2>Thanks!</h2>
