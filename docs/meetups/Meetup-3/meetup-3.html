@@ -426,7 +426,7 @@ George I. Hagstrom
 </section>
 <section id="case-study-homoscedasticity" class="slide level2">
 <h2>Case Study: Homoscedasticity</h2>
-<div id="e05f1132" class="cell" data-execution_count="1">
+<div id="4e7e268b" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -568,7 +568,7 @@ y_t = \theta_1 y_{t-1} + \theta_2 y_{t-2}+\cdots+\theta_n y_{t-n}
 <ul>
 <li>Hourly Central Park Temperature from Jan-March 2023</li>
 </ul>
-<div id="48d5878d" class="cell" data-execution_count="2">
+<div id="31757ef5" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -596,7 +596,7 @@ T_t = \sum_{i=1}^8 \theta_i T_{t-i}
 </section>
 <section id="setting-up-the-model" class="slide level2">
 <h2>Setting up the model</h2>
-<div id="8f1e7cfb" class="cell" data-execution_count="3">
+<div id="e27b66e6" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>A <span class="op">=</span> np.array([central_park[<span class="st">"temp"</span>].values[i:i<span class="op">+</span><span class="dv">8</span>].T </span>
 <span id="cb1-2"><a></a><span class="cf">for</span> i <span class="kw">in</span>  <span class="bu">range</span>(<span class="bu">len</span>(central_park)<span class="op">-</span><span class="dv">8</span>)])</span>
 <span id="cb1-3"><a></a>x <span class="op">=</span> central_park[<span class="st">"temp"</span>].values[<span class="dv">8</span>:]</span>
@@ -608,7 +608,7 @@ T_t = \sum_{i=1}^8 \theta_i T_{t-i}
 </section>
 <section id="predictions" class="slide level2">
 <h2>Predictions</h2>
-<div id="4415e5db" class="cell" data-execution_count="4">
+<div id="9c8e1af6" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>Text(0, 0.5, 'Temperature')</code></pre>
 </div>
@@ -647,7 +647,7 @@ T_t = \theta_{m}\mathrm{Month}(i) + \sum_{i=1}^8 \theta_i T_{t-i}
 y_i = \sum_{j=1}^n \theta_j x^{j-1}
 \]</span></li>
 </ul>
-<div id="1d7b5895" class="cell" data-execution_count="5">
+<div id="46796e63" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display" data-execution_count="5">
 <pre><code>Text(0, 0.5, 'y')</code></pre>
 </div>
@@ -665,7 +665,7 @@ y_i = \sum_{j=1}^n \theta_j x^{j-1}
 <ul>
 <li>Curve develops unnecessary features at higher order</li>
 </ul>
-<div id="72b5a022" class="cell" data-execution_count="6">
+<div id="f225f9e1" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -680,7 +680,7 @@ y_i = \sum_{j=1}^n \theta_j x^{j-1}
 <ul>
 <li>At high order, generalization fails</li>
 </ul>
-<div id="72ed0aeb" class="cell" data-execution_count="7">
+<div id="ee4b9a59" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -706,7 +706,7 @@ y_i = \sum_{j=1}^n \theta_j x^{j-1}
 <li>Name comes from geometry</li>
 <li>Consider objective function with a “ridge”</li>
 </ul>
-<div id="d31fe1cf" class="cell" data-execution_count="8">
+<div id="d1a32402" class="cell" data-execution_count="8">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -722,7 +722,7 @@ y_i = \sum_{j=1}^n \theta_j x^{j-1}
 <li>Name comes from geometry</li>
 <li>Regularizer turns ridge to peak</li>
 </ul>
-<div id="26df8843" class="cell" data-execution_count="9">
+<div id="2c481fa6" class="cell" data-execution_count="9">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -737,7 +737,12 @@ y_i = \sum_{j=1}^n \theta_j x^{j-1}
 <p><span class="math display">\[
 \mathbf{y} \sim \mathrm{Normal}\left(X\theta,\sigma^2 I\right) \\
 \mathbf{\theta} \sim \mathrm{Normal}\left(0, \frac{1}{\lambda} I\right)
-\]</span> - <span class="math inline">\(\frac{1}{\lambda}\)</span> is variance of prior distribution on <span class="math inline">\(\theta\)</span> - <span class="math inline">\(p(\theta|X)\)</span> is normal - <span class="math inline">\(E(\theta|X)\)</span> is least squares ridge regression solution</p>
+\]</span></p>
+<ul>
+<li><span class="math inline">\(\frac{1}{\lambda}\)</span> is variance of prior distribution on <span class="math inline">\(\theta\)</span></li>
+<li><span class="math inline">\(p(\theta|X)\)</span> is normal</li>
+<li><span class="math inline">\(E(\theta|X)\)</span> is least squares ridge regression solution</li>
+</ul>
 </section>
 <section id="ridge-regression-solution" class="slide level2">
 <h2>Ridge Regression Solution</h2>
@@ -746,11 +751,11 @@ y_i = \sum_{j=1}^n \theta_j x^{j-1}
 \left(A^TA + \lambda I\right)\mathbf{\theta} = A^T\mathbf{y}
 \]</span></li>
 </ul>
-<div id="4d150727" class="cell" data-execution_count="10">
+<div id="020f2353" class="cell" data-execution_count="10">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
-<p><img data-src="meetup-3_files/figure-revealjs/cell-11-output-1.png" width="829" height="429"></p>
+<p><img data-src="meetup-3_files/figure-revealjs/cell-11-output-1.png" width="829" height="430"></p>
 </figure>
 </div>
 </div>
@@ -763,7 +768,7 @@ y_i = \sum_{j=1}^n \theta_j x^{j-1}
 <li>New feature vectors: <span class="math inline">\(f_1(\mathbf{x})\)</span>, <span class="math inline">\(f_2(\mathbf{x}), \cdots\)</span></li>
 <li>Standard data transforms, <code>log</code>, z-score</li>
 <li>Thresholding: <span class="math inline">\(f(x) = \max(0,x)\)</span></li>
-<li>Domain Knowledge: $ = $</li>
+<li>Domain Knowledge: <span class="math display">\[ \mathrm{BMI} =\frac{\left(\mathrm{Weight}\right)}{\left(\mathrm{Height}\right)^2}\]</span></li>
 </ul>
 </section>
 <section id="thanks" class="slide level2">
