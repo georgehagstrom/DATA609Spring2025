@@ -317,7 +317,21 @@
     "href": "meetups/Meetup-3/meetup-3.html#regularization",
     "title": "DATA 609 Meetup 3",
     "section": "Regularization",
-    "text": "Regularization\n\nAnother way to handle overfitting is with regularization\nAdd term proportional to \\(\\|\\mathbf{\\theta}\\|^2\\) \\[\n\\min_{\\mathbf{\\theta}} \\|A\\mathbf{\\theta}-\\mathbf{y}\\|^2 + \\lambda\\|\\mathbf{\\theta}\\|^2\n\\]\nRidge Regression/Lasso"
+    "text": "Regularization\n\nAnother way to handle overfitting is with regularization\nAdd term proportional to \\(\\|\\mathbf{\\theta}\\|^2\\) \\[\n\\min_{\\mathbf{\\theta}} \\|A\\mathbf{\\theta}-\\mathbf{y}\\|^2 + \\lambda\\|\\mathbf{\\theta}\\|^2\n\\]\nUse if \\(A\\) is ill-conditioned or many parameters."
+  },
+  {
+    "objectID": "meetups/Meetup-3/meetup-3.html#ridge-regression",
+    "href": "meetups/Meetup-3/meetup-3.html#ridge-regression",
+    "title": "DATA 609 Meetup 3",
+    "section": "Ridge Regression",
+    "text": "Ridge Regression\n\nName comes from geometry\nConsider objective function with a “ridge”"
+  },
+  {
+    "objectID": "meetups/Meetup-3/meetup-3.html#ridge-regression-1",
+    "href": "meetups/Meetup-3/meetup-3.html#ridge-regression-1",
+    "title": "DATA 609 Meetup 3",
+    "section": "Ridge Regression",
+    "text": "Ridge Regression\n\nName comes from geometry\nRegularizer turns ridge to peak"
   },
   {
     "objectID": "meetups/Meetup-3/meetup-3.html#bayesian-linear-regression",
@@ -576,7 +590,7 @@
     "href": "meetups/Meetup-2/meetup-2.html#condition-number-and-accuracy",
     "title": "Meetup 2: Least Squares",
     "section": "Condition Number and Accuracy",
-    "text": "Condition Number and Accuracy\n\nAccuracy of np.linalg.inv(A) @ b related to \\(\\frac{\\sigma_{max}}{\\sigma_{min}}\\)\nThis is called the “condition number” of the matrix \\(A\\)\n\n\n%timeit np.linalg.inv(A) @ b\n%timeit np.linalg.solve(A,b)\n\nx1 = np.linalg.inv(A) @ b\nx2 = np.linalg.solve(A,b)\n\nprint(\"Matrix Inverse Error: \",np.linalg.norm(A @ x1 - b))\nprint(\"Linear Solve Error: \",np.linalg.norm(A @ x2 - b))\n\n4.44 ms ± 1.31 ms per loop (mean ± std. dev. of 7 runs, 100 loops each)\n2.33 ms ± 9.58 μs per loop (mean ± std. dev. of 7 runs, 100 loops each)\nMatrix Inverse Error:  3.402089787318647e-07\nLinear Solve Error:  2.5468700593127833e-15\n\n\n\n100 million times more accurate, 5 times faster"
+    "text": "Condition Number and Accuracy\n\nAccuracy of np.linalg.inv(A) @ b related to \\(\\frac{\\sigma_{max}}{\\sigma_{min}}\\)\nThis is called the “condition number” of the matrix \\(A\\)\n\n\n%timeit np.linalg.inv(A) @ b\n%timeit np.linalg.solve(A,b)\n\nx1 = np.linalg.inv(A) @ b\nx2 = np.linalg.solve(A,b)\n\nprint(\"Matrix Inverse Error: \",np.linalg.norm(A @ x1 - b))\nprint(\"Linear Solve Error: \",np.linalg.norm(A @ x2 - b))\n\n4.22 ms ± 457 μs per loop (mean ± std. dev. of 7 runs, 100 loops each)\n2.48 ms ± 23.5 μs per loop (mean ± std. dev. of 7 runs, 100 loops each)\nMatrix Inverse Error:  2.9238430171256404e-07\nLinear Solve Error:  2.3121134154372098e-15\n\n\n\n100 million times more accurate, 5 times faster"
   },
   {
     "objectID": "meetups/Meetup-2/meetup-2.html#issue-is-worse-for-ata",

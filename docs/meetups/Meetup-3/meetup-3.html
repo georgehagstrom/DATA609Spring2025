@@ -426,7 +426,7 @@ George I. Hagstrom
 </section>
 <section id="case-study-homoscedasticity" class="slide level2">
 <h2>Case Study: Homoscedasticity</h2>
-<div id="2c927e5a" class="cell" data-execution_count="1">
+<div id="e05f1132" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -568,7 +568,7 @@ y_t = \theta_1 y_{t-1} + \theta_2 y_{t-2}+\cdots+\theta_n y_{t-n}
 <ul>
 <li>Hourly Central Park Temperature from Jan-March 2023</li>
 </ul>
-<div id="ecb510cc" class="cell" data-execution_count="2">
+<div id="48d5878d" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -596,7 +596,7 @@ T_t = \sum_{i=1}^8 \theta_i T_{t-i}
 </section>
 <section id="setting-up-the-model" class="slide level2">
 <h2>Setting up the model</h2>
-<div id="b3938a70" class="cell" data-execution_count="3">
+<div id="8f1e7cfb" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>A <span class="op">=</span> np.array([central_park[<span class="st">"temp"</span>].values[i:i<span class="op">+</span><span class="dv">8</span>].T </span>
 <span id="cb1-2"><a></a><span class="cf">for</span> i <span class="kw">in</span>  <span class="bu">range</span>(<span class="bu">len</span>(central_park)<span class="op">-</span><span class="dv">8</span>)])</span>
 <span id="cb1-3"><a></a>x <span class="op">=</span> central_park[<span class="st">"temp"</span>].values[<span class="dv">8</span>:]</span>
@@ -608,7 +608,7 @@ T_t = \sum_{i=1}^8 \theta_i T_{t-i}
 </section>
 <section id="predictions" class="slide level2">
 <h2>Predictions</h2>
-<div id="9713379e" class="cell" data-execution_count="4">
+<div id="4415e5db" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>Text(0, 0.5, 'Temperature')</code></pre>
 </div>
@@ -647,7 +647,7 @@ T_t = \theta_{m}\mathrm{Month}(i) + \sum_{i=1}^8 \theta_i T_{t-i}
 y_i = \sum_{j=1}^n \theta_j x^{j-1}
 \]</span></li>
 </ul>
-<div id="cbe2967e" class="cell" data-execution_count="5">
+<div id="1d7b5895" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display" data-execution_count="5">
 <pre><code>Text(0, 0.5, 'y')</code></pre>
 </div>
@@ -665,7 +665,7 @@ y_i = \sum_{j=1}^n \theta_j x^{j-1}
 <ul>
 <li>Curve develops unnecessary features at higher order</li>
 </ul>
-<div id="948d36fb" class="cell" data-execution_count="6">
+<div id="72b5a022" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -680,11 +680,11 @@ y_i = \sum_{j=1}^n \theta_j x^{j-1}
 <ul>
 <li>At high order, generalization fails</li>
 </ul>
-<div id="2f941aa8" class="cell" data-execution_count="7">
+<div id="72ed0aeb" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
-<p><img data-src="meetup-3_files/figure-revealjs/cell-8-output-1.png" width="816" height="429"></p>
+<p><img data-src="meetup-3_files/figure-revealjs/cell-8-output-1.png" width="812" height="429"></p>
 </figure>
 </div>
 </div>
@@ -693,12 +693,44 @@ y_i = \sum_{j=1}^n \theta_j x^{j-1}
 <section id="regularization" class="slide level2">
 <h2>Regularization</h2>
 <ul>
-<li>Another way to handle overfitting is with regularization</li>
-<li>Add term proportional to <span class="math inline">\(\|\mathbf{\theta}\|^2\)</span> <span class="math display">\[
+<li><p>Another way to handle overfitting is with regularization</p></li>
+<li><p>Add term proportional to <span class="math inline">\(\|\mathbf{\theta}\|^2\)</span> <span class="math display">\[
 \min_{\mathbf{\theta}} \|A\mathbf{\theta}-\mathbf{y}\|^2 + \lambda\|\mathbf{\theta}\|^2
-\]</span></li>
-<li>Ridge Regression/Lasso</li>
+\]</span></p></li>
+<li><p>Use if <span class="math inline">\(A\)</span> is ill-conditioned or many parameters.</p></li>
 </ul>
+</section>
+<section id="ridge-regression" class="slide level2">
+<h2>Ridge Regression</h2>
+<ul>
+<li>Name comes from geometry</li>
+<li>Consider objective function with a “ridge”</li>
+</ul>
+<div id="d31fe1cf" class="cell" data-execution_count="8">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="meetup-3_files/figure-revealjs/cell-9-output-1.png" width="667" height="490"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="ridge-regression-1" class="slide level2">
+<h2>Ridge Regression</h2>
+<ul>
+<li>Name comes from geometry</li>
+<li>Regularizer turns ridge to peak</li>
+</ul>
+<div id="26df8843" class="cell" data-execution_count="9">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="meetup-3_files/figure-revealjs/cell-10-output-1.png" width="667" height="490"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="bayesian-linear-regression" class="slide level2">
 <h2>Bayesian Linear Regression</h2>
@@ -714,11 +746,11 @@ y_i = \sum_{j=1}^n \theta_j x^{j-1}
 \left(A^TA + \lambda I\right)\mathbf{\theta} = A^T\mathbf{y}
 \]</span></li>
 </ul>
-<div id="4986dd50" class="cell" data-execution_count="8">
+<div id="4d150727" class="cell" data-execution_count="10">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
-<p><img data-src="meetup-3_files/figure-revealjs/cell-9-output-1.png" width="812" height="429"></p>
+<p><img data-src="meetup-3_files/figure-revealjs/cell-11-output-1.png" width="829" height="429"></p>
 </figure>
 </div>
 </div>
