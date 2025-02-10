@@ -426,7 +426,7 @@ George I. Hagstrom
 </section>
 <section id="case-study-homoscedasticity" class="slide level2">
 <h2>Case Study: Homoscedasticity</h2>
-<div id="4e7e268b" class="cell" data-execution_count="1">
+<div id="c9cb7c50" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -568,7 +568,7 @@ y_t = \theta_1 y_{t-1} + \theta_2 y_{t-2}+\cdots+\theta_n y_{t-n}
 <ul>
 <li>Hourly Central Park Temperature from Jan-March 2023</li>
 </ul>
-<div id="31757ef5" class="cell" data-execution_count="2">
+<div id="5c42b70f" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -596,7 +596,7 @@ T_t = \sum_{i=1}^8 \theta_i T_{t-i}
 </section>
 <section id="setting-up-the-model" class="slide level2">
 <h2>Setting up the model</h2>
-<div id="e27b66e6" class="cell" data-execution_count="3">
+<div id="670511cb" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>A <span class="op">=</span> np.array([central_park[<span class="st">"temp"</span>].values[i:i<span class="op">+</span><span class="dv">8</span>].T </span>
 <span id="cb1-2"><a></a><span class="cf">for</span> i <span class="kw">in</span>  <span class="bu">range</span>(<span class="bu">len</span>(central_park)<span class="op">-</span><span class="dv">8</span>)])</span>
 <span id="cb1-3"><a></a>x <span class="op">=</span> central_park[<span class="st">"temp"</span>].values[<span class="dv">8</span>:]</span>
@@ -608,7 +608,7 @@ T_t = \sum_{i=1}^8 \theta_i T_{t-i}
 </section>
 <section id="predictions" class="slide level2">
 <h2>Predictions</h2>
-<div id="9c8e1af6" class="cell" data-execution_count="4">
+<div id="5e22e3bf" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>Text(0, 0.5, 'Temperature')</code></pre>
 </div>
@@ -647,25 +647,13 @@ T_t = \theta_{m}\mathrm{Month}(i) + \sum_{i=1}^8 \theta_i T_{t-i}
 y_i = \sum_{j=1}^n \theta_j x^{j-1}
 \]</span></li>
 </ul>
-<div id="46796e63" class="cell" data-execution_count="5">
-<div class="cell-output cell-output-display" data-execution_count="5">
-<pre><code>Text(0, 0.5, 'y')</code></pre>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-<figure>
-<p><img data-src="meetup-3_files/figure-revealjs/cell-6-output-2.png" width="823" height="449"></p>
-</figure>
-</div>
-</div>
-</div>
 </section>
 <section id="fit-results" class="slide level2">
 <h2>Fit Results</h2>
 <ul>
 <li>Curve develops unnecessary features at higher order</li>
 </ul>
-<div id="f225f9e1" class="cell" data-execution_count="6">
+<div id="a27c5c4f" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -680,7 +668,7 @@ y_i = \sum_{j=1}^n \theta_j x^{j-1}
 <ul>
 <li>At high order, generalization fails</li>
 </ul>
-<div id="ee4b9a59" class="cell" data-execution_count="7">
+<div id="a1f393dc" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -706,7 +694,7 @@ y_i = \sum_{j=1}^n \theta_j x^{j-1}
 <li>Name comes from geometry</li>
 <li>Consider objective function with a “ridge”</li>
 </ul>
-<div id="d1a32402" class="cell" data-execution_count="8">
+<div id="f49d6013" class="cell" data-execution_count="8">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -722,7 +710,7 @@ y_i = \sum_{j=1}^n \theta_j x^{j-1}
 <li>Name comes from geometry</li>
 <li>Regularizer turns ridge to peak</li>
 </ul>
-<div id="2c481fa6" class="cell" data-execution_count="9">
+<div id="39bf6f29" class="cell" data-execution_count="9">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -751,15 +739,6 @@ y_i = \sum_{j=1}^n \theta_j x^{j-1}
 \left(A^TA + \lambda I\right)\mathbf{\theta} = A^T\mathbf{y}
 \]</span></li>
 </ul>
-<div id="020f2353" class="cell" data-execution_count="10">
-<div class="cell-output cell-output-display">
-<div>
-<figure>
-<p><img data-src="meetup-3_files/figure-revealjs/cell-11-output-1.png" width="829" height="430"></p>
-</figure>
-</div>
-</div>
-</div>
 </section>
 <section id="feature-engineering" class="slide level2">
 <h2>Feature Engineering</h2>
