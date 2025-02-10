@@ -156,14 +156,14 @@
     "href": "meetups/Meetup-3/meetup-3.html#case-study-extending-linear-regression",
     "title": "DATA 609 Meetup 3",
     "section": "Case Study: Extending Linear Regression",
-    "text": "Case Study: Extending Linear Regression\n\nDATA 606/Basic Stats: What are the validity conditions for linear regression?\n\nLinear Relationship\nIndependent Residuals\nNormal Residuals\n?????"
+    "text": "Case Study: Extending Linear Regression\nWhat are the validity conditions for linear regression? - Linear Relationship - Independent Residuals - Normal Residuals - ?????"
   },
   {
     "objectID": "meetups/Meetup-3/meetup-3.html#case-study-extending-linear-regression-1",
     "href": "meetups/Meetup-3/meetup-3.html#case-study-extending-linear-regression-1",
     "title": "DATA 609 Meetup 3",
     "section": "Case Study: Extending Linear Regression",
-    "text": "Case Study: Extending Linear Regression\n\nDATA 606/Basic Stats: What are the validity conditions for linear regression?\n\nLinear Relationship\nIndependent Residuals\nNormal Residuals\nHomoscedasticity i.e. constant variance"
+    "text": "Case Study: Extending Linear Regression\nWhat are the validity conditions for linear regression? - Linear Relationship - Independent Residuals - Normal Residuals - Homoscedasticity i.e. constant variance"
   },
   {
     "objectID": "meetups/Meetup-3/meetup-3.html#case-study-homoscedasticity",
@@ -173,39 +173,46 @@
     "text": "Case Study: Homoscedasticity"
   },
   {
-    "objectID": "meetups/Meetup-3/meetup-3.html#sources-of-unequal-variance",
-    "href": "meetups/Meetup-3/meetup-3.html#sources-of-unequal-variance",
+    "objectID": "meetups/Meetup-3/meetup-3.html#unequal-variance-common",
+    "href": "meetups/Meetup-3/meetup-3.html#unequal-variance-common",
     "title": "DATA 609 Meetup 3",
-    "section": "Sources of Unequal Variance",
-    "text": "Sources of Unequal Variance\nIt is very common for errors/variance to be unequal\n\nTypical for Variance to be proportional to magnitude in some way\n\n\nCould try a data transformation, but isn’t satisfying\n\n\nHeterogeneous detectors\n\n\nHave sensor network with mix of types"
+    "section": "Unequal Variance Common",
+    "text": "Unequal Variance Common\n\nTypical for Variance to be proportional to magnitude in some way\n\n\nCould try a data transformation, but isn’t satisfying\n\n\nHeterogeneous detectors\n\n\nHave sensor network with mix of types"
   },
   {
     "objectID": "meetups/Meetup-3/meetup-3.html#maximum-likelihood",
     "href": "meetups/Meetup-3/meetup-3.html#maximum-likelihood",
     "title": "DATA 609 Meetup 3",
     "section": "Maximum Likelihood",
-    "text": "Maximum Likelihood\n\nConsider following statistical model for \\(y_i\\) in terms of measurements \\(\\mathbf{x}_i\\): \\[\ny_i \\sim \\mathrm{Normal}\\left(\\theta_{n+1}+\\mathbf{x}_i^T\\mathbf{\\theta},\\sigma_i\\right)\n\\]\n\\(\\sigma_i^2\\) is variance of measurement of \\(y_i\\)\nLikelihood: \\[\n\\log p(\\mathbf{y}|X) = \\log\\left(\\Pi_{i=1}^n \\frac{1}{2\\pi\\sigma_i}\\exp\\left(-\\frac{\\left(y_i-\\theta_{n+1}-\\mathbf{x}_i^T\\mathbf{\\theta}\\right)^2}{2\\sigma_i^2}  \\right) \\right)\n\\]"
+    "text": "Maximum Likelihood\n\nConsider following statistical model for \\(y_i\\) in terms of measurements \\(\\mathbf{x}_i\\): \\[\ny_i \\sim \\mathrm{Normal}\\left(\\mathbf{x}_i^T\\mathbf{\\theta},\\sigma_i\\right)\n\\]\n\\(\\sigma_i^2\\) is variance of measurement of \\(y_i\\)\nLikelihood: \\[\n\\log p(\\mathbf{y}|X,\\theta) = \\log\\left(\\Pi_{i=1}^n \\frac{1}{2\\pi\\sigma_i}\\exp\\left(-\\frac{\\left(y_i-\\mathbf{x}_i^T\\mathbf{\\theta}\\right)^2}{2\\sigma_i^2}  \\right) \\right)\n\\]"
   },
   {
     "objectID": "meetups/Meetup-3/meetup-3.html#maximum-likelihood-1",
     "href": "meetups/Meetup-3/meetup-3.html#maximum-likelihood-1",
     "title": "DATA 609 Meetup 3",
     "section": "Maximum Likelihood",
-    "text": "Maximum Likelihood\n\nConsider following statistical model for \\(y_i\\) in terms of measurements \\(\\mathbf{x}_i\\): \\[\ny_i \\sim \\mathrm{Normal}\\left(\\theta_{n+1}+\\mathbf{x}_i^T\\mathbf{\\theta},\\sigma_i\\right)\n\\]\n\\(\\sigma_i^2\\) is variance of measurement of \\(y_i\\)\nLikelihood: \\[\n\\log p(\\mathbf{y}|X) = -\\frac{n}{2} \\log(2\\pi) - \\sum_{i=1}^n\\log(\\sigma_i) -\n\\left\\|\\mathrm{diag}\\left(1/\\sigma_i\\right)\\left( X \\mathbf{\\theta} - \\mathbf{y}\\right)\\right\\|^2\n\\]"
+    "text": "Maximum Likelihood\n\nConsider following statistical model for \\(y_i\\) in terms of measurements \\(\\mathbf{x}_i\\): \\[\ny_i \\sim \\mathrm{Normal}\\left(\\mathbf{x}_i^T\\mathbf{\\theta},\\sigma_i\\right)\n\\]\n\\(\\sigma_i^2\\) is variance of measurement of \\(y_i\\)\nLikelihood: \\[\n\\log p(\\mathbf{y}|X,\\theta) = -\\frac{n}{2} \\log(2\\pi) - \\sum_{i=1}^n\\log(\\sigma_i) -\n\\left\\|\\mathrm{diag}\\left(1/\\sigma_i\\right)\\left( X \\mathbf{\\theta} - \\mathbf{y}\\right)\\right\\|^2\n\\]"
   },
   {
     "objectID": "meetups/Meetup-3/meetup-3.html#weighted-least-squares",
     "href": "meetups/Meetup-3/meetup-3.html#weighted-least-squares",
     "title": "DATA 609 Meetup 3",
     "section": "Weighted Least Squares",
-    "text": "Weighted Least Squares\n\nMaximum Likelihood Estimate for the Unequal Variance Problem is a Weighted Least Squares optimization:\n\n\\[\n\\min_{\\mathbf{\\theta}} \\|W(X\\mathbf{\\theta} - \\mathbf{y})\\|^2\n\\] - Here the matrix \\(W\\) is a diagonal matrix with \\(\\frac{1}{\\sigma_i^2}\\) on the diagonal entries - Large \\(\\sigma_i\\) means error of that term is less important \\[\n\\mathbf{\\theta} = (X^TWX)^{-1}X^TW\\mathbf{y}\n\\]"
+    "text": "Weighted Least Squares\n\nMaximum Likelihood Estimate for the Unequal Variance Problem is a Weighted Least Squares optimization:\n\n\\[\n\\min_{\\mathbf{\\theta}} \\|W(X\\mathbf{\\theta} - \\mathbf{y})\\|^2\n\\]\n\nHere the matrix \\(W\\) is a diagonal matrix with \\(\\frac{1}{\\sigma_i^2}\\) on the diagonal entries\nLarge \\(\\sigma_i\\) means error of that term is less important \\[\n\\mathbf{\\theta} = (X^TWX)^{-1}X^TW\\mathbf{y}\n\\]"
   },
   {
     "objectID": "meetups/Meetup-3/meetup-3.html#gauss-markov-theorem",
     "href": "meetups/Meetup-3/meetup-3.html#gauss-markov-theorem",
     "title": "DATA 609 Meetup 3",
     "section": "Gauss-Markov Theorem",
-    "text": "Gauss-Markov Theorem\n\nCan extend this result to scenario when measurement errors have a given covariance matrix \\(\\Gamma\\)\nThen \\(W=\\Gamma^{-1}\\) and Weighted Least Squares provides maximum likelihood estimate\nWeighted techniques useful when:\n\nSample more of one group than another\nErrors vary based on detector or value\nCare about some predictions on some data more than others"
+    "text": "Gauss-Markov Theorem\n\nCan extend this result to scenario when measurement errors have a given covariance matrix \\(\\Gamma\\)\nThen \\(W=\\Gamma^{-1}\\) and Weighted Least Squares provides maximum likelihood estimate"
+  },
+  {
+    "objectID": "meetups/Meetup-3/meetup-3.html#when-is-wls-useful",
+    "href": "meetups/Meetup-3/meetup-3.html#when-is-wls-useful",
+    "title": "DATA 609 Meetup 3",
+    "section": "When is WLS useful?",
+    "text": "When is WLS useful?\n\nSample more of one group than another\nErrors vary based on detector or value\nCare about some predictions on some data more than others"
   },
   {
     "objectID": "meetups/Meetup-3/meetup-3.html#weekly-summary",
@@ -226,14 +233,14 @@
     "href": "meetups/Meetup-3/meetup-3.html#data-fitting-solution",
     "title": "DATA 609 Meetup 3",
     "section": "Data Fitting Solution",
-    "text": "Data Fitting Solution\nCan form matrix \\(A\\): \\[\nA = \\begin{bmatrix}\nf_1(\\mathbf{x}_1) & f_2(\\mathbf{x}_1) & \\cdots & f_n(\\mathbf{x}_1) \\\\\n\\vdots & \\vdots & \\vdots & \\vdots \\\\\nf_1(\\mathbf{x}_m) & f_2(\\mathbf{x}_m) & \\cdots & f_n(\\mathbf{x}_m)\n\\end{bmatrix}\n\\] - And find: \\[\n\\min_{\\theta} \\|A\\mathbf{\\theta} - \\mathbf{y}\\|^2\n\\]"
+    "text": "Data Fitting Solution\nCan form matrix \\(A\\): \\[\nA = \\begin{bmatrix}\nf_1(\\mathbf{x}_1) & f_2(\\mathbf{x}_1) & \\cdots & f_n(\\mathbf{x}_1) \\\\\n\\vdots & \\vdots & \\vdots & \\vdots \\\\\nf_1(\\mathbf{x}_m) & f_2(\\mathbf{x}_m) & \\cdots & f_n(\\mathbf{x}_m)\n\\end{bmatrix}\n\\]\n\nAnd find: \\[\n\\min_{\\theta} \\|A\\mathbf{\\theta} - \\mathbf{y}\\|^2\n\\]"
   },
   {
     "objectID": "meetups/Meetup-3/meetup-3.html#example-autoregressive-time-series",
     "href": "meetups/Meetup-3/meetup-3.html#example-autoregressive-time-series",
     "title": "DATA 609 Meetup 3",
     "section": "Example: Autoregressive Time Series",
-    "text": "Example: Autoregressive Time Series\n\nSuppose we have observations \\(y\\)_t and want to predict new \\(y\\) based on previous observations \\[\ny_t = \\theta_1 y_{t-1} + \\theta_2 y_{t-2}+\\cdots+\\theta_n y_{t-n}\n\\]\nHow to write this in our framework?"
+    "text": "Example: Autoregressive Time Series\n\nSuppose we have observations \\(y_t\\) and want to predict new \\(y\\) based on previous observations \\[\ny_t = \\theta_1 y_{t-1} + \\theta_2 y_{t-2}+\\cdots+\\theta_n y_{t-n}\n\\]\nHow to write this in our framework?"
   },
   {
     "objectID": "meetups/Meetup-3/meetup-3.html#example-autoregressive-time-series-1",
@@ -254,14 +261,14 @@
     "href": "meetups/Meetup-3/meetup-3.html#how-to-predict",
     "title": "DATA 609 Meetup 3",
     "section": "How to Predict",
-    "text": "How to Predict\n\nBaseline Mean and Variance:\n\n\\({T}_{\\mathrm{mean}} = 42.5\\) \\(\\sigma_T = 8.57\\)\n\nGuess Temperature from 24 hours before\n\n\\(E(T_t-T_{t-1}) = -0.00434\\), \\(\\sigma_{lag} = 1.41\\)\n\nHow about using the past 8 hours?: \\[\nT_t = \\sum_{i=1}^8 \\theta_i T_{t-i}\n\\]"
+    "text": "How to Predict\n\nBaseline Mean and Variance:\n\n\\({T}_{\\mathrm{mean}} = 42.5\\), \\(\\sigma_T = 8.57\\)\n\nGuess Temperature from 24 hours before\n\n\\(\\sigma_{lag} = 1.41\\)\n\nHow about using the past 8 hours?: \\[\nT_t = \\sum_{i=1}^8 \\theta_i T_{t-i}\n\\]"
   },
   {
     "objectID": "meetups/Meetup-3/meetup-3.html#setting-up-the-model",
     "href": "meetups/Meetup-3/meetup-3.html#setting-up-the-model",
     "title": "DATA 609 Meetup 3",
     "section": "Setting up the model",
-    "text": "Setting up the model\n\n# data in central_park df\n\nA = np.array([central_park[\"temp\"].values[i:i+8].T for i in range(len(central_park)-8)])\nx = central_park[\"temp\"].values[8:]\ntheta = np.linalg.lstsq(A,x)[0]\n\n\nSlight Improvement \\(\\sigma = 1.25\\)"
+    "text": "Setting up the model\n\nA = np.array([central_park[\"temp\"].values[i:i+8].T \nfor i in  range(len(central_park)-8)])\nx = central_park[\"temp\"].values[8:]\ntheta = np.linalg.lstsq(A,x)[0]\n\n\nSlight Improvement \\(\\sigma = 1.25\\)"
   },
   {
     "objectID": "meetups/Meetup-3/meetup-3.html#predictions",
@@ -569,7 +576,7 @@
     "href": "meetups/Meetup-2/meetup-2.html#condition-number-and-accuracy",
     "title": "Meetup 2: Least Squares",
     "section": "Condition Number and Accuracy",
-    "text": "Condition Number and Accuracy\n\nAccuracy of np.linalg.inv(A) @ b related to \\(\\frac{\\sigma_{max}}{\\sigma_{min}}\\)\nThis is called the “condition number” of the matrix \\(A\\)\n\n\n%timeit np.linalg.inv(A) @ b\n%timeit np.linalg.solve(A,b)\n\nx1 = np.linalg.inv(A) @ b\nx2 = np.linalg.solve(A,b)\n\nprint(\"Matrix Inverse Error: \",np.linalg.norm(A @ x1 - b))\nprint(\"Linear Solve Error: \",np.linalg.norm(A @ x2 - b))\n\n2.89 ms ± 101 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)\n1.16 ms ± 176 µs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)\nMatrix Inverse Error:  2.325641008211792e-07\nLinear Solve Error:  2.5830405362873147e-15\n\n\n\n100 million times more accurate, 5 times faster"
+    "text": "Condition Number and Accuracy\n\nAccuracy of np.linalg.inv(A) @ b related to \\(\\frac{\\sigma_{max}}{\\sigma_{min}}\\)\nThis is called the “condition number” of the matrix \\(A\\)\n\n\n%timeit np.linalg.inv(A) @ b\n%timeit np.linalg.solve(A,b)\n\nx1 = np.linalg.inv(A) @ b\nx2 = np.linalg.solve(A,b)\n\nprint(\"Matrix Inverse Error: \",np.linalg.norm(A @ x1 - b))\nprint(\"Linear Solve Error: \",np.linalg.norm(A @ x2 - b))\n\nThe slowest run took 40.77 times longer than the fastest. This could mean that an intermediate result is being cached.\n369 ms ± 287 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)\n2.62 ms ± 56.5 μs per loop (mean ± std. dev. of 7 runs, 100 loops each)\nMatrix Inverse Error:  2.859698763115458e-07\nLinear Solve Error:  2.2659287136269647e-15\n\n\n\n100 million times more accurate, 5 times faster"
   },
   {
     "objectID": "meetups/Meetup-2/meetup-2.html#issue-is-worse-for-ata",
