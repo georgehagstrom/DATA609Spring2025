@@ -33,170 +33,347 @@
     ]
   },
   {
-    "objectID": "posts/2025-02-14-Linear-Algebra-In_R.html",
-    "href": "posts/2025-02-14-Linear-Algebra-In_R.html",
-    "title": "Coding Vignette- Linear Algebra in R",
+    "objectID": "posts/2025-02-17-Meetup-4-Slides.html",
+    "href": "posts/2025-02-17-Meetup-4-Slides.html",
+    "title": "Meetup 4: Least Squares Data Fitting",
     "section": "",
-    "text": "For those of you that prefer to work in R, I decided to make a video going through the basics of matrix manipulations and linear algebra in R. At the end I redo one of the examples from the last meetup. Although matrices aren’t commonly used in introductory R classes, they do become quite prominent for more advanced applications (consider tidymodels which can return matrices where the entries are different models).\nClick here to watch the video on youtube\nThe linear algebra routines are all in base R: Click Here for a Tutorial\nI have also included the R script with the code that I entered"
+    "text": "I have uploaded the slides for Meetup 4, which happened tonight at 6:45PM\nWe discussed constrained least squares and went through a detailed example that showed how to fit B-splines to data using that technique.\n\nClick here for slides\nClick here"
   },
   {
-    "objectID": "posts/2025-02-10-Data-Fitting.html",
-    "href": "posts/2025-02-10-Data-Fitting.html",
-    "title": "Week 3- Data Fitting",
+    "objectID": "posts/2025-02-10-Meetup-3-Slides.html",
+    "href": "posts/2025-02-10-Meetup-3-Slides.html",
+    "title": "Meetup 3: Least Squares Data Fitting",
     "section": "",
-    "text": "This week, we will discuss applications of least squares methods to statistics and data fitting. This will include weighted least squares methods for linear regression, function interpolation, auto-regressive models, and feature engineering, and generalization/regularization.\nYour second homework assignment will be due Sunday February 23rd.\nHere are more details on what you need to do this week:\n\nGo through module 3 and complete the week 3 readings.\nAttend our second meetup on Monday at 6:45 p.m. ET on Zoom\nBegin working on Lab 2"
+    "text": "Meetup 3 is tonight at 6:45PM. We will tall about applications of least squares to problems in statistics and data fitting, including the use of weighted least squares for problems with heterogeneous or dependent errors, function interpolation and autoregressive time-series models, validation and regularization, ridge regression, and feature engineering.\nHere is the information you need for the first meetup:\n\nGo through the course overview materials, and complete the week 3 readings.\nAttend our first meetup on Monday at 6:45 p.m. ET on Zoom\nClick here for slides"
   },
   {
-    "objectID": "posts/2025-01-26-Welcome_to_DATA_609.html",
-    "href": "posts/2025-01-26-Welcome_to_DATA_609.html",
-    "title": "Welcome to DATA 609",
+    "objectID": "posts/2025-02-02-Week-2-Least-Squares.html",
+    "href": "posts/2025-02-02-Week-2-Least-Squares.html",
+    "title": "Week 2- Least Squares",
     "section": "",
-    "text": "Welcome to DATA 609, Math Modeling Techniques.\nClick this post now to get started!\nHere are the first steps:\n\nRead the syllabus.\nGo through the course overview materials, and complete the week 1 readings.\nJoin our Slack channel:\n\nAttend our first meetup on Monday at 6:45 p.m. ET on Zoom\n\nI recorded a short video which introduces me and gives you more background on the course:\n\nClick here for slides"
+    "text": "This week we will talk about the most basic and most important class of optimization problems, least squares optimization. Whenever you fit a linear regression, you are solving a least squares problems, and least squares methods have applications across all quantitative fields. Although least squares methods are simple, they should not be dismissed- the fact that we can solve them rapidly, reliably means that it is useful to know how to formulate them in applied situations and how to solve them.\nIn this week we will go over the basics and a few simple applications, while the two weeks after this will explore data fitting examples and how to handle more complicated cases.\nYour first homework assignment will be due next Sunday.\nHere are more details on what you need to do this week:\n\nGo through module 2 and complete the week 2 readings.\nAttend our second meetup on Monday at 6:45 p.m. ET on Zoom\nContinue working on Lab 1"
   },
   {
-    "objectID": "posts/2025-01-27-Meetup-1-Slides.html",
-    "href": "posts/2025-01-27-Meetup-1-Slides.html",
-    "title": "Meetup 1: Introduction to Optimization",
+    "objectID": "posts/2025-02-16-Week-4-Constrained-Least-Squares.html",
+    "href": "posts/2025-02-16-Week-4-Constrained-Least-Squares.html",
+    "title": "Week 4- Constrained Least Squares",
     "section": "",
-    "text": "Meetup 1 is tonight at 6:45PM. We are going to talk about what optimization is, some of its applications, the course structure, and some very basic facts about its theory.\nHere is the information you need for the first meetup:\n\nGo through the course overview materials, and complete the week 1 readings.\nAttend our first meetup on Monday at 6:45 p.m. ET on Zoom\nClick here for slides"
+    "text": "This week we will learn how to deal with linear equality constraints in least squares optimization problems. There will be a discussion of Lagrange multipliers, and application examples will include B-splines and portfolio optimization. Constraints are a critical part of both optimization problems and modeling in general.\nYour second homework assignment will be due Sunday February 23rd.\nHere are more details on what you need to do this week:\n\nGo through module 4 and complete the week 4 readings.\nAttend our second meetup on Monday at 6:45 p.m. ET on Zoom\nContinue working on Lab 2"
   },
   {
-    "objectID": "posts/2025-02-05-Linear-Algebra-In-Python.html",
-    "href": "posts/2025-02-05-Linear-Algebra-In-Python.html",
-    "title": "Coding Vignette- Linear Algebra in Numpy",
+    "objectID": "posts/2025-02-03-Meetup-2-Slides.html",
+    "href": "posts/2025-02-03-Meetup-2-Slides.html",
+    "title": "Meetup 2: Least Squares Optimization",
     "section": "",
-    "text": "I’m not sure how many of you have had experience with using python for linear algebra, so I decided to make a short video that goes over the basics of numpy (you are free to use R or Julia as well). I also solve a problem where I re-express the formula for the pseudoinverse of a matrix using the singular value decomposition of that matrix. I did it sort of to show how you might write out a long math expression in markdown, and to talk about matrix algebra and the properties of the SVD. This calculation is quite a bit more invovled than what I am asking on the homework, so don’t be intimidated.\nClick here to watch the video on youtube\nYou may also find the numpy documentation helpful: Click Here\nI have also included the ipython notebook"
+    "text": "Meetup 2 is tonight at 6:45PM. We will introduce least squares optimization, which is the most commonly used and possibly most important type of optimization problem. We will go through a few applications to illustrate least squares in its simplest formulation, and discuss some practical issues with solving least squares problems.\nHere is the information you need for the first meetup:\n\nGo through the course overview materials, and complete the week 2 readings.\nAttend our first meetup on Monday at 6:45 p.m. ET on Zoom\nClick here for slides"
   },
   {
-    "objectID": "modules/module4.html",
-    "href": "modules/module4.html",
-    "title": "Module 4 - Constrained Least Squares and Applications",
+    "objectID": "posts/2025-02-05-Writing-Math-In-Markdown-Vid.html",
+    "href": "posts/2025-02-05-Writing-Math-In-Markdown-Vid.html",
+    "title": "Coding Vignette- Writing Math in Markdown",
     "section": "",
-    "text": "Homework\nHomework 2 is due this Sunday at midnight\n\n\nLearning Objectives\n\nSolving Least Squares problems with Linear Equality Constraints\nApplications to Portfolio Optimization\nApplications to B-Splines\n\n\n\nReadings\nChapters 16 and 17 of Introduction to Applied Linear Algebra",
+    "text": "When working as a data scientist, and in particular, communicating your results and work in a technical document, you will need to be able to write mathematical expressions. One powerful tool for doing this is called LaTeX. LaTex is a its own programming language designed for rendering technical publications. It is commonly used in math and scientific fields, but a small subset of the language has been adopted in other environments including Microsoft Word and markdown, allowing you to render math using LaTeX commands. Knowing how to do this will be helpful for your homeworks, so I’ve decided to make a short video showing you the very basics of how this works.\nClick here to watch the video on youtube\nThere are a number of documents on the internet which explain the finer details of latex, and most of the lecture slides I shared use it, so you can see examples of how it works. I have also included the ipython notebook"
+  },
+  {
+    "objectID": "modules/module1.html",
+    "href": "modules/module1.html",
+    "title": "Module 1 - Introduction to Optimization Problems",
+    "section": "",
+    "text": "Overview and Deliverables\n\nLearning Objectives\n\nYou will learn about how optimization problems are formalized and the terminology used to describe them\nUbiquity of Optimization problems in data science\nWe will define several important classes of optimization problems:\n\nUnconstrained versus Constrained\nConvex versus Non-Convex\nGlobal versus Local\n\nWhy optimization is hard\n\n\n\nReadings\nChapter 1 Introduction to Algorithms for Data Mining and Machine Learning\nChapter 1 of Convex Optimization\nIf you want to brush up on your linear algebra skills:\nEssential Linear Algebra for Machine Learning\nAppendix A1, A3-A5 of Convex Optimization\nThe mathematical level of those appendices are above what I expect from you in the course, I think the essential linear algebra notes are less intimidating.",
     "crumbs": [
       "Topics",
-      "4 - Constrained Least Squares and Applications"
+      "1 - Introduction to Optimization Theory "
     ]
   },
   {
-    "objectID": "modules/module13.html",
-    "href": "modules/module13.html",
-    "title": "Module 13: Local Optimization Algorithms and Neural Networks",
+    "objectID": "modules/module7.html",
+    "href": "modules/module7.html",
+    "title": "Module 7: Convex Functions",
     "section": "",
-    "text": "Homework\nHomework 7 is due in two weeks, Sunday at midnight\n\n\nLearning Objectives\n\nNeural Network Learning and Backpropagation\nGradient Descent\nNewton’s Method\nConvergence Rates and Condition Number\nAcceleration Using Momentum\n\n\n\nReadings\nChapter 9 of Convex Optimization\nChapter 8.1-8.4 of Introduction to Algorithms for Data Mining Machine Learning\nOr alternatively deeplearningbook Chapter 6",
+    "text": "Learning Objectives\n\nDefinitions of Convex Functions\nImportant Examples of Convex Functions\nJensen’s Inequality\nOperations that Preserve Convexity\nConvex Conjugates\n\n\n\nReadings\nSections 3.1-2.3 of Convex Optimization",
     "crumbs": [
       "Topics",
-      "13 - Local Optimization and Neural Networks"
+      "7 - Convex Functions"
     ]
   },
   {
-    "objectID": "modules/module3.html",
-    "href": "modules/module3.html",
-    "title": "Module 3: Statistical Applications of Least Squares",
+    "objectID": "modules/module2.html",
+    "href": "modules/module2.html",
+    "title": "Module 2 - Introduction to Least Squares Problems",
     "section": "",
-    "text": "This week we will learn more about the applications of least squares methods in statistics. We will learn about how weighted least squares methods allow us to apply linear regression in more cases, including those with heteroscedastic errors. Then we will show how to fit data using interpolating functions, and autoregressive models for time series. This discussion will lead into feature engineerging. Finally, we will explore validation and regularization, which is our first example of multi-objective least squares.\n\nDeliverables\nHomework 2 will be due Sunday, February 23rd at midnight.\n\n\nLearning Objectives\n\nLeast Squares and Linear Regression\nGeneralized Least Squares\nRecursive/Online Least Squares\nRegularization and Multi-Objective Least Squares\n\n\n\nReadings\nChapters 13 of Introduction to Applied Linear Algebra\nChapter 14 (on classification methods) is interesting but we won’t cover it.\nSections 4.2 and 4.5 of Introduction to Algorithms for Data Mining and Machine Learning",
+    "text": "Overview and Deliverables\nHomework 1 is due this Sunday at midnight\n\n\nLearning Objectives\n\nSolving unconstrained least squares problems\n\nProperties of the Gram matrix and the pseudoinverse\nBasic Numerical Linear Algebra Considerations\n\nApplications:\n\nOptimization\nLinear Regression\n\n\n\n\nReadings\nChapter 12 of Introduction to Applied Linear Algebra",
     "crumbs": [
       "Topics",
-      "3 - Least Squares and Statistics"
+      "2 - Least Squares Optimization"
     ]
   },
   {
-    "objectID": "modules/module6.html",
-    "href": "modules/module6.html",
-    "title": "Module 6 - Convex Sets II",
+    "objectID": "modules/module15.html",
+    "href": "modules/module15.html",
+    "title": "Module 15 - Deep Learning Applications",
     "section": "",
-    "text": "Homework 3 is due this Sunday at midnight\n\n\n\nGeneralized Inequalities\nSupporting and Separating Hyperplanes\nDual Cones\n\n\n\n\nSections 2.4-2.6 of Convex Optimization",
+    "text": "Learning Objectives\n\nTraining Deep Neural Networks\n\n\n\nReadings\nGoodfellow Chapter 11 of the deeplearningbook",
     "crumbs": [
       "Topics",
-      "6 - Convex Sets II"
+      "15 - Training Deep Neural Networks"
     ]
   },
   {
-    "objectID": "modules/module6.html#homework",
-    "href": "modules/module6.html#homework",
-    "title": "Module 6 - Convex Sets II",
+    "objectID": "modules/module14.html",
+    "href": "modules/module14.html",
+    "title": "Module 14: Stochastic Gradient Descent",
     "section": "",
-    "text": "Homework 3 is due this Sunday at midnight\n\n\n\nGeneralized Inequalities\nSupporting and Separating Hyperplanes\nDual Cones\n\n\n\n\nSections 2.4-2.6 of Convex Optimization",
+    "text": "Homework\nHomework 7 is due this Sunday at midnight\n\n\nLearning Objectives\n\nStochastic Gradient Descent\nHyperparameter Tuning\nSaddle Points and Convergence\n\n\n\nReadings\nSection 8.5 Introduction to Algorithms for Data Mining and Machine Learning\nChapter 8 of deeplearningbook",
     "crumbs": [
       "Topics",
-      "6 - Convex Sets II"
+      "14 - Stochastic Gradient Descent"
     ]
   },
   {
-    "objectID": "modules/module10.html",
-    "href": "modules/module10.html",
-    "title": "Module 10 - Convex Problems in Data Fitting",
+    "objectID": "modules/module8.html",
+    "href": "modules/module8.html",
+    "title": "Module 8: Convex Functions II",
     "section": "",
-    "text": "Homework 5 is due this Sunday at midnight\n\n\n\nRegularization- lasso and Huber penalties\nFunction fitting, splines, and interpolation\n\n\n\n\nChapter 6 of Convex Optimization",
+    "text": "Learning Objectives\n\nQuasiconvex Functions\nLog-Convexity/Concavity\nGeneralized Inequalities and Convexity\n\n\n\nReadings\nSections 3.4-3.6 of Convex Optimization",
     "crumbs": [
       "Topics",
-      "10 - Data Fitting"
+      "8 - Convex Functions II"
     ]
   },
   {
-    "objectID": "modules/module10.html#homework",
-    "href": "modules/module10.html#homework",
-    "title": "Module 10 - Convex Problems in Data Fitting",
+    "objectID": "modules/module11.html",
+    "href": "modules/module11.html",
+    "title": "Module 11 - Convex Optimization Problems in Statistics",
     "section": "",
-    "text": "Homework 5 is due this Sunday at midnight\n\n\n\nRegularization- lasso and Huber penalties\nFunction fitting, splines, and interpolation\n\n\n\n\nChapter 6 of Convex Optimization",
+    "text": "Homework\nHomework 6 is due in two weeks, next Sunday at midnight\n\n\nLearning Objectives\n\nMaximum Likelihood and Maximum Entropy Methods\nMaximum Posterior Probability and Bayesian Inference\nLogistic Regression\nExperiment Design\n\n\n\nReadings\nSections 7.1, 7.2, and 7.5 of Convex Optimization",
     "crumbs": [
       "Topics",
-      "10 - Data Fitting"
+      "11 - Convex Optimization in Statistics"
     ]
   },
   {
-    "objectID": "modules/module9.html",
-    "href": "modules/module9.html",
-    "title": "Module 9: Convex Optimization Problems and Disciplined Convex Programming",
+    "objectID": "license.html",
+    "href": "license.html",
+    "title": "Attribution-ShareAlike 4.0 International",
     "section": "",
-    "text": "Homework\nHomework 5 is due next week, Sunday at midnight.\n\n\nLearning Objectives\n\nDefinition of Convex Optimization Problem\nProblem Transformations\nImportant Subclasses of Convex Optimization Problems\nDiscilined Convex Programming and CVX\nVector Optimization and Scalarization\n\n\n\nReadings\nSections 4.1-4.4, 4.6-4.7 of Convex Optimization\nCVX users guide, read one of these: -python -R -julia",
-    "crumbs": [
-      "Topics",
-      "9 - Convex Optimization and Disciplined Convex Programming"
-    ]
+    "text": "Creative Commons Corporation (“Creative Commons”) is not a law firm and does not provide legal services or legal advice. Distribution of Creative Commons public licenses does not create a lawyer-client or other relationship. Creative Commons makes its licenses and related information available on an “as-is” basis. Creative Commons gives no warranties regarding its licenses, any material licensed under their terms and conditions, or any related information. Creative Commons disclaims all liability for damages resulting from their use to the fullest extent possible."
   },
   {
-    "objectID": "modules/module12.html",
-    "href": "modules/module12.html",
-    "title": "Module 12: Duality and Classifiers",
-    "section": "",
-    "text": "Learning Objectives\n\nDual Formulation of Optimization Problems\nLagrange Multipliers\nLinear and Nonlinear Classifiers, LDA\nSupport Vector Machines\n\n\n\nReadings\nSections 8.1, 8.2, 8.6, 8.7, 8.8 Convex Optimization",
-    "crumbs": [
-      "Topics",
-      "12 - Duality and Classifiers"
-    ]
+    "objectID": "license.html#creative-commons-attribution-sharealike-4.0-international-public-license",
+    "href": "license.html#creative-commons-attribution-sharealike-4.0-international-public-license",
+    "title": "Attribution-ShareAlike 4.0 International",
+    "section": "Creative Commons Attribution-ShareAlike 4.0 International Public License",
+    "text": "Creative Commons Attribution-ShareAlike 4.0 International Public License\nBy exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and conditions of this Creative Commons Attribution-ShareAlike 4.0 International Public License (“Public License”). To the extent this Public License may be interpreted as a contract, You are granted the Licensed Rights in consideration of Your acceptance of these terms and conditions, and the Licensor grants You such rights in consideration of benefits the Licensor receives from making the Licensed Material available under these terms and conditions.\n\nSection 1 – Definitions.\n\nAdapted Material means material subject to Copyright and Similar Rights that is derived from or based upon the Licensed Material and in which the Licensed Material is translated, altered, arranged, transformed, or otherwise modified in a manner requiring permission under the Copyright and Similar Rights held by the Licensor. For purposes of this Public License, where the Licensed Material is a musical work, performance, or sound recording, Adapted Material is always produced where the Licensed Material is synched in timed relation with a moving image.\nAdapter’s License means the license You apply to Your Copyright and Similar Rights in Your contributions to Adapted Material in accordance with the terms and conditions of this Public License.\nBY-SA Compatible License means a license listed at creativecommons.org/compatiblelicenses, approved by Creative Commons as essentially the equivalent of this Public License.\nCopyright and Similar Rights means copyright and/or similar rights closely related to copyright including, without limitation, performance, broadcast, sound recording, and Sui Generis Database Rights, without regard to how the rights are labeled or categorized. For purposes of this Public License, the rights specified in Section 2(b)(1)-(2) are not Copyright and Similar Rights.\nEffective Technological Measures means those measures that, in the absence of proper authority, may not be circumvented under laws fulfilling obligations under Article 11 of the WIPO Copyright Treaty adopted on December 20, 1996, and/or similar international agreements.\nExceptions and Limitations means fair use, fair dealing, and/or any other exception or limitation to Copyright and Similar Rights that applies to Your use of the Licensed Material.\nLicense Elements means the license attributes listed in the name of a Creative Commons Public License. The License Elements of this Public License are Attribution and ShareAlike.\nLicensed Material means the artistic or literary work, database, or other material to which the Licensor applied this Public License.\nLicensed Rights means the rights granted to You subject to the terms and conditions of this Public License, which are limited to all Copyright and Similar Rights that apply to Your use of the Licensed Material and that the Licensor has authority to license.\nLicensor means the individual(s) or entity(ies) granting rights under this Public License.\nShare means to provide material to the public by any means or process that requires permission under the Licensed Rights, such as reproduction, public display, public performance, distribution, dissemination, communication, or importation, and to make material available to the public including in ways that members of the public may access the material from a place and at a time individually chosen by them.\nSui Generis Database Rights means rights other than copyright resulting from Directive 96/9/EC of the European Parliament and of the Council of 11 March 1996 on the legal protection of databases, as amended and/or succeeded, as well as other essentially equivalent rights anywhere in the world.\nYou means the individual or entity exercising the Licensed Rights under this Public License. Your has a corresponding meaning.\n\n\n\nSection 2 – Scope.\n\nLicense grant.\n\nSubject to the terms and conditions of this Public License, the Licensor hereby grants You a worldwide, royalty-free, non-sublicensable, non-exclusive, irrevocable license to exercise the Licensed Rights in the Licensed Material to:\n\nreproduce and Share the Licensed Material, in whole or in part; and\nproduce, reproduce, and Share Adapted Material.\n\nExceptions and Limitations. For the avoidance of doubt, where Exceptions and Limitations apply to Your use, this Public License does not apply, and You do not need to comply with its terms and conditions.\nTerm. The term of this Public License is specified in Section 6(a).\nMedia and formats; technical modifications allowed. The Licensor authorizes You to exercise the Licensed Rights in all media and formats whether now known or hereafter created, and to make technical modifications necessary to do so. The Licensor waives and/or agrees not to assert any right or authority to forbid You from making technical modifications necessary to exercise the Licensed Rights, including technical modifications necessary to circumvent Effective Technological Measures. For purposes of this Public License, simply making modifications authorized by this Section 2(a)(4) never produces Adapted Material.\nDownstream recipients.\nA. Offer from the Licensor – Licensed Material. Every recipient of the Licensed Material automatically receives an offer from the Licensor to exercise the Licensed Rights under the terms and conditions of this Public License.\n\n__Additional offer from the Licensor – Adapted Material. Every recipient of Adapted Material from You automatically receives an offer from the Licensor to exercise the Licensed Rights in the Adapted Material under the conditions of the Adapter’s License You apply.\n\nC. No downstream restrictions. You may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, the Licensed Material if doing so restricts exercise of the Licensed Rights by any recipient of the Licensed Material.\nNo endorsement. Nothing in this Public License constitutes or may be construed as permission to assert or imply that You are, or that Your use of the Licensed Material is, connected with, or sponsored, endorsed, or granted official status by, the Licensor or others designated to receive attribution as provided in Section 3(a)(1)(A)(i).\n\nOther rights.\n\nMoral rights, such as the right of integrity, are not licensed under this Public License, nor are publicity, privacy, and/or other similar personality rights; however, to the extent possible, the Licensor waives and/or agrees not to assert any such rights held by the Licensor to the limited extent necessary to allow You to exercise the Licensed Rights, but not otherwise.\nPatent and trademark rights are not licensed under this Public License.\nTo the extent possible, the Licensor waives any right to collect royalties from You for the exercise of the Licensed Rights, whether directly or through a collecting society under any voluntary or waivable statutory or compulsory licensing scheme. In all other cases the Licensor expressly reserves any right to collect such royalties.\n\n\n\n\nSection 3 – License Conditions.\nYour exercise of the Licensed Rights is expressly made subject to the following conditions.\n\nAttribution.\n\nIf You Share the Licensed Material (including in modified form), You must:\n\nretain the following if it is supplied by the Licensor with the Licensed Material:\n\n\n\nidentification of the creator(s) of the Licensed Material and any others designated to receive attribution, in any reasonable manner requested by the Licensor (including by pseudonym if designated);\na copyright notice;\na notice that refers to this Public License;\na notice that refers to the disclaimer of warranties;\na URI or hyperlink to the Licensed Material to the extent reasonably practicable;\n\n\n\nindicate if You modified the Licensed Material and retain an indication of any previous modifications; and\nindicate the Licensed Material is licensed under this Public License, and include the text of, or the URI or hyperlink to, this Public License.\n\nYou may satisfy the conditions in Section 3(a)(1) in any reasonable manner based on the medium, means, and context in which You Share the Licensed Material. For example, it may be reasonable to satisfy the conditions by providing a URI or hyperlink to a resource that includes the required information.\nIf requested by the Licensor, You must remove any of the information required by Section 3(a)(1)(A) to the extent reasonably practicable.\n\nShareAlike.\n\nIn addition to the conditions in Section 3(a), if You Share Adapted Material You produce, the following conditions also apply.\n\nThe Adapter’s License You apply must be a Creative Commons license with the same License Elements, this version or later, or a BY-SA Compatible License.\nYou must include the text of, or the URI or hyperlink to, the Adapter’s License You apply. You may satisfy this condition in any reasonable manner based on the medium, means, and context in which You Share Adapted Material.\nYou may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, Adapted Material that restrict exercise of the rights granted under the Adapter’s License You apply.\n\n\n\nSection 4 – Sui Generis Database Rights.\nWhere the Licensed Rights include Sui Generis Database Rights that apply to Your use of the Licensed Material:\n\nfor the avoidance of doubt, Section 2(a)(1) grants You the right to extract, reuse, reproduce, and Share all or a substantial portion of the contents of the database;\nif You include all or a substantial portion of the database contents in a database in which You have Sui Generis Database Rights, then the database in which You have Sui Generis Database Rights (but not its individual contents) is Adapted Material, including for purposes of Section 3(b); and\nYou must comply with the conditions in Section 3(a) if You Share all or a substantial portion of the contents of the database.\n\nFor the avoidance of doubt, this Section 4 supplements and does not replace Your obligations under this Public License where the Licensed Rights include other Copyright and Similar Rights.\n\n\nSection 5 – Disclaimer of Warranties and Limitation of Liability.\n\nUnless otherwise separately undertaken by the Licensor, to the extent possible, the Licensor offers the Licensed Material as-is and as-available, and makes no representations or warranties of any kind concerning the Licensed Material, whether express, implied, statutory, or other. This includes, without limitation, warranties of title, merchantability, fitness for a particular purpose, non-infringement, absence of latent or other defects, accuracy, or the presence or absence of errors, whether or not known or discoverable. Where disclaimers of warranties are not allowed in full or in part, this disclaimer may not apply to You.\nTo the extent possible, in no event will the Licensor be liable to You on any legal theory (including, without limitation, negligence) or otherwise for any direct, special, indirect, incidental, consequential, punitive, exemplary, or other losses, costs, expenses, or damages arising out of this Public License or use of the Licensed Material, even if the Licensor has been advised of the possibility of such losses, costs, expenses, or damages. Where a limitation of liability is not allowed in full or in part, this limitation may not apply to You.\nThe disclaimer of warranties and limitation of liability provided above shall be interpreted in a manner that, to the extent possible, most closely approximates an absolute disclaimer and waiver of all liability.\n\n\n\nSection 6 – Term and Termination.\n\nThis Public License applies for the term of the Copyright and Similar Rights licensed here. However, if You fail to comply with this Public License, then Your rights under this Public License terminate automatically.\nWhere Your right to use the Licensed Material has terminated under Section 6(a), it reinstates:\n\nautomatically as of the date the violation is cured, provided it is cured within 30 days of Your discovery of the violation; or\nupon express reinstatement by the Licensor.\n\nFor the avoidance of doubt, this Section 6(b) does not affect any right the Licensor may have to seek remedies for Your violations of this Public License.\nFor the avoidance of doubt, the Licensor may also offer the Licensed Material under separate terms or conditions or stop distributing the Licensed Material at any time; however, doing so will not terminate this Public License.\nSections 1, 5, 6, 7, and 8 survive termination of this Public License.\n\n\n\nSection 7 – Other Terms and Conditions.\n\nThe Licensor shall not be bound by any additional or different terms or conditions communicated by You unless expressly agreed.\nAny arrangements, understandings, or agreements regarding the Licensed Material not stated herein are separate from and independent of the terms and conditions of this Public License.t stated herein are separate from and independent of the terms and conditions of this Public License.\n\n\n\nSection 8 – Interpretation.\n\nFor the avoidance of doubt, this Public License does not, and shall not be interpreted to, reduce, limit, restrict, or impose conditions on any use of the Licensed Material that could lawfully be made without permission under this Public License.\nTo the extent possible, if any provision of this Public License is deemed unenforceable, it shall be automatically reformed to the minimum extent necessary to make it enforceable. If the provision cannot be reformed, it shall be severed from this Public License without affecting the enforceability of the remaining terms and conditions.\nNo term or condition of this Public License will be waived and no failure to comply consented to unless expressly agreed to by the Licensor.\nNothing in this Public License constitutes or may be interpreted as a limitation upon, or waiver of, any privileges and immunities that apply to the Licensor or You, including from the legal processes of any jurisdiction or authority.\n\n\nCreative Commons is not a party to its public licenses. Notwithstanding, Creative Commons may elect to apply one of its public licenses to material it publishes and in those instances will be considered the “Licensor.” Except for the limited purpose of indicating that material is shared under a Creative Commons public license or as otherwise permitted by the Creative Commons policies published at creativecommons.org/policies, Creative Commons does not authorize the use of the trademark “Creative Commons” or any other trademark or logo of Creative Commons without its prior written consent including, without limitation, in connection with any unauthorized modifications to any of its public licenses or any other arrangements, understandings, or agreements concerning use of licensed material. For the avoidance of doubt, this paragraph does not form part of the public licenses.\nCreative Commons may be contacted at creativecommons.org"
   },
   {
-    "objectID": "modules/module5.html",
-    "href": "modules/module5.html",
-    "title": "Module 5 - Convex Sets",
-    "section": "",
-    "text": "Homework 3 is due in two weeks, Sunday at midnight\n\n\n\nDefinition of Affine and Convex Sets\nExamples of Convex Sets\nOperations that Preserve Convexity of Sets\n\n\n\n\nSections 2.1-2.3 of Convex Optimization\nSection 2.1 of Introduction to Algorithms for Machine Learning",
-    "crumbs": [
-      "Topics",
-      "5 - Convex Sets"
-    ]
+    "objectID": "meetups/Meetup-3/meetup-3.html#case-study-extending-linear-regression",
+    "href": "meetups/Meetup-3/meetup-3.html#case-study-extending-linear-regression",
+    "title": "DATA 609 Meetup 3",
+    "section": "Case Study: Extending Linear Regression",
+    "text": "Case Study: Extending Linear Regression\nWhat are the validity conditions for linear regression?\n\nLinear Relationship\nIndependent Residuals\nNormal Residuals\n?????"
   },
   {
-    "objectID": "modules/module5.html#homework",
-    "href": "modules/module5.html#homework",
-    "title": "Module 5 - Convex Sets",
-    "section": "",
-    "text": "Homework 3 is due in two weeks, Sunday at midnight\n\n\n\nDefinition of Affine and Convex Sets\nExamples of Convex Sets\nOperations that Preserve Convexity of Sets\n\n\n\n\nSections 2.1-2.3 of Convex Optimization\nSection 2.1 of Introduction to Algorithms for Machine Learning",
-    "crumbs": [
-      "Topics",
-      "5 - Convex Sets"
-    ]
+    "objectID": "meetups/Meetup-3/meetup-3.html#case-study-extending-linear-regression-1",
+    "href": "meetups/Meetup-3/meetup-3.html#case-study-extending-linear-regression-1",
+    "title": "DATA 609 Meetup 3",
+    "section": "Case Study: Extending Linear Regression",
+    "text": "Case Study: Extending Linear Regression\nWhat are the validity conditions for linear regression?\n\nLinear Relationship\nIndependent Residuals\nNormal Residuals\nHomoscedasticity i.e. constant variance"
   },
   {
-    "objectID": "acknowledgements.html",
-    "href": "acknowledgements.html",
-    "title": "Acknowledgements",
-    "section": "",
-    "text": "This website would not be possible without the quarto package. This course draws inspiration from several open educational resources on the internet, including two books and accompanying materials by Stephen Boyd and Lieven Vandenberghe: Introduction to Applied Linear Algebra and Convex Optimization",
-    "crumbs": [
-      "Acknowledgements"
-    ]
+    "objectID": "meetups/Meetup-3/meetup-3.html#case-study-homoscedasticity",
+    "href": "meetups/Meetup-3/meetup-3.html#case-study-homoscedasticity",
+    "title": "DATA 609 Meetup 3",
+    "section": "Case Study: Homoscedasticity",
+    "text": "Case Study: Homoscedasticity"
+  },
+  {
+    "objectID": "meetups/Meetup-3/meetup-3.html#unequal-variance-common",
+    "href": "meetups/Meetup-3/meetup-3.html#unequal-variance-common",
+    "title": "DATA 609 Meetup 3",
+    "section": "Unequal Variance Common",
+    "text": "Unequal Variance Common\n\nTypical for Variance to be proportional to magnitude in some way\n\n\nCould try a data transformation, but isn’t satisfying\n\n\nHeterogeneous detectors\n\n\nHave sensor network with mix of types"
+  },
+  {
+    "objectID": "meetups/Meetup-3/meetup-3.html#maximum-likelihood",
+    "href": "meetups/Meetup-3/meetup-3.html#maximum-likelihood",
+    "title": "DATA 609 Meetup 3",
+    "section": "Maximum Likelihood",
+    "text": "Maximum Likelihood\n\nConsider following statistical model for \\(y_i\\) in terms of measurements \\(\\mathbf{x}_i\\): \\[\ny_i \\sim \\mathrm{Normal}\\left(\\mathbf{x}_i^T\\mathbf{\\theta},\\sigma_i\\right)\n\\]\n\\(\\sigma_i^2\\) is variance of measurement of \\(y_i\\)\nLikelihood: \\[\n\\log p(\\mathbf{y}|X,\\theta) = \\log\\left(\\Pi_{i=1}^n \\frac{1}{2\\pi\\sigma_i}\\exp\\left(-\\frac{\\left(y_i-\\mathbf{x}_i^T\\mathbf{\\theta}\\right)^2}{2\\sigma_i^2}  \\right) \\right)\n\\]"
+  },
+  {
+    "objectID": "meetups/Meetup-3/meetup-3.html#maximum-likelihood-1",
+    "href": "meetups/Meetup-3/meetup-3.html#maximum-likelihood-1",
+    "title": "DATA 609 Meetup 3",
+    "section": "Maximum Likelihood",
+    "text": "Maximum Likelihood\n\nConsider following statistical model for \\(y_i\\) in terms of measurements \\(\\mathbf{x}_i\\): \\[\ny_i \\sim \\mathrm{Normal}\\left(\\mathbf{x}_i^T\\mathbf{\\theta},\\sigma_i\\right)\n\\]\n\\(\\sigma_i^2\\) is variance of measurement of \\(y_i\\)\nLikelihood: \\[\n\\log p(\\mathbf{y}|X,\\theta) = -\\frac{n}{2} \\log(2\\pi) - \\sum_{i=1}^n\\log(\\sigma_i) -\n\\left\\|\\mathrm{diag}\\left(1/\\sigma_i\\right)\\left( X \\mathbf{\\theta} - \\mathbf{y}\\right)\\right\\|^2\n\\]"
+  },
+  {
+    "objectID": "meetups/Meetup-3/meetup-3.html#weighted-least-squares",
+    "href": "meetups/Meetup-3/meetup-3.html#weighted-least-squares",
+    "title": "DATA 609 Meetup 3",
+    "section": "Weighted Least Squares",
+    "text": "Weighted Least Squares\n\nMaximum Likelihood Estimate for the Unequal Variance Problem is a Weighted Least Squares optimization:\n\n\\[\n\\min_{\\mathbf{\\theta}} \\|W^{1/2}(X\\mathbf{\\theta} - \\mathbf{y})\\|^2\n\\]\n\nHere the matrix \\(W\\) is a diagonal matrix with \\(\\frac{1}{\\sigma_i^2}\\) on the diagonal entries\nLarge \\(\\sigma_i\\) means error of that term is less important \\[\nX^TWX \\mathbf{\\theta} = X^TW\\mathbf{y}\n\\]"
+  },
+  {
+    "objectID": "meetups/Meetup-3/meetup-3.html#gauss-markov-theorem",
+    "href": "meetups/Meetup-3/meetup-3.html#gauss-markov-theorem",
+    "title": "DATA 609 Meetup 3",
+    "section": "Gauss-Markov Theorem",
+    "text": "Gauss-Markov Theorem\n\nCan extend this result to scenario when measurement errors have a given covariance matrix \\(\\Gamma\\)\nThen \\(W=\\Gamma^{-1}\\) and Weighted Least Squares provides maximum likelihood estimate\nBest Linear Uniased Estimator"
+  },
+  {
+    "objectID": "meetups/Meetup-3/meetup-3.html#when-is-wls-useful",
+    "href": "meetups/Meetup-3/meetup-3.html#when-is-wls-useful",
+    "title": "DATA 609 Meetup 3",
+    "section": "When is WLS useful?",
+    "text": "When is WLS useful?\n\nSample more of one group than another\nErrors vary based on detector or value\nCare about some predictions on some data more than others"
+  },
+  {
+    "objectID": "meetups/Meetup-3/meetup-3.html#weekly-summary",
+    "href": "meetups/Meetup-3/meetup-3.html#weekly-summary",
+    "title": "DATA 609 Meetup 3",
+    "section": "Weekly Summary",
+    "text": "Weekly Summary\n\nReading: Chapter 13 of VMLS\nHW 2 Available, due in 2 weeks\n\nProblem 1 and 2 based on this week\nProblem 3 next week\n\nWill release another numpy coding video, lmk if you prefer a different language"
+  },
+  {
+    "objectID": "meetups/Meetup-3/meetup-3.html#data-fitting",
+    "href": "meetups/Meetup-3/meetup-3.html#data-fitting",
+    "title": "DATA 609 Meetup 3",
+    "section": "Data Fitting",
+    "text": "Data Fitting\n\nHave some observations \\(y_i\\) and \\(\\mathbf{x}_i\\) and want to fit a regression\n\\(m\\) observations, have \\(n\\) basis functions \\(f\\) \\[\ny_i \\sim \\mathrm{Normal}\\left(\\sum_{j=1}^{n} \\theta_j f_j(\\mathbf{x}_i),\\sigma\\right)\n\\]\nNormal errors gives justification for least squares"
+  },
+  {
+    "objectID": "meetups/Meetup-3/meetup-3.html#data-fitting-solution",
+    "href": "meetups/Meetup-3/meetup-3.html#data-fitting-solution",
+    "title": "DATA 609 Meetup 3",
+    "section": "Data Fitting Solution",
+    "text": "Data Fitting Solution\nCan form matrix \\(A\\): \\[\nA = \\begin{bmatrix}\nf_1(\\mathbf{x}_1) & f_2(\\mathbf{x}_1) & \\cdots & f_n(\\mathbf{x}_1) \\\\\n\\vdots & \\vdots & \\vdots & \\vdots \\\\\nf_1(\\mathbf{x}_m) & f_2(\\mathbf{x}_m) & \\cdots & f_n(\\mathbf{x}_m)\n\\end{bmatrix}\n\\]\n\nAnd find: \\[\n\\min_{\\theta} \\|A\\mathbf{\\theta} - \\mathbf{y}\\|^2\n\\]"
+  },
+  {
+    "objectID": "meetups/Meetup-3/meetup-3.html#example-autoregressive-time-series",
+    "href": "meetups/Meetup-3/meetup-3.html#example-autoregressive-time-series",
+    "title": "DATA 609 Meetup 3",
+    "section": "Example: Autoregressive Time Series",
+    "text": "Example: Autoregressive Time Series\n\nSuppose we have observations \\(y_t\\) and want to predict new \\(y\\) based on previous observations \\[\ny_t = \\theta_1 y_{t-1} + \\theta_2 y_{t-2}+\\cdots+\\theta_n y_{t-n}\n\\]\nHow to write this in our framework?"
+  },
+  {
+    "objectID": "meetups/Meetup-3/meetup-3.html#example-autoregressive-time-series-1",
+    "href": "meetups/Meetup-3/meetup-3.html#example-autoregressive-time-series-1",
+    "title": "DATA 609 Meetup 3",
+    "section": "Example: Autoregressive Time Series",
+    "text": "Example: Autoregressive Time Series\n\nSuppose we have observations \\(y_t\\) and want to predict new \\(y\\) based on previous observations \\[\ny_t = \\theta_1 y_{t-1} + \\theta_2 y_{t-2}+\\cdots+\\theta_n y_{t-n}\n\\]\nHow to write this in our framework?\nDefine \\(\\mathbf{x}_i = \\begin{bmatrix} y_{t-1} & y_{t-2} & \\cdots & y_{t-n} \\end{bmatrix}\\)"
+  },
+  {
+    "objectID": "meetups/Meetup-3/meetup-3.html#example-central-park-temperature",
+    "href": "meetups/Meetup-3/meetup-3.html#example-central-park-temperature",
+    "title": "DATA 609 Meetup 3",
+    "section": "Example: Central Park Temperature",
+    "text": "Example: Central Park Temperature\n\nHourly Central Park Temperature from Jan-March 2023"
+  },
+  {
+    "objectID": "meetups/Meetup-3/meetup-3.html#how-to-predict",
+    "href": "meetups/Meetup-3/meetup-3.html#how-to-predict",
+    "title": "DATA 609 Meetup 3",
+    "section": "How to Predict",
+    "text": "How to Predict\n\nBaseline Mean and Variance:\n\n\\({T}_{\\mathrm{mean}} = 42.5\\), \\(\\sigma_T = 8.57\\)\n\nGuess Temperature from 24 hours before\n\n\\(\\sigma_{lag} = 1.41\\)\n\nHow about using the past 8 hours?: \\[\nT_t = \\sum_{i=1}^8 \\theta_i T_{t-i}\n\\]"
+  },
+  {
+    "objectID": "meetups/Meetup-3/meetup-3.html#setting-up-the-model",
+    "href": "meetups/Meetup-3/meetup-3.html#setting-up-the-model",
+    "title": "DATA 609 Meetup 3",
+    "section": "Setting up the model",
+    "text": "Setting up the model\n\nA = np.array([central_park[\"temp\"].values[i:i+8].T \nfor i in  range(len(central_park)-8)])\nx = central_park[\"temp\"].values[8:]\ntheta = np.linalg.lstsq(A,x)[0]\n\n\nSlight Improvement \\(\\sigma = 1.25\\)"
+  },
+  {
+    "objectID": "meetups/Meetup-3/meetup-3.html#predictions",
+    "href": "meetups/Meetup-3/meetup-3.html#predictions",
+    "title": "DATA 609 Meetup 3",
+    "section": "Predictions",
+    "text": "Predictions\n\n\nText(0, 0.5, 'Temperature')"
+  },
+  {
+    "objectID": "meetups/Meetup-3/meetup-3.html#more-time-series",
+    "href": "meetups/Meetup-3/meetup-3.html#more-time-series",
+    "title": "DATA 609 Meetup 3",
+    "section": "More Time Series",
+    "text": "More Time Series\n\nCan incorporate trends: \\[\nT_t = \\theta_0(i-i_0) + \\sum_{i=1}^8 \\theta_i T_{t-i}\n\\]\nOther variables or functions \\[\nT_t = \\theta_{m}\\mathrm{Month}(i) + \\sum_{i=1}^8 \\theta_i T_{t-i}\n\\]"
+  },
+  {
+    "objectID": "meetups/Meetup-3/meetup-3.html#generalization-and-validation",
+    "href": "meetups/Meetup-3/meetup-3.html#generalization-and-validation",
+    "title": "DATA 609 Meetup 3",
+    "section": "Generalization and Validation",
+    "text": "Generalization and Validation\n\nGoal usually isn’t to find model with absolute lowest RMS error\nInstead want a model that predicts well on new data\nTwo goals often in conflict"
+  },
+  {
+    "objectID": "meetups/Meetup-3/meetup-3.html#example-polynomial-interpolation",
+    "href": "meetups/Meetup-3/meetup-3.html#example-polynomial-interpolation",
+    "title": "DATA 609 Meetup 3",
+    "section": "Example: Polynomial Interpolation",
+    "text": "Example: Polynomial Interpolation\n\nFitting high degree polynomials famously leads to overfitting \\[\ny_i = \\sum_{j=1}^n \\theta_j x^{j-1}\n\\]"
+  },
+  {
+    "objectID": "meetups/Meetup-3/meetup-3.html#fit-results",
+    "href": "meetups/Meetup-3/meetup-3.html#fit-results",
+    "title": "DATA 609 Meetup 3",
+    "section": "Fit Results",
+    "text": "Fit Results\n\nCurve develops unnecessary features at higher order"
+  },
+  {
+    "objectID": "meetups/Meetup-3/meetup-3.html#generalization-error",
+    "href": "meetups/Meetup-3/meetup-3.html#generalization-error",
+    "title": "DATA 609 Meetup 3",
+    "section": "Generalization Error",
+    "text": "Generalization Error\n\nAt high order, generalization fails"
+  },
+  {
+    "objectID": "meetups/Meetup-3/meetup-3.html#regularization",
+    "href": "meetups/Meetup-3/meetup-3.html#regularization",
+    "title": "DATA 609 Meetup 3",
+    "section": "Regularization",
+    "text": "Regularization\n\nAnother way to handle overfitting is with regularization\nAdd term proportional to \\(\\|\\mathbf{\\theta}\\|^2\\) \\[\n\\min_{\\mathbf{\\theta}} \\|A\\mathbf{\\theta}-\\mathbf{y}\\|^2 + \\lambda\\|\\mathbf{\\theta}\\|^2\n\\]\nUse if \\(A\\) is ill-conditioned or many parameters."
+  },
+  {
+    "objectID": "meetups/Meetup-3/meetup-3.html#ridge-regression",
+    "href": "meetups/Meetup-3/meetup-3.html#ridge-regression",
+    "title": "DATA 609 Meetup 3",
+    "section": "Ridge Regression",
+    "text": "Ridge Regression\n\nName comes from geometry\nConsider objective function with a “ridge”"
+  },
+  {
+    "objectID": "meetups/Meetup-3/meetup-3.html#ridge-regression-1",
+    "href": "meetups/Meetup-3/meetup-3.html#ridge-regression-1",
+    "title": "DATA 609 Meetup 3",
+    "section": "Ridge Regression",
+    "text": "Ridge Regression\n\nName comes from geometry\nRegularizer turns ridge to peak"
+  },
+  {
+    "objectID": "meetups/Meetup-3/meetup-3.html#bayesian-linear-regression",
+    "href": "meetups/Meetup-3/meetup-3.html#bayesian-linear-regression",
+    "title": "DATA 609 Meetup 3",
+    "section": "Bayesian Linear Regression",
+    "text": "Bayesian Linear Regression\n\\[\n\\mathbf{y} \\sim \\mathrm{Normal}\\left(X\\theta,\\sigma^2 I\\right) \\\\\n\\mathbf{\\theta} \\sim \\mathrm{Normal}\\left(0, \\frac{1}{\\lambda} I\\right)\n\\]\n\n\\(\\frac{1}{\\lambda}\\) is variance of prior distribution on \\(\\theta\\)\n\\(p(\\theta|X)\\) is normal\n\\(E(\\theta|X)\\) is least squares ridge regression solution"
+  },
+  {
+    "objectID": "meetups/Meetup-3/meetup-3.html#ridge-regression-solution",
+    "href": "meetups/Meetup-3/meetup-3.html#ridge-regression-solution",
+    "title": "DATA 609 Meetup 3",
+    "section": "Ridge Regression Solution",
+    "text": "Ridge Regression Solution\n\nEquivalent to: \\[\n\\left(A^TA + \\lambda I\\right)\\mathbf{\\theta} = A^T\\mathbf{y}\n\\]"
+  },
+  {
+    "objectID": "meetups/Meetup-3/meetup-3.html#feature-engineering",
+    "href": "meetups/Meetup-3/meetup-3.html#feature-engineering",
+    "title": "DATA 609 Meetup 3",
+    "section": "Feature Engineering",
+    "text": "Feature Engineering\n\nCan use domain knowledge to create custom features in your data\nNew feature vectors: \\(f_1(\\mathbf{x})\\), \\(f_2(\\mathbf{x}), \\cdots\\)\nStandard data transforms, log, z-score\nThresholding: \\(f(x) = \\max(0,x)\\)\nDomain Knowledge: \\[ \\mathrm{BMI} =\\frac{\\left(\\mathrm{Weight}\\right)}{\\left(\\mathrm{Height}\\right)^2}\\]"
+  },
+  {
+    "objectID": "meetups/Meetup-3/meetup-3.html#thanks",
+    "href": "meetups/Meetup-3/meetup-3.html#thanks",
+    "title": "DATA 609 Meetup 3",
+    "section": "Thanks!",
+    "text": "Thanks!\n\n\n\n\nDATA 609"
   },
   {
     "objectID": "meetups/Meetup-4/meetup-4.html#everything-in-life-has-constraints",
@@ -770,7 +947,7 @@
     "href": "meetups/Meetup-2/meetup-2.html#condition-number-and-accuracy",
     "title": "Meetup 2: Least Squares",
     "section": "Condition Number and Accuracy",
-    "text": "Condition Number and Accuracy\n\nAccuracy of np.linalg.inv(A) @ b related to \\(\\frac{\\sigma_{max}}{\\sigma_{min}}\\)\nThis is called the “condition number” of the matrix \\(A\\)\n\n\n%timeit np.linalg.inv(A) @ b\n%timeit np.linalg.solve(A,b)\n\nx1 = np.linalg.inv(A) @ b\nx2 = np.linalg.solve(A,b)\n\nprint(\"Matrix Inverse Error: \",np.linalg.norm(A @ x1 - b))\nprint(\"Linear Solve Error: \",np.linalg.norm(A @ x2 - b))\n\n9.12 ms ± 3.78 ms per loop (mean ± std. dev. of 7 runs, 100 loops each)\n2.36 ms ± 8.53 μs per loop (mean ± std. dev. of 7 runs, 100 loops each)\nMatrix Inverse Error:  4.5046139915798193e-07\nLinear Solve Error:  2.571282132354601e-15\n\n\n\n100 million times more accurate, 5 times faster"
+    "text": "Condition Number and Accuracy\n\nAccuracy of np.linalg.inv(A) @ b related to \\(\\frac{\\sigma_{max}}{\\sigma_{min}}\\)\nThis is called the “condition number” of the matrix \\(A\\)\n\n\n%timeit np.linalg.inv(A) @ b\n%timeit np.linalg.solve(A,b)\n\nx1 = np.linalg.inv(A) @ b\nx2 = np.linalg.solve(A,b)\n\nprint(\"Matrix Inverse Error: \",np.linalg.norm(A @ x1 - b))\nprint(\"Linear Solve Error: \",np.linalg.norm(A @ x2 - b))\n\n4.42 ms ± 451 μs per loop (mean ± std. dev. of 7 runs, 100 loops each)\n2.57 ms ± 148 μs per loop (mean ± std. dev. of 7 runs, 100 loops each)\nMatrix Inverse Error:  2.888420840325392e-07\nLinear Solve Error:  2.4543768679181953e-15\n\n\n\n100 million times more accurate, 5 times faster"
   },
   {
     "objectID": "meetups/Meetup-2/meetup-2.html#issue-is-worse-for-ata",
@@ -1023,7 +1200,7 @@
     "href": "index.html",
     "title": "Announcements",
     "section": "",
-    "text": "Be sure to check this page regularly for updates. In addition to periodic updates about the course, slides and recordings of the weekly meetups will be posted here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 4- Constrained Least Squares\n\n\n\n\n\nClick here to read about Week 3.\n\n\n\n\n\nFeb 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Vignette- Linear Algebra in R\n\n\n\n\n\nClick here for a video on basic linear algebra in R.\n\n\n\n\n\nFeb 14, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 3: Least Squares Data Fitting\n\n\n\n\n\nClick here to read more about Meetup 3 and view/download the lecture slides.\n\n\n\n\n\nFeb 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 3- Data Fitting\n\n\n\n\n\nClick here to read about Week 3.\n\n\n\n\n\nFeb 9, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Vignette- Writing Math in Markdown\n\n\n\n\n\nClick here for a 20 minute video on writing math in markdown using Latex.\n\n\n\n\n\nFeb 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Vignette- Linear Algebra in Numpy\n\n\n\n\n\nClick here for a video on basic linear algebra in Numpy.\n\n\n\n\n\nFeb 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 2: Least Squares Optimization\n\n\n\n\n\nClick here to read more about Meetup 2 and view/download the lecture slides.\n\n\n\n\n\nFeb 3, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 2- Least Squares\n\n\n\n\n\nClick here to read about Week 2.\n\n\n\n\n\nFeb 2, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 1: Introduction to Optimization\n\n\n\n\n\nClick here to read more about Meetup 1 and view/download the lecture slides.\n\n\n\n\n\nJan 27, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome to DATA 609\n\n\n\n\n\nImportant information on how to get started with this course. Click this post now for instructions on getting started.\n\n\n\n\n\nJan 26, 2025\n\n\n\n\n\n\nNo matching items",
+    "text": "Be sure to check this page regularly for updates. In addition to periodic updates about the course, slides and recordings of the weekly meetups will be posted here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 4: Least Squares Data Fitting\n\n\n\n\n\nClick here to read more about Meetup 4 and view/download the lecture slides.\n\n\n\n\n\nFeb 17, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 4- Constrained Least Squares\n\n\n\n\n\nClick here to read about Week 3.\n\n\n\n\n\nFeb 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Vignette- Linear Algebra in R\n\n\n\n\n\nClick here for a video on basic linear algebra in R.\n\n\n\n\n\nFeb 14, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 3: Least Squares Data Fitting\n\n\n\n\n\nClick here to read more about Meetup 3 and view/download the lecture slides.\n\n\n\n\n\nFeb 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 3- Data Fitting\n\n\n\n\n\nClick here to read about Week 3.\n\n\n\n\n\nFeb 9, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Vignette- Writing Math in Markdown\n\n\n\n\n\nClick here for a 20 minute video on writing math in markdown using Latex.\n\n\n\n\n\nFeb 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Vignette- Linear Algebra in Numpy\n\n\n\n\n\nClick here for a video on basic linear algebra in Numpy.\n\n\n\n\n\nFeb 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 2: Least Squares Optimization\n\n\n\n\n\nClick here to read more about Meetup 2 and view/download the lecture slides.\n\n\n\n\n\nFeb 3, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 2- Least Squares\n\n\n\n\n\nClick here to read about Week 2.\n\n\n\n\n\nFeb 2, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 1: Introduction to Optimization\n\n\n\n\n\nClick here to read more about Meetup 1 and view/download the lecture slides.\n\n\n\n\n\nJan 27, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome to DATA 609\n\n\n\n\n\nImportant information on how to get started with this course. Click this post now for instructions on getting started.\n\n\n\n\n\nJan 26, 2025\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Announcements"
     ]
@@ -1418,340 +1595,191 @@
     "text": "Here is a math expression \\[\nx+1 = 0\n\\]\nHere is a more complex\n\\[\nx^2_0 + y_1 = 0\n\\]\nHere is how you exert greater control over the sub and superscripts\n\\[\nx^{2y_1-2}_{opt}\n\\]\nHere is how we do a sum\n\\[\n\\sum_{i=1}^{100} x_i\n\\]\nHere is how to write an integral:\n\\[\n\\int_{0}^{\\infty} dx \\exp(-x^2)\n\\]\n\\[\n\\int_{0}^{\\infty} dx e^{-x^2}\n\\]\n\\[\nf(x,y) = \\frac{\\sin(xy) }{1 + \\exp(x+y) }\n\\]\n\\[\nf(x,y) = x + y^2\n\\]\n\\[\n\\frac{\\partial f}{\\partial x} = 1\n\\]\n\\[\n\\frac{\\partial f}{\\partial y} = 2y\n\\]\n\\[\n\\nabla f\n\\]\n\\[\n\\nabla f = \\begin{bmatrix}   \\frac{\\partial f}{\\partial x} & \\frac{\\partial f}{\\partial y}\n\\end{bmatrix} ^T\n\\]\n\\[\n\\nabla f = \\begin{bmatrix}   \\frac{\\partial f}{\\partial x} \\\\ \\frac{\\partial f}{\\partial y}\n\\end{bmatrix}\n\\]\nThe Identity in 3D\n\\[\nI = \\begin{bmatrix} 1 & 0 & 0 \\\\\n                    0 & 1 & 0 \\\\\n                    0 & 0 & 1\n    \\end{bmatrix}\n\\]"
   },
   {
-    "objectID": "meetups/Meetup-3/meetup-3.html#case-study-extending-linear-regression",
-    "href": "meetups/Meetup-3/meetup-3.html#case-study-extending-linear-regression",
-    "title": "DATA 609 Meetup 3",
-    "section": "Case Study: Extending Linear Regression",
-    "text": "Case Study: Extending Linear Regression\nWhat are the validity conditions for linear regression?\n\nLinear Relationship\nIndependent Residuals\nNormal Residuals\n?????"
+    "objectID": "meetups/Meetup-4/HW1Review.html#richardson-iteration",
+    "href": "meetups/Meetup-4/HW1Review.html#richardson-iteration",
+    "title": "Lab 1 Review",
+    "section": "Richardson Iteration",
+    "text": "Richardson Iteration\n\nConsider Problem 3(a), showing that the Pseudoinverse is a fixed point of the Richardson Iteration algorithm:\n\n\\[\nx^{(k+1)} = x^{(k)} - \\mu A^{T}\\left(Ax^{(k)} - b \\right)\n\\]\n\nNext Step: Substitute \\(A^{+}b\\) for \\(x^{(x)}\\):\n\n\\[ x^{(k+1)} = A^{+}b - \\mu A^{(T)}\\left(AA^{+}b - b\\right)\\]"
   },
   {
-    "objectID": "meetups/Meetup-3/meetup-3.html#case-study-extending-linear-regression-1",
-    "href": "meetups/Meetup-3/meetup-3.html#case-study-extending-linear-regression-1",
-    "title": "DATA 609 Meetup 3",
-    "section": "Case Study: Extending Linear Regression",
-    "text": "Case Study: Extending Linear Regression\nWhat are the validity conditions for linear regression?\n\nLinear Relationship\nIndependent Residuals\nNormal Residuals\nHomoscedasticity i.e. constant variance"
+    "objectID": "meetups/Meetup-4/HW1Review.html#most-common-mistake",
+    "href": "meetups/Meetup-4/HW1Review.html#most-common-mistake",
+    "title": "Lab 1 Review",
+    "section": "Most Common Mistake",
+    "text": "Most Common Mistake\n\nMany of you then concluded:\n\n\\[ AA^{+}b - b = 0\\]\n\nSeveral justification, but:\n\n\nA = matrix(rnorm(40),nrow=10,ncol=4)\nb = rnorm(10)\n\nt(A  %*% solve(t(A) %*% A) %*% t(A) %*%  b)\n\n          [,1]       [,2]       [,3]      [,4]       [,5]      [,6]        [,7]\n[1,] 0.2998844 -0.4838825 -0.2342084 0.2650301 -0.8501248 0.4890367 0.007092702\n          [,8]        [,9]      [,10]\n[1,] -0.299175 -0.04825129 -0.5276063"
   },
   {
-    "objectID": "meetups/Meetup-3/meetup-3.html#case-study-homoscedasticity",
-    "href": "meetups/Meetup-3/meetup-3.html#case-study-homoscedasticity",
-    "title": "DATA 609 Meetup 3",
-    "section": "Case Study: Homoscedasticity",
-    "text": "Case Study: Homoscedasticity"
+    "objectID": "meetups/Meetup-4/HW1Review.html#why-isnt-it-true",
+    "href": "meetups/Meetup-4/HW1Review.html#why-isnt-it-true",
+    "title": "Lab 1 Review",
+    "section": "Why isn’t it true?",
+    "text": "Why isn’t it true?\n\n\\(A^+\\)"
   },
   {
-    "objectID": "meetups/Meetup-3/meetup-3.html#unequal-variance-common",
-    "href": "meetups/Meetup-3/meetup-3.html#unequal-variance-common",
-    "title": "DATA 609 Meetup 3",
-    "section": "Unequal Variance Common",
-    "text": "Unequal Variance Common\n\nTypical for Variance to be proportional to magnitude in some way\n\n\nCould try a data transformation, but isn’t satisfying\n\n\nHeterogeneous detectors\n\n\nHave sensor network with mix of types"
-  },
-  {
-    "objectID": "meetups/Meetup-3/meetup-3.html#maximum-likelihood",
-    "href": "meetups/Meetup-3/meetup-3.html#maximum-likelihood",
-    "title": "DATA 609 Meetup 3",
-    "section": "Maximum Likelihood",
-    "text": "Maximum Likelihood\n\nConsider following statistical model for \\(y_i\\) in terms of measurements \\(\\mathbf{x}_i\\): \\[\ny_i \\sim \\mathrm{Normal}\\left(\\mathbf{x}_i^T\\mathbf{\\theta},\\sigma_i\\right)\n\\]\n\\(\\sigma_i^2\\) is variance of measurement of \\(y_i\\)\nLikelihood: \\[\n\\log p(\\mathbf{y}|X,\\theta) = \\log\\left(\\Pi_{i=1}^n \\frac{1}{2\\pi\\sigma_i}\\exp\\left(-\\frac{\\left(y_i-\\mathbf{x}_i^T\\mathbf{\\theta}\\right)^2}{2\\sigma_i^2}  \\right) \\right)\n\\]"
-  },
-  {
-    "objectID": "meetups/Meetup-3/meetup-3.html#maximum-likelihood-1",
-    "href": "meetups/Meetup-3/meetup-3.html#maximum-likelihood-1",
-    "title": "DATA 609 Meetup 3",
-    "section": "Maximum Likelihood",
-    "text": "Maximum Likelihood\n\nConsider following statistical model for \\(y_i\\) in terms of measurements \\(\\mathbf{x}_i\\): \\[\ny_i \\sim \\mathrm{Normal}\\left(\\mathbf{x}_i^T\\mathbf{\\theta},\\sigma_i\\right)\n\\]\n\\(\\sigma_i^2\\) is variance of measurement of \\(y_i\\)\nLikelihood: \\[\n\\log p(\\mathbf{y}|X,\\theta) = -\\frac{n}{2} \\log(2\\pi) - \\sum_{i=1}^n\\log(\\sigma_i) -\n\\left\\|\\mathrm{diag}\\left(1/\\sigma_i\\right)\\left( X \\mathbf{\\theta} - \\mathbf{y}\\right)\\right\\|^2\n\\]"
-  },
-  {
-    "objectID": "meetups/Meetup-3/meetup-3.html#weighted-least-squares",
-    "href": "meetups/Meetup-3/meetup-3.html#weighted-least-squares",
-    "title": "DATA 609 Meetup 3",
-    "section": "Weighted Least Squares",
-    "text": "Weighted Least Squares\n\nMaximum Likelihood Estimate for the Unequal Variance Problem is a Weighted Least Squares optimization:\n\n\\[\n\\min_{\\mathbf{\\theta}} \\|W^{1/2}(X\\mathbf{\\theta} - \\mathbf{y})\\|^2\n\\]\n\nHere the matrix \\(W\\) is a diagonal matrix with \\(\\frac{1}{\\sigma_i^2}\\) on the diagonal entries\nLarge \\(\\sigma_i\\) means error of that term is less important \\[\nX^TWX \\mathbf{\\theta} = X^TW\\mathbf{y}\n\\]"
-  },
-  {
-    "objectID": "meetups/Meetup-3/meetup-3.html#gauss-markov-theorem",
-    "href": "meetups/Meetup-3/meetup-3.html#gauss-markov-theorem",
-    "title": "DATA 609 Meetup 3",
-    "section": "Gauss-Markov Theorem",
-    "text": "Gauss-Markov Theorem\n\nCan extend this result to scenario when measurement errors have a given covariance matrix \\(\\Gamma\\)\nThen \\(W=\\Gamma^{-1}\\) and Weighted Least Squares provides maximum likelihood estimate\nBest Linear Uniased Estimator"
-  },
-  {
-    "objectID": "meetups/Meetup-3/meetup-3.html#when-is-wls-useful",
-    "href": "meetups/Meetup-3/meetup-3.html#when-is-wls-useful",
-    "title": "DATA 609 Meetup 3",
-    "section": "When is WLS useful?",
-    "text": "When is WLS useful?\n\nSample more of one group than another\nErrors vary based on detector or value\nCare about some predictions on some data more than others"
-  },
-  {
-    "objectID": "meetups/Meetup-3/meetup-3.html#weekly-summary",
-    "href": "meetups/Meetup-3/meetup-3.html#weekly-summary",
-    "title": "DATA 609 Meetup 3",
-    "section": "Weekly Summary",
-    "text": "Weekly Summary\n\nReading: Chapter 13 of VMLS\nHW 2 Available, due in 2 weeks\n\nProblem 1 and 2 based on this week\nProblem 3 next week\n\nWill release another numpy coding video, lmk if you prefer a different language"
-  },
-  {
-    "objectID": "meetups/Meetup-3/meetup-3.html#data-fitting",
-    "href": "meetups/Meetup-3/meetup-3.html#data-fitting",
-    "title": "DATA 609 Meetup 3",
-    "section": "Data Fitting",
-    "text": "Data Fitting\n\nHave some observations \\(y_i\\) and \\(\\mathbf{x}_i\\) and want to fit a regression\n\\(m\\) observations, have \\(n\\) basis functions \\(f\\) \\[\ny_i \\sim \\mathrm{Normal}\\left(\\sum_{j=1}^{n} \\theta_j f_j(\\mathbf{x}_i),\\sigma\\right)\n\\]\nNormal errors gives justification for least squares"
-  },
-  {
-    "objectID": "meetups/Meetup-3/meetup-3.html#data-fitting-solution",
-    "href": "meetups/Meetup-3/meetup-3.html#data-fitting-solution",
-    "title": "DATA 609 Meetup 3",
-    "section": "Data Fitting Solution",
-    "text": "Data Fitting Solution\nCan form matrix \\(A\\): \\[\nA = \\begin{bmatrix}\nf_1(\\mathbf{x}_1) & f_2(\\mathbf{x}_1) & \\cdots & f_n(\\mathbf{x}_1) \\\\\n\\vdots & \\vdots & \\vdots & \\vdots \\\\\nf_1(\\mathbf{x}_m) & f_2(\\mathbf{x}_m) & \\cdots & f_n(\\mathbf{x}_m)\n\\end{bmatrix}\n\\]\n\nAnd find: \\[\n\\min_{\\theta} \\|A\\mathbf{\\theta} - \\mathbf{y}\\|^2\n\\]"
-  },
-  {
-    "objectID": "meetups/Meetup-3/meetup-3.html#example-autoregressive-time-series",
-    "href": "meetups/Meetup-3/meetup-3.html#example-autoregressive-time-series",
-    "title": "DATA 609 Meetup 3",
-    "section": "Example: Autoregressive Time Series",
-    "text": "Example: Autoregressive Time Series\n\nSuppose we have observations \\(y_t\\) and want to predict new \\(y\\) based on previous observations \\[\ny_t = \\theta_1 y_{t-1} + \\theta_2 y_{t-2}+\\cdots+\\theta_n y_{t-n}\n\\]\nHow to write this in our framework?"
-  },
-  {
-    "objectID": "meetups/Meetup-3/meetup-3.html#example-autoregressive-time-series-1",
-    "href": "meetups/Meetup-3/meetup-3.html#example-autoregressive-time-series-1",
-    "title": "DATA 609 Meetup 3",
-    "section": "Example: Autoregressive Time Series",
-    "text": "Example: Autoregressive Time Series\n\nSuppose we have observations \\(y_t\\) and want to predict new \\(y\\) based on previous observations \\[\ny_t = \\theta_1 y_{t-1} + \\theta_2 y_{t-2}+\\cdots+\\theta_n y_{t-n}\n\\]\nHow to write this in our framework?\nDefine \\(\\mathbf{x}_i = \\begin{bmatrix} y_{t-1} & y_{t-2} & \\cdots & y_{t-n} \\end{bmatrix}\\)"
-  },
-  {
-    "objectID": "meetups/Meetup-3/meetup-3.html#example-central-park-temperature",
-    "href": "meetups/Meetup-3/meetup-3.html#example-central-park-temperature",
-    "title": "DATA 609 Meetup 3",
-    "section": "Example: Central Park Temperature",
-    "text": "Example: Central Park Temperature\n\nHourly Central Park Temperature from Jan-March 2023"
-  },
-  {
-    "objectID": "meetups/Meetup-3/meetup-3.html#how-to-predict",
-    "href": "meetups/Meetup-3/meetup-3.html#how-to-predict",
-    "title": "DATA 609 Meetup 3",
-    "section": "How to Predict",
-    "text": "How to Predict\n\nBaseline Mean and Variance:\n\n\\({T}_{\\mathrm{mean}} = 42.5\\), \\(\\sigma_T = 8.57\\)\n\nGuess Temperature from 24 hours before\n\n\\(\\sigma_{lag} = 1.41\\)\n\nHow about using the past 8 hours?: \\[\nT_t = \\sum_{i=1}^8 \\theta_i T_{t-i}\n\\]"
-  },
-  {
-    "objectID": "meetups/Meetup-3/meetup-3.html#setting-up-the-model",
-    "href": "meetups/Meetup-3/meetup-3.html#setting-up-the-model",
-    "title": "DATA 609 Meetup 3",
-    "section": "Setting up the model",
-    "text": "Setting up the model\n\nA = np.array([central_park[\"temp\"].values[i:i+8].T \nfor i in  range(len(central_park)-8)])\nx = central_park[\"temp\"].values[8:]\ntheta = np.linalg.lstsq(A,x)[0]\n\n\nSlight Improvement \\(\\sigma = 1.25\\)"
-  },
-  {
-    "objectID": "meetups/Meetup-3/meetup-3.html#predictions",
-    "href": "meetups/Meetup-3/meetup-3.html#predictions",
-    "title": "DATA 609 Meetup 3",
-    "section": "Predictions",
-    "text": "Predictions\n\n\nText(0, 0.5, 'Temperature')"
-  },
-  {
-    "objectID": "meetups/Meetup-3/meetup-3.html#more-time-series",
-    "href": "meetups/Meetup-3/meetup-3.html#more-time-series",
-    "title": "DATA 609 Meetup 3",
-    "section": "More Time Series",
-    "text": "More Time Series\n\nCan incorporate trends: \\[\nT_t = \\theta_0(i-i_0) + \\sum_{i=1}^8 \\theta_i T_{t-i}\n\\]\nOther variables or functions \\[\nT_t = \\theta_{m}\\mathrm{Month}(i) + \\sum_{i=1}^8 \\theta_i T_{t-i}\n\\]"
-  },
-  {
-    "objectID": "meetups/Meetup-3/meetup-3.html#generalization-and-validation",
-    "href": "meetups/Meetup-3/meetup-3.html#generalization-and-validation",
-    "title": "DATA 609 Meetup 3",
-    "section": "Generalization and Validation",
-    "text": "Generalization and Validation\n\nGoal usually isn’t to find model with absolute lowest RMS error\nInstead want a model that predicts well on new data\nTwo goals often in conflict"
-  },
-  {
-    "objectID": "meetups/Meetup-3/meetup-3.html#example-polynomial-interpolation",
-    "href": "meetups/Meetup-3/meetup-3.html#example-polynomial-interpolation",
-    "title": "DATA 609 Meetup 3",
-    "section": "Example: Polynomial Interpolation",
-    "text": "Example: Polynomial Interpolation\n\nFitting high degree polynomials famously leads to overfitting \\[\ny_i = \\sum_{j=1}^n \\theta_j x^{j-1}\n\\]"
-  },
-  {
-    "objectID": "meetups/Meetup-3/meetup-3.html#fit-results",
-    "href": "meetups/Meetup-3/meetup-3.html#fit-results",
-    "title": "DATA 609 Meetup 3",
-    "section": "Fit Results",
-    "text": "Fit Results\n\nCurve develops unnecessary features at higher order"
-  },
-  {
-    "objectID": "meetups/Meetup-3/meetup-3.html#generalization-error",
-    "href": "meetups/Meetup-3/meetup-3.html#generalization-error",
-    "title": "DATA 609 Meetup 3",
-    "section": "Generalization Error",
-    "text": "Generalization Error\n\nAt high order, generalization fails"
-  },
-  {
-    "objectID": "meetups/Meetup-3/meetup-3.html#regularization",
-    "href": "meetups/Meetup-3/meetup-3.html#regularization",
-    "title": "DATA 609 Meetup 3",
-    "section": "Regularization",
-    "text": "Regularization\n\nAnother way to handle overfitting is with regularization\nAdd term proportional to \\(\\|\\mathbf{\\theta}\\|^2\\) \\[\n\\min_{\\mathbf{\\theta}} \\|A\\mathbf{\\theta}-\\mathbf{y}\\|^2 + \\lambda\\|\\mathbf{\\theta}\\|^2\n\\]\nUse if \\(A\\) is ill-conditioned or many parameters."
-  },
-  {
-    "objectID": "meetups/Meetup-3/meetup-3.html#ridge-regression",
-    "href": "meetups/Meetup-3/meetup-3.html#ridge-regression",
-    "title": "DATA 609 Meetup 3",
-    "section": "Ridge Regression",
-    "text": "Ridge Regression\n\nName comes from geometry\nConsider objective function with a “ridge”"
-  },
-  {
-    "objectID": "meetups/Meetup-3/meetup-3.html#ridge-regression-1",
-    "href": "meetups/Meetup-3/meetup-3.html#ridge-regression-1",
-    "title": "DATA 609 Meetup 3",
-    "section": "Ridge Regression",
-    "text": "Ridge Regression\n\nName comes from geometry\nRegularizer turns ridge to peak"
-  },
-  {
-    "objectID": "meetups/Meetup-3/meetup-3.html#bayesian-linear-regression",
-    "href": "meetups/Meetup-3/meetup-3.html#bayesian-linear-regression",
-    "title": "DATA 609 Meetup 3",
-    "section": "Bayesian Linear Regression",
-    "text": "Bayesian Linear Regression\n\\[\n\\mathbf{y} \\sim \\mathrm{Normal}\\left(X\\theta,\\sigma^2 I\\right) \\\\\n\\mathbf{\\theta} \\sim \\mathrm{Normal}\\left(0, \\frac{1}{\\lambda} I\\right)\n\\]\n\n\\(\\frac{1}{\\lambda}\\) is variance of prior distribution on \\(\\theta\\)\n\\(p(\\theta|X)\\) is normal\n\\(E(\\theta|X)\\) is least squares ridge regression solution"
-  },
-  {
-    "objectID": "meetups/Meetup-3/meetup-3.html#ridge-regression-solution",
-    "href": "meetups/Meetup-3/meetup-3.html#ridge-regression-solution",
-    "title": "DATA 609 Meetup 3",
-    "section": "Ridge Regression Solution",
-    "text": "Ridge Regression Solution\n\nEquivalent to: \\[\n\\left(A^TA + \\lambda I\\right)\\mathbf{\\theta} = A^T\\mathbf{y}\n\\]"
-  },
-  {
-    "objectID": "meetups/Meetup-3/meetup-3.html#feature-engineering",
-    "href": "meetups/Meetup-3/meetup-3.html#feature-engineering",
-    "title": "DATA 609 Meetup 3",
-    "section": "Feature Engineering",
-    "text": "Feature Engineering\n\nCan use domain knowledge to create custom features in your data\nNew feature vectors: \\(f_1(\\mathbf{x})\\), \\(f_2(\\mathbf{x}), \\cdots\\)\nStandard data transforms, log, z-score\nThresholding: \\(f(x) = \\max(0,x)\\)\nDomain Knowledge: \\[ \\mathrm{BMI} =\\frac{\\left(\\mathrm{Weight}\\right)}{\\left(\\mathrm{Height}\\right)^2}\\]"
-  },
-  {
-    "objectID": "meetups/Meetup-3/meetup-3.html#thanks",
-    "href": "meetups/Meetup-3/meetup-3.html#thanks",
-    "title": "DATA 609 Meetup 3",
-    "section": "Thanks!",
-    "text": "Thanks!\n\n\n\n\nDATA 609"
-  },
-  {
-    "objectID": "license.html",
-    "href": "license.html",
-    "title": "Attribution-ShareAlike 4.0 International",
+    "objectID": "acknowledgements.html",
+    "href": "acknowledgements.html",
+    "title": "Acknowledgements",
     "section": "",
-    "text": "Creative Commons Corporation (“Creative Commons”) is not a law firm and does not provide legal services or legal advice. Distribution of Creative Commons public licenses does not create a lawyer-client or other relationship. Creative Commons makes its licenses and related information available on an “as-is” basis. Creative Commons gives no warranties regarding its licenses, any material licensed under their terms and conditions, or any related information. Creative Commons disclaims all liability for damages resulting from their use to the fullest extent possible."
-  },
-  {
-    "objectID": "license.html#creative-commons-attribution-sharealike-4.0-international-public-license",
-    "href": "license.html#creative-commons-attribution-sharealike-4.0-international-public-license",
-    "title": "Attribution-ShareAlike 4.0 International",
-    "section": "Creative Commons Attribution-ShareAlike 4.0 International Public License",
-    "text": "Creative Commons Attribution-ShareAlike 4.0 International Public License\nBy exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and conditions of this Creative Commons Attribution-ShareAlike 4.0 International Public License (“Public License”). To the extent this Public License may be interpreted as a contract, You are granted the Licensed Rights in consideration of Your acceptance of these terms and conditions, and the Licensor grants You such rights in consideration of benefits the Licensor receives from making the Licensed Material available under these terms and conditions.\n\nSection 1 – Definitions.\n\nAdapted Material means material subject to Copyright and Similar Rights that is derived from or based upon the Licensed Material and in which the Licensed Material is translated, altered, arranged, transformed, or otherwise modified in a manner requiring permission under the Copyright and Similar Rights held by the Licensor. For purposes of this Public License, where the Licensed Material is a musical work, performance, or sound recording, Adapted Material is always produced where the Licensed Material is synched in timed relation with a moving image.\nAdapter’s License means the license You apply to Your Copyright and Similar Rights in Your contributions to Adapted Material in accordance with the terms and conditions of this Public License.\nBY-SA Compatible License means a license listed at creativecommons.org/compatiblelicenses, approved by Creative Commons as essentially the equivalent of this Public License.\nCopyright and Similar Rights means copyright and/or similar rights closely related to copyright including, without limitation, performance, broadcast, sound recording, and Sui Generis Database Rights, without regard to how the rights are labeled or categorized. For purposes of this Public License, the rights specified in Section 2(b)(1)-(2) are not Copyright and Similar Rights.\nEffective Technological Measures means those measures that, in the absence of proper authority, may not be circumvented under laws fulfilling obligations under Article 11 of the WIPO Copyright Treaty adopted on December 20, 1996, and/or similar international agreements.\nExceptions and Limitations means fair use, fair dealing, and/or any other exception or limitation to Copyright and Similar Rights that applies to Your use of the Licensed Material.\nLicense Elements means the license attributes listed in the name of a Creative Commons Public License. The License Elements of this Public License are Attribution and ShareAlike.\nLicensed Material means the artistic or literary work, database, or other material to which the Licensor applied this Public License.\nLicensed Rights means the rights granted to You subject to the terms and conditions of this Public License, which are limited to all Copyright and Similar Rights that apply to Your use of the Licensed Material and that the Licensor has authority to license.\nLicensor means the individual(s) or entity(ies) granting rights under this Public License.\nShare means to provide material to the public by any means or process that requires permission under the Licensed Rights, such as reproduction, public display, public performance, distribution, dissemination, communication, or importation, and to make material available to the public including in ways that members of the public may access the material from a place and at a time individually chosen by them.\nSui Generis Database Rights means rights other than copyright resulting from Directive 96/9/EC of the European Parliament and of the Council of 11 March 1996 on the legal protection of databases, as amended and/or succeeded, as well as other essentially equivalent rights anywhere in the world.\nYou means the individual or entity exercising the Licensed Rights under this Public License. Your has a corresponding meaning.\n\n\n\nSection 2 – Scope.\n\nLicense grant.\n\nSubject to the terms and conditions of this Public License, the Licensor hereby grants You a worldwide, royalty-free, non-sublicensable, non-exclusive, irrevocable license to exercise the Licensed Rights in the Licensed Material to:\n\nreproduce and Share the Licensed Material, in whole or in part; and\nproduce, reproduce, and Share Adapted Material.\n\nExceptions and Limitations. For the avoidance of doubt, where Exceptions and Limitations apply to Your use, this Public License does not apply, and You do not need to comply with its terms and conditions.\nTerm. The term of this Public License is specified in Section 6(a).\nMedia and formats; technical modifications allowed. The Licensor authorizes You to exercise the Licensed Rights in all media and formats whether now known or hereafter created, and to make technical modifications necessary to do so. The Licensor waives and/or agrees not to assert any right or authority to forbid You from making technical modifications necessary to exercise the Licensed Rights, including technical modifications necessary to circumvent Effective Technological Measures. For purposes of this Public License, simply making modifications authorized by this Section 2(a)(4) never produces Adapted Material.\nDownstream recipients.\nA. Offer from the Licensor – Licensed Material. Every recipient of the Licensed Material automatically receives an offer from the Licensor to exercise the Licensed Rights under the terms and conditions of this Public License.\n\n__Additional offer from the Licensor – Adapted Material. Every recipient of Adapted Material from You automatically receives an offer from the Licensor to exercise the Licensed Rights in the Adapted Material under the conditions of the Adapter’s License You apply.\n\nC. No downstream restrictions. You may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, the Licensed Material if doing so restricts exercise of the Licensed Rights by any recipient of the Licensed Material.\nNo endorsement. Nothing in this Public License constitutes or may be construed as permission to assert or imply that You are, or that Your use of the Licensed Material is, connected with, or sponsored, endorsed, or granted official status by, the Licensor or others designated to receive attribution as provided in Section 3(a)(1)(A)(i).\n\nOther rights.\n\nMoral rights, such as the right of integrity, are not licensed under this Public License, nor are publicity, privacy, and/or other similar personality rights; however, to the extent possible, the Licensor waives and/or agrees not to assert any such rights held by the Licensor to the limited extent necessary to allow You to exercise the Licensed Rights, but not otherwise.\nPatent and trademark rights are not licensed under this Public License.\nTo the extent possible, the Licensor waives any right to collect royalties from You for the exercise of the Licensed Rights, whether directly or through a collecting society under any voluntary or waivable statutory or compulsory licensing scheme. In all other cases the Licensor expressly reserves any right to collect such royalties.\n\n\n\n\nSection 3 – License Conditions.\nYour exercise of the Licensed Rights is expressly made subject to the following conditions.\n\nAttribution.\n\nIf You Share the Licensed Material (including in modified form), You must:\n\nretain the following if it is supplied by the Licensor with the Licensed Material:\n\n\n\nidentification of the creator(s) of the Licensed Material and any others designated to receive attribution, in any reasonable manner requested by the Licensor (including by pseudonym if designated);\na copyright notice;\na notice that refers to this Public License;\na notice that refers to the disclaimer of warranties;\na URI or hyperlink to the Licensed Material to the extent reasonably practicable;\n\n\n\nindicate if You modified the Licensed Material and retain an indication of any previous modifications; and\nindicate the Licensed Material is licensed under this Public License, and include the text of, or the URI or hyperlink to, this Public License.\n\nYou may satisfy the conditions in Section 3(a)(1) in any reasonable manner based on the medium, means, and context in which You Share the Licensed Material. For example, it may be reasonable to satisfy the conditions by providing a URI or hyperlink to a resource that includes the required information.\nIf requested by the Licensor, You must remove any of the information required by Section 3(a)(1)(A) to the extent reasonably practicable.\n\nShareAlike.\n\nIn addition to the conditions in Section 3(a), if You Share Adapted Material You produce, the following conditions also apply.\n\nThe Adapter’s License You apply must be a Creative Commons license with the same License Elements, this version or later, or a BY-SA Compatible License.\nYou must include the text of, or the URI or hyperlink to, the Adapter’s License You apply. You may satisfy this condition in any reasonable manner based on the medium, means, and context in which You Share Adapted Material.\nYou may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, Adapted Material that restrict exercise of the rights granted under the Adapter’s License You apply.\n\n\n\nSection 4 – Sui Generis Database Rights.\nWhere the Licensed Rights include Sui Generis Database Rights that apply to Your use of the Licensed Material:\n\nfor the avoidance of doubt, Section 2(a)(1) grants You the right to extract, reuse, reproduce, and Share all or a substantial portion of the contents of the database;\nif You include all or a substantial portion of the database contents in a database in which You have Sui Generis Database Rights, then the database in which You have Sui Generis Database Rights (but not its individual contents) is Adapted Material, including for purposes of Section 3(b); and\nYou must comply with the conditions in Section 3(a) if You Share all or a substantial portion of the contents of the database.\n\nFor the avoidance of doubt, this Section 4 supplements and does not replace Your obligations under this Public License where the Licensed Rights include other Copyright and Similar Rights.\n\n\nSection 5 – Disclaimer of Warranties and Limitation of Liability.\n\nUnless otherwise separately undertaken by the Licensor, to the extent possible, the Licensor offers the Licensed Material as-is and as-available, and makes no representations or warranties of any kind concerning the Licensed Material, whether express, implied, statutory, or other. This includes, without limitation, warranties of title, merchantability, fitness for a particular purpose, non-infringement, absence of latent or other defects, accuracy, or the presence or absence of errors, whether or not known or discoverable. Where disclaimers of warranties are not allowed in full or in part, this disclaimer may not apply to You.\nTo the extent possible, in no event will the Licensor be liable to You on any legal theory (including, without limitation, negligence) or otherwise for any direct, special, indirect, incidental, consequential, punitive, exemplary, or other losses, costs, expenses, or damages arising out of this Public License or use of the Licensed Material, even if the Licensor has been advised of the possibility of such losses, costs, expenses, or damages. Where a limitation of liability is not allowed in full or in part, this limitation may not apply to You.\nThe disclaimer of warranties and limitation of liability provided above shall be interpreted in a manner that, to the extent possible, most closely approximates an absolute disclaimer and waiver of all liability.\n\n\n\nSection 6 – Term and Termination.\n\nThis Public License applies for the term of the Copyright and Similar Rights licensed here. However, if You fail to comply with this Public License, then Your rights under this Public License terminate automatically.\nWhere Your right to use the Licensed Material has terminated under Section 6(a), it reinstates:\n\nautomatically as of the date the violation is cured, provided it is cured within 30 days of Your discovery of the violation; or\nupon express reinstatement by the Licensor.\n\nFor the avoidance of doubt, this Section 6(b) does not affect any right the Licensor may have to seek remedies for Your violations of this Public License.\nFor the avoidance of doubt, the Licensor may also offer the Licensed Material under separate terms or conditions or stop distributing the Licensed Material at any time; however, doing so will not terminate this Public License.\nSections 1, 5, 6, 7, and 8 survive termination of this Public License.\n\n\n\nSection 7 – Other Terms and Conditions.\n\nThe Licensor shall not be bound by any additional or different terms or conditions communicated by You unless expressly agreed.\nAny arrangements, understandings, or agreements regarding the Licensed Material not stated herein are separate from and independent of the terms and conditions of this Public License.t stated herein are separate from and independent of the terms and conditions of this Public License.\n\n\n\nSection 8 – Interpretation.\n\nFor the avoidance of doubt, this Public License does not, and shall not be interpreted to, reduce, limit, restrict, or impose conditions on any use of the Licensed Material that could lawfully be made without permission under this Public License.\nTo the extent possible, if any provision of this Public License is deemed unenforceable, it shall be automatically reformed to the minimum extent necessary to make it enforceable. If the provision cannot be reformed, it shall be severed from this Public License without affecting the enforceability of the remaining terms and conditions.\nNo term or condition of this Public License will be waived and no failure to comply consented to unless expressly agreed to by the Licensor.\nNothing in this Public License constitutes or may be interpreted as a limitation upon, or waiver of, any privileges and immunities that apply to the Licensor or You, including from the legal processes of any jurisdiction or authority.\n\n\nCreative Commons is not a party to its public licenses. Notwithstanding, Creative Commons may elect to apply one of its public licenses to material it publishes and in those instances will be considered the “Licensor.” Except for the limited purpose of indicating that material is shared under a Creative Commons public license or as otherwise permitted by the Creative Commons policies published at creativecommons.org/policies, Creative Commons does not authorize the use of the trademark “Creative Commons” or any other trademark or logo of Creative Commons without its prior written consent including, without limitation, in connection with any unauthorized modifications to any of its public licenses or any other arrangements, understandings, or agreements concerning use of licensed material. For the avoidance of doubt, this paragraph does not form part of the public licenses.\nCreative Commons may be contacted at creativecommons.org"
-  },
-  {
-    "objectID": "modules/module11.html",
-    "href": "modules/module11.html",
-    "title": "Module 11 - Convex Optimization Problems in Statistics",
-    "section": "",
-    "text": "Homework\nHomework 6 is due in two weeks, next Sunday at midnight\n\n\nLearning Objectives\n\nMaximum Likelihood and Maximum Entropy Methods\nMaximum Posterior Probability and Bayesian Inference\nLogistic Regression\nExperiment Design\n\n\n\nReadings\nSections 7.1, 7.2, and 7.5 of Convex Optimization",
+    "text": "This website would not be possible without the quarto package. This course draws inspiration from several open educational resources on the internet, including two books and accompanying materials by Stephen Boyd and Lieven Vandenberghe: Introduction to Applied Linear Algebra and Convex Optimization",
     "crumbs": [
-      "Topics",
-      "11 - Convex Optimization in Statistics"
+      "Acknowledgements"
     ]
   },
   {
-    "objectID": "modules/module8.html",
-    "href": "modules/module8.html",
-    "title": "Module 8: Convex Functions II",
+    "objectID": "modules/module5.html",
+    "href": "modules/module5.html",
+    "title": "Module 5 - Convex Sets",
     "section": "",
-    "text": "Learning Objectives\n\nQuasiconvex Functions\nLog-Convexity/Concavity\nGeneralized Inequalities and Convexity\n\n\n\nReadings\nSections 3.4-3.6 of Convex Optimization",
+    "text": "Homework 3 is due in two weeks, Sunday at midnight\n\n\n\nDefinition of Affine and Convex Sets\nExamples of Convex Sets\nOperations that Preserve Convexity of Sets\n\n\n\n\nSections 2.1-2.3 of Convex Optimization\nSection 2.1 of Introduction to Algorithms for Machine Learning",
     "crumbs": [
       "Topics",
-      "8 - Convex Functions II"
+      "5 - Convex Sets"
     ]
   },
   {
-    "objectID": "modules/module14.html",
-    "href": "modules/module14.html",
-    "title": "Module 14: Stochastic Gradient Descent",
+    "objectID": "modules/module5.html#homework",
+    "href": "modules/module5.html#homework",
+    "title": "Module 5 - Convex Sets",
     "section": "",
-    "text": "Homework\nHomework 7 is due this Sunday at midnight\n\n\nLearning Objectives\n\nStochastic Gradient Descent\nHyperparameter Tuning\nSaddle Points and Convergence\n\n\n\nReadings\nSection 8.5 Introduction to Algorithms for Data Mining and Machine Learning\nChapter 8 of deeplearningbook",
+    "text": "Homework 3 is due in two weeks, Sunday at midnight\n\n\n\nDefinition of Affine and Convex Sets\nExamples of Convex Sets\nOperations that Preserve Convexity of Sets\n\n\n\n\nSections 2.1-2.3 of Convex Optimization\nSection 2.1 of Introduction to Algorithms for Machine Learning",
     "crumbs": [
       "Topics",
-      "14 - Stochastic Gradient Descent"
+      "5 - Convex Sets"
     ]
   },
   {
-    "objectID": "modules/module15.html",
-    "href": "modules/module15.html",
-    "title": "Module 15 - Deep Learning Applications",
+    "objectID": "modules/module12.html",
+    "href": "modules/module12.html",
+    "title": "Module 12: Duality and Classifiers",
     "section": "",
-    "text": "Learning Objectives\n\nTraining Deep Neural Networks\n\n\n\nReadings\nGoodfellow Chapter 11 of the deeplearningbook",
+    "text": "Learning Objectives\n\nDual Formulation of Optimization Problems\nLagrange Multipliers\nLinear and Nonlinear Classifiers, LDA\nSupport Vector Machines\n\n\n\nReadings\nSections 8.1, 8.2, 8.6, 8.7, 8.8 Convex Optimization",
     "crumbs": [
       "Topics",
-      "15 - Training Deep Neural Networks"
+      "12 - Duality and Classifiers"
     ]
   },
   {
-    "objectID": "modules/module2.html",
-    "href": "modules/module2.html",
-    "title": "Module 2 - Introduction to Least Squares Problems",
+    "objectID": "modules/module9.html",
+    "href": "modules/module9.html",
+    "title": "Module 9: Convex Optimization Problems and Disciplined Convex Programming",
     "section": "",
-    "text": "Overview and Deliverables\nHomework 1 is due this Sunday at midnight\n\n\nLearning Objectives\n\nSolving unconstrained least squares problems\n\nProperties of the Gram matrix and the pseudoinverse\nBasic Numerical Linear Algebra Considerations\n\nApplications:\n\nOptimization\nLinear Regression\n\n\n\n\nReadings\nChapter 12 of Introduction to Applied Linear Algebra",
+    "text": "Homework\nHomework 5 is due next week, Sunday at midnight.\n\n\nLearning Objectives\n\nDefinition of Convex Optimization Problem\nProblem Transformations\nImportant Subclasses of Convex Optimization Problems\nDiscilined Convex Programming and CVX\nVector Optimization and Scalarization\n\n\n\nReadings\nSections 4.1-4.4, 4.6-4.7 of Convex Optimization\nCVX users guide, read one of these: -python -R -julia",
     "crumbs": [
       "Topics",
-      "2 - Least Squares Optimization"
+      "9 - Convex Optimization and Disciplined Convex Programming"
     ]
   },
   {
-    "objectID": "modules/module7.html",
-    "href": "modules/module7.html",
-    "title": "Module 7: Convex Functions",
+    "objectID": "modules/module10.html",
+    "href": "modules/module10.html",
+    "title": "Module 10 - Convex Problems in Data Fitting",
     "section": "",
-    "text": "Learning Objectives\n\nDefinitions of Convex Functions\nImportant Examples of Convex Functions\nJensen’s Inequality\nOperations that Preserve Convexity\nConvex Conjugates\n\n\n\nReadings\nSections 3.1-2.3 of Convex Optimization",
+    "text": "Homework 5 is due this Sunday at midnight\n\n\n\nRegularization- lasso and Huber penalties\nFunction fitting, splines, and interpolation\n\n\n\n\nChapter 6 of Convex Optimization",
     "crumbs": [
       "Topics",
-      "7 - Convex Functions"
+      "10 - Data Fitting"
     ]
   },
   {
-    "objectID": "modules/module1.html",
-    "href": "modules/module1.html",
-    "title": "Module 1 - Introduction to Optimization Problems",
+    "objectID": "modules/module10.html#homework",
+    "href": "modules/module10.html#homework",
+    "title": "Module 10 - Convex Problems in Data Fitting",
     "section": "",
-    "text": "Overview and Deliverables\n\nLearning Objectives\n\nYou will learn about how optimization problems are formalized and the terminology used to describe them\nUbiquity of Optimization problems in data science\nWe will define several important classes of optimization problems:\n\nUnconstrained versus Constrained\nConvex versus Non-Convex\nGlobal versus Local\n\nWhy optimization is hard\n\n\n\nReadings\nChapter 1 Introduction to Algorithms for Data Mining and Machine Learning\nChapter 1 of Convex Optimization\nIf you want to brush up on your linear algebra skills:\nEssential Linear Algebra for Machine Learning\nAppendix A1, A3-A5 of Convex Optimization\nThe mathematical level of those appendices are above what I expect from you in the course, I think the essential linear algebra notes are less intimidating.",
+    "text": "Homework 5 is due this Sunday at midnight\n\n\n\nRegularization- lasso and Huber penalties\nFunction fitting, splines, and interpolation\n\n\n\n\nChapter 6 of Convex Optimization",
     "crumbs": [
       "Topics",
-      "1 - Introduction to Optimization Theory "
+      "10 - Data Fitting"
     ]
   },
   {
-    "objectID": "posts/2025-02-05-Writing-Math-In-Markdown-Vid.html",
-    "href": "posts/2025-02-05-Writing-Math-In-Markdown-Vid.html",
-    "title": "Coding Vignette- Writing Math in Markdown",
+    "objectID": "modules/module6.html",
+    "href": "modules/module6.html",
+    "title": "Module 6 - Convex Sets II",
     "section": "",
-    "text": "When working as a data scientist, and in particular, communicating your results and work in a technical document, you will need to be able to write mathematical expressions. One powerful tool for doing this is called LaTeX. LaTex is a its own programming language designed for rendering technical publications. It is commonly used in math and scientific fields, but a small subset of the language has been adopted in other environments including Microsoft Word and markdown, allowing you to render math using LaTeX commands. Knowing how to do this will be helpful for your homeworks, so I’ve decided to make a short video showing you the very basics of how this works.\nClick here to watch the video on youtube\nThere are a number of documents on the internet which explain the finer details of latex, and most of the lecture slides I shared use it, so you can see examples of how it works. I have also included the ipython notebook"
+    "text": "Homework 3 is due this Sunday at midnight\n\n\n\nGeneralized Inequalities\nSupporting and Separating Hyperplanes\nDual Cones\n\n\n\n\nSections 2.4-2.6 of Convex Optimization",
+    "crumbs": [
+      "Topics",
+      "6 - Convex Sets II"
+    ]
   },
   {
-    "objectID": "posts/2025-02-03-Meetup-2-Slides.html",
-    "href": "posts/2025-02-03-Meetup-2-Slides.html",
-    "title": "Meetup 2: Least Squares Optimization",
+    "objectID": "modules/module6.html#homework",
+    "href": "modules/module6.html#homework",
+    "title": "Module 6 - Convex Sets II",
     "section": "",
-    "text": "Meetup 2 is tonight at 6:45PM. We will introduce least squares optimization, which is the most commonly used and possibly most important type of optimization problem. We will go through a few applications to illustrate least squares in its simplest formulation, and discuss some practical issues with solving least squares problems.\nHere is the information you need for the first meetup:\n\nGo through the course overview materials, and complete the week 2 readings.\nAttend our first meetup on Monday at 6:45 p.m. ET on Zoom\nClick here for slides"
+    "text": "Homework 3 is due this Sunday at midnight\n\n\n\nGeneralized Inequalities\nSupporting and Separating Hyperplanes\nDual Cones\n\n\n\n\nSections 2.4-2.6 of Convex Optimization",
+    "crumbs": [
+      "Topics",
+      "6 - Convex Sets II"
+    ]
   },
   {
-    "objectID": "posts/2025-02-16-Week-4-Constrained-Least-Squares.html",
-    "href": "posts/2025-02-16-Week-4-Constrained-Least-Squares.html",
-    "title": "Week 4- Constrained Least Squares",
+    "objectID": "modules/module3.html",
+    "href": "modules/module3.html",
+    "title": "Module 3: Statistical Applications of Least Squares",
     "section": "",
-    "text": "This week we will learn how to deal with linear equality constraints in least squares optimization problems. There will be a discussion of Lagrange multipliers, and application examples will include B-splines and portfolio optimization. Constraints are a critical part of both optimization problems and modeling in general.\nYour second homework assignment will be due Sunday February 23rd.\nHere are more details on what you need to do this week:\n\nGo through module 4 and complete the week 4 readings.\nAttend our second meetup on Monday at 6:45 p.m. ET on Zoom\nContinue working on Lab 2"
+    "text": "This week we will learn more about the applications of least squares methods in statistics. We will learn about how weighted least squares methods allow us to apply linear regression in more cases, including those with heteroscedastic errors. Then we will show how to fit data using interpolating functions, and autoregressive models for time series. This discussion will lead into feature engineerging. Finally, we will explore validation and regularization, which is our first example of multi-objective least squares.\n\nDeliverables\nHomework 2 will be due Sunday, February 23rd at midnight.\n\n\nLearning Objectives\n\nLeast Squares and Linear Regression\nGeneralized Least Squares\nRecursive/Online Least Squares\nRegularization and Multi-Objective Least Squares\n\n\n\nReadings\nChapters 13 of Introduction to Applied Linear Algebra\nChapter 14 (on classification methods) is interesting but we won’t cover it.\nSections 4.2 and 4.5 of Introduction to Algorithms for Data Mining and Machine Learning",
+    "crumbs": [
+      "Topics",
+      "3 - Least Squares and Statistics"
+    ]
   },
   {
-    "objectID": "posts/2025-02-02-Week-2-Least-Squares.html",
-    "href": "posts/2025-02-02-Week-2-Least-Squares.html",
-    "title": "Week 2- Least Squares",
+    "objectID": "modules/module13.html",
+    "href": "modules/module13.html",
+    "title": "Module 13: Local Optimization Algorithms and Neural Networks",
     "section": "",
-    "text": "This week we will talk about the most basic and most important class of optimization problems, least squares optimization. Whenever you fit a linear regression, you are solving a least squares problems, and least squares methods have applications across all quantitative fields. Although least squares methods are simple, they should not be dismissed- the fact that we can solve them rapidly, reliably means that it is useful to know how to formulate them in applied situations and how to solve them.\nIn this week we will go over the basics and a few simple applications, while the two weeks after this will explore data fitting examples and how to handle more complicated cases.\nYour first homework assignment will be due next Sunday.\nHere are more details on what you need to do this week:\n\nGo through module 2 and complete the week 2 readings.\nAttend our second meetup on Monday at 6:45 p.m. ET on Zoom\nContinue working on Lab 1"
+    "text": "Homework\nHomework 7 is due in two weeks, Sunday at midnight\n\n\nLearning Objectives\n\nNeural Network Learning and Backpropagation\nGradient Descent\nNewton’s Method\nConvergence Rates and Condition Number\nAcceleration Using Momentum\n\n\n\nReadings\nChapter 9 of Convex Optimization\nChapter 8.1-8.4 of Introduction to Algorithms for Data Mining Machine Learning\nOr alternatively deeplearningbook Chapter 6",
+    "crumbs": [
+      "Topics",
+      "13 - Local Optimization and Neural Networks"
+    ]
   },
   {
-    "objectID": "posts/2025-02-10-Meetup-3-Slides.html",
-    "href": "posts/2025-02-10-Meetup-3-Slides.html",
-    "title": "Meetup 3: Least Squares Data Fitting",
+    "objectID": "modules/module4.html",
+    "href": "modules/module4.html",
+    "title": "Module 4 - Constrained Least Squares and Applications",
     "section": "",
-    "text": "Meetup 3 is tonight at 6:45PM. We will tall about applications of least squares to problems in statistics and data fitting, including the use of weighted least squares for problems with heterogeneous or dependent errors, function interpolation and autoregressive time-series models, validation and regularization, ridge regression, and feature engineering.\nHere is the information you need for the first meetup:\n\nGo through the course overview materials, and complete the week 3 readings.\nAttend our first meetup on Monday at 6:45 p.m. ET on Zoom\nClick here for slides"
+    "text": "Homework\nHomework 2 is due this Sunday at midnight\n\n\nLearning Objectives\n\nSolving Least Squares problems with Linear Equality Constraints\nApplications to Portfolio Optimization\nApplications to B-Splines\n\n\n\nReadings\nChapters 16 and 17 of Introduction to Applied Linear Algebra",
+    "crumbs": [
+      "Topics",
+      "4 - Constrained Least Squares and Applications"
+    ]
+  },
+  {
+    "objectID": "posts/2025-02-05-Linear-Algebra-In-Python.html",
+    "href": "posts/2025-02-05-Linear-Algebra-In-Python.html",
+    "title": "Coding Vignette- Linear Algebra in Numpy",
+    "section": "",
+    "text": "I’m not sure how many of you have had experience with using python for linear algebra, so I decided to make a short video that goes over the basics of numpy (you are free to use R or Julia as well). I also solve a problem where I re-express the formula for the pseudoinverse of a matrix using the singular value decomposition of that matrix. I did it sort of to show how you might write out a long math expression in markdown, and to talk about matrix algebra and the properties of the SVD. This calculation is quite a bit more invovled than what I am asking on the homework, so don’t be intimidated.\nClick here to watch the video on youtube\nYou may also find the numpy documentation helpful: Click Here\nI have also included the ipython notebook"
+  },
+  {
+    "objectID": "posts/2025-01-27-Meetup-1-Slides.html",
+    "href": "posts/2025-01-27-Meetup-1-Slides.html",
+    "title": "Meetup 1: Introduction to Optimization",
+    "section": "",
+    "text": "Meetup 1 is tonight at 6:45PM. We are going to talk about what optimization is, some of its applications, the course structure, and some very basic facts about its theory.\nHere is the information you need for the first meetup:\n\nGo through the course overview materials, and complete the week 1 readings.\nAttend our first meetup on Monday at 6:45 p.m. ET on Zoom\nClick here for slides"
+  },
+  {
+    "objectID": "posts/2025-01-26-Welcome_to_DATA_609.html",
+    "href": "posts/2025-01-26-Welcome_to_DATA_609.html",
+    "title": "Welcome to DATA 609",
+    "section": "",
+    "text": "Welcome to DATA 609, Math Modeling Techniques.\nClick this post now to get started!\nHere are the first steps:\n\nRead the syllabus.\nGo through the course overview materials, and complete the week 1 readings.\nJoin our Slack channel:\n\nAttend our first meetup on Monday at 6:45 p.m. ET on Zoom\n\nI recorded a short video which introduces me and gives you more background on the course:\n\nClick here for slides"
+  },
+  {
+    "objectID": "posts/2025-02-10-Data-Fitting.html",
+    "href": "posts/2025-02-10-Data-Fitting.html",
+    "title": "Week 3- Data Fitting",
+    "section": "",
+    "text": "This week, we will discuss applications of least squares methods to statistics and data fitting. This will include weighted least squares methods for linear regression, function interpolation, auto-regressive models, and feature engineering, and generalization/regularization.\nYour second homework assignment will be due Sunday February 23rd.\nHere are more details on what you need to do this week:\n\nGo through module 3 and complete the week 3 readings.\nAttend our second meetup on Monday at 6:45 p.m. ET on Zoom\nBegin working on Lab 2"
+  },
+  {
+    "objectID": "posts/2025-02-14-Linear-Algebra-In_R.html",
+    "href": "posts/2025-02-14-Linear-Algebra-In_R.html",
+    "title": "Coding Vignette- Linear Algebra in R",
+    "section": "",
+    "text": "For those of you that prefer to work in R, I decided to make a video going through the basics of matrix manipulations and linear algebra in R. At the end I redo one of the examples from the last meetup. Although matrices aren’t commonly used in introductory R classes, they do become quite prominent for more advanced applications (consider tidymodels which can return matrices where the entries are different models).\nClick here to watch the video on youtube\nThe linear algebra routines are all in base R: Click Here for a Tutorial\nI have also included the R script with the code that I entered"
   },
   {
     "objectID": "course/syllabus.html",
@@ -1780,7 +1808,7 @@
     "href": "course/schedule.html#meetup-link",
     "title": "DATA 609 Spring 2025",
     "section": "Meetup Link:",
-    "text": "Meetup Link:\nClick Here to Join the Meetups on Zoom\n\nCourse Schedule\n\n\nDate\nStart Time\nModule\nSlides\nVideo\n\n\n\n\nJan 27\n06:45PM\nIntroduction to Optimization Theory\nMeetup 1 Slides\nMeetup 1 Video\n\n\nFeb 3\n06:45PM\nLeast Squares Optimization\nMeetup 2 Slides\nMeetup 2 Video\n\n\nFeb 10\n06:45PM\nLeast Squares and Statistics\nMeetup 3 Slides\nMeetup 3 Video\n\n\nFeb 17\n06:45PM\nConstrained Least Squares and Applications\n\n\n\n\nFeb 24\n06:45PM\nConvex Sets\n\n\n\n\nMar 3\n06:45PM\nConvex Sets II\n\n\n\n\nMar 10\n06:45PM\nConvex Functions\n\n\n\n\nMar 17\n06:45PM\nConvex Functions II\n\n\n\n\nMar 24\n07:0PM\nConvex Optimization Problems\n\n\n\n\nMar 31\n06:45PM\nData Fitting\n\n\n\n\nApr 7\n06:45PM\nApplications to Statistics and Machine Learning\n\n\n\n\nApr 14\n06:45PM\nDuality and Classifiers\n\n\n\n\nApr 21\n\nNo Meetup (Spring Break)\n\n\n\n\nApr 28\n06:45PM\nGradient Descent and Neural Networks\nLab 7\n\n\n\nMay 5\n06:45PM\nStochastic Gradient Descent\n\n\n\n\nMay 12\n06:45PM\nTraining Deep Neural Networks",
+    "text": "Meetup Link:\nClick Here to Join the Meetups on Zoom\n\nCourse Schedule\n\n\nDate\nStart Time\nModule\nSlides\nVideo\n\n\n\n\nJan 27\n06:45PM\nIntroduction to Optimization Theory\nMeetup 1 Slides\nMeetup 1 Video\n\n\nFeb 3\n06:45PM\nLeast Squares Optimization\nMeetup 2 Slides\nMeetup 2 Video\n\n\nFeb 10\n06:45PM\nLeast Squares and Statistics\nMeetup 3 Slides\nMeetup 3 Video\n\n\nFeb 17\n06:45PM\nConstrained Least Squares and Applications\nMeetup 4 Slides\nMeetup 4 Video\n\n\nFeb 24\n06:45PM\nConvex Sets\n\n\n\n\nMar 3\n06:45PM\nConvex Sets II\n\n\n\n\nMar 10\n06:45PM\nConvex Functions\n\n\n\n\nMar 17\n06:45PM\nConvex Functions II\n\n\n\n\nMar 24\n07:0PM\nConvex Optimization Problems\n\n\n\n\nMar 31\n06:45PM\nData Fitting\n\n\n\n\nApr 7\n06:45PM\nApplications to Statistics and Machine Learning\n\n\n\n\nApr 14\n06:45PM\nDuality and Classifiers\n\n\n\n\nApr 21\n\nNo Meetup (Spring Break)\n\n\n\n\nApr 28\n06:45PM\nGradient Descent and Neural Networks\nLab 7\n\n\n\nMay 5\n06:45PM\nStochastic Gradient Descent\n\n\n\n\nMay 12\n06:45PM\nTraining Deep Neural Networks",
     "crumbs": [
       "Course information",
       "Schedule"
