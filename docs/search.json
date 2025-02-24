@@ -47,6 +47,13 @@
     "text": "Meetup 3 is tonight at 6:45PM. We will tall about applications of least squares to problems in statistics and data fitting, including the use of weighted least squares for problems with heterogeneous or dependent errors, function interpolation and autoregressive time-series models, validation and regularization, ridge regression, and feature engineering.\nHere is the information you need for the first meetup:\n\nGo through the course overview materials, and complete the week 3 readings.\nAttend our first meetup on Monday at 6:45 p.m. ET on Zoom\nClick here for slides"
   },
   {
+    "objectID": "posts/2025-02-10-Data-Fitting.html",
+    "href": "posts/2025-02-10-Data-Fitting.html",
+    "title": "Week 3- Data Fitting",
+    "section": "",
+    "text": "This week, we will discuss applications of least squares methods to statistics and data fitting. This will include weighted least squares methods for linear regression, function interpolation, auto-regressive models, and feature engineering, and generalization/regularization.\nYour second homework assignment will be due Sunday February 23rd.\nHere are more details on what you need to do this week:\n\nGo through module 3 and complete the week 3 readings.\nAttend our second meetup on Monday at 6:45 p.m. ET on Zoom\nBegin working on Lab 2"
+  },
+  {
     "objectID": "posts/2025-02-02-Week-2-Least-Squares.html",
     "href": "posts/2025-02-02-Week-2-Least-Squares.html",
     "title": "Week 2- Least Squares",
@@ -947,7 +954,7 @@
     "href": "meetups/Meetup-2/meetup-2.html#condition-number-and-accuracy",
     "title": "Meetup 2: Least Squares",
     "section": "Condition Number and Accuracy",
-    "text": "Condition Number and Accuracy\n\nAccuracy of np.linalg.inv(A) @ b related to \\(\\frac{\\sigma_{max}}{\\sigma_{min}}\\)\nThis is called the “condition number” of the matrix \\(A\\)\n\n\n%timeit np.linalg.inv(A) @ b\n%timeit np.linalg.solve(A,b)\n\nx1 = np.linalg.inv(A) @ b\nx2 = np.linalg.solve(A,b)\n\nprint(\"Matrix Inverse Error: \",np.linalg.norm(A @ x1 - b))\nprint(\"Linear Solve Error: \",np.linalg.norm(A @ x2 - b))\n\n3.52 ms ± 255 μs per loop (mean ± std. dev. of 7 runs, 100 loops each)\n2.32 ms ± 8.77 μs per loop (mean ± std. dev. of 7 runs, 100 loops each)\nMatrix Inverse Error:  6.249516046535281e-07\nLinear Solve Error:  2.4824250551108883e-15\n\n\n\n100 million times more accurate, 5 times faster"
+    "text": "Condition Number and Accuracy\n\nAccuracy of np.linalg.inv(A) @ b related to \\(\\frac{\\sigma_{max}}{\\sigma_{min}}\\)\nThis is called the “condition number” of the matrix \\(A\\)\n\n\n%timeit np.linalg.inv(A) @ b\n%timeit np.linalg.solve(A,b)\n\nx1 = np.linalg.inv(A) @ b\nx2 = np.linalg.solve(A,b)\n\nprint(\"Matrix Inverse Error: \",np.linalg.norm(A @ x1 - b))\nprint(\"Linear Solve Error: \",np.linalg.norm(A @ x2 - b))\n\n3.57 ms ± 302 μs per loop (mean ± std. dev. of 7 runs, 100 loops each)\n2.31 ms ± 5.16 μs per loop (mean ± std. dev. of 7 runs, 100 loops each)\nMatrix Inverse Error:  3.3553873355623617e-07\nLinear Solve Error:  2.15172781202488e-15\n\n\n\n100 million times more accurate, 5 times faster"
   },
   {
     "objectID": "meetups/Meetup-2/meetup-2.html#issue-is-worse-for-ata",
@@ -1350,7 +1357,7 @@
     "href": "index.html",
     "title": "Announcements",
     "section": "",
-    "text": "Be sure to check this page regularly for updates. In addition to periodic updates about the course, slides and recordings of the weekly meetups will be posted here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 4: Least Squares Data Fitting\n\n\n\n\n\nClick here to read more about Meetup 4 and view/download the lecture slides.\n\n\n\n\n\nFeb 17, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 4- Constrained Least Squares\n\n\n\n\n\nClick here to read about Week 3.\n\n\n\n\n\nFeb 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Vignette- Linear Algebra in R\n\n\n\n\n\nClick here for a video on basic linear algebra in R.\n\n\n\n\n\nFeb 14, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 3: Least Squares Data Fitting\n\n\n\n\n\nClick here to read more about Meetup 3 and view/download the lecture slides.\n\n\n\n\n\nFeb 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 3- Data Fitting\n\n\n\n\n\nClick here to read about Week 3.\n\n\n\n\n\nFeb 9, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Vignette- Writing Math in Markdown\n\n\n\n\n\nClick here for a 20 minute video on writing math in markdown using Latex.\n\n\n\n\n\nFeb 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Vignette- Linear Algebra in Numpy\n\n\n\n\n\nClick here for a video on basic linear algebra in Numpy.\n\n\n\n\n\nFeb 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 2: Least Squares Optimization\n\n\n\n\n\nClick here to read more about Meetup 2 and view/download the lecture slides.\n\n\n\n\n\nFeb 3, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 2- Least Squares\n\n\n\n\n\nClick here to read about Week 2.\n\n\n\n\n\nFeb 2, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 1: Introduction to Optimization\n\n\n\n\n\nClick here to read more about Meetup 1 and view/download the lecture slides.\n\n\n\n\n\nJan 27, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome to DATA 609\n\n\n\n\n\nImportant information on how to get started with this course. Click this post now for instructions on getting started.\n\n\n\n\n\nJan 26, 2025\n\n\n\n\n\n\nNo matching items",
+    "text": "Be sure to check this page regularly for updates. In addition to periodic updates about the course, slides and recordings of the weekly meetups will be posted here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 5- Constrained Least Squares\n\n\n\n\n\nClick here to read about Week 5.\n\n\n\n\n\nFeb 24, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 5: Least Squares Data Fitting\n\n\n\n\n\nClick here to read more about Meetup 5 and view/download the lecture slides.\n\n\n\n\n\nFeb 17, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 4: Least Squares Data Fitting\n\n\n\n\n\nClick here to read more about Meetup 4 and view/download the lecture slides.\n\n\n\n\n\nFeb 17, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 4- Constrained Least Squares\n\n\n\n\n\nClick here to read about Week 3.\n\n\n\n\n\nFeb 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Vignette- Linear Algebra in R\n\n\n\n\n\nClick here for a video on basic linear algebra in R.\n\n\n\n\n\nFeb 14, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 3: Least Squares Data Fitting\n\n\n\n\n\nClick here to read more about Meetup 3 and view/download the lecture slides.\n\n\n\n\n\nFeb 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 3- Data Fitting\n\n\n\n\n\nClick here to read about Week 3.\n\n\n\n\n\nFeb 9, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Vignette- Writing Math in Markdown\n\n\n\n\n\nClick here for a 20 minute video on writing math in markdown using Latex.\n\n\n\n\n\nFeb 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Vignette- Linear Algebra in Numpy\n\n\n\n\n\nClick here for a video on basic linear algebra in Numpy.\n\n\n\n\n\nFeb 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 2: Least Squares Optimization\n\n\n\n\n\nClick here to read more about Meetup 2 and view/download the lecture slides.\n\n\n\n\n\nFeb 3, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 2- Least Squares\n\n\n\n\n\nClick here to read about Week 2.\n\n\n\n\n\nFeb 2, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 1: Introduction to Optimization\n\n\n\n\n\nClick here to read more about Meetup 1 and view/download the lecture slides.\n\n\n\n\n\nJan 27, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome to DATA 609\n\n\n\n\n\nImportant information on how to get started with this course. Click this post now for instructions on getting started.\n\n\n\n\n\nJan 26, 2025\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Announcements"
     ]
@@ -1571,7 +1578,7 @@
     "href": "meetups/Meetup-5/meetup-5.html#zoology-of-optimization-problems",
     "title": "Meetup 5: Convex Sets",
     "section": "Zoology of Optimization Problems",
-    "text": "Zoology of Optimization Problems\n\\[ \\min_{\\mathbf{x}} f(\\mathbf{x}) \\\\\ng_i(\\mathbf{x}) \\leq 0, i=1, \\cdots, p\n\\] - Different “names” for optimization problems based on what \\(f\\) and \\(g\\) are"
+    "text": "Zoology of Optimization Problems\n\\[ \\min_{\\mathbf{x}} f(\\mathbf{x}) \\\\\ng_i(\\mathbf{x}) \\leq 0, i=1, \\cdots, p\n\\]\n\nDifferent “names” for optimization problems based on what \\(f\\) and \\(g\\) are"
   },
   {
     "objectID": "meetups/Meetup-5/meetup-5.html#zoology-linear-programs-lp",
@@ -1585,7 +1592,7 @@
     "href": "meetups/Meetup-5/meetup-5.html#zoology-quadratic-programming-qp",
     "title": "Meetup 5: Convex Sets",
     "section": "Zoology: Quadratic Programming (QP)",
-    "text": "Zoology: Quadratic Programming (QP)\n\\[ \\min_{\\mathbf{x}} \\frac{1}{2} \\mathbf{x}^T P \\mathbf{x} + \\mathbf{c}^T\\mathbf{x} \\\\\nA\\mathbf{x} \\leq \\mathbf{d}\n\\] - \\(P\\) positive (semi)-definite"
+    "text": "Zoology: Quadratic Programming (QP)\n\\[ \\min_{\\mathbf{x}} \\frac{1}{2} \\mathbf{x}^T P \\mathbf{x} + \\mathbf{c}^T\\mathbf{x} \\\\\nA\\mathbf{x} \\leq \\mathbf{d}\n\\]\n\n\\(P\\) positive (semi)-definite"
   },
   {
     "objectID": "meetups/Meetup-5/meetup-5.html#zoology-quadratic-programming-quadratic-constraints-qcqp",
@@ -1613,21 +1620,28 @@
     "href": "meetups/Meetup-5/meetup-5.html#development-1",
     "title": "Meetup 5: Convex Sets",
     "section": "Development",
-    "text": "Development"
+    "text": "Development\n\nRobert Vanderbei/NY Times 1984"
+  },
+  {
+    "objectID": "meetups/Meetup-5/meetup-5.html#development-2",
+    "href": "meetups/Meetup-5/meetup-5.html#development-2",
+    "title": "Meetup 5: Convex Sets",
+    "section": "Development",
+    "text": "Development\n\nwikipedia"
   },
   {
     "objectID": "meetups/Meetup-5/meetup-5.html#weeks-ahead",
     "href": "meetups/Meetup-5/meetup-5.html#weeks-ahead",
     "title": "Meetup 5: Convex Sets",
     "section": "Week(s) Ahead",
-    "text": "Week(s) Ahead\n\nWe begin convex optimization today\nWe will learn how to recognize and formulate convex problems\nAt first it will seem weird, but stick with it"
+    "text": "Week(s) Ahead\n\nWe begin convex optimization today\nWe will learn how to recognize and formulate convex problems\nAt first it will seem weird, but stick with it\nNext two weeks: Understanding whether constraint sets are convex"
   },
   {
     "objectID": "meetups/Meetup-5/meetup-5.html#how-will-we-solve-convex-problems",
     "href": "meetups/Meetup-5/meetup-5.html#how-will-we-solve-convex-problems",
     "title": "Meetup 5: Convex Sets",
     "section": "How will we solve Convex Problems?",
-    "text": "How will we solve Convex Problems?\n\nimport cvxpy as cp\nx = cp.Variable()\ny = cp.Variable()\n\n# DCP problems.\nprob1 = cp.Problem(cp.Minimize(cp.square(x - y)),\n                    [x + y &gt;= 0,\n                    x &gt;= 4,\n                    y &lt;= 1])\nprob1.solve()"
+    "text": "How will we solve Convex Problems?\n\nFor us \\(f\\) will be convex and so will be the constraint set\nThe hard part is recognizing the convexity, algorithms are very well developed\n\n\nimport cvxpy as cp\nx = cp.Variable()\ny = cp.Variable()\n\n# DCP problems.\nprob1 = cp.Problem(cp.Minimize(cp.square(x - y)),\n                    [x + y &gt;= 0,\n                    x &gt;= 4,\n                    y &lt;= 1])\nprob1.solve()"
   },
   {
     "objectID": "meetups/Meetup-5/meetup-5.html#what-is-a-convex-set",
@@ -1665,18 +1679,11 @@
     "text": "Why is Convexity Important?\n\n\n\n\n\n\n\n\n\n\n\n\n\nNonconvex\nMany local min"
   },
   {
-    "objectID": "meetups/Meetup-5/meetup-5.html#affine-sets-lines-planes-hyperplanes",
-    "href": "meetups/Meetup-5/meetup-5.html#affine-sets-lines-planes-hyperplanes",
+    "objectID": "meetups/Meetup-5/meetup-5.html#convex-combinations",
+    "href": "meetups/Meetup-5/meetup-5.html#convex-combinations",
     "title": "Meetup 5: Convex Sets",
-    "section": "Affine Sets (Lines, Planes, Hyperplanes)",
-    "text": "Affine Sets (Lines, Planes, Hyperplanes)\n\n\n\n\\(y = ax + b\\)\nSolutions of: \\[\nA\\mathbf{x} = \\mathbf{d}\n\\]\nUnderdetermined Case"
-  },
-  {
-    "objectID": "meetups/Meetup-5/meetup-5.html#affine-combinations",
-    "href": "meetups/Meetup-5/meetup-5.html#affine-combinations",
-    "title": "Meetup 5: Convex Sets",
-    "section": "Affine Combinations",
-    "text": "Affine Combinations\n\nIf we have two points \\(\\mathbf{x}_1\\) and \\(\\mathbf{x}_2\\), an affine combination is: \\[\n\\theta_1\\mathbf{x}_1 + (1-\\theta_1)\\mathbf{x}_2,\n\\]\n\nwhere \\(0\\leq\\theta_1\\leq 1\\)\n\nGenearlize to more points (weighted averages): \\[\n\\sum_i \\theta_i\\mathbf{x}_i, \\quad 0\\leq \\theta_i, \\quad\n\\sum_i \\theta_i = 1\n\\]"
+    "section": "Convex Combinations",
+    "text": "Convex Combinations\n\nIf we have two points \\(\\mathbf{x}_1\\) and \\(\\mathbf{x}_2\\), an affine combination is: \\[\n\\theta_1\\mathbf{x}_1 + (1-\\theta_1)\\mathbf{x}_2,\n\\]\n\nwhere \\(0\\leq\\theta_1\\leq 1\\)\n\nGenearlize to more points (weighted averages): \\[\n\\sum_i \\theta_i\\mathbf{x}_i, \\quad 0\\leq \\theta_i, \\quad\n\\sum_i \\theta_i = 1\n\\]"
   },
   {
     "objectID": "meetups/Meetup-5/meetup-5.html#math-definition-of-convex-sets",
@@ -1691,6 +1698,13 @@
     "title": "Meetup 5: Convex Sets",
     "section": "Definition Not Useful In Practice",
     "text": "Definition Not Useful In Practice\n\nUsing the definition is a last resort\nInstead, we will use a constructive approach\n\nHave example convex sets\nHave operations that preserve convexity\nWrite target set use operations on examples"
+  },
+  {
+    "objectID": "meetups/Meetup-5/meetup-5.html#affine-sets-lines-planes-hyperplanes",
+    "href": "meetups/Meetup-5/meetup-5.html#affine-sets-lines-planes-hyperplanes",
+    "title": "Meetup 5: Convex Sets",
+    "section": "Affine Sets (Lines, Planes, Hyperplanes)",
+    "text": "Affine Sets (Lines, Planes, Hyperplanes)\n\n\n\n\\(y = ax + b\\)\nSolutions of: \\[\nA\\mathbf{x} = \\mathbf{d}\n\\]\nUnderdetermined Case"
   },
   {
     "objectID": "meetups/Meetup-5/meetup-5.html#convex-hull",
@@ -1774,7 +1788,7 @@
     "href": "meetups/Meetup-5/meetup-5.html#recommended-values-become-inequalities",
     "title": "Meetup 5: Convex Sets",
     "section": "Recommended Values Become Inequalities",
-    "text": "Recommended Values Become Inequalities\n\n\\(\\mathbf{w}\\) is the diet vector, containing how much of each food we buy per person\nLet \\(\\mathbf{v}_j\\) be the \\(j\\)th row of \\(V\\) how much of nutrient \\(j\\) each food contains\nThen for each nutrient get an inequalities: \\[\nl_{min,j} \\leq \\mathbf{n}_j^T \\mathbf{w} \\leq l_{max,i}\n\\]"
+    "text": "Recommended Values Become Inequalities\n\n\\(\\mathbf{w}\\) is the diet vector, containing how much of each food we buy per person\nLet \\(\\mathbf{v}_j\\) be the \\(j\\)th row of \\(V\\) how much of nutrient \\(j\\) each food contains\nThen for each nutrient get an inequalities: \\[\nl_{min,j} \\leq \\mathbf{v}_j^T \\mathbf{w} \\leq l_{max,i}\n\\]"
   },
   {
     "objectID": "meetups/Meetup-5/meetup-5.html#rdv-constraints",
@@ -1914,7 +1928,7 @@
     "href": "meetups/Meetup-4/HW1Review.html#most-common-mistake",
     "title": "Lab 1 Review",
     "section": "Most Common Mistake",
-    "text": "Most Common Mistake\n\nMany of you then concluded:\n\n\\[ AA^{+}b - b = 0\\]\n\nSeveral justification, but:\n\n\nA = matrix(rnorm(40),nrow=10,ncol=4)\nb = rnorm(10)\n\nt(A  %*% solve(t(A) %*% A) %*% t(A) %*%  b)\n\n           [,1]       [,2]      [,3]       [,4]       [,5]      [,6]      [,7]\n[1,] -0.1271196 -0.8433756 0.4970556 -0.7883271 -0.0531673 0.6807317 0.2106199\n           [,8]       [,9]     [,10]\n[1,] -0.5332971 0.04200963 0.9867126"
+    "text": "Most Common Mistake\n\nMany of you then concluded:\n\n\\[ AA^{+}b - b = 0\\]\n\nSeveral justification, but:\n\n\nA = matrix(rnorm(40),nrow=10,ncol=4)\nb = rnorm(10)\n\nt(A  %*% solve(t(A) %*% A) %*% t(A) %*%  b)\n\n          [,1]       [,2]       [,3]      [,4]       [,5]      [,6]        [,7]\n[1,] 0.2016832 -0.0798653 -0.3922465 0.3864129 -0.3555732 0.3103154 -0.03452382\n         [,8]      [,9]     [,10]\n[1,] 0.236501 0.4839439 0.2901775"
   },
   {
     "objectID": "meetups/Meetup-4/HW1Review.html#why-isnt-it-true",
@@ -1938,7 +1952,7 @@
     "href": "modules/module5.html",
     "title": "Module 5 - Convex Sets",
     "section": "",
-    "text": "Homework 3 is due in two weeks, Sunday at midnight\n\n\n\nDefinition of Affine and Convex Sets\nExamples of Convex Sets\nOperations that Preserve Convexity of Sets\n\n\n\n\nSections 2.1-2.3 of Convex Optimization\nSection 2.1 of Introduction to Algorithms for Machine Learning",
+    "text": "Homework 3 is due in two weeks, Sunday at midnight\n\n\n\nDefinition of Affine and Convex Sets\nExamples of Convex Sets\n\n\n\n\n\nSections 2.1-2.3 of Convex Optimization\nSection 2.1 of Introduction to Algorithms for Machine Learning\nWe will use CVX for the first time in the next two weeks. If you have time go to https://www.cvxpy.org/tutorial/dcp/ or https://cvxr.rbind.io/cvxr_examples/cvxr_intro/ to begin learning the basics",
     "crumbs": [
       "Topics",
       "5 - Convex Sets"
@@ -1949,7 +1963,7 @@
     "href": "modules/module5.html#homework",
     "title": "Module 5 - Convex Sets",
     "section": "",
-    "text": "Homework 3 is due in two weeks, Sunday at midnight\n\n\n\nDefinition of Affine and Convex Sets\nExamples of Convex Sets\nOperations that Preserve Convexity of Sets\n\n\n\n\nSections 2.1-2.3 of Convex Optimization\nSection 2.1 of Introduction to Algorithms for Machine Learning",
+    "text": "Homework 3 is due in two weeks, Sunday at midnight\n\n\n\nDefinition of Affine and Convex Sets\nExamples of Convex Sets\n\n\n\n\n\nSections 2.1-2.3 of Convex Optimization\nSection 2.1 of Introduction to Algorithms for Machine Learning\nWe will use CVX for the first time in the next two weeks. If you have time go to https://www.cvxpy.org/tutorial/dcp/ or https://cvxr.rbind.io/cvxr_examples/cvxr_intro/ to begin learning the basics",
     "crumbs": [
       "Topics",
       "5 - Convex Sets"
@@ -2076,11 +2090,18 @@
     "text": "Welcome to DATA 609, Math Modeling Techniques.\nClick this post now to get started!\nHere are the first steps:\n\nRead the syllabus.\nGo through the course overview materials, and complete the week 1 readings.\nJoin our Slack channel:\n\nAttend our first meetup on Monday at 6:45 p.m. ET on Zoom\n\nI recorded a short video which introduces me and gives you more background on the course:\n\nClick here for slides"
   },
   {
-    "objectID": "posts/2025-02-10-Data-Fitting.html",
-    "href": "posts/2025-02-10-Data-Fitting.html",
-    "title": "Week 3- Data Fitting",
+    "objectID": "posts/2025-02-24-Week-5-Convex-Sets.html",
+    "href": "posts/2025-02-24-Week-5-Convex-Sets.html",
+    "title": "Week 5- Constrained Least Squares",
     "section": "",
-    "text": "This week, we will discuss applications of least squares methods to statistics and data fitting. This will include weighted least squares methods for linear regression, function interpolation, auto-regressive models, and feature engineering, and generalization/regularization.\nYour second homework assignment will be due Sunday February 23rd.\nHere are more details on what you need to do this week:\n\nGo through module 3 and complete the week 3 readings.\nAttend our second meetup on Monday at 6:45 p.m. ET on Zoom\nBegin working on Lab 2"
+    "text": "During this week we will begin learning the tools we need to formulate and solve convex optimization problems. We will talk more about general optimization problems and look at convexity from the perspective of constraints. We will present the definition of a convex set and give several example, and discuss how these examples arise when formulating problems.\nYour third homework assignment has been posted and is going to be due two Sundays from now.\nHere are more details on what you need to do this week:\n\nGo through module 5 and complete the week 4 readings.\nAttend our second meetup on Monday at 6:45 p.m. ET on Zoom\nBegin working on Lab 3"
+  },
+  {
+    "objectID": "posts/2025-02-24-Meetup-5-Slides.html",
+    "href": "posts/2025-02-24-Meetup-5-Slides.html",
+    "title": "Meetup 5: Least Squares Data Fitting",
+    "section": "",
+    "text": "I have uploaded the slides for Meetup 5, which happened tonight at 6:45PM\nWe will learn about convex optimization and examples of convex sets, which are used as constraints in convex optimization problems.\n\nClick here for slides"
   },
   {
     "objectID": "posts/2025-02-14-Linear-Algebra-In_R.html",

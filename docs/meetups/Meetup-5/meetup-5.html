@@ -408,7 +408,10 @@ George I. Hagstrom
 <h2>Zoology of Optimization Problems</h2>
 <p><span class="math display">\[ \min_{\mathbf{x}} f(\mathbf{x}) \\
 g_i(\mathbf{x}) \leq 0, i=1, \cdots, p
-\]</span> - Different “names” for optimization problems based on what <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are</p>
+\]</span></p>
+<ul>
+<li>Different “names” for optimization problems based on what <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are</li>
+</ul>
 </section>
 <section id="zoology-linear-programs-lp" class="slide level2">
 <h2>Zoology: Linear Programs (LP)</h2>
@@ -420,7 +423,10 @@ A\mathbf{x} \leq \mathbf{d}
 <h2>Zoology: Quadratic Programming (QP)</h2>
 <p><span class="math display">\[ \min_{\mathbf{x}} \frac{1}{2} \mathbf{x}^T P \mathbf{x} + \mathbf{c}^T\mathbf{x} \\
 A\mathbf{x} \leq \mathbf{d}
-\]</span> - <span class="math inline">\(P\)</span> positive (semi)-definite</p>
+\]</span></p>
+<ul>
+<li><span class="math inline">\(P\)</span> positive (semi)-definite</li>
+</ul>
 </section>
 <section id="zoology-quadratic-programming-quadratic-constraints-qcqp" class="slide level2">
 <h2>Zoology: Quadratic Programming Quadratic Constraints (QCQP)</h2>
@@ -452,18 +458,27 @@ A\mathbf{x} = \mathbf{b}
 <section id="development-1" class="slide level2">
 <h2>Development</h2>
 
-<img data-src="nytimes.png" class="r-stretch"></section>
+<img data-src="nytimes.png" class="r-stretch quarto-figure-center"><p class="caption">Robert Vanderbei/NY Times 1984</p></section>
+<section id="development-2" class="slide level2">
+<h2>Development</h2>
+
+<img data-src="Hierarchy_compact_convex.png" class="r-stretch quarto-figure-center"><p class="caption">wikipedia</p></section>
 <section id="weeks-ahead" class="slide level2">
 <h2>Week(s) Ahead</h2>
 <ul>
 <li>We begin convex optimization today</li>
 <li>We will learn how to recognize and formulate convex problems</li>
 <li>At first it will seem weird, but stick with it</li>
+<li>Next two weeks: Understanding whether constraint sets are convex</li>
 </ul>
 </section>
 <section id="how-will-we-solve-convex-problems" class="slide level2">
 <h2>How will we solve Convex Problems?</h2>
-<div id="c608d4f4" class="cell" data-execution_count="1">
+<ul>
+<li><p>For us <span class="math inline">\(f\)</span> will be convex and so will be the constraint set</p></li>
+<li><p>The hard part is recognizing the convexity, algorithms are very well developed</p></li>
+</ul>
+<div id="015ce1c0" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="im">import</span> cvxpy <span class="im">as</span> cp</span>
 <span id="cb1-2"><a></a>x <span class="op">=</span> cp.Variable()</span>
 <span id="cb1-3"><a></a>y <span class="op">=</span> cp.Variable()</span>
@@ -501,7 +516,7 @@ A\mathbf{x} = \mathbf{b}
 <h2>Why is Convexity Important?</h2>
 <div class="columns">
 <div class="column" style="width:70%;">
-<div id="c4e05aec" class="cell" data-execution_count="2">
+<div id="dce6f536" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -521,7 +536,7 @@ A\mathbf{x} = \mathbf{b}
 <h2>Why is Convexity Important?</h2>
 <div class="columns">
 <div class="column" style="width:70%;">
-<div id="d4c446e6" class="cell" data-execution_count="3">
+<div id="d53538f1" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -537,31 +552,8 @@ A\mathbf{x} = \mathbf{b}
 </ul>
 </div></div>
 </section>
-<section id="affine-sets-lines-planes-hyperplanes" class="slide level2">
-<h2>Affine Sets (Lines, Planes, Hyperplanes)</h2>
-<div class="columns">
-<div class="column" data-widt="50%">
-<ul>
-<li><span class="math inline">\(y = ax + b\)</span></li>
-<li>Solutions of: <span class="math display">\[
-A\mathbf{x} = \mathbf{d}
-\]</span></li>
-<li>Underdetermined Case</li>
-</ul>
-</div><div class="column" style="width:50%;">
-<div id="40ceb659" class="cell" data-execution_count="4">
-<div class="cell-output cell-output-display">
-<div>
-<figure>
-<p><img data-src="meetup-5_files/figure-revealjs/cell-5-output-1.png" width="478" height="464"></p>
-</figure>
-</div>
-</div>
-</div>
-</div></div>
-</section>
-<section id="affine-combinations" class="slide level2">
-<h2>Affine Combinations</h2>
+<section id="convex-combinations" class="slide level2">
+<h2>Convex Combinations</h2>
 <ul>
 <li>If we have two points <span class="math inline">\(\mathbf{x}_1\)</span> and <span class="math inline">\(\mathbf{x}_2\)</span>, an affine combination is: <span class="math display">\[
 \theta_1\mathbf{x}_1 + (1-\theta_1)\mathbf{x}_2,
@@ -580,11 +572,11 @@ A\mathbf{x} = \mathbf{d}
 <ul>
 <li>A set is convex is for every pair of points <span class="math inline">\(\mathbf{x}_1\)</span> and <span class="math inline">\(\mathbf{x}_2\)</span> in the set, every convex combination of those two points is in the set.</li>
 </ul>
-<div id="ed8d1a20" class="cell" data-execution_count="5">
+<div id="4decad7f" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
-<p><img data-src="meetup-5_files/figure-revealjs/cell-6-output-1.png" width="499" height="342"></p>
+<p><img data-src="meetup-5_files/figure-revealjs/cell-5-output-1.png" width="499" height="342"></p>
 </figure>
 </div>
 </div>
@@ -601,6 +593,29 @@ A\mathbf{x} = \mathbf{d}
 <li>Write target set use operations on examples</li>
 </ol></li>
 </ul>
+</section>
+<section id="affine-sets-lines-planes-hyperplanes" class="slide level2">
+<h2>Affine Sets (Lines, Planes, Hyperplanes)</h2>
+<div class="columns">
+<div class="column" data-widt="50%">
+<ul>
+<li><span class="math inline">\(y = ax + b\)</span></li>
+<li>Solutions of: <span class="math display">\[
+A\mathbf{x} = \mathbf{d}
+\]</span></li>
+<li>Underdetermined Case</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div id="063159b8" class="cell" data-execution_count="5">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="meetup-5_files/figure-revealjs/cell-6-output-1.png" width="478" height="464"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
 </section>
 <section id="convex-hull" class="slide level2">
 <h2>Convex Hull</h2>
@@ -773,7 +788,7 @@ A\mathbf{x} = \mathbf{d}
 <li><span class="math inline">\(\mathbf{w}\)</span> is the diet vector, containing how much of each food we buy per person</li>
 <li>Let <span class="math inline">\(\mathbf{v}_j\)</span> be the <span class="math inline">\(j\)</span>th row of <span class="math inline">\(V\)</span> how much of nutrient <span class="math inline">\(j\)</span> each food contains</li>
 <li>Then for each nutrient get an inequalities: <span class="math display">\[
-l_{min,j} \leq \mathbf{n}_j^T \mathbf{w} \leq l_{max,i}
+l_{min,j} \leq \mathbf{v}_j^T \mathbf{w} \leq l_{max,i}
 \]</span></li>
 </ul>
 </section>
@@ -833,7 +848,7 @@ U\mathbf{w} \preceq \mathbf{l}
 <li><span class="math inline">\(\mathbf{c}^T\mathbf{x} \leq d\)</span></li>
 </ul>
 </div><div class="column" style="width:50%;">
-<div id="d45bb363" class="cell" data-execution_count="6">
+<div id="13d6d4b9" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -851,7 +866,7 @@ U\mathbf{w} \preceq \mathbf{l}
 B(\mathbf{x}_c,r) = \{\mathbf{x}\,|\, \|\mathbf{x}-\mathbf{x}_c\|\leq r\}
 \]</span></li>
 </ul>
-<div id="3577750c" class="cell" data-execution_count="7">
+<div id="e017a459" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -868,7 +883,7 @@ B(\mathbf{x}_c,r) = \{\mathbf{x}\,|\, \|\mathbf{x}-\mathbf{x}_c\|\leq r\}
 E(\mathbf{x}_c,P) = \{\mathbf{x}\,|\, (\mathbf{x}-\mathbf{x}_c)^TP^{-1}(\mathbf{x}-\mathbf{x}_x)\leq 1\}
 \]</span></li>
 </ul>
-<div id="58c69634" class="cell" data-execution_count="8">
+<div id="8ec3608e" class="cell" data-execution_count="8">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -907,7 +922,7 @@ E(\mathbf{x}_c,P) = \{\mathbf{x}\,|\, \|A\mathbf{x}-\mathbf{x_c}  \|\leq 1  \},
 <li>Cone is a set which has the following property:</li>
 <li>If <span class="math inline">\(\mathbf{x}\)</span> is in the cone, then <span class="math inline">\(\theta \mathbf{x}\)</span> is also in the cone, for <span class="math inline">\(\theta\geq 0\)</span></li>
 </ul>
-<div id="7b6f4942" class="cell" data-execution_count="9">
+<div id="07e441bd" class="cell" data-execution_count="9">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -927,7 +942,7 @@ E(\mathbf{x}_c,P) = \{\mathbf{x}\,|\, \|A\mathbf{x}-\mathbf{x_c}  \|\leq 1  \},
 \]</span></li>
 </ul>
 </div><div class="column" style="width:50%;">
-<div id="67c00c5d" class="cell" data-execution_count="10">
+<div id="2aeb4513" class="cell" data-execution_count="10">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -948,7 +963,7 @@ E(\mathbf{x}_c,P) = \{\mathbf{x}\,|\, \|A\mathbf{x}-\mathbf{x_c}  \|\leq 1  \},
 \]</span></li>
 </ul>
 </div><div class="column" style="width:50%;">
-<div id="706612fe" class="cell" data-execution_count="11">
+<div id="67776681" class="cell" data-execution_count="11">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
