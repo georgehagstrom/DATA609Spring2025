@@ -954,7 +954,7 @@
     "href": "meetups/Meetup-2/meetup-2.html#condition-number-and-accuracy",
     "title": "Meetup 2: Least Squares",
     "section": "Condition Number and Accuracy",
-    "text": "Condition Number and Accuracy\n\nAccuracy of np.linalg.inv(A) @ b related to \\(\\frac{\\sigma_{max}}{\\sigma_{min}}\\)\nThis is called the “condition number” of the matrix \\(A\\)\n\n\n%timeit np.linalg.inv(A) @ b\n%timeit np.linalg.solve(A,b)\n\nx1 = np.linalg.inv(A) @ b\nx2 = np.linalg.solve(A,b)\n\nprint(\"Matrix Inverse Error: \",np.linalg.norm(A @ x1 - b))\nprint(\"Linear Solve Error: \",np.linalg.norm(A @ x2 - b))\n\n3.57 ms ± 302 μs per loop (mean ± std. dev. of 7 runs, 100 loops each)\n2.31 ms ± 5.16 μs per loop (mean ± std. dev. of 7 runs, 100 loops each)\nMatrix Inverse Error:  3.3553873355623617e-07\nLinear Solve Error:  2.15172781202488e-15\n\n\n\n100 million times more accurate, 5 times faster"
+    "text": "Condition Number and Accuracy\n\nAccuracy of np.linalg.inv(A) @ b related to \\(\\frac{\\sigma_{max}}{\\sigma_{min}}\\)\nThis is called the “condition number” of the matrix \\(A\\)\n\n\n%timeit np.linalg.inv(A) @ b\n%timeit np.linalg.solve(A,b)\n\nx1 = np.linalg.inv(A) @ b\nx2 = np.linalg.solve(A,b)\n\nprint(\"Matrix Inverse Error: \",np.linalg.norm(A @ x1 - b))\nprint(\"Linear Solve Error: \",np.linalg.norm(A @ x2 - b))\n\n14.9 ms ± 4.25 ms per loop (mean ± std. dev. of 7 runs, 100 loops each)\n2.49 ms ± 76.5 μs per loop (mean ± std. dev. of 7 runs, 100 loops each)\nMatrix Inverse Error:  4.946001088021818e-07\nLinear Solve Error:  2.5017704896735157e-15\n\n\n\n100 million times more accurate, 5 times faster"
   },
   {
     "objectID": "meetups/Meetup-2/meetup-2.html#issue-is-worse-for-ata",
@@ -1357,7 +1357,7 @@
     "href": "index.html",
     "title": "Announcements",
     "section": "",
-    "text": "Be sure to check this page regularly for updates. In addition to periodic updates about the course, slides and recordings of the weekly meetups will be posted here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 5- Constrained Least Squares\n\n\n\n\n\nClick here to read about Week 5.\n\n\n\n\n\nFeb 24, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 5: Least Squares Data Fitting\n\n\n\n\n\nClick here to read more about Meetup 5 and view/download the lecture slides.\n\n\n\n\n\nFeb 17, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 4: Least Squares Data Fitting\n\n\n\n\n\nClick here to read more about Meetup 4 and view/download the lecture slides.\n\n\n\n\n\nFeb 17, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 4- Constrained Least Squares\n\n\n\n\n\nClick here to read about Week 3.\n\n\n\n\n\nFeb 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Vignette- Linear Algebra in R\n\n\n\n\n\nClick here for a video on basic linear algebra in R.\n\n\n\n\n\nFeb 14, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 3: Least Squares Data Fitting\n\n\n\n\n\nClick here to read more about Meetup 3 and view/download the lecture slides.\n\n\n\n\n\nFeb 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 3- Data Fitting\n\n\n\n\n\nClick here to read about Week 3.\n\n\n\n\n\nFeb 9, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Vignette- Writing Math in Markdown\n\n\n\n\n\nClick here for a 20 minute video on writing math in markdown using Latex.\n\n\n\n\n\nFeb 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Vignette- Linear Algebra in Numpy\n\n\n\n\n\nClick here for a video on basic linear algebra in Numpy.\n\n\n\n\n\nFeb 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 2: Least Squares Optimization\n\n\n\n\n\nClick here to read more about Meetup 2 and view/download the lecture slides.\n\n\n\n\n\nFeb 3, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 2- Least Squares\n\n\n\n\n\nClick here to read about Week 2.\n\n\n\n\n\nFeb 2, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 1: Introduction to Optimization\n\n\n\n\n\nClick here to read more about Meetup 1 and view/download the lecture slides.\n\n\n\n\n\nJan 27, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome to DATA 609\n\n\n\n\n\nImportant information on how to get started with this course. Click this post now for instructions on getting started.\n\n\n\n\n\nJan 26, 2025\n\n\n\n\n\n\nNo matching items",
+    "text": "Be sure to check this page regularly for updates. In addition to periodic updates about the course, slides and recordings of the weekly meetups will be posted here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 5-Convex Sets\n\n\n\n\n\nClick here to read about Week 5.\n\n\n\n\n\nFeb 24, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 5: Introduction to Convex Sets\n\n\n\n\n\nClick here to read more about Meetup 5 and view/download the lecture slides.\n\n\n\n\n\nFeb 17, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 4: Least Squares Data Fitting\n\n\n\n\n\nClick here to read more about Meetup 4 and view/download the lecture slides.\n\n\n\n\n\nFeb 17, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 4- Constrained Least Squares\n\n\n\n\n\nClick here to read about Week 3.\n\n\n\n\n\nFeb 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Vignette- Linear Algebra in R\n\n\n\n\n\nClick here for a video on basic linear algebra in R.\n\n\n\n\n\nFeb 14, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 3: Least Squares Data Fitting\n\n\n\n\n\nClick here to read more about Meetup 3 and view/download the lecture slides.\n\n\n\n\n\nFeb 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 3- Data Fitting\n\n\n\n\n\nClick here to read about Week 3.\n\n\n\n\n\nFeb 9, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Vignette- Writing Math in Markdown\n\n\n\n\n\nClick here for a 20 minute video on writing math in markdown using Latex.\n\n\n\n\n\nFeb 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Vignette- Linear Algebra in Numpy\n\n\n\n\n\nClick here for a video on basic linear algebra in Numpy.\n\n\n\n\n\nFeb 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 2: Least Squares Optimization\n\n\n\n\n\nClick here to read more about Meetup 2 and view/download the lecture slides.\n\n\n\n\n\nFeb 3, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 2- Least Squares\n\n\n\n\n\nClick here to read about Week 2.\n\n\n\n\n\nFeb 2, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 1: Introduction to Optimization\n\n\n\n\n\nClick here to read more about Meetup 1 and view/download the lecture slides.\n\n\n\n\n\nJan 27, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome to DATA 609\n\n\n\n\n\nImportant information on how to get started with this course. Click this post now for instructions on getting started.\n\n\n\n\n\nJan 26, 2025\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Announcements"
     ]
@@ -1683,7 +1683,7 @@
     "href": "meetups/Meetup-5/meetup-5.html#convex-combinations",
     "title": "Meetup 5: Convex Sets",
     "section": "Convex Combinations",
-    "text": "Convex Combinations\n\nIf we have two points \\(\\mathbf{x}_1\\) and \\(\\mathbf{x}_2\\), an affine combination is: \\[\n\\theta_1\\mathbf{x}_1 + (1-\\theta_1)\\mathbf{x}_2,\n\\]\n\nwhere \\(0\\leq\\theta_1\\leq 1\\)\n\nGenearlize to more points (weighted averages): \\[\n\\sum_i \\theta_i\\mathbf{x}_i, \\quad 0\\leq \\theta_i, \\quad\n\\sum_i \\theta_i = 1\n\\]"
+    "text": "Convex Combinations\n\nIf we have two points \\(\\mathbf{x}_1\\) and \\(\\mathbf{x}_2\\), a convex combination is: \\[\n\\theta_1\\mathbf{x}_1 + (1-\\theta_1)\\mathbf{x}_2,\n\\]\n\nwhere \\(0\\leq\\theta_1\\leq 1\\)\n\nGenearlize to more points (weighted averages): \\[\n\\sum_i \\theta_i\\mathbf{x}_i, \\quad 0\\leq \\theta_i, \\quad\n\\sum_i \\theta_i = 1\n\\]"
   },
   {
     "objectID": "meetups/Meetup-5/meetup-5.html#math-definition-of-convex-sets",
@@ -1767,7 +1767,7 @@
     "href": "meetups/Meetup-5/meetup-5.html#what-is-a-polyhedron-6",
     "title": "Meetup 5: Convex Sets",
     "section": "What is a Polyhedron?",
-    "text": "What is a Polyhedron?\n\nSolution set of linear inequalities and equations\n\n\\[\\{x\\, |\\, C\\mathbf{x}\\preceq \\mathbf{d},\\, A\\mathbf{x} = \\mathbf{h} \\}\\]\n\n\\(\\preceq\\) stands for generalized inequality\nTrue if every single entry satisfies inequality\nSometimes polyhedron stands for closed, polytope stands for open"
+    "text": "What is a Polyhedron?\n\nSolution set of linear inequalities and equations\n\n\\[\\{x\\, |\\, C\\mathbf{x}\\preceq \\mathbf{d},\\, A\\mathbf{x} = \\mathbf{h} \\}\\]\n\n\\(\\preceq\\) stands for componentwise inequality\nTrue if every single entry satisfies inequality\nSometimes polyhedron stands for closed, polytope stands for open"
   },
   {
     "objectID": "meetups/Meetup-5/meetup-5.html#example-designing-a-healthy-diet",
@@ -1928,7 +1928,7 @@
     "href": "meetups/Meetup-4/HW1Review.html#most-common-mistake",
     "title": "Lab 1 Review",
     "section": "Most Common Mistake",
-    "text": "Most Common Mistake\n\nMany of you then concluded:\n\n\\[ AA^{+}b - b = 0\\]\n\nSeveral justification, but:\n\n\nA = matrix(rnorm(40),nrow=10,ncol=4)\nb = rnorm(10)\n\nt(A  %*% solve(t(A) %*% A) %*% t(A) %*%  b)\n\n          [,1]       [,2]       [,3]      [,4]       [,5]      [,6]        [,7]\n[1,] 0.2016832 -0.0798653 -0.3922465 0.3864129 -0.3555732 0.3103154 -0.03452382\n         [,8]      [,9]     [,10]\n[1,] 0.236501 0.4839439 0.2901775"
+    "text": "Most Common Mistake\n\nMany of you then concluded:\n\n\\[ AA^{+}b - b = 0\\]\n\nSeveral justification, but:\n\n\nA = matrix(rnorm(40),nrow=10,ncol=4)\nb = rnorm(10)\n\nt(A  %*% solve(t(A) %*% A) %*% t(A) %*%  b)\n\n          [,1]        [,2]       [,3]       [,4]       [,5]       [,6]\n[1,] 0.1757232 -0.05362218 -0.2360953 -0.5420518 0.01407162 -0.5803194\n           [,7]       [,8]      [,9]      [,10]\n[1,] -0.2614469 -0.2182426 0.3316421 0.02549799"
   },
   {
     "objectID": "meetups/Meetup-4/HW1Review.html#why-isnt-it-true",
@@ -2092,14 +2092,14 @@
   {
     "objectID": "posts/2025-02-24-Week-5-Convex-Sets.html",
     "href": "posts/2025-02-24-Week-5-Convex-Sets.html",
-    "title": "Week 5- Constrained Least Squares",
+    "title": "Week 5-Convex Sets",
     "section": "",
     "text": "During this week we will begin learning the tools we need to formulate and solve convex optimization problems. We will talk more about general optimization problems and look at convexity from the perspective of constraints. We will present the definition of a convex set and give several example, and discuss how these examples arise when formulating problems.\nYour third homework assignment has been posted and is going to be due two Sundays from now.\nHere are more details on what you need to do this week:\n\nGo through module 5 and complete the week 4 readings.\nAttend our second meetup on Monday at 6:45 p.m. ET on Zoom\nBegin working on Lab 3"
   },
   {
     "objectID": "posts/2025-02-24-Meetup-5-Slides.html",
     "href": "posts/2025-02-24-Meetup-5-Slides.html",
-    "title": "Meetup 5: Least Squares Data Fitting",
+    "title": "Meetup 5: Introduction to Convex Sets",
     "section": "",
     "text": "I have uploaded the slides for Meetup 5, which happened tonight at 6:45PM\nWe will learn about convex optimization and examples of convex sets, which are used as constraints in convex optimization problems.\n\nClick here for slides"
   },
