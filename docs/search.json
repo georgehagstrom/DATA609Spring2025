@@ -394,7 +394,7 @@
     "href": "meetups/Meetup-4/HW1Review.html#most-common-mistake",
     "title": "Lab 1 Review",
     "section": "Most Common Mistake",
-    "text": "Most Common Mistake\n\nMany of you then concluded:\n\n\\[ AA^{+}b - b = 0\\]\n\nSeveral justification, but:\n\n\nA = matrix(rnorm(40),nrow=10,ncol=4)\nb = rnorm(10)\n\nt(A  %*% solve(t(A) %*% A) %*% t(A) %*%  b)\n\n          [,1]        [,2]        [,3]      [,4]      [,5]       [,6]\n[1,] -1.690898 -0.07558609 -0.08412782 -0.974088 -1.648067 -0.5915747\n           [,7]     [,8]      [,9]    [,10]\n[1,] -0.4260594 1.202081 0.3983271 0.450789"
+    "text": "Most Common Mistake\n\nMany of you then concluded:\n\n\\[ AA^{+}b - b = 0\\]\n\nSeveral justification, but:\n\n\nA = matrix(rnorm(40),nrow=10,ncol=4)\nb = rnorm(10)\n\nt(A  %*% solve(t(A) %*% A) %*% t(A) %*%  b)\n\n           [,1]        [,2]       [,3]      [,4]       [,5]        [,6]\n[1,] -0.1025881 -0.09305164 -0.2020947 0.1160922 -0.2153702 0.006861004\n           [,7]        [,8]       [,9]      [,10]\n[1,] -0.1129057 -0.06426014 -0.4183443 -0.3190689"
   },
   {
     "objectID": "meetups/Meetup-4/HW1Review.html#why-isnt-it-true",
@@ -972,7 +972,7 @@
     "href": "assignments/labs.html",
     "title": "Labs",
     "section": "",
-    "text": "The homework assignments in this course are lab assignments where you will solve the problem using a combination of mathematics and computer code.\nPlease submit a and either a quarto file or jupyter notebook or other code that generates your homework. Labs should be submitted on Blackboard.\n\n\nGradient Descent and Least Squares (Download)\n\n\nLeast Squares Applications (Download)\n\n\nConvex Sets (Download)\n\n\nConvex Functions (Download)\n\n\nConvex Optimizations Problems (Download)\n\n\nApplications to Statistics and Machine Learning (Download)\n\n\nNonconvex Optimization and Stochastic Gradient Descent (Download)\n\n\nTraining Deep Neural Networks (Download)",
+    "text": "The homework assignments in this course are lab assignments where you will solve the problem using a combination of mathematics and computer code.\nPlease submit a and either a quarto file or jupyter notebook or other code that generates your homework. Labs should be submitted on Blackboard.\n\n\nGradient Descent and Least Squares (Download)\n\n\nLeast Squares Applications (Download)\n\n\nConvex Sets (PDF) (Quarto Download)\n\n\nConvex Functions (Download)\n\n\nConvex Optimizations Problems (Download)\n\n\nApplications to Statistics and Machine Learning (Download)\n\n\nNonconvex Optimization and Stochastic Gradient Descent (Download)\n\n\nTraining Deep Neural Networks (Download)",
     "crumbs": [
       "Assignments",
       "Labs"
@@ -1515,7 +1515,7 @@
     "href": "meetups/Meetup-2/meetup-2.html#condition-number-and-accuracy",
     "title": "Meetup 2: Least Squares",
     "section": "Condition Number and Accuracy",
-    "text": "Condition Number and Accuracy\n\nAccuracy of np.linalg.inv(A) @ b related to \\(\\frac{\\sigma_{max}}{\\sigma_{min}}\\)\nThis is called the “condition number” of the matrix \\(A\\)\n\n\n%timeit np.linalg.inv(A) @ b\n%timeit np.linalg.solve(A,b)\n\nx1 = np.linalg.inv(A) @ b\nx2 = np.linalg.solve(A,b)\n\nprint(\"Matrix Inverse Error: \",np.linalg.norm(A @ x1 - b))\nprint(\"Linear Solve Error: \",np.linalg.norm(A @ x2 - b))\n\n3.78 ms ± 245 μs per loop (mean ± std. dev. of 7 runs, 100 loops each)\n2.3 ms ± 3.61 μs per loop (mean ± std. dev. of 7 runs, 100 loops each)\nMatrix Inverse Error:  3.411280417459995e-07\nLinear Solve Error:  2.252839000936051e-15\n\n\n\n100 million times more accurate, 5 times faster"
+    "text": "Condition Number and Accuracy\n\nAccuracy of np.linalg.inv(A) @ b related to \\(\\frac{\\sigma_{max}}{\\sigma_{min}}\\)\nThis is called the “condition number” of the matrix \\(A\\)\n\n\n%timeit np.linalg.inv(A) @ b\n%timeit np.linalg.solve(A,b)\n\nx1 = np.linalg.inv(A) @ b\nx2 = np.linalg.solve(A,b)\n\nprint(\"Matrix Inverse Error: \",np.linalg.norm(A @ x1 - b))\nprint(\"Linear Solve Error: \",np.linalg.norm(A @ x2 - b))\n\n7.54 ms ± 2.54 ms per loop (mean ± std. dev. of 7 runs, 100 loops each)\n2.38 ms ± 21 μs per loop (mean ± std. dev. of 7 runs, 100 loops each)\nMatrix Inverse Error:  4.342997745987819e-07\nLinear Solve Error:  2.3801670432530505e-15\n\n\n\n100 million times more accurate, 5 times faster"
   },
   {
     "objectID": "meetups/Meetup-2/meetup-2.html#issue-is-worse-for-ata",
