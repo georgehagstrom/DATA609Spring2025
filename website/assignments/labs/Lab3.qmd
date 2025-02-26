@@ -11,22 +11,80 @@ Please submit a .qmd file along with a rendered pdf to the Brightspace page for 
 I recommend python, julia, or R. 
 
 
-## Problem 1: 
+## Problem 1 (cvx-book 2.12): 
 
-Exercise 2.5 in Convex Optimization
+Which of the following sets are convex? For each case give the reason(s) why or why not
 
-## Problem 2: 
+a. A slab, i.e., a set of the form $\{x \in \mathbb{R}^n\, |\, \alpha \leq \mathbf{a}^T \mathbf{x} \leq{\beta}\}$.
+b. A rectangle, i.e., a set of the form $\{x \in \mathbb{R}^n\, |\, \alpha_i \leq x_i \leq \beta_i, i = 1,\cdots,\, n\}$. A rectangle
+is sometimes called a hyperrectangle when n > 2.
+c. A wedge, i.e., \{ \mathbf{x} \in \mathbf{R}^n\, |\, \mathbf{a_1}^T\mathbf{x} \leq \mathbf{b}_1, \mathbf{a}_2^T\leq\mathbf{b}_2\}
+d. The set of points closer to a given point than a given set, i.e.,
+$\{ \mathbf{x}\, |\, \|\mathbf{x} − \mathbf{x}_0\|^2 \leq \|\mathbf{x} − \mathbf{y}\|^2$ for all $y \in S\}$
+where $S \subset \mathbb{R}^n$.
+e. The set of points closer to one set than another, i.e.,
+$\{\mathbf{x}\, | dist(\mathbf{x}, S) \leq dist(\mathbf{x}, T )\},
+where $S$, $T$ are subsets of $\mathbf{R}^N$, and
+$dist(x, S) = \inf\{\|\mathbf{x}  − \mathbf{z}\|^2 | \mathbf{z} \in S\}$.
 
-Exercise 2.7 in Convex Optimization
+## Problem 2 (cvx-book 2.15): 
 
-## Problem 3: 
+Some sets of probability distributions. Let $x$ be a real-valued random variable with probability
+distribution $\mathbf{prob}(x = a_i) = p_i, i = 1$ , . . . , $n$, where $a_1 \lt a_2 \lt $ · · · $\lt a_n$. Of course $p \in 
+\mathbb{R}^n$ lies in the standard probability simplex $P = \{\mathbf{p} | \mathbf{1}^T \mathbf{p} = 1, \mathbf{p} \preceq 0\}$. Which of the following
+conditions are convex in $\mathbf{p}$? (That is, for which of the following conditions is the set of
+$\mathbf{p} \in P$ that satisfy the condition convex?) For each case give the reason(s) why or why not.
 
-Exercise 2.12 in Convex Optimization
+a. The set of all $\mathbf{p}$ where the expectation of the function $f(x)$ is between two limits: $\alpha \leq Ef(x) \leq \beta$, $Ef(x) = \sum_{i=1}^n p_i f(a_i)$. Here $f(x)$ is
+a function from $\mathbb{R}$ to \mathbb{R}$.
+b. The set of all $\mathbf{p}$ such that the probability that $\mathbf{prob}(x\leq\alpha) \leq \beta$ 
+c. The set of all $\mathbf{p}$ such that the expectation of $|x|^3$ is greater than a given constant $\alpha$ times the expectation of $|x|$:
+$E|x^3| \leq \α E|x|$
+d. The set of all $\mathbf{p}$ such that the expectation of $x^2$ is less than a given constant $\alpha$: 
+$Ex^2 \leq \alpha$
 
-## Problem 4: 
+## Problem 3: Bounded Value Least Squares for Wine Mixing
 
-Exercise 2.15 in Convex Optimization 
+We have seen several examples so far in the couse where we would like to have inequality constraints on the decision variable for our least squares problem, for example
+to prevent non-sensical solutions like spending a negative amount of money on advertising, limiting the total investment in certain types of assets, or perhaps bounding the
+value of a statistical coefficient to a certain range. Non-negative least squares is a type of least squares problem where the decision variables $\mathbf{x}\geq 0$, and
+Bounded-Value Least Squares allows for more general constraints.
 
-## Problem 5: 
+This type of least-squares problem needs to be solved algorithmically, and we will use it to get our first practice using the `CVX` software package. You should install `CVXPY`, 
+`CVXR`, or a flavor of `CVX` compatible with whatever software you are using to solve the problem and use `CVX` to solve this problem.
 
-Exercise 2.28 in Convex Optimization
+The problem is one of finding a mixture of wines which achieves certain chemical characteristics. I have attached a dataset which contains data on the chemical composition of 6
+different wines (the dataset originates from kaggle but is reduced for our purposes). Each wine is described according to 11 chemical characteristics, including `alcohol`, `residual sugar`,
+`chlorides`, etc. I have also provided data for the chemical composition for a target wine. 
+
+- [wine_data.csv](https://github.com/georgehagstrom/DATA609Spring2025/blob/main/website/assignments/labs/labData/wine_data.csv) 
+- [target.csv](https://github.com/georgehagstrom/DATA609Spring2025/blob/main/website/assignments/labs/labData/target.csv) 
+
+The goal of this problem is to find the blend of wines which has chemical characteristics closest to the target wine.
+
+Concretely, you are solving for weights $\mathbf{p}$. The concentration of chemical $i$ in wine $j$ is given by the matrix $C_{ij}$, and the concentration in the blended wine is:
+$$
+c_{blend,i} = \sum_{j=1}^6 C_{ij} p_j,
+$$
+so that the overall concentration vector in the blend satisfies:
+$$
+\mathbf{c}_{blend} = C\mathbf{p}
+$$
+
+The vector $\mathbf{p}$ is a discrete probability distribution, meaning that all entries are non-negative and must sum to $1$ (you can't add negative wine). The range of each chemical
+varies greatly, so our objective function should incorporate a penalty that is weighted according to the magnitude of the value in the target function:
+
+$$
+\min_{\mathbf{p}} \sum_{i=1}^{11} \left(\frac{c_i-c_{blend,_i}}{c_i}\right)^2
+$$
+
+Implement this least squares optimization problem using CVX and determine the optimal blend of wines to match the target.
+
+
+
+
+ 
+
+
+
+
