@@ -394,7 +394,7 @@
     "href": "meetups/Meetup-4/HW1Review.html#most-common-mistake",
     "title": "Lab 1 Review",
     "section": "Most Common Mistake",
-    "text": "Most Common Mistake\n\nMany of you then concluded:\n\n\\[ AA^{+}b - b = 0\\]\n\nSeveral justification, but:\n\n\nA = matrix(rnorm(40),nrow=10,ncol=4)\nb = rnorm(10)\n\nt(A  %*% solve(t(A) %*% A) %*% t(A) %*%  b)\n\n           [,1]       [,2]      [,3]      [,4]     [,5]       [,6]     [,7]\n[1,] -0.1659827 -0.3287434 0.2224724 0.2552919 -0.61377 -0.5489537 0.560708\n          [,8]       [,9]     [,10]\n[1,] 0.5138975 -0.2926212 0.4903562"
+    "text": "Most Common Mistake\n\nMany of you then concluded:\n\n\\[ AA^{+}b - b = 0\\]\n\nSeveral justification, but:\n\n\nA = matrix(rnorm(40),nrow=10,ncol=4)\nb = rnorm(10)\n\nt(A  %*% solve(t(A) %*% A) %*% t(A) %*%  b)\n\n          [,1]        [,2]        [,3]      [,4]      [,5]       [,6]\n[1,] -1.690898 -0.07558609 -0.08412782 -0.974088 -1.648067 -0.5915747\n           [,7]     [,8]      [,9]    [,10]\n[1,] -0.4260594 1.202081 0.3983271 0.450789"
   },
   {
     "objectID": "meetups/Meetup-4/HW1Review.html#why-isnt-it-true",
@@ -979,41 +979,6 @@
     ]
   },
   {
-    "objectID": "assignments/labs/Lab3.html",
-    "href": "assignments/labs/Lab3.html",
-    "title": "Homework 3: Convex Sets",
-    "section": "",
-    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
-  },
-  {
-    "objectID": "assignments/labs/Lab3.html#instructions",
-    "href": "assignments/labs/Lab3.html#instructions",
-    "title": "Homework 3: Convex Sets",
-    "section": "",
-    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
-  },
-  {
-    "objectID": "assignments/labs/Lab3.html#problem-1-cvx-book-2.12",
-    "href": "assignments/labs/Lab3.html#problem-1-cvx-book-2.12",
-    "title": "Homework 3: Convex Sets",
-    "section": "Problem 1 (cvx-book 2.12):",
-    "text": "Problem 1 (cvx-book 2.12):\nWhich of the following sets are convex? For each case give the reason(s) why or why not\n\nA slab, i.e., a set of the form \\(\\{x \\in \\mathbb{R}^n\\, |\\, \\alpha \\leq \\mathbf{a}^T \\mathbf{x} \\leq{\\beta}\\}\\).\nA rectangle, i.e., a set of the form \\(\\{x \\in \\mathbb{R}^n\\, |\\, \\alpha_i \\leq x_i \\leq \\beta_i, i = 1,\\cdots,\\, n\\}\\). A rectangle is sometimes called a hyperrectangle when n &gt; 2.\nA wedge, i.e., { ^n, |, ^T _1, _2^T_2}\nThe set of points closer to a given point than a given set, i.e., \\(\\{ \\mathbf{x}\\, |\\, \\|\\mathbf{x} − \\mathbf{x}_0\\|^2 \\leq \\|\\mathbf{x} − \\mathbf{y}\\|^2\\) for all \\(y \\in S\\}\\) where \\(S \\subset \\mathbb{R}^n\\).\nThe set of points closer to one set than another, i.e., ${, | dist(, S) dist(, T )}, where \\(S\\), \\(T\\) are subsets of \\(\\mathbf{R}^N\\), and \\(dist(x, S) = \\inf\\{\\|\\mathbf{x}  − \\mathbf{z}\\|^2 | \\mathbf{z} \\in S\\}\\)."
-  },
-  {
-    "objectID": "assignments/labs/Lab3.html#problem-2-cvx-book-2.15",
-    "href": "assignments/labs/Lab3.html#problem-2-cvx-book-2.15",
-    "title": "Homework 3: Convex Sets",
-    "section": "Problem 2 (cvx-book 2.15):",
-    "text": "Problem 2 (cvx-book 2.15):\nSome sets of probability distributions. Let \\(x\\) be a real-valued random variable with probability distribution \\(\\mathbf{prob}(x = a_i) = p_i, i = 1\\) , . . . , \\(n\\), where $a_1 a_2 $ · · · \\(\\lt a_n\\). Of course \\(p \\in\n\\mathbb{R}^n\\) lies in the standard probability simplex \\(P = \\{\\mathbf{p} | \\mathbf{1}^T \\mathbf{p} = 1, \\mathbf{p} \\preceq 0\\}\\). Which of the following conditions are convex in \\(\\mathbf{p}\\)? (That is, for which of the following conditions is the set of \\(\\mathbf{p} \\in P\\) that satisfy the condition convex?) For each case give the reason(s) why or why not.\n\nThe set of all \\(\\mathbf{p}\\) where the expectation of the function \\(f(x)\\) is between two limits: \\(\\alpha \\leq Ef(x) \\leq \\beta\\), \\(Ef(x) = \\sum_{i=1}^n p_i f(a_i)\\). Here \\(f(x)\\) is a function from \\(\\mathbb{R}\\) to $.\nThe set of all \\(\\mathbf{p}\\) such that the probability that \\(\\mathbf{prob}(x\\leq\\alpha) \\leq \\beta\\)\nThe set of all \\(\\mathbf{p}\\) such that the expectation of \\(|x|^3\\) is greater than a given constant \\(\\alpha\\) times the expectation of \\(|x|\\): \\(E|x^3| \\leq \\α E|x|\\)\nThe set of all \\(\\mathbf{p}\\) such that the expectation of \\(x^2\\) is less than a given constant \\(\\alpha\\): \\(Ex^2 \\leq \\alpha\\)"
-  },
-  {
-    "objectID": "assignments/labs/Lab3.html#problem-3-bounded-value-least-squares-for-wine-mixing",
-    "href": "assignments/labs/Lab3.html#problem-3-bounded-value-least-squares-for-wine-mixing",
-    "title": "Homework 3: Convex Sets",
-    "section": "Problem 3: Bounded Value Least Squares for Wine Mixing",
-    "text": "Problem 3: Bounded Value Least Squares for Wine Mixing\nWe have seen several examples so far in the couse where we would like to have inequality constraints on the decision variable for our least squares problem, for example to prevent non-sensical solutions like spending a negative amount of money on advertising, limiting the total investment in certain types of assets, or perhaps bounding the value of a statistical coefficient to a certain range. Non-negative least squares is a type of least squares problem where the decision variables \\(\\mathbf{x}\\geq 0\\), and Bounded-Value Least Squares allows for more general constraints.\nThis type of least-squares problem needs to be solved algorithmically, and we will use it to get our first practice using the CVX software package. You should install CVXPY, CVXR, or a flavor of CVX compatible with whatever software you are using to solve the problem and use CVX to solve this problem.\nThe problem is one of finding a mixture of wines which achieves certain chemical characteristics. I have attached a dataset which contains data on the chemical composition of 6 different wines (the dataset originates from kaggle but is reduced for our purposes). Each wine is described according to 11 chemical characteristics, including alcohol, residual sugar, chlorides, etc. I have also provided data for the chemical composition for a target wine.\n\nwine_data.csv\ntarget.csv\n\nThe goal of this problem is to find the blend of wines which has chemical characteristics closest to the target wine.\nConcretely, you are solving for weights \\(\\mathbf{p}\\). The concentration of chemical \\(i\\) in wine \\(j\\) is given by the matrix \\(C_{ij}\\), and the concentration in the blended wine is: \\[\nc_{blend,i} = \\sum_{j=1}^6 C_{ij} p_j,\n\\] so that the overall concentration vector in the blend satisfies: \\[\n\\mathbf{c}_{blend} = C\\mathbf{p}\n\\]\nThe vector \\(\\mathbf{p}\\) is a discrete probability distribution, meaning that all entries are non-negative and must sum to \\(1\\) (you can’t add negative wine). The range of each chemical varies greatly, so our objective function should incorporate a penalty that is weighted according to the magnitude of the value in the target function:\n\\[\n\\min_{\\mathbf{p}} \\sum_{i=1}^{11} \\left(\\frac{c_i-c_{blend,_i}}{c_i}\\right)^2\n\\]\nImplement this least squares optimization problem using CVX and determine the optimal blend of wines to match the target."
-  },
-  {
     "objectID": "assignments/labs/Lab6.html",
     "href": "assignments/labs/Lab6.html",
     "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
@@ -1550,7 +1515,7 @@
     "href": "meetups/Meetup-2/meetup-2.html#condition-number-and-accuracy",
     "title": "Meetup 2: Least Squares",
     "section": "Condition Number and Accuracy",
-    "text": "Condition Number and Accuracy\n\nAccuracy of np.linalg.inv(A) @ b related to \\(\\frac{\\sigma_{max}}{\\sigma_{min}}\\)\nThis is called the “condition number” of the matrix \\(A\\)\n\n\n%timeit np.linalg.inv(A) @ b\n%timeit np.linalg.solve(A,b)\n\nx1 = np.linalg.inv(A) @ b\nx2 = np.linalg.solve(A,b)\n\nprint(\"Matrix Inverse Error: \",np.linalg.norm(A @ x1 - b))\nprint(\"Linear Solve Error: \",np.linalg.norm(A @ x2 - b))\n\n4.3 ms ± 1.33 ms per loop (mean ± std. dev. of 7 runs, 100 loops each)\n2.38 ms ± 24.9 μs per loop (mean ± std. dev. of 7 runs, 100 loops each)\nMatrix Inverse Error:  3.8905784683940694e-07\nLinear Solve Error:  2.3504997399748474e-15\n\n\n\n100 million times more accurate, 5 times faster"
+    "text": "Condition Number and Accuracy\n\nAccuracy of np.linalg.inv(A) @ b related to \\(\\frac{\\sigma_{max}}{\\sigma_{min}}\\)\nThis is called the “condition number” of the matrix \\(A\\)\n\n\n%timeit np.linalg.inv(A) @ b\n%timeit np.linalg.solve(A,b)\n\nx1 = np.linalg.inv(A) @ b\nx2 = np.linalg.solve(A,b)\n\nprint(\"Matrix Inverse Error: \",np.linalg.norm(A @ x1 - b))\nprint(\"Linear Solve Error: \",np.linalg.norm(A @ x2 - b))\n\n3.78 ms ± 245 μs per loop (mean ± std. dev. of 7 runs, 100 loops each)\n2.3 ms ± 3.61 μs per loop (mean ± std. dev. of 7 runs, 100 loops each)\nMatrix Inverse Error:  3.411280417459995e-07\nLinear Solve Error:  2.252839000936051e-15\n\n\n\n100 million times more accurate, 5 times faster"
   },
   {
     "objectID": "meetups/Meetup-2/meetup-2.html#issue-is-worse-for-ata",
@@ -1938,6 +1903,13 @@
     "text": "Thanks!"
   },
   {
+    "objectID": "meetups/Meetup-6/meetup-6.html#addendum-on-cones",
+    "href": "meetups/Meetup-6/meetup-6.html#addendum-on-cones",
+    "title": "DATA 609 Meetup 6: Constructing Convex Sets",
+    "section": "Addendum on Cones",
+    "text": "Addendum on Cones"
+  },
+  {
     "objectID": "meetups/Meetup-6/meetup-6.html#how-to-show-a-set-is-convex",
     "href": "meetups/Meetup-6/meetup-6.html#how-to-show-a-set-is-convex",
     "title": "DATA 609 Meetup 6: Constructing Convex Sets",
@@ -1959,32 +1931,60 @@
     "text": "Intersections of Convex Sets are Convex\n\nAny intersection of convex sets is also convex\n\nEven an infinite intersection"
   },
   {
-    "objectID": "meetups/Meetup-6/meetup-6.html#multiple-constraints",
-    "href": "meetups/Meetup-6/meetup-6.html#multiple-constraints",
-    "title": "DATA 609 Meetup 6: Constructing Convex Sets",
-    "section": "Multiple Constraints",
-    "text": "Multiple Constraints"
-  },
-  {
     "objectID": "meetups/Meetup-6/meetup-6.html#infinite-constraints",
     "href": "meetups/Meetup-6/meetup-6.html#infinite-constraints",
     "title": "DATA 609 Meetup 6: Constructing Convex Sets",
     "section": "Infinite Constraints",
-    "text": "Infinite Constraints"
+    "text": "Infinite Constraints\n\nSuppose we can several locations where we are allowed to build some quantity of renewable energy plants.\nLet \\(w_i\\) stand for the size of renewable plant we build at location \\(i\\).\n\\(p_i(t)\\) is the forecast power function for each plant over a typical day\nThe total power generated at time \\(t\\) is given by the formula: \\[\np_{tot}(t) = \\mathbf{p}(t)^T\\mathbf{w}\n\\]"
+  },
+  {
+    "objectID": "meetups/Meetup-6/meetup-6.html#infinite-constraints-1",
+    "href": "meetups/Meetup-6/meetup-6.html#infinite-constraints-1",
+    "title": "DATA 609 Meetup 6: Constructing Convex Sets",
+    "section": "Infinite Constraints",
+    "text": "Infinite Constraints\n\nSuppose we want to guarantee that the level of power provided is above some time varying minimum demand level \\(d_{min}(t)\\): \\[\n\\mathbf{p}(t)^T\\mathbf{w} \\geq d_{min}(t)\n\\]\nFor each individual time point \\(t\\), this inequality describes a convex set\nSet C \\(\\mathbf{w}\\) so that inequality is satisfied at all times is infinite union of convex sets \\[\nC = \\cap_t \\{\\mathbf{w}\\,|\\, \\mathbf{p}(t)^T\\mathbf{w} \\geq d_{min}(t) \\}\n\\]\n\\(C\\) is a convex set"
   },
   {
     "objectID": "meetups/Meetup-6/meetup-6.html#mapping-a-set",
     "href": "meetups/Meetup-6/meetup-6.html#mapping-a-set",
     "title": "DATA 609 Meetup 6: Constructing Convex Sets",
     "section": "Mapping a Set",
-    "text": "Mapping a Set"
+    "text": "Mapping a Set\n\nCan apply a function \\(f\\) to an entire set to generate a new set\nDoesn’t have to be in the same space: \\(f:\\, \\mathbb{R}^m \\mapsto \\mathbb{R}^n\\)"
+  },
+  {
+    "objectID": "meetups/Meetup-6/meetup-6.html#mapping-a-set-1",
+    "href": "meetups/Meetup-6/meetup-6.html#mapping-a-set-1",
+    "title": "DATA 609 Meetup 6: Constructing Convex Sets",
+    "section": "Mapping a Set",
+    "text": "Mapping a Set\n\nImage of \\(C\\) under \\(f\\):\n\n\\[f(C) = \\{x\\, |\\, x = f(y)\\, \\mathrm{for}\\, y \\in C\\}\\]"
+  },
+  {
+    "objectID": "meetups/Meetup-6/meetup-6.html#mapping-a-set-2",
+    "href": "meetups/Meetup-6/meetup-6.html#mapping-a-set-2",
+    "title": "DATA 609 Meetup 6: Constructing Convex Sets",
+    "section": "Mapping a Set",
+    "text": "Mapping a Set\n\nOther Direction: Preimage of \\(C\\) under \\(f\\): \\[ f^{-1}(C) = \\{x\\, |\\, f(x) \\in C\\} \\]"
   },
   {
     "objectID": "meetups/Meetup-6/meetup-6.html#linearaffine-transformations",
     "href": "meetups/Meetup-6/meetup-6.html#linearaffine-transformations",
     "title": "DATA 609 Meetup 6: Constructing Convex Sets",
     "section": "Linear/Affine Transformations",
-    "text": "Linear/Affine Transformations"
+    "text": "Linear/Affine Transformations\n\nIf \\(C\\) is convex, and \\(f\\) is affine \\(f(\\mathbf{x}) = A\\mathbf{x} + \\mathbf{b}\\)\n\n\\(f(C)\\) is convex\n\\(f^{-1}(C)\\) is convex\n\nCan scale and shift convex sets"
+  },
+  {
+    "objectID": "meetups/Meetup-6/meetup-6.html#implication",
+    "href": "meetups/Meetup-6/meetup-6.html#implication",
+    "title": "DATA 609 Meetup 6: Constructing Convex Sets",
+    "section": "Implication:",
+    "text": "Implication:\n\nConsider following set of constraints:\n\n\\[\nA\\mathbf{x} \\leq \\mathbf{d} \\\\\nx_1^2 + x_2^2 \\leq 4\n\\] - First constraint is convex set - Second one describes a set where \\(x_1\\) and \\(x_2\\) are inside a circle, but rest of coordinates unconstrained"
+  },
+  {
+    "objectID": "meetups/Meetup-6/meetup-6.html#implication-1",
+    "href": "meetups/Meetup-6/meetup-6.html#implication-1",
+    "title": "DATA 609 Meetup 6: Constructing Convex Sets",
+    "section": "Implication:",
+    "text": "Implication:\n\nDefine operator \\(P\\) that is identity on \\(x_1\\) and \\(x_2\\) and ignores the rest:\n\n\\[\nP = \\begin{bmatrix} 1 & 0 & 0 & \\cdots & 0 \\\\\n                    0 & 1 & 0 & \\cdots & 0 \\end{bmatrix}\n\\] - Circle of radius \\(2\\) in \\(\\mathbb{R}^2\\) is convex - Preimage of circle under \\(P\\) is also convex"
   },
   {
     "objectID": "meetups/Meetup-6/meetup-6.html#examples",

@@ -339,6 +339,9 @@ George I. Hagstrom
 </div>
 
 </section>
+<section id="addendum-on-cones" class="slide level2">
+<h2>Addendum on Cones</h2>
+</section>
 <section id="how-to-show-a-set-is-convex" class="slide level2">
 <h2>How to show a set is convex?</h2>
 <ul>
@@ -381,23 +384,81 @@ George I. Hagstrom
 </ul>
 
 <img data-src="intersection_2.png" class="r-stretch"></section>
-<section id="multiple-constraints" class="slide level2">
-<h2>Multiple Constraints</h2>
-<ul>
-<li></li>
-</ul>
-</section>
 <section id="infinite-constraints" class="slide level2">
 <h2>Infinite Constraints</h2>
+<ul>
+<li>Suppose we can several locations where we are allowed to build some quantity of renewable energy plants.</li>
+<li>Let <span class="math inline">\(w_i\)</span> stand for the size of renewable plant we build at location <span class="math inline">\(i\)</span>.</li>
+<li><span class="math inline">\(p_i(t)\)</span> is the forecast power function for each plant over a typical day</li>
+<li>The total power generated at time <span class="math inline">\(t\)</span> is given by the formula: <span class="math display">\[
+p_{tot}(t) = \mathbf{p}(t)^T\mathbf{w}
+\]</span></li>
+</ul>
+</section>
+<section id="infinite-constraints-1" class="slide level2">
+<h2>Infinite Constraints</h2>
+<ul>
+<li>Suppose we want to guarantee that the level of power provided is above some time varying minimum demand level <span class="math inline">\(d_{min}(t)\)</span>: <span class="math display">\[
+\mathbf{p}(t)^T\mathbf{w} \geq d_{min}(t)
+\]</span></li>
+<li>For each individual time point <span class="math inline">\(t\)</span>, this inequality describes a convex set</li>
+<li>Set C <span class="math inline">\(\mathbf{w}\)</span> so that inequality is satisfied at all times is infinite union of convex sets <span class="math display">\[
+C = \cap_t \{\mathbf{w}\,|\, \mathbf{p}(t)^T\mathbf{w} \geq d_{min}(t) \}
+\]</span></li>
+<li><span class="math inline">\(C\)</span> is a convex set</li>
+</ul>
 </section>
 <section id="mapping-a-set" class="slide level2">
 <h2>Mapping a Set</h2>
+<ul>
+<li>Can apply a function <span class="math inline">\(f\)</span> to an entire set to generate a new set</li>
+<li>Doesn’t have to be in the same space: <span class="math inline">\(f:\, \mathbb{R}^m \mapsto \mathbb{R}^n\)</span></li>
+</ul>
+
+<img data-src="image.png" style="width:50.0%" class="r-stretch"></section>
+<section id="mapping-a-set-1" class="slide level2">
+<h2>Mapping a Set</h2>
+<ul>
+<li>Image of <span class="math inline">\(C\)</span> under <span class="math inline">\(f\)</span>:</li>
+</ul>
+<p><span class="math display">\[f(C) = \{x\, |\, x = f(y)\, \mathrm{for}\, y \in C\}\]</span> <img data-src="image.png" style="width:70.0%"></p>
+</section>
+<section id="mapping-a-set-2" class="slide level2">
+<h2>Mapping a Set</h2>
+<ul>
+<li>Other Direction: Preimage of <span class="math inline">\(C\)</span> under <span class="math inline">\(f\)</span>: <span class="math display">\[ f^{-1}(C) = \{x\, |\, f(x) \in C\} \]</span> <img data-src="image.png" style="width:70.0%"></li>
+</ul>
 </section>
 <section id="linearaffine-transformations" class="slide level2">
 <h2>Linear/Affine Transformations</h2>
 <ul>
-<li></li>
+<li>If <span class="math inline">\(C\)</span> is convex, and <span class="math inline">\(f\)</span> is affine <span class="math inline">\(f(\mathbf{x}) = A\mathbf{x} + \mathbf{b}\)</span>
+<ul>
+<li><span class="math inline">\(f(C)\)</span> is convex</li>
+<li><span class="math inline">\(f^{-1}(C)\)</span> is convex</li>
+</ul></li>
+<li>Can scale and shift convex sets</li>
 </ul>
+</section>
+<section id="implication" class="slide level2">
+<h2>Implication:</h2>
+<ul>
+<li>Consider following set of constraints:</li>
+</ul>
+<p><span class="math display">\[
+A\mathbf{x} \leq \mathbf{d} \\
+x_1^2 + x_2^2 \leq 4
+\]</span> - First constraint is convex set - Second one describes a set where <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span> are inside a circle, but rest of coordinates unconstrained</p>
+</section>
+<section id="implication-1" class="slide level2">
+<h2>Implication:</h2>
+<ul>
+<li>Define operator <span class="math inline">\(P\)</span> that is identity on <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span> and ignores the rest:</li>
+</ul>
+<p><span class="math display">\[
+P = \begin{bmatrix} 1 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 \\
+                    0 &amp; 1 &amp; 0 &amp; \cdots &amp; 0 \end{bmatrix}
+\]</span> - Circle of radius <span class="math inline">\(2\)</span> in <span class="math inline">\(\mathbb{R}^2\)</span> is convex - Preimage of circle under <span class="math inline">\(P\)</span> is also convex</p>
 </section>
 <section id="examples" class="slide level2">
 <h2>Examples</h2>

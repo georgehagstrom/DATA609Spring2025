@@ -1,6 +1,6 @@
 ---
 title: "Homework 3: Convex Sets"
-format: html 
+format: pdf
 editor: source
 ---
 
@@ -18,29 +18,32 @@ Which of the following sets are convex? For each case give the reason(s) why or 
 a. A slab, i.e., a set of the form $\{x \in \mathbb{R}^n\, |\, \alpha \leq \mathbf{a}^T \mathbf{x} \leq{\beta}\}$.
 b. A rectangle, i.e., a set of the form $\{x \in \mathbb{R}^n\, |\, \alpha_i \leq x_i \leq \beta_i, i = 1,\cdots,\, n\}$. A rectangle
 is sometimes called a hyperrectangle when n > 2.
-c. A wedge, i.e., \{ \mathbf{x} \in \mathbf{R}^n\, |\, \mathbf{a_1}^T\mathbf{x} \leq \mathbf{b}_1, \mathbf{a}_2^T\leq\mathbf{b}_2\}
+c. A wedge, i.e., $\{ \mathbf{x} \in \mathbb{R}^n\, |\, \mathbf{a_1}^T\mathbf{x} \leq \mathbf{b}_1, \mathbf{a}_2^T\leq\mathbf{b}_2\}$
 d. The set of points closer to a given point than a given set, i.e.,
 $\{ \mathbf{x}\, |\, \|\mathbf{x} − \mathbf{x}_0\|^2 \leq \|\mathbf{x} − \mathbf{y}\|^2$ for all $y \in S\}$
 where $S \subset \mathbb{R}^n$.
 e. The set of points closer to one set than another, i.e.,
-$\{\mathbf{x}\, | dist(\mathbf{x}, S) \leq dist(\mathbf{x}, T )\},
-where $S$, $T$ are subsets of $\mathbf{R}^N$, and
+$\{\mathbf{x}\, | dist(\mathbf{x}, S) \leq dist(\mathbf{x}, T )\}$,
+where $S$, $T$ are subsets of $\mathbb{R}^N$, and
 $dist(x, S) = \inf\{\|\mathbf{x}  − \mathbf{z}\|^2 | \mathbf{z} \in S\}$.
 
 ## Problem 2 (cvx-book 2.15): 
 
-Some sets of probability distributions. Let $x$ be a real-valued random variable with probability
-distribution $\mathbf{prob}(x = a_i) = p_i, i = 1$ , . . . , $n$, where $a_1 \lt a_2 \lt $ · · · $\lt a_n$. Of course $p \in 
-\mathbb{R}^n$ lies in the standard probability simplex $P = \{\mathbf{p} | \mathbf{1}^T \mathbf{p} = 1, \mathbf{p} \preceq 0\}$. Which of the following
+Some sets of probability distributions. Let $x$ be a real-valued random variable with probability distribution 
+$$\mathbf{prob}(x = a_i) = p_i, i = 1, \cdots, n$$, 
+
+where:  $a_1 < a_2 < \cdots < a_n$. 
+Of course $\mathbf{p} \in \mathbb{R}^n$ lies in the standard probability simplex $P \{\mathbf{p}\, |\, 1^T \mathbf{p} = 1, \mathbf{p} \preceq 0\}$. Which of the following
 conditions are convex in $\mathbf{p}$? (That is, for which of the following conditions is the set of
 $\mathbf{p} \in P$ that satisfy the condition convex?) For each case give the reason(s) why or why not.
 
 a. The set of all $\mathbf{p}$ where the expectation of the function $f(x)$ is between two limits: $\alpha \leq Ef(x) \leq \beta$, $Ef(x) = \sum_{i=1}^n p_i f(a_i)$. Here $f(x)$ is
-a function from $\mathbb{R}$ to \mathbb{R}$.
+a function from $\mathbb{R}$ to $\mathbb{R}$.
 b. The set of all $\mathbf{p}$ such that the probability that $\mathbf{prob}(x\leq\alpha) \leq \beta$ 
 c. The set of all $\mathbf{p}$ such that the expectation of $|x|^3$ is greater than a given constant $\alpha$ times the expectation of $|x|$:
-$E|x^3| \leq \α E|x|$
-d. The set of all $\mathbf{p}$ such that the expectation of $x^2$ is less than a given constant $\alpha$: 
+$E|x^3| \leq \alpha  E|x|$
+d. The set of all $\mathbf{p}$ such that the expectation of $x^2$ is less than 
+a given constant $\alpha$: 
 $Ex^2 \leq \alpha$
 
 ## Problem 3: Bounded Value Least Squares for Wine Mixing
