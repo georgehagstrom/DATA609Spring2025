@@ -21,82 +21,82 @@ techniques (often referred to as \emph{online learning} which take the current m
 update them to incorporate the new data. 
 
 The structure of least squares problems makes them amenable to online updating (sometimes this is called "recursive" least squares).
-The structure of the problem is as follows, at time $t$ we receive a vector of observations $\mathbf{a}_t$ and an observation of our 
-target variable $b_t$.
+The structure of the problem is as follows, at time $t$ we receive a vector of observations $\mathbf{x}_t$ and an observation of our 
+target variable $y_t$.
 
 The full set of all observations and target variable data that we have received up to time $t$ is contained in the following matrix and vector:
 
 $$
-A_{(t)} = \begin{bmatrix} \cdots\, \mathbf{a}_1^T\, \cdots \\ 
-\cdots\, \mathbf{a}_2^T\, \cdots \\ \vdots \\ \cdots\, \mathbf{a}_t^T\, \cdots \end{bmatrix},\quad 
-\mathbf{b}_{(t)} = \begin{bmatrix} b_1 \\ b_2 \\ \vdots \\ b_t \end{bmatrix}
+X_{(t)} = \begin{bmatrix} \cdots\, \mathbf{x}_1^T\, \cdots \\ 
+\cdots\, \mathbf{x}_2^T\, \cdots \\ \vdots \\ \cdots\, \mathbf{x}_t^T\, \cdots \end{bmatrix},\quad 
+\mathbf{y}_{(t)} = \begin{bmatrix} y_1 \\ y_2 \\ \vdots \\ y_t \end{bmatrix}
 $$
 
 
 
-which says that row $j$ of the matrix $A_{(t)}$ is the $j$th observation $\mathbf{a}_j^T$, and the $j$th entry of $\mathbf{b}_{(t)}$ is $b_j$.
+which says that row $j$ of the matrix $X_{(t)}$ is the $j$th observation $\mathbf{x}_j^T$, and the $j$th entry of $\mathbf{y}_{(t)}$ is $b_j$.
 
 
-Here we assume that the vectors $\mathbf{a}$ each contain $n$ observations, so that $A_{(t)}$ is a $t\times n$ matrix and the vector
-$\mathbf{b}_{(t)}$ is a $t$-vector.
+Here we assume that the vectors $\mathbf{x}$ each contain $n$ observations, so that $X_{(t)}$ is a $t\times n$ matrix and the vector
+$\mathbf{y}_{(t)}$ is a $t$-vector.
 
 As long as $t>n$, i.e. the number of time observations is greater than the number of features/data points in each observation, we can fit a linear model predicting the target
-as a function of the features $\mathbf{a}$ by solving the following system of equations:
+as a function of the features $\mathbf{x}$ by solving the following system of equations:
 
 $$
-(A^T_{(t)}A_{(t)})\mathbf{x}_{(t)} = A_{(t)}^T\mathbf{b}_{(t)}
+(X^T_{(t)}X_{(t)})\mathbf{x}_{(t)} = X_{(t)}^T\mathbf{y}_{(t)}
 $$
 
 As the length of the time series increases, the computational difficulty of solving this problem also increases. However, it is possible to re-use work done on the previous
 time step to avoid solving the full system at each step.
 
-This algorithm is based on the fact that the _Gram Matrix_ $A^T_{(t+1)}A_{(t+1)}$ can be calculated from the Gram matrix $A^T_{(t)}A_{(t)}$ from the previous time step.
+This algorithm is based on the fact that the _Gram Matrix_ $X^T_{(t+1)}X_{(t+1)}$ can be calculated from the Gram matrix $X^T_{(t)}X_{(t)}$ from the previous time step.
 $$
-A^T_{(t+1)}A_{(t+1)} = A^T_{(t)}A_{(t)} + \mathbf{a}_{t+1}\mathbf{a}_{t+1}^T
+X^T_{(t+1)}X_{(t+1)} = X^T_{(t)}X_{(t)} + \mathbf{x}_{t+1}\mathbf{x}_{t+1}^T
 $$
-Similarly, the product $A^T_{(t+1)} \mathbf{b}_{(t+1)}$ can also be updated from the
+Similarly, the product $X^T_{(t+1)} \mathbf{y}_{(t+1)}$ can also be updated from the
 value on the previous time step:
 $$
-A^T_{(t+1)}\mathbf{b}_{(t+1)} = A^T_{(t)}\mathbf{b}_{(t)} + b_{t+1}\mathbf{a}_{t+1}
+X^T_{(t+1)}\mathbf{y}_{(t+1)} = X^T_{(t)}\mathbf{y}_{(t)} + y_{t+1}\mathbf{x}_{t+1}
 $$
 
 We can write an efficient algorithm to compute the updated least squares solution as follows:
 
-- Step 1: Pick an initial time $t$ such that $A_{t}$ is square or tall so that the 
-least squares problem can be solved (i.e. wait for enough data to have built up before your start) and then calculate the Gram matrix and the product $A^T_{t} \mathbf{b}_t$
+- Step 1: Pick an initial time $t$ such that $X_{t}$ is square or tall so that the 
+least squares problem can be solved (i.e. wait for enough data to have built up before your start) and then calculate the Gram matrix and the product $X^T_{t} \mathbf{y}_t$
 $$
-G_{(t)} = A^T_{(t)}A_{(t)}, \quad \mathbf{h}_{(t)} = A^T_{t}\mathbf{b}_t
+G_{(t)} = X^T_{(t)}X_{(t)}, \quad \mathbf{h}_{(t)} = X^T_{t}\mathbf{y}_t
 $$
 - Step 2: Find the least squares solution at time $t$ by solving the linear 
 system:
 $$
-G_{(t)}\mathbf{x}_{(t)} = \mathbf{h}_{(t+1)}
+G_{(t)}\mathbf{\theta}_{(t)} = \mathbf{h}_{(t+1)}
 $$
 
-- Step 3: When the next data points $\mathbf{a}_{t+1}$ and $b_{t+1}$, update
+- Step 3: When the next data points $\mathbf{x}_{t+1}$ and $y_{t+1}$, update
 $G_{(t+1)}$ and $\mathbf{h}_{(t+1)}$:
 
-$$ G_{(t+1)} = G_{(t)} + \mathbf{a}_{t+1}\mathbf{a}^T_{t+1},\quad 
-\mathbf{h}_{(t+1)} = \mathbf{h}_{(t)} + b_{t+1}\mathbf{a}_{t+1}
+$$ G_{(t+1)} = G_{(t)} + \mathbf{x}_{t+1}\mathbf{x}^T_{t+1},\quad 
+\mathbf{h}_{(t+1)} = \mathbf{h}_{(t)} + y_{t+1}\mathbf{x}_{t+1}
 $$
-Then you can repeat Step 2 to find $\mathbf{x}_{t+1}$. This algorithm can be improved upon slightly using the Matrix Inversion Lemma/Woodbury Formula, which could be a topic for a project (see note at the end which mentions Kalman filters).
+Then you can repeat Step 2 to find $\mathbf{theta}_{t+1}$. This algorithm can be improved upon slightly using the Matrix Inversion Lemma/Woodbury Formula, which could be a topic for a project (see note at the end which mentions Kalman filters).
 
 (a) You are going to use this algorithm to make a linear, autoregressive model that predicts total day-ahead citibike trips from the daily high temperature and the number of daily citibike trips taken each of the past 7 days. The data is contained in the file [daily_citibike_trips.csv](https://github.com/georgehagstrom/DATA609Spring2025/blob/main/website/assignments/labs/labData/daily_citibike_trips.csv). 
 
 Specifically, for each time point $t>7$ , fit the following
 model as a least squares estimation problem:
 $$
-N_{trips,\tau} = \sum_{i=1}^7 C_i N_{trips,\tau-i} + C_T T,
+N_{trips,\tau} = \sum_{i=1}^7 \theta_i N_{trips,\tau-i} + \theta_{i+1} T,
 $$
-Here, each $N_{trips,\tau}$ stands for the number of citibike trips on the $t$th day of the time series, $T$ stands for the forecast high temperature in New York City that day, and the coefficients $C_i$ and $C_T$ are the decision variables. 
+Here, each $N_{trips,\tau}$ stands for the number of citibike trips on the $t$th day of the time series, $T$ stands for the forecast high temperature in New York City that day, and the coefficients $\theta_i$ are the decision variables. 
 
-Find the coefficients $C_{i,t}$ and $C_{T,t}$ that minimize the mean square errors on all the observed citibike trips prior to time $t$. Use the recursive least squares optimization outlined in the preamble to this problem to calculate the coefficients for each time point, and plot how they and the $R^2$ of the model change over time.
+Find the coefficients $\theta_{i,t}$ that minimize the mean square errors on all the observed citibike trips prior to time $t$. Use the recursive least squares optimization outlined in the preamble to this problem to calculate the coefficients for each time point, and plot how they and the $R^2$ of the model change over time.
 
 What patterns do you notice in how the regression coefficients and $R^2$ change over time?
 
 Tip: Be very cautious when coding about the dimensionality of matrices and arrays.
-In python, `a @ a.T` will be an 8x8 matrix if `a.shape = (8,1)`. However, by default
-`a.shape = (8,)`, indicating that `a` is not being treated as either a row or column vector. For this problem it is important that the vectors are either row or column vectors, and not arrays without such an orientation. In python, you can use `numpy.reshape` to adjust. 
+In python, `x @ x.T` will be an 8x8 matrix if `a.shape = (8,1)`. However, by default
+`x.shape = (8,)`, indicating that `a` is not being treated as either a row or column vector. For this problem it is important that the vectors are either row or column vectors, and not arrays without such an orientation. In python, you can use `numpy.reshape` to adjust. 
 
 (b) We have included temperature as a variable because it probably influences the decision to ride a citibike. However, the relationship could be nonlinear, as both extreme high and low temperatures make bike riding less comfortable. With this idea in mind, create
 a new feature by choosing a nonlinear function of the temperature $T$ that represents
