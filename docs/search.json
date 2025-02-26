@@ -394,7 +394,7 @@
     "href": "meetups/Meetup-4/HW1Review.html#most-common-mistake",
     "title": "Lab 1 Review",
     "section": "Most Common Mistake",
-    "text": "Most Common Mistake\n\nMany of you then concluded:\n\n\\[ AA^{+}b - b = 0\\]\n\nSeveral justification, but:\n\n\nA = matrix(rnorm(40),nrow=10,ncol=4)\nb = rnorm(10)\n\nt(A  %*% solve(t(A) %*% A) %*% t(A) %*%  b)\n\n           [,1]      [,2]      [,3]      [,4]      [,5]      [,6]      [,7]\n[1,] -0.8717318 0.1518135 0.4715827 0.5018005 0.5189024 -1.105339 0.2762695\n           [,8]       [,9]       [,10]\n[1,] -0.2006004 -0.2770438 -0.08873094"
+    "text": "Most Common Mistake\n\nMany of you then concluded:\n\n\\[ AA^{+}b - b = 0\\]\n\nSeveral justification, but:\n\n\nA = matrix(rnorm(40),nrow=10,ncol=4)\nb = rnorm(10)\n\nt(A  %*% solve(t(A) %*% A) %*% t(A) %*%  b)\n\n            [,1]       [,2]      [,3]      [,4]      [,5]      [,6]      [,7]\n[1,] -0.05319889 -0.9619094 0.2188698 0.2310109 0.5011078 -1.018781 0.9176665\n          [,8]      [,9]      [,10]\n[1,] 0.9143891 -1.369168 -0.5565888"
   },
   {
     "objectID": "meetups/Meetup-4/HW1Review.html#why-isnt-it-true",
@@ -972,7 +972,7 @@
     "href": "assignments/labs.html",
     "title": "Labs",
     "section": "",
-    "text": "The homework assignments in this course are lab assignments where you will solve the problem using a combination of mathematics and computer code.\nPlease submit a and either a quarto file or jupyter notebook or other code that generates your homework. Labs should be submitted on Blackboard.\n\n\nGradient Descent and Least Squares (Download)\n\n\nLeast Squares Applications (Download)\n\nPDF.\n\nConvex Sets (PDF) (Quarto Download)\n\n\nConvex Functions (Download)\n\n\nConvex Optimizations Problems (Download)\n\n\nApplications to Statistics and Machine Learning (Download)\n\n\nNonconvex Optimization and Stochastic Gradient Descent (Download)\n\n\nTraining Deep Neural Networks (Download)",
+    "text": "The homework assignments in this course are lab assignments where you will solve the problem using a combination of mathematics and computer code.\nPlease submit a and either a quarto file or jupyter notebook or other code that generates your homework. Labs should be submitted on Blackboard.\n\n\nGradient Descent and Least Squares (Download)\n\n\nLeast Squares Applications (Download)\n\n\nConvex Sets (PDF) (Quarto Download)\n\n\nConvex Functions (Download)\n\n\nConvex Optimizations Problems (Download)\n\n\nApplications to Statistics and Machine Learning (Download)\n\n\nNonconvex Optimization and Stochastic Gradient Descent (Download)\n\n\nTraining Deep Neural Networks (Download)",
     "crumbs": [
       "Assignments",
       "Labs"
@@ -1515,7 +1515,7 @@
     "href": "meetups/Meetup-2/meetup-2.html#condition-number-and-accuracy",
     "title": "Meetup 2: Least Squares",
     "section": "Condition Number and Accuracy",
-    "text": "Condition Number and Accuracy\n\nAccuracy of np.linalg.inv(A) @ b related to \\(\\frac{\\sigma_{max}}{\\sigma_{min}}\\)\nThis is called the “condition number” of the matrix \\(A\\)\n\n\n%timeit np.linalg.inv(A) @ b\n%timeit np.linalg.solve(A,b)\n\nx1 = np.linalg.inv(A) @ b\nx2 = np.linalg.solve(A,b)\n\nprint(\"Matrix Inverse Error: \",np.linalg.norm(A @ x1 - b))\nprint(\"Linear Solve Error: \",np.linalg.norm(A @ x2 - b))\n\n8.17 ms ± 3.71 ms per loop (mean ± std. dev. of 7 runs, 100 loops each)\n2.52 ms ± 52.2 μs per loop (mean ± std. dev. of 7 runs, 100 loops each)\nMatrix Inverse Error:  2.955243289006942e-07\nLinear Solve Error:  2.203279791986765e-15\n\n\n\n100 million times more accurate, 5 times faster"
+    "text": "Condition Number and Accuracy\n\nAccuracy of np.linalg.inv(A) @ b related to \\(\\frac{\\sigma_{max}}{\\sigma_{min}}\\)\nThis is called the “condition number” of the matrix \\(A\\)\n\n\n%timeit np.linalg.inv(A) @ b\n%timeit np.linalg.solve(A,b)\n\nx1 = np.linalg.inv(A) @ b\nx2 = np.linalg.solve(A,b)\n\nprint(\"Matrix Inverse Error: \",np.linalg.norm(A @ x1 - b))\nprint(\"Linear Solve Error: \",np.linalg.norm(A @ x2 - b))\n\nThe slowest run took 30.55 times longer than the fastest. This could mean that an intermediate result is being cached.\n18 ms ± 34.3 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)\n2.42 ms ± 45.3 μs per loop (mean ± std. dev. of 7 runs, 100 loops each)\nMatrix Inverse Error:  2.6293962267842945e-07\nLinear Solve Error:  2.1965367041861754e-15\n\n\n\n100 million times more accurate, 5 times faster"
   },
   {
     "objectID": "meetups/Meetup-2/meetup-2.html#issue-is-worse-for-ata",
