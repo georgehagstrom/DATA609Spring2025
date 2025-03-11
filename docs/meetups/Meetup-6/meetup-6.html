@@ -533,7 +533,7 @@ George I. Hagstrom
 <ul>
 <li><span class="math inline">\(p_i(t)\)</span> power function for each plant over a typical day</li>
 </ul>
-<div id="f8b6ddfa" class="cell" data-execution_count="1">
+<div id="bbad3e88" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -566,7 +566,7 @@ p_{tot}(t) = \mathbf{p}(t)^T\mathbf{w}
 <p><span class="math display">\[
 \mathbf{p}(t)^T\mathbf{w} \geq d_{min}(t)
 \]</span></p>
-<div id="07205e45" class="cell" data-execution_count="2">
+<div id="dca7bec3" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -787,7 +787,7 @@ t^2 (\mathbf{v}^TA\mathbf{v} ) + t(2\mathbf{v}^TA\mathbf{v_0} + \mathbf{v}^T\mat
 <ul>
 <li>Build expressions out of variables and constants</li>
 </ul>
-<div id="cced6cc8" class="cell" data-execution_count="3">
+<div id="bfbdd620" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="im">import</span> cvxpy <span class="im">as</span> cvx</span>
 <span id="cb1-2"><a></a></span>
 <span id="cb1-3"><a></a><span class="co"># 6 dimensional vector of unknowns</span></span>
@@ -809,7 +809,7 @@ t^2 (\mathbf{v}^TA\mathbf{v} ) + t(2\mathbf{v}^TA\mathbf{v_0} + \mathbf{v}^T\mat
 <ul>
 <li><code>atomic functions</code> define objective and constraints</li>
 </ul>
-<div id="97870ade" class="cell" data-execution_count="4">
+<div id="2e38f606" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>margin <span class="op">=</span> <span class="fl">0.2</span></span>
 <span id="cb2-2"><a></a></span>
 <span id="cb2-3"><a></a>problem <span class="op">=</span> cvx.Problem(</span>
@@ -831,7 +831,7 @@ t^2 (\mathbf{v}^TA\mathbf{v} ) + t(2\mathbf{v}^TA\mathbf{v_0} + \mathbf{v}^T\mat
 <ul>
 <li>Use <code>atomic functions</code> to define objective and constraints</li>
 </ul>
-<div id="ced88a00" class="cell" data-execution_count="5">
+<div id="8088dac3" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>margin <span class="op">=</span> <span class="fl">0.2</span></span>
 <span id="cb4-2"><a></a></span>
 <span id="cb4-3"><a></a>problem <span class="op">=</span> cvx.Problem(</span>
@@ -855,7 +855,7 @@ True</code></pre>
 <ul>
 <li>Use <code>atomic functions</code> to define objective and constraints</li>
 </ul>
-<div id="90f0d6c6" class="cell" data-execution_count="6">
+<div id="67cb75c4" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a>margin <span class="op">=</span> <span class="fl">0.2</span></span>
 <span id="cb6-2"><a></a></span>
 <span id="cb6-3"><a></a>problem <span class="op">=</span> cvx.Problem(</span>
@@ -877,7 +877,7 @@ True</code></pre>
 <ul>
 <li>Use <code>atomic functions</code> to define objective and constraints</li>
 </ul>
-<div id="d5a5917d" class="cell" data-execution_count="7">
+<div id="9c963187" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a>margin <span class="op">=</span> <span class="fl">0.2</span></span>
 <span id="cb8-2"><a></a></span>
 <span id="cb8-3"><a></a>problem <span class="op">=</span> cvx.Problem(</span>
@@ -899,7 +899,7 @@ True</code></pre>
 <ul>
 <li>Solve using <code>problem.solve()</code></li>
 </ul>
-<div id="fcf6b6be" class="cell" data-execution_count="8">
+<div id="eccc5504" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a>margin <span class="op">=</span> <span class="fl">0.2</span></span>
 <span id="cb10-2"><a></a></span>
 <span id="cb10-3"><a></a>problem <span class="op">=</span> cvx.Problem(</span>
@@ -914,11 +914,11 @@ True</code></pre>
 <span id="cb10-12"><a></a><span class="bu">print</span>(sol) <span class="co"># objective</span></span>
 <span id="cb10-13"><a></a>x.value <span class="co"># optimum</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>2.2344007524463168</code></pre>
+<pre><code>1.5973560631954486</code></pre>
 </div>
 <div class="cell-output cell-output-display" data-execution_count="8">
-<pre><code>array([ 0.60158813,  1.5960561 , -0.73445945, -1.09240255,  0.54850939,
-        0.22272581])</code></pre>
+<pre><code>array([-1.06000186e-05, -8.64768734e-01,  1.10974744e+00, -6.33522260e-01,
+        7.50221541e-02,  4.06452044e-01])</code></pre>
 </div>
 </div>
 </section>
@@ -927,7 +927,7 @@ True</code></pre>
 <ul>
 <li>How about weighted least squares?</li>
 </ul>
-<div id="00771167" class="cell" data-execution_count="9">
+<div id="5983347c" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a>margin <span class="op">=</span> <span class="fl">0.2</span></span>
 <span id="cb13-2"><a></a>w <span class="op">=</span> np.sqrt(np.random.random(<span class="dv">6</span>))</span>
 <span id="cb13-3"><a></a>problem <span class="op">=</span> cvx.Problem(</span>
@@ -944,18 +944,18 @@ True</code></pre>
 </section>
 <section id="intro-to-cvx-8" class="slide level2">
 <h2>Intro to CVX</h2>
-<div id="0a803f97" class="cell" data-execution_count="10">
+<div id="616732a5" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a><span class="co"># Solve the problem</span></span>
 <span id="cb14-2"><a></a></span>
 <span id="cb14-3"><a></a>sol <span class="op">=</span> problem.solve()</span>
 <span id="cb14-4"><a></a><span class="bu">print</span>(sol) <span class="co"># objective</span></span>
 <span id="cb14-5"><a></a>x.value <span class="co"># optimum</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>1.1417695136819492</code></pre>
+<pre><code>1.2016295815517055</code></pre>
 </div>
 <div class="cell-output cell-output-display" data-execution_count="10">
-<pre><code>array([ 0.60158813,  1.5960561 , -0.73445945, -1.09240255,  0.54850939,
-        0.22272581])</code></pre>
+<pre><code>array([-3.40994775e-06, -8.64768735e-01,  1.10974744e+00, -6.33522260e-01,
+        7.50221458e-02,  4.06452043e-01])</code></pre>
 </div>
 </div>
 </section>

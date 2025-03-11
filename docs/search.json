@@ -709,7 +709,7 @@
     "href": "meetups/Meetup-6/meetup-6.html#intro-to-cvx-6",
     "title": "DATA 609 Meetup 6: Constructing Convex Sets",
     "section": "Intro to CVX",
-    "text": "Intro to CVX\n\nSolve using problem.solve()\n\n\nmargin = 0.2\n\nproblem = cvx.Problem(\n  cvx.Minimize(cvx.norm(x)), # Objective (this one is least squares)\n  [x - x_mean &gt;= -margin , # These are the constraints\n  x - x_mean &lt;= margin]\n)\n\n# Solve the problem\n\nsol = problem.solve()\nprint(sol) # objective\nx.value # optimum\n\n2.2344007524463168\n\n\narray([ 0.60158813,  1.5960561 , -0.73445945, -1.09240255,  0.54850939,\n        0.22272581])"
+    "text": "Intro to CVX\n\nSolve using problem.solve()\n\n\nmargin = 0.2\n\nproblem = cvx.Problem(\n  cvx.Minimize(cvx.norm(x)), # Objective (this one is least squares)\n  [x - x_mean &gt;= -margin , # These are the constraints\n  x - x_mean &lt;= margin]\n)\n\n# Solve the problem\n\nsol = problem.solve()\nprint(sol) # objective\nx.value # optimum\n\n1.5973560631954486\n\n\narray([-1.06000186e-05, -8.64768734e-01,  1.10974744e+00, -6.33522260e-01,\n        7.50221541e-02,  4.06452044e-01])"
   },
   {
     "objectID": "meetups/Meetup-6/meetup-6.html#intro-to-cvx-7",
@@ -723,7 +723,7 @@
     "href": "meetups/Meetup-6/meetup-6.html#intro-to-cvx-8",
     "title": "DATA 609 Meetup 6: Constructing Convex Sets",
     "section": "Intro to CVX",
-    "text": "Intro to CVX\n\n# Solve the problem\n\nsol = problem.solve()\nprint(sol) # objective\nx.value # optimum\n\n1.1417695136819492\n\n\narray([ 0.60158813,  1.5960561 , -0.73445945, -1.09240255,  0.54850939,\n        0.22272581])"
+    "text": "Intro to CVX\n\n# Solve the problem\n\nsol = problem.solve()\nprint(sol) # objective\nx.value # optimum\n\n1.2016295815517055\n\n\narray([-3.40994775e-06, -8.64768735e-01,  1.10974744e+00, -6.33522260e-01,\n        7.50221458e-02,  4.06452043e-01])"
   },
   {
     "objectID": "meetups/Meetup-6/meetup-6.html#thanks",
@@ -1304,7 +1304,7 @@
     "href": "meetups/Meetup-2/meetup-2.html#condition-number-and-accuracy",
     "title": "Meetup 2: Least Squares",
     "section": "Condition Number and Accuracy",
-    "text": "Condition Number and Accuracy\n\nAccuracy of np.linalg.inv(A) @ b related to \\(\\frac{\\sigma_{max}}{\\sigma_{min}}\\)\nThis is called the “condition number” of the matrix \\(A\\)\n\n\n%timeit np.linalg.inv(A) @ b\n%timeit np.linalg.solve(A,b)\n\nx1 = np.linalg.inv(A) @ b\nx2 = np.linalg.solve(A,b)\n\nprint(\"Matrix Inverse Error: \",np.linalg.norm(A @ x1 - b))\nprint(\"Linear Solve Error: \",np.linalg.norm(A @ x2 - b))\n\nThe slowest run took 6.63 times longer than the fastest. This could mean that an intermediate result is being cached.\n22.4 ms ± 12.7 ms per loop (mean ± std. dev. of 7 runs, 100 loops each)\n2.46 ms ± 67.3 μs per loop (mean ± std. dev. of 7 runs, 100 loops each)\nMatrix Inverse Error:  4.97183471779363e-07\nLinear Solve Error:  2.642676285743227e-15\n\n\n\n100 million times more accurate, 5 times faster"
+    "text": "Condition Number and Accuracy\n\nAccuracy of np.linalg.inv(A) @ b related to \\(\\frac{\\sigma_{max}}{\\sigma_{min}}\\)\nThis is called the “condition number” of the matrix \\(A\\)\n\n\n%timeit np.linalg.inv(A) @ b\n%timeit np.linalg.solve(A,b)\n\nx1 = np.linalg.inv(A) @ b\nx2 = np.linalg.solve(A,b)\n\nprint(\"Matrix Inverse Error: \",np.linalg.norm(A @ x1 - b))\nprint(\"Linear Solve Error: \",np.linalg.norm(A @ x2 - b))\n\n4.43 ms ± 354 μs per loop (mean ± std. dev. of 7 runs, 100 loops each)\n2.39 ms ± 73.2 μs per loop (mean ± std. dev. of 7 runs, 100 loops each)\nMatrix Inverse Error:  4.2087692135131935e-07\nLinear Solve Error:  2.3091920942884754e-15\n\n\n\n100 million times more accurate, 5 times faster"
   },
   {
     "objectID": "meetups/Meetup-2/meetup-2.html#issue-is-worse-for-ata",
@@ -2194,7 +2194,7 @@
     "href": "meetups/Meetup-4/HW1Review.html#most-common-mistake",
     "title": "Lab 1 Review",
     "section": "Most Common Mistake",
-    "text": "Most Common Mistake\n\nMany of you then concluded:\n\n\\[ AA^{+}b - b = 0\\]\n\nSeveral justification, but:\n\n\nA = matrix(rnorm(40),nrow=10,ncol=4)\nb = rnorm(10)\n\nt(A  %*% solve(t(A) %*% A) %*% t(A) %*%  b)\n\n            [,1]      [,2]       [,3]      [,4]      [,5]       [,6]      [,7]\n[1,] -0.04101607 -0.383879 -0.2105164 0.7503853 -2.000528 -0.9656506 0.5390454\n          [,8]      [,9]     [,10]\n[1,] -1.379613 0.9053507 0.3175687"
+    "text": "Most Common Mistake\n\nMany of you then concluded:\n\n\\[ AA^{+}b - b = 0\\]\n\nSeveral justification, but:\n\n\nA = matrix(rnorm(40),nrow=10,ncol=4)\nb = rnorm(10)\n\nt(A  %*% solve(t(A) %*% A) %*% t(A) %*%  b)\n\n           [,1]       [,2]       [,3]      [,4]       [,5]       [,6]\n[1,] -0.8713607 -0.2701818 -0.1220007 0.1784816 0.06320762 -0.7827252\n           [,7]       [,8]       [,9]      [,10]\n[1,] -0.5529128 -0.6623103 -0.1638078 -0.9996689"
   },
   {
     "objectID": "meetups/Meetup-4/HW1Review.html#why-isnt-it-true",
@@ -2456,11 +2456,11 @@
     "text": "Jensen and Fragility\n\nSuppose something in your life is random\nConsider your payoff function \\(f(x)\\)\nIf your \\(f\\) is convex, Jensen says randomness helps you\nYour Outcome = \\(\\mathrm{E}[f(x)]\\) better than outcome of average \\(f(\\mathrm{E}[x])\\)\nIf your payoff is concave, Jensen says randomness hurts you"
   },
   {
-    "objectID": "meetups/Meetup7/meetup-7.html#jensen-and-traffic",
-    "href": "meetups/Meetup7/meetup-7.html#jensen-and-traffic",
+    "objectID": "meetups/Meetup7/meetup-7.html#car-traffic-example",
+    "href": "meetups/Meetup7/meetup-7.html#car-traffic-example",
     "title": "DATA 609 Meetup 7",
-    "section": "Jensen and Traffic",
-    "text": "Jensen and Traffic\n\nYou are driving, and the amount of time it will take depends on the number of cars.\nWhen few cars on the road, trip length determined by speed limit\nWhen a lot of cars on the road, 30 minute trip could last 4 hours\nJensen says average trip time is longer than time under average traffic conditions"
+    "section": "Car Traffic Example",
+    "text": "Car Traffic Example\n\n\n\nFew cars, drive speed limit\nCars above threshold, speed drops\nExpected Traffic is 30 cars\nExpected Time 65 minutes\n\n\n| Cars | Time       |\n|------|------------|\n| 1    | 30 minutes |\n| 10   | 30 minutes |\n| 20   | 30 minutes |\n| 30   | 40 minutes |\n| 40   | 1 hour     |\n| 50   | 1.5 hours  |\n| 60   | 3 hours    |"
   },
   {
     "objectID": "meetups/Meetup7/meetup-7.html#jensen-and-fragility-1",
@@ -2690,7 +2690,7 @@
     "href": "course/schedule.html#meetup-link",
     "title": "DATA 609 Spring 2025",
     "section": "Meetup Link:",
-    "text": "Meetup Link:\nClick Here to Join the Meetups on Zoom\n\nCourse Schedule\n\n\nDate\nStart Time\nModule\nSlides\nVideo\n\n\n\n\nJan 27\n06:45PM\nIntroduction to Optimization Theory\nMeetup 1 Slides\nMeetup 1 Video\n\n\nFeb 3\n06:45PM\nLeast Squares Optimization\nMeetup 2 Slides\nMeetup 2 Video\n\n\nFeb 10\n06:45PM\nLeast Squares and Statistics\nMeetup 3 Slides\nMeetup 3 Video\n\n\nFeb 17\n06:45PM\nConstrained Least Squares and Applications\nMeetup 4 Slides\nMeetup 4 Video\n\n\nFeb 24\n06:45PM\nConvex Sets\nMeetup 5 Slides\nMeetup 5 Video\n\n\nMar 3\n06:45PM\nConvex Sets II\nMeetup 6 Slides\nMeetup 6 Video\n\n\nMar 10\n06:45PM\nConvex Functions\nMeetup 7 Slides\n\n\n\nMar 17\n06:45PM\nConvex Functions II\n\n\n\n\nMar 24\n07:0PM\nConvex Optimization Problems\n\n\n\n\nMar 31\n06:45PM\nData Fitting\n\n\n\n\nApr 7\n06:45PM\nApplications to Statistics and Machine Learning\n\n\n\n\nApr 14\n06:45PM\nDuality and Classifiers\n\n\n\n\nApr 21\n\nNo Meetup (Spring Break)\n\n\n\n\nApr 28\n06:45PM\nGradient Descent and Neural Networks\nLab 7\n\n\n\nMay 5\n06:45PM\nStochastic Gradient Descent\n\n\n\n\nMay 12\n06:45PM\nTraining Deep Neural Networks",
+    "text": "Meetup Link:\nClick Here to Join the Meetups on Zoom\n\nCourse Schedule\n\n\nDate\nStart Time\nModule\nSlides\nVideo\n\n\n\n\nJan 27\n06:45PM\nIntroduction to Optimization Theory\nMeetup 1 Slides\nMeetup 1 Video\n\n\nFeb 3\n06:45PM\nLeast Squares Optimization\nMeetup 2 Slides\nMeetup 2 Video\n\n\nFeb 10\n06:45PM\nLeast Squares and Statistics\nMeetup 3 Slides\nMeetup 3 Video\n\n\nFeb 17\n06:45PM\nConstrained Least Squares and Applications\nMeetup 4 Slides\nMeetup 4 Video\n\n\nFeb 24\n06:45PM\nConvex Sets\nMeetup 5 Slides\nMeetup 5 Video\n\n\nMar 3\n06:45PM\nConvex Sets II\nMeetup 6 Slides\nMeetup 6 Video\n\n\nMar 10\n06:45PM\nConvex Functions\nMeetup 7 Slides\nMeetup 7 Video\n\n\nMar 17\n06:45PM\nConvex Functions II\n\n\n\n\nMar 24\n07:0PM\nConvex Optimization Problems\n\n\n\n\nMar 31\n06:45PM\nData Fitting\n\n\n\n\nApr 7\n06:45PM\nApplications to Statistics and Machine Learning\n\n\n\n\nApr 14\n06:45PM\nDuality and Classifiers\n\n\n\n\nApr 21\n\nNo Meetup (Spring Break)\n\n\n\n\nApr 28\n06:45PM\nGradient Descent and Neural Networks\nLab 7\n\n\n\nMay 5\n06:45PM\nStochastic Gradient Descent\n\n\n\n\nMay 12\n06:45PM\nTraining Deep Neural Networks",
     "crumbs": [
       "Course information",
       "Schedule"
@@ -2706,12 +2706,5 @@
       "Course information",
       "Overview"
     ]
-  },
-  {
-    "objectID": "meetups/Meetup7/meetup-7.html#car-traffic-example",
-    "href": "meetups/Meetup7/meetup-7.html#car-traffic-example",
-    "title": "DATA 609 Meetup 7",
-    "section": "Car Traffic Example",
-    "text": "Car Traffic Example\n\n\n\nFew cars, drive speed limit\nCars above threshold, speed drops\nExpected Traffic is 30 cars\nExpected Time 65 minutes\n\n\n| Cars | Time       |\n|------|------------|\n| 1    | 30 minutes |\n| 10   | 30 minutes |\n| 20   | 30 minutes |\n| 30   | 40 minutes |\n| 40   | 1 hour     |\n| 50   | 1.5 hours  |\n| 60   | 3 hours    |"
   }
 ]
