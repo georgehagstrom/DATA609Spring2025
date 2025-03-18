@@ -155,7 +155,7 @@
     "href": "modules/module8.html",
     "title": "Module 8: Convex Functions II",
     "section": "",
-    "text": "Learning Objectives\n\nQuasiconvex Functions\nLog-Convexity/Concavity\nGeneralized Inequalities and Convexity\n\n\n\nReadings\nSections 3.4-3.6 of Convex Optimization",
+    "text": "Learning Objectives\n\nRules for constructing convex functions\n\n\n\nReadings\nSection 3.2 of Convex Optimization",
     "crumbs": [
       "Topics",
       "8 - Convex Functions II"
@@ -709,7 +709,7 @@
     "href": "meetups/Meetup-6/meetup-6.html#intro-to-cvx-6",
     "title": "DATA 609 Meetup 6: Constructing Convex Sets",
     "section": "Intro to CVX",
-    "text": "Intro to CVX\n\nSolve using problem.solve()\n\n\nmargin = 0.2\n\nproblem = cvx.Problem(\n  cvx.Minimize(cvx.norm(x)), # Objective (this one is least squares)\n  [x - x_mean &gt;= -margin , # These are the constraints\n  x - x_mean &lt;= margin]\n)\n\n# Solve the problem\n\nsol = problem.solve()\nprint(sol) # objective\nx.value # optimum\n\n2.7616631772356537\n\n\narray([-1.87834283,  1.32582308,  0.1883592 ,  1.41493285,  0.53195701,\n        0.14252184])"
+    "text": "Intro to CVX\n\nSolve using problem.solve()\n\n\nmargin = 0.2\n\nproblem = cvx.Problem(\n  cvx.Minimize(cvx.norm(x)), # Objective (this one is least squares)\n  [x - x_mean &gt;= -margin , # These are the constraints\n  x - x_mean &lt;= margin]\n)\n\n# Solve the problem\n\nsol = problem.solve()\nprint(sol) # objective\nx.value # optimum\n\n1.9328229130892762\n\n\narray([-7.95099934e-01, -1.32161982e+00,  8.06559759e-01,  5.52357183e-06,\n       -9.50157496e-07, -8.40477796e-01])"
   },
   {
     "objectID": "meetups/Meetup-6/meetup-6.html#intro-to-cvx-7",
@@ -723,7 +723,7 @@
     "href": "meetups/Meetup-6/meetup-6.html#intro-to-cvx-8",
     "title": "DATA 609 Meetup 6: Constructing Convex Sets",
     "section": "Intro to CVX",
-    "text": "Intro to CVX\n\n# Solve the problem\n\nsol = problem.solve()\nprint(sol) # objective\nx.value # optimum\n\n1.1594453640981028\n\n\narray([-1.87834283,  1.32582308,  0.18835922,  1.41493285,  0.53195701,\n        0.14252185])"
+    "text": "Intro to CVX\n\n# Solve the problem\n\nsol = problem.solve()\nprint(sol) # objective\nx.value # optimum\n\n1.2923775809125335\n\n\narray([-7.95099934e-01, -1.32161982e+00,  8.06559759e-01, -7.22858124e-05,\n        3.86567519e-06, -8.40477793e-01])"
   },
   {
     "objectID": "meetups/Meetup-6/meetup-6.html#thanks",
@@ -1304,7 +1304,7 @@
     "href": "meetups/Meetup-2/meetup-2.html#condition-number-and-accuracy",
     "title": "Meetup 2: Least Squares",
     "section": "Condition Number and Accuracy",
-    "text": "Condition Number and Accuracy\n\nAccuracy of np.linalg.inv(A) @ b related to \\(\\frac{\\sigma_{max}}{\\sigma_{min}}\\)\nThis is called the “condition number” of the matrix \\(A\\)\n\n\n%timeit np.linalg.inv(A) @ b\n%timeit np.linalg.solve(A,b)\n\nx1 = np.linalg.inv(A) @ b\nx2 = np.linalg.solve(A,b)\n\nprint(\"Matrix Inverse Error: \",np.linalg.norm(A @ x1 - b))\nprint(\"Linear Solve Error: \",np.linalg.norm(A @ x2 - b))\n\nThe slowest run took 83.46 times longer than the fastest. This could mean that an intermediate result is being cached.\n197 ms ± 280 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)\n3 ms ± 41.1 μs per loop (mean ± std. dev. of 7 runs, 100 loops each)\nMatrix Inverse Error:  4.076453439233307e-07\nLinear Solve Error:  2.2073863755697816e-15\n\n\n\n100 million times more accurate, 5 times faster"
+    "text": "Condition Number and Accuracy\n\nAccuracy of np.linalg.inv(A) @ b related to \\(\\frac{\\sigma_{max}}{\\sigma_{min}}\\)\nThis is called the “condition number” of the matrix \\(A\\)\n\n\n%timeit np.linalg.inv(A) @ b\n%timeit np.linalg.solve(A,b)\n\nx1 = np.linalg.inv(A) @ b\nx2 = np.linalg.solve(A,b)\n\nprint(\"Matrix Inverse Error: \",np.linalg.norm(A @ x1 - b))\nprint(\"Linear Solve Error: \",np.linalg.norm(A @ x2 - b))\n\n439 ms ± 129 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)\nCompiler time: 0.13 s\n3.89 ms ± 639 μs per loop (mean ± std. dev. of 7 runs, 100 loops each)\nMatrix Inverse Error:  3.2612020256651295e-07\nLinear Solve Error:  2.5509439023268913e-15\n\n\n\n100 million times more accurate, 5 times faster"
   },
   {
     "objectID": "meetups/Meetup-2/meetup-2.html#issue-is-worse-for-ata",
@@ -1346,28 +1346,77 @@
     "href": "meetups/Meetup-8/meetup-8.html#week-summary",
     "title": "DATA 609 Meetup 8: Constructing Convex Functions",
     "section": "Week Summary",
-    "text": "Week Summary\n\nOperations that Preserve Convexity\nApplication to Disciplined Convex Programming\nKeep Working on Lab 4"
+    "text": "Week Summary\n\nOperations that Preserve Convexity\nApplication to Disciplined Convex Programming\nKeep Working on Lab 4\nRead Section 3.2, skim and 3.4, skim 3.5 if you have time/interest\nI will make quasiconvex part of of homework optional"
+  },
+  {
+    "objectID": "meetups/Meetup-8/meetup-8.html#hw-2-review-visualization",
+    "href": "meetups/Meetup-8/meetup-8.html#hw-2-review-visualization",
+    "title": "DATA 609 Meetup 8: Constructing Convex Functions",
+    "section": "HW 2 Review Visualization",
+    "text": "HW 2 Review Visualization\n\nDon’t do this"
+  },
+  {
+    "objectID": "meetups/Meetup-8/meetup-8.html#hw-2-review-visualization-1",
+    "href": "meetups/Meetup-8/meetup-8.html#hw-2-review-visualization-1",
+    "title": "DATA 609 Meetup 8: Constructing Convex Functions",
+    "section": "HW 2 Review Visualization",
+    "text": "HW 2 Review Visualization\n\n\n\n\n\n\n\nDo this instead"
+  },
+  {
+    "objectID": "meetups/Meetup-8/meetup-8.html#hw-2-review-package-versus-exact",
+    "href": "meetups/Meetup-8/meetup-8.html#hw-2-review-package-versus-exact",
+    "title": "DATA 609 Meetup 8: Constructing Convex Functions",
+    "section": "HW 2 Review Package versus Exact",
+    "text": "HW 2 Review Package versus Exact\n\nPackages versus Exact Formula\nIntended method\n\n\\[\n\\begin{bmatrix}\n2A^TA & C^T \\\\\nC & 0\n\\end{bmatrix}\n\\begin{bmatrix} \\mathbf{\\theta} \\\\ \\mathbf{z}  \\end{bmatrix}\n=\n\\begin{bmatrix} 2A^T\\mathbf{x} \\\\ \\mathbf{d} \\end{bmatrix}\n\\]"
   },
   {
     "objectID": "meetups/Meetup-8/meetup-8.html#hw-2-review",
     "href": "meetups/Meetup-8/meetup-8.html#hw-2-review",
     "title": "DATA 609 Meetup 8: Constructing Convex Functions",
     "section": "HW 2 Review",
-    "text": "HW 2 Review\n\nData Visualization"
+    "text": "HW 2 Review\n\nPackages versus Exact Formula\nPackage methods had varying results\n\nCVX successful\nquad_prog successful\nscipy.minimize unsuccessful\n\nSLSQP finicky"
   },
   {
-    "objectID": "meetups/Meetup-8/meetup-8.html#hw-2-review-1",
-    "href": "meetups/Meetup-8/meetup-8.html#hw-2-review-1",
+    "objectID": "meetups/Meetup-8/meetup-8.html#personal-story",
+    "href": "meetups/Meetup-8/meetup-8.html#personal-story",
     "title": "DATA 609 Meetup 8: Constructing Convex Functions",
-    "section": "HW 2 Review",
-    "text": "HW 2 Review\n\nPackages versus Exact Formula"
+    "section": "Personal Story",
+    "text": "Personal Story\n\nWas trying to replicate and build upon a modeling study\nBased on optimization problem:\n\n\\[\n\\max_{\\nu,\\mathrm{x}} \\mu_{\\nu,\\mathrm{x}} \\\\\nS\\nu = 0\\,\\quad\\mathrm{x} \\in \\mathrm{Simplex}\n\\]\n\nFind traits and fluxes that maximize growth rates of prochlorococcus"
   },
   {
-    "objectID": "meetups/Meetup-8/meetup-8.html#how-to-show-an-objective-function-is-convex",
-    "href": "meetups/Meetup-8/meetup-8.html#how-to-show-an-objective-function-is-convex",
+    "objectID": "meetups/Meetup-8/meetup-8.html#personal-story-1",
+    "href": "meetups/Meetup-8/meetup-8.html#personal-story-1",
     "title": "DATA 609 Meetup 8: Constructing Convex Functions",
-    "section": "How to show an objective function is convex?",
-    "text": "How to show an objective function is convex?\n\nApply the definition?\nConstruct the function from simpler elements"
+    "section": "Personal Story",
+    "text": "Personal Story\n\n\n\n\n\nWitness Protection"
+  },
+  {
+    "objectID": "meetups/Meetup-8/meetup-8.html#personal-story-2",
+    "href": "meetups/Meetup-8/meetup-8.html#personal-story-2",
+    "title": "DATA 609 Meetup 8: Constructing Convex Functions",
+    "section": "Personal Story",
+    "text": "Personal Story\n\nAuthor of study chucked problem into matlab without regard for the solver\nSolutions had pleasing levels of “noise”"
+  },
+  {
+    "objectID": "meetups/Meetup-8/meetup-8.html#personal-story-3",
+    "href": "meetups/Meetup-8/meetup-8.html#personal-story-3",
+    "title": "DATA 609 Meetup 8: Constructing Convex Functions",
+    "section": "Personal Story",
+    "text": "Personal Story\n\nAuthor of study chucked problem into matlab without regard for the solver\nSolutions had pleasing levels of “noise”"
+  },
+  {
+    "objectID": "meetups/Meetup-8/meetup-8.html#personal-story-4",
+    "href": "meetups/Meetup-8/meetup-8.html#personal-story-4",
+    "title": "DATA 609 Meetup 8: Constructing Convex Functions",
+    "section": "Personal Story",
+    "text": "Personal Story\n\nTurns out solver wasn’t appropriate for problem\nWas failing to converge, introducing randomness\n\n\n\n\n\n\nWitness Protection"
+  },
+  {
+    "objectID": "meetups/Meetup-8/meetup-8.html#how-to-show-a-function-is-convex",
+    "href": "meetups/Meetup-8/meetup-8.html#how-to-show-a-function-is-convex",
+    "title": "DATA 609 Meetup 8: Constructing Convex Functions",
+    "section": "How to show a function is convex?",
+    "text": "How to show a function is convex?\n\nApply the definition?\n\nRare, project onto line\n\nCheck the Hessian\n\nRare, simple cases only\n\nConstruct the function from simpler elements\n\n99+% of the time\nSeveral fundamental rules\nAll are special cases of a single rule"
   },
   {
     "objectID": "meetups/Meetup-8/meetup-8.html#scalar-multiplication",
@@ -1381,49 +1430,154 @@
     "href": "meetups/Meetup-8/meetup-8.html#positive-weighted-sum",
     "title": "DATA 609 Meetup 8: Constructing Convex Functions",
     "section": "Positive Weighted Sum",
-    "text": "Positive Weighted Sum"
+    "text": "Positive Weighted Sum\n\nIf \\(f_i\\) is convex, \\(\\alpha_i\\) positive, then\n\n\\[\nF(x) = \\sum_i f_i(x)\n\\]\n\n\\(F\\) is convex\nApplication: Regularize to your heart’s content \\[\nf(\\mathbf{x}) + \\lambda \\|\\mathbf{x}\\|_1\n\\]"
   },
   {
     "objectID": "meetups/Meetup-8/meetup-8.html#integration",
     "href": "meetups/Meetup-8/meetup-8.html#integration",
     "title": "DATA 609 Meetup 8: Constructing Convex Functions",
     "section": "Integration",
-    "text": "Integration"
+    "text": "Integration\n\nSuppose \\(g(\\mathbf{x},\\mathbf{y})\\) convex in \\(\\mathbf{x}\\) for fixed \\(\\mathbf{y}\\)\nSuppose \\(w(\\mathbf{y}) &gt; 0\\) \\[\nG(\\mathbf{x}) = \\int_{Y} \\mathbf{dy} w(\\mathbf{y})g(\\mathbf{x},\\mathbf{y})\n\\]\n\\(G(\\mathbf{x})\\) is convex"
+  },
+  {
+    "objectID": "meetups/Meetup-8/meetup-8.html#example-running-average",
+    "href": "meetups/Meetup-8/meetup-8.html#example-running-average",
+    "title": "DATA 609 Meetup 8: Constructing Convex Functions",
+    "section": "Example: Running Average",
+    "text": "Example: Running Average\n\nLet \\(f\\) be a convex function and define: \\[\nF(x) = \\frac{1}{x}\\int_0^x dt f(t)\n\\]\nCan substitute \\(t=sx\\) into integral: \\[\nF(x) = \\frac{1}{x}\\int_0^1 ds x f(sx) = \\int_0^1 ds f(sx)\n\\]\n\\(f(sx)\\) is convex in \\(x\\) for fixed \\(s\\). Therefore \\(F(x)\\) is convex"
   },
   {
     "objectID": "meetups/Meetup-8/meetup-8.html#composition-with-affine-function",
     "href": "meetups/Meetup-8/meetup-8.html#composition-with-affine-function",
     "title": "DATA 609 Meetup 8: Constructing Convex Functions",
     "section": "Composition with Affine Function",
-    "text": "Composition with Affine Function"
+    "text": "Composition with Affine Function\n\nSuppose that \\(f(\\mathbf{x})\\) is convex\nThen \\(g(\\mathbf{y}) = f(A\\mathbf{y} + \\mathbf{d})\\) is convex\nThis also preserves concavity\nApplication: \\(\\|A\\mathbf{x}-b\\|_p\\) convex for any norm"
   },
   {
-    "objectID": "meetups/Meetup-8/meetup-8.html#pointwise-maximumsupremum",
-    "href": "meetups/Meetup-8/meetup-8.html#pointwise-maximumsupremum",
+    "objectID": "meetups/Meetup-8/meetup-8.html#pointwise-maximum",
+    "href": "meetups/Meetup-8/meetup-8.html#pointwise-maximum",
     "title": "DATA 609 Meetup 8: Constructing Convex Functions",
-    "section": "Pointwise Maximum/Supremum",
-    "text": "Pointwise Maximum/Supremum"
+    "section": "Pointwise Maximum",
+    "text": "Pointwise Maximum\n\nSuppose we have a bunch of convex functions \\(f_1\\), \\(f_2\\), …., \\(f_n\\) \\[\nF(x) = \\max\\left(f_1(x),f_2(x),\\cdots,f_n(x)\\right)\n\\]\n\\(F(x)\\) is convex"
+  },
+  {
+    "objectID": "meetups/Meetup-8/meetup-8.html#pointwise-maximum-1",
+    "href": "meetups/Meetup-8/meetup-8.html#pointwise-maximum-1",
+    "title": "DATA 609 Meetup 8: Constructing Convex Functions",
+    "section": "Pointwise Maximum",
+    "text": "Pointwise Maximum"
+  },
+  {
+    "objectID": "meetups/Meetup-8/meetup-8.html#example-worst-case-scenario",
+    "href": "meetups/Meetup-8/meetup-8.html#example-worst-case-scenario",
+    "title": "DATA 609 Meetup 8: Constructing Convex Functions",
+    "section": "Example: Worst-Case Scenario",
+    "text": "Example: Worst-Case Scenario\n\nSuppose \\(f_i\\) is the cost function of \\(i\\)th people in your organization\n\\(f_i\\) convex\n\\(x\\) is a choice you are making\nCan define worst case cost function: \\[\nf_W(x) = \\max(f_1(x),f_2(x),\\cdots,f_n(x))\n\\]\n\\(f_W(x)\\) is convex"
+  },
+  {
+    "objectID": "meetups/Meetup-8/meetup-8.html#pointwise-supremum",
+    "href": "meetups/Meetup-8/meetup-8.html#pointwise-supremum",
+    "title": "DATA 609 Meetup 8: Constructing Convex Functions",
+    "section": "Pointwise Supremum",
+    "text": "Pointwise Supremum\n\nsupremum is least upper bound (think of it like infinite max)\nif \\(f(x,\\alpha)\\) is convex in \\(x\\) for all \\(\\alpha \\in A\\), then: \\[\nF(x) = \\sup_{\\alpha\\in A} f(x,\\alpha)\n\\]\nThen \\(F(x)\\) is convex"
+  },
+  {
+    "objectID": "meetups/Meetup-8/meetup-8.html#pointwise-supremum-examples",
+    "href": "meetups/Meetup-8/meetup-8.html#pointwise-supremum-examples",
+    "title": "DATA 609 Meetup 8: Constructing Convex Functions",
+    "section": "Pointwise Supremum examples",
+    "text": "Pointwise Supremum examples\n\nPlacing a transmitter at a location \\(x\\)\nCare about maximum distance from the transmitter to a region \\(S\\)\n\\(d(x) = \\sup_{y\\in S}\\|x-y\\|\\) is convex"
+  },
+  {
+    "objectID": "meetups/Meetup-8/meetup-8.html#pointwise-supremum-examples-1",
+    "href": "meetups/Meetup-8/meetup-8.html#pointwise-supremum-examples-1",
+    "title": "DATA 609 Meetup 8: Constructing Convex Functions",
+    "section": "Pointwise Supremum Examples",
+    "text": "Pointwise Supremum Examples"
+  },
+  {
+    "objectID": "meetups/Meetup-8/meetup-8.html#largest-eigenvalue-of-a-symmetric-matrix",
+    "href": "meetups/Meetup-8/meetup-8.html#largest-eigenvalue-of-a-symmetric-matrix",
+    "title": "DATA 609 Meetup 8: Constructing Convex Functions",
+    "section": "Largest eigenvalue of a symmetric matrix",
+    "text": "Largest eigenvalue of a symmetric matrix\n\nEigenvalue satisfies \\(Sv = \\lambda v\\)\n\\(\\sup_{\\|v\\|=1} v^T S v = \\lambda_{\\mathrm{max}}\\)\nIntuition: \\(S\\) can be thought of according to its eigenvalues and eigenvectors\nBiggest eigenvalue corresponds to direction of maximum stretch\n\\(\\lambda_{\\mathrm{max}}(S)\\) is a convex function of \\(S\\)"
   },
   {
     "objectID": "meetups/Meetup-8/meetup-8.html#scalar-composition",
     "href": "meetups/Meetup-8/meetup-8.html#scalar-composition",
     "title": "DATA 609 Meetup 8: Constructing Convex Functions",
     "section": "Scalar Composition",
-    "text": "Scalar Composition"
+    "text": "Scalar Composition\n\n\\(f\\) is a function from \\(\\mathbb{R}^n\\to\\mathbb{R}\\)\n\\(g\\) is a function from \\(\\mathbb{R}\\to\\mathbb{R}\\)\n\\(g(f(x))\\) is convex if\n\n\\(g\\) is convex and non-decreasing, \\(f\\) is convex\n\\(g\\) is convex and non-increasing, \\(f\\) is concave\n\n\\(g(f(x))\\) is concave if\n\n\\(g\\) is concave and non-increasing, \\(f\\) is convex\n\\(g\\) is concave and non-decreasing, \\(f\\) is concave"
+  },
+  {
+    "objectID": "meetups/Meetup-8/meetup-8.html#scalar-composition-1",
+    "href": "meetups/Meetup-8/meetup-8.html#scalar-composition-1",
+    "title": "DATA 609 Meetup 8: Constructing Convex Functions",
+    "section": "Scalar Composition",
+    "text": "Scalar Composition\n\nTrick to remember, use chain rule \\[(g(f(x)))'' = (g'(f(x))f'(x))' =\\\\\ng''(f(x))f'(x)^2 + g'(f(x))f''(x)\\]\n\nSign of both needs to match for certainty over convexity\n\\(g''\\geq 0\\) only convex is possible, need \\(g'f''\\geq 0\\)\n\\(g''\\leq 0\\) only concave is possible, need \\(g'f''\\leq 0\\)"
+  },
+  {
+    "objectID": "meetups/Meetup-8/meetup-8.html#scalar-composition-examples",
+    "href": "meetups/Meetup-8/meetup-8.html#scalar-composition-examples",
+    "title": "DATA 609 Meetup 8: Constructing Convex Functions",
+    "section": "Scalar Composition Examples",
+    "text": "Scalar Composition Examples\n\n\\(e^{f(x)}\\) is convex if \\(f\\) is convex (exp convex increasing)\n\\(\\log(f(x))\\) is concave if \\(f\\) is concave (log concave increasing)\n\\(1/f(x)\\) is convex if \\(f\\) is concave (1/x convex decreasing)"
   },
   {
     "objectID": "meetups/Meetup-8/meetup-8.html#vector-composition-one-rule-to-rule-them-all",
     "href": "meetups/Meetup-8/meetup-8.html#vector-composition-one-rule-to-rule-them-all",
     "title": "DATA 609 Meetup 8: Constructing Convex Functions",
     "section": "Vector Composition (One Rule to Rule them All)",
-    "text": "Vector Composition (One Rule to Rule them All)"
+    "text": "Vector Composition (One Rule to Rule them All)\n\nLet \\(h(x_1,x_2,\\cdots,x_k):\\, \\mathbb{R}^k\\to\\mathbb{R}\\)\nLet \\(g(\\mathbf{x}) = [g_1(\\mathbf{x}),g_2(\\mathbf{x}),\\cdots,g_k(\\mathbf{x})]^T: \\mathbb{R}^n\\to\\mathbb{R}^k\\)\nReplacing “coordinates” \\(h\\) by \\(g_i\\)’s"
+  },
+  {
+    "objectID": "meetups/Meetup-8/meetup-8.html#vector-composition",
+    "href": "meetups/Meetup-8/meetup-8.html#vector-composition",
+    "title": "DATA 609 Meetup 8: Constructing Convex Functions",
+    "section": "Vector Composition",
+    "text": "Vector Composition\n\n\\(f(\\mathbf{x}) = h(g_1(\\mathbf{x}),g_2(\\mathbf{x}),\\cdots,g_k(\\mathbf{x}))\\) is convex if:\n\n\\(h\\) is convex\n\\(g_i\\) is convex and \\(h\\) is non-decreasing in arg \\(i\\)\n\\(g_i\\) is concave and \\(h\\) is non-increasing in arg \\(i\\)\n\n\\(f\\) is concave if:\n\n\\(h\\) is concave\n\\(g_i\\) is concave and \\(h\\) is non-increasing in arg \\(i\\)\n\\(g_i\\) is convex and \\(h\\) is non-decreasing in arg \\(i\\)"
+  },
+  {
+    "objectID": "meetups/Meetup-8/meetup-8.html#examples",
+    "href": "meetups/Meetup-8/meetup-8.html#examples",
+    "title": "DATA 609 Meetup 8: Constructing Convex Functions",
+    "section": "Examples",
+    "text": "Examples\n\n\\(\\log\\left(e^{x_i} \\right)\\) is convex, increasing in all arguments\n\nTherefore \\(\\log\\left(e^{g_i(\\mathbf{x})}\\right)\\) is convex\n\n\\(f(x,y) = x^2/y\\) (quadratic over linear)\n\n\\(h(x) = \\frac{p(x)^2}{q(x)}\\) is convex if:\n\\(p\\) non-negative and convex\n\\(q\\) positive and concave"
   },
   {
     "objectID": "meetups/Meetup-8/meetup-8.html#automatic-convexity-checking",
     "href": "meetups/Meetup-8/meetup-8.html#automatic-convexity-checking",
     "title": "DATA 609 Meetup 8: Constructing Convex Functions",
     "section": "Automatic Convexity Checking",
-    "text": "Automatic Convexity Checking"
+    "text": "Automatic Convexity Checking\n\nCVX works by building an evaluation tree for each function\nCVX starts at leaves and builds up, applying vector composition rule\nEach function is either convex, concave, or unknown\nSign of each expression is tracked (+,-,unknown)\nAtoms are sometimes increasing/decreasing depending on sign"
+  },
+  {
+    "objectID": "meetups/Meetup-8/meetup-8.html#automatic-convexity-checking-1",
+    "href": "meetups/Meetup-8/meetup-8.html#automatic-convexity-checking-1",
+    "title": "DATA 609 Meetup 8: Constructing Convex Functions",
+    "section": "Automatic Convexity Checking",
+    "text": "Automatic Convexity Checking\n\n\\(2x^2+3\\)"
+  },
+  {
+    "objectID": "meetups/Meetup-8/meetup-8.html#automatic-convexity-checking-2",
+    "href": "meetups/Meetup-8/meetup-8.html#automatic-convexity-checking-2",
+    "title": "DATA 609 Meetup 8: Constructing Convex Functions",
+    "section": "Automatic Convexity Checking",
+    "text": "Automatic Convexity Checking\n\n\\(\\sqrt{1+x^2}\\)"
+  },
+  {
+    "objectID": "meetups/Meetup-8/meetup-8.html#automatic-convexity-checking-3",
+    "href": "meetups/Meetup-8/meetup-8.html#automatic-convexity-checking-3",
+    "title": "DATA 609 Meetup 8: Constructing Convex Functions",
+    "section": "Automatic Convexity Checking",
+    "text": "Automatic Convexity Checking\n\n\\(\\sqrt{1+x^2}\\) is convex though…..\n\\(\\sqrt{1+x^2} = \\|[1,x]\\|_2\\)\nCan use convexity of the norm:\n\nnorm(hstack(1,x)) is DCP\nVector composition on Affine function \\(1\\)"
+  },
+  {
+    "objectID": "meetups/Meetup-8/meetup-8.html#thanks",
+    "href": "meetups/Meetup-8/meetup-8.html#thanks",
+    "title": "DATA 609 Meetup 8: Constructing Convex Functions",
+    "section": "Thanks",
+    "text": "Thanks"
   },
   {
     "objectID": "images/IntroSlides.html#about-me",
@@ -2278,7 +2432,7 @@
     "href": "meetups/Meetup-4/HW1Review.html#most-common-mistake",
     "title": "Lab 1 Review",
     "section": "Most Common Mistake",
-    "text": "Most Common Mistake\n\nMany of you then concluded:\n\n\\[ AA^{+}b - b = 0\\]\n\nSeveral justification, but:\n\n\nA = matrix(rnorm(40),nrow=10,ncol=4)\nb = rnorm(10)\n\nt(A  %*% solve(t(A) %*% A) %*% t(A) %*%  b)\n\n           [,1]     [,2]      [,3]      [,4]       [,5]      [,6]       [,7]\n[1,] -0.3398598 1.054936 -0.280583 0.1458168 -0.1069149 0.7218844 -0.1467034\n           [,8]      [,9]      [,10]\n[1,] -0.2998991 0.5653776 -0.4846429"
+    "text": "Most Common Mistake\n\nMany of you then concluded:\n\n\\[ AA^{+}b - b = 0\\]\n\nSeveral justification, but:\n\n\nA = matrix(rnorm(40),nrow=10,ncol=4)\nb = rnorm(10)\n\nt(A  %*% solve(t(A) %*% A) %*% t(A) %*%  b)\n\n           [,1]       [,2]       [,3]     [,4]       [,5]      [,6]      [,7]\n[1,] -0.2038103 -0.5993503 -0.5865275 1.092814 -0.2725373 0.1916581 0.8694855\n           [,8]      [,9]     [,10]\n[1,] 0.07547337 0.0332036 0.3535977"
   },
   {
     "objectID": "meetups/Meetup-4/HW1Review.html#why-isnt-it-true",

@@ -345,25 +345,135 @@ George I. Hagstrom
 <li>Operations that Preserve Convexity</li>
 <li>Application to Disciplined Convex Programming</li>
 <li>Keep Working on Lab 4</li>
+<li>Read Section 3.2, skim and 3.4, skim 3.5 if you have time/interest</li>
+<li>I will make <code>quasiconvex</code> part of of homework optional</li>
 </ul>
+</section>
+<section id="hw-2-review-visualization" class="slide level2">
+<h2>HW 2 Review Visualization</h2>
+<ul>
+<li>Don’t do this</li>
+</ul>
+
+<img data-src="bad_plot.png" class="r-stretch"></section>
+<section id="hw-2-review-visualization-1" class="slide level2">
+<h2>HW 2 Review Visualization</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="good_plot_1.png"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="good_plot_2.png"></p>
+</div></div>
+<ul>
+<li>Do this instead</li>
+</ul>
+</section>
+<section id="hw-2-review-package-versus-exact" class="slide level2">
+<h2>HW 2 Review Package versus Exact</h2>
+<ul>
+<li>Packages versus Exact Formula</li>
+<li>Intended method</li>
+</ul>
+<p><span class="math display">\[
+\begin{bmatrix}
+2A^TA &amp; C^T \\
+C &amp; 0
+\end{bmatrix}
+\begin{bmatrix} \mathbf{\theta} \\ \mathbf{z}  \end{bmatrix}
+=
+\begin{bmatrix} 2A^T\mathbf{x} \\ \mathbf{d} \end{bmatrix}
+\]</span></p>
 </section>
 <section id="hw-2-review" class="slide level2">
 <h2>HW 2 Review</h2>
 <ul>
-<li>Data Visualization</li>
-</ul>
-</section>
-<section id="hw-2-review-1" class="slide level2">
-<h2>HW 2 Review</h2>
-<ul>
 <li>Packages versus Exact Formula</li>
+<li>Package methods had varying results
+<ul>
+<li><code>CVX</code> successful</li>
+<li><code>quad_prog</code> successful</li>
+<li><code>scipy.minimize</code> unsuccessful</li>
+</ul></li>
+<li><code>SLSQP</code> finicky</li>
 </ul>
 </section>
-<section id="how-to-show-an-objective-function-is-convex" class="slide level2">
-<h2>How to show an objective function is convex?</h2>
+<section id="personal-story" class="slide level2">
+<h2>Personal Story</h2>
 <ul>
-<li><p>Apply the definition?</p></li>
-<li><p>Construct the function from simpler elements</p></li>
+<li>Was trying to replicate and build upon a modeling study</li>
+<li>Based on optimization problem:</li>
+</ul>
+<p><span class="math display">\[
+\max_{\nu,\mathrm{x}} \mu_{\nu,\mathrm{x}} \\
+S\nu = 0\,\quad\mathrm{x} \in \mathrm{Simplex}
+\]</span></p>
+<ul>
+<li>Find traits and fluxes that maximize growth rates of prochlorococcus</li>
+</ul>
+</section>
+<section id="personal-story-1" class="slide level2">
+<h2>Personal Story</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="TpOpt.png"></p>
+<figcaption>Witness Protection</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<p><img data-src="PhysOpt.png"></p>
+</div></div>
+</section>
+<section id="personal-story-2" class="slide level2">
+<h2>Personal Story</h2>
+<ul>
+<li>Author of study chucked problem into matlab without regard for the solver</li>
+<li>Solutions had pleasing levels of “noise” <img data-src="pro_growth.png" alt="Identity Kept Secret"></li>
+</ul>
+</section>
+<section id="personal-story-3" class="slide level2">
+<h2>Personal Story</h2>
+<ul>
+<li>Author of study chucked problem into matlab without regard for the solver</li>
+<li>Solutions had pleasing levels of “noise” <img data-src="strain_comparisons.png" alt="Identity Kept Secret"></li>
+</ul>
+</section>
+<section id="personal-story-4" class="slide level2">
+<h2>Personal Story</h2>
+<ul>
+<li>Turns out solver wasn’t appropriate for problem</li>
+<li>Was failing to converge, introducing randomness</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="MED4Origina.png"></p>
+<figcaption>Witness Protection</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<p><img data-src="MED4New.png"></p>
+</div></div>
+</section>
+<section id="how-to-show-a-function-is-convex" class="slide level2">
+<h2>How to show a function is convex?</h2>
+<ul>
+<li>Apply the definition?
+<ul>
+<li>Rare, project onto line</li>
+</ul></li>
+<li>Check the Hessian
+<ul>
+<li>Rare, simple cases only</li>
+</ul></li>
+<li>Construct the function from simpler elements
+<ul>
+<li>99+% of the time</li>
+<li>Several fundamental rules</li>
+<li>All are special cases of a single rule</li>
+</ul></li>
 </ul>
 </section>
 <section id="scalar-multiplication" class="slide level2">
@@ -378,24 +488,230 @@ George I. Hagstrom
 </section>
 <section id="positive-weighted-sum" class="slide level2">
 <h2>Positive Weighted Sum</h2>
+<ul>
+<li>If <span class="math inline">\(f_i\)</span> is convex, <span class="math inline">\(\alpha_i\)</span> positive, then</li>
+</ul>
+<p><span class="math display">\[
+F(x) = \sum_i f_i(x)
+\]</span></p>
+<ul>
+<li><span class="math inline">\(F\)</span> is convex</li>
+<li>Application: Regularize to your heart’s content <span class="math display">\[
+f(\mathbf{x}) + \lambda \|\mathbf{x}\|_1
+\]</span></li>
+</ul>
 </section>
 <section id="integration" class="slide level2">
 <h2>Integration</h2>
+<ul>
+<li>Suppose <span class="math inline">\(g(\mathbf{x},\mathbf{y})\)</span> convex in <span class="math inline">\(\mathbf{x}\)</span> for fixed <span class="math inline">\(\mathbf{y}\)</span></li>
+<li>Suppose <span class="math inline">\(w(\mathbf{y}) &gt; 0\)</span> <span class="math display">\[
+G(\mathbf{x}) = \int_{Y} \mathbf{dy} w(\mathbf{y})g(\mathbf{x},\mathbf{y})
+\]</span></li>
+<li><span class="math inline">\(G(\mathbf{x})\)</span> is convex</li>
+</ul>
+</section>
+<section id="example-running-average" class="slide level2">
+<h2>Example: Running Average</h2>
+<ul>
+<li>Let <span class="math inline">\(f\)</span> be a convex function and define: <span class="math display">\[
+F(x) = \frac{1}{x}\int_0^x dt f(t)
+\]</span></li>
+<li>Can substitute <span class="math inline">\(t=sx\)</span> into integral: <span class="math display">\[
+F(x) = \frac{1}{x}\int_0^1 ds x f(sx) = \int_0^1 ds f(sx)
+\]</span></li>
+<li><span class="math inline">\(f(sx)\)</span> is convex in <span class="math inline">\(x\)</span> for fixed <span class="math inline">\(s\)</span>. Therefore <span class="math inline">\(F(x)\)</span> is convex</li>
+</ul>
 </section>
 <section id="composition-with-affine-function" class="slide level2">
 <h2>Composition with Affine Function</h2>
+<ul>
+<li>Suppose that <span class="math inline">\(f(\mathbf{x})\)</span> is convex</li>
+<li>Then <span class="math inline">\(g(\mathbf{y}) = f(A\mathbf{y} + \mathbf{d})\)</span> is convex</li>
+<li>This also preserves concavity</li>
+<li>Application: <span class="math inline">\(\|A\mathbf{x}-b\|_p\)</span> convex for any norm</li>
+</ul>
 </section>
-<section id="pointwise-maximumsupremum" class="slide level2">
-<h2>Pointwise Maximum/Supremum</h2>
+<section id="pointwise-maximum" class="slide level2">
+<h2>Pointwise Maximum</h2>
+<ul>
+<li>Suppose we have a bunch of convex functions <span class="math inline">\(f_1\)</span>, <span class="math inline">\(f_2\)</span>, …., <span class="math inline">\(f_n\)</span> <span class="math display">\[
+F(x) = \max\left(f_1(x),f_2(x),\cdots,f_n(x)\right)
+\]</span></li>
+<li><span class="math inline">\(F(x)\)</span> is convex</li>
+</ul>
+</section>
+<section id="pointwise-maximum-1" class="slide level2">
+<h2>Pointwise Maximum</h2>
+<div id="e856e4b8" class="cell" data-execution_count="1">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="meetup-8_files/figure-revealjs/cell-2-output-1.png" width="792" height="411"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="example-worst-case-scenario" class="slide level2">
+<h2>Example: Worst-Case Scenario</h2>
+<ul>
+<li>Suppose <span class="math inline">\(f_i\)</span> is the cost function of <span class="math inline">\(i\)</span>th people in your organization</li>
+<li><span class="math inline">\(f_i\)</span> convex</li>
+<li><span class="math inline">\(x\)</span> is a choice you are making</li>
+<li>Can define worst case cost function: <span class="math display">\[
+f_W(x) = \max(f_1(x),f_2(x),\cdots,f_n(x))
+\]</span></li>
+<li><span class="math inline">\(f_W(x)\)</span> is convex</li>
+</ul>
+</section>
+<section id="pointwise-supremum" class="slide level2">
+<h2>Pointwise Supremum</h2>
+<ul>
+<li>supremum is least upper bound (think of it like infinite max)</li>
+<li>if <span class="math inline">\(f(x,\alpha)\)</span> is convex in <span class="math inline">\(x\)</span> for all <span class="math inline">\(\alpha \in A\)</span>, then: <span class="math display">\[
+F(x) = \sup_{\alpha\in A} f(x,\alpha)
+\]</span></li>
+<li>Then <span class="math inline">\(F(x)\)</span> is convex</li>
+</ul>
+</section>
+<section id="pointwise-supremum-examples" class="slide level2">
+<h2>Pointwise Supremum examples</h2>
+<ul>
+<li>Placing a transmitter at a location <span class="math inline">\(x\)</span></li>
+<li>Care about maximum distance from the transmitter to a region <span class="math inline">\(S\)</span></li>
+<li><span class="math inline">\(d(x) = \sup_{y\in S}\|x-y\|\)</span> is convex</li>
+</ul>
+</section>
+<section id="pointwise-supremum-examples-1" class="slide level2">
+<h2>Pointwise Supremum Examples</h2>
+
+<img data-src="supremum.png" class="r-stretch"></section>
+<section id="largest-eigenvalue-of-a-symmetric-matrix" class="slide level2">
+<h2>Largest eigenvalue of a symmetric matrix</h2>
+<ul>
+<li>Eigenvalue satisfies <span class="math inline">\(Sv = \lambda v\)</span></li>
+<li><span class="math inline">\(\sup_{\|v\|=1} v^T S v = \lambda_{\mathrm{max}}\)</span></li>
+<li>Intuition: <span class="math inline">\(S\)</span> can be thought of according to its eigenvalues and eigenvectors</li>
+<li>Biggest eigenvalue corresponds to direction of maximum stretch</li>
+<li><span class="math inline">\(\lambda_{\mathrm{max}}(S)\)</span> is a convex function of <span class="math inline">\(S\)</span></li>
+</ul>
 </section>
 <section id="scalar-composition" class="slide level2">
 <h2>Scalar Composition</h2>
+<ul>
+<li><span class="math inline">\(f\)</span> is a function from <span class="math inline">\(\mathbb{R}^n\to\mathbb{R}\)</span></li>
+<li><span class="math inline">\(g\)</span> is a function from <span class="math inline">\(\mathbb{R}\to\mathbb{R}\)</span></li>
+<li><span class="math inline">\(g(f(x))\)</span> is convex if
+<ul>
+<li><span class="math inline">\(g\)</span> is convex and non-decreasing, <span class="math inline">\(f\)</span> is convex</li>
+<li><span class="math inline">\(g\)</span> is convex and non-increasing, <span class="math inline">\(f\)</span> is concave</li>
+</ul></li>
+<li><span class="math inline">\(g(f(x))\)</span> is concave if
+<ul>
+<li><span class="math inline">\(g\)</span> is concave and non-increasing, <span class="math inline">\(f\)</span> is convex</li>
+<li><span class="math inline">\(g\)</span> is concave and non-decreasing, <span class="math inline">\(f\)</span> is concave</li>
+</ul></li>
+</ul>
+</section>
+<section id="scalar-composition-1" class="slide level2">
+<h2>Scalar Composition</h2>
+<ul>
+<li><p>Trick to remember, use chain rule <span class="math display">\[(g(f(x)))'' = (g'(f(x))f'(x))' =\\
+g''(f(x))f'(x)^2 + g'(f(x))f''(x)\]</span></p>
+<ul>
+<li>Sign of both needs to match for certainty over convexity</li>
+<li><span class="math inline">\(g''\geq 0\)</span> only convex is possible, need <span class="math inline">\(g'f''\geq 0\)</span></li>
+<li><span class="math inline">\(g''\leq 0\)</span> only concave is possible, need <span class="math inline">\(g'f''\leq 0\)</span></li>
+</ul></li>
+</ul>
+</section>
+<section id="scalar-composition-examples" class="slide level2">
+<h2>Scalar Composition Examples</h2>
+<ul>
+<li><span class="math inline">\(e^{f(x)}\)</span> is convex if <span class="math inline">\(f\)</span> is convex (<code>exp</code> convex increasing)</li>
+<li><span class="math inline">\(\log(f(x))\)</span> is concave if <span class="math inline">\(f\)</span> is concave (<code>log</code> concave increasing)</li>
+<li><span class="math inline">\(1/f(x)\)</span> is convex if <span class="math inline">\(f\)</span> is concave (<code>1/x</code> convex decreasing)</li>
+</ul>
 </section>
 <section id="vector-composition-one-rule-to-rule-them-all" class="slide level2">
 <h2>Vector Composition (One Rule to Rule them All)</h2>
+<ul>
+<li>Let <span class="math inline">\(h(x_1,x_2,\cdots,x_k):\, \mathbb{R}^k\to\mathbb{R}\)</span></li>
+<li>Let <span class="math inline">\(g(\mathbf{x}) = [g_1(\mathbf{x}),g_2(\mathbf{x}),\cdots,g_k(\mathbf{x})]^T: \mathbb{R}^n\to\mathbb{R}^k\)</span></li>
+<li>Replacing “coordinates” <span class="math inline">\(h\)</span> by <span class="math inline">\(g_i\)</span>’s</li>
+</ul>
+</section>
+<section id="vector-composition" class="slide level2">
+<h2>Vector Composition</h2>
+<ul>
+<li><span class="math inline">\(f(\mathbf{x}) = h(g_1(\mathbf{x}),g_2(\mathbf{x}),\cdots,g_k(\mathbf{x}))\)</span> is convex if:
+<ul>
+<li><span class="math inline">\(h\)</span> is convex</li>
+<li><span class="math inline">\(g_i\)</span> is convex and <span class="math inline">\(h\)</span> is non-decreasing in arg <span class="math inline">\(i\)</span></li>
+<li><span class="math inline">\(g_i\)</span> is concave and <span class="math inline">\(h\)</span> is non-increasing in arg <span class="math inline">\(i\)</span></li>
+</ul></li>
+<li><span class="math inline">\(f\)</span> is concave if:
+<ul>
+<li><span class="math inline">\(h\)</span> is concave</li>
+<li><span class="math inline">\(g_i\)</span> is concave and <span class="math inline">\(h\)</span> is non-increasing in arg <span class="math inline">\(i\)</span></li>
+<li><span class="math inline">\(g_i\)</span> is convex and <span class="math inline">\(h\)</span> is non-decreasing in arg <span class="math inline">\(i\)</span></li>
+</ul></li>
+</ul>
+</section>
+<section id="examples" class="slide level2">
+<h2>Examples</h2>
+<ul>
+<li><span class="math inline">\(\log\left(e^{x_i} \right)\)</span> is convex, increasing in all arguments
+<ul>
+<li>Therefore <span class="math inline">\(\log\left(e^{g_i(\mathbf{x})}\right)\)</span> is convex</li>
+</ul></li>
+<li><span class="math inline">\(f(x,y) = x^2/y\)</span> (quadratic over linear)
+<ul>
+<li><span class="math inline">\(h(x) = \frac{p(x)^2}{q(x)}\)</span> is convex if:</li>
+<li><span class="math inline">\(p\)</span> non-negative and convex</li>
+<li><span class="math inline">\(q\)</span> positive and concave</li>
+</ul></li>
+</ul>
 </section>
 <section id="automatic-convexity-checking" class="slide level2">
 <h2>Automatic Convexity Checking</h2>
+<ul>
+<li><code>CVX</code> works by building an evaluation tree for each function</li>
+<li><code>CVX</code> starts at leaves and builds up, applying vector composition rule</li>
+<li>Each function is either convex, concave, or unknown</li>
+<li>Sign of each expression is tracked (+,-,unknown)</li>
+<li>Atoms are sometimes increasing/decreasing depending on sign</li>
+</ul>
+</section>
+<section id="automatic-convexity-checking-1" class="slide level2">
+<h2>Automatic Convexity Checking</h2>
+<ul>
+<li><span class="math inline">\(2x^2+3\)</span></li>
+</ul>
+
+<img data-src="dcp_1.png" class="r-stretch"></section>
+<section id="automatic-convexity-checking-2" class="slide level2">
+<h2>Automatic Convexity Checking</h2>
+<ul>
+<li><span class="math inline">\(\sqrt{1+x^2}\)</span></li>
+</ul>
+
+<img data-src="dcp_2.png" class="r-stretch"></section>
+<section id="automatic-convexity-checking-3" class="slide level2">
+<h2>Automatic Convexity Checking</h2>
+<ul>
+<li><span class="math inline">\(\sqrt{1+x^2}\)</span> is convex though…..</li>
+<li><span class="math inline">\(\sqrt{1+x^2} = \|[1,x]\|_2\)</span></li>
+<li>Can use convexity of the norm:
+<ul>
+<li><code>norm(hstack(1,x))</code> is DCP</li>
+<li>Vector composition on Affine function <span class="math inline">\(1\)</span></li>
+</ul></li>
+</ul>
+</section>
+<section id="thanks" class="slide level2">
+<h2>Thanks</h2>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
