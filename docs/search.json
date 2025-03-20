@@ -716,7 +716,7 @@
     "href": "meetups/Meetup-6/meetup-6.html#intro-to-cvx-6",
     "title": "DATA 609 Meetup 6: Constructing Convex Sets",
     "section": "Intro to CVX",
-    "text": "Intro to CVX\n\nSolve using problem.solve()\n\n\nmargin = 0.2\n\nproblem = cvx.Problem(\n  cvx.Minimize(cvx.norm(x)), # Objective (this one is least squares)\n  [x - x_mean &gt;= -margin , # These are the constraints\n  x - x_mean &lt;= margin]\n)\n\n# Solve the problem\n\nsol = problem.solve()\nprint(sol) # objective\nx.value # optimum\n\n1.899703543748183\n\n\narray([-1.95431907e-01, -6.71923812e-06,  6.16179776e-01, -1.58992804e+00,\n       -7.99150976e-01,  1.56489421e-01])"
+    "text": "Intro to CVX\n\nSolve using problem.solve()\n\n\nmargin = 0.2\n\nproblem = cvx.Problem(\n  cvx.Minimize(cvx.norm(x)), # Objective (this one is least squares)\n  [x - x_mean &gt;= -margin , # These are the constraints\n  x - x_mean &lt;= margin]\n)\n\n# Solve the problem\n\nsol = problem.solve()\nprint(sol) # objective\nx.value # optimum\n\n1.7424904852461731\n\n\narray([-9.32604126e-03, -8.11671476e-01,  9.52759368e-01, -6.16993623e-01,\n       -2.04919740e-05,  1.04352479e+00])"
   },
   {
     "objectID": "meetups/Meetup-6/meetup-6.html#intro-to-cvx-7",
@@ -730,7 +730,7 @@
     "href": "meetups/Meetup-6/meetup-6.html#intro-to-cvx-8",
     "title": "DATA 609 Meetup 6: Constructing Convex Sets",
     "section": "Intro to CVX",
-    "text": "Intro to CVX\n\n# Solve the problem\n\nsol = problem.solve()\nprint(sol) # objective\nx.value # optimum\n\n1.5938873321349858\n\n\narray([-1.95431910e-01,  6.04640331e-05,  6.16179778e-01, -1.58992804e+00,\n       -7.99150988e-01,  1.56489428e-01])"
+    "text": "Intro to CVX\n\n# Solve the problem\n\nsol = problem.solve()\nprint(sol) # objective\nx.value # optimum\n\n1.00277022207415\n\n\narray([-9.32591233e-03, -8.11671480e-01,  9.52759370e-01, -6.16993622e-01,\n       -2.98413175e-05,  1.04352479e+00])"
   },
   {
     "objectID": "meetups/Meetup-6/meetup-6.html#thanks",
@@ -1311,7 +1311,7 @@
     "href": "meetups/Meetup-2/meetup-2.html#condition-number-and-accuracy",
     "title": "Meetup 2: Least Squares",
     "section": "Condition Number and Accuracy",
-    "text": "Condition Number and Accuracy\n\nAccuracy of np.linalg.inv(A) @ b related to \\(\\frac{\\sigma_{max}}{\\sigma_{min}}\\)\nThis is called the “condition number” of the matrix \\(A\\)\n\n\n%timeit np.linalg.inv(A) @ b\n%timeit np.linalg.solve(A,b)\n\nx1 = np.linalg.inv(A) @ b\nx2 = np.linalg.solve(A,b)\n\nprint(\"Matrix Inverse Error: \",np.linalg.norm(A @ x1 - b))\nprint(\"Linear Solve Error: \",np.linalg.norm(A @ x2 - b))\n\nThe slowest run took 15.62 times longer than the fastest. This could mean that an intermediate result is being cached.\n37.9 ms ± 45.5 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)\n3.1 ms ± 47 μs per loop (mean ± std. dev. of 7 runs, 100 loops each)\nMatrix Inverse Error:  2.6370785050029843e-07\nLinear Solve Error:  2.1351993842920515e-15\n\n\n\n100 million times more accurate, 5 times faster"
+    "text": "Condition Number and Accuracy\n\nAccuracy of np.linalg.inv(A) @ b related to \\(\\frac{\\sigma_{max}}{\\sigma_{min}}\\)\nThis is called the “condition number” of the matrix \\(A\\)\n\n\n%timeit np.linalg.inv(A) @ b\n%timeit np.linalg.solve(A,b)\n\nx1 = np.linalg.inv(A) @ b\nx2 = np.linalg.solve(A,b)\n\nprint(\"Matrix Inverse Error: \",np.linalg.norm(A @ x1 - b))\nprint(\"Linear Solve Error: \",np.linalg.norm(A @ x2 - b))\n\n703 ms ± 93 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)\n3.26 ms ± 76.1 μs per loop (mean ± std. dev. of 7 runs, 100 loops each)\nMatrix Inverse Error:  2.973237086574903e-07\nLinear Solve Error:  2.189702764945964e-15\n\n\n\n100 million times more accurate, 5 times faster"
   },
   {
     "objectID": "meetups/Meetup-2/meetup-2.html#issue-is-worse-for-ata",
@@ -1817,55 +1817,6 @@
     "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
     "section": "Problem 5:",
     "text": "Problem 5:\nExercise 8.6 in Convex Optimization Extended Exercises"
-  },
-  {
-    "objectID": "assignments/labs/Lab5.html",
-    "href": "assignments/labs/Lab5.html",
-    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
-    "section": "",
-    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
-  },
-  {
-    "objectID": "assignments/labs/Lab5.html#instructions",
-    "href": "assignments/labs/Lab5.html#instructions",
-    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
-    "section": "",
-    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
-  },
-  {
-    "objectID": "assignments/labs/Lab5.html#problem-1",
-    "href": "assignments/labs/Lab5.html#problem-1",
-    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
-    "section": "Problem 1:",
-    "text": "Problem 1:\nExercise 4.2 in Convex Optimization"
-  },
-  {
-    "objectID": "assignments/labs/Lab5.html#problem-2",
-    "href": "assignments/labs/Lab5.html#problem-2",
-    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
-    "section": "Problem 2:",
-    "text": "Problem 2:\n4.2 ‘Hello World’ in CVX. Use CVX to verify the optimal values you obtained (analytically) for exercise 4.2 in Convex Optimization"
-  },
-  {
-    "objectID": "assignments/labs/Lab5.html#problem-3",
-    "href": "assignments/labs/Lab5.html#problem-3",
-    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
-    "section": "Problem 3:",
-    "text": "Problem 3:\nExercise 4.60 in Convex Optimization"
-  },
-  {
-    "objectID": "assignments/labs/Lab5.html#problem-4",
-    "href": "assignments/labs/Lab5.html#problem-4",
-    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
-    "section": "Problem 4:",
-    "text": "Problem 4:\nExercise 6.4 in Convex Optimization Extended Exercises"
-  },
-  {
-    "objectID": "assignments/labs/Lab5.html#problem-5",
-    "href": "assignments/labs/Lab5.html#problem-5",
-    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
-    "section": "Problem 5:",
-    "text": "Problem 5:\nExercise 6.13 in Convex Optimization Extended Exercises"
   },
   {
     "objectID": "assignments/labs/tbd.html",
@@ -2439,7 +2390,7 @@
     "href": "meetups/Meetup-4/HW1Review.html#most-common-mistake",
     "title": "Lab 1 Review",
     "section": "Most Common Mistake",
-    "text": "Most Common Mistake\n\nMany of you then concluded:\n\n\\[ AA^{+}b - b = 0\\]\n\nSeveral justification, but:\n\n\nA = matrix(rnorm(40),nrow=10,ncol=4)\nb = rnorm(10)\n\nt(A  %*% solve(t(A) %*% A) %*% t(A) %*%  b)\n\n          [,1]      [,2]      [,3]      [,4]     [,5]      [,6]     [,7]\n[1,] 0.6561355 0.5388177 0.9904462 -1.416559 1.171407 0.4990219 1.139265\n             [,8]      [,9]     [,10]\n[1,] -0.009379806 0.3789917 0.5546188"
+    "text": "Most Common Mistake\n\nMany of you then concluded:\n\n\\[ AA^{+}b - b = 0\\]\n\nSeveral justification, but:\n\n\nA = matrix(rnorm(40),nrow=10,ncol=4)\nb = rnorm(10)\n\nt(A  %*% solve(t(A) %*% A) %*% t(A) %*%  b)\n\n            [,1]       [,2]       [,3]      [,4]       [,5]      [,6]\n[1,] -0.02827909 -0.5601059 -0.2965554 -1.795011 -0.2401638 -1.215717\n            [,7]       [,8]       [,9]     [,10]\n[1,] -0.01442956 -0.0295702 -0.7611384 0.2504675"
   },
   {
     "objectID": "meetups/Meetup-4/HW1Review.html#why-isnt-it-true",
