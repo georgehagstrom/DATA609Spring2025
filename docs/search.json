@@ -65,7 +65,7 @@
     "href": "posts/2025-03-24-Meetup-9-Slides.html",
     "title": "Meetup 9: Convex Optimization Problems",
     "section": "",
-    "text": "I have uploaded the slides for Meetup 9.\nWe will discuss log-concave functions, a topic which was missed the past two weeks, and then discuss methods for transforming optimization problems, geometric programs, and multicriterion optimization.\n\nClick here for slides\nWatch Meetup 9 Here"
+    "text": "I have uploaded the slides for Meetup 9.\nWe will discuss log-concave functions, a topic which was missed the past two weeks, and then discuss methods for transforming optimization problems, geometric programs, and multicriterion optimization.\n\nClick here for slides"
   },
   {
     "objectID": "posts/2025-02-24-Week-5-Convex-Sets.html",
@@ -681,7 +681,7 @@
     "href": "meetups/Meetup-4/HW1Review.html#most-common-mistake",
     "title": "Lab 1 Review",
     "section": "Most Common Mistake",
-    "text": "Most Common Mistake\n\nMany of you then concluded:\n\n\\[ AA^{+}b - b = 0\\]\n\nSeveral justification, but:\n\n\nA = matrix(rnorm(40),nrow=10,ncol=4)\nb = rnorm(10)\n\nt(A  %*% solve(t(A) %*% A) %*% t(A) %*%  b)\n\n           [,1]      [,2]      [,3]      [,4]      [,5]      [,6]      [,7]\n[1,] -0.5276057 0.3054455 -1.383525 0.2006398 0.5674664 0.4631357 0.2554663\n           [,8]       [,9]     [,10]\n[1,] -0.4138116 -0.4318282 0.1342168"
+    "text": "Most Common Mistake\n\nMany of you then concluded:\n\n\\[ AA^{+}b - b = 0\\]\n\nSeveral justification, but:\n\n\nA = matrix(rnorm(40),nrow=10,ncol=4)\nb = rnorm(10)\n\nt(A  %*% solve(t(A) %*% A) %*% t(A) %*%  b)\n\n           [,1]      [,2]     [,3]      [,4]      [,5]     [,6]      [,7]\n[1,] -0.4784774 0.2117498 -1.04529 0.3090199 0.0761703 0.101915 -1.120528\n          [,8]       [,9]     [,10]\n[1,] -0.723626 -0.3089626 0.5759115"
   },
   {
     "objectID": "meetups/Meetup-4/HW1Review.html#why-isnt-it-true",
@@ -1942,7 +1942,7 @@
     "href": "meetups/Meetup-2/meetup-2.html#condition-number-and-accuracy",
     "title": "Meetup 2: Least Squares",
     "section": "Condition Number and Accuracy",
-    "text": "Condition Number and Accuracy\n\nAccuracy of np.linalg.inv(A) @ b related to \\(\\frac{\\sigma_{max}}{\\sigma_{min}}\\)\nThis is called the “condition number” of the matrix \\(A\\)\n\n\n%timeit np.linalg.inv(A) @ b\n%timeit np.linalg.solve(A,b)\n\nx1 = np.linalg.inv(A) @ b\nx2 = np.linalg.solve(A,b)\n\nprint(\"Matrix Inverse Error: \",np.linalg.norm(A @ x1 - b))\nprint(\"Linear Solve Error: \",np.linalg.norm(A @ x2 - b))\n\n3.82 ms ± 575 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)\n1.39 ms ± 272 µs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)\nMatrix Inverse Error:  2.4389315990111586e-07\nLinear Solve Error:  2.213123062945373e-15\n\n\n\n100 million times more accurate, 5 times faster"
+    "text": "Condition Number and Accuracy\n\nAccuracy of np.linalg.inv(A) @ b related to \\(\\frac{\\sigma_{max}}{\\sigma_{min}}\\)\nThis is called the “condition number” of the matrix \\(A\\)\n\n\n%timeit np.linalg.inv(A) @ b\n%timeit np.linalg.solve(A,b)\n\nx1 = np.linalg.inv(A) @ b\nx2 = np.linalg.solve(A,b)\n\nprint(\"Matrix Inverse Error: \",np.linalg.norm(A @ x1 - b))\nprint(\"Linear Solve Error: \",np.linalg.norm(A @ x2 - b))\n\n4.47 ms ± 834 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)\n2.04 ms ± 111 µs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)\nMatrix Inverse Error:  3.453944291660977e-07\nLinear Solve Error:  2.4157625154007823e-15\n\n\n\n100 million times more accurate, 5 times faster"
   },
   {
     "objectID": "meetups/Meetup-2/meetup-2.html#issue-is-worse-for-ata",
@@ -2642,7 +2642,7 @@
     "href": "meetups/Meetup-6/meetup-6.html#intro-to-cvx-6",
     "title": "DATA 609 Meetup 6: Constructing Convex Sets",
     "section": "Intro to CVX",
-    "text": "Intro to CVX\n\nSolve using problem.solve()\n\n\nmargin = 0.2\n\nproblem = cvx.Problem(\n  cvx.Minimize(cvx.norm(x)), # Objective (this one is least squares)\n  [x - x_mean &gt;= -margin , # These are the constraints\n  x - x_mean &lt;= margin]\n)\n\n# Solve the problem\n\nsol = problem.solve()\nprint(sol) # objective\nx.value # optimum\n\n1.3421913526827058\n\n\narray([ 0.86277104, -0.67855406,  0.40825237, -0.52090753, -0.17998328,\n       -0.35533013])"
+    "text": "Intro to CVX\n\nSolve using problem.solve()\n\n\nmargin = 0.2\n\nproblem = cvx.Problem(\n  cvx.Minimize(cvx.norm(x)), # Objective (this one is least squares)\n  [x - x_mean &gt;= -margin , # These are the constraints\n  x - x_mean &lt;= margin]\n)\n\n# Solve the problem\n\nsol = problem.solve()\nprint(sol) # objective\nx.value # optimum\n\n1.3530205986741308\n\n\narray([ 1.63748741e-06,  7.54056344e-01, -7.54377420e-03,  3.99962553e-01,\n        4.32790157e-07, -1.04977941e+00])"
   },
   {
     "objectID": "meetups/Meetup-6/meetup-6.html#intro-to-cvx-7",
@@ -2656,7 +2656,7 @@
     "href": "meetups/Meetup-6/meetup-6.html#intro-to-cvx-8",
     "title": "DATA 609 Meetup 6: Constructing Convex Sets",
     "section": "Intro to CVX",
-    "text": "Intro to CVX\n\n# Solve the problem\n\nsol = problem.solve()\nprint(sol) # objective\nx.value # optimum\n\n0.7629124216426142\n\n\narray([ 0.86277104, -0.67855406,  0.40825237, -0.52090754, -0.17998328,\n       -0.35533014])"
+    "text": "Intro to CVX\n\n# Solve the problem\n\nsol = problem.solve()\nprint(sol) # objective\nx.value # optimum\n\n0.8802701327922765\n\n\narray([ 6.36009300e-06,  7.54056343e-01, -7.54378615e-03,  3.99962553e-01,\n        7.56611200e-06, -1.04977941e+00])"
   },
   {
     "objectID": "meetups/Meetup-6/meetup-6.html#thanks",
