@@ -732,6 +732,38 @@ f_i(\mathbf{x}_1)\leq f_i(\mathbf{x}_2)
 <li>Always finds a Pareto Optimal point</li>
 </ul>
 </section>
+<section id="ridge-regression-trade-off" class="slide level2">
+<h2>Ridge Regression Trade Off</h2>
+<div id="49af965f" class="cell" data-execution_count="1">
+<div class="cell-output cell-output-display" data-execution_count="1">
+<pre><code>Text(0, 0.5, 'Mean Square Error')</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="meetup-9_files/figure-revealjs/cell-2-output-2.png" width="808" height="449"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="ridge-regression-trade-off-1" class="slide level2">
+<h2>Ridge Regression Trade Off</h2>
+<div id="8f917144" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="cf">for</span> v <span class="kw">in</span> lambd_values:</span>
+<span id="cb2-2"><a></a>    lambd.value <span class="op">=</span> v</span>
+<span id="cb2-3"><a></a>    problem.solve()</span>
+<span id="cb2-4"><a></a>    train_errors.append(mse(X_train, Y_train, beta))</span>
+<span id="cb2-5"><a></a>    test_errors.append(mse(X_test, Y_test, beta))</span>
+<span id="cb2-6"><a></a>    beta_values.append(beta.value)</span>
+<span id="cb2-7"><a></a>    </span>
+<span id="cb2-8"><a></a>norm_beta_vec <span class="op">=</span> np.array([np.linalg.norm(vec)<span class="op">**</span><span class="dv">2</span> <span class="cf">for</span> vec <span class="kw">in</span> beta_values])  </span>
+<span id="cb2-9"><a></a>plt.plot(norm_beta_vec,train_errors)</span>
+<span id="cb2-10"><a></a>plt.title(<span class="st">"Pareto Surface for Ridge Regression"</span>)</span>
+<span id="cb2-11"><a></a>plt.xlabel(<span class="st">"Norm of Coefficients"</span>)</span>
+<span id="cb2-12"><a></a>plt.ylabel(<span class="st">"Mean Square Error"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
 <section id="cvx-solvers" class="slide level2">
 <h2><code>CVX</code> Solvers</h2>
 <ul>
@@ -748,14 +780,14 @@ f_i(\mathbf{x}_1)\leq f_i(\mathbf{x}_2)
 <li>CVX can pick by default</li>
 <li>Or you can specify</li>
 </ul>
-<div id="b4f8285e" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="im">import</span> CVYPY <span class="im">as</span> cvx</span>
-<span id="cb1-2"><a></a>cvx.solve(solver<span class="op">=</span><span class="st">"CLARABEL"</span>, </span>
-<span id="cb1-3"><a></a>verbose<span class="op">=</span><span class="va">False</span>, </span>
-<span id="cb1-4"><a></a>gp<span class="op">=</span><span class="va">False</span>, qcp<span class="op">=</span><span class="va">False</span>,</span>
-<span id="cb1-5"><a></a>requires_grad<span class="op">=</span><span class="va">False</span>, </span>
-<span id="cb1-6"><a></a>enforce_dpp<span class="op">=</span><span class="va">False</span>, </span>
-<span id="cb1-7"><a></a>ignore_dpp<span class="op">=</span><span class="va">False</span>, <span class="op">**</span>kwargs)¶</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="1189c6b0" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="im">import</span> CVYPY <span class="im">as</span> cvx</span>
+<span id="cb3-2"><a></a>cvx.solve(solver<span class="op">=</span><span class="st">"CLARABEL"</span>, </span>
+<span id="cb3-3"><a></a>verbose<span class="op">=</span><span class="va">False</span>, </span>
+<span id="cb3-4"><a></a>gp<span class="op">=</span><span class="va">False</span>, qcp<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb3-5"><a></a>requires_grad<span class="op">=</span><span class="va">False</span>, </span>
+<span id="cb3-6"><a></a>enforce_dpp<span class="op">=</span><span class="va">False</span>, </span>
+<span id="cb3-7"><a></a>ignore_dpp<span class="op">=</span><span class="va">False</span>, <span class="op">**</span>kwargs)¶</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="not-all-solvers-can-solve-all-problems" class="slide level2">

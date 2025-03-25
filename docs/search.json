@@ -628,6 +628,20 @@
     "text": "Scalarization\n\nCan add multiple objectives up to create a standard optimization problem \\[\n\\min_{\\mathbf{x}} \\sum_k \\lambda_k f_k(\\mathbf{x})\n\\]\n\\(\\lambda_k\\) convert between each objective function to the same units and define trade-offs\nAlways finds a Pareto Optimal point"
   },
   {
+    "objectID": "meetups/Meetup-9/meetup-9.html#ridge-regression-trade-off",
+    "href": "meetups/Meetup-9/meetup-9.html#ridge-regression-trade-off",
+    "title": "DATA 609 Meetup 9: Convex Optimization Problems",
+    "section": "Ridge Regression Trade Off",
+    "text": "Ridge Regression Trade Off\n\n\nText(0, 0.5, 'Mean Square Error')"
+  },
+  {
+    "objectID": "meetups/Meetup-9/meetup-9.html#ridge-regression-trade-off-1",
+    "href": "meetups/Meetup-9/meetup-9.html#ridge-regression-trade-off-1",
+    "title": "DATA 609 Meetup 9: Convex Optimization Problems",
+    "section": "Ridge Regression Trade Off",
+    "text": "Ridge Regression Trade Off\n\nfor v in lambd_values:\n    lambd.value = v\n    problem.solve()\n    train_errors.append(mse(X_train, Y_train, beta))\n    test_errors.append(mse(X_test, Y_test, beta))\n    beta_values.append(beta.value)\n    \nnorm_beta_vec = np.array([np.linalg.norm(vec)**2 for vec in beta_values])  \nplt.plot(norm_beta_vec,train_errors)\nplt.title(\"Pareto Surface for Ridge Regression\")\nplt.xlabel(\"Norm of Coefficients\")\nplt.ylabel(\"Mean Square Error\")"
+  },
+  {
     "objectID": "meetups/Meetup-9/meetup-9.html#cvx-solvers",
     "href": "meetups/Meetup-9/meetup-9.html#cvx-solvers",
     "title": "DATA 609 Meetup 9: Convex Optimization Problems",
@@ -681,7 +695,7 @@
     "href": "meetups/Meetup-4/HW1Review.html#most-common-mistake",
     "title": "Lab 1 Review",
     "section": "Most Common Mistake",
-    "text": "Most Common Mistake\n\nMany of you then concluded:\n\n\\[ AA^{+}b - b = 0\\]\n\nSeveral justification, but:\n\n\nA = matrix(rnorm(40),nrow=10,ncol=4)\nb = rnorm(10)\n\nt(A  %*% solve(t(A) %*% A) %*% t(A) %*%  b)\n\n           [,1]      [,2]     [,3]      [,4]      [,5]     [,6]      [,7]\n[1,] -0.4784774 0.2117498 -1.04529 0.3090199 0.0761703 0.101915 -1.120528\n          [,8]       [,9]     [,10]\n[1,] -0.723626 -0.3089626 0.5759115"
+    "text": "Most Common Mistake\n\nMany of you then concluded:\n\n\\[ AA^{+}b - b = 0\\]\n\nSeveral justification, but:\n\n\nA = matrix(rnorm(40),nrow=10,ncol=4)\nb = rnorm(10)\n\nt(A  %*% solve(t(A) %*% A) %*% t(A) %*%  b)\n\n           [,1]      [,2]       [,3]       [,4]       [,5]       [,6]     [,7]\n[1,] -0.4133781 0.4727199 0.06655867 -0.3117955 -0.6061593 0.03939119 1.055419\n           [,8]      [,9]      [,10]\n[1,] -0.3536448 0.7340398 -0.2018755"
   },
   {
     "objectID": "meetups/Meetup-4/HW1Review.html#why-isnt-it-true",
@@ -1942,7 +1956,7 @@
     "href": "meetups/Meetup-2/meetup-2.html#condition-number-and-accuracy",
     "title": "Meetup 2: Least Squares",
     "section": "Condition Number and Accuracy",
-    "text": "Condition Number and Accuracy\n\nAccuracy of np.linalg.inv(A) @ b related to \\(\\frac{\\sigma_{max}}{\\sigma_{min}}\\)\nThis is called the “condition number” of the matrix \\(A\\)\n\n\n%timeit np.linalg.inv(A) @ b\n%timeit np.linalg.solve(A,b)\n\nx1 = np.linalg.inv(A) @ b\nx2 = np.linalg.solve(A,b)\n\nprint(\"Matrix Inverse Error: \",np.linalg.norm(A @ x1 - b))\nprint(\"Linear Solve Error: \",np.linalg.norm(A @ x2 - b))\n\n4.47 ms ± 834 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)\n2.04 ms ± 111 µs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)\nMatrix Inverse Error:  3.453944291660977e-07\nLinear Solve Error:  2.4157625154007823e-15\n\n\n\n100 million times more accurate, 5 times faster"
+    "text": "Condition Number and Accuracy\n\nAccuracy of np.linalg.inv(A) @ b related to \\(\\frac{\\sigma_{max}}{\\sigma_{min}}\\)\nThis is called the “condition number” of the matrix \\(A\\)\n\n\n%timeit np.linalg.inv(A) @ b\n%timeit np.linalg.solve(A,b)\n\nx1 = np.linalg.inv(A) @ b\nx2 = np.linalg.solve(A,b)\n\nprint(\"Matrix Inverse Error: \",np.linalg.norm(A @ x1 - b))\nprint(\"Linear Solve Error: \",np.linalg.norm(A @ x2 - b))\n\n8.19 ms ± 1.86 ms per loop (mean ± std. dev. of 7 runs, 100 loops each)\n2.96 ms ± 48.8 μs per loop (mean ± std. dev. of 7 runs, 100 loops each)\nMatrix Inverse Error:  2.744255972280608e-07\nLinear Solve Error:  2.228597838529098e-15\n\n\n\n100 million times more accurate, 5 times faster"
   },
   {
     "objectID": "meetups/Meetup-2/meetup-2.html#issue-is-worse-for-ata",
@@ -2642,7 +2656,7 @@
     "href": "meetups/Meetup-6/meetup-6.html#intro-to-cvx-6",
     "title": "DATA 609 Meetup 6: Constructing Convex Sets",
     "section": "Intro to CVX",
-    "text": "Intro to CVX\n\nSolve using problem.solve()\n\n\nmargin = 0.2\n\nproblem = cvx.Problem(\n  cvx.Minimize(cvx.norm(x)), # Objective (this one is least squares)\n  [x - x_mean &gt;= -margin , # These are the constraints\n  x - x_mean &lt;= margin]\n)\n\n# Solve the problem\n\nsol = problem.solve()\nprint(sol) # objective\nx.value # optimum\n\n1.3530205986741308\n\n\narray([ 1.63748741e-06,  7.54056344e-01, -7.54377420e-03,  3.99962553e-01,\n        4.32790157e-07, -1.04977941e+00])"
+    "text": "Intro to CVX\n\nSolve using problem.solve()\n\n\nmargin = 0.2\n\nproblem = cvx.Problem(\n  cvx.Minimize(cvx.norm(x)), # Objective (this one is least squares)\n  [x - x_mean &gt;= -margin , # These are the constraints\n  x - x_mean &lt;= margin]\n)\n\n# Solve the problem\n\nsol = problem.solve()\nprint(sol) # objective\nx.value # optimum\n\n3.5645913334710424\n\n\narray([-2.61685282e+00,  2.75252306e-05,  2.28186289e+00,  3.38050546e-05,\n       -6.98759952e-01, -4.04016042e-01])"
   },
   {
     "objectID": "meetups/Meetup-6/meetup-6.html#intro-to-cvx-7",
@@ -2656,7 +2670,7 @@
     "href": "meetups/Meetup-6/meetup-6.html#intro-to-cvx-8",
     "title": "DATA 609 Meetup 6: Constructing Convex Sets",
     "section": "Intro to CVX",
-    "text": "Intro to CVX\n\n# Solve the problem\n\nsol = problem.solve()\nprint(sol) # objective\nx.value # optimum\n\n0.8802701327922765\n\n\narray([ 6.36009300e-06,  7.54056343e-01, -7.54378615e-03,  3.99962553e-01,\n        7.56611200e-06, -1.04977941e+00])"
+    "text": "Intro to CVX\n\n# Solve the problem\n\nsol = problem.solve()\nprint(sol) # objective\nx.value # optimum\n\n2.6074007505613426\n\n\narray([-2.61685283e+00,  9.97636960e-06,  2.28186289e+00,  7.02495289e-06,\n       -6.98759952e-01, -4.04016041e-01])"
   },
   {
     "objectID": "meetups/Meetup-6/meetup-6.html#thanks",
@@ -3166,7 +3180,7 @@
     "href": "course/schedule.html#meetup-link",
     "title": "DATA 609 Spring 2025",
     "section": "Meetup Link:",
-    "text": "Meetup Link:\nClick Here to Join the Meetups on Zoom\n\nCourse Schedule\n\n\nDate\nStart Time\nModule\nSlides\nVideo\n\n\n\n\nJan 27\n06:45PM\nIntroduction to Optimization Theory\nMeetup 1 Slides\nMeetup 1 Video\n\n\nFeb 3\n06:45PM\nLeast Squares Optimization\nMeetup 2 Slides\nMeetup 2 Video\n\n\nFeb 10\n06:45PM\nLeast Squares and Statistics\nMeetup 3 Slides\nMeetup 3 Video\n\n\nFeb 17\n06:45PM\nConstrained Least Squares and Applications\nMeetup 4 Slides\nMeetup 4 Video\n\n\nFeb 24\n06:45PM\nConvex Sets\nMeetup 5 Slides\nMeetup 5 Video\n\n\nMar 3\n06:45PM\nConvex Sets II\nMeetup 6 Slides\nMeetup 6 Video\n\n\nMar 10\n06:45PM\nConvex Functions\nMeetup 7 Slides\nMeetup 7 Video\n\n\nMar 17\n06:45PM\nConvex Functions II\nMeetup 8 Slides\nMeetup 8 Video\n\n\nMar 24\n07:0PM\nConvex Optimization Problems\nMeetup 9 Slides\n\n\n\nMar 31\n06:45PM\nData Fitting\n\n\n\n\nApr 7\n06:45PM\nApplications to Statistics and Machine Learning\n\n\n\n\nApr 14\n06:45PM\nDuality and Classifiers\n\n\n\n\nApr 21\n\nNo Meetup (Spring Break)\n\n\n\n\nApr 28\n06:45PM\nGradient Descent and Neural Networks\nLab 7\n\n\n\nMay 5\n06:45PM\nStochastic Gradient Descent\n\n\n\n\nMay 12\n06:45PM\nTraining Deep Neural Networks",
+    "text": "Meetup Link:\nClick Here to Join the Meetups on Zoom\n\nCourse Schedule\n\n\nDate\nStart Time\nModule\nSlides\nVideo\n\n\n\n\nJan 27\n06:45PM\nIntroduction to Optimization Theory\nMeetup 1 Slides\nMeetup 1 Video\n\n\nFeb 3\n06:45PM\nLeast Squares Optimization\nMeetup 2 Slides\nMeetup 2 Video\n\n\nFeb 10\n06:45PM\nLeast Squares and Statistics\nMeetup 3 Slides\nMeetup 3 Video\n\n\nFeb 17\n06:45PM\nConstrained Least Squares and Applications\nMeetup 4 Slides\nMeetup 4 Video\n\n\nFeb 24\n06:45PM\nConvex Sets\nMeetup 5 Slides\nMeetup 5 Video\n\n\nMar 3\n06:45PM\nConvex Sets II\nMeetup 6 Slides\nMeetup 6 Video\n\n\nMar 10\n06:45PM\nConvex Functions\nMeetup 7 Slides\nMeetup 7 Video\n\n\nMar 17\n06:45PM\nConvex Functions II\nMeetup 8 Slides\nMeetup 8 Video\n\n\nMar 24\n06:45M\nConvex Optimization Problems\nMeetup 9 Slides\nMeetup 9 Video\n\n\nMar 31\n06:45PM\nData Fitting\n\n\n\n\nApr 7\n06:45PM\nApplications to Statistics and Machine Learning\n\n\n\n\nApr 14\n06:45PM\nDuality and Classifiers\n\n\n\n\nApr 21\n\nNo Meetup (Spring Break)\n\n\n\n\nApr 28\n06:45PM\nGradient Descent and Neural Networks\nLab 7\n\n\n\nMay 5\n06:45PM\nStochastic Gradient Descent\n\n\n\n\nMay 12\n06:45PM\nTraining Deep Neural Networks",
     "crumbs": [
       "Course information",
       "Schedule"
