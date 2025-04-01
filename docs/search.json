@@ -61,18 +61,25 @@
     "text": "I have uploaded the slides for Meetup 5, which happened tonight at 6:45PM\nWe will learn about convex optimization and examples of convex sets, which are used as constraints in convex optimization problems.\n\nClick here for slides"
   },
   {
-    "objectID": "posts/2025-03-24-Meetup-9-Slides.html",
-    "href": "posts/2025-03-24-Meetup-9-Slides.html",
-    "title": "Meetup 9: Convex Optimization Problems",
+    "objectID": "posts/2025-03-31-Week-10-Data-Fitting.html",
+    "href": "posts/2025-03-31-Week-10-Data-Fitting.html",
+    "title": "Week 10- Data Fitting",
     "section": "",
-    "text": "I have uploaded the slides for Meetup 9.\nWe will discuss log-concave functions, a topic which was missed the past two weeks, and then discuss methods for transforming optimization problems, geometric programs, and multicriterion optimization.\n\nClick here for slides"
+    "text": "Welcome to Week 10. During this week we will cover Chapter 6 of CVX-book, which focuses on data fitting applications of convex optimization. We will talk about the meaning of different norms and penalty functions which can be imposed when trying to fit data. Three primary topics will be robustness to outliers, regularization and sparsity, and stochastic and worst case approximation, amongst others.\nYour fifth homework assignment is due next Sunday at midnight.\nHere are more details on what you need to do this week:\n\nGo through module 9 and complete the week 10 readings.\nAttend our second meetup on Monday at 6:45 p.m. ET on Zoom\nFinish working on Lab 5"
   },
   {
-    "objectID": "posts/2025-02-24-Week-5-Convex-Sets.html",
-    "href": "posts/2025-02-24-Week-5-Convex-Sets.html",
-    "title": "Week 5-Convex Sets",
+    "objectID": "posts/2025-03-10-Week-7.html",
+    "href": "posts/2025-03-10-Week-7.html",
+    "title": "Week 7- Convex Functions",
     "section": "",
-    "text": "During this week we will begin learning the tools we need to formulate and solve convex optimization problems. We will talk more about general optimization problems and look at convexity from the perspective of constraints. We will present the definition of a convex set and give several example, and discuss how these examples arise when formulating problems.\nYour third homework assignment has been posted and is going to be due two Sundays from now.\nHere are more details on what you need to do this week:\n\nGo through module 5 and complete the week 4 readings.\nAttend our second meetup on Monday at 6:45 p.m. ET on Zoom\nBegin working on Lab 3"
+    "text": "During this week, we will begin learning about convex functions, which will be the objective functions for convex optimization problems. We will go over the definition of convexity and present a number of different examples of convex functions. We will discuss what convexity means and why it is such a crucial property for optimization theory. We will talk about Jensen’s inequality and discuss some applications to risk in uncertain situations.\nYour fourth homework assignment is available this Sunday at midnight.\nHere are more details on what you need to do this week:\n\nGo through module 7 and complete the week 7 readings.\nAttend our second meetup on Monday at 6:45 p.m. ET on Zoom\nBegin working on Lab 4"
+  },
+  {
+    "objectID": "posts/2025-02-02-Week-2-Least-Squares.html",
+    "href": "posts/2025-02-02-Week-2-Least-Squares.html",
+    "title": "Week 2- Least Squares",
+    "section": "",
+    "text": "This week we will talk about the most basic and most important class of optimization problems, least squares optimization. Whenever you fit a linear regression, you are solving a least squares problems, and least squares methods have applications across all quantitative fields. Although least squares methods are simple, they should not be dismissed- the fact that we can solve them rapidly, reliably means that it is useful to know how to formulate them in applied situations and how to solve them.\nIn this week we will go over the basics and a few simple applications, while the two weeks after this will explore data fitting examples and how to handle more complicated cases.\nYour first homework assignment will be due next Sunday.\nHere are more details on what you need to do this week:\n\nGo through module 2 and complete the week 2 readings.\nAttend our second meetup on Monday at 6:45 p.m. ET on Zoom\nContinue working on Lab 1"
   },
   {
     "objectID": "posts/2025-01-26-Welcome_to_DATA_609.html",
@@ -695,7 +702,7 @@
     "href": "meetups/Meetup-4/HW1Review.html#most-common-mistake",
     "title": "Lab 1 Review",
     "section": "Most Common Mistake",
-    "text": "Most Common Mistake\n\nMany of you then concluded:\n\n\\[ AA^{+}b - b = 0\\]\n\nSeveral justification, but:\n\n\nA = matrix(rnorm(40),nrow=10,ncol=4)\nb = rnorm(10)\n\nt(A  %*% solve(t(A) %*% A) %*% t(A) %*%  b)\n\n           [,1]      [,2]       [,3]       [,4]       [,5]       [,6]     [,7]\n[1,] -0.4133781 0.4727199 0.06655867 -0.3117955 -0.6061593 0.03939119 1.055419\n           [,8]      [,9]      [,10]\n[1,] -0.3536448 0.7340398 -0.2018755"
+    "text": "Most Common Mistake\n\nMany of you then concluded:\n\n\\[ AA^{+}b - b = 0\\]\n\nSeveral justification, but:\n\n\nA = matrix(rnorm(40),nrow=10,ncol=4)\nb = rnorm(10)\n\nt(A  %*% solve(t(A) %*% A) %*% t(A) %*%  b)\n\n           [,1]       [,2]      [,3]      [,4]      [,5]      [,6]      [,7]\n[1,] -0.8193721 -0.3216392 0.5137062 -1.125913 0.1492769 0.1162982 0.1860432\n          [,8]      [,9]     [,10]\n[1,] -1.133646 0.2241054 0.2274573"
   },
   {
     "objectID": "meetups/Meetup-4/HW1Review.html#why-isnt-it-true",
@@ -1048,6 +1055,497 @@
     "text": "Thanks!"
   },
   {
+    "objectID": "meetups/Meetup-10/meetup-10.html#week-summary",
+    "href": "meetups/Meetup-10/meetup-10.html#week-summary",
+    "title": "DATA 609 Meetup 10: Applications to Data Fitting",
+    "section": "Week Summary",
+    "text": "Week Summary\n\nStarting a two week block on applications to stats/ML\n\nChapter 6, 7 of cvxbook\n\nFinish off convex optimization with duality\nLab 5 due this Sunday at midnight"
+  },
+  {
+    "objectID": "meetups/Meetup-10/meetup-10.html#norm-approximation",
+    "href": "meetups/Meetup-10/meetup-10.html#norm-approximation",
+    "title": "DATA 609 Meetup 10: Applications to Data Fitting",
+    "section": "Norm Approximation",
+    "text": "Norm Approximation\n\nFind coefficients \\(\\mathbf{x}\\) that minimize: \\(\\|A\\mathbf{x}-\\mathbf{b}\\|\\)\nHere \\(\\|\\cdot\\|\\) is any norm\nCan have convex constraints on \\(\\mathbf{x}\\)"
+  },
+  {
+    "objectID": "meetups/Meetup-10/meetup-10.html#a-norm-is-a-mathematical-measure-of-distance",
+    "href": "meetups/Meetup-10/meetup-10.html#a-norm-is-a-mathematical-measure-of-distance",
+    "title": "DATA 609 Meetup 10: Applications to Data Fitting",
+    "section": "A norm is a mathematical measure of distance",
+    "text": "A norm is a mathematical measure of distance\n\nSeveral ways to do it, share key properties\n\nShortest distance is straight line (triangle inequality): \\[\n\\|\\mathbf{x} + \\mathbf{y}\\| \\leq \\|x\\| + \\|y\\|\n\\]"
+  },
+  {
+    "objectID": "meetups/Meetup-10/meetup-10.html#a-norm-is-a-mathematical-measure-of-distance-1",
+    "href": "meetups/Meetup-10/meetup-10.html#a-norm-is-a-mathematical-measure-of-distance-1",
+    "title": "DATA 609 Meetup 10: Applications to Data Fitting",
+    "section": "A norm is a mathematical measure of distance",
+    "text": "A norm is a mathematical measure of distance\n\nSeveral ways to do it, share key properties\n\nShortest distance is straight line (triangle inequality): \\[\n\\|\\mathbf{x} + \\mathbf{y}\\| \\leq \\|x\\| + \\|y\\|\n\\]\nPositive \\(\\|\\mathbf{x}\\|\\geq 0\\)\nHomogeneous \\(\\|s\\mathbf{x}\\| = |s|\\|\\mathbf{x}\\|\\)\n\nNorms are convex"
+  },
+  {
+    "objectID": "meetups/Meetup-10/meetup-10.html#important-norms",
+    "href": "meetups/Meetup-10/meetup-10.html#important-norms",
+    "title": "DATA 609 Meetup 10: Applications to Data Fitting",
+    "section": "Important Norms",
+    "text": "Important Norms\n\nEuclidean or 2-Norm: \\(\\|\\mathbf{x}\\|_2 = \\left(\\sum_i x_i^2\\right)^{1/2}\\)\n\\(L_1\\) Norm: $||_1 = _i |x_i|\n\\(L_{\\infty}\\) Norm: \\(\\|\\mathbf{x}\\|_{\\infty} = \\mathrm{\\max}_i \\{x_i\\}\\)"
+  },
+  {
+    "objectID": "meetups/Meetup-10/meetup-10.html#level-sets-of-norms",
+    "href": "meetups/Meetup-10/meetup-10.html#level-sets-of-norms",
+    "title": "DATA 609 Meetup 10: Applications to Data Fitting",
+    "section": "Level Sets of Norms",
+    "text": "Level Sets of Norms\n\n\n\n\\(L_1\\) norm sometimes called taxicab distance\nDark Lines on Axes cause sparsity in applications"
+  },
+  {
+    "objectID": "meetups/Meetup-10/meetup-10.html#level-sets-of-norms-1",
+    "href": "meetups/Meetup-10/meetup-10.html#level-sets-of-norms-1",
+    "title": "DATA 609 Meetup 10: Applications to Data Fitting",
+    "section": "Level Sets of Norms",
+    "text": "Level Sets of Norms\n\n\n\nEuclidean Distance\nLeast Squares"
+  },
+  {
+    "objectID": "meetups/Meetup-10/meetup-10.html#level-sets-of-norms-2",
+    "href": "meetups/Meetup-10/meetup-10.html#level-sets-of-norms-2",
+    "title": "DATA 609 Meetup 10: Applications to Data Fitting",
+    "section": "Level Sets of Norms",
+    "text": "Level Sets of Norms\n\n\n\n\\(L_{\\infty}\\) measures maximum element"
+  },
+  {
+    "objectID": "meetups/Meetup-10/meetup-10.html#penalty-functions",
+    "href": "meetups/Meetup-10/meetup-10.html#penalty-functions",
+    "title": "DATA 609 Meetup 10: Applications to Data Fitting",
+    "section": "Penalty Functions",
+    "text": "Penalty Functions\n\nCan generalize this further to sum of convex penalty functions \\[\n\\min_{x} \\sum_{i} \\phi\\left((A\\mathbf{x}-b)_i\\right)\n\\]\npenalty function \\(\\phi \\geq 0\\)\n\\(\\phi(0)=0\\)\n\\(\\phi\\) increasing for argument larger than \\(0\\), decreasing when it is smaller than \\(0\\)"
+  },
+  {
+    "objectID": "meetups/Meetup-10/meetup-10.html#important-penalty-functions",
+    "href": "meetups/Meetup-10/meetup-10.html#important-penalty-functions",
+    "title": "DATA 609 Meetup 10: Applications to Data Fitting",
+    "section": "Important Penalty Functions",
+    "text": "Important Penalty Functions\n\n\\(\\phi(x) = |x|\\), \\(\\phi(x) = x^2\\) lead to norm problems\n\\(\\phi(x) = \\mathrm{\\max}\\{0,|x|-a\\}\\) dead-zone linear\n\nIf you are close enough no penalty, otherwise linear\n\n\\(\\phi(x) = -\\log(1-x^2)\\), log-barrier penalty\n\nBlows up at \\(x=\\pm 1\\)"
+  },
+  {
+    "objectID": "meetups/Meetup-10/meetup-10.html#visualizing-penalties",
+    "href": "meetups/Meetup-10/meetup-10.html#visualizing-penalties",
+    "title": "DATA 609 Meetup 10: Applications to Data Fitting",
+    "section": "Visualizing Penalties",
+    "text": "Visualizing Penalties"
+  },
+  {
+    "objectID": "meetups/Meetup-10/meetup-10.html#robustness-to-outliers",
+    "href": "meetups/Meetup-10/meetup-10.html#robustness-to-outliers",
+    "title": "DATA 609 Meetup 10: Applications to Data Fitting",
+    "section": "Robustness to Outliers",
+    "text": "Robustness to Outliers\n\nAn outlier is a data point that was generated by a different process than the other points in the dataset\n\nCould be due to an interesting phenomenon\nCould be due to a mistake, in which case it is called a spurious value\n\nProblem: Stats based on Gaussian Distribution (and thus quadratic penalty) are not robust to outliers"
+  },
+  {
+    "objectID": "meetups/Meetup-10/meetup-10.html#linear-regression-examples",
+    "href": "meetups/Meetup-10/meetup-10.html#linear-regression-examples",
+    "title": "DATA 609 Meetup 10: Applications to Data Fitting",
+    "section": "Linear Regression Examples",
+    "text": "Linear Regression Examples"
+  },
+  {
+    "objectID": "meetups/Meetup-10/meetup-10.html#robust-regression",
+    "href": "meetups/Meetup-10/meetup-10.html#robust-regression",
+    "title": "DATA 609 Meetup 10: Applications to Data Fitting",
+    "section": "Robust Regression",
+    "text": "Robust Regression\n\nQuadratic penalty squares residuals\nPenalizes large errors much more than small ones\nAbsolute value penalizes residuals equally, so less sensitive to outliers\nRobust Regression is \\(L_1\\) penalized linear regression"
+  },
+  {
+    "objectID": "meetups/Meetup-10/meetup-10.html#robust-regression-1",
+    "href": "meetups/Meetup-10/meetup-10.html#robust-regression-1",
+    "title": "DATA 609 Meetup 10: Applications to Data Fitting",
+    "section": "Robust Regression",
+    "text": "Robust Regression"
+  },
+  {
+    "objectID": "meetups/Meetup-10/meetup-10.html#huber-penalty",
+    "href": "meetups/Meetup-10/meetup-10.html#huber-penalty",
+    "title": "DATA 609 Meetup 10: Applications to Data Fitting",
+    "section": "Huber Penalty",
+    "text": "Huber Penalty\n\nQuadratic penalty is optimal when we have Gaussian errors\nHuber function is a compromise between quadratic and absolute value: \\[\n\\phi_h(x) = \\begin{cases}\nx^2 & \\mathrm{if}\\quad |x|&lt; M \\\\\nM\\left(2|x|-M\\right) & \\mathrm{if}\\quad |x|\\geq M\n\\end{cases}\n\\]"
+  },
+  {
+    "objectID": "meetups/Meetup-10/meetup-10.html#huber-penalty-1",
+    "href": "meetups/Meetup-10/meetup-10.html#huber-penalty-1",
+    "title": "DATA 609 Meetup 10: Applications to Data Fitting",
+    "section": "Huber Penalty",
+    "text": "Huber Penalty"
+  },
+  {
+    "objectID": "meetups/Meetup-10/meetup-10.html#huber-regression",
+    "href": "meetups/Meetup-10/meetup-10.html#huber-regression",
+    "title": "DATA 609 Meetup 10: Applications to Data Fitting",
+    "section": "Huber Regression",
+    "text": "Huber Regression\n\nHuber Penalty also leads to robust fits\nShould pick \\(M\\) based on a robust estimate of the standard deviation \\(\\sigma\\)\nWant the quadratic part to be in force when errors produced by Gauassian\nWant linear part for larger errors"
+  },
+  {
+    "objectID": "meetups/Meetup-10/meetup-10.html#huber-regression-1",
+    "href": "meetups/Meetup-10/meetup-10.html#huber-regression-1",
+    "title": "DATA 609 Meetup 10: Applications to Data Fitting",
+    "section": "Huber Regression",
+    "text": "Huber Regression"
+  },
+  {
+    "objectID": "meetups/Meetup-10/meetup-10.html#least-norm-problems",
+    "href": "meetups/Meetup-10/meetup-10.html#least-norm-problems",
+    "title": "DATA 609 Meetup 10: Applications to Data Fitting",
+    "section": "Least Norm Problems",
+    "text": "Least Norm Problems\n\\[\n\\mathrm{min} \\|\\mathbf{x}\\| \\\\\nA\\mathbf{x} - \\mathbf{b} = 0\n\\]\n\nEquivalent to norm approximation\n\nSystem is underdetermined\n\\(\\mathbf{x} = \\mathbf{x}_0 + Z\\mathbf{u}\\)\n\\(\\mathrm{min}_{\\mathbf{u}}\\|\\mathbf{x}_0 + Z\\mathbf{u}\\|\\)"
+  },
+  {
+    "objectID": "meetups/Meetup-10/meetup-10.html#regularization-and-sparsity",
+    "href": "meetups/Meetup-10/meetup-10.html#regularization-and-sparsity",
+    "title": "DATA 609 Meetup 10: Applications to Data Fitting",
+    "section": "Regularization and Sparsity",
+    "text": "Regularization and Sparsity\n\nLeast Norm lets you “solve” underdetermined linear systems\nWe have also discussed regularization: \\[\n\\mathrm{min}_{\\mathbf{x}} \\|f(\\mathbf{x})\\| + \\lambda\\|\\mathbf{x}\\|\n\\]\nWhat are the trade-offs between different penalties?"
+  },
+  {
+    "objectID": "meetups/Meetup-10/meetup-10.html#l_1-induces-sparsity-and-bias",
+    "href": "meetups/Meetup-10/meetup-10.html#l_1-induces-sparsity-and-bias",
+    "title": "DATA 609 Meetup 10: Applications to Data Fitting",
+    "section": "\\(L_1\\) induces sparsity and bias",
+    "text": "\\(L_1\\) induces sparsity and bias\n\nBig difference between quadratic and abs penalty when coefficients are small:\n\\(|x| \\gg x^2\\)\nLasso induces sparsity- actually zeros out coefficients with small effect\nSparsity can give big computational efficiency advantage and improve interpretability\nCan lead to bias (inaccuracy)"
+  },
+  {
+    "objectID": "meetups/Meetup-10/meetup-10.html#comparison-on-diabetes-dataset",
+    "href": "meetups/Meetup-10/meetup-10.html#comparison-on-diabetes-dataset",
+    "title": "DATA 609 Meetup 10: Applications to Data Fitting",
+    "section": "Comparison On Diabetes Dataset",
+    "text": "Comparison On Diabetes Dataset\n\nPredictor variables: age, sex, bmi, bp, and six blood test values taken at baseline\nTarget variable: Measure of diabetes progression one year later"
+  },
+  {
+    "objectID": "meetups/Meetup-10/meetup-10.html#comparisons-on-diabetes-dataset",
+    "href": "meetups/Meetup-10/meetup-10.html#comparisons-on-diabetes-dataset",
+    "title": "DATA 609 Meetup 10: Applications to Data Fitting",
+    "section": "Comparisons on Diabetes Dataset",
+    "text": "Comparisons on Diabetes Dataset"
+  },
+  {
+    "objectID": "meetups/Meetup-10/meetup-10.html#ridge-regression",
+    "href": "meetups/Meetup-10/meetup-10.html#ridge-regression",
+    "title": "DATA 609 Meetup 10: Applications to Data Fitting",
+    "section": "Ridge Regression",
+    "text": "Ridge Regression"
+  },
+  {
+    "objectID": "meetups/Meetup-10/meetup-10.html#ridge-regression-1",
+    "href": "meetups/Meetup-10/meetup-10.html#ridge-regression-1",
+    "title": "DATA 609 Meetup 10: Applications to Data Fitting",
+    "section": "Ridge Regression",
+    "text": "Ridge Regression\n\nIn ridge regression the coefficients shrink together\n\n\n\nText(0.5, 0, 'log(lambda)')"
+  },
+  {
+    "objectID": "meetups/Meetup-10/meetup-10.html#lasso-regression",
+    "href": "meetups/Meetup-10/meetup-10.html#lasso-regression",
+    "title": "DATA 609 Meetup 10: Applications to Data Fitting",
+    "section": "Lasso Regression",
+    "text": "Lasso Regression"
+  },
+  {
+    "objectID": "meetups/Meetup-10/meetup-10.html#lasso-regression-1",
+    "href": "meetups/Meetup-10/meetup-10.html#lasso-regression-1",
+    "title": "DATA 609 Meetup 10: Applications to Data Fitting",
+    "section": "Lasso Regression",
+    "text": "Lasso Regression\n\nCoefficients forced to 0 one at a time"
+  },
+  {
+    "objectID": "meetups/Meetup-10/meetup-10.html#stochastic-robust-approximation",
+    "href": "meetups/Meetup-10/meetup-10.html#stochastic-robust-approximation",
+    "title": "DATA 609 Meetup 10: Applications to Data Fitting",
+    "section": "Stochastic Robust Approximation",
+    "text": "Stochastic Robust Approximation\n\nStart off with a problem where we are minimizing a convex objective\nCould be least squares type like the one we write below, but doesn’t have to be: \\[\n\\mathrm{min}_x\\|A\\mathbf{x}-\\mathbf{b}\\|\n\\]\nSuppose that \\(A\\) and \\(\\mathbf{b}\\) are actually uncertain\nCould correspond to things like measurement error"
+  },
+  {
+    "objectID": "meetups/Meetup-10/meetup-10.html#stochastic-robust-approximation-1",
+    "href": "meetups/Meetup-10/meetup-10.html#stochastic-robust-approximation-1",
+    "title": "DATA 609 Meetup 10: Applications to Data Fitting",
+    "section": "Stochastic Robust Approximation",
+    "text": "Stochastic Robust Approximation\n\nReformulate problem, minimize expected value of objective: \\[\n\\min_{x}\\int dA d\\mathbf{b}\\left( p(A,\\mathbf{b})\\|A\\mathbf{x}-\\mathbf{b}\\| \\right)\n\\]\nThis is convex, but viciously hard\nGenerally will have to approximate the integral\nEquivalent to discretizing distribution"
+  },
+  {
+    "objectID": "meetups/Meetup-10/meetup-10.html#discrete-version",
+    "href": "meetups/Meetup-10/meetup-10.html#discrete-version",
+    "title": "DATA 609 Meetup 10: Applications to Data Fitting",
+    "section": "Discrete Version",
+    "text": "Discrete Version\n\nConsider Discrete Version \\[\n\\mathrm{min}_{\\mathbf{x}} \\sum_{i}\\sum_j p_{ij}\\|A_i\\mathbf{x}-\\mathbf{b}_j\\|\n\\]\nCould be a lot of terms but is convex"
+  },
+  {
+    "objectID": "meetups/Meetup-10/meetup-10.html#worst-case-robust-optimization",
+    "href": "meetups/Meetup-10/meetup-10.html#worst-case-robust-optimization",
+    "title": "DATA 609 Meetup 10: Applications to Data Fitting",
+    "section": "Worst Case Robust Optimization",
+    "text": "Worst Case Robust Optimization\n\nIdea: Instead of minimizing expected value, minimize worst case error \\[\n\\mathrm{min}_{\\mathbf{x}} \\mathrm{sup}_{A} \\|A\\mathbf{x}-\\mathbf{b}\\|\n\\]\nConvex, but still can be viciously hard"
+  },
+  {
+    "objectID": "meetups/Meetup-10/meetup-10.html#problem-3-on-homework",
+    "href": "meetups/Meetup-10/meetup-10.html#problem-3-on-homework",
+    "title": "DATA 609 Meetup 10: Applications to Data Fitting",
+    "section": "Problem 3 on Homework",
+    "text": "Problem 3 on Homework\n\nStart with logistic regression: \\[\nl(\\theta) = \\sum_{i=1}^n \\log\\left(1 + \\exp\\left(-y_i\\theta^T\\mathbf{x}_i\\right)\\right)\n\\]\n\\(y_i = \\pm 1\\)\n\\(\\theta\\) coefficients\n\\(\\mathbf{x}_i\\) is \\(i\\)th data point"
+  },
+  {
+    "objectID": "meetups/Meetup-10/meetup-10.html#problem-3-tips",
+    "href": "meetups/Meetup-10/meetup-10.html#problem-3-tips",
+    "title": "DATA 609 Meetup 10: Applications to Data Fitting",
+    "section": "Problem 3 Tips",
+    "text": "Problem 3 Tips\n\nNow we assume that each \\(\\mathbf{x}_i\\) has an error \\(\\delta_i\\) which has maximal element of \\(\\epsilon\\)\nNew Convex Optimization Problem:\n\n\\[\nl_{wc}(\\theta) = \\sum_{i=1}^n \\sup_{\\|\\delta_i\\|_{\\infty}\\leq\\epsilon}\\log\\left(1+\\exp\\left(-y_i\\theta^T\\left(\\mathbf{x}_i+\\delta_i\\right)\\right)\\right)\n\\]"
+  },
+  {
+    "objectID": "meetups/Meetup-10/meetup-10.html#how-to-deal-with-this",
+    "href": "meetups/Meetup-10/meetup-10.html#how-to-deal-with-this",
+    "title": "DATA 609 Meetup 10: Applications to Data Fitting",
+    "section": "How to deal with this?",
+    "text": "How to deal with this?\n\\[\nl_{wc}(\\theta) = \\sum_{i=1}^n \\sup_{\\|\\delta_i\\|_{\\infty}\\leq\\epsilon}\\log\\left(1+\\exp\\left(-y_i\\theta^T\\left(\\mathbf{x}_i+\\delta_i\\right)\\right)\\right)\n\\]"
+  },
+  {
+    "objectID": "meetups/Meetup-10/meetup-10.html#thanks",
+    "href": "meetups/Meetup-10/meetup-10.html#thanks",
+    "title": "DATA 609 Meetup 10: Applications to Data Fitting",
+    "section": "Thanks!",
+    "text": "Thanks!"
+  },
+  {
+    "objectID": "images/IntroSlides.html#about-me",
+    "href": "images/IntroSlides.html#about-me",
+    "title": "Welcome to DATA 609",
+    "section": "About Me",
+    "text": "About Me\n\n\n\nDoctoral Lecturer at CUNY SPS\nPast research experience:\n\nPlasma physics and Applied Mathematics (NYU)\nEcology and Evolutionary Biology (Princeton)\n\nResearch using Bayesian methods and genomic data to improve global scale ocean and climate models\nTaught math at NYU"
+  },
+  {
+    "objectID": "images/IntroSlides.html#why-optimization",
+    "href": "images/IntroSlides.html#why-optimization",
+    "title": "Welcome to DATA 609",
+    "section": "Why Optimization?",
+    "text": "Why Optimization?\n\n\n\nOptimization theory underlies most methods in data science\nThree foci:\n\nLeast Squares Optimization\nConvex Optimization\nLocal Optimization and Stochastic Gradient Descent"
+  },
+  {
+    "objectID": "images/IntroSlides.html#course-websites",
+    "href": "images/IntroSlides.html#course-websites",
+    "title": "Welcome to DATA 609",
+    "section": "Course Website(s)",
+    "text": "Course Website(s)\n\n\n\nBrightspace to submit homework\nCourse Website"
+  },
+  {
+    "objectID": "images/IntroSlides.html#course-website-and-meetup",
+    "href": "images/IntroSlides.html#course-website-and-meetup",
+    "title": "Welcome to DATA 609",
+    "section": "Course Website and Meetup",
+    "text": "Course Website and Meetup\n\n\n\nBrightspace to submit homework\nCourse Website\nCourse Meetup: Monday 6:45-7:45PM\nZoom Link"
+  },
+  {
+    "objectID": "images/IntroSlides.html#slack-channel",
+    "href": "images/IntroSlides.html#slack-channel",
+    "title": "Welcome to DATA 609",
+    "section": "Slack Channel",
+    "text": "Slack Channel\n\n\n\nCourse slack channel for messaging and rapid communications\nhttps://data609-spring-2025.slack.com\nInvite Link"
+  },
+  {
+    "objectID": "images/IntroSlides.html#textbooks",
+    "href": "images/IntroSlides.html#textbooks",
+    "title": "Welcome to DATA 609",
+    "section": "Textbooks",
+    "text": "Textbooks\n\n\nTwo most important textbooks:\n\nIntroduction to Applied Linear Algebra\n\n\nAvailable free online VMLS\n\n\nConvex Optimization\n\n\nAvailable free online cvxbook"
+  },
+  {
+    "objectID": "images/IntroSlides.html#textbooks-1",
+    "href": "images/IntroSlides.html#textbooks-1",
+    "title": "Welcome to DATA 609",
+    "section": "Textbooks",
+    "text": "Textbooks\n\n\nTwo most important textbooks:\n\nIntroduction to Applied Linear Algebra\n\n\nAvailable free online VMLS\n\n\nConvex Optimization\n\n\nAvailable free online cvxbook"
+  },
+  {
+    "objectID": "images/IntroSlides.html#assignments",
+    "href": "images/IntroSlides.html#assignments",
+    "title": "Welcome to DATA 609",
+    "section": "Assignments",
+    "text": "Assignments\n\n\n\n8 Lab Assignments (80%)\nFinal Project (20%)"
+  },
+  {
+    "objectID": "images/IntroSlides.html#looking-forward-to-a-great-semester",
+    "href": "images/IntroSlides.html#looking-forward-to-a-great-semester",
+    "title": "Welcome to DATA 609",
+    "section": "Looking forward to a great semester!",
+    "text": "Looking forward to a great semester!\nThanks for watching"
+  },
+  {
+    "objectID": "assignments/labs/Lab1.html",
+    "href": "assignments/labs/Lab1.html",
+    "title": "Homework 1: Introduction to Optimization and Least Squares",
+    "section": "",
+    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
+  },
+  {
+    "objectID": "assignments/labs/Lab1.html#instructions",
+    "href": "assignments/labs/Lab1.html#instructions",
+    "title": "Homework 1: Introduction to Optimization and Least Squares",
+    "section": "",
+    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
+  },
+  {
+    "objectID": "assignments/labs/Lab1.html#problem-1-gradient-descent",
+    "href": "assignments/labs/Lab1.html#problem-1-gradient-descent",
+    "title": "Homework 1: Introduction to Optimization and Least Squares",
+    "section": "Problem 1: Gradient Descent",
+    "text": "Problem 1: Gradient Descent\n\nConsider the mathematical function defined on \\(f: \\mathbb{R}^2\\,\\to\\, \\mathbb{R}\\):\n\n\\[\nf(x,y) = (x-1)^2 + (y+2)^2,\n\\]\nFind the single critical point of this function and show that it is a local minimum (in this case, this will also be a global minimum).\n\nNow consider a new objective function that depends on a parameter \\(b\\): \\[\nf(x,y) = x^2 + by^2\n\\] Here we will look at two different values of \\(b\\), \\(b=3\\) and \\(b=10\\). The global minimum of this function occurs at the point \\(x^* = 0\\), \\(y^*=0\\) no matter what the value of \\(b\\). Suppose that we didn’t know this and wanted to find the minimum of this function using gradient descent instead of direct calculation.\n\n\nFirst write code to perform the gradient descent algorithm, that is perform the iteration: \\[\n\\mathbf{v}_{n+1} = \\mathbf{v}_n - k \\nabla f(\\mathbf{v}_n),\n\\]\n\nwhere the vector \\(\\mathbf{v} = \\begin{bmatrix} x & y\\end{bmatrix}^T\\) and \\(k\\) is the learning rate.\n\nThen test the performance of your algorithm as a function of the learning rates \\(k\\) by performing 100 iterations of the algorithm for 100 values of \\(k\\) equally spaced between \\(k=0.01\\) and \\(k=0.3\\). Start with an initial guess of \\(\\mathbf{v}_0 = \\begin{bmatrix} b & 1\\end{bmatrix}^T\\). Do this for \\(b=3\\) and \\(b=10\\). Make separate plots for \\(b=3\\) and \\(b=10\\) of the log base 10 of the error (in this case it is \\(\\sqrt{x_{100}^2+y_{100}^2}\\)) for the final value of the iteration versus the value of \\(k\\). How does learning rate relate to the final value of the error? For which value of \\(b\\) does the algorithm have the ability to converge fastest (have the lowest value of the error at the end)?\n\nNote: For some combinations of \\(k\\) and \\(b\\), the algorithm won’t converge to the right answer, i.e. the error will grow with time. To make your plot easier to read, don’t plot the error for iterations that didn’t converge.\n\nAs \\(k\\) increases, for one or both values of \\(b\\), you will observe a point where the trend of final error versus learning rate reverses direction. Pick a value of \\(k\\) very close to the point where this occurs, and make a contour plot of the function \\(f\\) and the trajectory of the iterations for the gradient descent algorithm for that value of \\(k\\) superimposed over the contour plot. What do you observe?\n\nNote: The differences that you observe here are a special case of a more general phenomenon: the speed of convergence of gradient descent depends on something called the condition number of the Hessian matrix (the matrix of the 2nd order partial derivatives) of the target function. The condition number for a symmetric matrix is just the ratio of the largest to smallest eigenvalues, in this case the condition number is \\(b\\) (or 1/\\(b\\)). Gradient descent performs worse and worse the larger the condition number (and large condition numbers are problematic for a wide variety of other numerical methods)."
+  },
+  {
+    "objectID": "assignments/labs/Lab1.html#problem-2-solving-least-squares-problems",
+    "href": "assignments/labs/Lab1.html#problem-2-solving-least-squares-problems",
+    "title": "Homework 1: Introduction to Optimization and Least Squares",
+    "section": "Problem 2: Solving Least Squares Problems",
+    "text": "Problem 2: Solving Least Squares Problems\nGenerate a random \\(20\\times 10\\) matrix \\(A\\) and a random 20-vector \\(b\\) (use a Gaussian distribution). Then, solve the least squares problem: \\[\n\\min_{\\mathbf{x}\\in \\mathbb{R}^{10}} \\|A\\mathbf{x} - \\mathbf{b}\\|^2\n\\] in the following ways:\n\nMultiply \\(\\mathbf{b}\\) by the Morse-Penrose Pseudoinverse \\(A^+\\).\nUse built in functions to solve the least squares problem (i.e. in python numpy.lstsq, in R lm, and in Julia the backslash operator).\nUsing the \\(QR\\) factorization of \\(A\\). This factorization rewrites \\(A\\) as: \\[\nA = \\begin{bmatrix} Q & 0\\end{bmatrix} \\begin{bmatrix} R & 0 \\end{bmatrix}^T,\n\\] where \\(Q\\) is an orthonormal matrix and \\(R\\) is upper triangular. The least squares solution equals: \\[\n\\mathbf{x} = R^{-1}Q^T\\mathbf{b}\n\\]\nVerify that each of these solutions are nearly equal and that the residuals \\(A\\mathbf{x}-\\mathbf{b}\\) are orthogonal to the vector \\(A\\mathbf{x}\\)"
+  },
+  {
+    "objectID": "assignments/labs/Lab1.html#problem-3-iterative-solutions-to-least-squares",
+    "href": "assignments/labs/Lab1.html#problem-3-iterative-solutions-to-least-squares",
+    "title": "Homework 1: Introduction to Optimization and Least Squares",
+    "section": "Problem 3: Iterative Solutions to Least Squares",
+    "text": "Problem 3: Iterative Solutions to Least Squares\nAlthough the pseudoinverse provides an exact formula for the least squares solutions, there are some situations in which using the exact solution is computationally difficult, particularly when the matrix \\(A\\) and vector \\(\\mathbf{b}\\) have a large number of entries. In isn’t out of the ordinary for \\(A^TA\\) to be more than a terabyte, for example . In these cases it may be better to use an approximate solution instead of the exact formula. There are many different approximate methods for solving least squares problems, here we will use an iterative method developed by Richardson.\nThis method begins with an initial guess \\(\\mathbf{x}^{(0)} = 0\\) and calculates successive approximations as follows:\n\\[\n    \\mathbf{x}^{(k+1)} = \\mathbf{x}^{(k)} - \\mu A^T\\left(A\\mathbf{x}^{(k)}-\\mathbf{b}\\right)\n\\]\nHere \\(\\mu\\) is a positive paramter that has a similar interpretation to the learning rate for gradient descent. A choice that guarantees convergence is \\(\\mu \\leq \\frac{1}{\\|A\\|}\\). The iteration is terminated when the change in the residual \\(\\|A^T(Ax^{(k)} − b)\\|\\) after successive steps is below a user determined threshold, which indicates that the least squares optimality conditions are nearly satisfied.\n\nSuppose that \\(\\mathbf{x}\\) is a solution to the least squares problem: \\[\n\\mathbf{x} = A^+\\mathbf{b}\n\\]\n\nShow by substitution of the formula for the pseudoinverse that \\(\\mathbf{x}\\) is a fixed-point of the iteration scheme, i.e. that: \\[\n\\mathbf{x} = \\mathbf{x} - \\mu A^T\\left(A\\mathbf{x}-\\mathbf{b}\\right)\n\\]\n\nGenerate a random 20 × 10 matrix \\(A\\) and 20-vector \\(\\mathbf{b}\\), and compute the least squares solution \\(\\mathbf{x} = A^+\\mathbf{b}\\). Then run the Richardson algorithm with \\(\\mu = \\frac{1}{\\|A\\|^2}\\) for 500 iterations, and plot \\(\\|\\mathbf{x}^{(k)}-\\mathbf{x}\\|\\) to verify that \\(\\mathbf{x}^{(k)}\\) is converging to \\(\\mathbf{x}\\)"
+  },
+  {
+    "objectID": "assignments/labs/Lab2.html",
+    "href": "assignments/labs/Lab2.html",
+    "title": "Homework 2: Applications of Least Squares",
+    "section": "",
+    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
+  },
+  {
+    "objectID": "assignments/labs/Lab2.html#instructions",
+    "href": "assignments/labs/Lab2.html#instructions",
+    "title": "Homework 2: Applications of Least Squares",
+    "section": "",
+    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
+  },
+  {
+    "objectID": "assignments/labs/Lab2.html#problem-1-online-updating-for-least-squares-and-autoregressive-time-series-models",
+    "href": "assignments/labs/Lab2.html#problem-1-online-updating-for-least-squares-and-autoregressive-time-series-models",
+    "title": "Homework 2: Applications of Least Squares",
+    "section": "Problem 1: Online Updating for Least Squares and Autoregressive Time Series Models",
+    "text": "Problem 1: Online Updating for Least Squares and Autoregressive Time Series Models\nMany applications of least squares (and other statistical methods) involve , in which data is collected over a time period and the statistical model is updated as new data arrives. If the quantity of data arriving is very large, it may be inefficient or even impossible to refit the entire model on the entire dataset. Instead, we use techniques (often referred to as which take the current model as a starting point and update them to incorporate the new data.\nThe structure of least squares problems makes them amenable to online updating (sometimes this is called “recursive” least squares). The structure of the problem is as follows, at time \\(t\\) we receive a vector of observations \\(\\mathbf{x}_t\\) and an observation of our target variable \\(y_t\\).\nThe full set of all observations and target variable data that we have received up to time \\(t\\) is contained in the following matrix and vector:\n\\[\nX_{(t)} = \\begin{bmatrix} \\cdots\\, \\mathbf{x}_1^T\\, \\cdots \\\\\n\\cdots\\, \\mathbf{x}_2^T\\, \\cdots \\\\ \\vdots \\\\ \\cdots\\, \\mathbf{x}_t^T\\, \\cdots \\end{bmatrix},\\quad\n\\mathbf{y}_{(t)} = \\begin{bmatrix} y_1 \\\\ y_2 \\\\ \\vdots \\\\ y_t \\end{bmatrix}\n\\]\nwhich says that row \\(j\\) of the matrix \\(X_{(t)}\\) is the \\(j\\)th observation \\(\\mathbf{x}_j^T\\), and the \\(j\\)th entry of \\(\\mathbf{y}_{(t)}\\) is \\(b_j\\).\nHere we assume that the vectors \\(\\mathbf{x}\\) each contain \\(n\\) observations, so that \\(X_{(t)}\\) is a \\(t\\times n\\) matrix and the vector \\(\\mathbf{y}_{(t)}\\) is a \\(t\\)-vector.\nAs long as \\(t&gt;n\\), i.e. the number of time observations is greater than the number of features/data points in each observation, we can fit a linear model predicting the target as a function of the features \\(\\mathbf{x}\\) by solving the following system of equations:\n\\[\n(X^T_{(t)}X_{(t)})\\mathbf{x}_{(t)} = X_{(t)}^T\\mathbf{y}_{(t)}\n\\]\nAs the length of the time series increases, the computational difficulty of solving this problem also increases. However, it is possible to re-use work done on the previous time step to avoid solving the full system at each step.\nThis algorithm is based on the fact that the Gram Matrix \\(X^T_{(t+1)}X_{(t+1)}\\) can be calculated from the Gram matrix \\(X^T_{(t)}X_{(t)}\\) from the previous time step. \\[\nX^T_{(t+1)}X_{(t+1)} = X^T_{(t)}X_{(t)} + \\mathbf{x}_{t+1}\\mathbf{x}_{t+1}^T\n\\] Similarly, the product \\(X^T_{(t+1)} \\mathbf{y}_{(t+1)}\\) can also be updated from the value on the previous time step: \\[\nX^T_{(t+1)}\\mathbf{y}_{(t+1)} = X^T_{(t)}\\mathbf{y}_{(t)} + y_{t+1}\\mathbf{x}_{t+1}\n\\]\nWe can write an efficient algorithm to compute the updated least squares solution as follows:\n\nStep 1: Pick an initial time \\(t\\) such that \\(X_{t}\\) is square or tall so that the least squares problem can be solved (i.e. wait for enough data to have built up before your start) and then calculate the Gram matrix and the product \\(X^T_{t} \\mathbf{y}_t\\) \\[\nG_{(t)} = X^T_{(t)}X_{(t)}, \\quad \\mathbf{h}_{(t)} = X^T_{t}\\mathbf{y}_t\n\\]\nStep 2: Find the least squares solution at time \\(t\\) by solving the linear system: \\[\nG_{(t)}\\mathbf{\\theta}_{(t)} = \\mathbf{h}_{(t+1)}\n\\]\nStep 3: When the next data points \\(\\mathbf{x}_{t+1}\\) and \\(y_{t+1}\\), update \\(G_{(t+1)}\\) and \\(\\mathbf{h}_{(t+1)}\\):\n\n\\[ G_{(t+1)} = G_{(t)} + \\mathbf{x}_{t+1}\\mathbf{x}^T_{t+1},\\quad\n\\mathbf{h}_{(t+1)} = \\mathbf{h}_{(t)} + y_{t+1}\\mathbf{x}_{t+1}\n\\] Then you can repeat Step 2 to find \\(\\mathbf{theta}_{t+1}\\). This algorithm can be improved upon slightly using the Matrix Inversion Lemma/Woodbury Formula, which could be a topic for a project (see note at the end which mentions Kalman filters).\n\nYou are going to use this algorithm to make a linear, autoregressive model that predicts total day-ahead citibike trips from the daily high temperature and the number of daily citibike trips taken each of the past 7 days. The data is contained in the file daily_citibike_trips.csv.\n\nSpecifically, for each time point \\(t&gt;7\\) , fit the following model as a least squares estimation problem: \\[\nN_{trips,\\tau} = \\sum_{i=1}^7 \\theta_i N_{trips,\\tau-i} + \\theta_{i+1} T,\n\\] Here, each \\(N_{trips,\\tau}\\) stands for the number of citibike trips on the \\(t\\)th day of the time series, \\(T\\) stands for the forecast high temperature in New York City that day, and the coefficients \\(\\theta_i\\) are the decision variables.\nFind the coefficients \\(\\theta_{i,t}\\) that minimize the mean square errors on all the observed citibike trips prior to time \\(t\\). Use the recursive least squares optimization outlined in the preamble to this problem to calculate the coefficients for each time point, and plot how they and the \\(R^2\\) of the model change over time.\nWhat patterns do you notice in how the regression coefficients and \\(R^2\\) change over time?\nTip: Be very cautious when coding about the dimensionality of matrices and arrays. In python, x @ x.T will be an 8x8 matrix if a.shape = (8,1). However, by default x.shape = (8,), indicating that a is not being treated as either a row or column vector. For this problem it is important that the vectors are either row or column vectors, and not arrays without such an orientation. In python, you can use numpy.reshape to adjust.\n\nWe have included temperature as a variable because it probably influences the decision to ride a citibike. However, the relationship could be nonlinear, as both extreme high and low temperatures make bike riding less comfortable. With this idea in mind, create a new feature by choosing a nonlinear function of the temperature \\(T\\) that represents the potential for both high and low values of \\(T\\) to the same impact on predicted ridership. Use least squares optimization to fit an autoregressive time series model, replacing \\(T\\) with the value of your new feature \\(f(T)\\) in the time series. How does the temperature dependence coefficient differ between this model and the one you fit in (a)? Does the accuracy of the model improve or get worse using the new feature?"
+  },
+  {
+    "objectID": "assignments/labs/Lab2.html#problem-2-weighted-least-squares",
+    "href": "assignments/labs/Lab2.html#problem-2-weighted-least-squares",
+    "title": "Homework 2: Applications of Least Squares",
+    "section": "Problem 2: Weighted Least Squares",
+    "text": "Problem 2: Weighted Least Squares\nThe file social-mobility.csv contains data on the fraction of individuals born in the years 1980-1982 to parents in the bottom 20% of the income distribution who reach the top 20% of the income distribution by the time they turn 30 in a large number of municipalities throughout the United States. The dataset also contains additional variables that describe other socio-economic differences between the cities in the dataset.\n\nMake a scatter-plot of mobility versus population (use a log-scale for population). What do you notice about the variance of social mobility as a function of population? This is a common feature of nearly every dataset containing geographic regions with widely different populations.\nAssume that the number of children born in families making below the 20th percentile of the income distribution in each city is linearly proportional to the city population. Write down a formula for how the variance of each measurement of the social mobility should depend on the measured social mobility and the population. Hint: start with either the formula for the variance of binomial counts or look up the variance of a proportion derived from a binomial distribution. Don’t worry about constant factors when deriving this formula.\nUse weighted least squares to calculate an estimate of how social mobility depends on commute time and student-teacher ratio, using weights calculated based on the variance estimate derived in (b). Compare the coefficients to those derived from ordinary least squares with no weights."
+  },
+  {
+    "objectID": "assignments/labs/Lab2.html#problem-3-markowitz-portfolio-optimization",
+    "href": "assignments/labs/Lab2.html#problem-3-markowitz-portfolio-optimization",
+    "title": "Homework 2: Applications of Least Squares",
+    "section": "Problem 3: Markowitz Portfolio Optimization",
+    "text": "Problem 3: Markowitz Portfolio Optimization\nIn this problem you will use Markowitz Portfolio Optimization to construct a set of portfolios that aim to achieve target expected rates of return while minimizing risk. The file stock_returns.csv contains information on daily asset returns from 2020-2024 for a group of assets, consisting mostly of large-cap stocks but also a handful of exchange traded funds that correspond to US Treasury Bonds and Notes with varying maturities.\nYou will divide the data into two time periods, a training period (2020-2022) and a testing period (2022-2024). The data in the stock_returns.csv is stored in a long format, with the following variables:\n\nCompany - The ticker symbol that identifies the stock\ndate - The date to which the data corresponds\nadjusted- the closing price of the stock, adjusted for special events like dividends and stock splits\nreturn - the ratio of the current adjusted close to the adjusted close on the previous trading day\nlog_return- the natural logarithm of the return\n\n\nConstruct a vector (we call it \\(\\mu\\)) containing the annualized rate of return over the training period (for the \\(i\\)th stock, you can use the formula: \\(\\mu_i = \\exp\\left(0.5\\sum_{t} \\mathrm{log\\_return}_i(t)\\right)\\)), or the square root of the total return over the first two years of data, and daily return covariance \\(\\Gamma\\).\n\nHint: Possible workflow if working in python: convert your data to a wide format using pandas, extract the values into a numpy ndarray, and then use the function np.cov.\nThen solve the following constrained least squares problem to calculate optimal portfolios achieving a fixed rate of return with minimum variance:\n\\[\n\\begin{aligned}\n    \\min_{w} \\mathbf{x}^T\\Gamma \\mathbf{x}, \\\\\n    \\mathbf{w}^T\\mathbf{\\mu} = r, \\\\\n    \\sum_{i} w_i = 1\n\\end{aligned}\n\\] Here \\(\\mathbf{w}\\) is a vector containing the investment allocations into different assets, and \\(r\\) is the target rate of return.\nCalculate optimal portfolios based on the 2020-2022 data for \\(r=1.05\\), \\(r=1.10\\), and \\(r=1.20\\).\n\nPlot the cumulative value of each portfolio over time, assuming that an initial investment is made at the start of the period and that there is no rebalancing of the portfolio, i.e. \\(r_{T} = \\sum_{i=1}^n w_i\\Pi_{t=1}^T r_{it}\\), where \\(r_{it}\\) is the return of asset \\(i\\) on trading day \\(t\\), (hint: np.cumprod allows you to efficiently calculate this quantity). Make the plot for both the training and test sets of returns.\n\nFor each of the 3 portfolios also report:\n\nThe annualized return on the training and test sets;\nThe risk on the training and test sets, defined as the realized variance of the daily return;\nThe asset with the maximum allocation weight, and its weight;\nThe initial leverage, defined as \\(\\sum_{i=1}^n |w_i|\\). This number is always at least one, and it is exactly one only if the portfolio has no short positions.\n\nComment briefly on your observations about the different portfolios and the difference between their training and testing performance.\n\nIt is well known that optimal portfolios constructed using the Markowitz procedure perform much more poorly out of sample compared to in sample. This is due to a variety of reasons, one of which is that the procedure assumes that future returns are equal to past returns, another that the correlation structure of the market might change over time, and finally, when there are many assets there is the potential for overfitting. Repeat the previous problem but introduce a ridge regression/\\(l_2\\) norm penalty term to the objective function, with a hyperparameter \\(\\lambda\\) governing the size of the penalty term.\n\nSpecifically, you will select 10 positive values of \\(\\lambda\\) on a log scale between \\(1e-1\\) and \\(10\\) and for each value of \\(\\lambda\\) solve the following penalized regression problem:\n\\[\n\\begin{aligned}\n    \\min_{w} w^T(\\Gamma+\\lambda I) w ,\\\\\n    w^T\\mu = r,\\\\\n    \\sum_{i=1}^n w_i = 1\n\\end{aligned}\n\\]\nfor just the single value of \\(r=20\\%\\). Then calculate the performance of each of these regularized Markowitz strategies on both the training and test datasets and plot the the return of the portfolios over both the training and testing period.\nFor each portfolio, also report:\n\nThe annualized return on the training and test sets;\nThe risk on the training and test sets;\nThe maximum allocation weight and the asset with maximum allocation;\nThe initial leverage\n\nComment on how the different values of \\(\\lambda\\) changed the optimal portfolios and the difference between in-sample and out-of-sample return and variance."
+  },
+  {
+    "objectID": "assignments/labs/Lab2.html#potential-projects-based-on-this-homework",
+    "href": "assignments/labs/Lab2.html#potential-projects-based-on-this-homework",
+    "title": "Homework 2: Applications of Least Squares",
+    "section": "Potential Projects Based on this Homework:",
+    "text": "Potential Projects Based on this Homework:\nRecursive least squares is a gateway to several important techniques that would lead to good projects. The Kalman Filter or Bayes Filter is an algorithm that recursively estimates a statistical model while allowing the underlying coefficients (or state) of that model to undergo dynamical evolution (as a simple example, think of correcting noisy measurements of the GPS location of a drone using Newtownian physics). These are some of the most useful prediction algorithms and can be applied to many areas, including econometrics, web traffic prediction, and vehicle location. For a more math related project, studying the accuracy of the Woodbury formula could be interesting."
+  },
+  {
+    "objectID": "assignments/project.html",
+    "href": "assignments/project.html",
+    "title": "Project",
+    "section": "",
+    "text": "The idea of this project is for you to find data and do something interesting with it that relates to the skills you have developed in this course.\nThe project is intentionally open ended- this is an opportunity for you to explore your interests, through using techniques or technologies that branch off those that were introduced in this class, datasets related to problems you face in your career or that you are curious about, or both.\nMy expectation for your project is that it has the length and sophistication of a complete homework assignment, but will all the work focused on the topic. It should include an introduction to contextualize the topic, but otherwise you can structure it how you like.\nThe output of your project should software that allows me to reproduce your work and a research report which describes what you did with the data and your findings, which could be contained within a github repository.\n\n\nThe first step of your project is to submit an initial proposal, which will help to ensure that your project is both worthwhile and feasible in the time frame of the last half of the semester. Your proposal should describe the area that you are interested in, the datasets you are going to use/mathematical problems you want to solve, and the link to the topics of this course. The proposal length should be around one page (excluding figures and references),\nThe proposal is preliminary, and you can include additional data or a different analysis as needs require.\n\n\n\nWhen writing proposals, I’ve found the following set of considerations, called “Heilmeier's Questions”, to be helpful to consider. Although this is just a very short project, you might find them helpful as well, and useful for formulating future projects and proposals that you might have to complete. These questions were developed by Dr. George Heilmeier, who was the director of DARPA from 1975-1977. Heilmeier said that every proposal to DARPA needed to answer these questions clearly and completely in order to receive funding:\n\nWhat are you trying to do? Articulate your objectives using absolutely no jargon. What is the problem? Why is it hard?\nHow is it done today, and what are the limits of current practice?\nWhat is new in your approach, and why do you think it will be successful?\nWho cares?\nIf you’re successful, what difference will it make? What applications are enabled as a result?\nWhat are the risks?\nHow long will it take?\nWhat are the midterm and final “exams” to check for success? How will progress be measured?",
+    "crumbs": [
+      "Assignments",
+      "Project"
+    ]
+  },
+  {
+    "objectID": "assignments/project.html#heilmeiers-questions",
+    "href": "assignments/project.html#heilmeiers-questions",
+    "title": "Project",
+    "section": "",
+    "text": "When writing proposals, I’ve found the following set of considerations, called “Heilmeier's Questions”, to be helpful to consider. Although this is just a very short project, you might find them helpful as well, and useful for formulating future projects and proposals that you might have to complete. These questions were developed by Dr. George Heilmeier, who was the director of DARPA from 1975-1977. Heilmeier said that every proposal to DARPA needed to answer these questions clearly and completely in order to receive funding:\n\nWhat are you trying to do? Articulate your objectives using absolutely no jargon. What is the problem? Why is it hard?\nHow is it done today, and what are the limits of current practice?\nWhat is new in your approach, and why do you think it will be successful?\nWho cares?\nIf you’re successful, what difference will it make? What applications are enabled as a result?\nWhat are the risks?\nHow long will it take?\nWhat are the midterm and final “exams” to check for success? How will progress be measured?",
+    "crumbs": [
+      "Assignments",
+      "Project"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Announcements",
+    "section": "",
+    "text": "Be sure to check this page regularly for updates. In addition to periodic updates about the course, slides and recordings of the weekly meetups will be posted here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 10: Data Fitting\n\n\n\n\n\nClick here to read more about Meetup 10 and view/download the lecture slides.\n\n\n\n\n\nApr 1, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 10- Data Fitting\n\n\n\n\n\nClick here to read about Week 10.\n\n\n\n\n\nMar 31, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 9: Convex Optimization Problems\n\n\n\n\n\nClick here to read more about Meetup 9 and view/download the lecture slides.\n\n\n\n\n\nMar 24, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 9- Convex Optimization Problems\n\n\n\n\n\nClick here to read about Week 9.\n\n\n\n\n\nMar 24, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 8- Convex Functions\n\n\n\n\n\nClick here to read about Week 8.\n\n\n\n\n\nMar 18, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 8: Constructing Convex Functions\n\n\n\n\n\nClick here to read more about Meetup 8 and view/download the lecture slides.\n\n\n\n\n\nMar 18, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 7: Introduction to Convex Sets\n\n\n\n\n\nClick here to read more about Meetup 7 and view/download the lecture slides.\n\n\n\n\n\nMar 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 7- Convex Functions\n\n\n\n\n\nClick here to read about Week 7.\n\n\n\n\n\nMar 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 6: Introduction to Convex Sets\n\n\n\n\n\nClick here to read more about Meetup 6 and view/download the lecture slides.\n\n\n\n\n\nMar 4, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 6- Constructing Convex Sets\n\n\n\n\n\nClick here to read about Week 6.\n\n\n\n\n\nMar 3, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 5-Convex Sets\n\n\n\n\n\nClick here to read about Week 5.\n\n\n\n\n\nFeb 24, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 5: Introduction to Convex Sets\n\n\n\n\n\nClick here to read more about Meetup 5 and view/download the lecture slides.\n\n\n\n\n\nFeb 17, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 4: Least Squares Data Fitting\n\n\n\n\n\nClick here to read more about Meetup 4 and view/download the lecture slides.\n\n\n\n\n\nFeb 17, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 4- Constrained Least Squares\n\n\n\n\n\nClick here to read about Week 3.\n\n\n\n\n\nFeb 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Vignette- Linear Algebra in R\n\n\n\n\n\nClick here for a video on basic linear algebra in R.\n\n\n\n\n\nFeb 14, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 3: Least Squares Data Fitting\n\n\n\n\n\nClick here to read more about Meetup 3 and view/download the lecture slides.\n\n\n\n\n\nFeb 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 3- Data Fitting\n\n\n\n\n\nClick here to read about Week 3.\n\n\n\n\n\nFeb 9, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Vignette- Writing Math in Markdown\n\n\n\n\n\nClick here for a 20 minute video on writing math in markdown using Latex.\n\n\n\n\n\nFeb 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Vignette- Linear Algebra in Numpy\n\n\n\n\n\nClick here for a video on basic linear algebra in Numpy.\n\n\n\n\n\nFeb 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 2: Least Squares Optimization\n\n\n\n\n\nClick here to read more about Meetup 2 and view/download the lecture slides.\n\n\n\n\n\nFeb 3, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 2- Least Squares\n\n\n\n\n\nClick here to read about Week 2.\n\n\n\n\n\nFeb 2, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 1: Introduction to Optimization\n\n\n\n\n\nClick here to read more about Meetup 1 and view/download the lecture slides.\n\n\n\n\n\nJan 27, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome to DATA 609\n\n\n\n\n\nImportant information on how to get started with this course. Click this post now for instructions on getting started.\n\n\n\n\n\nJan 26, 2025\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Announcements"
+    ]
+  },
+  {
+    "objectID": "assignments/labs.html",
+    "href": "assignments/labs.html",
+    "title": "Labs",
+    "section": "",
+    "text": "The homework assignments in this course are lab assignments where you will solve the problem using a combination of mathematics and computer code.\nPlease submit a and either a quarto file or jupyter notebook or other code that generates your homework. Labs should be submitted on Blackboard.\n\n\nGradient Descent and Least Squares (Download)\n\n\nLeast Squares Applications (Download)\n\n\nConvex Sets (PDF) (Quarto Download)\n\n\nConvex Functions (PDF) (Quarto Download)\n\n\nConvex Optimizations Problems (Download)\n\n\nApplications to Statistics and Machine Learning (Download)\n\n\nNonconvex Optimization and Stochastic Gradient Descent (Download)\n\n\nTraining Deep Neural Networks (Download)",
+    "crumbs": [
+      "Assignments",
+      "Labs"
+    ]
+  },
+  {
+    "objectID": "assignments/labs/Lab6.html",
+    "href": "assignments/labs/Lab6.html",
+    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
+    "section": "",
+    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
+  },
+  {
+    "objectID": "assignments/labs/Lab6.html#instructions",
+    "href": "assignments/labs/Lab6.html#instructions",
+    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
+    "section": "",
+    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
+  },
+  {
+    "objectID": "assignments/labs/Lab6.html#problem-1",
+    "href": "assignments/labs/Lab6.html#problem-1",
+    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
+    "section": "Problem 1:",
+    "text": "Problem 1:\nExercise 7.4 in Convex Optimization Extended Exercises"
+  },
+  {
+    "objectID": "assignments/labs/Lab6.html#problem-2",
+    "href": "assignments/labs/Lab6.html#problem-2",
+    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
+    "section": "Problem 2:",
+    "text": "Problem 2:\nExercise 7.6 in Convex Optimization Extended Exercises"
+  },
+  {
+    "objectID": "assignments/labs/Lab6.html#problem-3",
+    "href": "assignments/labs/Lab6.html#problem-3",
+    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
+    "section": "Problem 3:",
+    "text": "Problem 3:\nExercise 7.14 in Convex Optimization"
+  },
+  {
+    "objectID": "assignments/labs/Lab6.html#problem-4",
+    "href": "assignments/labs/Lab6.html#problem-4",
+    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
+    "section": "Problem 4:",
+    "text": "Problem 4:\nExercise 7.48 in Convex Optimization Extended Exercises"
+  },
+  {
+    "objectID": "assignments/labs/Lab6.html#problem-5",
+    "href": "assignments/labs/Lab6.html#problem-5",
+    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
+    "section": "Problem 5:",
+    "text": "Problem 5:\nExercise 8.6 in Convex Optimization Extended Exercises"
+  },
+  {
+    "objectID": "assignments/labs/tbd.html",
+    "href": "assignments/labs/tbd.html",
+    "title": "Lab TBD",
+    "section": "",
+    "text": "Check back later\nThis assignment is not available to view yet. Please check back closer to the assignment due date/week of the module this assignment is based on."
+  },
+  {
     "objectID": "meetups/Meetup-1/meetup-1.html#what-is-optimization",
     "href": "meetups/Meetup-1/meetup-1.html#what-is-optimization",
     "title": "Meetup 1: Introduction to Optimization",
@@ -1256,245 +1754,6 @@
     "title": "Meetup 1: Introduction to Optimization",
     "section": "Thanks!",
     "text": "Thanks!\n\n\n\n\nDATA 609"
-  },
-  {
-    "objectID": "assignments/labs/tbd.html",
-    "href": "assignments/labs/tbd.html",
-    "title": "Lab TBD",
-    "section": "",
-    "text": "Check back later\nThis assignment is not available to view yet. Please check back closer to the assignment due date/week of the module this assignment is based on."
-  },
-  {
-    "objectID": "assignments/labs/Lab6.html",
-    "href": "assignments/labs/Lab6.html",
-    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
-    "section": "",
-    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
-  },
-  {
-    "objectID": "assignments/labs/Lab6.html#instructions",
-    "href": "assignments/labs/Lab6.html#instructions",
-    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
-    "section": "",
-    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
-  },
-  {
-    "objectID": "assignments/labs/Lab6.html#problem-1",
-    "href": "assignments/labs/Lab6.html#problem-1",
-    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
-    "section": "Problem 1:",
-    "text": "Problem 1:\nExercise 7.4 in Convex Optimization Extended Exercises"
-  },
-  {
-    "objectID": "assignments/labs/Lab6.html#problem-2",
-    "href": "assignments/labs/Lab6.html#problem-2",
-    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
-    "section": "Problem 2:",
-    "text": "Problem 2:\nExercise 7.6 in Convex Optimization Extended Exercises"
-  },
-  {
-    "objectID": "assignments/labs/Lab6.html#problem-3",
-    "href": "assignments/labs/Lab6.html#problem-3",
-    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
-    "section": "Problem 3:",
-    "text": "Problem 3:\nExercise 7.14 in Convex Optimization"
-  },
-  {
-    "objectID": "assignments/labs/Lab6.html#problem-4",
-    "href": "assignments/labs/Lab6.html#problem-4",
-    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
-    "section": "Problem 4:",
-    "text": "Problem 4:\nExercise 7.48 in Convex Optimization Extended Exercises"
-  },
-  {
-    "objectID": "assignments/labs/Lab6.html#problem-5",
-    "href": "assignments/labs/Lab6.html#problem-5",
-    "title": "Homework 5: Disciplined Convex Programming and Data Fitting",
-    "section": "Problem 5:",
-    "text": "Problem 5:\nExercise 8.6 in Convex Optimization Extended Exercises"
-  },
-  {
-    "objectID": "assignments/labs.html",
-    "href": "assignments/labs.html",
-    "title": "Labs",
-    "section": "",
-    "text": "The homework assignments in this course are lab assignments where you will solve the problem using a combination of mathematics and computer code.\nPlease submit a and either a quarto file or jupyter notebook or other code that generates your homework. Labs should be submitted on Blackboard.\n\n\nGradient Descent and Least Squares (Download)\n\n\nLeast Squares Applications (Download)\n\n\nConvex Sets (PDF) (Quarto Download)\n\n\nConvex Functions (PDF) (Quarto Download)\n\n\nConvex Optimizations Problems (Download)\n\n\nApplications to Statistics and Machine Learning (Download)\n\n\nNonconvex Optimization and Stochastic Gradient Descent (Download)\n\n\nTraining Deep Neural Networks (Download)",
-    "crumbs": [
-      "Assignments",
-      "Labs"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Announcements",
-    "section": "",
-    "text": "Be sure to check this page regularly for updates. In addition to periodic updates about the course, slides and recordings of the weekly meetups will be posted here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 9: Convex Optimization Problems\n\n\n\n\n\nClick here to read more about Meetup 9 and view/download the lecture slides.\n\n\n\n\n\nMar 24, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 9- Convex Optimization Problems\n\n\n\n\n\nClick here to read about Week 9.\n\n\n\n\n\nMar 24, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 8- Convex Functions\n\n\n\n\n\nClick here to read about Week 8.\n\n\n\n\n\nMar 18, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 8: Constructing Convex Functions\n\n\n\n\n\nClick here to read more about Meetup 8 and view/download the lecture slides.\n\n\n\n\n\nMar 18, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 7: Introduction to Convex Sets\n\n\n\n\n\nClick here to read more about Meetup 7 and view/download the lecture slides.\n\n\n\n\n\nMar 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 7- Convex Functions\n\n\n\n\n\nClick here to read about Week 7.\n\n\n\n\n\nMar 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 6: Introduction to Convex Sets\n\n\n\n\n\nClick here to read more about Meetup 6 and view/download the lecture slides.\n\n\n\n\n\nMar 4, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 6- Constructing Convex Sets\n\n\n\n\n\nClick here to read about Week 6.\n\n\n\n\n\nMar 3, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 5-Convex Sets\n\n\n\n\n\nClick here to read about Week 5.\n\n\n\n\n\nFeb 24, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 5: Introduction to Convex Sets\n\n\n\n\n\nClick here to read more about Meetup 5 and view/download the lecture slides.\n\n\n\n\n\nFeb 17, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 4: Least Squares Data Fitting\n\n\n\n\n\nClick here to read more about Meetup 4 and view/download the lecture slides.\n\n\n\n\n\nFeb 17, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 4- Constrained Least Squares\n\n\n\n\n\nClick here to read about Week 3.\n\n\n\n\n\nFeb 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Vignette- Linear Algebra in R\n\n\n\n\n\nClick here for a video on basic linear algebra in R.\n\n\n\n\n\nFeb 14, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 3: Least Squares Data Fitting\n\n\n\n\n\nClick here to read more about Meetup 3 and view/download the lecture slides.\n\n\n\n\n\nFeb 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 3- Data Fitting\n\n\n\n\n\nClick here to read about Week 3.\n\n\n\n\n\nFeb 9, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Vignette- Writing Math in Markdown\n\n\n\n\n\nClick here for a 20 minute video on writing math in markdown using Latex.\n\n\n\n\n\nFeb 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Vignette- Linear Algebra in Numpy\n\n\n\n\n\nClick here for a video on basic linear algebra in Numpy.\n\n\n\n\n\nFeb 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 2: Least Squares Optimization\n\n\n\n\n\nClick here to read more about Meetup 2 and view/download the lecture slides.\n\n\n\n\n\nFeb 3, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 2- Least Squares\n\n\n\n\n\nClick here to read about Week 2.\n\n\n\n\n\nFeb 2, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 1: Introduction to Optimization\n\n\n\n\n\nClick here to read more about Meetup 1 and view/download the lecture slides.\n\n\n\n\n\nJan 27, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome to DATA 609\n\n\n\n\n\nImportant information on how to get started with this course. Click this post now for instructions on getting started.\n\n\n\n\n\nJan 26, 2025\n\n\n\n\n\n\nNo matching items",
-    "crumbs": [
-      "Announcements"
-    ]
-  },
-  {
-    "objectID": "assignments/project.html",
-    "href": "assignments/project.html",
-    "title": "Project",
-    "section": "",
-    "text": "The idea of this project is for you to find data and do something interesting with it that relates to the skills you have developed in this course.\nThe project is intentionally open ended- this is an opportunity for you to explore your interests, through using techniques or technologies that branch off those that were introduced in this class, datasets related to problems you face in your career or that you are curious about, or both.\nMy expectation for your project is that it has the length and sophistication of a complete homework assignment, but will all the work focused on the topic. It should include an introduction to contextualize the topic, but otherwise you can structure it how you like.\nThe output of your project should software that allows me to reproduce your work and a research report which describes what you did with the data and your findings, which could be contained within a github repository.\n\n\nThe first step of your project is to submit an initial proposal, which will help to ensure that your project is both worthwhile and feasible in the time frame of the last half of the semester. Your proposal should describe the area that you are interested in, the datasets you are going to use/mathematical problems you want to solve, and the link to the topics of this course. The proposal length should be around one page (excluding figures and references),\nThe proposal is preliminary, and you can include additional data or a different analysis as needs require.\n\n\n\nWhen writing proposals, I’ve found the following set of considerations, called “Heilmeier's Questions”, to be helpful to consider. Although this is just a very short project, you might find them helpful as well, and useful for formulating future projects and proposals that you might have to complete. These questions were developed by Dr. George Heilmeier, who was the director of DARPA from 1975-1977. Heilmeier said that every proposal to DARPA needed to answer these questions clearly and completely in order to receive funding:\n\nWhat are you trying to do? Articulate your objectives using absolutely no jargon. What is the problem? Why is it hard?\nHow is it done today, and what are the limits of current practice?\nWhat is new in your approach, and why do you think it will be successful?\nWho cares?\nIf you’re successful, what difference will it make? What applications are enabled as a result?\nWhat are the risks?\nHow long will it take?\nWhat are the midterm and final “exams” to check for success? How will progress be measured?",
-    "crumbs": [
-      "Assignments",
-      "Project"
-    ]
-  },
-  {
-    "objectID": "assignments/project.html#heilmeiers-questions",
-    "href": "assignments/project.html#heilmeiers-questions",
-    "title": "Project",
-    "section": "",
-    "text": "When writing proposals, I’ve found the following set of considerations, called “Heilmeier's Questions”, to be helpful to consider. Although this is just a very short project, you might find them helpful as well, and useful for formulating future projects and proposals that you might have to complete. These questions were developed by Dr. George Heilmeier, who was the director of DARPA from 1975-1977. Heilmeier said that every proposal to DARPA needed to answer these questions clearly and completely in order to receive funding:\n\nWhat are you trying to do? Articulate your objectives using absolutely no jargon. What is the problem? Why is it hard?\nHow is it done today, and what are the limits of current practice?\nWhat is new in your approach, and why do you think it will be successful?\nWho cares?\nIf you’re successful, what difference will it make? What applications are enabled as a result?\nWhat are the risks?\nHow long will it take?\nWhat are the midterm and final “exams” to check for success? How will progress be measured?",
-    "crumbs": [
-      "Assignments",
-      "Project"
-    ]
-  },
-  {
-    "objectID": "assignments/labs/Lab2.html",
-    "href": "assignments/labs/Lab2.html",
-    "title": "Homework 2: Applications of Least Squares",
-    "section": "",
-    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
-  },
-  {
-    "objectID": "assignments/labs/Lab2.html#instructions",
-    "href": "assignments/labs/Lab2.html#instructions",
-    "title": "Homework 2: Applications of Least Squares",
-    "section": "",
-    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
-  },
-  {
-    "objectID": "assignments/labs/Lab2.html#problem-1-online-updating-for-least-squares-and-autoregressive-time-series-models",
-    "href": "assignments/labs/Lab2.html#problem-1-online-updating-for-least-squares-and-autoregressive-time-series-models",
-    "title": "Homework 2: Applications of Least Squares",
-    "section": "Problem 1: Online Updating for Least Squares and Autoregressive Time Series Models",
-    "text": "Problem 1: Online Updating for Least Squares and Autoregressive Time Series Models\nMany applications of least squares (and other statistical methods) involve , in which data is collected over a time period and the statistical model is updated as new data arrives. If the quantity of data arriving is very large, it may be inefficient or even impossible to refit the entire model on the entire dataset. Instead, we use techniques (often referred to as which take the current model as a starting point and update them to incorporate the new data.\nThe structure of least squares problems makes them amenable to online updating (sometimes this is called “recursive” least squares). The structure of the problem is as follows, at time \\(t\\) we receive a vector of observations \\(\\mathbf{x}_t\\) and an observation of our target variable \\(y_t\\).\nThe full set of all observations and target variable data that we have received up to time \\(t\\) is contained in the following matrix and vector:\n\\[\nX_{(t)} = \\begin{bmatrix} \\cdots\\, \\mathbf{x}_1^T\\, \\cdots \\\\\n\\cdots\\, \\mathbf{x}_2^T\\, \\cdots \\\\ \\vdots \\\\ \\cdots\\, \\mathbf{x}_t^T\\, \\cdots \\end{bmatrix},\\quad\n\\mathbf{y}_{(t)} = \\begin{bmatrix} y_1 \\\\ y_2 \\\\ \\vdots \\\\ y_t \\end{bmatrix}\n\\]\nwhich says that row \\(j\\) of the matrix \\(X_{(t)}\\) is the \\(j\\)th observation \\(\\mathbf{x}_j^T\\), and the \\(j\\)th entry of \\(\\mathbf{y}_{(t)}\\) is \\(b_j\\).\nHere we assume that the vectors \\(\\mathbf{x}\\) each contain \\(n\\) observations, so that \\(X_{(t)}\\) is a \\(t\\times n\\) matrix and the vector \\(\\mathbf{y}_{(t)}\\) is a \\(t\\)-vector.\nAs long as \\(t&gt;n\\), i.e. the number of time observations is greater than the number of features/data points in each observation, we can fit a linear model predicting the target as a function of the features \\(\\mathbf{x}\\) by solving the following system of equations:\n\\[\n(X^T_{(t)}X_{(t)})\\mathbf{x}_{(t)} = X_{(t)}^T\\mathbf{y}_{(t)}\n\\]\nAs the length of the time series increases, the computational difficulty of solving this problem also increases. However, it is possible to re-use work done on the previous time step to avoid solving the full system at each step.\nThis algorithm is based on the fact that the Gram Matrix \\(X^T_{(t+1)}X_{(t+1)}\\) can be calculated from the Gram matrix \\(X^T_{(t)}X_{(t)}\\) from the previous time step. \\[\nX^T_{(t+1)}X_{(t+1)} = X^T_{(t)}X_{(t)} + \\mathbf{x}_{t+1}\\mathbf{x}_{t+1}^T\n\\] Similarly, the product \\(X^T_{(t+1)} \\mathbf{y}_{(t+1)}\\) can also be updated from the value on the previous time step: \\[\nX^T_{(t+1)}\\mathbf{y}_{(t+1)} = X^T_{(t)}\\mathbf{y}_{(t)} + y_{t+1}\\mathbf{x}_{t+1}\n\\]\nWe can write an efficient algorithm to compute the updated least squares solution as follows:\n\nStep 1: Pick an initial time \\(t\\) such that \\(X_{t}\\) is square or tall so that the least squares problem can be solved (i.e. wait for enough data to have built up before your start) and then calculate the Gram matrix and the product \\(X^T_{t} \\mathbf{y}_t\\) \\[\nG_{(t)} = X^T_{(t)}X_{(t)}, \\quad \\mathbf{h}_{(t)} = X^T_{t}\\mathbf{y}_t\n\\]\nStep 2: Find the least squares solution at time \\(t\\) by solving the linear system: \\[\nG_{(t)}\\mathbf{\\theta}_{(t)} = \\mathbf{h}_{(t+1)}\n\\]\nStep 3: When the next data points \\(\\mathbf{x}_{t+1}\\) and \\(y_{t+1}\\), update \\(G_{(t+1)}\\) and \\(\\mathbf{h}_{(t+1)}\\):\n\n\\[ G_{(t+1)} = G_{(t)} + \\mathbf{x}_{t+1}\\mathbf{x}^T_{t+1},\\quad\n\\mathbf{h}_{(t+1)} = \\mathbf{h}_{(t)} + y_{t+1}\\mathbf{x}_{t+1}\n\\] Then you can repeat Step 2 to find \\(\\mathbf{theta}_{t+1}\\). This algorithm can be improved upon slightly using the Matrix Inversion Lemma/Woodbury Formula, which could be a topic for a project (see note at the end which mentions Kalman filters).\n\nYou are going to use this algorithm to make a linear, autoregressive model that predicts total day-ahead citibike trips from the daily high temperature and the number of daily citibike trips taken each of the past 7 days. The data is contained in the file daily_citibike_trips.csv.\n\nSpecifically, for each time point \\(t&gt;7\\) , fit the following model as a least squares estimation problem: \\[\nN_{trips,\\tau} = \\sum_{i=1}^7 \\theta_i N_{trips,\\tau-i} + \\theta_{i+1} T,\n\\] Here, each \\(N_{trips,\\tau}\\) stands for the number of citibike trips on the \\(t\\)th day of the time series, \\(T\\) stands for the forecast high temperature in New York City that day, and the coefficients \\(\\theta_i\\) are the decision variables.\nFind the coefficients \\(\\theta_{i,t}\\) that minimize the mean square errors on all the observed citibike trips prior to time \\(t\\). Use the recursive least squares optimization outlined in the preamble to this problem to calculate the coefficients for each time point, and plot how they and the \\(R^2\\) of the model change over time.\nWhat patterns do you notice in how the regression coefficients and \\(R^2\\) change over time?\nTip: Be very cautious when coding about the dimensionality of matrices and arrays. In python, x @ x.T will be an 8x8 matrix if a.shape = (8,1). However, by default x.shape = (8,), indicating that a is not being treated as either a row or column vector. For this problem it is important that the vectors are either row or column vectors, and not arrays without such an orientation. In python, you can use numpy.reshape to adjust.\n\nWe have included temperature as a variable because it probably influences the decision to ride a citibike. However, the relationship could be nonlinear, as both extreme high and low temperatures make bike riding less comfortable. With this idea in mind, create a new feature by choosing a nonlinear function of the temperature \\(T\\) that represents the potential for both high and low values of \\(T\\) to the same impact on predicted ridership. Use least squares optimization to fit an autoregressive time series model, replacing \\(T\\) with the value of your new feature \\(f(T)\\) in the time series. How does the temperature dependence coefficient differ between this model and the one you fit in (a)? Does the accuracy of the model improve or get worse using the new feature?"
-  },
-  {
-    "objectID": "assignments/labs/Lab2.html#problem-2-weighted-least-squares",
-    "href": "assignments/labs/Lab2.html#problem-2-weighted-least-squares",
-    "title": "Homework 2: Applications of Least Squares",
-    "section": "Problem 2: Weighted Least Squares",
-    "text": "Problem 2: Weighted Least Squares\nThe file social-mobility.csv contains data on the fraction of individuals born in the years 1980-1982 to parents in the bottom 20% of the income distribution who reach the top 20% of the income distribution by the time they turn 30 in a large number of municipalities throughout the United States. The dataset also contains additional variables that describe other socio-economic differences between the cities in the dataset.\n\nMake a scatter-plot of mobility versus population (use a log-scale for population). What do you notice about the variance of social mobility as a function of population? This is a common feature of nearly every dataset containing geographic regions with widely different populations.\nAssume that the number of children born in families making below the 20th percentile of the income distribution in each city is linearly proportional to the city population. Write down a formula for how the variance of each measurement of the social mobility should depend on the measured social mobility and the population. Hint: start with either the formula for the variance of binomial counts or look up the variance of a proportion derived from a binomial distribution. Don’t worry about constant factors when deriving this formula.\nUse weighted least squares to calculate an estimate of how social mobility depends on commute time and student-teacher ratio, using weights calculated based on the variance estimate derived in (b). Compare the coefficients to those derived from ordinary least squares with no weights."
-  },
-  {
-    "objectID": "assignments/labs/Lab2.html#problem-3-markowitz-portfolio-optimization",
-    "href": "assignments/labs/Lab2.html#problem-3-markowitz-portfolio-optimization",
-    "title": "Homework 2: Applications of Least Squares",
-    "section": "Problem 3: Markowitz Portfolio Optimization",
-    "text": "Problem 3: Markowitz Portfolio Optimization\nIn this problem you will use Markowitz Portfolio Optimization to construct a set of portfolios that aim to achieve target expected rates of return while minimizing risk. The file stock_returns.csv contains information on daily asset returns from 2020-2024 for a group of assets, consisting mostly of large-cap stocks but also a handful of exchange traded funds that correspond to US Treasury Bonds and Notes with varying maturities.\nYou will divide the data into two time periods, a training period (2020-2022) and a testing period (2022-2024). The data in the stock_returns.csv is stored in a long format, with the following variables:\n\nCompany - The ticker symbol that identifies the stock\ndate - The date to which the data corresponds\nadjusted- the closing price of the stock, adjusted for special events like dividends and stock splits\nreturn - the ratio of the current adjusted close to the adjusted close on the previous trading day\nlog_return- the natural logarithm of the return\n\n\nConstruct a vector (we call it \\(\\mu\\)) containing the annualized rate of return over the training period (for the \\(i\\)th stock, you can use the formula: \\(\\mu_i = \\exp\\left(0.5\\sum_{t} \\mathrm{log\\_return}_i(t)\\right)\\)), or the square root of the total return over the first two years of data, and daily return covariance \\(\\Gamma\\).\n\nHint: Possible workflow if working in python: convert your data to a wide format using pandas, extract the values into a numpy ndarray, and then use the function np.cov.\nThen solve the following constrained least squares problem to calculate optimal portfolios achieving a fixed rate of return with minimum variance:\n\\[\n\\begin{aligned}\n    \\min_{w} \\mathbf{x}^T\\Gamma \\mathbf{x}, \\\\\n    \\mathbf{w}^T\\mathbf{\\mu} = r, \\\\\n    \\sum_{i} w_i = 1\n\\end{aligned}\n\\] Here \\(\\mathbf{w}\\) is a vector containing the investment allocations into different assets, and \\(r\\) is the target rate of return.\nCalculate optimal portfolios based on the 2020-2022 data for \\(r=1.05\\), \\(r=1.10\\), and \\(r=1.20\\).\n\nPlot the cumulative value of each portfolio over time, assuming that an initial investment is made at the start of the period and that there is no rebalancing of the portfolio, i.e. \\(r_{T} = \\sum_{i=1}^n w_i\\Pi_{t=1}^T r_{it}\\), where \\(r_{it}\\) is the return of asset \\(i\\) on trading day \\(t\\), (hint: np.cumprod allows you to efficiently calculate this quantity). Make the plot for both the training and test sets of returns.\n\nFor each of the 3 portfolios also report:\n\nThe annualized return on the training and test sets;\nThe risk on the training and test sets, defined as the realized variance of the daily return;\nThe asset with the maximum allocation weight, and its weight;\nThe initial leverage, defined as \\(\\sum_{i=1}^n |w_i|\\). This number is always at least one, and it is exactly one only if the portfolio has no short positions.\n\nComment briefly on your observations about the different portfolios and the difference between their training and testing performance.\n\nIt is well known that optimal portfolios constructed using the Markowitz procedure perform much more poorly out of sample compared to in sample. This is due to a variety of reasons, one of which is that the procedure assumes that future returns are equal to past returns, another that the correlation structure of the market might change over time, and finally, when there are many assets there is the potential for overfitting. Repeat the previous problem but introduce a ridge regression/\\(l_2\\) norm penalty term to the objective function, with a hyperparameter \\(\\lambda\\) governing the size of the penalty term.\n\nSpecifically, you will select 10 positive values of \\(\\lambda\\) on a log scale between \\(1e-1\\) and \\(10\\) and for each value of \\(\\lambda\\) solve the following penalized regression problem:\n\\[\n\\begin{aligned}\n    \\min_{w} w^T(\\Gamma+\\lambda I) w ,\\\\\n    w^T\\mu = r,\\\\\n    \\sum_{i=1}^n w_i = 1\n\\end{aligned}\n\\]\nfor just the single value of \\(r=20\\%\\). Then calculate the performance of each of these regularized Markowitz strategies on both the training and test datasets and plot the the return of the portfolios over both the training and testing period.\nFor each portfolio, also report:\n\nThe annualized return on the training and test sets;\nThe risk on the training and test sets;\nThe maximum allocation weight and the asset with maximum allocation;\nThe initial leverage\n\nComment on how the different values of \\(\\lambda\\) changed the optimal portfolios and the difference between in-sample and out-of-sample return and variance."
-  },
-  {
-    "objectID": "assignments/labs/Lab2.html#potential-projects-based-on-this-homework",
-    "href": "assignments/labs/Lab2.html#potential-projects-based-on-this-homework",
-    "title": "Homework 2: Applications of Least Squares",
-    "section": "Potential Projects Based on this Homework:",
-    "text": "Potential Projects Based on this Homework:\nRecursive least squares is a gateway to several important techniques that would lead to good projects. The Kalman Filter or Bayes Filter is an algorithm that recursively estimates a statistical model while allowing the underlying coefficients (or state) of that model to undergo dynamical evolution (as a simple example, think of correcting noisy measurements of the GPS location of a drone using Newtownian physics). These are some of the most useful prediction algorithms and can be applied to many areas, including econometrics, web traffic prediction, and vehicle location. For a more math related project, studying the accuracy of the Woodbury formula could be interesting."
-  },
-  {
-    "objectID": "assignments/labs/Lab1.html",
-    "href": "assignments/labs/Lab1.html",
-    "title": "Homework 1: Introduction to Optimization and Least Squares",
-    "section": "",
-    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
-  },
-  {
-    "objectID": "assignments/labs/Lab1.html#instructions",
-    "href": "assignments/labs/Lab1.html#instructions",
-    "title": "Homework 1: Introduction to Optimization and Least Squares",
-    "section": "",
-    "text": "Please submit a .qmd file along with a rendered pdf to the Brightspace page for this assignment. You may use whatever language you like within your qmd file, I recommend python, julia, or R."
-  },
-  {
-    "objectID": "assignments/labs/Lab1.html#problem-1-gradient-descent",
-    "href": "assignments/labs/Lab1.html#problem-1-gradient-descent",
-    "title": "Homework 1: Introduction to Optimization and Least Squares",
-    "section": "Problem 1: Gradient Descent",
-    "text": "Problem 1: Gradient Descent\n\nConsider the mathematical function defined on \\(f: \\mathbb{R}^2\\,\\to\\, \\mathbb{R}\\):\n\n\\[\nf(x,y) = (x-1)^2 + (y+2)^2,\n\\]\nFind the single critical point of this function and show that it is a local minimum (in this case, this will also be a global minimum).\n\nNow consider a new objective function that depends on a parameter \\(b\\): \\[\nf(x,y) = x^2 + by^2\n\\] Here we will look at two different values of \\(b\\), \\(b=3\\) and \\(b=10\\). The global minimum of this function occurs at the point \\(x^* = 0\\), \\(y^*=0\\) no matter what the value of \\(b\\). Suppose that we didn’t know this and wanted to find the minimum of this function using gradient descent instead of direct calculation.\n\n\nFirst write code to perform the gradient descent algorithm, that is perform the iteration: \\[\n\\mathbf{v}_{n+1} = \\mathbf{v}_n - k \\nabla f(\\mathbf{v}_n),\n\\]\n\nwhere the vector \\(\\mathbf{v} = \\begin{bmatrix} x & y\\end{bmatrix}^T\\) and \\(k\\) is the learning rate.\n\nThen test the performance of your algorithm as a function of the learning rates \\(k\\) by performing 100 iterations of the algorithm for 100 values of \\(k\\) equally spaced between \\(k=0.01\\) and \\(k=0.3\\). Start with an initial guess of \\(\\mathbf{v}_0 = \\begin{bmatrix} b & 1\\end{bmatrix}^T\\). Do this for \\(b=3\\) and \\(b=10\\). Make separate plots for \\(b=3\\) and \\(b=10\\) of the log base 10 of the error (in this case it is \\(\\sqrt{x_{100}^2+y_{100}^2}\\)) for the final value of the iteration versus the value of \\(k\\). How does learning rate relate to the final value of the error? For which value of \\(b\\) does the algorithm have the ability to converge fastest (have the lowest value of the error at the end)?\n\nNote: For some combinations of \\(k\\) and \\(b\\), the algorithm won’t converge to the right answer, i.e. the error will grow with time. To make your plot easier to read, don’t plot the error for iterations that didn’t converge.\n\nAs \\(k\\) increases, for one or both values of \\(b\\), you will observe a point where the trend of final error versus learning rate reverses direction. Pick a value of \\(k\\) very close to the point where this occurs, and make a contour plot of the function \\(f\\) and the trajectory of the iterations for the gradient descent algorithm for that value of \\(k\\) superimposed over the contour plot. What do you observe?\n\nNote: The differences that you observe here are a special case of a more general phenomenon: the speed of convergence of gradient descent depends on something called the condition number of the Hessian matrix (the matrix of the 2nd order partial derivatives) of the target function. The condition number for a symmetric matrix is just the ratio of the largest to smallest eigenvalues, in this case the condition number is \\(b\\) (or 1/\\(b\\)). Gradient descent performs worse and worse the larger the condition number (and large condition numbers are problematic for a wide variety of other numerical methods)."
-  },
-  {
-    "objectID": "assignments/labs/Lab1.html#problem-2-solving-least-squares-problems",
-    "href": "assignments/labs/Lab1.html#problem-2-solving-least-squares-problems",
-    "title": "Homework 1: Introduction to Optimization and Least Squares",
-    "section": "Problem 2: Solving Least Squares Problems",
-    "text": "Problem 2: Solving Least Squares Problems\nGenerate a random \\(20\\times 10\\) matrix \\(A\\) and a random 20-vector \\(b\\) (use a Gaussian distribution). Then, solve the least squares problem: \\[\n\\min_{\\mathbf{x}\\in \\mathbb{R}^{10}} \\|A\\mathbf{x} - \\mathbf{b}\\|^2\n\\] in the following ways:\n\nMultiply \\(\\mathbf{b}\\) by the Morse-Penrose Pseudoinverse \\(A^+\\).\nUse built in functions to solve the least squares problem (i.e. in python numpy.lstsq, in R lm, and in Julia the backslash operator).\nUsing the \\(QR\\) factorization of \\(A\\). This factorization rewrites \\(A\\) as: \\[\nA = \\begin{bmatrix} Q & 0\\end{bmatrix} \\begin{bmatrix} R & 0 \\end{bmatrix}^T,\n\\] where \\(Q\\) is an orthonormal matrix and \\(R\\) is upper triangular. The least squares solution equals: \\[\n\\mathbf{x} = R^{-1}Q^T\\mathbf{b}\n\\]\nVerify that each of these solutions are nearly equal and that the residuals \\(A\\mathbf{x}-\\mathbf{b}\\) are orthogonal to the vector \\(A\\mathbf{x}\\)"
-  },
-  {
-    "objectID": "assignments/labs/Lab1.html#problem-3-iterative-solutions-to-least-squares",
-    "href": "assignments/labs/Lab1.html#problem-3-iterative-solutions-to-least-squares",
-    "title": "Homework 1: Introduction to Optimization and Least Squares",
-    "section": "Problem 3: Iterative Solutions to Least Squares",
-    "text": "Problem 3: Iterative Solutions to Least Squares\nAlthough the pseudoinverse provides an exact formula for the least squares solutions, there are some situations in which using the exact solution is computationally difficult, particularly when the matrix \\(A\\) and vector \\(\\mathbf{b}\\) have a large number of entries. In isn’t out of the ordinary for \\(A^TA\\) to be more than a terabyte, for example . In these cases it may be better to use an approximate solution instead of the exact formula. There are many different approximate methods for solving least squares problems, here we will use an iterative method developed by Richardson.\nThis method begins with an initial guess \\(\\mathbf{x}^{(0)} = 0\\) and calculates successive approximations as follows:\n\\[\n    \\mathbf{x}^{(k+1)} = \\mathbf{x}^{(k)} - \\mu A^T\\left(A\\mathbf{x}^{(k)}-\\mathbf{b}\\right)\n\\]\nHere \\(\\mu\\) is a positive paramter that has a similar interpretation to the learning rate for gradient descent. A choice that guarantees convergence is \\(\\mu \\leq \\frac{1}{\\|A\\|}\\). The iteration is terminated when the change in the residual \\(\\|A^T(Ax^{(k)} − b)\\|\\) after successive steps is below a user determined threshold, which indicates that the least squares optimality conditions are nearly satisfied.\n\nSuppose that \\(\\mathbf{x}\\) is a solution to the least squares problem: \\[\n\\mathbf{x} = A^+\\mathbf{b}\n\\]\n\nShow by substitution of the formula for the pseudoinverse that \\(\\mathbf{x}\\) is a fixed-point of the iteration scheme, i.e. that: \\[\n\\mathbf{x} = \\mathbf{x} - \\mu A^T\\left(A\\mathbf{x}-\\mathbf{b}\\right)\n\\]\n\nGenerate a random 20 × 10 matrix \\(A\\) and 20-vector \\(\\mathbf{b}\\), and compute the least squares solution \\(\\mathbf{x} = A^+\\mathbf{b}\\). Then run the Richardson algorithm with \\(\\mu = \\frac{1}{\\|A\\|^2}\\) for 500 iterations, and plot \\(\\|\\mathbf{x}^{(k)}-\\mathbf{x}\\|\\) to verify that \\(\\mathbf{x}^{(k)}\\) is converging to \\(\\mathbf{x}\\)"
-  },
-  {
-    "objectID": "images/IntroSlides.html#about-me",
-    "href": "images/IntroSlides.html#about-me",
-    "title": "Welcome to DATA 609",
-    "section": "About Me",
-    "text": "About Me\n\n\n\nDoctoral Lecturer at CUNY SPS\nPast research experience:\n\nPlasma physics and Applied Mathematics (NYU)\nEcology and Evolutionary Biology (Princeton)\n\nResearch using Bayesian methods and genomic data to improve global scale ocean and climate models\nTaught math at NYU"
-  },
-  {
-    "objectID": "images/IntroSlides.html#why-optimization",
-    "href": "images/IntroSlides.html#why-optimization",
-    "title": "Welcome to DATA 609",
-    "section": "Why Optimization?",
-    "text": "Why Optimization?\n\n\n\nOptimization theory underlies most methods in data science\nThree foci:\n\nLeast Squares Optimization\nConvex Optimization\nLocal Optimization and Stochastic Gradient Descent"
-  },
-  {
-    "objectID": "images/IntroSlides.html#course-websites",
-    "href": "images/IntroSlides.html#course-websites",
-    "title": "Welcome to DATA 609",
-    "section": "Course Website(s)",
-    "text": "Course Website(s)\n\n\n\nBrightspace to submit homework\nCourse Website"
-  },
-  {
-    "objectID": "images/IntroSlides.html#course-website-and-meetup",
-    "href": "images/IntroSlides.html#course-website-and-meetup",
-    "title": "Welcome to DATA 609",
-    "section": "Course Website and Meetup",
-    "text": "Course Website and Meetup\n\n\n\nBrightspace to submit homework\nCourse Website\nCourse Meetup: Monday 6:45-7:45PM\nZoom Link"
-  },
-  {
-    "objectID": "images/IntroSlides.html#slack-channel",
-    "href": "images/IntroSlides.html#slack-channel",
-    "title": "Welcome to DATA 609",
-    "section": "Slack Channel",
-    "text": "Slack Channel\n\n\n\nCourse slack channel for messaging and rapid communications\nhttps://data609-spring-2025.slack.com\nInvite Link"
-  },
-  {
-    "objectID": "images/IntroSlides.html#textbooks",
-    "href": "images/IntroSlides.html#textbooks",
-    "title": "Welcome to DATA 609",
-    "section": "Textbooks",
-    "text": "Textbooks\n\n\nTwo most important textbooks:\n\nIntroduction to Applied Linear Algebra\n\n\nAvailable free online VMLS\n\n\nConvex Optimization\n\n\nAvailable free online cvxbook"
-  },
-  {
-    "objectID": "images/IntroSlides.html#textbooks-1",
-    "href": "images/IntroSlides.html#textbooks-1",
-    "title": "Welcome to DATA 609",
-    "section": "Textbooks",
-    "text": "Textbooks\n\n\nTwo most important textbooks:\n\nIntroduction to Applied Linear Algebra\n\n\nAvailable free online VMLS\n\n\nConvex Optimization\n\n\nAvailable free online cvxbook"
-  },
-  {
-    "objectID": "images/IntroSlides.html#assignments",
-    "href": "images/IntroSlides.html#assignments",
-    "title": "Welcome to DATA 609",
-    "section": "Assignments",
-    "text": "Assignments\n\n\n\n8 Lab Assignments (80%)\nFinal Project (20%)"
-  },
-  {
-    "objectID": "images/IntroSlides.html#looking-forward-to-a-great-semester",
-    "href": "images/IntroSlides.html#looking-forward-to-a-great-semester",
-    "title": "Welcome to DATA 609",
-    "section": "Looking forward to a great semester!",
-    "text": "Looking forward to a great semester!\nThanks for watching"
   },
   {
     "objectID": "meetups/Meetup-8/meetup-8.html#week-summary",
@@ -1956,7 +2215,7 @@
     "href": "meetups/Meetup-2/meetup-2.html#condition-number-and-accuracy",
     "title": "Meetup 2: Least Squares",
     "section": "Condition Number and Accuracy",
-    "text": "Condition Number and Accuracy\n\nAccuracy of np.linalg.inv(A) @ b related to \\(\\frac{\\sigma_{max}}{\\sigma_{min}}\\)\nThis is called the “condition number” of the matrix \\(A\\)\n\n\n%timeit np.linalg.inv(A) @ b\n%timeit np.linalg.solve(A,b)\n\nx1 = np.linalg.inv(A) @ b\nx2 = np.linalg.solve(A,b)\n\nprint(\"Matrix Inverse Error: \",np.linalg.norm(A @ x1 - b))\nprint(\"Linear Solve Error: \",np.linalg.norm(A @ x2 - b))\n\n8.19 ms ± 1.86 ms per loop (mean ± std. dev. of 7 runs, 100 loops each)\n2.96 ms ± 48.8 μs per loop (mean ± std. dev. of 7 runs, 100 loops each)\nMatrix Inverse Error:  2.744255972280608e-07\nLinear Solve Error:  2.228597838529098e-15\n\n\n\n100 million times more accurate, 5 times faster"
+    "text": "Condition Number and Accuracy\n\nAccuracy of np.linalg.inv(A) @ b related to \\(\\frac{\\sigma_{max}}{\\sigma_{min}}\\)\nThis is called the “condition number” of the matrix \\(A\\)\n\n\n%timeit np.linalg.inv(A) @ b\n%timeit np.linalg.solve(A,b)\n\nx1 = np.linalg.inv(A) @ b\nx2 = np.linalg.solve(A,b)\n\nprint(\"Matrix Inverse Error: \",np.linalg.norm(A @ x1 - b))\nprint(\"Linear Solve Error: \",np.linalg.norm(A @ x2 - b))\n\n4.19 ms ± 491 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)\n1.83 ms ± 184 µs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)\nMatrix Inverse Error:  2.469010893479355e-07\nLinear Solve Error:  2.064791736240773e-15\n\n\n\n100 million times more accurate, 5 times faster"
   },
   {
     "objectID": "meetups/Meetup-2/meetup-2.html#issue-is-worse-for-ata",
@@ -2656,7 +2915,7 @@
     "href": "meetups/Meetup-6/meetup-6.html#intro-to-cvx-6",
     "title": "DATA 609 Meetup 6: Constructing Convex Sets",
     "section": "Intro to CVX",
-    "text": "Intro to CVX\n\nSolve using problem.solve()\n\n\nmargin = 0.2\n\nproblem = cvx.Problem(\n  cvx.Minimize(cvx.norm(x)), # Objective (this one is least squares)\n  [x - x_mean &gt;= -margin , # These are the constraints\n  x - x_mean &lt;= margin]\n)\n\n# Solve the problem\n\nsol = problem.solve()\nprint(sol) # objective\nx.value # optimum\n\n3.5645913334710424\n\n\narray([-2.61685282e+00,  2.75252306e-05,  2.28186289e+00,  3.38050546e-05,\n       -6.98759952e-01, -4.04016042e-01])"
+    "text": "Intro to CVX\n\nSolve using problem.solve()\n\n\nmargin = 0.2\n\nproblem = cvx.Problem(\n  cvx.Minimize(cvx.norm(x)), # Objective (this one is least squares)\n  [x - x_mean &gt;= -margin , # These are the constraints\n  x - x_mean &lt;= margin]\n)\n\n# Solve the problem\n\nsol = problem.solve()\nprint(sol) # objective\nx.value # optimum\n\n1.2279240342525501\n\n\narray([ 1.06203556e-01, -1.80135602e-01,  2.52509688e-07, -1.90288578e-01,\n       -1.19493082e+00,  6.21626904e-06])"
   },
   {
     "objectID": "meetups/Meetup-6/meetup-6.html#intro-to-cvx-7",
@@ -2670,7 +2929,7 @@
     "href": "meetups/Meetup-6/meetup-6.html#intro-to-cvx-8",
     "title": "DATA 609 Meetup 6: Constructing Convex Sets",
     "section": "Intro to CVX",
-    "text": "Intro to CVX\n\n# Solve the problem\n\nsol = problem.solve()\nprint(sol) # objective\nx.value # optimum\n\n2.6074007505613426\n\n\narray([-2.61685283e+00,  9.97636960e-06,  2.28186289e+00,  7.02495289e-06,\n       -6.98759952e-01, -4.04016041e-01])"
+    "text": "Intro to CVX\n\n# Solve the problem\n\nsol = problem.solve()\nprint(sol) # objective\nx.value # optimum\n\n1.1448465175977753\n\n\narray([ 1.06203556e-01, -1.80135603e-01, -7.04814312e-05, -1.90288578e-01,\n       -1.19493082e+00, -5.89381455e-05])"
   },
   {
     "objectID": "meetups/Meetup-6/meetup-6.html#thanks",
@@ -3011,7 +3270,7 @@
     "href": "modules/module10.html",
     "title": "Module 10 - Convex Problems in Data Fitting",
     "section": "",
-    "text": "Homework 5 is due this Sunday at midnight\n\n\n\nRegularization- lasso and Huber penalties\nFunction fitting, splines, and interpolation\n\n\n\n\nChapter 6 of Convex Optimization",
+    "text": "Homework 5 is due this Sunday at midnight\n\n\n\nRegularization- lasso and Huber penalties\nFunction fitting, interpolation, robust stochastic and worst case fitting.\n\n\n\n\nChapter 6 of Convex Optimization",
     "crumbs": [
       "Topics",
       "10 - Data Fitting"
@@ -3022,7 +3281,7 @@
     "href": "modules/module10.html#homework",
     "title": "Module 10 - Convex Problems in Data Fitting",
     "section": "",
-    "text": "Homework 5 is due this Sunday at midnight\n\n\n\nRegularization- lasso and Huber penalties\nFunction fitting, splines, and interpolation\n\n\n\n\nChapter 6 of Convex Optimization",
+    "text": "Homework 5 is due this Sunday at midnight\n\n\n\nRegularization- lasso and Huber penalties\nFunction fitting, interpolation, robust stochastic and worst case fitting.\n\n\n\n\nChapter 6 of Convex Optimization",
     "crumbs": [
       "Topics",
       "10 - Data Fitting"
@@ -3112,18 +3371,25 @@
     "text": "This week we will learn how to deal with linear equality constraints in least squares optimization problems. There will be a discussion of Lagrange multipliers, and application examples will include B-splines and portfolio optimization. Constraints are a critical part of both optimization problems and modeling in general.\nYour second homework assignment will be due Sunday February 23rd.\nHere are more details on what you need to do this week:\n\nGo through module 4 and complete the week 4 readings.\nAttend our second meetup on Monday at 6:45 p.m. ET on Zoom\nContinue working on Lab 2"
   },
   {
-    "objectID": "posts/2025-02-02-Week-2-Least-Squares.html",
-    "href": "posts/2025-02-02-Week-2-Least-Squares.html",
-    "title": "Week 2- Least Squares",
+    "objectID": "posts/2025-04-01-Meetup-10-Data-Fitting.html",
+    "href": "posts/2025-04-01-Meetup-10-Data-Fitting.html",
+    "title": "Meetup 10: Data Fitting",
     "section": "",
-    "text": "This week we will talk about the most basic and most important class of optimization problems, least squares optimization. Whenever you fit a linear regression, you are solving a least squares problems, and least squares methods have applications across all quantitative fields. Although least squares methods are simple, they should not be dismissed- the fact that we can solve them rapidly, reliably means that it is useful to know how to formulate them in applied situations and how to solve them.\nIn this week we will go over the basics and a few simple applications, while the two weeks after this will explore data fitting examples and how to handle more complicated cases.\nYour first homework assignment will be due next Sunday.\nHere are more details on what you need to do this week:\n\nGo through module 2 and complete the week 2 readings.\nAttend our second meetup on Monday at 6:45 p.m. ET on Zoom\nContinue working on Lab 1"
+    "text": "I have uploaded the slides and video for Meetup 10.\nWe discussed the meaning of different norms and penalty functions used in data fitting, talked about the trade-offs between different regularization schemes, and robust optimization in both the stochastic and worst case frameworks.\n\nClick here for slides\nClick here to watch the meetup video"
   },
   {
-    "objectID": "posts/2025-03-10-Week-7.html",
-    "href": "posts/2025-03-10-Week-7.html",
-    "title": "Week 7- Convex Functions",
+    "objectID": "posts/2025-02-24-Week-5-Convex-Sets.html",
+    "href": "posts/2025-02-24-Week-5-Convex-Sets.html",
+    "title": "Week 5-Convex Sets",
     "section": "",
-    "text": "During this week, we will begin learning about convex functions, which will be the objective functions for convex optimization problems. We will go over the definition of convexity and present a number of different examples of convex functions. We will discuss what convexity means and why it is such a crucial property for optimization theory. We will talk about Jensen’s inequality and discuss some applications to risk in uncertain situations.\nYour fourth homework assignment is available this Sunday at midnight.\nHere are more details on what you need to do this week:\n\nGo through module 7 and complete the week 7 readings.\nAttend our second meetup on Monday at 6:45 p.m. ET on Zoom\nBegin working on Lab 4"
+    "text": "During this week we will begin learning the tools we need to formulate and solve convex optimization problems. We will talk more about general optimization problems and look at convexity from the perspective of constraints. We will present the definition of a convex set and give several example, and discuss how these examples arise when formulating problems.\nYour third homework assignment has been posted and is going to be due two Sundays from now.\nHere are more details on what you need to do this week:\n\nGo through module 5 and complete the week 4 readings.\nAttend our second meetup on Monday at 6:45 p.m. ET on Zoom\nBegin working on Lab 3"
+  },
+  {
+    "objectID": "posts/2025-03-24-Meetup-9-Slides.html",
+    "href": "posts/2025-03-24-Meetup-9-Slides.html",
+    "title": "Meetup 9: Convex Optimization Problems",
+    "section": "",
+    "text": "I have uploaded the slides for Meetup 9.\nWe will discuss log-concave functions, a topic which was missed the past two weeks, and then discuss methods for transforming optimization problems, geometric programs, and multicriterion optimization.\n\nClick here for slides"
   },
   {
     "objectID": "posts/2025-02-10-Data-Fitting.html",
@@ -3180,7 +3446,7 @@
     "href": "course/schedule.html#meetup-link",
     "title": "DATA 609 Spring 2025",
     "section": "Meetup Link:",
-    "text": "Meetup Link:\nClick Here to Join the Meetups on Zoom\n\nCourse Schedule\n\n\nDate\nStart Time\nModule\nSlides\nVideo\n\n\n\n\nJan 27\n06:45PM\nIntroduction to Optimization Theory\nMeetup 1 Slides\nMeetup 1 Video\n\n\nFeb 3\n06:45PM\nLeast Squares Optimization\nMeetup 2 Slides\nMeetup 2 Video\n\n\nFeb 10\n06:45PM\nLeast Squares and Statistics\nMeetup 3 Slides\nMeetup 3 Video\n\n\nFeb 17\n06:45PM\nConstrained Least Squares and Applications\nMeetup 4 Slides\nMeetup 4 Video\n\n\nFeb 24\n06:45PM\nConvex Sets\nMeetup 5 Slides\nMeetup 5 Video\n\n\nMar 3\n06:45PM\nConvex Sets II\nMeetup 6 Slides\nMeetup 6 Video\n\n\nMar 10\n06:45PM\nConvex Functions\nMeetup 7 Slides\nMeetup 7 Video\n\n\nMar 17\n06:45PM\nConvex Functions II\nMeetup 8 Slides\nMeetup 8 Video\n\n\nMar 24\n06:45M\nConvex Optimization Problems\nMeetup 9 Slides\nMeetup 9 Video\n\n\nMar 31\n06:45PM\nData Fitting\n\n\n\n\nApr 7\n06:45PM\nApplications to Statistics and Machine Learning\n\n\n\n\nApr 14\n06:45PM\nDuality and Classifiers\n\n\n\n\nApr 21\n\nNo Meetup (Spring Break)\n\n\n\n\nApr 28\n06:45PM\nGradient Descent and Neural Networks\nLab 7\n\n\n\nMay 5\n06:45PM\nStochastic Gradient Descent\n\n\n\n\nMay 12\n06:45PM\nTraining Deep Neural Networks",
+    "text": "Meetup Link:\nClick Here to Join the Meetups on Zoom\n\nCourse Schedule\n\n\nDate\nStart Time\nModule\nSlides\nVideo\n\n\n\n\nJan 27\n06:45PM\nIntroduction to Optimization Theory\nMeetup 1 Slides\nMeetup 1 Video\n\n\nFeb 3\n06:45PM\nLeast Squares Optimization\nMeetup 2 Slides\nMeetup 2 Video\n\n\nFeb 10\n06:45PM\nLeast Squares and Statistics\nMeetup 3 Slides\nMeetup 3 Video\n\n\nFeb 17\n06:45PM\nConstrained Least Squares and Applications\nMeetup 4 Slides\nMeetup 4 Video\n\n\nFeb 24\n06:45PM\nConvex Sets\nMeetup 5 Slides\nMeetup 5 Video\n\n\nMar 3\n06:45PM\nConvex Sets II\nMeetup 6 Slides\nMeetup 6 Video\n\n\nMar 10\n06:45PM\nConvex Functions\nMeetup 7 Slides\nMeetup 7 Video\n\n\nMar 17\n06:45PM\nConvex Functions II\nMeetup 8 Slides\nMeetup 8 Video\n\n\nMar 24\n06:45M\nConvex Optimization Problems\nMeetup 9 Slides\nMeetup 9 Video\n\n\nMar 31\n06:45PM\nData Fitting\nMeetup 10 Slides\nMeetup 10 Video\n\n\nApr 7\n06:45PM\nApplications to Statistics and Machine Learning\n\n\n\n\nApr 14\n06:45PM\nDuality and Classifiers\n\n\n\n\nApr 21\n\nNo Meetup (Spring Break)\n\n\n\n\nApr 28\n06:45PM\nGradient Descent and Neural Networks\nLab 7\n\n\n\nMay 5\n06:45PM\nStochastic Gradient Descent\n\n\n\n\nMay 12\n06:45PM\nTraining Deep Neural Networks",
     "crumbs": [
       "Course information",
       "Schedule"
