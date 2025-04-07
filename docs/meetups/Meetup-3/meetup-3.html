@@ -426,7 +426,7 @@ George I. Hagstrom
 </section>
 <section id="case-study-homoscedasticity" class="slide level2">
 <h2>Case Study: Homoscedasticity</h2>
-<div id="449de103" class="cell" data-execution_count="1">
+<div id="6cc0568d" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -568,7 +568,7 @@ y_t = \theta_1 y_{t-1} + \theta_2 y_{t-2}+\cdots+\theta_n y_{t-n}
 <ul>
 <li>Hourly Central Park Temperature from Jan-March 2023</li>
 </ul>
-<div id="79de56fc" class="cell" data-execution_count="2">
+<div id="0f6e07a5" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -596,7 +596,7 @@ T_t = \sum_{i=1}^8 \theta_i T_{t-i}
 </section>
 <section id="setting-up-the-model" class="slide level2">
 <h2>Setting up the model</h2>
-<div id="383d1b21" class="cell" data-execution_count="3">
+<div id="d050f24d" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>A <span class="op">=</span> np.array([central_park[<span class="st">"temp"</span>].values[i:i<span class="op">+</span><span class="dv">8</span>].T </span>
 <span id="cb1-2"><a></a><span class="cf">for</span> i <span class="kw">in</span>  <span class="bu">range</span>(<span class="bu">len</span>(central_park)<span class="op">-</span><span class="dv">8</span>)])</span>
 <span id="cb1-3"><a></a>x <span class="op">=</span> central_park[<span class="st">"temp"</span>].values[<span class="dv">8</span>:]</span>
@@ -608,7 +608,7 @@ T_t = \sum_{i=1}^8 \theta_i T_{t-i}
 </section>
 <section id="predictions" class="slide level2">
 <h2>Predictions</h2>
-<div id="ea6a024f" class="cell" data-execution_count="4">
+<div id="2f1dc637" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>Text(0, 0.5, 'Temperature')</code></pre>
 </div>
@@ -653,7 +653,7 @@ y_i = \sum_{j=1}^n \theta_j x^{j-1}
 <ul>
 <li>Curve develops unnecessary features at higher order</li>
 </ul>
-<div id="756a5992" class="cell" data-execution_count="6">
+<div id="cf7dee28" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -668,7 +668,7 @@ y_i = \sum_{j=1}^n \theta_j x^{j-1}
 <ul>
 <li>At high order, generalization fails</li>
 </ul>
-<div id="d9fe2dca" class="cell" data-execution_count="7">
+<div id="0fe8811f" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -694,7 +694,7 @@ y_i = \sum_{j=1}^n \theta_j x^{j-1}
 <li>Name comes from geometry</li>
 <li>Consider objective function with a “ridge”</li>
 </ul>
-<div id="73560710" class="cell" data-execution_count="8">
+<div id="dbafa70e" class="cell" data-execution_count="8">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -710,7 +710,7 @@ y_i = \sum_{j=1}^n \theta_j x^{j-1}
 <li>Name comes from geometry</li>
 <li>Regularizer turns ridge to peak</li>
 </ul>
-<div id="1e4175aa" class="cell" data-execution_count="9">
+<div id="645ae42b" class="cell" data-execution_count="9">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
