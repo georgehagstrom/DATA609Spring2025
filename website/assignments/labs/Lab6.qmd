@@ -1,6 +1,6 @@
 ---
-title: "Homework 5: Disciplined Convex Programming and Data Fitting"
-format: html 
+title: "Homework 6: Applications to Stats and Machine Learning"
+format: pdf 
 editor: source
 ---
 
@@ -11,22 +11,153 @@ Please submit a .qmd file along with a rendered pdf to the Brightspace page for 
 I recommend python, julia, or R. 
 
 
-## Problem 1: 
+## Problem 1: Multi-Label Support Vector Machine (CVX Additional Exercises 6.18)
 
-Exercise 7.4 in Convex Optimization Extended Exercises
+The basic SVM described in chapter 8 of the book is used for classification of data with two labels. In this problem we explore an extension of SVM that can be used to carry
+out classification of data with more than two labels. Our data consists of pairs: 
+$(\mathbf{x}_i , y_i ) \in \mathbf{R}^n \times
+\{1, \dots , K\},\, i = 1, \dots , m$, where $\mathbf{x}_i$ is the feature vector and $y_i$ is the label of the $i$th data point. (So
+the labels can take the values $1, \dots , K$.) Our classifier will use $K$ affine functions, $f_k(\mathbf{x}) = \mathbf{a}^T_k \mathbf{x} + \mathbf{b}_k$ ,
+$k = 1, . . . , K$, which we also collect into affine function from $\mathbb{R}^n$ into $\mathbb{R}^K$ as $f(\mathbf{x}) = A\mathbf{x} + \mathbf{b}$. (The
+rows of $A$ are $\mathbf{a}^T_k$ .) Given the feature vector $\mathbf{x}$, our model predicts the label $\hat{y} = \mathrm{argmax}_k f_k (\mathbf{x})$, i.e. the predicted label is given by the index of the largest value of the $f_k$ functions evaluated at the data point. We assume that
+exact ties never occur, or if they do, an arbitrary choice can be made. Note that if a multiple of 1
+is added to $\mathbf{b}$, the classifier does not change. Thus, without loss of generality, we can assume that
+$\mathbf{1}^T \mathbf{b} = 0$.
 
-## Problem 2: 
+To correctly classify all the data examples perfectly, we would need $f_{y_i} (\mathbf{x}_i ) > \mathrm{max}_{k\neq y_i} f_k (\mathbf{x}_i )$ for all $i$. This set of
+inequalities in $a_k$ and $b_k$, are feasible if and only if the set of
+inequalities $f_{y_i} (\mathbf{x}_i ) \geq 1 + \mathrm{max}_{k\neq y_i} f_k (\mathbf{x}_i )$ are feasible. This motivates the loss function:
 
-Exercise 7.6 in Convex Optimization Extended Exercises 
+$$
+L(A, \mathbf{b}) = \sum_{i=1}^m\left(1 + \mathrm{max}_{k \neq y_i}f_k(\mathbf{x}_i) - f_{y_i}(\mathbf{x}_i)  \right)_+
+$$
+where $(u)_+ = \mathrm{max}\{u, 0\}$. The multi-label SVM chooses $A$ and $\mathbf{b}$ to minimize
+$L(A, b) + \mu\|A\|_F^2,$
+subject to $\mathbf{1}^T \mathbf{b} = 0$, where $\mu > 0$ is a regularization parameter. (Several variations on this are
+possible, such as regularizing b as well, or replacing the Frobenius norm squared with the sum of
+norms of the columns of A.). The Frobenius norm is a generalization of the $2$-norm from vectors to matrices, it is defined as $\|A\|_F = \left(\sum_{ij} A_{ij}^2\right)^{1/2}$ and implemented in `CVX` using `norm(A,'fro')`. 
 
-## Problem 3: 
+(a) Show how to find $A$ and $\mathbf{b}$ using convex optimization. Be sure to justify any changes of
+variables or reformulation (if needed), and convexity of the objective and constraints in your
+formulation.
 
-Exercise 7.14 in Convex Optimization
 
-## Problem 4: 
+(b) Carry out multi-label SVM on the data given in [multi_label_svm_data.csv](https://github.com/georgehagstrom/DATA609Spring2025/blob/main/website/assignments/labs/labData/multi_label_svm_data.csv). Use the data
+given in $\mathbf{X}$ and $y$ to fit the SVM model, for a range of values of $\mu$. Use the data given in [multi_label_svm_test.csv](https://github.com/georgehagstrom/DATA609Spring2025/blob/main/website/assignments/labs/labData/multi_label_svm_test.csv) to test the SVM models. Plot the
+test set classification error rate (i.e., the fraction of data examples in the test set for which
+$\hat{y} \neq y$) versus $\mu$.
 
-Exercise 7.48 in Convex Optimization Extended Exercises 
+You don’t need to try more than 10 or 20 values of $\mu$, and we suggest choosing them uniformly
+on a `log` scale, from (say) $10^{−2}$ to $10^2$ .
 
-## Problem 5: 
 
-Exercise 8.6 in Convex Optimization Extended Exercises 
+## Problem 2: Maximum Likelihood Prediction of Team Abilities (Adapted from Exercise 7.4 in Convex Optimization Extended Exercises)
+
+A set of $n$ teams compete in a tournament. We
+model each team’s ability by a number $a_j,\, j = 1, \cdots , n$. When teams $j$ and $k$ play each
+other, the probability that team $j$ wins is equal to:
+
+$$
+\mathrm{prob}(a_j − a_k + v > 0)
+$$ 
+
+where $v \sim \mathrm{Normal}(0, \sigma^2 )$. This means 
+we can also write the probability as $p(\mathrm{i\,\, beats \,\, j}) =  = \Phi\left(\frac{a_j-a_k}{\sigma}\right)$, where $\Phi$ is the cumulative distribution function of 
+the standard normal distribution.
+
+You are given the outcome of $m$ past games. These are organized as in a game incidence matrix $A$, where the $l$th row of $A$ corresponds to game $l$ and where:
+
+$$
+A_{il} = \begin{cases} 1 \quad &\mathrm{if\,\,team\,\, i\,\, played\,\, in\,\, game\,\, l\,\, and\,\, won}  \\
+-1 \quad &\mathrm{if\,\, team\,\, i\,\, played\,\, in\,\, game\,\, l\,\, and\,\, lost} l = k^{(i)} \\
+0 \quad &\mathrm{otherwise}
+\end{cases},
+$$
+This means that each row of $A$ has exactly two non-zero entries, with a $1$ in the column of the team that played and won, and a $-1$ in the column of the team
+that played and lost.
+
+(a) Formulate the problem of finding the maximum likelihood estimate of team abilities, $\hat{a} \in \mathbb{R}^n$,
+given the outcomes, as a convex optimization problem. Because the optimal solution can be shifted by a constant, you should specify a prior constraint on the first variable $\hat{a}_0 = 0$. In order to keep the estimates bounded, an additional
+set of prior constraints $\hat{a}_i \in [-3, 3]$ should be included in the problem formulation, and you should take $\sigma = 0.25$ to be a constant value rather than a variable. Also, we
+note that if a constant is added to all team abilities, there is no change in the probabilities of
+game outcomes. This means that $\hat{a}$ is determined only up to a constant, like a potential. But
+this doesn’t affect the ML estimation problem, or any subsequent predictions made using the
+estimated parameters.
+
+(b) Find $\hat{a}$ for the team data by the game incidence matrix [AMat_train.csv](https://github.com/georgehagstrom/DATA609Spring2025/blob/main/website/assignments/labs/labData/AMat_train.csv). (This matrix gives the
+outcomes for a tournament in which each team plays each other team once.) You may find
+the CVX function `log_normcdf` helpful for this problem. Remember that the cumulative distribution function of a log-concave distribution is log-concave,
+and also that it is vectorized. Hint: the $l$th row of $A\mathrm{a} = 
+a_{\mathrm{win},l}-a_{\mathrm{lose},l}$. 
+
+(c) Use the maximum likelihood estimate $\hat{a}$ found in part (b) to predict the outcomes of next
+year’s tournament games, given in the file [team_data_test.csv](https://github.com/georgehagstrom/DATA609Spring2025/blob/main/website/assignments/labs/labData/team_data_test.csv), using 
+$$
+\hat{y}^{(i)} = \mathrm{sign}(\hat{a}_{j^{(i)}} − \hat{a}_{k^{(i)}})
+$$ 
+
+The first two rows of this file contain the indices of the two teams playing, and the third column is $1$ if the first team won and $-1$ otherwise.  Compare
+the predictions predictions based on $\hat{a}$ with the actual outcomes, given in the third column of test. Give the
+fraction of correctly predicted outcomes.
+The games played in train and test are the same, so another, simpler method for predicting
+the outcomes in test it to just assume the team that won last year’s match will also win this
+year’s match. You can find a similarly structured matrix in the file [team_data_test.csv](https://github.com/georgehagstrom/DATA609Spring2025/blob/main/website/assignments/labs/labData/team_data_test.csv), or you can construct it from the game incidence matrix. Give the percentage of correctly predicted outcomes using this simple method.
+
+
+## Problem 3: Flux balance analysis in systems biology. (Exercise 21.3 in CVX Additional Exercises)
+
+Flux balance analysis is based on a very simple model of
+the reactions going on in a cell, keeping track only of the gross rate of consumption and production
+of various chemical species within the cell. Based on the known stoichiometry of the reactions, and
+known upper bounds on some of the reaction rates, we can compute bounds on the other reaction
+rates, or cell growth, for example.
+
+We focus on $m$ metabolites in a cell, labeled $M_1$ , . . . , $M_m$ . There are $n$ reactions going on, labeled
+$R_1$ , . . . , $R_n$ , with nonnegative reaction rates $v_1$ , . . . , $v_n$ . In our particular case, we will be working with a simplified model of cell metabolism having 9 reactions and 6 metabolites. Each reaction has a (known) stoichiometry,
+which tells us the rate of consumption and production of the metabolites per unit of reaction rate.
+The stoichiometry data is given by the stoichiometry matrix $S \in \mathbb{R}^{m\times n}$ , defined as follows: $S_{ij}$
+is the rate of production of $M_i$ due to unit reaction rate $v_j = 1$. Here we consider consumption
+of a metabolite as negative production; so $S_{ij} = −2$, for example, means that reaction $\mathbb{R}^j$ causes
+metabolite $M_i$ to be consumed at a rate $2v_j$ .
+
+As an example, suppose reaction $R_1$ has the form $M_1 \to M_2 + 2M_3$ . The consumption rate of $M_1$ ,
+due to this reaction, is $v_1$ ; the production rate of $M_2$ is $v_1$ ; and the production rate of $M_3$ is $2v_1$ .
+(The reaction $R_1$ has no effect on metabolites $M_4$ , . . . , $M_m$ .) This corresponds to a first column of
+$S$ of the form $(−1, 1, 2, 0, \dots , 0)$.
+
+Reactions are also used to model flow of metabolites into and out of the cell. For example, suppose
+that reaction $R_2$ corresponds to the flow of metabolite $M_1$ into the cell, with $v_2$ giving the flow
+rate. This corresponds to a second column of $S$ of the form $(1, 0, . . . , 0)$.
+
+The last reaction, $R_n$ , corresponds to biomass creation, or cell growth, so the reaction rate $v_n$ is
+the cell growth rate. The last column of $S$ gives the amounts of metabolites used or created per
+unit of cell growth rate.
+Since our reactions include metabolites entering or leaving the cell, as well as those converted
+to biomass within the cell, we have conservation of the metabolites, which can be expressed as
+$Sv = 0$. In addition, we are given upper limits on some of the reaction rates, which we express as
+$v \preceq v^{\mathrm{max}}$ , where we set $v_{j}^{\mathrm{max}} = \infty$ if no upper limit on reaction rate $j$ is known. The goal is to
+find the maximum possible cell growth rate (i.e., largest possible value of $v_n$ ) consistent with the
+constraints:
+
+$$
+\mathrm{max}_v v_9 \\
+Sv = 0 \\
+v \succeq 0 \\
+v \preceq v^{\mathrm{max}} 
+$$
+
+The questions below pertain to the data found in [fba_S.csv](https://github.com/georgehagstrom/DATA609Spring2025/blob/main/website/assignments/labs/labData/fba_S.csv) and
+[fba_vmax.csv](https://github.com/georgehagstrom/DATA609Spring2025/blob/main/website/assignments/labs/labData/fba_vmax.csv), which contain the Stoichiometric Matrix and the upper bounds on the reaction fluxes, respectively. This exercise was inspired by the following paper: [Segre et all 2003](https://www.liebertpub.com/doi/abs/10.1089/153623103322452413)
+
+(a) Find the maximum possible cell growth rate $G^{\star}$ , as well as optimal Lagrange multipliers for
+the reaction rate limits. How sensitive is the maximum growth rate to the various reaction rate limits?
+
+(b) Essential genes and synthetic lethals. For simplicity, we’ll assume that each reaction is controlled by an associated gene, i.e., gene $G_i$ controls reaction $R_i$ . Knocking out a set of genes
+associated with some reactions has the effect of setting the reaction rates (or equivalently, the
+associated v max entries) to zero, which of course reduces the maximum possible growth rate.
+If the maximum growth rate becomes small enough or zero, it is reasonable to guess that
+knocking out the set of genes will kill the cell. An essential gene is one that when knocked
+out reduces the maximum growth rate below a given threshold $G^{\mathrm{min}}$ . (Note that $G_n$ is always
+an essential gene.) A synthetic lethal is a pair of non-essential genes that when knocked out
+reduces the maximum growth rate below the threshold. Find all essential genes and synthetic
+lethals for the given problem instance, using the threshold $G^{\mathrm{min}} = 0.2G^{\star}$ .
