@@ -20,7 +20,7 @@ The homework assignments in this course are lab assignments where you will solve
 
 <li value='5'> <a href='https://github.com/georgehagstrom/DATA609Spring2025/blob/main/docs/assignments/labs/Lab5.pdf'>Convex Optimizations Problems</a> (<a href='https://github.com/georgehagstrom/DATA609Spring2025/blob/main/website/assignments/labs/Lab5.qmd?raw=true'>Download</a>)</li>
 
-<li value='6'> <a href='https://htmlpreview.github.io/?https://georgehagstrom.github.io/DATA609Spring2025/assignments/labs/Lab6.pdf'>Applications to Statistics and Machine Learning</a> (<a href='https://github.com/georgehagstrom/DATA607/blob/main/website/assignments/labs/Lab6.qmd?raw=true'>Download</a>)</li>
+<li value='6'> <a href='https://github.com/georgehagstrom/DATA609Sprint2025/blob/main/docs/assignments/labs/Lab6.pdf'>Applications to Statistics and Machine Learning</a> (<a href='https://github.com/georgehagstrom/DATA609Spring2025/blob/main/website/assignments/labs/Lab6.qmd?raw=true'>Download</a>)</li>
 
 <li value='7'> <a href='https://htmlpreview.github.io/?https://georgehagstrom.github.io/DATA609Spring2025/assignments/labs/tbd.html'>Nonconvex Optimization and Stochastic Gradient Descent</a> (<a href='https://github.com/georgehagstrom/DATA609Spring2025/blob/main/website/assignments/labs/tbd.qmd?raw=true'>Download</a>)</li>
 
