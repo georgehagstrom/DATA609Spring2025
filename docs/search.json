@@ -784,7 +784,7 @@
     "href": "meetups/Meetup-4/HW1Review.html#most-common-mistake",
     "title": "Lab 1 Review",
     "section": "Most Common Mistake",
-    "text": "Most Common Mistake\n\nMany of you then concluded:\n\n\\[ AA^{+}b - b = 0\\]\n\nSeveral justification, but:\n\n\nA = matrix(rnorm(40),nrow=10,ncol=4)\nb = rnorm(10)\n\nt(A  %*% solve(t(A) %*% A) %*% t(A) %*%  b)\n\n          [,1]      [,2]      [,3]       [,4]       [,5]         [,6]\n[1,] 0.1354368 0.4676314 -1.306333 -0.4467743 -0.1801661 -0.009055663\n           [,7]       [,8]       [,9]     [,10]\n[1,] -0.9531245 0.01185578 0.09759286 0.4129868"
+    "text": "Most Common Mistake\n\nMany of you then concluded:\n\n\\[ AA^{+}b - b = 0\\]\n\nSeveral justification, but:\n\n\nA = matrix(rnorm(40),nrow=10,ncol=4)\nb = rnorm(10)\n\nt(A  %*% solve(t(A) %*% A) %*% t(A) %*%  b)\n\n            [,1]     [,2]      [,3]     [,4]       [,5]      [,6]      [,7]\n[1,] -0.04248858 0.196073 0.2440858 2.074622 -0.2909904 0.4532946 0.4959615\n          [,8]       [,9]      [,10]\n[1,] 0.9256569 -0.6855768 -0.3876435"
   },
   {
     "objectID": "meetups/Meetup-4/HW1Review.html#why-isnt-it-true",
@@ -1565,7 +1565,7 @@
     "href": "assignments/labs.html",
     "title": "Labs",
     "section": "",
-    "text": "The homework assignments in this course are lab assignments where you will solve the problem using a combination of mathematics and computer code.\nPlease submit a and either a quarto file or jupyter notebook or other code that generates your homework. Labs should be submitted on Blackboard.\n\n\nGradient Descent and Least Squares (Download)\n\n\nLeast Squares Applications (Download)\n\n\nConvex Sets (PDF) (Quarto Download)\n\n\nConvex Functions (PDF) (Quarto Download)\n\n\nConvex Optimizations Problems (Download)\n\n\nApplications to Statistics and Machine Learning (Download)\n\n\nNonconvex Optimization and Stochastic Gradient Descent (Download)\n\n\nTraining Deep Neural Networks (Download)",
+    "text": "The homework assignments in this course are lab assignments where you will solve the problem using a combination of mathematics and computer code.\nPlease submit a and either a quarto file or jupyter notebook or other code that generates your homework. Labs should be submitted on Blackboard.\n\n\nGradient Descent and Least Squares (Download)\n\n\nLeast Squares Applications (Download)\n\n\nConvex Sets (PDF) (Quarto Download)\n\n\nConvex Functions (PDF) (Quarto Download)\n\n\nConvex Optimizations Problems (Download)\n\n\nApplications to Statistics and Machine Learning (Download)\n\n\nNonconvex Optimization and Stochastic Gradient Descent (Download)",
     "crumbs": [
       "Assignments",
       "Labs"
@@ -2248,7 +2248,7 @@
     "href": "meetups/Meetup-2/meetup-2.html#condition-number-and-accuracy",
     "title": "Meetup 2: Least Squares",
     "section": "Condition Number and Accuracy",
-    "text": "Condition Number and Accuracy\n\nAccuracy of np.linalg.inv(A) @ b related to \\(\\frac{\\sigma_{max}}{\\sigma_{min}}\\)\nThis is called the “condition number” of the matrix \\(A\\)\n\n\n%timeit np.linalg.inv(A) @ b\n%timeit np.linalg.solve(A,b)\n\nx1 = np.linalg.inv(A) @ b\nx2 = np.linalg.solve(A,b)\n\nprint(\"Matrix Inverse Error: \",np.linalg.norm(A @ x1 - b))\nprint(\"Linear Solve Error: \",np.linalg.norm(A @ x2 - b))\n\n5.43 ms ± 757 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)\n1.36 ms ± 272 µs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)\nMatrix Inverse Error:  1.919371734927757e-07\nLinear Solve Error:  1.867443317714963e-15\n\n\n\n100 million times more accurate, 5 times faster"
+    "text": "Condition Number and Accuracy\n\nAccuracy of np.linalg.inv(A) @ b related to \\(\\frac{\\sigma_{max}}{\\sigma_{min}}\\)\nThis is called the “condition number” of the matrix \\(A\\)\n\n\n%timeit np.linalg.inv(A) @ b\n%timeit np.linalg.solve(A,b)\n\nx1 = np.linalg.inv(A) @ b\nx2 = np.linalg.solve(A,b)\n\nprint(\"Matrix Inverse Error: \",np.linalg.norm(A @ x1 - b))\nprint(\"Linear Solve Error: \",np.linalg.norm(A @ x2 - b))\n\n4.75 ms ± 748 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)\n2.38 ms ± 366 µs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)\nMatrix Inverse Error:  3.926246535189524e-07\nLinear Solve Error:  3.000809889410479e-15\n\n\n\n100 million times more accurate, 5 times faster"
   },
   {
     "objectID": "meetups/Meetup-2/meetup-2.html#issue-is-worse-for-ata",
@@ -2948,7 +2948,7 @@
     "href": "meetups/Meetup-6/meetup-6.html#intro-to-cvx-6",
     "title": "DATA 609 Meetup 6: Constructing Convex Sets",
     "section": "Intro to CVX",
-    "text": "Intro to CVX\n\nSolve using problem.solve()\n\n\nmargin = 0.2\n\nproblem = cvx.Problem(\n  cvx.Minimize(cvx.norm(x)), # Objective (this one is least squares)\n  [x - x_mean &gt;= -margin , # These are the constraints\n  x - x_mean &lt;= margin]\n)\n\n# Solve the problem\n\nsol = problem.solve()\nprint(sol) # objective\nx.value # optimum\n\n1.798490521548642\n\n\narray([-1.49069324e-01, -2.02236679e-06, -1.49485792e+00, -3.73031060e-01,\n       -2.83033575e-03, -9.15743465e-01])"
+    "text": "Intro to CVX\n\nSolve using problem.solve()\n\n\nmargin = 0.2\n\nproblem = cvx.Problem(\n  cvx.Minimize(cvx.norm(x)), # Objective (this one is least squares)\n  [x - x_mean &gt;= -margin , # These are the constraints\n  x - x_mean &lt;= margin]\n)\n\n# Solve the problem\n\nsol = problem.solve()\nprint(sol) # objective\nx.value # optimum\n\n1.490708072594456\n\n\narray([-3.80921585e-05,  2.35292745e-05,  1.35530614e+00,  3.70208875e-01,\n        2.76726655e-05,  4.98298313e-01])"
   },
   {
     "objectID": "meetups/Meetup-6/meetup-6.html#intro-to-cvx-7",
@@ -2962,7 +2962,7 @@
     "href": "meetups/Meetup-6/meetup-6.html#intro-to-cvx-8",
     "title": "DATA 609 Meetup 6: Constructing Convex Sets",
     "section": "Intro to CVX",
-    "text": "Intro to CVX\n\n# Solve the problem\n\nsol = problem.solve()\nprint(sol) # objective\nx.value # optimum\n\n1.4778890126079807\n\n\narray([-1.49069366e-01,  2.87053777e-05, -1.49485793e+00, -3.73031071e-01,\n       -5.30904429e-03, -9.15743464e-01])"
+    "text": "Intro to CVX\n\n# Solve the problem\n\nsol = problem.solve()\nprint(sol) # objective\nx.value # optimum\n\n0.6048748704860616\n\n\narray([-6.88043289e-06, -2.94210331e-07,  1.35530615e+00,  3.70208872e-01,\n       -8.73359141e-07,  4.98298313e-01])"
   },
   {
     "objectID": "meetups/Meetup-6/meetup-6.html#thanks",
