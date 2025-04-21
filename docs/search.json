@@ -1017,7 +1017,7 @@
     "href": "meetups/Meetup-6/meetup-6.html#intro-to-cvx-6",
     "title": "DATA 609 Meetup 6: Constructing Convex Sets",
     "section": "Intro to CVX",
-    "text": "Intro to CVX\n\nSolve using problem.solve()\n\n\nmargin = 0.2\n\nproblem = cvx.Problem(\n  cvx.Minimize(cvx.norm(x)), # Objective (this one is least squares)\n  [x - x_mean &gt;= -margin , # These are the constraints\n  x - x_mean &lt;= margin]\n)\n\n# Solve the problem\n\nsol = problem.solve()\nprint(sol) # objective\nx.value # optimum\n\n1.7356042160226677\n\n\narray([ 3.14440724e-01,  8.99918524e-01,  2.55703472e-01,  7.67266888e-01,\n       -1.20395720e+00,  8.01473479e-06])"
+    "text": "Intro to CVX\n\nSolve using problem.solve()\n\n\nmargin = 0.2\n\nproblem = cvx.Problem(\n  cvx.Minimize(cvx.norm(x)), # Objective (this one is least squares)\n  [x - x_mean &gt;= -margin , # These are the constraints\n  x - x_mean &lt;= margin]\n)\n\n# Solve the problem\n\nsol = problem.solve()\nprint(sol) # objective\nx.value # optimum\n\n1.1844922759658862\n\n\narray([-9.24662315e-01,  9.26511695e-02, -4.47522418e-01, -5.82375310e-01,\n        7.65731518e-06, -3.31544177e-06])"
   },
   {
     "objectID": "meetups/Meetup-6/meetup-6.html#intro-to-cvx-7",
@@ -1031,7 +1031,7 @@
     "href": "meetups/Meetup-6/meetup-6.html#intro-to-cvx-8",
     "title": "DATA 609 Meetup 6: Constructing Convex Sets",
     "section": "Intro to CVX",
-    "text": "Intro to CVX\n\n# Solve the problem\n\nsol = problem.solve()\nprint(sol) # objective\nx.value # optimum\n\n1.3040369690931617\n\n\narray([ 3.14440730e-01,  8.99918525e-01,  2.55703537e-01,  7.67266909e-01,\n       -1.20395720e+00, -3.10830080e-05])"
+    "text": "Intro to CVX\n\n# Solve the problem\n\nsol = problem.solve()\nprint(sol) # objective\nx.value # optimum\n\n0.8629407390586619\n\n\narray([-9.24662314e-01,  9.26513737e-02, -4.47522418e-01, -5.82375307e-01,\n        4.76857408e-08, -2.60258557e-08])"
   },
   {
     "objectID": "meetups/Meetup-6/meetup-6.html#thanks",
@@ -1612,7 +1612,7 @@
     "href": "meetups/Meetup-2/meetup-2.html#condition-number-and-accuracy",
     "title": "Meetup 2: Least Squares",
     "section": "Condition Number and Accuracy",
-    "text": "Condition Number and Accuracy\n\nAccuracy of np.linalg.inv(A) @ b related to \\(\\frac{\\sigma_{max}}{\\sigma_{min}}\\)\nThis is called the “condition number” of the matrix \\(A\\)\n\n\n%timeit np.linalg.inv(A) @ b\n%timeit np.linalg.solve(A,b)\n\nx1 = np.linalg.inv(A) @ b\nx2 = np.linalg.solve(A,b)\n\nprint(\"Matrix Inverse Error: \",np.linalg.norm(A @ x1 - b))\nprint(\"Linear Solve Error: \",np.linalg.norm(A @ x2 - b))\n\n4.68 ms ± 884 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)\n1.15 ms ± 266 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)\nMatrix Inverse Error:  2.51960728763271e-07\nLinear Solve Error:  2.2236888339633558e-15\n\n\n\n100 million times more accurate, 5 times faster"
+    "text": "Condition Number and Accuracy\n\nAccuracy of np.linalg.inv(A) @ b related to \\(\\frac{\\sigma_{max}}{\\sigma_{min}}\\)\nThis is called the “condition number” of the matrix \\(A\\)\n\n\n%timeit np.linalg.inv(A) @ b\n%timeit np.linalg.solve(A,b)\n\nx1 = np.linalg.inv(A) @ b\nx2 = np.linalg.solve(A,b)\n\nprint(\"Matrix Inverse Error: \",np.linalg.norm(A @ x1 - b))\nprint(\"Linear Solve Error: \",np.linalg.norm(A @ x2 - b))\n\n5.56 ms ± 796 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)\n1.24 ms ± 295 µs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)\nMatrix Inverse Error:  2.687868706334999e-07\nLinear Solve Error:  2.4576066930428108e-15\n\n\n\n100 million times more accurate, 5 times faster"
   },
   {
     "objectID": "meetups/Meetup-2/meetup-2.html#issue-is-worse-for-ata",
@@ -2768,7 +2768,7 @@
     "href": "meetups/Meetup-12/meetup-12.html#solving-the-problem",
     "title": "DATA 609 Meetup 12: Duality",
     "section": "Solving the Problem",
-    "text": "Solving the Problem\n\n# decision variables, this is a vector of length 2\nx = cvx.Variable(len(crudes.index), pos=True, name=\"crudes\")\n\n# the objective will be the revenue minus costs\n\n# The production is the amount of each crude times the yield matrix\nprods = yields.to_numpy().T @ x / 100.0\n\n# To find revenue we sum up the production times the price of each crude\n\nrevenue = products[\"price\"].to_numpy().T @ prods\n\n# Feed costs are the crude prices times the decision variable, summed up\nfeed_cost = crudes[\"price\"].to_numpy().T @ x\n\n# Ditto for the process costs\n\nprocess_cost = crudes[\"process_cost\"].to_numpy().T @ x\n\n# profit \n\nprofit = revenue - feed_cost - process_cost\nobjective = cvx.Maximize(profit)\n\n# constraints: can't use more crude than you have\nfeeds = x &lt;= crudes[\"available\"].to_numpy()\n\n# Can't produce more of each product than the capacity\n\ncapacity = prods &lt;= products[\"capacity\"].to_numpy()\n\n# put them together to get all the constraints\n\nconstraints = [feeds, capacity]\n\n# solve using cvx\n\nproblem = cvx.Problem(objective, constraints)\nproblem.solve()\n\nnp.float64(860275.8618582092)"
+    "text": "Solving the Problem\n\n# decision variables, this is a vector of length 2\nx = cvx.Variable(len(crudes.index), pos=True, name=\"crudes\")\n\n# the objective will be the revenue minus costs\n\n# The production is the amount of each crude times the yield matrix\nprods = yields.to_numpy().T @ x / 100.0\n\n# To find revenue we sum up the production times the price of each crude\n\nrevenue = products[\"price\"].to_numpy().T @ prods\n\n# Feed costs are the crude prices times the decision variable, summed up\nfeed_cost = crudes[\"price\"].to_numpy().T @ x\n\n# Ditto for the process costs\n\nprocess_cost = crudes[\"process_cost\"].to_numpy().T @ x\n\n# profit \n\nprofit = revenue - feed_cost - process_cost\nobjective = cvx.Maximize(profit)\n\n# constraints: can't use more crude than you have\nfeeds = x &lt;= crudes[\"available\"].to_numpy()\n\n# Can't produce more of each product than the capacity\n\ncapacity = prods &lt;= products[\"capacity\"].to_numpy()\n\n# put them together to get all the constraints\n\nconstraints = [feeds, capacity]\n\n# solve using cvx\n\nproblem = cvx.Problem(objective, constraints)\nproblem.solve()\n\n860275.8618582088"
   },
   {
     "objectID": "meetups/Meetup-12/meetup-12.html#results",
@@ -2810,7 +2810,7 @@
     "href": "meetups/Meetup-12/meetup-12.html#robustness-to-shocks",
     "title": "DATA 609 Meetup 12: Duality",
     "section": "Robustness to Shocks",
-    "text": "Robustness to Shocks\n\nWhat if Crude 1 wasn’t available?\n\n\ncrudes = pd.DataFrame(\n    {\n        \"crude 1\": {\"available\": 0, \"price\": 72, \"process_cost\": 1.5},\n        \"crude 2\": {\"available\": 15000, \"price\": 45, \"process_cost\": 3},\n    }\n).T\n\n# constraints\nfeeds = x &lt;= crudes[\"available\"].to_numpy()\ncapacity = prods &lt;= products[\"capacity\"].to_numpy()\nconstraints = [feeds, capacity]\n\n# solution\nproblem = cvx.Problem(objective, constraints)\nproblem.solve()\n\nnp.float64(486000.00013048685)"
+    "text": "Robustness to Shocks\n\nWhat if Crude 1 wasn’t available?\n\n\ncrudes = pd.DataFrame(\n    {\n        \"crude 1\": {\"available\": 0, \"price\": 72, \"process_cost\": 1.5},\n        \"crude 2\": {\"available\": 15000, \"price\": 45, \"process_cost\": 3},\n    }\n).T\n\n# constraints\nfeeds = x &lt;= crudes[\"available\"].to_numpy()\ncapacity = prods &lt;= products[\"capacity\"].to_numpy()\nconstraints = [feeds, capacity]\n\n# solution\nproblem = cvx.Problem(objective, constraints)\nproblem.solve()\n\n486000.0001304866"
   },
   {
     "objectID": "meetups/Meetup-12/meetup-12.html#robustness-to-shocks-1",
@@ -2824,7 +2824,7 @@
     "href": "meetups/Meetup-12/meetup-12.html#capacity-limits",
     "title": "DATA 609 Meetup 12: Duality",
     "section": "Capacity Limits?",
-    "text": "Capacity Limits?\n\nIf any capacity is cut to 0, profit cut to 0 as well\n\n\n\nnp.float64(6.899430240593982e-09)\n\n\n\nInstead we will see what happens with 80% declines in capacity\nLoop over the four products and study the impact"
+    "text": "Capacity Limits?\n\nIf any capacity is cut to 0, profit cut to 0 as well\n\n\n\n6.8994302405939854e-09\n\n\n\nInstead we will see what happens with 80% declines in capacity\nLoop over the four products and study the impact"
   },
   {
     "objectID": "meetups/Meetup-12/meetup-12.html#resilience-to-capacity-shocks",
@@ -3286,7 +3286,7 @@
     "href": "meetups/Meetup-4/HW1Review.html#most-common-mistake",
     "title": "Lab 1 Review",
     "section": "Most Common Mistake",
-    "text": "Most Common Mistake\n\nMany of you then concluded:\n\n\\[ AA^{+}b - b = 0\\]\n\nSeveral justification, but:\n\n\nA = matrix(rnorm(40),nrow=10,ncol=4)\nb = rnorm(10)\n\nt(A  %*% solve(t(A) %*% A) %*% t(A) %*%  b)\n\n            [,1]      [,2]       [,3]       [,4]      [,5]      [,6]       [,7]\n[1,] -0.07803949 0.3220389 -0.7006317 -0.3131293 -0.123996 0.3199556 0.08462312\n           [,8]        [,9]      [,10]\n[1,] -0.5133927 -0.05629883 -0.1399911"
+    "text": "Most Common Mistake\n\nMany of you then concluded:\n\n\\[ AA^{+}b - b = 0\\]\n\nSeveral justification, but:\n\n\nA = matrix(rnorm(40),nrow=10,ncol=4)\nb = rnorm(10)\n\nt(A  %*% solve(t(A) %*% A) %*% t(A) %*%  b)\n\n        [,1]       [,2]      [,3]       [,4]     [,5]       [,6]      [,7]\n[1,] 1.14235 -0.4130032 0.4662076 -0.3803645 1.268162 -0.5533687 0.2123507\n          [,8]       [,9]    [,10]\n[1,] 0.2096759 -0.3863831 0.394737"
   },
   {
     "objectID": "meetups/Meetup-4/HW1Review.html#why-isnt-it-true",
