@@ -409,7 +409,21 @@ George I. Hagstrom
 </section>
 <section id="week-summary" class="slide level2">
 <h2>Week Summary</h2>
+<ul>
+<li>This week is about duality
+<ul>
+<li>Let’s you perform a sensitivity analysis of your optimization problem</li>
+<li>Enables solution of more difficult problems</li>
+</ul></li>
+<li>Lab 6 is Due this week at midnight</li>
+<li>Reading is parts of Chapter 5: 5.1, 5.2, 5.4.3, 5.4.4, 5.5.2, 5.6</li>
+<li>If you want, Section 3.3</li>
+</ul>
 </section>
+<section id="may-9th-meetup" class="slide level2">
+<h2>May 9th Meetup!</h2>
+
+<img data-src="May_2025_Meetup_Card.png" class="r-stretch"></section>
 <section id="what-is-duality" class="slide level2">
 <h2>What is Duality?</h2>
 <ul>
@@ -497,7 +511,7 @@ George I. Hagstrom
 <li><p>Let <span class="math inline">\(p^{\star}\)</span> be the solution of original problem: <span class="math display">\[
 p^{\star} = \mathrm{min}_{\mathbf{x}} f(\mathbf{x}),\quad g(\mathbf{x})\leq 0
 \]</span></p></li>
-<li><p>Let <span class="math inline">\(\mathbf{x}^{\star}\)</span> be the value of the objective at the minimum <span class="math display">\[ p^{\star} = f(\mathbf{x}^{\star}) \geq\\
+<li><p>Let <span class="math inline">\(\mathbf{x}^{\star}\)</span> be the value of the decision variables at the minimum <span class="math display">\[ p^{\star} = f(\mathbf{x}^{\star}) \geq \cdots\\
 f(\mathbf{x}^{\star}) + \lambda g(\mathbf{x}^{\star}) \geq f_d(\lambda)  
 \]</span></p></li>
 <li><p>Lagrange dual for any value of <span class="math inline">\(\lambda\)</span> is a lower bound on original (aka primal) problem</p></li>
@@ -511,7 +525,8 @@ f(\mathbf{x}^{\star}) + \lambda g(\mathbf{x}^{\star}) \geq f_d(\lambda)
 f_d(\lambda,\nu) = \min_{\mathbf{x}} f(\mathbf{x}) +\sum_{i}\lambda_i g_i(\mathbf{x}) + \sum_j
 \nu_j h_j(\mathbf{x})
 \]</span></li>
-<li>Intuition- equality constraint is like inequality constraint for <span class="math inline">\(h\)</span> and <span class="math inline">\(-h\)</span>.</li>
+<li>Intuition: equality constraint is like inequality constraint for <span class="math inline">\(h\)</span> and <span class="math inline">\(-h\)</span>.</li>
+<li><span class="math inline">\(\nu\)</span> can have either sign</li>
 </ul>
 </section>
 <section id="lagrangian-function" class="slide level2">
@@ -549,14 +564,14 @@ p^{\star}_d = \max_{(\lambda,\nu)} f_d(\lambda,\nu) \\
 <h2>Game Interpretation</h2>
 <ul>
 <li>Consider the following optimization problem <span class="math display">\[
-\min_{(x,y)} -(x+2)^2-(y-1)^2\,\\
+\min_{(x,y)} (x+2)^2+(y-1)^2\,\\
 x-y \leq 0
 \]</span></li>
 </ul>
 </section>
 <section id="game-interpretation-2" class="slide level2">
 <h2>Game Interpretation</h2>
-<div id="b2a11a74" class="cell" data-execution_count="1">
+<div id="acf6628b" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -568,7 +583,7 @@ x-y \leq 0
 </section>
 <section id="game-interpretation-3" class="slide level2">
 <h2>Game Interpretation</h2>
-<div id="809562a6" class="cell" data-execution_count="2">
+<div id="2304a289" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -582,7 +597,7 @@ x-y \leq 0
 <h2>Game Interpretation</h2>
 <div class="columns">
 <div class="column" style="width:70%;">
-<div id="d4a839c8" class="cell" data-execution_count="3">
+<div id="946873b7" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -601,7 +616,7 @@ x-y \leq 0
 <h2>Game Interpretation</h2>
 <div class="columns">
 <div class="column" style="width:70%;">
-<div id="ae5d44a0" class="cell" data-execution_count="4">
+<div id="380026a1" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -621,7 +636,7 @@ x-y \leq 0
 <h2>Game Interpretation</h2>
 <div class="columns">
 <div class="column" style="width:70%;">
-<div id="6898aa83" class="cell" data-execution_count="5">
+<div id="16c764f9" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -641,7 +656,7 @@ x-y \leq 0
 <h2>Game Interpretation</h2>
 <div class="columns">
 <div class="column" style="width:70%;">
-<div id="d0533c6b" class="cell" data-execution_count="6">
+<div id="4b27fb99" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -661,7 +676,7 @@ x-y \leq 0
 <h2>Game Interpretation</h2>
 <div class="columns">
 <div class="column" style="width:70%;">
-<div id="9194eea5" class="cell" data-execution_count="7">
+<div id="ce1936f6" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -699,7 +714,7 @@ x-y \leq 0
 <li>Consider previous problem</li>
 <li>After solving, <code>prob.solution.dual_vars</code></li>
 </ul>
-<div id="25eac3bc" class="cell" data-execution_count="8">
+<div id="bd1cddf3" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>x_var <span class="op">=</span> cvx.Variable()</span>
 <span id="cb1-2"><a></a>y_var <span class="op">=</span> cvx.Variable()</span>
 <span id="cb1-3"><a></a></span>
@@ -768,7 +783,7 @@ h_j(\mathbf{x}) - v_j = 0
 </section>
 <section id="oil-refining-products" class="slide level2">
 <h2>Oil Refining Products</h2>
-<div id="39f3ffa3" class="cell" data-execution_count="9">
+<div id="bf693e27" class="cell" data-execution_count="9">
 <div class="cell-output cell-output-display">
 <div>
 <style scoped="">
@@ -826,7 +841,7 @@ h_j(\mathbf{x}) - v_j = 0
 <ul>
 <li>Crude prices and constraints</li>
 </ul>
-<div id="6ad63c9f" class="cell" data-execution_count="10">
+<div id="5e94fdad" class="cell" data-execution_count="10">
 <div class="cell-output cell-output-display">
 <div>
 <style scoped="">
@@ -874,7 +889,7 @@ h_j(\mathbf{x}) - v_j = 0
 <ul>
 <li>Process Yields and Costs</li>
 </ul>
-<div id="5742a431" class="cell" data-execution_count="11">
+<div id="80d7082e" class="cell" data-execution_count="11">
 <div class="cell-output cell-output-display">
 <div>
 <style scoped="">
@@ -925,30 +940,48 @@ h_j(\mathbf{x}) - v_j = 0
 </section>
 <section id="solving-the-problem" class="slide level2">
 <h2>Solving the Problem</h2>
-<div id="08d2d8b2" class="cell" data-execution_count="12">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="co"># decision variables</span></span>
+<div id="d2e5d47b" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="co"># decision variables, this is a vector of length 2</span></span>
 <span id="cb3-2"><a></a>x <span class="op">=</span> cvx.Variable(<span class="bu">len</span>(crudes.index), pos<span class="op">=</span><span class="va">True</span>, name<span class="op">=</span><span class="st">"crudes"</span>)</span>
 <span id="cb3-3"><a></a></span>
-<span id="cb3-4"><a></a><span class="co"># objective</span></span>
+<span id="cb3-4"><a></a><span class="co"># the objective will be the revenue minus costs</span></span>
 <span id="cb3-5"><a></a></span>
-<span id="cb3-6"><a></a>prods <span class="op">=</span> yields.to_numpy().T <span class="op">@</span> x <span class="op">/</span> <span class="fl">100.0</span></span>
-<span id="cb3-7"><a></a>revenue <span class="op">=</span> products[<span class="st">"price"</span>].to_numpy().T <span class="op">@</span> prods</span>
+<span id="cb3-6"><a></a><span class="co"># The production is the amount of each crude times the yield matrix</span></span>
+<span id="cb3-7"><a></a>prods <span class="op">=</span> yields.to_numpy().T <span class="op">@</span> x <span class="op">/</span> <span class="fl">100.0</span></span>
 <span id="cb3-8"><a></a></span>
-<span id="cb3-9"><a></a>feed_cost <span class="op">=</span> crudes[<span class="st">"price"</span>].to_numpy().T <span class="op">@</span> x</span>
-<span id="cb3-10"><a></a>process_cost <span class="op">=</span> crudes[<span class="st">"process_cost"</span>].to_numpy().T <span class="op">@</span> x</span>
-<span id="cb3-11"><a></a>profit <span class="op">=</span> revenue <span class="op">-</span> feed_cost <span class="op">-</span> process_cost</span>
-<span id="cb3-12"><a></a>objective <span class="op">=</span> cvx.Maximize(profit)</span>
-<span id="cb3-13"><a></a></span>
-<span id="cb3-14"><a></a><span class="co"># constraints</span></span>
-<span id="cb3-15"><a></a>feeds <span class="op">=</span> x <span class="op">&lt;=</span> crudes[<span class="st">"available"</span>].to_numpy()</span>
-<span id="cb3-16"><a></a>capacity <span class="op">=</span> prods <span class="op">&lt;=</span> products[<span class="st">"capacity"</span>].to_numpy()</span>
-<span id="cb3-17"><a></a>constraints <span class="op">=</span> [feeds, capacity]</span>
-<span id="cb3-18"><a></a></span>
-<span id="cb3-19"><a></a><span class="co"># solution</span></span>
-<span id="cb3-20"><a></a>problem <span class="op">=</span> cvx.Problem(objective, constraints)</span>
-<span id="cb3-21"><a></a>problem.solve()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-9"><a></a><span class="co"># To find revenue we sum up the production times the price of each crude</span></span>
+<span id="cb3-10"><a></a></span>
+<span id="cb3-11"><a></a>revenue <span class="op">=</span> products[<span class="st">"price"</span>].to_numpy().T <span class="op">@</span> prods</span>
+<span id="cb3-12"><a></a></span>
+<span id="cb3-13"><a></a><span class="co"># Feed costs are the crude prices times the decision variable, summed up</span></span>
+<span id="cb3-14"><a></a>feed_cost <span class="op">=</span> crudes[<span class="st">"price"</span>].to_numpy().T <span class="op">@</span> x</span>
+<span id="cb3-15"><a></a></span>
+<span id="cb3-16"><a></a><span class="co"># Ditto for the process costs</span></span>
+<span id="cb3-17"><a></a></span>
+<span id="cb3-18"><a></a>process_cost <span class="op">=</span> crudes[<span class="st">"process_cost"</span>].to_numpy().T <span class="op">@</span> x</span>
+<span id="cb3-19"><a></a></span>
+<span id="cb3-20"><a></a><span class="co"># profit </span></span>
+<span id="cb3-21"><a></a></span>
+<span id="cb3-22"><a></a>profit <span class="op">=</span> revenue <span class="op">-</span> feed_cost <span class="op">-</span> process_cost</span>
+<span id="cb3-23"><a></a>objective <span class="op">=</span> cvx.Maximize(profit)</span>
+<span id="cb3-24"><a></a></span>
+<span id="cb3-25"><a></a><span class="co"># constraints: can't use more crude than you have</span></span>
+<span id="cb3-26"><a></a>feeds <span class="op">=</span> x <span class="op">&lt;=</span> crudes[<span class="st">"available"</span>].to_numpy()</span>
+<span id="cb3-27"><a></a></span>
+<span id="cb3-28"><a></a><span class="co"># Can't produce more of each product than the capacity</span></span>
+<span id="cb3-29"><a></a></span>
+<span id="cb3-30"><a></a>capacity <span class="op">=</span> prods <span class="op">&lt;=</span> products[<span class="st">"capacity"</span>].to_numpy()</span>
+<span id="cb3-31"><a></a></span>
+<span id="cb3-32"><a></a><span class="co"># put them together to get all the constraints</span></span>
+<span id="cb3-33"><a></a></span>
+<span id="cb3-34"><a></a>constraints <span class="op">=</span> [feeds, capacity]</span>
+<span id="cb3-35"><a></a></span>
+<span id="cb3-36"><a></a><span class="co"># solve using cvx</span></span>
+<span id="cb3-37"><a></a></span>
+<span id="cb3-38"><a></a>problem <span class="op">=</span> cvx.Problem(objective, constraints)</span>
+<span id="cb3-39"><a></a>problem.solve()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="12">
-<pre><code>860275.8618582088</code></pre>
+<pre><code>np.float64(860275.8618582092)</code></pre>
 </div>
 </div>
 </section>
@@ -957,7 +990,7 @@ h_j(\mathbf{x}) - v_j = 0
 <ul>
 <li>Crude Consumption</li>
 </ul>
-<div id="1471344d" class="cell" data-execution_count="13">
+<div id="96c815b2" class="cell" data-execution_count="13">
 <div class="cell-output cell-output-display">
 <div>
 <style scoped="">
@@ -1011,7 +1044,7 @@ h_j(\mathbf{x}) - v_j = 0
 <ul>
 <li>Product Capacity</li>
 </ul>
-<div id="939df771" class="cell" data-execution_count="14">
+<div id="41771463" class="cell" data-execution_count="14">
 <div class="cell-output cell-output-display">
 <div>
 <style scoped="">
@@ -1081,7 +1114,7 @@ h_j(\mathbf{x}) - v_j = 0
 </section>
 <section id="kerosine-shadow-price" class="slide level2">
 <h2>Kerosine Shadow Price</h2>
-<div id="5015d1d9" class="cell" data-execution_count="15">
+<div id="2c317add" class="cell" data-execution_count="15">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -1108,7 +1141,7 @@ h_j(\mathbf{x}) - v_j = 0
 </section>
 <section id="double-capacity" class="slide level2 smaller">
 <h2>Double Capacity</h2>
-<div id="733a30e4" class="cell" data-execution_count="16">
+<div id="9663536c" class="cell" data-execution_count="16">
 <div class="cell-output cell-output-display">
 <div>
 <style scoped="">
@@ -1233,7 +1266,7 @@ h_j(\mathbf{x}) - v_j = 0
 </section>
 <section id="double-capacity-1" class="slide level2">
 <h2>Double Capacity</h2>
-<div id="574f95d3" class="cell" data-execution_count="17">
+<div id="149945a5" class="cell" data-execution_count="17">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -1248,7 +1281,7 @@ h_j(\mathbf{x}) - v_j = 0
 <ul>
 <li>What if Crude 1 wasn’t available?</li>
 </ul>
-<div id="5d497156" class="cell" data-execution_count="18">
+<div id="107eaa5b" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a>crudes <span class="op">=</span> pd.DataFrame(</span>
 <span id="cb6-2"><a></a>    {</span>
 <span id="cb6-3"><a></a>        <span class="st">"crude 1"</span>: {<span class="st">"available"</span>: <span class="dv">0</span>, <span class="st">"price"</span>: <span class="dv">72</span>, <span class="st">"process_cost"</span>: <span class="fl">1.5</span>},</span>
@@ -1265,7 +1298,7 @@ h_j(\mathbf{x}) - v_j = 0
 <span id="cb6-14"><a></a>problem <span class="op">=</span> cvx.Problem(objective, constraints)</span>
 <span id="cb6-15"><a></a>problem.solve()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="18">
-<pre><code>486000.0001304866</code></pre>
+<pre><code>np.float64(486000.00013048685)</code></pre>
 </div>
 </div>
 </section>
@@ -1274,7 +1307,7 @@ h_j(\mathbf{x}) - v_j = 0
 <ul>
 <li>We are left with tons of spare capacity</li>
 </ul>
-<div id="92fedf1d" class="cell" data-execution_count="19">
+<div id="e72b1143" class="cell" data-execution_count="19">
 <div class="cell-output cell-output-display">
 <div>
 <style scoped="">
@@ -1396,9 +1429,9 @@ h_j(\mathbf{x}) - v_j = 0
 <ul>
 <li>If any capacity is cut to 0, profit cut to 0 as well</li>
 </ul>
-<div id="8323f69f" class="cell" data-execution_count="20">
+<div id="0af27fe6" class="cell" data-execution_count="20">
 <div class="cell-output cell-output-display" data-execution_count="20">
-<pre><code>6.8994302405939854e-09</code></pre>
+<pre><code>np.float64(6.899430240593982e-09)</code></pre>
 </div>
 </div>
 <ul>
@@ -1408,7 +1441,7 @@ h_j(\mathbf{x}) - v_j = 0
 </section>
 <section id="resilience-to-capacity-shocks" class="slide level2">
 <h2>Resilience to Capacity Shocks</h2>
-<div id="0ef2a3f7" class="cell" data-execution_count="22">
+<div id="d8e5b6c0" class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a><span class="co"># Initialize products data frame with decline</span></span>
 <span id="cb9-2"><a></a>products[<span class="st">"obj_loss"</span>] <span class="op">=</span> <span class="fl">0.0</span></span>
 <span id="cb9-3"><a></a></span>
@@ -1439,7 +1472,7 @@ h_j(\mathbf{x}) - v_j = 0
 <ul>
 <li>Let’s look at the objective declines:</li>
 </ul>
-<div id="3b946e65" class="cell" data-execution_count="23">
+<div id="2e6977c5" class="cell" data-execution_count="23">
 <div class="cell-output cell-output-display">
 <pre><code>gasoline    0.410862
 kerosine    0.225974
@@ -1511,9 +1544,52 @@ f^*(\gamma) = \max_{\mathbf{x}} \gamma^T\mathbf{x} - f(\mathbf{x})
 </section>
 <section id="meaning-of-convex-conjugate" class="slide level2">
 <h2>Meaning of Convex Conjugate</h2>
+
+<img data-src="../../home/georgehagstrom/work/Teaching/DATA609/website/meetups/Meetup-12/conjugate1.png" class="r-stretch"></section>
+<section id="meaning-of-convex-conjugate-1" class="slide level2">
+<h2>Meaning of Convex Conjugate</h2>
+
+<img data-src="../../home/georgehagstrom/work/Teaching/DATA609/website/meetups/Meetup-12/conjugate2.png" class="r-stretch"></section>
+<section id="meaning-of-convex-conjugate-2" class="slide level2">
+<h2>Meaning of Convex Conjugate</h2>
+
+<img data-src="../../home/georgehagstrom/work/Teaching/DATA609/website/meetups/Meetup-12/conjugate3.png" class="r-stretch"></section>
+<section id="meaning-of-convex-conjugate-3" class="slide level2">
+<h2>Meaning of Convex Conjugate</h2>
+
+<img data-src="../../home/georgehagstrom/work/Teaching/DATA609/website/meetups/Meetup-12/conjugate4.png" class="r-stretch"></section>
+<section id="meaning-of-convex-conjugate-4" class="slide level2">
+<h2>Meaning of Convex Conjugate</h2>
+
+<img data-src="../../home/georgehagstrom/work/Teaching/DATA609/website/meetups/Meetup-12/conjugate5.png" class="r-stretch"></section>
+<section id="properties-of-convex-conjugate" class="slide level2">
+<h2>Properties of Convex Conjugate</h2>
+<ul>
+<li>It is a convex function</li>
+<li>If <span class="math inline">\(f\)</span> is convex, <span class="math inline">\((f^*)^*=f\)</span></li>
+<li>If function is concave, it is undefined</li>
+</ul>
 </section>
 <section id="convex-conjugate-of-some-functions" class="slide level2">
 <h2>Convex Conjugate of Some Functions</h2>
+<ul>
+<li>Affine Function:</li>
+<li><span class="math inline">\(f(x) = ax + b\)</span></li>
+<li><span class="math inline">\(\mathrm{sup}_x (xy - ax - b)\)</span> is infinity unless the <span class="math inline">\(x\)</span> cancels.</li>
+<li><span class="math inline">\(f^*(y)=b\)</span>, domain is <span class="math inline">\(y\in\{a\}\)</span></li>
+</ul>
+</section>
+<section id="convex-conjugate-of-some-functions-1" class="slide level2">
+<h2>Convex Conjugate of Some Functions</h2>
+<ul>
+<li>Exponential Function:</li>
+<li><span class="math inline">\(f(x) = e^x\)</span></li>
+<li><span class="math inline">\(\mathrm{sup}_x (xy - e^x)\)</span></li>
+<li>if <span class="math inline">\(y&lt;0\)</span> this goes to infinity for negative <span class="math inline">\(x\)</span></li>
+<li>if <span class="math inline">\(y&gt;0\)</span> solve equation <span class="math inline">\(y = e^x\)</span> so <span class="math inline">\(x=\log(y)\)</span></li>
+<li><span class="math inline">\(f^*(y) = y\log(y) - y\)</span></li>
+<li><span class="math inline">\(f^*(0) = 0\)</span></li>
+</ul>
 </section>
 <section id="thanks" class="slide level2">
 <h2>Thanks!</h2>

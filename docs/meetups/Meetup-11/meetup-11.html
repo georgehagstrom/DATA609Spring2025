@@ -753,7 +753,7 @@ f(\mathbf{x}) &gt; 0\,\, \mathrm{if}\,\, \mathbf{x} \in B
 </section>
 <section id="implementation-1" class="slide level2">
 <h2>Implementation</h2>
-<div id="364ee71b" class="cell" data-execution_count="2">
+<div id="c36cf004" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="im">import</span> cvxpy <span class="im">as</span> cp</span>
 <span id="cb1-2"><a></a>n <span class="op">=</span> <span class="dv">20</span></span>
 <span id="cb1-3"><a></a>m <span class="op">=</span> <span class="dv">1000</span></span>
@@ -772,7 +772,7 @@ f(\mathbf{x}) &gt; 0\,\, \mathrm{if}\,\, \mathbf{x} \in B
 </section>
 <section id="testing-regularization" class="slide level2">
 <h2>Testing Regularization</h2>
-<div id="cb951c74" class="cell" data-execution_count="3">
+<div id="0a4f188b" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="co"># Compute a trade-off curve and record train and test error.</span></span>
 <span id="cb2-2"><a></a>TRIALS <span class="op">=</span> <span class="dv">100</span></span>
 <span id="cb2-3"><a></a>train_error <span class="op">=</span> np.zeros(TRIALS)</span>
@@ -792,7 +792,7 @@ f(\mathbf{x}) &gt; 0\,\, \mathrm{if}\,\, \mathbf{x} \in B
 </section>
 <section id="traintest-error" class="slide level2">
 <h2>Train/Test Error</h2>
-<div id="27b2022e" class="cell" data-execution_count="4">
+<div id="b6e996d1" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -804,7 +804,7 @@ f(\mathbf{x}) &gt; 0\,\, \mathrm{if}\,\, \mathbf{x} \in B
 </section>
 <section id="regularization-paths" class="slide level2">
 <h2>Regularization Paths</h2>
-<div id="34d955c1" class="cell" data-execution_count="5">
+<div id="e521124a" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n):</span>
 <span id="cb3-2"><a></a>    plt.plot(lambda_vals, [wi[i,<span class="dv">0</span>] <span class="cf">for</span> wi <span class="kw">in</span> theta_vals])</span>
 <span id="cb3-3"><a></a>plt.xlabel(<span class="vs">r"$\lambda$"</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span>
