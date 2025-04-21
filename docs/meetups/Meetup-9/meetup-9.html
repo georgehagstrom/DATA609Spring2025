@@ -734,7 +734,7 @@ f_i(\mathbf{x}_1)\leq f_i(\mathbf{x}_2)
 </section>
 <section id="ridge-regression-trade-off" class="slide level2">
 <h2>Ridge Regression Trade Off</h2>
-<div id="8739da8e" class="cell" data-execution_count="1">
+<div id="93a6dfd3" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display" data-execution_count="1">
 <pre><code>Text(0, 0.5, 'Mean Square Error')</code></pre>
 </div>
@@ -749,7 +749,7 @@ f_i(\mathbf{x}_1)\leq f_i(\mathbf{x}_2)
 </section>
 <section id="ridge-regression-trade-off-1" class="slide level2">
 <h2>Ridge Regression Trade Off</h2>
-<div id="c752ec62" class="cell" data-execution_count="2">
+<div id="967bc1ff" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="cf">for</span> v <span class="kw">in</span> lambd_values:</span>
 <span id="cb2-2"><a></a>    lambd.value <span class="op">=</span> v</span>
 <span id="cb2-3"><a></a>    problem.solve()</span>
@@ -780,7 +780,7 @@ f_i(\mathbf{x}_1)\leq f_i(\mathbf{x}_2)
 <li>CVX can pick by default</li>
 <li>Or you can specify</li>
 </ul>
-<div id="7b2bc572" class="cell" data-execution_count="3">
+<div id="0659eb79" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="im">import</span> CVYPY <span class="im">as</span> cvx</span>
 <span id="cb3-2"><a></a>cvx.solve(solver<span class="op">=</span><span class="st">"CLARABEL"</span>, </span>
 <span id="cb3-3"><a></a>verbose<span class="op">=</span><span class="va">False</span>, </span>
