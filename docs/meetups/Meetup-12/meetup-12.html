@@ -571,7 +571,18 @@ x-y \leq 0
 </section>
 <section id="game-interpretation-2" class="slide level2">
 <h2>Game Interpretation</h2>
-<div id="0415f794" class="cell" data-execution_count="1">
+<ul>
+<li>Player 2 picks price <span class="math inline">\(\lambda\)</span></li>
+<li>Player 1 picks action <span class="math inline">\(x\)</span> to minimize <span class="math display">\[
+\min_{(x,y)} ( (x+2)^2 + (y-1)^2 + \lambda(x-y))
+\]</span></li>
+<li>Player 1 wants this function as big as possible</li>
+<li>Player 2 wants this function as small as possible</li>
+</ul>
+</section>
+<section id="game-interpretation-3" class="slide level2">
+<h2>Game Interpretation</h2>
+<div id="ce80bd06" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -581,9 +592,9 @@ x-y \leq 0
 </div>
 </div>
 </section>
-<section id="game-interpretation-3" class="slide level2">
+<section id="game-interpretation-4" class="slide level2">
 <h2>Game Interpretation</h2>
-<div id="65ae2580" class="cell" data-execution_count="2">
+<div id="23fd4231" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -593,11 +604,11 @@ x-y \leq 0
 </div>
 </div>
 </section>
-<section id="game-interpretation-4" class="slide level2">
+<section id="game-interpretation-5" class="slide level2">
 <h2>Game Interpretation</h2>
 <div class="columns">
 <div class="column" style="width:70%;">
-<div id="fc3b95ce" class="cell" data-execution_count="3">
+<div id="f0c18f70" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -612,11 +623,11 @@ x-y \leq 0
 </ul>
 </div></div>
 </section>
-<section id="game-interpretation-5" class="slide level2">
+<section id="game-interpretation-6" class="slide level2">
 <h2>Game Interpretation</h2>
 <div class="columns">
 <div class="column" style="width:70%;">
-<div id="5e789fba" class="cell" data-execution_count="4">
+<div id="ec7aa099" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -632,11 +643,11 @@ x-y \leq 0
 </ul>
 </div></div>
 </section>
-<section id="game-interpretation-6" class="slide level2">
+<section id="game-interpretation-7" class="slide level2">
 <h2>Game Interpretation</h2>
 <div class="columns">
 <div class="column" style="width:70%;">
-<div id="4580a264" class="cell" data-execution_count="5">
+<div id="9985a429" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -652,11 +663,11 @@ x-y \leq 0
 </ul>
 </div></div>
 </section>
-<section id="game-interpretation-7" class="slide level2">
+<section id="game-interpretation-8" class="slide level2">
 <h2>Game Interpretation</h2>
 <div class="columns">
 <div class="column" style="width:70%;">
-<div id="07ad96dd" class="cell" data-execution_count="6">
+<div id="ed69cada" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -672,11 +683,11 @@ x-y \leq 0
 </ul>
 </div></div>
 </section>
-<section id="game-interpretation-8" class="slide level2">
+<section id="game-interpretation-9" class="slide level2">
 <h2>Game Interpretation</h2>
 <div class="columns">
 <div class="column" style="width:70%;">
-<div id="1e0b5ee2" class="cell" data-execution_count="7">
+<div id="65b8bb66" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -714,7 +725,7 @@ x-y \leq 0
 <li>Consider previous problem</li>
 <li>After solving, <code>prob.solution.dual_vars</code></li>
 </ul>
-<div id="e856a624" class="cell" data-execution_count="8">
+<div id="44565615" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>x_var <span class="op">=</span> cvx.Variable()</span>
 <span id="cb1-2"><a></a>y_var <span class="op">=</span> cvx.Variable()</span>
 <span id="cb1-3"><a></a></span>
@@ -783,7 +794,7 @@ h_j(\mathbf{x}) - v_j = 0
 </section>
 <section id="oil-refining-products" class="slide level2">
 <h2>Oil Refining Products</h2>
-<div id="f9f43e57" class="cell" data-execution_count="9">
+<div id="f525b446" class="cell" data-execution_count="9">
 <div class="cell-output cell-output-display">
 <div>
 <style scoped="">
@@ -841,7 +852,7 @@ h_j(\mathbf{x}) - v_j = 0
 <ul>
 <li>Crude prices and constraints</li>
 </ul>
-<div id="ec854bd1" class="cell" data-execution_count="10">
+<div id="af896a38" class="cell" data-execution_count="10">
 <div class="cell-output cell-output-display">
 <div>
 <style scoped="">
@@ -889,7 +900,7 @@ h_j(\mathbf{x}) - v_j = 0
 <ul>
 <li>Process Yields and Costs</li>
 </ul>
-<div id="010961ce" class="cell" data-execution_count="11">
+<div id="1e3d1dcd" class="cell" data-execution_count="11">
 <div class="cell-output cell-output-display">
 <div>
 <style scoped="">
@@ -940,7 +951,7 @@ h_j(\mathbf{x}) - v_j = 0
 </section>
 <section id="solving-the-problem" class="slide level2">
 <h2>Solving the Problem</h2>
-<div id="23e45b5a" class="cell" data-execution_count="12">
+<div id="79ef74e0" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="co"># decision variables, this is a vector of length 2</span></span>
 <span id="cb3-2"><a></a>x <span class="op">=</span> cvx.Variable(<span class="bu">len</span>(crudes.index), pos<span class="op">=</span><span class="va">True</span>, name<span class="op">=</span><span class="st">"crudes"</span>)</span>
 <span id="cb3-3"><a></a></span>
@@ -990,7 +1001,7 @@ h_j(\mathbf{x}) - v_j = 0
 <ul>
 <li>Crude Consumption</li>
 </ul>
-<div id="fa2f3a46" class="cell" data-execution_count="13">
+<div id="b4febee4" class="cell" data-execution_count="13">
 <div class="cell-output cell-output-display">
 <div>
 <style scoped="">
@@ -1044,7 +1055,7 @@ h_j(\mathbf{x}) - v_j = 0
 <ul>
 <li>Product Capacity</li>
 </ul>
-<div id="364b657e" class="cell" data-execution_count="14">
+<div id="db1d9f83" class="cell" data-execution_count="14">
 <div class="cell-output cell-output-display">
 <div>
 <style scoped="">
@@ -1114,7 +1125,7 @@ h_j(\mathbf{x}) - v_j = 0
 </section>
 <section id="kerosine-shadow-price" class="slide level2">
 <h2>Kerosine Shadow Price</h2>
-<div id="15838ccc" class="cell" data-execution_count="15">
+<div id="663fbc9e" class="cell" data-execution_count="15">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -1141,7 +1152,7 @@ h_j(\mathbf{x}) - v_j = 0
 </section>
 <section id="double-capacity" class="slide level2 smaller">
 <h2>Double Capacity</h2>
-<div id="02500dd0" class="cell" data-execution_count="16">
+<div id="e74f7a97" class="cell" data-execution_count="16">
 <div class="cell-output cell-output-display">
 <div>
 <style scoped="">
@@ -1266,7 +1277,7 @@ h_j(\mathbf{x}) - v_j = 0
 </section>
 <section id="double-capacity-1" class="slide level2">
 <h2>Double Capacity</h2>
-<div id="2bfa1823" class="cell" data-execution_count="17">
+<div id="4e2893cd" class="cell" data-execution_count="17">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -1281,7 +1292,7 @@ h_j(\mathbf{x}) - v_j = 0
 <ul>
 <li>What if Crude 1 wasn’t available?</li>
 </ul>
-<div id="ed4f7576" class="cell" data-execution_count="18">
+<div id="196e14bc" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a>crudes <span class="op">=</span> pd.DataFrame(</span>
 <span id="cb6-2"><a></a>    {</span>
 <span id="cb6-3"><a></a>        <span class="st">"crude 1"</span>: {<span class="st">"available"</span>: <span class="dv">0</span>, <span class="st">"price"</span>: <span class="dv">72</span>, <span class="st">"process_cost"</span>: <span class="fl">1.5</span>},</span>
@@ -1307,7 +1318,7 @@ h_j(\mathbf{x}) - v_j = 0
 <ul>
 <li>We are left with tons of spare capacity</li>
 </ul>
-<div id="4e706348" class="cell" data-execution_count="19">
+<div id="856af3cc" class="cell" data-execution_count="19">
 <div class="cell-output cell-output-display">
 <div>
 <style scoped="">
@@ -1429,7 +1440,7 @@ h_j(\mathbf{x}) - v_j = 0
 <ul>
 <li>If any capacity is cut to 0, profit cut to 0 as well</li>
 </ul>
-<div id="ca390dcd" class="cell" data-execution_count="20">
+<div id="6b8ca94b" class="cell" data-execution_count="20">
 <div class="cell-output cell-output-display" data-execution_count="20">
 <pre><code>6.8994302405939854e-09</code></pre>
 </div>
@@ -1441,7 +1452,7 @@ h_j(\mathbf{x}) - v_j = 0
 </section>
 <section id="resilience-to-capacity-shocks" class="slide level2">
 <h2>Resilience to Capacity Shocks</h2>
-<div id="ebdb6538" class="cell" data-execution_count="22">
+<div id="50abd015" class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a><span class="co"># Initialize products data frame with decline</span></span>
 <span id="cb9-2"><a></a>products[<span class="st">"obj_loss"</span>] <span class="op">=</span> <span class="fl">0.0</span></span>
 <span id="cb9-3"><a></a></span>
@@ -1472,7 +1483,7 @@ h_j(\mathbf{x}) - v_j = 0
 <ul>
 <li>Let’s look at the objective declines:</li>
 </ul>
-<div id="2d281af3" class="cell" data-execution_count="23">
+<div id="505a7b1f" class="cell" data-execution_count="23">
 <div class="cell-output cell-output-display">
 <pre><code>gasoline    0.410862
 kerosine    0.225974
@@ -1545,23 +1556,23 @@ f^*(\gamma) = \max_{\mathbf{x}} \gamma^T\mathbf{x} - f(\mathbf{x})
 <section id="meaning-of-convex-conjugate" class="slide level2">
 <h2>Meaning of Convex Conjugate</h2>
 
-<img data-src="../../home/georgehagstrom/work/Teaching/DATA609/website/meetups/Meetup-12/conjugate1.png" class="r-stretch"></section>
+<img data-src="conjugate1.png" class="r-stretch"></section>
 <section id="meaning-of-convex-conjugate-1" class="slide level2">
 <h2>Meaning of Convex Conjugate</h2>
 
-<img data-src="../../home/georgehagstrom/work/Teaching/DATA609/website/meetups/Meetup-12/conjugate2.png" class="r-stretch"></section>
+<img data-src="conjugate2.png" class="r-stretch"></section>
 <section id="meaning-of-convex-conjugate-2" class="slide level2">
 <h2>Meaning of Convex Conjugate</h2>
 
-<img data-src="../../home/georgehagstrom/work/Teaching/DATA609/website/meetups/Meetup-12/conjugate3.png" class="r-stretch"></section>
+<img data-src="conjugate3.png" class="r-stretch"></section>
 <section id="meaning-of-convex-conjugate-3" class="slide level2">
 <h2>Meaning of Convex Conjugate</h2>
 
-<img data-src="../../home/georgehagstrom/work/Teaching/DATA609/website/meetups/Meetup-12/conjugate4.png" class="r-stretch"></section>
+<img data-src="conjugate4.png" class="r-stretch"></section>
 <section id="meaning-of-convex-conjugate-4" class="slide level2">
 <h2>Meaning of Convex Conjugate</h2>
 
-<img data-src="../../home/georgehagstrom/work/Teaching/DATA609/website/meetups/Meetup-12/conjugate5.png" class="r-stretch"></section>
+<img data-src="conjugate5.png" class="r-stretch"></section>
 <section id="properties-of-convex-conjugate" class="slide level2">
 <h2>Properties of Convex Conjugate</h2>
 <ul>
