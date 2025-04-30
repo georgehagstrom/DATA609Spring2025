@@ -435,7 +435,7 @@ George I. Hagstrom
 <h2>Non-Convex Optimization</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div id="8e58908c" class="cell" data-execution_count="3">
+<div id="151afc83" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -456,7 +456,7 @@ George I. Hagstrom
 <h2>Non-Convex Optimization</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div id="dc03bbe7" class="cell" data-execution_count="4">
+<div id="5a5d16c8" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -505,7 +505,7 @@ George I. Hagstrom
 </ul>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div id="3cfd87ff" class="cell" data-execution_count="5">
+<div id="763a86a3" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -535,15 +535,18 @@ George I. Hagstrom
 <li>Introduce “velocity” variable <span class="math display">\[
 \mathbf{x}_{i+1} = \mathbf{x}_i - \mathbf{v}_i
 \]</span></li>
-<li>Gradient drives velocity, momentum provides memory: <span class="math display">\[
+<li>Gradient drives velocity, momentum provides memory:</li>
+</ul>
+<p><span class="math display">\[
 \mathbf{v}_{i+1} = \kappa\nabla f(\mathbf{x})_i + \beta \mathbf{v}_i
-\]</span></li>
+\]</span></p>
+<ul>
 <li>Oscillations damp due to memory</li>
 </ul>
 </section>
 <section id="gd-with-momentum" class="slide level2">
 <h2>GD with Momentum</h2>
-<div id="fc01144c" class="cell" data-execution_count="6">
+<div id="d6e31b83" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="kw">def</span> gd_with_mom(grad, init, n_epochs<span class="op">=</span><span class="dv">5000</span>, eta<span class="op">=</span><span class="dv">10</span><span class="op">**-</span><span class="dv">4</span>, beta<span class="op">=</span><span class="fl">0.9</span>,gamma<span class="op">=</span><span class="fl">0.9</span>):</span>
 <span id="cb1-2"><a></a>    params<span class="op">=</span>np.array(init) <span class="co"># Start with initial condition</span></span>
 <span id="cb1-3"><a></a>    param_traj<span class="op">=</span>np.zeros([n_epochs<span class="op">+</span><span class="dv">1</span>,<span class="dv">2</span>]) <span class="co"># Save the entire trajecotry</span></span>
@@ -565,7 +568,7 @@ George I. Hagstrom
 <h2>GD with Momentum</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div id="258b071b" class="cell" data-execution_count="7">
+<div id="f8186197" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -575,7 +578,7 @@ George I. Hagstrom
 </div>
 </div>
 </div><div class="column" style="width:50%;">
-<div id="2f2a78c0" class="cell" data-execution_count="8">
+<div id="7b07be24" class="cell" data-execution_count="8">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -617,7 +620,7 @@ George I. Hagstrom
 <ul>
 <li>Common for optimization algorithms to “get stuck”</li>
 </ul>
-<div id="7811d2f8" class="cell" data-execution_count="9">
+<div id="c821d153" class="cell" data-execution_count="9">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -632,7 +635,7 @@ George I. Hagstrom
 <ul>
 <li>In low-D local minima are problematic</li>
 </ul>
-<div id="a0724659" class="cell" data-execution_count="10">
+<div id="882672ba" class="cell" data-execution_count="10">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -647,7 +650,7 @@ George I. Hagstrom
 <ul>
 <li>Trajectories get Stuck</li>
 </ul>
-<div id="6d6d4d81" class="cell" data-execution_count="11">
+<div id="d58c915d" class="cell" data-execution_count="11">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -671,7 +674,7 @@ George I. Hagstrom
 </section>
 <section id="stochastic-gradient-descent-4" class="slide level2">
 <h2>Stochastic Gradient Descent</h2>
-<div id="7225d666" class="cell" data-execution_count="12">
+<div id="f38b7c8e" class="cell" data-execution_count="12">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -686,7 +689,7 @@ George I. Hagstrom
 <ul>
 <li>In 2D, can just add noise</li>
 </ul>
-<div id="d3782d0b" class="cell" data-execution_count="13">
+<div id="5404f7df" class="cell" data-execution_count="13">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -743,8 +746,10 @@ George I. Hagstrom
 <li>Memory parameters <span class="math inline">\(\beta\)</span> and <span class="math inline">\(\gamma\)</span> determine how fast ADAM forgets old values of gradient</li>
 <li>Update moments as follows:</li>
 </ul>
-<p>$$ _{i+1} = (1-)f(_i) + <em>i \ G</em>{s,i+1} = (1-)f(<em>i)^2 + G</em>{s,i}</p>
-<p>$$</p>
+<p><span class="math display">\[
+\mathbf{v}_{i+1} = (1-\gamma)\nabla f(\mathbf{x}_i) + \gamma\mathbf{v}_i \\
+G_{s,i+1} = (1-\beta)\nabla f(\mathbf{x}_i)^2 + \beta G_{s,i}
+\]</span></p>
 </section>
 <section id="bias-correction" class="slide level2">
 <h2>Bias Correction</h2>
@@ -758,7 +763,7 @@ George I. Hagstrom
 </section>
 <section id="simple-adam-code" class="slide level2">
 <h2>Simple ADAM Code</h2>
-<div id="6909ea72" class="cell" data-execution_count="14">
+<div id="241845fd" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="kw">def</span> adams(grad, init, n_epochs<span class="op">=</span><span class="dv">5000</span>, eta<span class="op">=</span><span class="dv">10</span><span class="op">**-</span><span class="dv">4</span>, gamma<span class="op">=</span><span class="fl">0.9</span>, beta<span class="op">=</span><span class="fl">0.99</span>,epsilon<span class="op">=</span><span class="dv">10</span><span class="op">**-</span><span class="dv">8</span>):</span>
 <span id="cb2-2"><a></a>    params<span class="op">=</span>np.array(init)</span>
 <span id="cb2-3"><a></a>    param_traj<span class="op">=</span>np.zeros([n_epochs<span class="op">+</span><span class="dv">1</span>,<span class="dv">2</span>])</span>

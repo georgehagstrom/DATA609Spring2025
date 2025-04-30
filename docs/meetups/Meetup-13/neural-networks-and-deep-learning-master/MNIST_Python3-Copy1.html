@@ -5168,7 +5168,7 @@ Epoch 29: 766 / 10000</code></pre>
 <pre><code>&lt;__main__.Network at 0x7566664eb790&gt;</code></pre>
 </div>
 </div>
-<div id="a0a67090-bf1a-4df5-a8ac-f4cba8a0f63d" class="cell" data-execution_count="47">
+<div id="a0a67090-bf1a-4df5-a8ac-f4cba8a0f63d" class="cell" data-execution_count="144">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch.nn <span class="im">as</span> nn</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch.nn.functional <span class="im">as</span> F</span>
@@ -5182,115 +5182,128 @@ Epoch 29: 766 / 10000</code></pre>
 <span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>        </span>
 <span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.layers <span class="op">=</span> nn.ModuleList()</span>
 <span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="va">self</span>.num_layers <span class="op">-</span> <span class="dv">1</span>):</span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.layers.append(nn.Linear(sizes[i], sizes[i<span class="op">+</span><span class="dv">1</span>]))</span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.<span class="bu">apply</span>(<span class="va">self</span>.init_weights)</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>            layer <span class="op">=</span> nn.Linear(sizes[i], sizes[i<span class="op">+</span><span class="dv">1</span>])</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>            nn.init.xavier_normal_(layer.weight)   <span class="co"># Xavier initialization</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>            <span class="co">#nn.init.xavier_uniform_(layer.weight)   # Xavier initialization</span></span>
 <span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> forward(<span class="va">self</span>, x):</span>
-<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> layer <span class="kw">in</span> <span class="va">self</span>.layers[:<span class="op">-</span><span class="dv">1</span>]:</span>
-<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>            x <span class="op">=</span> F.relu(layer(x))   <span class="co"># hidden layers </span></span>
-<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> F.softmax(<span class="va">self</span>.layers[<span class="op">-</span><span class="dv">1</span>](x), dim<span class="op">=</span><span class="dv">1</span>)  <span class="co"># softmax output </span></span>
-<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> x</span>
-<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> init_weights(<span class="va">self</span>, m):</span>
-<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="bu">isinstance</span>(m, nn.Linear):</span>
-<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>            nn.init.kaiming_normal_(m.weight, mode<span class="op">=</span><span class="st">&#39;fan_out&#39;</span>, nonlinearity<span class="op">=</span><span class="st">&#39;relu&#39;</span>)</span>
-<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> m.bias <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span>:</span>
-<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>                nn.init.zeros_(m.bias)</span>
-<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>            <span class="co">#nn.init.kaiming_normal_(layer.weight, mode=&#39;fan_out&#39;, nonlinearity=&#39;relu&#39;)</span></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>            nn.init.zeros_(layer.bias)               <span class="co"># Bias to zero</span></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.layers.append(layer)</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> forward(<span class="va">self</span>, x):</span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> layer <span class="kw">in</span> <span class="va">self</span>.layers[:<span class="op">-</span><span class="dv">1</span>]:</span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>            x <span class="op">=</span> F.sigmoid(layer(x))   <span class="co"># hidden layers </span></span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> <span class="va">self</span>.layers[<span class="op">-</span><span class="dv">1</span>](x) </span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>        <span class="co"># x = F.softmax(self.layers[-1](x), dim=1)  # softmax output </span></span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> x</span>
 <span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> train(network, train_data, epochs, mini_batch_size, eta, test_data<span class="op">=</span><span class="va">None</span>):</span>
-<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>    step_size <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>    gamma <span class="op">=</span> <span class="fl">0.7</span></span>
-<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>    optimizer <span class="op">=</span> optim.SGD(network.parameters(), lr<span class="op">=</span>eta,weight_decay<span class="op">=</span><span class="fl">1e-5</span>,momentum<span class="op">=</span><span class="fl">0.7</span>)</span>
-<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a>    step_size <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a>    gamma <span class="op">=</span> <span class="fl">0.7</span></span>
-<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a>    scheduler <span class="op">=</span> optim.lr_scheduler.StepLR(optimizer, step_size<span class="op">=</span>step_size, gamma<span class="op">=</span>gamma)</span>
-<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a>    loss_fn <span class="op">=</span> nn.CrossEntropyLoss()</span>
-<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb7-48"><a href="#cb7-48" aria-hidden="true" tabindex="-1"></a>    loss_history <span class="op">=</span> []      <span class="co"># to store average loss per epoch</span></span>
-<span id="cb7-49"><a href="#cb7-49" aria-hidden="true" tabindex="-1"></a>    accuracy_history <span class="op">=</span> []  <span class="co"># to store test accuracy per epoch</span></span>
-<span id="cb7-50"><a href="#cb7-50" aria-hidden="true" tabindex="-1"></a>    grad_norm_history <span class="op">=</span> [] <span class="co"># to store gradient norms per epoch</span></span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> init_weights(<span class="va">self</span>, m):</span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="bu">isinstance</span>(m, nn.Linear):</span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>            <span class="co">#nn.init.kaiming_normal_(m.weight, mode=&#39;fan_out&#39;, nonlinearity=&#39;relu&#39;)</span></span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>            <span class="co">#nn.init.xavier_uniform_(m.weight)   # Xavier initialization</span></span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> m.bias <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span>:</span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>                nn.init.zeros_(m.bias)</span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> train(network, train_data, epochs, mini_batch_size, eta, test_data<span class="op">=</span><span class="va">None</span>):</span>
+<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a>    step_size <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb7-48"><a href="#cb7-48" aria-hidden="true" tabindex="-1"></a>    gamma <span class="op">=</span> <span class="fl">0.7</span></span>
+<span id="cb7-49"><a href="#cb7-49" aria-hidden="true" tabindex="-1"></a>    <span class="co">#optimizer = optim.SGD(network.parameters(), lr=eta,weight_decay=1e-5,momentum=0.7)</span></span>
+<span id="cb7-50"><a href="#cb7-50" aria-hidden="true" tabindex="-1"></a>    optimizer <span class="op">=</span> optim.Adam(network.parameters(),betas <span class="op">=</span> (<span class="fl">0.9</span>, <span class="fl">0.999</span>),lr<span class="op">=</span>eta,weight_decay<span class="op">=</span><span class="fl">1e-5</span>)</span>
 <span id="cb7-51"><a href="#cb7-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-52"><a href="#cb7-52" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> epoch <span class="kw">in</span> <span class="bu">range</span>(epochs):</span>
-<span id="cb7-53"><a href="#cb7-53" aria-hidden="true" tabindex="-1"></a>        network.train()</span>
-<span id="cb7-54"><a href="#cb7-54" aria-hidden="true" tabindex="-1"></a>        running_loss <span class="op">=</span> <span class="fl">0.0</span></span>
-<span id="cb7-55"><a href="#cb7-55" aria-hidden="true" tabindex="-1"></a>        batch_count <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb7-56"><a href="#cb7-56" aria-hidden="true" tabindex="-1"></a>        total_grad_norm <span class="op">=</span> <span class="fl">0.0</span></span>
-<span id="cb7-57"><a href="#cb7-57" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb7-58"><a href="#cb7-58" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> data, target <span class="kw">in</span> train_data:</span>
-<span id="cb7-59"><a href="#cb7-59" aria-hidden="true" tabindex="-1"></a>            optimizer.zero_grad()</span>
-<span id="cb7-60"><a href="#cb7-60" aria-hidden="true" tabindex="-1"></a>            output <span class="op">=</span> network(data)</span>
-<span id="cb7-61"><a href="#cb7-61" aria-hidden="true" tabindex="-1"></a>            loss <span class="op">=</span> loss_fn(output, target)</span>
-<span id="cb7-62"><a href="#cb7-62" aria-hidden="true" tabindex="-1"></a>            loss.backward()</span>
-<span id="cb7-63"><a href="#cb7-63" aria-hidden="true" tabindex="-1"></a>            </span>
-<span id="cb7-64"><a href="#cb7-64" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Compute gradient norm (L2 norm)</span></span>
-<span id="cb7-65"><a href="#cb7-65" aria-hidden="true" tabindex="-1"></a>            grad_norm <span class="op">=</span> <span class="bu">sum</span>(p.grad.norm()<span class="op">**</span><span class="dv">2</span> <span class="cf">for</span> p <span class="kw">in</span> network.parameters() <span class="cf">if</span> p.grad <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span>).sqrt()</span>
-<span id="cb7-66"><a href="#cb7-66" aria-hidden="true" tabindex="-1"></a>            total_grad_norm <span class="op">+=</span> grad_norm.item()</span>
-<span id="cb7-67"><a href="#cb7-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-68"><a href="#cb7-68" aria-hidden="true" tabindex="-1"></a>            optimizer.step()</span>
-<span id="cb7-69"><a href="#cb7-69" aria-hidden="true" tabindex="-1"></a>            </span>
-<span id="cb7-70"><a href="#cb7-70" aria-hidden="true" tabindex="-1"></a>            running_loss <span class="op">+=</span> loss.item()</span>
-<span id="cb7-71"><a href="#cb7-71" aria-hidden="true" tabindex="-1"></a>            batch_count <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb7-72"><a href="#cb7-72" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb7-73"><a href="#cb7-73" aria-hidden="true" tabindex="-1"></a>        avg_loss <span class="op">=</span> running_loss <span class="op">/</span> batch_count</span>
-<span id="cb7-74"><a href="#cb7-74" aria-hidden="true" tabindex="-1"></a>        loss_history.append(avg_loss)</span>
-<span id="cb7-75"><a href="#cb7-75" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb7-76"><a href="#cb7-76" aria-hidden="true" tabindex="-1"></a>        avg_grad_norm <span class="op">=</span> total_grad_norm <span class="op">/</span> batch_count</span>
-<span id="cb7-77"><a href="#cb7-77" aria-hidden="true" tabindex="-1"></a>        grad_norm_history.append(avg_grad_norm)</span>
-<span id="cb7-78"><a href="#cb7-78" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-79"><a href="#cb7-79" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Evaluate test accuracy if test data is provided</span></span>
-<span id="cb7-80"><a href="#cb7-80" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> test_data:</span>
-<span id="cb7-81"><a href="#cb7-81" aria-hidden="true" tabindex="-1"></a>            acc <span class="op">=</span> evaluate(network, test_data)</span>
-<span id="cb7-82"><a href="#cb7-82" aria-hidden="true" tabindex="-1"></a>            accuracy_history.append(acc)</span>
-<span id="cb7-83"><a href="#cb7-83" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f&quot;Epoch </span><span class="sc">{</span>epoch<span class="op">+</span><span class="dv">1</span><span class="sc">}</span><span class="ss">: Avg loss: </span><span class="sc">{</span>avg_loss<span class="sc">:.4f}</span><span class="ss"> | Test Accuracy: </span><span class="sc">{</span>acc<span class="sc">:.2f}</span><span class="ss">% | Grad Norm: </span><span class="sc">{</span>avg_grad_norm<span class="sc">:.4f}</span><span class="ss">&quot;</span>)</span>
-<span id="cb7-84"><a href="#cb7-84" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
-<span id="cb7-85"><a href="#cb7-85" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f&quot;Epoch </span><span class="sc">{</span>epoch<span class="op">+</span><span class="dv">1</span><span class="sc">}</span><span class="ss">: Avg loss: </span><span class="sc">{</span>avg_loss<span class="sc">:.4f}</span><span class="ss"> | Grad Norm: </span><span class="sc">{</span>avg_grad_norm<span class="sc">:.4f}</span><span class="ss">&quot;</span>)</span>
-<span id="cb7-86"><a href="#cb7-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-87"><a href="#cb7-87" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> loss_history, accuracy_history, grad_norm_history</span>
+<span id="cb7-52"><a href="#cb7-52" aria-hidden="true" tabindex="-1"></a>    step_size <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb7-53"><a href="#cb7-53" aria-hidden="true" tabindex="-1"></a>    gamma <span class="op">=</span> <span class="fl">0.7</span></span>
+<span id="cb7-54"><a href="#cb7-54" aria-hidden="true" tabindex="-1"></a>    <span class="co">#scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=step_size, gamma=gamma)</span></span>
+<span id="cb7-55"><a href="#cb7-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-56"><a href="#cb7-56" aria-hidden="true" tabindex="-1"></a>    loss_fn <span class="op">=</span> nn.CrossEntropyLoss()</span>
+<span id="cb7-57"><a href="#cb7-57" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-58"><a href="#cb7-58" aria-hidden="true" tabindex="-1"></a>    loss_history <span class="op">=</span> []      <span class="co"># to store average loss per epoch</span></span>
+<span id="cb7-59"><a href="#cb7-59" aria-hidden="true" tabindex="-1"></a>    accuracy_history <span class="op">=</span> []  <span class="co"># to store test accuracy per epoch</span></span>
+<span id="cb7-60"><a href="#cb7-60" aria-hidden="true" tabindex="-1"></a>    grad_norm_history <span class="op">=</span> [] <span class="co"># to store gradient norms per epoch</span></span>
+<span id="cb7-61"><a href="#cb7-61" aria-hidden="true" tabindex="-1"></a>    train_accuracy_history <span class="op">=</span> []</span>
+<span id="cb7-62"><a href="#cb7-62" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> epoch <span class="kw">in</span> <span class="bu">range</span>(epochs):</span>
+<span id="cb7-63"><a href="#cb7-63" aria-hidden="true" tabindex="-1"></a>        network.train()</span>
+<span id="cb7-64"><a href="#cb7-64" aria-hidden="true" tabindex="-1"></a>        running_loss <span class="op">=</span> <span class="fl">0.0</span></span>
+<span id="cb7-65"><a href="#cb7-65" aria-hidden="true" tabindex="-1"></a>        batch_count <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb7-66"><a href="#cb7-66" aria-hidden="true" tabindex="-1"></a>        total_grad_norm <span class="op">=</span> <span class="fl">0.0</span></span>
+<span id="cb7-67"><a href="#cb7-67" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb7-68"><a href="#cb7-68" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> data, target <span class="kw">in</span> train_data:</span>
+<span id="cb7-69"><a href="#cb7-69" aria-hidden="true" tabindex="-1"></a>            optimizer.zero_grad()</span>
+<span id="cb7-70"><a href="#cb7-70" aria-hidden="true" tabindex="-1"></a>            output <span class="op">=</span> network(data)</span>
+<span id="cb7-71"><a href="#cb7-71" aria-hidden="true" tabindex="-1"></a>            loss <span class="op">=</span> loss_fn(output, target)</span>
+<span id="cb7-72"><a href="#cb7-72" aria-hidden="true" tabindex="-1"></a>            loss.backward()</span>
+<span id="cb7-73"><a href="#cb7-73" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb7-74"><a href="#cb7-74" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Compute gradient norm (L2 norm)</span></span>
+<span id="cb7-75"><a href="#cb7-75" aria-hidden="true" tabindex="-1"></a>            grad_norm <span class="op">=</span> <span class="bu">sum</span>(p.grad.norm()<span class="op">**</span><span class="dv">2</span> <span class="cf">for</span> p <span class="kw">in</span> network.parameters() <span class="cf">if</span> p.grad <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span>).sqrt()</span>
+<span id="cb7-76"><a href="#cb7-76" aria-hidden="true" tabindex="-1"></a>            total_grad_norm <span class="op">+=</span> grad_norm.item()</span>
+<span id="cb7-77"><a href="#cb7-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-78"><a href="#cb7-78" aria-hidden="true" tabindex="-1"></a>            optimizer.step()</span>
+<span id="cb7-79"><a href="#cb7-79" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb7-80"><a href="#cb7-80" aria-hidden="true" tabindex="-1"></a>            running_loss <span class="op">+=</span> loss.item()</span>
+<span id="cb7-81"><a href="#cb7-81" aria-hidden="true" tabindex="-1"></a>            batch_count <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb7-82"><a href="#cb7-82" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb7-83"><a href="#cb7-83" aria-hidden="true" tabindex="-1"></a>        avg_loss <span class="op">=</span> running_loss <span class="op">/</span> batch_count</span>
+<span id="cb7-84"><a href="#cb7-84" aria-hidden="true" tabindex="-1"></a>        loss_history.append(avg_loss)</span>
+<span id="cb7-85"><a href="#cb7-85" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb7-86"><a href="#cb7-86" aria-hidden="true" tabindex="-1"></a>        avg_grad_norm <span class="op">=</span> total_grad_norm <span class="op">/</span> batch_count</span>
+<span id="cb7-87"><a href="#cb7-87" aria-hidden="true" tabindex="-1"></a>        grad_norm_history.append(avg_grad_norm)</span>
 <span id="cb7-88"><a href="#cb7-88" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-89"><a href="#cb7-89" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-90"><a href="#cb7-90" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-91"><a href="#cb7-91" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> evaluate(network, test_data):</span>
-<span id="cb7-92"><a href="#cb7-92" aria-hidden="true" tabindex="-1"></a>    network.<span class="bu">eval</span>()</span>
-<span id="cb7-93"><a href="#cb7-93" aria-hidden="true" tabindex="-1"></a>    correct <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb7-94"><a href="#cb7-94" aria-hidden="true" tabindex="-1"></a>    total <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb7-95"><a href="#cb7-95" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> torch.no_grad():</span>
-<span id="cb7-96"><a href="#cb7-96" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> data, target <span class="kw">in</span> test_data:</span>
-<span id="cb7-97"><a href="#cb7-97" aria-hidden="true" tabindex="-1"></a>            output <span class="op">=</span> network(data)</span>
-<span id="cb7-98"><a href="#cb7-98" aria-hidden="true" tabindex="-1"></a>            pred <span class="op">=</span> output.argmax(dim<span class="op">=</span><span class="dv">1</span>, keepdim<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb7-99"><a href="#cb7-99" aria-hidden="true" tabindex="-1"></a>            correct <span class="op">+=</span> pred.eq(target.view_as(pred)).<span class="bu">sum</span>().item()</span>
-<span id="cb7-100"><a href="#cb7-100" aria-hidden="true" tabindex="-1"></a>            total <span class="op">+=</span> data.size(<span class="dv">0</span>)</span>
-<span id="cb7-101"><a href="#cb7-101" aria-hidden="true" tabindex="-1"></a>    acc <span class="op">=</span> <span class="fl">100.</span> <span class="op">*</span> correct <span class="op">/</span> total</span>
-<span id="cb7-102"><a href="#cb7-102" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;Test Accuracy: </span><span class="sc">{</span>acc<span class="sc">:.2f}</span><span class="ss">%&quot;</span>)</span>
-<span id="cb7-103"><a href="#cb7-103" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> acc</span>
-<span id="cb7-104"><a href="#cb7-104" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-105"><a href="#cb7-105" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-106"><a href="#cb7-106" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> compute_layer_gradient_norms(model):</span>
-<span id="cb7-107"><a href="#cb7-107" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;</span></span>
-<span id="cb7-108"><a href="#cb7-108" aria-hidden="true" tabindex="-1"></a><span class="co">    Compute the 2-norm of the gradients for each layer in a PyTorch model.</span></span>
-<span id="cb7-109"><a href="#cb7-109" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
-<span id="cb7-110"><a href="#cb7-110" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
-<span id="cb7-111"><a href="#cb7-111" aria-hidden="true" tabindex="-1"></a><span class="co">        A list of (layer_name, gradient_norm) tuples.</span></span>
-<span id="cb7-112"><a href="#cb7-112" aria-hidden="true" tabindex="-1"></a><span class="co">    &quot;&quot;&quot;</span></span>
-<span id="cb7-113"><a href="#cb7-113" aria-hidden="true" tabindex="-1"></a>    layer_grad_norms <span class="op">=</span> []</span>
-<span id="cb7-114"><a href="#cb7-114" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-115"><a href="#cb7-115" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> name, param <span class="kw">in</span> model.named_parameters():</span>
-<span id="cb7-116"><a href="#cb7-116" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> param.grad <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span>:</span>
-<span id="cb7-117"><a href="#cb7-117" aria-hidden="true" tabindex="-1"></a>            grad_norm <span class="op">=</span> param.grad.data.norm(<span class="dv">2</span>).item()</span>
-<span id="cb7-118"><a href="#cb7-118" aria-hidden="true" tabindex="-1"></a>            layer_grad_norms.append((name, grad_norm))</span>
-<span id="cb7-119"><a href="#cb7-119" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
-<span id="cb7-120"><a href="#cb7-120" aria-hidden="true" tabindex="-1"></a>            layer_grad_norms.append((name, <span class="fl">0.0</span>))  <span class="co"># No gradient yet</span></span>
-<span id="cb7-121"><a href="#cb7-121" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-122"><a href="#cb7-122" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> layer_grad_norms</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-89"><a href="#cb7-89" aria-hidden="true" tabindex="-1"></a>        train_acc <span class="op">=</span> evaluate(network,train_data)</span>
+<span id="cb7-90"><a href="#cb7-90" aria-hidden="true" tabindex="-1"></a>        train_accuracy_history.append(train_acc)</span>
+<span id="cb7-91"><a href="#cb7-91" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb7-92"><a href="#cb7-92" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Evaluate test accuracy if test data is provided</span></span>
+<span id="cb7-93"><a href="#cb7-93" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> test_data:</span>
+<span id="cb7-94"><a href="#cb7-94" aria-hidden="true" tabindex="-1"></a>            acc <span class="op">=</span> evaluate(network, test_data)</span>
+<span id="cb7-95"><a href="#cb7-95" aria-hidden="true" tabindex="-1"></a>            accuracy_history.append(acc)</span>
+<span id="cb7-96"><a href="#cb7-96" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f&quot;Epoch </span><span class="sc">{</span>epoch<span class="op">+</span><span class="dv">1</span><span class="sc">}</span><span class="ss">: Avg loss: </span><span class="sc">{</span>avg_loss<span class="sc">:.4f}</span><span class="ss"> | Train Accuracy: </span><span class="sc">{</span>train_acc<span class="sc">:.2f}</span><span class="ss">% | Test Accuracy: </span><span class="sc">{</span>acc<span class="sc">:.2f}</span><span class="ss">% | Grad Norm: </span><span class="sc">{</span>avg_grad_norm<span class="sc">:.4f}</span><span class="ss">&quot;</span>)</span>
+<span id="cb7-97"><a href="#cb7-97" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb7-98"><a href="#cb7-98" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f&quot;Epoch </span><span class="sc">{</span>epoch<span class="op">+</span><span class="dv">1</span><span class="sc">}</span><span class="ss">: Avg loss: </span><span class="sc">{</span>avg_loss<span class="sc">:.4f}</span><span class="ss"> | Grad Norm: </span><span class="sc">{</span>avg_grad_norm<span class="sc">:.4f}</span><span class="ss">&quot;</span>)</span>
+<span id="cb7-99"><a href="#cb7-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-100"><a href="#cb7-100" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> loss_history, train_accuracy_history, accuracy_history, grad_norm_history</span>
+<span id="cb7-101"><a href="#cb7-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-102"><a href="#cb7-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-103"><a href="#cb7-103" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-104"><a href="#cb7-104" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> evaluate(network, test_data):</span>
+<span id="cb7-105"><a href="#cb7-105" aria-hidden="true" tabindex="-1"></a>    network.<span class="bu">eval</span>()</span>
+<span id="cb7-106"><a href="#cb7-106" aria-hidden="true" tabindex="-1"></a>    correct <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb7-107"><a href="#cb7-107" aria-hidden="true" tabindex="-1"></a>    total <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb7-108"><a href="#cb7-108" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> torch.no_grad():</span>
+<span id="cb7-109"><a href="#cb7-109" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> data, target <span class="kw">in</span> test_data:</span>
+<span id="cb7-110"><a href="#cb7-110" aria-hidden="true" tabindex="-1"></a>            output <span class="op">=</span> network(data)</span>
+<span id="cb7-111"><a href="#cb7-111" aria-hidden="true" tabindex="-1"></a>            pred <span class="op">=</span> output.argmax(dim<span class="op">=</span><span class="dv">1</span>, keepdim<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb7-112"><a href="#cb7-112" aria-hidden="true" tabindex="-1"></a>            correct <span class="op">+=</span> pred.eq(target.view_as(pred)).<span class="bu">sum</span>().item()</span>
+<span id="cb7-113"><a href="#cb7-113" aria-hidden="true" tabindex="-1"></a>            total <span class="op">+=</span> data.size(<span class="dv">0</span>)</span>
+<span id="cb7-114"><a href="#cb7-114" aria-hidden="true" tabindex="-1"></a>    acc <span class="op">=</span> <span class="fl">100.</span> <span class="op">*</span> correct <span class="op">/</span> total</span>
+<span id="cb7-115"><a href="#cb7-115" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;Test Accuracy: </span><span class="sc">{</span>acc<span class="sc">:.2f}</span><span class="ss">%&quot;</span>)</span>
+<span id="cb7-116"><a href="#cb7-116" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> acc</span>
+<span id="cb7-117"><a href="#cb7-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-118"><a href="#cb7-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-119"><a href="#cb7-119" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> compute_layer_gradient_norms(model):</span>
+<span id="cb7-120"><a href="#cb7-120" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb7-121"><a href="#cb7-121" aria-hidden="true" tabindex="-1"></a><span class="co">    Compute the 2-norm of the gradients for each layer in a PyTorch model.</span></span>
+<span id="cb7-122"><a href="#cb7-122" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb7-123"><a href="#cb7-123" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb7-124"><a href="#cb7-124" aria-hidden="true" tabindex="-1"></a><span class="co">        A list of (layer_name, gradient_norm) tuples.</span></span>
+<span id="cb7-125"><a href="#cb7-125" aria-hidden="true" tabindex="-1"></a><span class="co">    &quot;&quot;&quot;</span></span>
+<span id="cb7-126"><a href="#cb7-126" aria-hidden="true" tabindex="-1"></a>    layer_grad_norms <span class="op">=</span> []</span>
+<span id="cb7-127"><a href="#cb7-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-128"><a href="#cb7-128" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> name, param <span class="kw">in</span> model.named_parameters():</span>
+<span id="cb7-129"><a href="#cb7-129" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> param.grad <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span>:</span>
+<span id="cb7-130"><a href="#cb7-130" aria-hidden="true" tabindex="-1"></a>            grad_norm <span class="op">=</span> param.grad.data.norm(<span class="dv">2</span>).item()</span>
+<span id="cb7-131"><a href="#cb7-131" aria-hidden="true" tabindex="-1"></a>            layer_grad_norms.append((name, grad_norm))</span>
+<span id="cb7-132"><a href="#cb7-132" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb7-133"><a href="#cb7-133" aria-hidden="true" tabindex="-1"></a>            layer_grad_norms.append((name, <span class="fl">0.0</span>))  <span class="co"># No gradient yet</span></span>
+<span id="cb7-134"><a href="#cb7-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-135"><a href="#cb7-135" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> layer_grad_norms</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="3cdf96e1-fa7b-4930-a7e2-fc9a8b0ba965" class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> torchvision <span class="im">import</span> datasets, transforms</span>
@@ -5304,13 +5317,16 @@ Epoch 29: 766 / 10000</code></pre>
 <span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>test_dataset <span class="op">=</span> datasets.MNIST(<span class="st">&#39;../data&#39;</span>, train<span class="op">=</span><span class="va">False</span>, transform<span class="op">=</span>transform)</span>
 <span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>train_loader <span class="op">=</span> DataLoader(train_dataset, batch_size<span class="op">=</span><span class="dv">10</span>, shuffle<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>test_loader <span class="op">=</span> DataLoader(test_dataset, batch_size<span class="op">=</span><span class="dv">10</span>, shuffle<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize network</span></span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>net <span class="op">=</span> Network([<span class="dv">784</span>, <span class="dv">30</span>, <span class="dv">10</span>])</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>test_loader <span class="op">=</span> DataLoader(test_dataset, batch_size<span class="op">=</span><span class="dv">10</span>, shuffle<span class="op">=</span><span class="va">False</span>)</span>
 <span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Train</span></span>
-<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>train(net, train_loader, epochs<span class="op">=</span><span class="dv">30</span>, mini_batch_size<span class="op">=</span><span class="dv">10</span>, eta<span class="op">=</span><span class="fl">.001</span>, test_data<span class="op">=</span>test_loader)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize network</span></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>net <span class="op">=</span> Network([<span class="dv">784</span>, <span class="dv">30</span>, <span class="dv">10</span>])</span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Train</span></span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>train(net, train_loader, epochs<span class="op">=</span><span class="dv">30</span>, mini_batch_size<span class="op">=</span><span class="dv">10</span>, eta<span class="op">=</span><span class="fl">.001</span>, test_data<span class="op">=</span>test_loader)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Test Accuracy: 82.01%
 Epoch 1: Avg loss: 1.7479 | Test Accuracy: 82.01% | Grad Norm: 0.6613
@@ -5466,248 +5482,373 @@ Epoch 30: Avg loss: 1.5835 | Test Accuracy: 86.93% | Grad Norm: 0.1779</code></p
   0.17794695179657605])</code></pre>
 </div>
 </div>
-<div id="9d09a2b7-c8cc-4ec5-91ab-1aae8e14b59b" class="cell" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>train_losses, test_accuracies <span class="op">=</span> train(net, train_loader, epochs<span class="op">=</span><span class="dv">30</span>, mini_batch_size<span class="op">=</span><span class="dv">10</span>, eta<span class="op">=</span><span class="fl">0.001</span>, test_data<span class="op">=</span>test_loader)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="7bf55094-510e-4ec8-91c5-a9a850411da1" class="cell" data-execution_count="127">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>train_dataset</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="127">
+<pre><code>Dataset MNIST
+    Number of datapoints: 60000
+    Root location: ../data
+    Split: Train
+    StandardTransform
+Transform: Compose(
+               ToTensor()
+               Normalize(mean=(0.1307,), std=(0.3081,))
+               Lambda()
+           )</code></pre>
+</div>
+</div>
+<div id="b5c2797b-86cc-4f33-97e1-5dd29da5aafa" class="cell" data-execution_count="138">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Randomly sample 1000 indices</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>subset_indices <span class="op">=</span> random.sample(<span class="bu">range</span>(<span class="bu">len</span>(train_dataset)), <span class="dv">30</span>)</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a subset</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>sampled_dataset <span class="op">=</span> torch.utils.data.Subset(train_dataset, subset_indices)</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Optional: create a DataLoader</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>sampled_loader <span class="op">=</span> DataLoader(sampled_dataset, batch_size<span class="op">=</span><span class="dv">64</span>, shuffle<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="9d09a2b7-c8cc-4ec5-91ab-1aae8e14b59b" class="cell" data-execution_count="143">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>net <span class="op">=</span> Network([<span class="dv">784</span>,<span class="dv">30</span>, <span class="dv">10</span>])</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>sol <span class="op">=</span> train(net, train_loader, epochs<span class="op">=</span><span class="dv">30</span>, mini_batch_size<span class="op">=</span><span class="dv">30</span>, eta<span class="op">=</span><span class="fl">0.001</span>, test_data<span class="op">=</span>test_loader)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Accuracy: 9541/10000 (95.41%)
-Epoch 1 complete
-Accuracy: 9544/10000 (95.44%)
-Epoch 2 complete
-Accuracy: 9544/10000 (95.44%)
-Epoch 3 complete
-Accuracy: 9546/10000 (95.46%)
-Epoch 4 complete
-Accuracy: 9547/10000 (95.47%)
-Epoch 5 complete
-Accuracy: 9547/10000 (95.47%)
-Epoch 6 complete
-Accuracy: 9549/10000 (95.49%)
-Epoch 7 complete
-Accuracy: 9549/10000 (95.49%)
-Epoch 8 complete
-Accuracy: 9549/10000 (95.49%)
-Epoch 9 complete
-Accuracy: 9550/10000 (95.50%)
-Epoch 10 complete
-Accuracy: 9550/10000 (95.50%)
-Epoch 11 complete
-Accuracy: 9549/10000 (95.49%)
-Epoch 12 complete
-Accuracy: 9548/10000 (95.48%)
-Epoch 13 complete
-Accuracy: 9548/10000 (95.48%)
-Epoch 14 complete
-Accuracy: 9552/10000 (95.52%)
-Epoch 15 complete
-Accuracy: 9556/10000 (95.56%)
-Epoch 16 complete
-Accuracy: 9556/10000 (95.56%)
-Epoch 17 complete
-Accuracy: 9557/10000 (95.57%)
-Epoch 18 complete
-Accuracy: 9557/10000 (95.57%)
-Epoch 19 complete
-Accuracy: 9559/10000 (95.59%)
-Epoch 20 complete
-Accuracy: 9558/10000 (95.58%)
-Epoch 21 complete
-Accuracy: 9558/10000 (95.58%)
-Epoch 22 complete
-Accuracy: 9557/10000 (95.57%)
-Epoch 23 complete
-Accuracy: 9558/10000 (95.58%)
-Epoch 24 complete
-Accuracy: 9557/10000 (95.57%)
-Epoch 25 complete
-Accuracy: 9557/10000 (95.57%)
-Epoch 26 complete
-Accuracy: 9555/10000 (95.55%)
-Epoch 27 complete
-Accuracy: 9556/10000 (95.56%)
-Epoch 28 complete
-Accuracy: 9556/10000 (95.56%)
-Epoch 29 complete
-Accuracy: 9557/10000 (95.57%)
-Epoch 30 complete</code></pre>
-</div>
-<div class="cell-output cell-output-error">
-<div class="ansi-escaped-output">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[11], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> train_losses, test_accuracies <span style="color:rgb(98,98,98)">=</span> train(net, train_loader, epochs<span style="color:rgb(98,98,98)">=</span><span style="color:rgb(98,98,98)">30</span>, mini_batch_size<span style="color:rgb(98,98,98)">=</span><span style="color:rgb(98,98,98)">10</span>, eta<span style="color:rgb(98,98,98)">=</span><span style="color:rgb(98,98,98)">0.001</span>, test_data<span style="color:rgb(98,98,98)">=</span>test_loader)
-
-<span class="ansi-red-fg">TypeError</span>: cannot unpack non-iterable NoneType object</pre>
-</div>
+<pre><code>Test Accuracy: 87.64%
+Test Accuracy: 88.61%
+Epoch 1: Avg loss: 1.0087 | Train Accuracy: 87.64% | Test Accuracy: 88.61% | Grad Norm: 1.5247
+Test Accuracy: 89.81%
+Test Accuracy: 90.33%
+Epoch 2: Avg loss: 0.5053 | Train Accuracy: 89.81% | Test Accuracy: 90.33% | Grad Norm: 1.3321
+Test Accuracy: 90.83%
+Test Accuracy: 91.17%
+Epoch 3: Avg loss: 0.3947 | Train Accuracy: 90.83% | Test Accuracy: 91.17% | Grad Norm: 1.3069
+Test Accuracy: 91.55%
+Test Accuracy: 91.76%
+Epoch 4: Avg loss: 0.3433 | Train Accuracy: 91.55% | Test Accuracy: 91.76% | Grad Norm: 1.2931
+Test Accuracy: 92.14%
+Test Accuracy: 92.19%
+Epoch 5: Avg loss: 0.3116 | Train Accuracy: 92.14% | Test Accuracy: 92.19% | Grad Norm: 1.2774
+Test Accuracy: 92.55%
+Test Accuracy: 92.44%
+Epoch 6: Avg loss: 0.2894 | Train Accuracy: 92.55% | Test Accuracy: 92.44% | Grad Norm: 1.2640
+Test Accuracy: 92.84%
+Test Accuracy: 92.64%
+Epoch 7: Avg loss: 0.2726 | Train Accuracy: 92.84% | Test Accuracy: 92.64% | Grad Norm: 1.2514
+Test Accuracy: 93.20%
+Test Accuracy: 92.96%
+Epoch 8: Avg loss: 0.2589 | Train Accuracy: 93.20% | Test Accuracy: 92.96% | Grad Norm: 1.2383
+Test Accuracy: 93.48%
+Test Accuracy: 93.25%
+Epoch 9: Avg loss: 0.2476 | Train Accuracy: 93.48% | Test Accuracy: 93.25% | Grad Norm: 1.2286
+Test Accuracy: 93.76%
+Test Accuracy: 93.50%
+Epoch 10: Avg loss: 0.2380 | Train Accuracy: 93.76% | Test Accuracy: 93.50% | Grad Norm: 1.2188
+Test Accuracy: 93.97%
+Test Accuracy: 93.68%
+Epoch 11: Avg loss: 0.2295 | Train Accuracy: 93.97% | Test Accuracy: 93.68% | Grad Norm: 1.2042
+Test Accuracy: 94.14%
+Test Accuracy: 93.90%
+Epoch 12: Avg loss: 0.2221 | Train Accuracy: 94.14% | Test Accuracy: 93.90% | Grad Norm: 1.1993
+Test Accuracy: 94.34%
+Test Accuracy: 93.99%
+Epoch 13: Avg loss: 0.2154 | Train Accuracy: 94.34% | Test Accuracy: 93.99% | Grad Norm: 1.1874
+Test Accuracy: 94.52%
+Test Accuracy: 94.10%
+Epoch 14: Avg loss: 0.2093 | Train Accuracy: 94.52% | Test Accuracy: 94.10% | Grad Norm: 1.1842
+Test Accuracy: 94.57%
+Test Accuracy: 94.21%
+Epoch 15: Avg loss: 0.2038 | Train Accuracy: 94.57% | Test Accuracy: 94.21% | Grad Norm: 1.1716
+Test Accuracy: 94.73%
+Test Accuracy: 94.26%
+Epoch 16: Avg loss: 0.1988 | Train Accuracy: 94.73% | Test Accuracy: 94.26% | Grad Norm: 1.1638
+Test Accuracy: 94.84%
+Test Accuracy: 94.33%
+Epoch 17: Avg loss: 0.1941 | Train Accuracy: 94.84% | Test Accuracy: 94.33% | Grad Norm: 1.1590
+Test Accuracy: 94.95%
+Test Accuracy: 94.43%
+Epoch 18: Avg loss: 0.1898 | Train Accuracy: 94.95% | Test Accuracy: 94.43% | Grad Norm: 1.1520
+Test Accuracy: 95.10%
+Test Accuracy: 94.48%
+Epoch 19: Avg loss: 0.1858 | Train Accuracy: 95.10% | Test Accuracy: 94.48% | Grad Norm: 1.1488
+Test Accuracy: 95.17%
+Test Accuracy: 94.50%
+Epoch 20: Avg loss: 0.1819 | Train Accuracy: 95.17% | Test Accuracy: 94.50% | Grad Norm: 1.1362
+Test Accuracy: 95.28%
+Test Accuracy: 94.66%
+Epoch 21: Avg loss: 0.1783 | Train Accuracy: 95.28% | Test Accuracy: 94.66% | Grad Norm: 1.1323
+Test Accuracy: 95.34%
+Test Accuracy: 94.57%
+Epoch 22: Avg loss: 0.1749 | Train Accuracy: 95.34% | Test Accuracy: 94.57% | Grad Norm: 1.1270
+Test Accuracy: 95.40%
+Test Accuracy: 94.74%
+Epoch 23: Avg loss: 0.1718 | Train Accuracy: 95.40% | Test Accuracy: 94.74% | Grad Norm: 1.1248
+Test Accuracy: 95.51%
+Test Accuracy: 94.82%
+Epoch 24: Avg loss: 0.1687 | Train Accuracy: 95.51% | Test Accuracy: 94.82% | Grad Norm: 1.1160
+Test Accuracy: 95.55%
+Test Accuracy: 94.91%
+Epoch 25: Avg loss: 0.1658 | Train Accuracy: 95.55% | Test Accuracy: 94.91% | Grad Norm: 1.1107
+Test Accuracy: 95.62%
+Test Accuracy: 95.03%
+Epoch 26: Avg loss: 0.1629 | Train Accuracy: 95.62% | Test Accuracy: 95.03% | Grad Norm: 1.1076
+Test Accuracy: 95.71%
+Test Accuracy: 94.97%
+Epoch 27: Avg loss: 0.1603 | Train Accuracy: 95.71% | Test Accuracy: 94.97% | Grad Norm: 1.0958
+Test Accuracy: 95.76%
+Test Accuracy: 95.05%
+Epoch 28: Avg loss: 0.1578 | Train Accuracy: 95.76% | Test Accuracy: 95.05% | Grad Norm: 1.0917
+Test Accuracy: 95.86%
+Test Accuracy: 95.13%
+Epoch 29: Avg loss: 0.1554 | Train Accuracy: 95.86% | Test Accuracy: 95.13% | Grad Norm: 1.0925
+Test Accuracy: 95.91%
+Test Accuracy: 95.21%
+Epoch 30: Avg loss: 0.1531 | Train Accuracy: 95.91% | Test Accuracy: 95.21% | Grad Norm: 1.0858</code></pre>
 </div>
 </div>
 <div id="ae4301fd-027e-4174-9ffc-594b4c0b7d1a" class="cell" data-execution_count="17">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> train(net, train_loader, epochs<span class="op">=</span><span class="dv">1</span>, mini_batch_size<span class="op">=</span><span class="dv">10</span>, eta<span class="op">=</span><span class="fl">0.001</span>, test_data<span class="op">=</span>test_loader)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> train(net, train_loader, epochs<span class="op">=</span><span class="dv">1</span>, mini_batch_size<span class="op">=</span><span class="dv">10</span>, eta<span class="op">=</span><span class="fl">0.001</span>, test_data<span class="op">=</span>test_loader)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Test Accuracy: 95.72%
 Epoch 1: Avg loss: 1.4899 | Test Accuracy: 95.72% | Grad Norm: 0.0397</code></pre>
 </div>
 </div>
-<div id="a6060633-ded3-4597-850d-462037162264" class="cell" data-execution_count="48">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>net <span class="op">=</span> Network([<span class="dv">784</span>, <span class="dv">512</span>,<span class="dv">512</span> , <span class="dv">256</span>, <span class="dv">256</span>,<span class="dv">128</span>,<span class="dv">128</span>,<span class="dv">64</span>,<span class="dv">64</span>,<span class="dv">32</span>, <span class="dv">10</span>])</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>train(net, train_loader, epochs<span class="op">=</span><span class="dv">30</span>, mini_batch_size<span class="op">=</span><span class="dv">10</span>, eta<span class="op">=</span><span class="fl">.001</span>, test_data<span class="op">=</span>test_loader)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="a6060633-ded3-4597-850d-462037162264" class="cell" data-execution_count="121">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Deep with no scheduler</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>net <span class="op">=</span> Network([<span class="dv">784</span>, <span class="dv">512</span>,<span class="dv">512</span> , <span class="dv">256</span>, <span class="dv">256</span>,<span class="dv">128</span>,<span class="dv">128</span>,<span class="dv">64</span>,<span class="dv">64</span>,<span class="dv">32</span>, <span class="dv">10</span>])</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>sol <span class="op">=</span> train(net, train_loader, epochs<span class="op">=</span><span class="dv">30</span>, mini_batch_size<span class="op">=</span><span class="dv">100</span>, eta<span class="op">=</span><span class="fl">.0001</span>, test_data<span class="op">=</span>test_loader)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Test Accuracy: 67.51%
-Epoch 1: Avg loss: 1.9591 | Test Accuracy: 67.51% | Grad Norm: 3.5424
-Test Accuracy: 68.54%
-Epoch 2: Avg loss: 1.7828 | Test Accuracy: 68.54% | Grad Norm: 2.3430
-Test Accuracy: 68.64%
-Epoch 3: Avg loss: 1.7732 | Test Accuracy: 68.64% | Grad Norm: 1.7776
-Test Accuracy: 69.13%
-Epoch 4: Avg loss: 1.7666 | Test Accuracy: 69.13% | Grad Norm: 1.5507
-Test Accuracy: 69.08%
-Epoch 5: Avg loss: 1.7623 | Test Accuracy: 69.08% | Grad Norm: 1.4320
-Test Accuracy: 69.51%
-Epoch 6: Avg loss: 1.7581 | Test Accuracy: 69.51% | Grad Norm: 1.2110
-Test Accuracy: 69.55%
-Epoch 7: Avg loss: 1.7549 | Test Accuracy: 69.55% | Grad Norm: 1.0609
-Test Accuracy: 69.57%
-Epoch 8: Avg loss: 1.7524 | Test Accuracy: 69.57% | Grad Norm: 0.9818
-Test Accuracy: 69.52%
-Epoch 9: Avg loss: 1.7501 | Test Accuracy: 69.52% | Grad Norm: 0.8327
-Test Accuracy: 69.65%
-Epoch 10: Avg loss: 1.7483 | Test Accuracy: 69.65% | Grad Norm: 0.7518
-Test Accuracy: 69.69%
-Epoch 11: Avg loss: 1.7467 | Test Accuracy: 69.69% | Grad Norm: 0.6359
-Test Accuracy: 69.74%
-Epoch 12: Avg loss: 1.7456 | Test Accuracy: 69.74% | Grad Norm: 0.5740
-Test Accuracy: 69.78%
-Epoch 13: Avg loss: 1.7447 | Test Accuracy: 69.78% | Grad Norm: 0.5333
-Test Accuracy: 69.82%
-Epoch 14: Avg loss: 1.7438 | Test Accuracy: 69.82% | Grad Norm: 0.4378
-Test Accuracy: 69.84%
-Epoch 15: Avg loss: 1.7431 | Test Accuracy: 69.84% | Grad Norm: 0.3924
-Test Accuracy: 69.82%
-Epoch 16: Avg loss: 1.7426 | Test Accuracy: 69.82% | Grad Norm: 0.3794
-Test Accuracy: 69.85%
-Epoch 17: Avg loss: 1.7422 | Test Accuracy: 69.85% | Grad Norm: 0.3602
-Test Accuracy: 69.80%
-Epoch 18: Avg loss: 1.7418 | Test Accuracy: 69.80% | Grad Norm: 0.3396
-Test Accuracy: 69.84%
-Epoch 19: Avg loss: 1.7414 | Test Accuracy: 69.84% | Grad Norm: 0.3260
-Test Accuracy: 69.83%
-Epoch 20: Avg loss: 1.7411 | Test Accuracy: 69.83% | Grad Norm: 0.3187
-Test Accuracy: 69.86%
-Epoch 21: Avg loss: 1.7408 | Test Accuracy: 69.86% | Grad Norm: 0.2976
-Test Accuracy: 69.82%
-Epoch 22: Avg loss: 1.7405 | Test Accuracy: 69.82% | Grad Norm: 0.2817
-Test Accuracy: 69.92%
-Epoch 23: Avg loss: 1.7403 | Test Accuracy: 69.92% | Grad Norm: 0.2689
-Test Accuracy: 69.90%
-Epoch 24: Avg loss: 1.7401 | Test Accuracy: 69.90% | Grad Norm: 0.2669
-Test Accuracy: 69.88%
-Epoch 25: Avg loss: 1.7398 | Test Accuracy: 69.88% | Grad Norm: 0.2554
-Test Accuracy: 69.90%
-Epoch 26: Avg loss: 1.7396 | Test Accuracy: 69.90% | Grad Norm: 0.2348
-Test Accuracy: 69.85%
-Epoch 27: Avg loss: 1.7394 | Test Accuracy: 69.85% | Grad Norm: 0.2295
-Test Accuracy: 69.84%
-Epoch 28: Avg loss: 1.7393 | Test Accuracy: 69.84% | Grad Norm: 0.2149
-Test Accuracy: 69.77%
-Epoch 29: Avg loss: 1.7391 | Test Accuracy: 69.77% | Grad Norm: 0.2076
-Test Accuracy: 69.82%
-Epoch 30: Avg loss: 1.7390 | Test Accuracy: 69.82% | Grad Norm: 0.2048</code></pre>
+<pre><code>Test Accuracy: 19.14%
+Epoch 1: Avg loss: 2.2448 | Test Accuracy: 19.14% | Grad Norm: 0.1899
+Test Accuracy: 20.76%
+Epoch 2: Avg loss: 2.2204 | Test Accuracy: 20.76% | Grad Norm: 0.2420
+Test Accuracy: 20.82%
+Epoch 3: Avg loss: 2.2190 | Test Accuracy: 20.82% | Grad Norm: 0.2481
+Test Accuracy: 20.55%
+Epoch 4: Avg loss: 2.2202 | Test Accuracy: 20.55% | Grad Norm: 0.2541
+Test Accuracy: 20.71%
+Epoch 5: Avg loss: 2.2211 | Test Accuracy: 20.71% | Grad Norm: 0.2493
+Test Accuracy: 20.59%
+Epoch 6: Avg loss: 2.2194 | Test Accuracy: 20.59% | Grad Norm: 0.2303
+Test Accuracy: 20.58%
+Epoch 7: Avg loss: 2.2195 | Test Accuracy: 20.58% | Grad Norm: 0.2610
+Test Accuracy: 20.75%
+Epoch 8: Avg loss: 2.2185 | Test Accuracy: 20.75% | Grad Norm: 0.2452
+Test Accuracy: 20.85%
+Epoch 9: Avg loss: 2.2180 | Test Accuracy: 20.85% | Grad Norm: 0.2495
+Test Accuracy: 20.73%
+Epoch 10: Avg loss: 2.2177 | Test Accuracy: 20.73% | Grad Norm: 0.2601
+Test Accuracy: 20.72%
+Epoch 11: Avg loss: 2.2167 | Test Accuracy: 20.72% | Grad Norm: 0.2380
+Test Accuracy: 20.69%
+Epoch 12: Avg loss: 2.2199 | Test Accuracy: 20.69% | Grad Norm: 0.2578
+Test Accuracy: 20.85%
+Epoch 13: Avg loss: 2.2165 | Test Accuracy: 20.85% | Grad Norm: 0.2404
+Test Accuracy: 20.35%
+Epoch 14: Avg loss: 2.2180 | Test Accuracy: 20.35% | Grad Norm: 0.2589
+Test Accuracy: 20.76%
+Epoch 15: Avg loss: 2.2197 | Test Accuracy: 20.76% | Grad Norm: 0.2379
+Test Accuracy: 19.34%
+Epoch 16: Avg loss: 2.2183 | Test Accuracy: 19.34% | Grad Norm: 0.2312
+Test Accuracy: 20.56%
+Epoch 17: Avg loss: 2.2181 | Test Accuracy: 20.56% | Grad Norm: 0.2400
+Test Accuracy: 20.88%
+Epoch 18: Avg loss: 2.2184 | Test Accuracy: 20.88% | Grad Norm: 0.2429
+Test Accuracy: 20.82%
+Epoch 19: Avg loss: 2.2176 | Test Accuracy: 20.82% | Grad Norm: 0.2403
+Test Accuracy: 21.05%
+Epoch 20: Avg loss: 2.2173 | Test Accuracy: 21.05% | Grad Norm: 0.2394
+Test Accuracy: 20.94%
+Epoch 21: Avg loss: 2.2172 | Test Accuracy: 20.94% | Grad Norm: 0.2712
+Test Accuracy: 21.05%
+Epoch 22: Avg loss: 2.2172 | Test Accuracy: 21.05% | Grad Norm: 0.2667
+Test Accuracy: 20.87%
+Epoch 23: Avg loss: 2.2167 | Test Accuracy: 20.87% | Grad Norm: 0.2310
+Test Accuracy: 18.87%
+Epoch 24: Avg loss: 2.2192 | Test Accuracy: 18.87% | Grad Norm: 0.2360
+Test Accuracy: 20.83%
+Epoch 25: Avg loss: 2.2201 | Test Accuracy: 20.83% | Grad Norm: 0.2416
+Test Accuracy: 21.00%
+Epoch 26: Avg loss: 2.2179 | Test Accuracy: 21.00% | Grad Norm: 0.2335
+Test Accuracy: 20.91%
+Epoch 27: Avg loss: 2.2171 | Test Accuracy: 20.91% | Grad Norm: 0.2453
+Test Accuracy: 20.67%
+Epoch 28: Avg loss: 2.2185 | Test Accuracy: 20.67% | Grad Norm: 0.2312
+Test Accuracy: 20.76%
+Epoch 29: Avg loss: 2.2222 | Test Accuracy: 20.76% | Grad Norm: 0.2492
+Test Accuracy: 20.96%
+Epoch 30: Avg loss: 2.2202 | Test Accuracy: 20.96% | Grad Norm: 0.2301</code></pre>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="48">
-<pre><code>([1.959118821064631,
-  1.7827936490972838,
-  1.7732195863723754,
-  1.7666483173370362,
-  1.7623104002873102,
-  1.758142285903295,
-  1.7548723166982332,
-  1.752382144788901,
-  1.7501103646953902,
-  1.74828204814593,
-  1.746728570540746,
-  1.7455625907182692,
-  1.7446532537142436,
-  1.7437656852006913,
-  1.7431178147792816,
-  1.7426072646379471,
-  1.742182812054952,
-  1.741779532790184,
-  1.741402044991652,
-  1.741111562848091,
-  1.7407759113709131,
-  1.7404986187616984,
-  1.740269660929839,
-  1.7400649373133976,
-  1.7398428373336792,
-  1.7396285282969475,
-  1.739449157456557,
-  1.7392718460361163,
-  1.7391262164314587,
-  1.7390025706092516],
- [67.51,
-  68.54,
-  68.64,
-  69.13,
-  69.08,
-  69.51,
-  69.55,
-  69.57,
-  69.52,
-  69.65,
-  69.69,
-  69.74,
-  69.78,
-  69.82,
-  69.84,
-  69.82,
-  69.85,
-  69.8,
-  69.84,
-  69.83,
-  69.86,
-  69.82,
-  69.92,
-  69.9,
-  69.88,
-  69.9,
-  69.85,
-  69.84,
-  69.77,
-  69.82],
- [3.542424004771771,
-  2.3430091263394983,
-  1.7775733810092607,
-  1.5506706967023032,
-  1.432017384631392,
-  1.2110032191407496,
-  1.0608711543282565,
-  0.9818233696553592,
-  0.8326854169030703,
-  0.7518013041189697,
-  0.6359034973930344,
-  0.5739638697586051,
-  0.533340005502397,
-  0.43778614422821316,
-  0.3923998232505425,
-  0.3794358755938683,
-  0.3602496556647179,
-  0.3396467122936277,
-  0.3259729456041987,
-  0.31870044364454225,
-  0.29761914419514446,
-  0.2817350850709372,
-  0.26888855410436585,
-  0.266941799625927,
-  0.2554361723967862,
-  0.23476797842090855,
-  0.2295377497819721,
-  0.21492390701058928,
-  0.20756351499532685,
-  0.20479605506834803])</code></pre>
 </div>
+<div id="f39494c2-00f0-48d5-adcf-40e71df62ff3" class="cell" data-execution_count="122">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="12881a07-7f05-40a2-8762-a8c6040d8495" class="cell" data-execution_count="123">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>plt.scatter(sol[<span class="dv">0</span>],sol[<span class="dv">1</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img role="img" src="data:image/png;base64,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" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div id="443614a4-71fe-4380-ab0e-b4348ae9d7a8" class="cell" data-execution_count="112">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Deep with no scheduler</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>net <span class="op">=</span> Network([<span class="dv">784</span>, <span class="dv">30</span>,<span class="dv">30</span> , <span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>, <span class="dv">10</span>])</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>sol <span class="op">=</span> train(net, train_loader, epochs<span class="op">=</span><span class="dv">5</span>, mini_batch_size<span class="op">=</span><span class="dv">100</span>, eta<span class="op">=</span><span class="fl">.0001</span>, test_data<span class="op">=</span>test_loader)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Test Accuracy: 20.69%
+Epoch 1: Avg loss: 2.2873 | Test Accuracy: 20.69% | Grad Norm: 0.1122
+Test Accuracy: 21.27%
+Epoch 2: Avg loss: 2.2179 | Test Accuracy: 21.27% | Grad Norm: 0.1602
+Test Accuracy: 20.98%
+Epoch 3: Avg loss: 2.2077 | Test Accuracy: 20.98% | Grad Norm: 0.1356
+Test Accuracy: 21.06%
+Epoch 4: Avg loss: 2.2051 | Test Accuracy: 21.06% | Grad Norm: 0.1389
+Test Accuracy: 21.13%
+Epoch 5: Avg loss: 2.2044 | Test Accuracy: 21.13% | Grad Norm: 0.1308</code></pre>
+</div>
+</div>
+<div id="0d9025d2-b8e5-4aca-a791-891c8c6bca13" class="cell" data-execution_count="115">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>compute_layer_gradient_norms(net)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="115">
+<pre><code>[(&#39;layers.0.weight&#39;, 2.9409675335045904e-05),
+ (&#39;layers.0.bias&#39;, 9.542326324663009e-07),
+ (&#39;layers.1.weight&#39;, 2.6448502467246726e-05),
+ (&#39;layers.1.bias&#39;, 1.7008404711305047e-06),
+ (&#39;layers.2.weight&#39;, 3.9246409869519994e-05),
+ (&#39;layers.2.bias&#39;, 2.855350885511143e-06),
+ (&#39;layers.3.weight&#39;, 3.987160380347632e-05),
+ (&#39;layers.3.bias&#39;, 4.101609192730393e-06),
+ (&#39;layers.4.weight&#39;, 7.801799802109599e-05),
+ (&#39;layers.4.bias&#39;, 7.812871444912162e-06),
+ (&#39;layers.5.weight&#39;, 0.00011470988829387352),
+ (&#39;layers.5.bias&#39;, 1.4928327800589614e-05),
+ (&#39;layers.6.weight&#39;, 0.00048420310486108065),
+ (&#39;layers.6.bias&#39;, 6.47182168904692e-05),
+ (&#39;layers.7.weight&#39;, 0.004019377753138542),
+ (&#39;layers.7.bias&#39;, 0.0007568754372186959),
+ (&#39;layers.8.weight&#39;, 0.04133795574307442),
+ (&#39;layers.8.bias&#39;, 0.008317744359374046),
+ (&#39;layers.9.weight&#39;, 0.14119262993335724),
+ (&#39;layers.9.bias&#39;, 0.04371275007724762)]</code></pre>
+</div>
+</div>
+<div id="a9eb77b2-a8c0-459f-bfc1-930e09d9758a" class="cell" data-execution_count="119">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>compute_layer_gradient_norms(net)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="119">
+<pre><code>[(&#39;layers.0.weight&#39;, 2.9409675335045904e-05),
+ (&#39;layers.0.bias&#39;, 9.542326324663009e-07),
+ (&#39;layers.1.weight&#39;, 2.6448502467246726e-05),
+ (&#39;layers.1.bias&#39;, 1.7008404711305047e-06),
+ (&#39;layers.2.weight&#39;, 3.9246409869519994e-05),
+ (&#39;layers.2.bias&#39;, 2.855350885511143e-06),
+ (&#39;layers.3.weight&#39;, 3.987160380347632e-05),
+ (&#39;layers.3.bias&#39;, 4.101609192730393e-06),
+ (&#39;layers.4.weight&#39;, 7.801799802109599e-05),
+ (&#39;layers.4.bias&#39;, 7.812871444912162e-06),
+ (&#39;layers.5.weight&#39;, 0.00011470988829387352),
+ (&#39;layers.5.bias&#39;, 1.4928327800589614e-05),
+ (&#39;layers.6.weight&#39;, 0.00048420310486108065),
+ (&#39;layers.6.bias&#39;, 6.47182168904692e-05),
+ (&#39;layers.7.weight&#39;, 0.004019377753138542),
+ (&#39;layers.7.bias&#39;, 0.0007568754372186959),
+ (&#39;layers.8.weight&#39;, 0.04133795574307442),
+ (&#39;layers.8.bias&#39;, 0.008317744359374046),
+ (&#39;layers.9.weight&#39;, 0.14119262993335724),
+ (&#39;layers.9.bias&#39;, 0.04371275007724762)]</code></pre>
+</div>
+</div>
+<div id="9c312cc5-f0a3-496d-950d-2700eae5d8c8" class="cell" data-execution_count="75">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>net <span class="op">=</span> Network([<span class="dv">784</span>, <span class="dv">512</span>,<span class="dv">512</span> , <span class="dv">256</span>, <span class="dv">256</span>,<span class="dv">128</span>,<span class="dv">128</span>,<span class="dv">64</span>,<span class="dv">64</span>,<span class="dv">32</span>, <span class="dv">10</span>])</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>net.<span class="bu">apply</span>(net.init_weights())</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>compute_layer_gradient_norms(net)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<div class="ansi-escaped-output">
+<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[75], line 2</span>
+<span class="ansi-green-fg ansi-bold">      1</span> net <span style="color:rgb(98,98,98)">=</span> Network([<span style="color:rgb(98,98,98)">784</span>, <span style="color:rgb(98,98,98)">512</span>,<span style="color:rgb(98,98,98)">512</span> , <span style="color:rgb(98,98,98)">256</span>, <span style="color:rgb(98,98,98)">256</span>,<span style="color:rgb(98,98,98)">128</span>,<span style="color:rgb(98,98,98)">128</span>,<span style="color:rgb(98,98,98)">64</span>,<span style="color:rgb(98,98,98)">64</span>,<span style="color:rgb(98,98,98)">32</span>, <span style="color:rgb(98,98,98)">10</span>])
+<span class="ansi-green-fg">----&gt; 2</span> net<span style="color:rgb(98,98,98)">.</span>apply(<span class="ansi-yellow-bg">net</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">init_weights</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>)
+<span class="ansi-green-fg ansi-bold">      3</span> compute_layer_gradient_norms(net)
+
+<span class="ansi-red-fg">TypeError</span>: Network.init_weights() missing 1 required positional argument: &#39;m&#39;</pre>
+</div>
+</div>
+</div>
+<div id="bbe1a702-0c5d-437c-a129-0207015f093c" class="cell" data-execution_count="124">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>compute_layer_gradient_norms(net)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="124">
+<pre><code>[(&#39;layers.0.weight&#39;, 4.1792472416091186e-07),
+ (&#39;layers.0.bias&#39;, 1.570747443224718e-08),
+ (&#39;layers.1.weight&#39;, 6.034351685002548e-08),
+ (&#39;layers.1.bias&#39;, 6.662162821413631e-09),
+ (&#39;layers.2.weight&#39;, 5.6365973222227694e-08),
+ (&#39;layers.2.bias&#39;, 5.440007555534976e-09),
+ (&#39;layers.3.weight&#39;, 3.217432151814137e-07),
+ (&#39;layers.3.bias&#39;, 2.961611578200518e-08),
+ (&#39;layers.4.weight&#39;, 3.928074875148013e-06),
+ (&#39;layers.4.bias&#39;, 3.470892409040971e-07),
+ (&#39;layers.5.weight&#39;, 3.216185359633528e-05),
+ (&#39;layers.5.bias&#39;, 4.11073870054679e-06),
+ (&#39;layers.6.weight&#39;, 0.0002945692394860089),
+ (&#39;layers.6.bias&#39;, 3.7662866816390306e-05),
+ (&#39;layers.7.weight&#39;, 0.0032506876159459352),
+ (&#39;layers.7.bias&#39;, 0.0005663582705892622),
+ (&#39;layers.8.weight&#39;, 0.03259878605604172),
+ (&#39;layers.8.bias&#39;, 0.006158514879643917),
+ (&#39;layers.9.weight&#39;, 0.16322623193264008),
+ (&#39;layers.9.bias&#39;, 0.044430315494537354)]</code></pre>
+</div>
+</div>
+<div id="d353295d-2c55-4363-9122-46f42597b6b4" class="cell" data-execution_count="101">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> compute_layer_gradient_norms(model):</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="co">    &quot;&quot;&quot;</span></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>    layer_grad_norms <span class="op">=</span> []</span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> name, param <span class="kw">in</span> model.named_parameters():</span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> param.grad <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span>:</span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>            grad_norm <span class="op">=</span> param.grad.data.norm(<span class="dv">2</span>).item()</span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>            layer_grad_norms.append((name, grad_norm))</span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>            layer_grad_norms.append((name, <span class="fl">0.0</span>))  <span class="co"># No gradient yet</span></span>
+<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> layer_grad_norms</span>
+<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a>net.named_parameters</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="101">
+<pre><code>&lt;bound method Module.named_parameters of Network(
+  (layers): ModuleList(
+    (0): Linear(in_features=784, out_features=512, bias=True)
+    (1): Linear(in_features=512, out_features=512, bias=True)
+    (2): Linear(in_features=512, out_features=256, bias=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): Linear(in_features=256, out_features=128, bias=True)
+    (5): Linear(in_features=128, out_features=128, bias=True)
+    (6): Linear(in_features=128, out_features=64, bias=True)
+    (7): Linear(in_features=64, out_features=64, bias=True)
+    (8): Linear(in_features=64, out_features=32, bias=True)
+    (9): Linear(in_features=32, out_features=10, bias=True)
+  )
+)&gt;</code></pre>
+</div>
+</div>
+<div id="4bf8ad29-3fb0-4f4b-a1eb-9b88c85163ee" class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>net.named_parameters</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="6e9025d4-9ed8-4066-9ac6-0d84932d62bd" class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Deep with scheduler</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>net <span class="op">=</span> Network([<span class="dv">784</span>, <span class="dv">512</span>,<span class="dv">512</span> , <span class="dv">256</span>, <span class="dv">256</span>,<span class="dv">128</span>,<span class="dv">128</span>,<span class="dv">64</span>,<span class="dv">64</span>,<span class="dv">32</span>, <span class="dv">10</span>])</span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>sol <span class="op">=</span> train(net, train_loader, epochs<span class="op">=</span><span class="dv">30</span>, mini_batch_size<span class="op">=</span><span class="dv">100</span>, eta<span class="op">=</span><span class="fl">.0003</span>, test_data<span class="op">=</span>test_loader)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="da7d0f8c-4d8c-498d-8f6b-0ff284857930" class="cell" data-execution_count="46">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>train(net, train_loader, epochs<span class="op">=</span><span class="dv">30</span>, mini_batch_size<span class="op">=</span><span class="dv">10</span>, eta<span class="op">=</span><span class="fl">.001</span>, test_data<span class="op">=</span>test_loader)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>train(net, train_loader, epochs<span class="op">=</span><span class="dv">30</span>, mini_batch_size<span class="op">=</span><span class="dv">10</span>, eta<span class="op">=</span><span class="fl">.001</span>, test_data<span class="op">=</span>test_loader)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Test Accuracy: 97.19%
 Epoch 1: Avg loss: 1.4700 | Test Accuracy: 97.19% | Grad Norm: 0.1536
@@ -5814,18 +5955,18 @@ File <span class="ansi-green-fg">~/miniforge3/envs/stan/lib/python3.11/site-pack
 </div>
 </div>
 <div id="d994f50c-0fff-49c4-9778-071e4ce95229" class="cell" data-execution_count="45">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fl">0.7</span><span class="op">**</span><span class="dv">30</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fl">0.7</span><span class="op">**</span><span class="dv">30</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="45">
 <pre><code>2.2539340290692216e-05</code></pre>
 </div>
 </div>
 <div id="ac0d2c47-e30c-42a1-99d3-3ee424018ec1" class="cell" data-execution_count="43">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize network</span></span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>net <span class="op">=</span> Network([<span class="dv">784</span>, <span class="dv">480</span>,<span class="dv">240</span> , <span class="dv">120</span>, <span class="dv">60</span>,<span class="dv">40</span>,<span class="dv">20</span>, <span class="dv">10</span>])</span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Train</span></span>
-<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>train(net, train_loader, epochs<span class="op">=</span><span class="dv">30</span>, mini_batch_size<span class="op">=</span><span class="dv">10</span>, eta<span class="op">=</span><span class="fl">.001</span>, test_data<span class="op">=</span>test_loader)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize network</span></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>net <span class="op">=</span> Network([<span class="dv">784</span>, <span class="dv">480</span>,<span class="dv">240</span> , <span class="dv">120</span>, <span class="dv">60</span>,<span class="dv">40</span>,<span class="dv">20</span>, <span class="dv">10</span>])</span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Train</span></span>
+<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a>train(net, train_loader, epochs<span class="op">=</span><span class="dv">30</span>, mini_batch_size<span class="op">=</span><span class="dv">10</span>, eta<span class="op">=</span><span class="fl">.001</span>, test_data<span class="op">=</span>test_loader)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Test Accuracy: 66.49%
 Epoch 1: Avg loss: 1.8895 | Test Accuracy: 66.49% | Grad Norm: 3.5853
@@ -5926,38 +6067,38 @@ File <span class="ansi-green-fg">~/miniforge3/envs/stan/lib/python3.11/site-pack
 </div>
 </div>
 </div>
-<div id="d758931a-352b-45e3-bdcc-54e3abb0ee87" class="cell" data-execution_count="40">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>compute_layer_gradient_norms(net)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="40">
-<pre><code>[(&#39;layers.0.weight&#39;, 0.007810294162482023),
- (&#39;layers.0.bias&#39;, 0.0008864495903253555),
- (&#39;layers.1.weight&#39;, 0.02400527521967888),
- (&#39;layers.1.bias&#39;, 0.002286826493218541),
- (&#39;layers.2.weight&#39;, 0.006793968379497528),
- (&#39;layers.2.bias&#39;, 0.0036229484248906374),
- (&#39;layers.3.weight&#39;, 0.0033401239197701216),
- (&#39;layers.3.bias&#39;, 0.0016602311516180634),
- (&#39;layers.4.weight&#39;, 0.0029731099493801594),
- (&#39;layers.4.bias&#39;, 0.0007290028152056038),
- (&#39;layers.5.weight&#39;, 0.002717284020036459),
- (&#39;layers.5.bias&#39;, 0.0002925741719081998),
- (&#39;layers.6.weight&#39;, 0.0035392793361097574),
- (&#39;layers.6.bias&#39;, 0.00016413327830377966),
- (&#39;layers.7.weight&#39;, 0.0038645865861326456),
- (&#39;layers.7.bias&#39;, 8.293597784359008e-05),
- (&#39;layers.8.weight&#39;, 0.004994072951376438),
- (&#39;layers.8.bias&#39;, 7.00230011716485e-05),
- (&#39;layers.9.weight&#39;, 0.011956533417105675),
- (&#39;layers.9.bias&#39;, 0.00011770134005928412)]</code></pre>
+<div id="d758931a-352b-45e3-bdcc-54e3abb0ee87" class="cell" data-execution_count="69">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>compute_layer_gradient_norms(net)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="69">
+<pre><code>[(&#39;layers.0.weight&#39;, 0.0),
+ (&#39;layers.0.bias&#39;, 0.0),
+ (&#39;layers.1.weight&#39;, 0.0),
+ (&#39;layers.1.bias&#39;, 0.0),
+ (&#39;layers.2.weight&#39;, 0.0),
+ (&#39;layers.2.bias&#39;, 0.0),
+ (&#39;layers.3.weight&#39;, 0.0),
+ (&#39;layers.3.bias&#39;, 0.0),
+ (&#39;layers.4.weight&#39;, 0.0),
+ (&#39;layers.4.bias&#39;, 0.0),
+ (&#39;layers.5.weight&#39;, 0.0),
+ (&#39;layers.5.bias&#39;, 0.0),
+ (&#39;layers.6.weight&#39;, 0.0),
+ (&#39;layers.6.bias&#39;, 0.0),
+ (&#39;layers.7.weight&#39;, 0.0),
+ (&#39;layers.7.bias&#39;, 0.0),
+ (&#39;layers.8.weight&#39;, 0.0),
+ (&#39;layers.8.bias&#39;, 0.0),
+ (&#39;layers.9.weight&#39;, 0.0),
+ (&#39;layers.9.bias&#39;, 0.0)]</code></pre>
 </div>
 </div>
 <div id="e93f0e9f-d042-4339-abb4-235a77567add" class="cell" data-execution_count="32">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize network</span></span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>net <span class="op">=</span> Network([<span class="dv">784</span>, <span class="dv">30</span>, <span class="dv">30</span>, <span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>, <span class="dv">10</span>])</span>
-<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Train</span></span>
-<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>train(net, train_loader, epochs<span class="op">=</span><span class="dv">30</span>, mini_batch_size<span class="op">=</span><span class="dv">10</span>, eta<span class="op">=</span><span class="fl">.001</span>, test_data<span class="op">=</span>test_loader)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize network</span></span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>net <span class="op">=</span> Network([<span class="dv">784</span>, <span class="dv">30</span>, <span class="dv">30</span>, <span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>, <span class="dv">10</span>])</span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Train</span></span>
+<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a>train(net, train_loader, epochs<span class="op">=</span><span class="dv">30</span>, mini_batch_size<span class="op">=</span><span class="dv">10</span>, eta<span class="op">=</span><span class="fl">.001</span>, test_data<span class="op">=</span>test_loader)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Test Accuracy: 49.17%
 Epoch 1: Avg loss: 2.1066 | Test Accuracy: 49.17% | Grad Norm: 0.1545
@@ -6114,7 +6255,7 @@ Epoch 30: Avg loss: 1.5113 | Test Accuracy: 93.86% | Grad Norm: 0.2133</code></p
 </div>
 </div>
 <div id="036ad247-9837-4cae-8f42-050414672101" class="cell" data-execution_count="33">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>train(net, train_loader, epochs<span class="op">=</span><span class="dv">3</span>, mini_batch_size<span class="op">=</span><span class="dv">10</span>, eta<span class="op">=</span><span class="fl">.0001</span>, test_data<span class="op">=</span>test_loader)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>train(net, train_loader, epochs<span class="op">=</span><span class="dv">3</span>, mini_batch_size<span class="op">=</span><span class="dv">10</span>, eta<span class="op">=</span><span class="fl">.0001</span>, test_data<span class="op">=</span>test_loader)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Test Accuracy: 94.18%
 Epoch 1: Avg loss: 1.5050 | Test Accuracy: 94.18% | Grad Norm: 0.1529
@@ -6130,68 +6271,338 @@ Epoch 3: Avg loss: 1.5021 | Test Accuracy: 94.31% | Grad Norm: 0.1398</code></pr
 </div>
 </div>
 <div id="334dd8d0-45cf-4dea-8594-ead1633ef117" class="cell">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>train(net, train_loader, epochs<span class="op">=</span>, mini_batch_size<span class="op">=</span><span class="dv">10</span>, eta<span class="op">=</span><span class="fl">.00005</span>, test_data<span class="op">=</span>test_loader)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>train(net, train_loader, epochs<span class="op">=</span>, mini_batch_size<span class="op">=</span><span class="dv">10</span>, eta<span class="op">=</span><span class="fl">.00005</span>, test_data<span class="op">=</span>test_loader)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="0c9eb73d-da68-4bd0-867d-7cdf15a5d3b1" class="cell" data-execution_count="39">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize network</span></span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>net <span class="op">=</span> Network([<span class="dv">784</span>, <span class="dv">16</span>, <span class="dv">16</span>, <span class="dv">16</span>,<span class="dv">16</span>,<span class="dv">16</span>, <span class="dv">16</span>,<span class="dv">16</span>,<span class="dv">16</span>,<span class="dv">16</span>, <span class="dv">10</span>])</span>
-<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Train</span></span>
-<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>train(net, train_loader,epochs<span class="op">=</span><span class="dv">10</span>, mini_batch_size<span class="op">=</span><span class="dv">10</span>, eta<span class="op">=</span><span class="fl">0.001</span>, test_data<span class="op">=</span>test_loader)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="0c9eb73d-da68-4bd0-867d-7cdf15a5d3b1" class="cell" data-execution_count="52">
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize network</span></span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>net <span class="op">=</span> Network([<span class="dv">784</span>,<span class="dv">30</span>, <span class="dv">10</span>])</span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Train</span></span>
+<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a>train(net, train_loader,epochs<span class="op">=</span><span class="dv">30</span>, mini_batch_size<span class="op">=</span><span class="dv">100</span>, eta<span class="op">=</span><span class="fl">0.001</span>, test_data<span class="op">=</span>test_loader)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Test Accuracy: 65.97%
-Epoch 1: Avg loss: 1.9103 | Test Accuracy: 65.97% | Grad Norm: 2.1618
-Test Accuracy: 82.17%
-Epoch 2: Avg loss: 1.7605 | Test Accuracy: 82.17% | Grad Norm: 1.9723
-Test Accuracy: 72.04%
-Epoch 3: Avg loss: 1.6924 | Test Accuracy: 72.04% | Grad Norm: 1.4801
-Test Accuracy: 73.19%
-Epoch 4: Avg loss: 1.7242 | Test Accuracy: 73.19% | Grad Norm: 1.1159
-Test Accuracy: 65.95%
-Epoch 5: Avg loss: 1.7383 | Test Accuracy: 65.95% | Grad Norm: 0.9115
-Test Accuracy: 64.79%
-Epoch 6: Avg loss: 1.7245 | Test Accuracy: 64.79% | Grad Norm: 0.7612
-Test Accuracy: 74.75%
-Epoch 7: Avg loss: 1.7472 | Test Accuracy: 74.75% | Grad Norm: 0.6778
-Test Accuracy: 74.83%
-Epoch 8: Avg loss: 1.7212 | Test Accuracy: 74.83% | Grad Norm: 0.6663
-Test Accuracy: 84.29%
-Epoch 9: Avg loss: 1.6780 | Test Accuracy: 84.29% | Grad Norm: 0.8242
-Test Accuracy: 73.18%
-Epoch 10: Avg loss: 1.6328 | Test Accuracy: 73.18% | Grad Norm: 0.7515</code></pre>
+<pre><code>Test Accuracy: 81.87%
+Epoch 1: Avg loss: 1.7124 | Test Accuracy: 81.87% | Grad Norm: 0.7243
+Test Accuracy: 84.19%
+Epoch 2: Avg loss: 1.6347 | Test Accuracy: 84.19% | Grad Norm: 0.4565
+Test Accuracy: 84.75%
+Epoch 3: Avg loss: 1.6227 | Test Accuracy: 84.75% | Grad Norm: 0.3992
+Test Accuracy: 85.23%
+Epoch 4: Avg loss: 1.6158 | Test Accuracy: 85.23% | Grad Norm: 0.3694
+Test Accuracy: 85.27%
+Epoch 5: Avg loss: 1.6114 | Test Accuracy: 85.27% | Grad Norm: 0.3146
+Test Accuracy: 85.37%
+Epoch 6: Avg loss: 1.6082 | Test Accuracy: 85.37% | Grad Norm: 0.3032
+Test Accuracy: 94.89%
+Epoch 7: Avg loss: 1.5234 | Test Accuracy: 94.89% | Grad Norm: 0.4304
+Test Accuracy: 94.95%
+Epoch 8: Avg loss: 1.5092 | Test Accuracy: 94.95% | Grad Norm: 0.3597
+Test Accuracy: 95.50%
+Epoch 9: Avg loss: 1.5068 | Test Accuracy: 95.50% | Grad Norm: 0.3649
+Test Accuracy: 95.68%
+Epoch 10: Avg loss: 1.5036 | Test Accuracy: 95.68% | Grad Norm: 0.3122
+Test Accuracy: 95.75%
+Epoch 11: Avg loss: 1.5021 | Test Accuracy: 95.75% | Grad Norm: 0.3081
+Test Accuracy: 95.81%
+Epoch 12: Avg loss: 1.5022 | Test Accuracy: 95.81% | Grad Norm: 0.2850
+Test Accuracy: 95.61%
+Epoch 13: Avg loss: 1.4999 | Test Accuracy: 95.61% | Grad Norm: 0.2800
+Test Accuracy: 96.11%
+Epoch 14: Avg loss: 1.4995 | Test Accuracy: 96.11% | Grad Norm: 0.2886
+Test Accuracy: 96.00%
+Epoch 15: Avg loss: 1.4981 | Test Accuracy: 96.00% | Grad Norm: 0.2755
+Test Accuracy: 95.70%
+Epoch 16: Avg loss: 1.4973 | Test Accuracy: 95.70% | Grad Norm: 0.2705
+Test Accuracy: 96.15%
+Epoch 17: Avg loss: 1.4964 | Test Accuracy: 96.15% | Grad Norm: 0.2651
+Test Accuracy: 96.16%
+Epoch 18: Avg loss: 1.4955 | Test Accuracy: 96.16% | Grad Norm: 0.2590
+Test Accuracy: 96.24%
+Epoch 19: Avg loss: 1.4949 | Test Accuracy: 96.24% | Grad Norm: 0.2658
+Test Accuracy: 95.53%
+Epoch 20: Avg loss: 1.4943 | Test Accuracy: 95.53% | Grad Norm: 0.2571
+Test Accuracy: 96.19%
+Epoch 21: Avg loss: 1.4942 | Test Accuracy: 96.19% | Grad Norm: 0.2515
+Test Accuracy: 96.04%
+Epoch 22: Avg loss: 1.4937 | Test Accuracy: 96.04% | Grad Norm: 0.2457
+Test Accuracy: 96.27%
+Epoch 23: Avg loss: 1.4932 | Test Accuracy: 96.27% | Grad Norm: 0.2524
+Test Accuracy: 95.57%
+Epoch 24: Avg loss: 1.4916 | Test Accuracy: 95.57% | Grad Norm: 0.2290
+Test Accuracy: 96.05%
+Epoch 25: Avg loss: 1.4931 | Test Accuracy: 96.05% | Grad Norm: 0.2406
+Test Accuracy: 96.27%
+Epoch 26: Avg loss: 1.4928 | Test Accuracy: 96.27% | Grad Norm: 0.2411
+Test Accuracy: 96.26%
+Epoch 27: Avg loss: 1.4916 | Test Accuracy: 96.26% | Grad Norm: 0.2260
+Test Accuracy: 96.19%
+Epoch 28: Avg loss: 1.4921 | Test Accuracy: 96.19% | Grad Norm: 0.2398
+Test Accuracy: 96.24%
+Epoch 29: Avg loss: 1.4905 | Test Accuracy: 96.24% | Grad Norm: 0.2443
+Test Accuracy: 96.37%
+Epoch 30: Avg loss: 1.4905 | Test Accuracy: 96.37% | Grad Norm: 0.2259</code></pre>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="39">
-<pre><code>([1.910252003490925,
-  1.7605421397884686,
-  1.6924408531387647,
-  1.7241778714855511,
-  1.7382639647126197,
-  1.7244922712047894,
-  1.747195117255052,
-  1.7212321440180143,
-  1.6779569004774093,
-  1.6327920169035595],
- [65.97, 82.17, 72.04, 73.19, 65.95, 64.79, 74.75, 74.83, 84.29, 73.18],
- [2.1617651940725433,
-  1.9723268485029335,
-  1.4801335709182744,
-  1.1159431979126584,
-  0.9115443883962566,
-  0.761165994037466,
-  0.6777709146138219,
-  0.666324961432839,
-  0.8241914687594972,
-  0.7515233792834197])</code></pre>
+<div class="cell-output cell-output-display" data-execution_count="52">
+<pre><code>([1.712379110833009,
+  1.634699333647887,
+  1.6227173241575559,
+  1.6158263737956682,
+  1.6114202886223794,
+  1.6081893152594566,
+  1.5233851760824522,
+  1.509206545372804,
+  1.5068402435978254,
+  1.5036250775456428,
+  1.502133689125379,
+  1.5022221900224686,
+  1.4999016187985739,
+  1.4994844551086426,
+  1.4980750774939855,
+  1.4973419542312623,
+  1.4964445405602456,
+  1.4954652837514877,
+  1.4949333322842915,
+  1.494347569723924,
+  1.494236315647761,
+  1.49370050462087,
+  1.4932476964990298,
+  1.491597293774287,
+  1.4930901816089948,
+  1.4928456391890843,
+  1.4915773904124896,
+  1.4920755220850308,
+  1.490536659638087,
+  1.4905199672579765],
+ [81.87,
+  84.19,
+  84.75,
+  85.23,
+  85.27,
+  85.37,
+  94.89,
+  94.95,
+  95.5,
+  95.68,
+  95.75,
+  95.81,
+  95.61,
+  96.11,
+  96.0,
+  95.7,
+  96.15,
+  96.16,
+  96.24,
+  95.53,
+  96.19,
+  96.04,
+  96.27,
+  95.57,
+  96.05,
+  96.27,
+  96.26,
+  96.19,
+  96.24,
+  96.37],
+ [0.7243484067550947,
+  0.45651815972085996,
+  0.399189866863298,
+  0.3693671963394121,
+  0.3146082094254294,
+  0.3031961040602153,
+  0.4304137508635906,
+  0.3596677687820174,
+  0.36491132085475586,
+  0.3121707544426844,
+  0.3080823959714832,
+  0.28502727683696094,
+  0.2799889310267698,
+  0.2886388187179246,
+  0.2754983639435184,
+  0.2704686516169565,
+  0.26509288289372707,
+  0.25901263095473304,
+  0.26583254155572733,
+  0.2570741118824896,
+  0.25148435638281935,
+  0.24566580125881313,
+  0.25236080576859626,
+  0.22904242185308724,
+  0.24059044417438222,
+  0.24110372210341244,
+  0.22600588605100547,
+  0.23976487168889318,
+  0.2443153856269968,
+  0.2259297749290105])</code></pre>
+</div>
+</div>
+<div id="526247f1-7fdb-41c5-a9fa-226f16b0783c" class="cell" data-execution_count="65">
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize network</span></span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>net <span class="op">=</span> Network([<span class="dv">784</span>,<span class="dv">30</span>, <span class="dv">10</span>])</span>
+<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Train</span></span>
+<span id="cb53-5"><a href="#cb53-5" aria-hidden="true" tabindex="-1"></a>train(net, train_loader,epochs<span class="op">=</span><span class="dv">30</span>, mini_batch_size<span class="op">=</span><span class="dv">100</span>, eta<span class="op">=</span><span class="fl">0.0005</span>, test_data<span class="op">=</span>test_loader)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Test Accuracy: 84.24%
+Epoch 1: Avg loss: 1.6588 | Test Accuracy: 84.24% | Grad Norm: 0.8379
+Test Accuracy: 85.10%
+Epoch 2: Avg loss: 1.6136 | Test Accuracy: 85.10% | Grad Norm: 0.5828
+Test Accuracy: 84.85%
+Epoch 3: Avg loss: 1.6037 | Test Accuracy: 84.85% | Grad Norm: 0.4827
+Test Accuracy: 85.91%
+Epoch 4: Avg loss: 1.5972 | Test Accuracy: 85.91% | Grad Norm: 0.4511
+Test Accuracy: 94.97%
+Epoch 5: Avg loss: 1.5284 | Test Accuracy: 94.97% | Grad Norm: 0.5244
+Test Accuracy: 95.59%
+Epoch 6: Avg loss: 1.5049 | Test Accuracy: 95.59% | Grad Norm: 0.4655
+Test Accuracy: 95.36%
+Epoch 7: Avg loss: 1.5004 | Test Accuracy: 95.36% | Grad Norm: 0.4240
+Test Accuracy: 96.11%
+Epoch 8: Avg loss: 1.4973 | Test Accuracy: 96.11% | Grad Norm: 0.4028
+Test Accuracy: 96.09%
+Epoch 9: Avg loss: 1.4950 | Test Accuracy: 96.09% | Grad Norm: 0.3978
+Test Accuracy: 95.84%
+Epoch 10: Avg loss: 1.4930 | Test Accuracy: 95.84% | Grad Norm: 0.3621
+Test Accuracy: 96.12%
+Epoch 11: Avg loss: 1.4914 | Test Accuracy: 96.12% | Grad Norm: 0.3497
+Test Accuracy: 96.30%
+Epoch 12: Avg loss: 1.4902 | Test Accuracy: 96.30% | Grad Norm: 0.3424
+Test Accuracy: 96.39%
+Epoch 13: Avg loss: 1.4887 | Test Accuracy: 96.39% | Grad Norm: 0.3192
+Test Accuracy: 96.69%
+Epoch 14: Avg loss: 1.4876 | Test Accuracy: 96.69% | Grad Norm: 0.3158
+Test Accuracy: 96.72%
+Epoch 15: Avg loss: 1.4866 | Test Accuracy: 96.72% | Grad Norm: 0.2915
+Test Accuracy: 96.28%
+Epoch 16: Avg loss: 1.4861 | Test Accuracy: 96.28% | Grad Norm: 0.2964
+Test Accuracy: 96.50%
+Epoch 17: Avg loss: 1.4849 | Test Accuracy: 96.50% | Grad Norm: 0.2871
+Test Accuracy: 96.65%
+Epoch 18: Avg loss: 1.4845 | Test Accuracy: 96.65% | Grad Norm: 0.2766
+Test Accuracy: 96.60%
+Epoch 19: Avg loss: 1.4836 | Test Accuracy: 96.60% | Grad Norm: 0.2649
+Test Accuracy: 96.65%
+Epoch 20: Avg loss: 1.4827 | Test Accuracy: 96.65% | Grad Norm: 0.2451
+Test Accuracy: 96.43%
+Epoch 21: Avg loss: 1.4825 | Test Accuracy: 96.43% | Grad Norm: 0.2548
+Test Accuracy: 96.83%
+Epoch 22: Avg loss: 1.4818 | Test Accuracy: 96.83% | Grad Norm: 0.2329
+Test Accuracy: 96.74%
+Epoch 23: Avg loss: 1.4816 | Test Accuracy: 96.74% | Grad Norm: 0.2315
+Test Accuracy: 96.81%
+Epoch 24: Avg loss: 1.4805 | Test Accuracy: 96.81% | Grad Norm: 0.2189
+Test Accuracy: 96.81%
+Epoch 25: Avg loss: 1.4807 | Test Accuracy: 96.81% | Grad Norm: 0.2212
+Test Accuracy: 96.80%
+Epoch 26: Avg loss: 1.4801 | Test Accuracy: 96.80% | Grad Norm: 0.1994
+Test Accuracy: 96.88%
+Epoch 27: Avg loss: 1.4796 | Test Accuracy: 96.88% | Grad Norm: 0.2003
+Test Accuracy: 96.83%
+Epoch 28: Avg loss: 1.4798 | Test Accuracy: 96.83% | Grad Norm: 0.2192
+Test Accuracy: 96.83%
+Epoch 29: Avg loss: 1.4791 | Test Accuracy: 96.83% | Grad Norm: 0.1962
+Test Accuracy: 96.95%
+Epoch 30: Avg loss: 1.4788 | Test Accuracy: 96.95% | Grad Norm: 0.2054</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="65">
+<pre><code>([1.6587944337526956,
+  1.6135517328977584,
+  1.6037016983032226,
+  1.5972112274567287,
+  1.5283759133617083,
+  1.5048583151896795,
+  1.500364566922188,
+  1.4973335752685866,
+  1.4950114894707998,
+  1.4930032001336415,
+  1.4914346623222032,
+  1.4901753436525662,
+  1.4887443048556646,
+  1.487556106408437,
+  1.4866306614081064,
+  1.4860525583426158,
+  1.4849071377515792,
+  1.4844598679145178,
+  1.4835793728431066,
+  1.4826580402255058,
+  1.4825361109972,
+  1.481778745194276,
+  1.4815686868429183,
+  1.4805133953889211,
+  1.4807098559538523,
+  1.4800608076850572,
+  1.4796317419807117,
+  1.479806029498577,
+  1.4790916587313017,
+  1.4787971489628156],
+ [84.24,
+  85.1,
+  84.85,
+  85.91,
+  94.97,
+  95.59,
+  95.36,
+  96.11,
+  96.09,
+  95.84,
+  96.12,
+  96.3,
+  96.39,
+  96.69,
+  96.72,
+  96.28,
+  96.5,
+  96.65,
+  96.6,
+  96.65,
+  96.43,
+  96.83,
+  96.74,
+  96.81,
+  96.81,
+  96.8,
+  96.88,
+  96.83,
+  96.83,
+  96.95],
+ [0.837896753618222,
+  0.5827687637227682,
+  0.4826752601597975,
+  0.4511472644569282,
+  0.5243731860804096,
+  0.46551088325063045,
+  0.4239557685628547,
+  0.4028482485086789,
+  0.397803709560286,
+  0.3620867673378315,
+  0.3497052476465283,
+  0.34237169323483263,
+  0.31922445064978383,
+  0.31581735428312013,
+  0.291537828621234,
+  0.2964211914070448,
+  0.28709497524425703,
+  0.27664326199134304,
+  0.2649279448417684,
+  0.24511394909914588,
+  0.2548074126238488,
+  0.2328908924115631,
+  0.23151278675522277,
+  0.21887790198628423,
+  0.22120987124742428,
+  0.19939092685213478,
+  0.20033031164809215,
+  0.21924440801590078,
+  0.19624090372650524,
+  0.20542978161287692])</code></pre>
 </div>
 </div>
 <div id="277701cb-e1d8-45c5-8339-387707601413" class="cell" data-execution_count="37">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>F.relu</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>F.relu</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="37">
 <pre><code>&lt;function torch.nn.functional.relu(input: torch.Tensor, inplace: bool = False) -&gt; torch.Tensor&gt;</code></pre>
 </div>
 </div>
 <div id="e9a2e818-2490-47c7-abe4-5715d20de4af" class="cell" data-execution_count="41">
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>train(net, train_loader,epochs<span class="op">=</span><span class="dv">10</span>, mini_batch_size<span class="op">=</span><span class="dv">10</span>, eta<span class="op">=</span><span class="fl">0.0001</span>, test_data<span class="op">=</span>test_loader)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>train(net, train_loader,epochs<span class="op">=</span><span class="dv">10</span>, mini_batch_size<span class="op">=</span><span class="dv">10</span>, eta<span class="op">=</span><span class="fl">0.0001</span>, test_data<span class="op">=</span>test_loader)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Test Accuracy: 85.02%
 Epoch 1: Avg loss: 1.6808 | Test Accuracy: 85.02% | Grad Norm: 0.5848
@@ -6239,7 +6650,7 @@ Epoch 10: Avg loss: 1.5595 | Test Accuracy: 90.16% | Grad Norm: 1.0280</code></p
 </div>
 </div>
 <div id="3491ad07-2f97-4829-ab3c-6f44b4d2e9ae" class="cell" data-execution_count="42">
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>train(net, train_loader,epochs<span class="op">=</span><span class="dv">10</span>, mini_batch_size<span class="op">=</span><span class="dv">10</span>, eta<span class="op">=</span><span class="fl">0.00005</span>, test_data<span class="op">=</span>test_loader)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a>train(net, train_loader,epochs<span class="op">=</span><span class="dv">10</span>, mini_batch_size<span class="op">=</span><span class="dv">10</span>, eta<span class="op">=</span><span class="fl">0.00005</span>, test_data<span class="op">=</span>test_loader)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Test Accuracy: 90.29%
 Epoch 1: Avg loss: 1.5576 | Test Accuracy: 90.29% | Grad Norm: 1.1653
@@ -6287,7 +6698,7 @@ Epoch 10: Avg loss: 1.5484 | Test Accuracy: 91.06% | Grad Norm: 0.8950</code></p
 </div>
 </div>
 <div id="575318fd-3a9e-49bc-b355-5292b2757b10" class="cell" data-execution_count="43">
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>train(net, train_loader,epochs<span class="op">=</span><span class="dv">10</span>, mini_batch_size<span class="op">=</span><span class="dv">30</span>, eta<span class="op">=</span><span class="fl">0.00005</span>, test_data<span class="op">=</span>test_loader)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a>train(net, train_loader,epochs<span class="op">=</span><span class="dv">10</span>, mini_batch_size<span class="op">=</span><span class="dv">30</span>, eta<span class="op">=</span><span class="fl">0.00005</span>, test_data<span class="op">=</span>test_loader)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Test Accuracy: 91.10%
 Epoch 1: Avg loss: 1.5476 | Test Accuracy: 91.10% | Grad Norm: 0.8429
@@ -6335,7 +6746,7 @@ Epoch 10: Avg loss: 1.5420 | Test Accuracy: 91.58% | Grad Norm: 0.7816</code></p
 </div>
 </div>
 <div id="e0737317-8efc-4d9e-b227-22f05e7a3278" class="cell" data-execution_count="44">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>train(net, train_loader,epochs<span class="op">=</span><span class="dv">10</span>, mini_batch_size<span class="op">=</span><span class="dv">30</span>, eta<span class="op">=</span><span class="fl">0.00002</span>, test_data<span class="op">=</span>test_loader)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a>train(net, train_loader,epochs<span class="op">=</span><span class="dv">10</span>, mini_batch_size<span class="op">=</span><span class="dv">30</span>, eta<span class="op">=</span><span class="fl">0.00002</span>, test_data<span class="op">=</span>test_loader)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Test Accuracy: 91.65%
 Epoch 1: Avg loss: 1.5409 | Test Accuracy: 91.65% | Grad Norm: 0.8363
@@ -6380,6 +6791,122 @@ Epoch 10: Avg loss: 1.5387 | Test Accuracy: 91.77% | Grad Norm: 0.6256</code></p
   0.7121345371288179,
   0.6046759387407957,
   0.6256342942342423])</code></pre>
+</div>
+</div>
+<div id="913d3e59-bbc2-450f-a492-d7937ad84efc" class="cell" data-execution_count="50">
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a>?optim.Adam</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div class="ansi-escaped-output">
+<pre><span class="ansi-red-fg">Init signature:</span>
+optim<span class="ansi-blue-fg">.</span>Adam<span class="ansi-blue-fg">(</span>
+    params<span class="ansi-blue-fg">:</span> Union<span class="ansi-blue-fg">[</span>Iterable<span class="ansi-blue-fg">[</span>torch<span class="ansi-blue-fg">.</span>Tensor<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> Iterable<span class="ansi-blue-fg">[</span>Dict<span class="ansi-blue-fg">[</span>str<span class="ansi-blue-fg">,</span> Any<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span>
+    lr<span class="ansi-blue-fg">:</span> Union<span class="ansi-blue-fg">[</span>float<span class="ansi-blue-fg">,</span> torch<span class="ansi-blue-fg">.</span>Tensor<span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">0.001</span><span class="ansi-blue-fg">,</span>
+    betas<span class="ansi-blue-fg">:</span> Tuple<span class="ansi-blue-fg">[</span>float<span class="ansi-blue-fg">,</span> float<span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">0.9</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">0.999</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span>
+    eps<span class="ansi-blue-fg">:</span> float <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">1e-08</span><span class="ansi-blue-fg">,</span>
+    weight_decay<span class="ansi-blue-fg">:</span> float <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span>
+    amsgrad<span class="ansi-blue-fg">:</span> bool <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">False</span><span class="ansi-blue-fg">,</span>
+    <span class="ansi-blue-fg">*</span><span class="ansi-blue-fg">,</span>
+    foreach<span class="ansi-blue-fg">:</span> Optional<span class="ansi-blue-fg">[</span>bool<span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">,</span>
+    maximize<span class="ansi-blue-fg">:</span> bool <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">False</span><span class="ansi-blue-fg">,</span>
+    capturable<span class="ansi-blue-fg">:</span> bool <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">False</span><span class="ansi-blue-fg">,</span>
+    differentiable<span class="ansi-blue-fg">:</span> bool <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">False</span><span class="ansi-blue-fg">,</span>
+    fused<span class="ansi-blue-fg">:</span> Optional<span class="ansi-blue-fg">[</span>bool<span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">,</span>
+<span class="ansi-blue-fg">)</span>
+<span class="ansi-red-fg">Docstring:</span>     
+Implements Adam algorithm.
+.. math::
+   \begin{aligned}
+        &amp;\rule{110mm}{0.4pt}                                                                 \\
+        &amp;\textbf{input}      : \gamma \text{ (lr)}, \beta_1, \beta_2
+            \text{ (betas)},\theta_0 \text{ (params)},f(\theta) \text{ (objective)}          \\
+        &amp;\hspace{13mm}      \lambda \text{ (weight decay)},  \: \textit{amsgrad},
+            \:\textit{maximize}                                                              \\
+        &amp;\textbf{initialize} :  m_0 \leftarrow 0 \text{ ( first moment)},
+            v_0\leftarrow 0 \text{ (second moment)},\: \widehat{v_0}^{max}\leftarrow 0\\[-1.ex]
+        &amp;\rule{110mm}{0.4pt}                                                                 \\
+        &amp;\textbf{for} \: t=1 \: \textbf{to} \: \ldots \: \textbf{do}                         \\
+        &amp;\hspace{5mm}\textbf{if} \: \textit{maximize}:                                       \\
+        &amp;\hspace{10mm}g_t           \leftarrow   -\nabla_{\theta} f_t (\theta_{t-1})         \\
+        &amp;\hspace{5mm}\textbf{else}                                                           \\
+        &amp;\hspace{10mm}g_t           \leftarrow   \nabla_{\theta} f_t (\theta_{t-1})          \\
+        &amp;\hspace{5mm}\textbf{if} \: \lambda \neq 0                                           \\
+        &amp;\hspace{10mm} g_t \leftarrow g_t + \lambda  \theta_{t-1}                            \\
+        &amp;\hspace{5mm}m_t           \leftarrow   \beta_1 m_{t-1} + (1 - \beta_1) g_t          \\
+        &amp;\hspace{5mm}v_t           \leftarrow   \beta_2 v_{t-1} + (1-\beta_2) g^2_t          \\
+        &amp;\hspace{5mm}\widehat{m_t} \leftarrow   m_t/\big(1-\beta_1^t \big)                   \\
+        &amp;\hspace{5mm}\widehat{v_t} \leftarrow   v_t/\big(1-\beta_2^t \big)                   \\
+        &amp;\hspace{5mm}\textbf{if} \: amsgrad                                                  \\
+        &amp;\hspace{10mm}\widehat{v_t}^{max} \leftarrow \mathrm{max}(\widehat{v_t}^{max},
+            \widehat{v_t})                                                                   \\
+        &amp;\hspace{10mm}\theta_t \leftarrow \theta_{t-1} - \gamma \widehat{m_t}/
+            \big(\sqrt{\widehat{v_t}^{max}} + \epsilon \big)                                 \\
+        &amp;\hspace{5mm}\textbf{else}                                                           \\
+        &amp;\hspace{10mm}\theta_t \leftarrow \theta_{t-1} - \gamma \widehat{m_t}/
+            \big(\sqrt{\widehat{v_t}} + \epsilon \big)                                       \\
+        &amp;\rule{110mm}{0.4pt}                                                          \\[-1.ex]
+        &amp;\bf{return} \:  \theta_t                                                     \\[-1.ex]
+        &amp;\rule{110mm}{0.4pt}                                                          \\[-1.ex]
+   \end{aligned}
+For further details regarding the algorithm we refer to `Adam: A Method for Stochastic Optimization`_.
+Args:
+    params (iterable): iterable of parameters to optimize or dicts defining
+        parameter groups
+    lr (float, Tensor, optional): learning rate (default: 1e-3). A tensor LR
+        is not yet supported for all our implementations. Please use a float
+        LR if you are not also specifying fused=True or capturable=True.
+    betas (Tuple[float, float], optional): coefficients used for computing
+        running averages of gradient and its square (default: (0.9, 0.999))
+    eps (float, optional): term added to the denominator to improve
+        numerical stability (default: 1e-8)
+    weight_decay (float, optional): weight decay (L2 penalty) (default: 0)
+    amsgrad (bool, optional): whether to use the AMSGrad variant of this
+        algorithm from the paper `On the Convergence of Adam and Beyond`_
+        (default: False)
+    foreach (bool, optional): whether foreach implementation of optimizer
+        is used. If unspecified by the user (so foreach is None), we will try to use
+        foreach over the for-loop implementation on CUDA, since it is usually
+        significantly more performant. Note that the foreach implementation uses
+        ~ sizeof(params) more peak memory than the for-loop version due to the intermediates
+        being a tensorlist vs just one tensor. If memory is prohibitive, batch fewer
+        parameters through the optimizer at a time or switch this flag to False (default: None)
+    maximize (bool, optional): maximize the objective with respect to the
+        params, instead of minimizing (default: False)
+    capturable (bool, optional): whether this instance is safe to
+        capture in a CUDA graph. Passing True can impair ungraphed performance,
+        so if you don&#39;t intend to graph capture this instance, leave it False
+        (default: False)
+    differentiable (bool, optional): whether autograd should
+        occur through the optimizer step in training. Otherwise, the step()
+        function runs in a torch.no_grad() context. Setting to True can impair
+        performance, so leave it False if you don&#39;t intend to run autograd
+        through this instance (default: False)
+    fused (bool, optional): whether the fused implementation is used.
+        Currently, `torch.float64`, `torch.float32`, `torch.float16`, and `torch.bfloat16`
+        are supported. (default: None)
+.. note:: The foreach and fused implementations are typically faster than the for-loop,
+          single-tensor implementation, with fused being theoretically fastest with both
+          vertical and horizontal fusion. As such, if the user has not specified either
+          flag (i.e., when foreach = fused = None), we will attempt defaulting to the foreach
+          implementation when the tensors are all on CUDA. Why not fused? Since the fused
+          implementation is relatively new, we want to give it sufficient bake-in time.
+          To specify fused, pass True for fused. To force running the for-loop
+          implementation, pass False for either foreach or fused. 
+.. Note::
+    A prototype implementation of Adam and AdamW for MPS supports `torch.float32` and `torch.float16`.
+.. _Adam\: A Method for Stochastic Optimization:
+    https://arxiv.org/abs/1412.6980
+.. _On the Convergence of Adam and Beyond:
+    https://openreview.net/forum?id=ryQu7f-RZ
+<span class="ansi-red-fg">File:</span>           ~/miniforge3/envs/stan/lib/python3.11/site-packages/torch/optim/adam.py
+<span class="ansi-red-fg">Type:</span>           type
+<span class="ansi-red-fg">Subclasses:</span>     </pre>
+</div>
+</div>
+</div>
+<div id="69086c62-9fb3-4850-a1c8-5507741bd77d" class="cell" data-execution_count="66">
+<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="fl">0.9</span><span class="op">**</span><span class="dv">50</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="66">
+<pre><code>0.00515377520732012</code></pre>
 </div>
 </div>
 
