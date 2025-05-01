@@ -5168,7 +5168,7 @@ Epoch 29: 766 / 10000</code></pre>
 <pre><code>&lt;__main__.Network at 0x7566664eb790&gt;</code></pre>
 </div>
 </div>
-<div id="a0a67090-bf1a-4df5-a8ac-f4cba8a0f63d" class="cell" data-execution_count="144">
+<div id="a0a67090-bf1a-4df5-a8ac-f4cba8a0f63d" class="cell" data-execution_count="147">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch.nn <span class="im">as</span> nn</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch.nn.functional <span class="im">as</span> F</span>
@@ -5260,50 +5260,46 @@ Epoch 29: 766 / 10000</code></pre>
 <span id="cb7-89"><a href="#cb7-89" aria-hidden="true" tabindex="-1"></a>        train_acc <span class="op">=</span> evaluate(network,train_data)</span>
 <span id="cb7-90"><a href="#cb7-90" aria-hidden="true" tabindex="-1"></a>        train_accuracy_history.append(train_acc)</span>
 <span id="cb7-91"><a href="#cb7-91" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb7-92"><a href="#cb7-92" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Evaluate test accuracy if test data is provided</span></span>
-<span id="cb7-93"><a href="#cb7-93" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> test_data:</span>
-<span id="cb7-94"><a href="#cb7-94" aria-hidden="true" tabindex="-1"></a>            acc <span class="op">=</span> evaluate(network, test_data)</span>
-<span id="cb7-95"><a href="#cb7-95" aria-hidden="true" tabindex="-1"></a>            accuracy_history.append(acc)</span>
-<span id="cb7-96"><a href="#cb7-96" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f&quot;Epoch </span><span class="sc">{</span>epoch<span class="op">+</span><span class="dv">1</span><span class="sc">}</span><span class="ss">: Avg loss: </span><span class="sc">{</span>avg_loss<span class="sc">:.4f}</span><span class="ss"> | Train Accuracy: </span><span class="sc">{</span>train_acc<span class="sc">:.2f}</span><span class="ss">% | Test Accuracy: </span><span class="sc">{</span>acc<span class="sc">:.2f}</span><span class="ss">% | Grad Norm: </span><span class="sc">{</span>avg_grad_norm<span class="sc">:.4f}</span><span class="ss">&quot;</span>)</span>
-<span id="cb7-97"><a href="#cb7-97" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
-<span id="cb7-98"><a href="#cb7-98" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f&quot;Epoch </span><span class="sc">{</span>epoch<span class="op">+</span><span class="dv">1</span><span class="sc">}</span><span class="ss">: Avg loss: </span><span class="sc">{</span>avg_loss<span class="sc">:.4f}</span><span class="ss"> | Grad Norm: </span><span class="sc">{</span>avg_grad_norm<span class="sc">:.4f}</span><span class="ss">&quot;</span>)</span>
+<span id="cb7-92"><a href="#cb7-92" aria-hidden="true" tabindex="-1"></a>        acc <span class="op">=</span> evaluate(network, test_data)</span>
+<span id="cb7-93"><a href="#cb7-93" aria-hidden="true" tabindex="-1"></a>        accuracy_history.append(acc)</span>
+<span id="cb7-94"><a href="#cb7-94" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f&quot;Epoch </span><span class="sc">{</span>epoch<span class="op">+</span><span class="dv">1</span><span class="sc">}</span><span class="ss">: Avg loss: </span><span class="sc">{</span>avg_loss<span class="sc">:.4f}</span><span class="ss"> | Train Accuracy: </span><span class="sc">{</span>train_acc<span class="sc">:.2f}</span><span class="ss">% | Test Accuracy: </span><span class="sc">{</span>acc<span class="sc">:.2f}</span><span class="ss">% | Grad Norm: </span><span class="sc">{</span>avg_grad_norm<span class="sc">:.4f}</span><span class="ss">&quot;</span>)</span>
+<span id="cb7-95"><a href="#cb7-95" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb7-96"><a href="#cb7-96" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> loss_history, train_accuracy_history, accuracy_history, grad_norm_history</span>
+<span id="cb7-97"><a href="#cb7-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-98"><a href="#cb7-98" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-99"><a href="#cb7-99" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-100"><a href="#cb7-100" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> loss_history, train_accuracy_history, accuracy_history, grad_norm_history</span>
-<span id="cb7-101"><a href="#cb7-101" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-102"><a href="#cb7-102" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-103"><a href="#cb7-103" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-104"><a href="#cb7-104" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> evaluate(network, test_data):</span>
-<span id="cb7-105"><a href="#cb7-105" aria-hidden="true" tabindex="-1"></a>    network.<span class="bu">eval</span>()</span>
-<span id="cb7-106"><a href="#cb7-106" aria-hidden="true" tabindex="-1"></a>    correct <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb7-107"><a href="#cb7-107" aria-hidden="true" tabindex="-1"></a>    total <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb7-108"><a href="#cb7-108" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> torch.no_grad():</span>
-<span id="cb7-109"><a href="#cb7-109" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> data, target <span class="kw">in</span> test_data:</span>
-<span id="cb7-110"><a href="#cb7-110" aria-hidden="true" tabindex="-1"></a>            output <span class="op">=</span> network(data)</span>
-<span id="cb7-111"><a href="#cb7-111" aria-hidden="true" tabindex="-1"></a>            pred <span class="op">=</span> output.argmax(dim<span class="op">=</span><span class="dv">1</span>, keepdim<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb7-112"><a href="#cb7-112" aria-hidden="true" tabindex="-1"></a>            correct <span class="op">+=</span> pred.eq(target.view_as(pred)).<span class="bu">sum</span>().item()</span>
-<span id="cb7-113"><a href="#cb7-113" aria-hidden="true" tabindex="-1"></a>            total <span class="op">+=</span> data.size(<span class="dv">0</span>)</span>
-<span id="cb7-114"><a href="#cb7-114" aria-hidden="true" tabindex="-1"></a>    acc <span class="op">=</span> <span class="fl">100.</span> <span class="op">*</span> correct <span class="op">/</span> total</span>
-<span id="cb7-115"><a href="#cb7-115" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;Test Accuracy: </span><span class="sc">{</span>acc<span class="sc">:.2f}</span><span class="ss">%&quot;</span>)</span>
-<span id="cb7-116"><a href="#cb7-116" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> acc</span>
-<span id="cb7-117"><a href="#cb7-117" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-118"><a href="#cb7-118" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-119"><a href="#cb7-119" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> compute_layer_gradient_norms(model):</span>
-<span id="cb7-120"><a href="#cb7-120" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;</span></span>
-<span id="cb7-121"><a href="#cb7-121" aria-hidden="true" tabindex="-1"></a><span class="co">    Compute the 2-norm of the gradients for each layer in a PyTorch model.</span></span>
-<span id="cb7-122"><a href="#cb7-122" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
-<span id="cb7-123"><a href="#cb7-123" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
-<span id="cb7-124"><a href="#cb7-124" aria-hidden="true" tabindex="-1"></a><span class="co">        A list of (layer_name, gradient_norm) tuples.</span></span>
-<span id="cb7-125"><a href="#cb7-125" aria-hidden="true" tabindex="-1"></a><span class="co">    &quot;&quot;&quot;</span></span>
-<span id="cb7-126"><a href="#cb7-126" aria-hidden="true" tabindex="-1"></a>    layer_grad_norms <span class="op">=</span> []</span>
-<span id="cb7-127"><a href="#cb7-127" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-128"><a href="#cb7-128" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> name, param <span class="kw">in</span> model.named_parameters():</span>
-<span id="cb7-129"><a href="#cb7-129" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> param.grad <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span>:</span>
-<span id="cb7-130"><a href="#cb7-130" aria-hidden="true" tabindex="-1"></a>            grad_norm <span class="op">=</span> param.grad.data.norm(<span class="dv">2</span>).item()</span>
-<span id="cb7-131"><a href="#cb7-131" aria-hidden="true" tabindex="-1"></a>            layer_grad_norms.append((name, grad_norm))</span>
-<span id="cb7-132"><a href="#cb7-132" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
-<span id="cb7-133"><a href="#cb7-133" aria-hidden="true" tabindex="-1"></a>            layer_grad_norms.append((name, <span class="fl">0.0</span>))  <span class="co"># No gradient yet</span></span>
-<span id="cb7-134"><a href="#cb7-134" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-135"><a href="#cb7-135" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> layer_grad_norms</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-100"><a href="#cb7-100" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> evaluate(network, test_data):</span>
+<span id="cb7-101"><a href="#cb7-101" aria-hidden="true" tabindex="-1"></a>    network.<span class="bu">eval</span>()</span>
+<span id="cb7-102"><a href="#cb7-102" aria-hidden="true" tabindex="-1"></a>    correct <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb7-103"><a href="#cb7-103" aria-hidden="true" tabindex="-1"></a>    total <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb7-104"><a href="#cb7-104" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> torch.no_grad():</span>
+<span id="cb7-105"><a href="#cb7-105" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> data, target <span class="kw">in</span> test_data:</span>
+<span id="cb7-106"><a href="#cb7-106" aria-hidden="true" tabindex="-1"></a>            output <span class="op">=</span> network(data)</span>
+<span id="cb7-107"><a href="#cb7-107" aria-hidden="true" tabindex="-1"></a>            pred <span class="op">=</span> output.argmax(dim<span class="op">=</span><span class="dv">1</span>, keepdim<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb7-108"><a href="#cb7-108" aria-hidden="true" tabindex="-1"></a>            correct <span class="op">+=</span> pred.eq(target.view_as(pred)).<span class="bu">sum</span>().item()</span>
+<span id="cb7-109"><a href="#cb7-109" aria-hidden="true" tabindex="-1"></a>            total <span class="op">+=</span> data.size(<span class="dv">0</span>)</span>
+<span id="cb7-110"><a href="#cb7-110" aria-hidden="true" tabindex="-1"></a>    acc <span class="op">=</span> <span class="fl">100.</span> <span class="op">*</span> correct <span class="op">/</span> total</span>
+<span id="cb7-111"><a href="#cb7-111" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;Test Accuracy: </span><span class="sc">{</span>acc<span class="sc">:.2f}</span><span class="ss">%&quot;</span>)</span>
+<span id="cb7-112"><a href="#cb7-112" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> acc</span>
+<span id="cb7-113"><a href="#cb7-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-114"><a href="#cb7-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-115"><a href="#cb7-115" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> compute_layer_gradient_norms(model):</span>
+<span id="cb7-116"><a href="#cb7-116" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb7-117"><a href="#cb7-117" aria-hidden="true" tabindex="-1"></a><span class="co">    Compute the 2-norm of the gradients for each layer in a PyTorch model.</span></span>
+<span id="cb7-118"><a href="#cb7-118" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb7-119"><a href="#cb7-119" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb7-120"><a href="#cb7-120" aria-hidden="true" tabindex="-1"></a><span class="co">        A list of (layer_name, gradient_norm) tuples.</span></span>
+<span id="cb7-121"><a href="#cb7-121" aria-hidden="true" tabindex="-1"></a><span class="co">    &quot;&quot;&quot;</span></span>
+<span id="cb7-122"><a href="#cb7-122" aria-hidden="true" tabindex="-1"></a>    layer_grad_norms <span class="op">=</span> []</span>
+<span id="cb7-123"><a href="#cb7-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-124"><a href="#cb7-124" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> name, param <span class="kw">in</span> model.named_parameters():</span>
+<span id="cb7-125"><a href="#cb7-125" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> param.grad <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span>:</span>
+<span id="cb7-126"><a href="#cb7-126" aria-hidden="true" tabindex="-1"></a>            grad_norm <span class="op">=</span> param.grad.data.norm(<span class="dv">2</span>).item()</span>
+<span id="cb7-127"><a href="#cb7-127" aria-hidden="true" tabindex="-1"></a>            layer_grad_norms.append((name, grad_norm))</span>
+<span id="cb7-128"><a href="#cb7-128" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb7-129"><a href="#cb7-129" aria-hidden="true" tabindex="-1"></a>            layer_grad_norms.append((name, <span class="fl">0.0</span>))  <span class="co"># No gradient yet</span></span>
+<span id="cb7-130"><a href="#cb7-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-131"><a href="#cb7-131" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> layer_grad_norms</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="3cdf96e1-fa7b-4930-a7e2-fc9a8b0ba965" class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> torchvision <span class="im">import</span> datasets, transforms</span>
@@ -5509,101 +5505,101 @@ Transform: Compose(
 <span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Optional: create a DataLoader</span></span>
 <span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>sampled_loader <span class="op">=</span> DataLoader(sampled_dataset, batch_size<span class="op">=</span><span class="dv">64</span>, shuffle<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="9d09a2b7-c8cc-4ec5-91ab-1aae8e14b59b" class="cell" data-execution_count="143">
+<div id="9d09a2b7-c8cc-4ec5-91ab-1aae8e14b59b" class="cell" data-execution_count="148">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>net <span class="op">=</span> Network([<span class="dv">784</span>,<span class="dv">30</span>, <span class="dv">10</span>])</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>sol <span class="op">=</span> train(net, train_loader, epochs<span class="op">=</span><span class="dv">30</span>, mini_batch_size<span class="op">=</span><span class="dv">30</span>, eta<span class="op">=</span><span class="fl">0.001</span>, test_data<span class="op">=</span>test_loader)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>sol <span class="op">=</span> train(net, train_loader, epochs<span class="op">=</span><span class="dv">30</span>, mini_batch_size<span class="op">=</span><span class="dv">100</span>, eta<span class="op">=</span><span class="fl">0.00005</span>, test_data<span class="op">=</span>test_loader)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Test Accuracy: 87.64%
-Test Accuracy: 88.61%
-Epoch 1: Avg loss: 1.0087 | Train Accuracy: 87.64% | Test Accuracy: 88.61% | Grad Norm: 1.5247
-Test Accuracy: 89.81%
-Test Accuracy: 90.33%
-Epoch 2: Avg loss: 0.5053 | Train Accuracy: 89.81% | Test Accuracy: 90.33% | Grad Norm: 1.3321
-Test Accuracy: 90.83%
-Test Accuracy: 91.17%
-Epoch 3: Avg loss: 0.3947 | Train Accuracy: 90.83% | Test Accuracy: 91.17% | Grad Norm: 1.3069
-Test Accuracy: 91.55%
-Test Accuracy: 91.76%
-Epoch 4: Avg loss: 0.3433 | Train Accuracy: 91.55% | Test Accuracy: 91.76% | Grad Norm: 1.2931
+<pre><code>Test Accuracy: 85.97%
+Test Accuracy: 86.60%
+Epoch 1: Avg loss: 1.1944 | Train Accuracy: 85.97% | Test Accuracy: 86.60% | Grad Norm: 1.4855
+Test Accuracy: 89.11%
+Test Accuracy: 89.49%
+Epoch 2: Avg loss: 0.6413 | Train Accuracy: 89.11% | Test Accuracy: 89.49% | Grad Norm: 1.1895
+Test Accuracy: 90.62%
+Test Accuracy: 90.93%
+Epoch 3: Avg loss: 0.4671 | Train Accuracy: 90.62% | Test Accuracy: 90.93% | Grad Norm: 1.1232
+Test Accuracy: 91.48%
+Test Accuracy: 91.61%
+Epoch 4: Avg loss: 0.3838 | Train Accuracy: 91.48% | Test Accuracy: 91.61% | Grad Norm: 1.1012
 Test Accuracy: 92.14%
-Test Accuracy: 92.19%
-Epoch 5: Avg loss: 0.3116 | Train Accuracy: 92.14% | Test Accuracy: 92.19% | Grad Norm: 1.2774
-Test Accuracy: 92.55%
-Test Accuracy: 92.44%
-Epoch 6: Avg loss: 0.2894 | Train Accuracy: 92.55% | Test Accuracy: 92.44% | Grad Norm: 1.2640
-Test Accuracy: 92.84%
-Test Accuracy: 92.64%
-Epoch 7: Avg loss: 0.2726 | Train Accuracy: 92.84% | Test Accuracy: 92.64% | Grad Norm: 1.2514
+Test Accuracy: 92.18%
+Epoch 5: Avg loss: 0.3363 | Train Accuracy: 92.14% | Test Accuracy: 92.18% | Grad Norm: 1.0907
+Test Accuracy: 92.59%
+Test Accuracy: 92.62%
+Epoch 6: Avg loss: 0.3053 | Train Accuracy: 92.59% | Test Accuracy: 92.62% | Grad Norm: 1.0836
+Test Accuracy: 92.97%
+Test Accuracy: 92.83%
+Epoch 7: Avg loss: 0.2831 | Train Accuracy: 92.97% | Test Accuracy: 92.83% | Grad Norm: 1.0782
+Test Accuracy: 93.32%
+Test Accuracy: 93.16%
+Epoch 8: Avg loss: 0.2660 | Train Accuracy: 93.32% | Test Accuracy: 93.16% | Grad Norm: 1.0731
+Test Accuracy: 93.58%
 Test Accuracy: 93.20%
-Test Accuracy: 92.96%
-Epoch 8: Avg loss: 0.2589 | Train Accuracy: 93.20% | Test Accuracy: 92.96% | Grad Norm: 1.2383
-Test Accuracy: 93.48%
-Test Accuracy: 93.25%
-Epoch 9: Avg loss: 0.2476 | Train Accuracy: 93.48% | Test Accuracy: 93.25% | Grad Norm: 1.2286
-Test Accuracy: 93.76%
-Test Accuracy: 93.50%
-Epoch 10: Avg loss: 0.2380 | Train Accuracy: 93.76% | Test Accuracy: 93.50% | Grad Norm: 1.2188
-Test Accuracy: 93.97%
-Test Accuracy: 93.68%
-Epoch 11: Avg loss: 0.2295 | Train Accuracy: 93.97% | Test Accuracy: 93.68% | Grad Norm: 1.2042
-Test Accuracy: 94.14%
-Test Accuracy: 93.90%
-Epoch 12: Avg loss: 0.2221 | Train Accuracy: 94.14% | Test Accuracy: 93.90% | Grad Norm: 1.1993
-Test Accuracy: 94.34%
-Test Accuracy: 93.99%
-Epoch 13: Avg loss: 0.2154 | Train Accuracy: 94.34% | Test Accuracy: 93.99% | Grad Norm: 1.1874
-Test Accuracy: 94.52%
-Test Accuracy: 94.10%
-Epoch 14: Avg loss: 0.2093 | Train Accuracy: 94.52% | Test Accuracy: 94.10% | Grad Norm: 1.1842
-Test Accuracy: 94.57%
+Epoch 9: Avg loss: 0.2521 | Train Accuracy: 93.58% | Test Accuracy: 93.20% | Grad Norm: 1.0651
+Test Accuracy: 93.82%
+Test Accuracy: 93.51%
+Epoch 10: Avg loss: 0.2406 | Train Accuracy: 93.82% | Test Accuracy: 93.51% | Grad Norm: 1.0639
+Test Accuracy: 94.06%
+Test Accuracy: 93.69%
+Epoch 11: Avg loss: 0.2306 | Train Accuracy: 94.06% | Test Accuracy: 93.69% | Grad Norm: 1.0602
 Test Accuracy: 94.21%
-Epoch 15: Avg loss: 0.2038 | Train Accuracy: 94.57% | Test Accuracy: 94.21% | Grad Norm: 1.1716
-Test Accuracy: 94.73%
-Test Accuracy: 94.26%
-Epoch 16: Avg loss: 0.1988 | Train Accuracy: 94.73% | Test Accuracy: 94.26% | Grad Norm: 1.1638
-Test Accuracy: 94.84%
-Test Accuracy: 94.33%
-Epoch 17: Avg loss: 0.1941 | Train Accuracy: 94.84% | Test Accuracy: 94.33% | Grad Norm: 1.1590
-Test Accuracy: 94.95%
-Test Accuracy: 94.43%
-Epoch 18: Avg loss: 0.1898 | Train Accuracy: 94.95% | Test Accuracy: 94.43% | Grad Norm: 1.1520
-Test Accuracy: 95.10%
-Test Accuracy: 94.48%
-Epoch 19: Avg loss: 0.1858 | Train Accuracy: 95.10% | Test Accuracy: 94.48% | Grad Norm: 1.1488
-Test Accuracy: 95.17%
-Test Accuracy: 94.50%
-Epoch 20: Avg loss: 0.1819 | Train Accuracy: 95.17% | Test Accuracy: 94.50% | Grad Norm: 1.1362
-Test Accuracy: 95.28%
-Test Accuracy: 94.66%
-Epoch 21: Avg loss: 0.1783 | Train Accuracy: 95.28% | Test Accuracy: 94.66% | Grad Norm: 1.1323
-Test Accuracy: 95.34%
-Test Accuracy: 94.57%
-Epoch 22: Avg loss: 0.1749 | Train Accuracy: 95.34% | Test Accuracy: 94.57% | Grad Norm: 1.1270
-Test Accuracy: 95.40%
-Test Accuracy: 94.74%
-Epoch 23: Avg loss: 0.1718 | Train Accuracy: 95.40% | Test Accuracy: 94.74% | Grad Norm: 1.1248
-Test Accuracy: 95.51%
-Test Accuracy: 94.82%
-Epoch 24: Avg loss: 0.1687 | Train Accuracy: 95.51% | Test Accuracy: 94.82% | Grad Norm: 1.1160
-Test Accuracy: 95.55%
-Test Accuracy: 94.91%
-Epoch 25: Avg loss: 0.1658 | Train Accuracy: 95.55% | Test Accuracy: 94.91% | Grad Norm: 1.1107
-Test Accuracy: 95.62%
-Test Accuracy: 95.03%
-Epoch 26: Avg loss: 0.1629 | Train Accuracy: 95.62% | Test Accuracy: 95.03% | Grad Norm: 1.1076
-Test Accuracy: 95.71%
+Test Accuracy: 93.78%
+Epoch 12: Avg loss: 0.2219 | Train Accuracy: 94.21% | Test Accuracy: 93.78% | Grad Norm: 1.0533
+Test Accuracy: 94.40%
+Test Accuracy: 93.98%
+Epoch 13: Avg loss: 0.2141 | Train Accuracy: 94.40% | Test Accuracy: 93.98% | Grad Norm: 1.0502
+Test Accuracy: 94.59%
+Test Accuracy: 94.10%
+Epoch 14: Avg loss: 0.2072 | Train Accuracy: 94.59% | Test Accuracy: 94.10% | Grad Norm: 1.0379
+Test Accuracy: 94.63%
+Test Accuracy: 94.14%
+Epoch 15: Avg loss: 0.2011 | Train Accuracy: 94.63% | Test Accuracy: 94.14% | Grad Norm: 1.0376
+Test Accuracy: 94.86%
+Test Accuracy: 94.38%
+Epoch 16: Avg loss: 0.1955 | Train Accuracy: 94.86% | Test Accuracy: 94.38% | Grad Norm: 1.0316
 Test Accuracy: 94.97%
-Epoch 27: Avg loss: 0.1603 | Train Accuracy: 95.71% | Test Accuracy: 94.97% | Grad Norm: 1.0958
-Test Accuracy: 95.76%
+Test Accuracy: 94.41%
+Epoch 17: Avg loss: 0.1905 | Train Accuracy: 94.97% | Test Accuracy: 94.41% | Grad Norm: 1.0243
+Test Accuracy: 95.07%
+Test Accuracy: 94.48%
+Epoch 18: Avg loss: 0.1857 | Train Accuracy: 95.07% | Test Accuracy: 94.48% | Grad Norm: 1.0214
+Test Accuracy: 95.18%
+Test Accuracy: 94.51%
+Epoch 19: Avg loss: 0.1815 | Train Accuracy: 95.18% | Test Accuracy: 94.51% | Grad Norm: 1.0173
+Test Accuracy: 95.30%
+Test Accuracy: 94.54%
+Epoch 20: Avg loss: 0.1773 | Train Accuracy: 95.30% | Test Accuracy: 94.54% | Grad Norm: 1.0181
+Test Accuracy: 95.42%
+Test Accuracy: 94.68%
+Epoch 21: Avg loss: 0.1736 | Train Accuracy: 95.42% | Test Accuracy: 94.68% | Grad Norm: 1.0159
+Test Accuracy: 95.50%
+Test Accuracy: 94.69%
+Epoch 22: Avg loss: 0.1701 | Train Accuracy: 95.50% | Test Accuracy: 94.69% | Grad Norm: 1.0073
+Test Accuracy: 95.60%
+Test Accuracy: 94.66%
+Epoch 23: Avg loss: 0.1668 | Train Accuracy: 95.60% | Test Accuracy: 94.66% | Grad Norm: 1.0007
+Test Accuracy: 95.69%
+Test Accuracy: 94.72%
+Epoch 24: Avg loss: 0.1637 | Train Accuracy: 95.69% | Test Accuracy: 94.72% | Grad Norm: 0.9996
+Test Accuracy: 95.75%
+Test Accuracy: 94.81%
+Epoch 25: Avg loss: 0.1605 | Train Accuracy: 95.75% | Test Accuracy: 94.81% | Grad Norm: 0.9966
+Test Accuracy: 95.78%
+Test Accuracy: 94.89%
+Epoch 26: Avg loss: 0.1576 | Train Accuracy: 95.78% | Test Accuracy: 94.89% | Grad Norm: 0.9918
+Test Accuracy: 95.89%
+Test Accuracy: 94.87%
+Epoch 27: Avg loss: 0.1549 | Train Accuracy: 95.89% | Test Accuracy: 94.87% | Grad Norm: 0.9885
+Test Accuracy: 95.92%
+Test Accuracy: 94.95%
+Epoch 28: Avg loss: 0.1522 | Train Accuracy: 95.92% | Test Accuracy: 94.95% | Grad Norm: 0.9815
+Test Accuracy: 96.07%
+Test Accuracy: 94.88%
+Epoch 29: Avg loss: 0.1498 | Train Accuracy: 96.07% | Test Accuracy: 94.88% | Grad Norm: 0.9841
+Test Accuracy: 96.13%
 Test Accuracy: 95.05%
-Epoch 28: Avg loss: 0.1578 | Train Accuracy: 95.76% | Test Accuracy: 95.05% | Grad Norm: 1.0917
-Test Accuracy: 95.86%
-Test Accuracy: 95.13%
-Epoch 29: Avg loss: 0.1554 | Train Accuracy: 95.86% | Test Accuracy: 95.13% | Grad Norm: 1.0925
-Test Accuracy: 95.91%
-Test Accuracy: 95.21%
-Epoch 30: Avg loss: 0.1531 | Train Accuracy: 95.91% | Test Accuracy: 95.21% | Grad Norm: 1.0858</code></pre>
+Epoch 30: Avg loss: 0.1473 | Train Accuracy: 96.13% | Test Accuracy: 95.05% | Grad Norm: 0.9742</code></pre>
 </div>
 </div>
 <div id="ae4301fd-027e-4174-9ffc-594b4c0b7d1a" class="cell" data-execution_count="17">

@@ -5584,7 +5584,7 @@ Test Accuracy: 97.34%
 Epoch 30: Avg loss: 0.0106 | Test Accuracy: 97.34% | Grad Norm: 3.2589</code></pre>
 </div>
 </div>
-<div id="0e45f1f3-2ca9-46bb-8d63-6165cbef8951" class="cell">
+<div id="0e45f1f3-2ca9-46bb-8d63-6165cbef8951" class="cell" data-execution_count="187">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Deep with no scheduler</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>net <span class="op">=</span> Network([<span class="dv">784</span>, <span class="dv">30</span>,<span class="dv">30</span> , <span class="dv">30</span>, <span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>, <span class="dv">10</span>])</span>
@@ -5633,7 +5633,23 @@ Epoch 20: Avg loss: 0.0633 | Test Accuracy: 96.68% | Grad Norm: 3.9385
 Test Accuracy: 96.88%
 Epoch 21: Avg loss: 0.0600 | Test Accuracy: 96.88% | Grad Norm: 3.9684
 Test Accuracy: 96.88%
-Epoch 22: Avg loss: 0.0597 | Test Accuracy: 96.88% | Grad Norm: 3.9766</code></pre>
+Epoch 22: Avg loss: 0.0597 | Test Accuracy: 96.88% | Grad Norm: 3.9766
+Test Accuracy: 96.64%
+Epoch 23: Avg loss: 0.0573 | Test Accuracy: 96.64% | Grad Norm: 3.9636
+Test Accuracy: 96.52%
+Epoch 24: Avg loss: 0.0557 | Test Accuracy: 96.52% | Grad Norm: 3.9827
+Test Accuracy: 96.74%
+Epoch 25: Avg loss: 0.0524 | Test Accuracy: 96.74% | Grad Norm: 4.0227
+Test Accuracy: 96.74%
+Epoch 26: Avg loss: 0.0523 | Test Accuracy: 96.74% | Grad Norm: 4.0483
+Test Accuracy: 96.59%
+Epoch 27: Avg loss: 0.0503 | Test Accuracy: 96.59% | Grad Norm: 4.0974
+Test Accuracy: 96.56%
+Epoch 28: Avg loss: 0.0489 | Test Accuracy: 96.56% | Grad Norm: 4.0381
+Test Accuracy: 96.87%
+Epoch 29: Avg loss: 0.0499 | Test Accuracy: 96.87% | Grad Norm: 4.0656
+Test Accuracy: 96.71%
+Epoch 30: Avg loss: 0.0489 | Test Accuracy: 96.71% | Grad Norm: 4.0364</code></pre>
 </div>
 </div>
 <div id="0c0f06ee-9b53-4ddc-9769-06772ba490e6" class="cell" data-execution_count="168">
@@ -7797,6 +7813,33 @@ Cell <span class="ansi-green-fg">In[46], line 1</span>
 
 <span class="ansi-red-fg">AttributeError</span>: module &#39;torch.nn.functional&#39; has no attribute &#39;StepLR&#39;</pre>
 </div>
+</div>
+</div>
+<div id="5c115516-09bc-49af-9ade-08cbdd6b0e88" class="cell" data-execution_count="188">
+<div class="sourceCode cell-code" id="cb84"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a>?net.train</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div class="ansi-escaped-output">
+<pre><span class="ansi-red-fg">Signature:</span> net<span class="ansi-blue-fg">.</span>train<span class="ansi-blue-fg">(</span>mode<span class="ansi-blue-fg">:</span> bool <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">True</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">-&gt;</span> <span class="ansi-blue-fg">~</span>T
+<span class="ansi-red-fg">Docstring:</span>
+Set the module in training mode.
+This has any effect only on certain modules. See documentations of
+particular modules for details of their behaviors in training/evaluation
+mode, if they are affected, e.g. :class:`Dropout`, :class:`BatchNorm`,
+etc.
+Args:
+    mode (bool): whether to set training mode (``True``) or evaluation
+                 mode (``False``). Default: ``True``.
+Returns:
+    Module: self
+<span class="ansi-red-fg">File:</span>      ~/miniforge3/envs/stan/lib/python3.11/site-packages/torch/nn/modules/module.py
+<span class="ansi-red-fg">Type:</span>      method</pre>
+</div>
+</div>
+</div>
+<div id="efba3264-0674-4356-bbb1-da354ac06a37" class="cell" data-execution_count="189">
+<div class="sourceCode cell-code" id="cb85"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb85-1"><a href="#cb85-1" aria-hidden="true" tabindex="-1"></a>?optimizer.zero_grad()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Object `optimizer.zero_grad()` not found.</code></pre>
 </div>
 </div>
 
