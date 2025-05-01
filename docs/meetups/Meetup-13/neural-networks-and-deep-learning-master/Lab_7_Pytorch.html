@@ -4995,7 +4995,7 @@ vertical-align: -.125em;
 
 
 
-<div id="131f086d-ae1f-4e5d-9683-1dbe8208f0b9" class="cell" data-execution_count="33">
+<div id="131f086d-ae1f-4e5d-9683-1dbe8208f0b9" class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch.nn <span class="im">as</span> nn</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch.nn.functional <span class="im">as</span> F</span>
@@ -5015,9 +5015,9 @@ vertical-align: -.125em;
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.layers <span class="op">=</span> nn.ModuleList()</span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="va">self</span>.num_layers <span class="op">-</span> <span class="dv">1</span>):</span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>            layer <span class="op">=</span> nn.Linear(sizes[i], sizes[i<span class="op">+</span><span class="dv">1</span>])</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>            <span class="co">#nn.init.xavier_normal_(layer.weight)   # Good initialization for shallow/sigmoid nets</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>            nn.init.xavier_normal_(layer.weight)   <span class="co"># Good initialization for shallow/sigmoid nets</span></span>
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>            <span class="co">#nn.init.kaiming_normal_(layer.weight, mode=&#39;fan_out&#39;, nonlinearity=&#39;relu&#39;) initialization for relus</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>            nn.init.kaiming_uniform_(layer.weight, mode<span class="op">=</span><span class="st">&#39;fan_out&#39;</span>, nonlinearity<span class="op">=</span><span class="st">&#39;relu&#39;</span>) initialization <span class="cf">for</span> relus <span class="kw">and</span> deep nets</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>            <span class="co">#nn.init.kaiming_uniform_(layer.weight, mode=&#39;fan_out&#39;, nonlinearity=&#39;relu&#39;) initialization for relus and deep nets</span></span>
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>            nn.init.zeros_(layer.bias)               <span class="co"># initialize the bias to 0</span></span>
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.layers.append(layer)</span>
@@ -5027,8 +5027,8 @@ vertical-align: -.125em;
 <span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> forward(<span class="va">self</span>, x):</span>
 <span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> layer <span class="kw">in</span> <span class="va">self</span>.layers[:<span class="op">-</span><span class="dv">1</span>]:</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>            <span class="co">#x = F.sigmoid(layer(x))   # sigmoid layers</span></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>            x <span class="op">=</span> F.relu(layer(x)) <span class="co"># You will try the relu layer in the last problem</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>            x <span class="op">=</span> F.sigmoid(layer(x))   <span class="co"># sigmoid layers</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>            <span class="co">#x = F.relu(layer(x)) # You will try the relu layer in the last problem</span></span>
 <span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> <span class="va">self</span>.layers[<span class="op">-</span><span class="dv">1</span>](x) </span>
 <span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> x</span>
 <span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
@@ -5147,17 +5147,8 @@ vertical-align: -.125em;
 <span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-error">
-<div class="ansi-escaped-output">
-<pre><span class="ansi-cyan-fg">  Cell </span><span class="ansi-green-fg">In[33], line 22</span>
-<span class="ansi-red-fg">    nn.init.kaiming_uniform_(layer.weight, mode=&#39;fan_out&#39;, nonlinearity=&#39;relu&#39;) initialization for relus and deep nets</span>
-                                                                                ^
-<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> invalid syntax
-</pre>
 </div>
-</div>
-</div>
-<div id="849f846c-ec90-4b53-8706-ccb5be3bbafb" class="cell" data-execution_count="10">
+<div id="849f846c-ec90-4b53-8706-ccb5be3bbafb" class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> torchvision <span class="im">import</span> datasets, transforms</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -5179,98 +5170,19 @@ vertical-align: -.125em;
 <span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>train_dataset <span class="op">=</span> datasets.MNIST(<span class="st">&#39;data/&#39;</span>, train<span class="op">=</span><span class="va">True</span>, download<span class="op">=</span><span class="va">True</span>, transform<span class="op">=</span>transform)</span>
 <span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>test_dataset <span class="op">=</span> datasets.MNIST(<span class="st">&#39;data/&#39;</span>, train<span class="op">=</span><span class="va">False</span>, transform<span class="op">=</span>transform)</span>
 <span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Downloading http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz
-Failed to download (trying next):
-HTTP Error 404: Not Found
-
-Downloading https://ossci-datasets.s3.amazonaws.com/mnist/train-images-idx3-ubyte.gz
-Downloading https://ossci-datasets.s3.amazonaws.com/mnist/train-images-idx3-ubyte.gz to data/MNIST/raw/train-images-idx3-ubyte.gz</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 9.91M/9.91M [00:00&lt;00:00, 38.1MB/s]</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Extracting data/MNIST/raw/train-images-idx3-ubyte.gz to data/MNIST/raw
-
-Downloading http://yann.lecun.com/exdb/mnist/train-labels-idx1-ubyte.gz
-Failed to download (trying next):
-HTTP Error 404: Not Found
-
-Downloading https://ossci-datasets.s3.amazonaws.com/mnist/train-labels-idx1-ubyte.gz
-Downloading https://ossci-datasets.s3.amazonaws.com/mnist/train-labels-idx1-ubyte.gz to data/MNIST/raw/train-labels-idx1-ubyte.gz</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 28.9k/28.9k [00:00&lt;00:00, 2.92MB/s]</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Extracting data/MNIST/raw/train-labels-idx1-ubyte.gz to data/MNIST/raw
-
-Downloading http://yann.lecun.com/exdb/mnist/t10k-images-idx3-ubyte.gz
-Failed to download (trying next):
-HTTP Error 404: Not Found
-
-Downloading https://ossci-datasets.s3.amazonaws.com/mnist/t10k-images-idx3-ubyte.gz</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code></code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Downloading https://ossci-datasets.s3.amazonaws.com/mnist/t10k-images-idx3-ubyte.gz to data/MNIST/raw/t10k-images-idx3-ubyte.gz</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1.65M/1.65M [00:00&lt;00:00, 19.5MB/s]</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Extracting data/MNIST/raw/t10k-images-idx3-ubyte.gz to data/MNIST/raw</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code></code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-Downloading http://yann.lecun.com/exdb/mnist/t10k-labels-idx1-ubyte.gz
-Failed to download (trying next):
-HTTP Error 404: Not Found
-
-Downloading https://ossci-datasets.s3.amazonaws.com/mnist/t10k-labels-idx1-ubyte.gz
-Downloading https://ossci-datasets.s3.amazonaws.com/mnist/t10k-labels-idx1-ubyte.gz to data/MNIST/raw/t10k-labels-idx1-ubyte.gz</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4.54k/4.54k [00:00&lt;00:00, 4.77MB/s]</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Extracting data/MNIST/raw/t10k-labels-idx1-ubyte.gz to data/MNIST/raw
-</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code></code></pre>
-</div>
 </div>
 <div id="9278e556-aa75-4f10-b7b8-c0beda597b85" class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># batch_size determines the minibatch size</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>train_loader <span class="op">=</span> DataLoader(train_dataset, batch_size<span class="op">=</span><span class="dv">10</span>, shuffle<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>test_loader <span class="op">=</span> DataLoader(test_dataset, batch_size<span class="op">=</span><span class="dv">10</span>, shuffle<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize network</span></span>
-<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>net <span class="op">=</span> Network([<span class="dv">784</span>, <span class="dv">512</span>,<span class="dv">400</span>,<span class="dv">256</span>,<span class="dv">200</span>,<span class="dv">128</span>,<span class="dv">96</span>,<span class="dv">64</span>,<span class="dv">32</span>, <span class="dv">10</span>])</span>
-<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Train</span></span>
-<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>train(net, train_loader, epochs<span class="op">=</span><span class="dv">30</span>, eta<span class="op">=</span><span class="fl">0.001</span>, test_data<span class="op">=</span>test_loader)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Epoch 1: Avg loss: 0.3230 | Test Accuracy: 0.9524 | Train Accuracy: 0.9577 
-Epoch 2: Avg loss: 0.1551 | Test Accuracy: 0.9704 | Train Accuracy: 0.9770 
-Epoch 3: Avg loss: 0.1212 | Test Accuracy: 0.9706 | Train Accuracy: 0.9773 
-Epoch 4: Avg loss: 0.1047 | Test Accuracy: 0.9704 | Train Accuracy: 0.9802 
-Epoch 5: Avg loss: 0.0891 | Test Accuracy: 0.9733 | Train Accuracy: 0.9832 
-Epoch 6: Avg loss: 0.0812 | Test Accuracy: 0.9747 | Train Accuracy: 0.9834 
-Epoch 7: Avg loss: 0.0755 | Test Accuracy: 0.9762 | Train Accuracy: 0.9869 
-Epoch 8: Avg loss: 0.0709 | Test Accuracy: 0.9769 | Train Accuracy: 0.9864 
-Epoch 9: Avg loss: 0.0673 | Test Accuracy: 0.9753 | Train Accuracy: 0.9872 
-Epoch 10: Avg loss: 0.0611 | Test Accuracy: 0.9727 | Train Accuracy: 0.9847 </code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># batch_size determines the minibatch size</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>train_loader <span class="op">=</span> DataLoader(train_dataset, batch_size<span class="op">=</span><span class="dv">10</span>, shuffle<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>test_loader <span class="op">=</span> DataLoader(test_dataset, batch_size<span class="op">=</span><span class="dv">10</span>, shuffle<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize network</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>net <span class="op">=</span> Network([<span class="dv">784</span>, <span class="dv">512</span>,<span class="dv">400</span>,<span class="dv">256</span>,<span class="dv">200</span>,<span class="dv">128</span>,<span class="dv">96</span>,<span class="dv">64</span>,<span class="dv">32</span>, <span class="dv">10</span>])</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Train</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>train(net, train_loader, epochs<span class="op">=</span><span class="dv">30</span>, eta<span class="op">=</span><span class="fl">0.001</span>, test_data<span class="op">=</span>test_loader)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 
