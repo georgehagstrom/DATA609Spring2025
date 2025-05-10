@@ -47,67 +47,74 @@
     "text": "Welcome to Week 9. During this week we will cover Chapter 4 of CVX-book, which introduces convex optimization problems. We have already been solving some of these problems, so we won’t go in depth into all the different types of convex problems like is done in the textbook. Instead we will cover log-concave functions, which are very important for statistical applications of convex optimization and was a topic that we did not have time for in the past two weeks, and then we will move on to discuss some optimization terminology that might be new, problem transformations and when they are useful, geometric programming, and multi-objective optimization.\nYour fifth homework assignment available and due in two weeks, Sunday at midnight.\nHere are more details on what you need to do this week:\n\nGo through module 9 and complete the week 9 readings.\nAttend our second meetup on Monday at 6:45 p.m. ET on Zoom\nBegin working on Lab 5"
   },
   {
-    "objectID": "posts/2025-02-10-Meetup-3-Slides.html",
-    "href": "posts/2025-02-10-Meetup-3-Slides.html",
-    "title": "Meetup 3: Least Squares Data Fitting",
+    "objectID": "posts/2025-05-07-Week-14-Neural-Networks.html",
+    "href": "posts/2025-05-07-Week-14-Neural-Networks.html",
+    "title": "Week 14- Optimization Algorithms",
     "section": "",
-    "text": "Meetup 3 is tonight at 6:45PM. We will tall about applications of least squares to problems in statistics and data fitting, including the use of weighted least squares for problems with heterogeneous or dependent errors, function interpolation and autoregressive time-series models, validation and regularization, ridge regression, and feature engineering.\nHere is the information you need for the first meetup:\n\nGo through the course overview materials, and complete the week 3 readings.\nAttend our first meetup on Monday at 6:45 p.m. ET on Zoom\nClick here for slides"
+    "text": "Welcome to Week 14. During this week we will apply what we learned in Week 13 to the special case of training neural networks. We will begin with the motivation behind neural networks and some of their most important properties from a machine learning perspective. Focusing on shallow networks initially, we will explore training neural networks using pytorch.\nYour final homework assignment is due May 18th at the latest.\nHere are more details on what you need to do this week:\n\nGo through module 14 and complete the week 14 readings.\nAttend our second meetup on Monday at 6:45 p.m. ET on Zoom\nContinue working on Lab 7"
   },
   {
-    "objectID": "posts/2025-02-24-Meetup-5-Slides.html",
-    "href": "posts/2025-02-24-Meetup-5-Slides.html",
-    "title": "Meetup 5: Introduction to Convex Sets",
+    "objectID": "posts/2025-03-18-Meetup-8-Slides.html",
+    "href": "posts/2025-03-18-Meetup-8-Slides.html",
+    "title": "Meetup 8: Constructing Convex Functions",
     "section": "",
-    "text": "I have uploaded the slides for Meetup 5, which happened tonight at 6:45PM\nWe will learn about convex optimization and examples of convex sets, which are used as constraints in convex optimization problems.\n\nClick here for slides"
+    "text": "I have uploaded the slides for Meetup 8.\nWe discussed rules for constructing convex functions and showing that functions are convex. In particular, we learned that positive weighted sums of convex functions are convex (both finite and infinite), that this extends to integration, and that maximization of convex functions (both finite and infinite) both preserve convexity. Then we discussed composition, presenting both scalar and vector composition rules.\n\nClick here for slides\nWatch Meetup 8 Here"
   },
   {
-    "objectID": "posts/2025-03-31-Week-10-Data-Fitting.html",
-    "href": "posts/2025-03-31-Week-10-Data-Fitting.html",
-    "title": "Week 10- Data Fitting",
+    "objectID": "posts/2025-02-10-Data-Fitting.html",
+    "href": "posts/2025-02-10-Data-Fitting.html",
+    "title": "Week 3- Data Fitting",
     "section": "",
-    "text": "Welcome to Week 10. During this week we will cover Chapter 6 of CVX-book, which focuses on data fitting applications of convex optimization. We will talk about the meaning of different norms and penalty functions which can be imposed when trying to fit data. Three primary topics will be robustness to outliers, regularization and sparsity, and stochastic and worst case approximation, amongst others.\nYour fifth homework assignment is due next Sunday at midnight.\nHere are more details on what you need to do this week:\n\nGo through module 9 and complete the week 10 readings.\nAttend our second meetup on Monday at 6:45 p.m. ET on Zoom\nFinish working on Lab 5"
+    "text": "This week, we will discuss applications of least squares methods to statistics and data fitting. This will include weighted least squares methods for linear regression, function interpolation, auto-regressive models, and feature engineering, and generalization/regularization.\nYour second homework assignment will be due Sunday February 23rd.\nHere are more details on what you need to do this week:\n\nGo through module 3 and complete the week 3 readings.\nAttend our second meetup on Monday at 6:45 p.m. ET on Zoom\nBegin working on Lab 2"
   },
   {
-    "objectID": "posts/2025-04-28-Week-13-Optimization-Algorithms.html",
-    "href": "posts/2025-04-28-Week-13-Optimization-Algorithms.html",
-    "title": "Week 13- Optimization Algorithms",
+    "objectID": "posts/2025-03-24-Meetup-9-Slides.html",
+    "href": "posts/2025-03-24-Meetup-9-Slides.html",
+    "title": "Meetup 9: Convex Optimization Problems",
     "section": "",
-    "text": "Welcome to Week 13. During this week, we will turn our attention to non-convex problems and methods for solving them. In general, we can only guarantee convergence to a local minimum, but there are several algorithms that can find a very advantageous local minimum in the context of machine learning problems like training neural networks. The focus will be on gradient descent, and improvement which handles large condition numbers better called gradient descent with momentum, and adaptive algorithms which are often the default choice for training neural networks such as ADAM.\nYour final homework assignment is due May 18th at the latest.\nHere are more details on what you need to do this week:\n\nGo through module 11 and complete the week 13 readings.\nAttend our second meetup on Monday at 6:45 p.m. ET on Zoom\nBegin working on Lab 7 (available soon)"
+    "text": "I have uploaded the slides for Meetup 9.\nWe will discuss log-concave functions, a topic which was missed the past two weeks, and then discuss methods for transforming optimization problems, geometric programs, and multicriterion optimization.\n\nClick here for slides"
   },
   {
-    "objectID": "posts/2025-03-10-Week-7.html",
-    "href": "posts/2025-03-10-Week-7.html",
-    "title": "Week 7- Convex Functions",
+    "objectID": "posts/2025-04-07-Meetup-11-Statistics.html",
+    "href": "posts/2025-04-07-Meetup-11-Statistics.html",
+    "title": "Meetup 11: Statistics",
     "section": "",
-    "text": "During this week, we will begin learning about convex functions, which will be the objective functions for convex optimization problems. We will go over the definition of convexity and present a number of different examples of convex functions. We will discuss what convexity means and why it is such a crucial property for optimization theory. We will talk about Jensen’s inequality and discuss some applications to risk in uncertain situations.\nYour fourth homework assignment is available this Sunday at midnight.\nHere are more details on what you need to do this week:\n\nGo through module 7 and complete the week 7 readings.\nAttend our second meetup on Monday at 6:45 p.m. ET on Zoom\nBegin working on Lab 4"
+    "text": "I have uploaded the slides for Meetup 11\nWe are going to talk about applications of convex optimization to statistics and classification.\n\nClick here for slides\nClick here to watch the meetup video"
   },
   {
-    "objectID": "posts/2025-02-24-Week-5-Convex-Sets.html",
-    "href": "posts/2025-02-24-Week-5-Convex-Sets.html",
-    "title": "Week 5-Convex Sets",
+    "objectID": "posts/2025-04-21-Meetup-12-Duality.html",
+    "href": "posts/2025-04-21-Meetup-12-Duality.html",
+    "title": "Meetup 12: Duality",
     "section": "",
-    "text": "During this week we will begin learning the tools we need to formulate and solve convex optimization problems. We will talk more about general optimization problems and look at convexity from the perspective of constraints. We will present the definition of a convex set and give several example, and discuss how these examples arise when formulating problems.\nYour third homework assignment has been posted and is going to be due two Sundays from now.\nHere are more details on what you need to do this week:\n\nGo through module 5 and complete the week 4 readings.\nAttend our second meetup on Monday at 6:45 p.m. ET on Zoom\nBegin working on Lab 3"
+    "text": "I have uploaded the slides for Meetup 12\nWe are going to talk about the concept of duality and how to use it to learn about your optimization problem.\n\nClick here for slides\nClick here to watch the meetup video"
   },
   {
-    "objectID": "posts/2025-04-01-Meetup-10-Data-Fitting.html",
-    "href": "posts/2025-04-01-Meetup-10-Data-Fitting.html",
-    "title": "Meetup 10: Data Fitting",
+    "objectID": "posts/2025-02-02-Week-2-Least-Squares.html",
+    "href": "posts/2025-02-02-Week-2-Least-Squares.html",
+    "title": "Week 2- Least Squares",
     "section": "",
-    "text": "I have uploaded the slides and video for Meetup 10.\nWe discussed the meaning of different norms and penalty functions used in data fitting, talked about the trade-offs between different regularization schemes, and robust optimization in both the stochastic and worst case frameworks.\n\nClick here for slides\nClick here to watch the meetup video"
+    "text": "This week we will talk about the most basic and most important class of optimization problems, least squares optimization. Whenever you fit a linear regression, you are solving a least squares problems, and least squares methods have applications across all quantitative fields. Although least squares methods are simple, they should not be dismissed- the fact that we can solve them rapidly, reliably means that it is useful to know how to formulate them in applied situations and how to solve them.\nIn this week we will go over the basics and a few simple applications, while the two weeks after this will explore data fitting examples and how to handle more complicated cases.\nYour first homework assignment will be due next Sunday.\nHere are more details on what you need to do this week:\n\nGo through module 2 and complete the week 2 readings.\nAttend our second meetup on Monday at 6:45 p.m. ET on Zoom\nContinue working on Lab 1"
   },
   {
-    "objectID": "posts/2025-04-28-Meetup-13.html",
-    "href": "posts/2025-04-28-Meetup-13.html",
-    "title": "Meetup 13: Non-Convex Optimization",
+    "objectID": "posts/2025-01-26-Welcome_to_DATA_609.html",
+    "href": "posts/2025-01-26-Welcome_to_DATA_609.html",
+    "title": "Welcome to DATA 609",
     "section": "",
-    "text": "I have uploaded the slides for Meetup 13\nWe are going to learn about methods for solving non-convex optimization problems that are useful specifically for training neural networks.\n\nClick here for slides"
+    "text": "Welcome to DATA 609, Math Modeling Techniques.\nClick this post now to get started!\nHere are the first steps:\n\nRead the syllabus.\nGo through the course overview materials, and complete the week 1 readings.\nJoin our Slack channel:\n\nAttend our first meetup on Monday at 6:45 p.m. ET on Zoom\n\nI recorded a short video which introduces me and gives you more background on the course:\n\nClick here for slides"
   },
   {
-    "objectID": "posts/2025-03-10-Meetup-7-Slides.html",
-    "href": "posts/2025-03-10-Meetup-7-Slides.html",
-    "title": "Meetup 7: Introduction to Convex Sets",
+    "objectID": "posts/2025-02-16-Week-4-Constrained-Least-Squares.html",
+    "href": "posts/2025-02-16-Week-4-Constrained-Least-Squares.html",
+    "title": "Week 4- Constrained Least Squares",
     "section": "",
-    "text": "I have uploaded the slides for Meetup 7.\nWe will learn about convex functions, including the definition, their importance for optimization, and simple examples. We will also talk about Jensen’s inequality and its applications to risk.\n\nClick here for slides\nWatch Meetup 7 Here"
+    "text": "This week we will learn how to deal with linear equality constraints in least squares optimization problems. There will be a discussion of Lagrange multipliers, and application examples will include B-splines and portfolio optimization. Constraints are a critical part of both optimization problems and modeling in general.\nYour second homework assignment will be due Sunday February 23rd.\nHere are more details on what you need to do this week:\n\nGo through module 4 and complete the week 4 readings.\nAttend our second meetup on Monday at 6:45 p.m. ET on Zoom\nContinue working on Lab 2"
+  },
+  {
+    "objectID": "posts/2025-04-07-Week-11-Stats-and-ML.html",
+    "href": "posts/2025-04-07-Week-11-Stats-and-ML.html",
+    "title": "Week 11- Stats and Machine Learning",
+    "section": "",
+    "text": "Welcome to Week 11. During this week we will cover the beginning of Chapter 7 of CVX-book, which focuses on both parametric and non-parametric statistics applications of convex optimization, and section 8.6 of CVX-book, which focuses on classication. We will revisit maximum likelihood methods and introduce maximum a posteriori methods. We will talk about entropy maximimization and the KL-divergence, and then introduce support vector machines for classification.\nYour sixth homework assignment is due three weeks from today, Sunday April 27th at midnight.\nHere are more details on what you need to do this week:\n\nGo through module 11 and complete the week 11 readings.\nAttend our second meetup on Monday at 6:45 p.m. ET on Zoom\nFinish working on Lab 6"
   },
   {
     "objectID": "posts/2025-03-18-Week-8.html",
@@ -184,9 +191,9 @@
   {
     "objectID": "modules/module14.html",
     "href": "modules/module14.html",
-    "title": "Module 14: Stochastic Gradient Descent",
+    "title": "Module 14: Introduction to Neural Networks",
     "section": "",
-    "text": "Homework\nHomework 7 is due this Sunday at midnight\n\n\nLearning Objectives\n\nStochastic Gradient Descent\nHyperparameter Tuning\nSaddle Points and Convergence\n\n\n\nReadings\nSection 8.5 Introduction to Algorithms for Data Mining and Machine Learning\nChapter 8 of deeplearningbook",
+    "text": "Homework\nHomework 7 is due May 18th by midnight\n\n\nLearning Objectives\n\nIntroduction and Motivation for Neural Networks\nIntroduction to pytorch\n\n\n\nReadings\n\nChapter 1 of Neural Networks and Deep Learning\n\nRead Chapter 3 if you find it to be a review\n\nPytorch Basics\n\nThe recipes are also good\n\nSection 8.5 Introduction to Algorithms for Data Mining and Machine Learning",
     "crumbs": [
       "Topics",
       "14 - Stochastic Gradient Descent"
@@ -443,7 +450,7 @@
     "href": "meetups/Meetup-13/neural-networks-and-deep-learning-master/Untitled1.html",
     "title": "DATA 609 Spring 2025",
     "section": "",
-    "text": "import torch\nimport numpy as np\n\n\ndata = [[1,2],[3,4]]\nx_np = torch.tensor(data)\n\n\nx_np\n\ntensor([[1, 2],\n        [3, 4]])\n\n\n\nx_ones = torch.ones_like(x_np)\n\n\nx_ones\n\ntensor([[1, 1],\n        [1, 1]])\n\n\n\ntensor = torch.rand([3,4])\ntensor\n\ntensor([[0.7128, 0.7650, 0.3626, 0.2875],\n        [0.1374, 0.4504, 0.5289, 0.5267],\n        [0.9375, 0.4076, 0.0897, 0.4854]])\n\n\n\ntensor.device\n\ndevice(type='cpu')\n\n\n\ntorch.cuda.is_available()\n\nFalse\n\n\n\nfrom torch.utils.data import Dataset\nfrom torchvision import datasets\nfrom torchvision.transforms import ToTensor\nimport matplotlib.pyplot as plt\n\n\n\n\n\ntraining_data = datasets.FashionMNIST(\n    root=\"data\",\n    train=True,\n    download=True,\n    transform=ToTensor()\n)\n\nDownloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-images-idx3-ubyte.gz\nDownloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-images-idx3-ubyte.gz to data/FashionMNIST/raw/train-images-idx3-ubyte.gz\n\n\n100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 26.4M/26.4M [00:02&lt;00:00, 12.6MB/s]\n\n\nExtracting data/FashionMNIST/raw/train-images-idx3-ubyte.gz to data/FashionMNIST/raw\n\nDownloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-labels-idx1-ubyte.gz\nDownloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-labels-idx1-ubyte.gz to data/FashionMNIST/raw/train-labels-idx1-ubyte.gz\n\n\n100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 29.5k/29.5k [00:00&lt;00:00, 316kB/s]\n\n\nExtracting data/FashionMNIST/raw/train-labels-idx1-ubyte.gz to data/FashionMNIST/raw\n\nDownloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-images-idx3-ubyte.gz\nDownloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-images-idx3-ubyte.gz to data/FashionMNIST/raw/t10k-images-idx3-ubyte.gz\n\n\n100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4.42M/4.42M [00:00&lt;00:00, 5.80MB/s]\n\n\nExtracting data/FashionMNIST/raw/t10k-images-idx3-ubyte.gz to data/FashionMNIST/raw\n\nDownloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-labels-idx1-ubyte.gz\nDownloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-labels-idx1-ubyte.gz to data/FashionMNIST/raw/t10k-labels-idx1-ubyte.gz\n\n\n100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5.15k/5.15k [00:00&lt;00:00, 17.1MB/s]\n\n\nExtracting data/FashionMNIST/raw/t10k-labels-idx1-ubyte.gz to data/FashionMNIST/raw\n\n\n\n\n\n\n\n\ntest_data = datasets.FashionMNIST(\n    root=\"data\",\n    train=False,\n    download=True,\n    transform=ToTensor()\n)\n\n\nlabels_map = {\n    0: \"T-Shirt\",\n    1: \"Trouser\",\n    2: \"Pullover\",\n    3: \"Dress\",\n    4: \"Coat\",\n    5: \"Sandal\",\n    6: \"Shirt\",\n    7: \"Sneaker\",\n    8: \"Bag\",\n    9: \"Ankle Boot\",\n}\nfigure = plt.figure(figsize=(8, 8))\ncols, rows = 3, 3\nfor i in range(1, cols * rows + 1):\n    sample_idx = torch.randint(len(training_data), size=(1,)).item()\n    img, label = training_data[sample_idx]\n    figure.add_subplot(rows, cols, i)\n    plt.title(labels_map[label])\n    plt.axis(\"off\")\n    plt.imshow(img.squeeze(), cmap=\"gray\")\nplt.show()\n\n\n\n\n\n\n\n\n\nimg, label = training_data[100]\n\nplt.imshow(img.squeeze(),cmap=\"gray\")"
+    "text": "import torch\nimport numpy as np\n\n\ndata = [[1,2],[3,4]]\nx_np = torch.tensor(data)\n\n\nx_np\n\ntensor([[1, 2],\n        [3, 4]])\n\n\n\nx_ones = torch.ones_like(x_np)\n\n\nx_ones\n\ntensor([[1, 1],\n        [1, 1]])\n\n\n\ntensor = torch.rand([3,4])\ntensor\n\ntensor([[0.7128, 0.7650, 0.3626, 0.2875],\n        [0.1374, 0.4504, 0.5289, 0.5267],\n        [0.9375, 0.4076, 0.0897, 0.4854]])\n\n\n\ntensor.device\n\ndevice(type='cpu')\n\n\n\ntorch.cuda.is_available()\n\nFalse\n\n\n\nfrom torch.utils.data import Dataset\nfrom torchvision import datasets\nfrom torchvision.transforms import ToTensor\nimport matplotlib.pyplot as plt\n\n\n\n\n\ntraining_data = datasets.FashionMNIST(\n    root=\"data\",\n    train=True,\n    download=True,\n    transform=ToTensor()\n)\n\nDownloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-images-idx3-ubyte.gz\nDownloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-images-idx3-ubyte.gz to data/FashionMNIST/raw/train-images-idx3-ubyte.gz\n\n\n100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 26.4M/26.4M [00:02&lt;00:00, 12.6MB/s]\n\n\nExtracting data/FashionMNIST/raw/train-images-idx3-ubyte.gz to data/FashionMNIST/raw\n\nDownloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-labels-idx1-ubyte.gz\nDownloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-labels-idx1-ubyte.gz to data/FashionMNIST/raw/train-labels-idx1-ubyte.gz\n\n\n100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 29.5k/29.5k [00:00&lt;00:00, 316kB/s]\n\n\nExtracting data/FashionMNIST/raw/train-labels-idx1-ubyte.gz to data/FashionMNIST/raw\n\nDownloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-images-idx3-ubyte.gz\nDownloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-images-idx3-ubyte.gz to data/FashionMNIST/raw/t10k-images-idx3-ubyte.gz\n\n\n100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4.42M/4.42M [00:00&lt;00:00, 5.80MB/s]\n\n\nExtracting data/FashionMNIST/raw/t10k-images-idx3-ubyte.gz to data/FashionMNIST/raw\n\nDownloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-labels-idx1-ubyte.gz\nDownloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-labels-idx1-ubyte.gz to data/FashionMNIST/raw/t10k-labels-idx1-ubyte.gz\n\n\n100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5.15k/5.15k [00:00&lt;00:00, 17.1MB/s]\n\n\nExtracting data/FashionMNIST/raw/t10k-labels-idx1-ubyte.gz to data/FashionMNIST/raw\n\n\n\n\n\n\n\n\ntest_data = datasets.FashionMNIST(\n    root=\"data\",\n    train=False,\n    download=True,\n    transform=ToTensor()\n)\n\n\nlabels_map = {\n    0: \"T-Shirt\",\n    1: \"Trouser\",\n    2: \"Pullover\",\n    3: \"Dress\",\n    4: \"Coat\",\n    5: \"Sandal\",\n    6: \"Shirt\",\n    7: \"Sneaker\",\n    8: \"Bag\",\n    9: \"Ankle Boot\",\n}\nfigure = plt.figure(figsize=(8, 8))\ncols, rows = 3, 3\nfor i in range(1, cols * rows + 1):\n    sample_idx = torch.randint(len(training_data), size=(1,)).item()\n    img, label = training_data[sample_idx]\n    figure.add_subplot(rows, cols, i)\n    plt.title(labels_map[label])\n    plt.axis(\"off\")\n    plt.imshow(img.squeeze(), cmap=\"gray\")\nplt.show()\n\n\n\n\n\n\n\n\n\nimg, label = training_data[100]\n\nplt.imshow(img.squeeze(),cmap=\"gray\")\nplt.savefig(\"/home/georgehagstrom/work/Teaching/DATA609/website/posts/meetup-14.png\",bbox_inches=\"tight\")"
   },
   {
     "objectID": "meetups/Meetup-13/neural-networks-and-deep-learning-master/Lab_7_Pytorch.html",
@@ -1059,7 +1066,7 @@
     "href": "meetups/Meetup-6/meetup-6.html#intro-to-cvx-6",
     "title": "DATA 609 Meetup 6: Constructing Convex Sets",
     "section": "Intro to CVX",
-    "text": "Intro to CVX\n\nSolve using problem.solve()\n\n\nmargin = 0.2\n\nproblem = cvx.Problem(\n  cvx.Minimize(cvx.norm(x)), # Objective (this one is least squares)\n  [x - x_mean &gt;= -margin , # These are the constraints\n  x - x_mean &lt;= margin]\n)\n\n# Solve the problem\n\nsol = problem.solve()\nprint(sol) # objective\nx.value # optimum\n\n2.544652106886166\n\n\narray([ 8.52573860e-05, -3.83055330e-01, -1.69218938e+00, -5.20428976e-01,\n        9.68477244e-02, -1.78459863e+00])"
+    "text": "Intro to CVX\n\nSolve using problem.solve()\n\n\nmargin = 0.2\n\nproblem = cvx.Problem(\n  cvx.Minimize(cvx.norm(x)), # Objective (this one is least squares)\n  [x - x_mean &gt;= -margin , # These are the constraints\n  x - x_mean &lt;= margin]\n)\n\n# Solve the problem\n\nsol = problem.solve()\nprint(sol) # objective\nx.value # optimum\n\n1.4847272181114657\n\n\narray([ 1.31796923e+00, -3.28502295e-01,  2.78807585e-01, -3.39438634e-06,\n        4.28399150e-01,  3.13366807e-01])"
   },
   {
     "objectID": "meetups/Meetup-6/meetup-6.html#intro-to-cvx-7",
@@ -1073,7 +1080,7 @@
     "href": "meetups/Meetup-6/meetup-6.html#intro-to-cvx-8",
     "title": "DATA 609 Meetup 6: Constructing Convex Sets",
     "section": "Intro to CVX",
-    "text": "Intro to CVX\n\n# Solve the problem\n\nsol = problem.solve()\nprint(sol) # objective\nx.value # optimum\n\n0.8134567357408445\n\n\narray([ 4.40227491e-05, -3.83055322e-01, -1.69218938e+00, -5.20428969e-01,\n        9.68476892e-02, -1.78459868e+00])"
+    "text": "Intro to CVX\n\n# Solve the problem\n\nsol = problem.solve()\nprint(sol) # objective\nx.value # optimum\n\n1.2911671914900207\n\n\narray([ 1.31796923e+00, -3.28502296e-01,  2.78807585e-01,  3.95087610e-06,\n        4.28399150e-01,  3.13366809e-01])"
   },
   {
     "objectID": "meetups/Meetup-6/meetup-6.html#thanks",
@@ -2561,7 +2568,7 @@
     "href": "index.html",
     "title": "Announcements",
     "section": "",
-    "text": "Be sure to check this page regularly for updates. In addition to periodic updates about the course, slides and recordings of the weekly meetups will be posted here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 13: Non-Convex Optimization\n\n\n\n\n\nClick here to read more about Meetup 13 and view/download the lecture slides.\n\n\n\n\n\nApr 28, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 13- Optimization Algorithms\n\n\n\n\n\nClick here to read about Week 13.\n\n\n\n\n\nApr 28, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 12: Duality\n\n\n\n\n\nClick here to read more about Meetup 12 and view/download the lecture slides.\n\n\n\n\n\nApr 21, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 12- Duality\n\n\n\n\n\nClick here to read about Week 12.\n\n\n\n\n\nApr 20, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 11- Stats and Machine Learning\n\n\n\n\n\nClick here to read about Week 11.\n\n\n\n\n\nApr 7, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 11: Statistics\n\n\n\n\n\nClick here to read more about Meetup 11 and view/download the lecture slides.\n\n\n\n\n\nApr 7, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 10: Data Fitting\n\n\n\n\n\nClick here to read more about Meetup 10 and view/download the lecture slides.\n\n\n\n\n\nApr 1, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 10- Data Fitting\n\n\n\n\n\nClick here to read about Week 10.\n\n\n\n\n\nMar 31, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 9: Convex Optimization Problems\n\n\n\n\n\nClick here to read more about Meetup 9 and view/download the lecture slides.\n\n\n\n\n\nMar 24, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 9- Convex Optimization Problems\n\n\n\n\n\nClick here to read about Week 9.\n\n\n\n\n\nMar 24, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 8- Convex Functions\n\n\n\n\n\nClick here to read about Week 8.\n\n\n\n\n\nMar 18, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 8: Constructing Convex Functions\n\n\n\n\n\nClick here to read more about Meetup 8 and view/download the lecture slides.\n\n\n\n\n\nMar 18, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 7: Introduction to Convex Sets\n\n\n\n\n\nClick here to read more about Meetup 7 and view/download the lecture slides.\n\n\n\n\n\nMar 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 7- Convex Functions\n\n\n\n\n\nClick here to read about Week 7.\n\n\n\n\n\nMar 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 6: Introduction to Convex Sets\n\n\n\n\n\nClick here to read more about Meetup 6 and view/download the lecture slides.\n\n\n\n\n\nMar 4, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 6- Constructing Convex Sets\n\n\n\n\n\nClick here to read about Week 6.\n\n\n\n\n\nMar 3, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 5-Convex Sets\n\n\n\n\n\nClick here to read about Week 5.\n\n\n\n\n\nFeb 24, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 5: Introduction to Convex Sets\n\n\n\n\n\nClick here to read more about Meetup 5 and view/download the lecture slides.\n\n\n\n\n\nFeb 17, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 4: Least Squares Data Fitting\n\n\n\n\n\nClick here to read more about Meetup 4 and view/download the lecture slides.\n\n\n\n\n\nFeb 17, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 4- Constrained Least Squares\n\n\n\n\n\nClick here to read about Week 3.\n\n\n\n\n\nFeb 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Vignette- Linear Algebra in R\n\n\n\n\n\nClick here for a video on basic linear algebra in R.\n\n\n\n\n\nFeb 14, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 3: Least Squares Data Fitting\n\n\n\n\n\nClick here to read more about Meetup 3 and view/download the lecture slides.\n\n\n\n\n\nFeb 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 3- Data Fitting\n\n\n\n\n\nClick here to read about Week 3.\n\n\n\n\n\nFeb 9, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Vignette- Writing Math in Markdown\n\n\n\n\n\nClick here for a 20 minute video on writing math in markdown using Latex.\n\n\n\n\n\nFeb 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Vignette- Linear Algebra in Numpy\n\n\n\n\n\nClick here for a video on basic linear algebra in Numpy.\n\n\n\n\n\nFeb 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 2: Least Squares Optimization\n\n\n\n\n\nClick here to read more about Meetup 2 and view/download the lecture slides.\n\n\n\n\n\nFeb 3, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 2- Least Squares\n\n\n\n\n\nClick here to read about Week 2.\n\n\n\n\n\nFeb 2, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 1: Introduction to Optimization\n\n\n\n\n\nClick here to read more about Meetup 1 and view/download the lecture slides.\n\n\n\n\n\nJan 27, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome to DATA 609\n\n\n\n\n\nImportant information on how to get started with this course. Click this post now for instructions on getting started.\n\n\n\n\n\nJan 26, 2025\n\n\n\n\n\n\nNo matching items",
+    "text": "Be sure to check this page regularly for updates. In addition to periodic updates about the course, slides and recordings of the weekly meetups will be posted here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 14: Neural Networks\n\n\n\n\n\nClick here to read more about Meetup 14 and view/download the lecture slides.\n\n\n\n\n\nMay 8, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 14- Optimization Algorithms\n\n\n\n\n\nClick here to read about Week 14.\n\n\n\n\n\nMay 7, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 13: Non-Convex Optimization\n\n\n\n\n\nClick here to read more about Meetup 13 and view/download the lecture slides.\n\n\n\n\n\nApr 28, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 13- Optimization Algorithms\n\n\n\n\n\nClick here to read about Week 13.\n\n\n\n\n\nApr 28, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 12: Duality\n\n\n\n\n\nClick here to read more about Meetup 12 and view/download the lecture slides.\n\n\n\n\n\nApr 21, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 12- Duality\n\n\n\n\n\nClick here to read about Week 12.\n\n\n\n\n\nApr 20, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 11- Stats and Machine Learning\n\n\n\n\n\nClick here to read about Week 11.\n\n\n\n\n\nApr 7, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 11: Statistics\n\n\n\n\n\nClick here to read more about Meetup 11 and view/download the lecture slides.\n\n\n\n\n\nApr 7, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 10: Data Fitting\n\n\n\n\n\nClick here to read more about Meetup 10 and view/download the lecture slides.\n\n\n\n\n\nApr 1, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 10- Data Fitting\n\n\n\n\n\nClick here to read about Week 10.\n\n\n\n\n\nMar 31, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 9: Convex Optimization Problems\n\n\n\n\n\nClick here to read more about Meetup 9 and view/download the lecture slides.\n\n\n\n\n\nMar 24, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 9- Convex Optimization Problems\n\n\n\n\n\nClick here to read about Week 9.\n\n\n\n\n\nMar 24, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 8- Convex Functions\n\n\n\n\n\nClick here to read about Week 8.\n\n\n\n\n\nMar 18, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 8: Constructing Convex Functions\n\n\n\n\n\nClick here to read more about Meetup 8 and view/download the lecture slides.\n\n\n\n\n\nMar 18, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 7: Introduction to Convex Sets\n\n\n\n\n\nClick here to read more about Meetup 7 and view/download the lecture slides.\n\n\n\n\n\nMar 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 7- Convex Functions\n\n\n\n\n\nClick here to read about Week 7.\n\n\n\n\n\nMar 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 6: Introduction to Convex Sets\n\n\n\n\n\nClick here to read more about Meetup 6 and view/download the lecture slides.\n\n\n\n\n\nMar 4, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 6- Constructing Convex Sets\n\n\n\n\n\nClick here to read about Week 6.\n\n\n\n\n\nMar 3, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 5-Convex Sets\n\n\n\n\n\nClick here to read about Week 5.\n\n\n\n\n\nFeb 24, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 5: Introduction to Convex Sets\n\n\n\n\n\nClick here to read more about Meetup 5 and view/download the lecture slides.\n\n\n\n\n\nFeb 17, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 4: Least Squares Data Fitting\n\n\n\n\n\nClick here to read more about Meetup 4 and view/download the lecture slides.\n\n\n\n\n\nFeb 17, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 4- Constrained Least Squares\n\n\n\n\n\nClick here to read about Week 3.\n\n\n\n\n\nFeb 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Vignette- Linear Algebra in R\n\n\n\n\n\nClick here for a video on basic linear algebra in R.\n\n\n\n\n\nFeb 14, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 3: Least Squares Data Fitting\n\n\n\n\n\nClick here to read more about Meetup 3 and view/download the lecture slides.\n\n\n\n\n\nFeb 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 3- Data Fitting\n\n\n\n\n\nClick here to read about Week 3.\n\n\n\n\n\nFeb 9, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Vignette- Writing Math in Markdown\n\n\n\n\n\nClick here for a 20 minute video on writing math in markdown using Latex.\n\n\n\n\n\nFeb 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Vignette- Linear Algebra in Numpy\n\n\n\n\n\nClick here for a video on basic linear algebra in Numpy.\n\n\n\n\n\nFeb 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 2: Least Squares Optimization\n\n\n\n\n\nClick here to read more about Meetup 2 and view/download the lecture slides.\n\n\n\n\n\nFeb 3, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 2- Least Squares\n\n\n\n\n\nClick here to read about Week 2.\n\n\n\n\n\nFeb 2, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup 1: Introduction to Optimization\n\n\n\n\n\nClick here to read more about Meetup 1 and view/download the lecture slides.\n\n\n\n\n\nJan 27, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome to DATA 609\n\n\n\n\n\nImportant information on how to get started with this course. Click this post now for instructions on getting started.\n\n\n\n\n\nJan 26, 2025\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Announcements"
     ]
@@ -3314,7 +3321,7 @@
     "href": "meetups/Meetup-2/meetup-2.html#condition-number-and-accuracy",
     "title": "Meetup 2: Least Squares",
     "section": "Condition Number and Accuracy",
-    "text": "Condition Number and Accuracy\n\nAccuracy of np.linalg.inv(A) @ b related to \\(\\frac{\\sigma_{max}}{\\sigma_{min}}\\)\nThis is called the “condition number” of the matrix \\(A\\)\n\n\n%timeit np.linalg.inv(A) @ b\n%timeit np.linalg.solve(A,b)\n\nx1 = np.linalg.inv(A) @ b\nx2 = np.linalg.solve(A,b)\n\nprint(\"Matrix Inverse Error: \",np.linalg.norm(A @ x1 - b))\nprint(\"Linear Solve Error: \",np.linalg.norm(A @ x2 - b))\n\n5.89 ms ± 767 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)\n978 µs ± 200 µs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)\nMatrix Inverse Error:  2.4578559910875755e-07\nLinear Solve Error:  2.4822147246160177e-15\n\n\n\n100 million times more accurate, 5 times faster"
+    "text": "Condition Number and Accuracy\n\nAccuracy of np.linalg.inv(A) @ b related to \\(\\frac{\\sigma_{max}}{\\sigma_{min}}\\)\nThis is called the “condition number” of the matrix \\(A\\)\n\n\n%timeit np.linalg.inv(A) @ b\n%timeit np.linalg.solve(A,b)\n\nx1 = np.linalg.inv(A) @ b\nx2 = np.linalg.solve(A,b)\n\nprint(\"Matrix Inverse Error: \",np.linalg.norm(A @ x1 - b))\nprint(\"Linear Solve Error: \",np.linalg.norm(A @ x2 - b))\n\n6.58 ms ± 994 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)\n1.51 ms ± 348 µs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)\nMatrix Inverse Error:  3.0468291653286985e-07\nLinear Solve Error:  2.0808852299666874e-15\n\n\n\n100 million times more accurate, 5 times faster"
   },
   {
     "objectID": "meetups/Meetup-2/meetup-2.html#issue-is-worse-for-ata",
@@ -3587,7 +3594,7 @@
     "href": "meetups/Meetup-14/meetup-14.html#tensors-3",
     "title": "DATA 609 Meetup 14: Neural Networks",
     "section": "tensors",
-    "text": "tensors\n\nloss.backward() updated the tensors w and b to include the gradient with respect to loss \\[\n\\frac{\\partial \\mathrm{loss}}{\\partial \\mathbf{w}},\\quad \\frac{\\partial \\mathrm{loss}}{\\partial \\mathbf{b}},\n\\]\n\n\nprint(w.grad)\nprint(b.grad)\n\ntensor([[0.2354, 0.3229, 0.3329],\n        [0.2354, 0.3229, 0.3329],\n        [0.2354, 0.3229, 0.3329],\n        [0.2354, 0.3229, 0.3329],\n        [0.2354, 0.3229, 0.3329]])\ntensor([0.2354, 0.3229, 0.3329])"
+    "text": "tensors\n\nloss.backward() updated the tensors w and b to include the gradient with respect to loss \\[\n\\frac{\\partial \\mathrm{loss}}{\\partial \\mathbf{w}},\\quad \\frac{\\partial \\mathrm{loss}}{\\partial \\mathbf{b}},\n\\]\n\n\nprint(w.grad)\nprint(b.grad)\n\ntensor([[0.1191, 0.3021, 0.2358],\n        [0.1191, 0.3021, 0.2358],\n        [0.1191, 0.3021, 0.2358],\n        [0.1191, 0.3021, 0.2358],\n        [0.1191, 0.3021, 0.2358]])\ntensor([0.1191, 0.3021, 0.2358])"
   },
   {
     "objectID": "meetups/Meetup-14/meetup-14.html#dataloaders",
@@ -3664,7 +3671,7 @@
     "href": "meetups/Meetup-4/HW1Review.html#most-common-mistake",
     "title": "Lab 1 Review",
     "section": "Most Common Mistake",
-    "text": "Most Common Mistake\n\nMany of you then concluded:\n\n\\[ AA^{+}b - b = 0\\]\n\nSeveral justification, but:\n\n\nA = matrix(rnorm(40),nrow=10,ncol=4)\nb = rnorm(10)\n\nt(A  %*% solve(t(A) %*% A) %*% t(A) %*%  b)\n\n           [,1]      [,2]      [,3]       [,4]       [,5]      [,6]       [,7]\n[1,] -0.4426809 -1.216504 0.8107622 -0.2982815 -0.1864081 0.3244248 -0.3925243\n          [,8]        [,9]     [,10]\n[1,] 0.3713549 -0.07903394 0.3285696"
+    "text": "Most Common Mistake\n\nMany of you then concluded:\n\n\\[ AA^{+}b - b = 0\\]\n\nSeveral justification, but:\n\n\nA = matrix(rnorm(40),nrow=10,ncol=4)\nb = rnorm(10)\n\nt(A  %*% solve(t(A) %*% A) %*% t(A) %*%  b)\n\n          [,1]        [,2]       [,3]      [,4]       [,5]      [,6]      [,7]\n[1,] 0.7400058 -0.06506736 -0.9186806 -0.651446 -0.2473125 0.1967739 0.2576095\n          [,8]     [,9]    [,10]\n[1,] 0.2729665 -1.45856 1.398119"
   },
   {
     "objectID": "meetups/Meetup-4/HW1Review.html#why-isnt-it-true",
@@ -4589,67 +4596,74 @@
     "text": "Meetup 1 is tonight at 6:45PM. We are going to talk about what optimization is, some of its applications, the course structure, and some very basic facts about its theory.\nHere is the information you need for the first meetup:\n\nGo through the course overview materials, and complete the week 1 readings.\nAttend our first meetup on Monday at 6:45 p.m. ET on Zoom\nClick here for slides"
   },
   {
-    "objectID": "posts/2025-04-07-Week-11-Stats-and-ML.html",
-    "href": "posts/2025-04-07-Week-11-Stats-and-ML.html",
-    "title": "Week 11- Stats and Machine Learning",
+    "objectID": "posts/2025-05-08-Meetup-14-Neural-Networks.html",
+    "href": "posts/2025-05-08-Meetup-14-Neural-Networks.html",
+    "title": "Meetup 14: Neural Networks",
     "section": "",
-    "text": "Welcome to Week 11. During this week we will cover the beginning of Chapter 7 of CVX-book, which focuses on both parametric and non-parametric statistics applications of convex optimization, and section 8.6 of CVX-book, which focuses on classication. We will revisit maximum likelihood methods and introduce maximum a posteriori methods. We will talk about entropy maximimization and the KL-divergence, and then introduce support vector machines for classification.\nYour sixth homework assignment is due three weeks from today, Sunday April 27th at midnight.\nHere are more details on what you need to do this week:\n\nGo through module 11 and complete the week 11 readings.\nAttend our second meetup on Monday at 6:45 p.m. ET on Zoom\nFinish working on Lab 6"
+    "text": "I have uploaded the slides for Meetup 14\nWe will introduce the concept of neural networks and show how they can be fit using pytorch\n\nClick here for slides"
   },
   {
-    "objectID": "posts/2025-02-16-Week-4-Constrained-Least-Squares.html",
-    "href": "posts/2025-02-16-Week-4-Constrained-Least-Squares.html",
-    "title": "Week 4- Constrained Least Squares",
+    "objectID": "posts/2025-03-10-Meetup-7-Slides.html",
+    "href": "posts/2025-03-10-Meetup-7-Slides.html",
+    "title": "Meetup 7: Introduction to Convex Sets",
     "section": "",
-    "text": "This week we will learn how to deal with linear equality constraints in least squares optimization problems. There will be a discussion of Lagrange multipliers, and application examples will include B-splines and portfolio optimization. Constraints are a critical part of both optimization problems and modeling in general.\nYour second homework assignment will be due Sunday February 23rd.\nHere are more details on what you need to do this week:\n\nGo through module 4 and complete the week 4 readings.\nAttend our second meetup on Monday at 6:45 p.m. ET on Zoom\nContinue working on Lab 2"
+    "text": "I have uploaded the slides for Meetup 7.\nWe will learn about convex functions, including the definition, their importance for optimization, and simple examples. We will also talk about Jensen’s inequality and its applications to risk.\n\nClick here for slides\nWatch Meetup 7 Here"
   },
   {
-    "objectID": "posts/2025-01-26-Welcome_to_DATA_609.html",
-    "href": "posts/2025-01-26-Welcome_to_DATA_609.html",
-    "title": "Welcome to DATA 609",
+    "objectID": "posts/2025-04-28-Meetup-13.html",
+    "href": "posts/2025-04-28-Meetup-13.html",
+    "title": "Meetup 13: Non-Convex Optimization",
     "section": "",
-    "text": "Welcome to DATA 609, Math Modeling Techniques.\nClick this post now to get started!\nHere are the first steps:\n\nRead the syllabus.\nGo through the course overview materials, and complete the week 1 readings.\nJoin our Slack channel:\n\nAttend our first meetup on Monday at 6:45 p.m. ET on Zoom\n\nI recorded a short video which introduces me and gives you more background on the course:\n\nClick here for slides"
+    "text": "I have uploaded the slides for Meetup 13\nWe are going to learn about methods for solving non-convex optimization problems that are useful specifically for training neural networks.\n\nClick here for slides"
   },
   {
-    "objectID": "posts/2025-02-02-Week-2-Least-Squares.html",
-    "href": "posts/2025-02-02-Week-2-Least-Squares.html",
-    "title": "Week 2- Least Squares",
+    "objectID": "posts/2025-04-01-Meetup-10-Data-Fitting.html",
+    "href": "posts/2025-04-01-Meetup-10-Data-Fitting.html",
+    "title": "Meetup 10: Data Fitting",
     "section": "",
-    "text": "This week we will talk about the most basic and most important class of optimization problems, least squares optimization. Whenever you fit a linear regression, you are solving a least squares problems, and least squares methods have applications across all quantitative fields. Although least squares methods are simple, they should not be dismissed- the fact that we can solve them rapidly, reliably means that it is useful to know how to formulate them in applied situations and how to solve them.\nIn this week we will go over the basics and a few simple applications, while the two weeks after this will explore data fitting examples and how to handle more complicated cases.\nYour first homework assignment will be due next Sunday.\nHere are more details on what you need to do this week:\n\nGo through module 2 and complete the week 2 readings.\nAttend our second meetup on Monday at 6:45 p.m. ET on Zoom\nContinue working on Lab 1"
+    "text": "I have uploaded the slides and video for Meetup 10.\nWe discussed the meaning of different norms and penalty functions used in data fitting, talked about the trade-offs between different regularization schemes, and robust optimization in both the stochastic and worst case frameworks.\n\nClick here for slides\nClick here to watch the meetup video"
   },
   {
-    "objectID": "posts/2025-04-21-Meetup-12-Duality.html",
-    "href": "posts/2025-04-21-Meetup-12-Duality.html",
-    "title": "Meetup 12: Duality",
+    "objectID": "posts/2025-02-24-Week-5-Convex-Sets.html",
+    "href": "posts/2025-02-24-Week-5-Convex-Sets.html",
+    "title": "Week 5-Convex Sets",
     "section": "",
-    "text": "I have uploaded the slides for Meetup 12\nWe are going to talk about the concept of duality and how to use it to learn about your optimization problem.\n\nClick here for slides\nClick here to watch the meetup video"
+    "text": "During this week we will begin learning the tools we need to formulate and solve convex optimization problems. We will talk more about general optimization problems and look at convexity from the perspective of constraints. We will present the definition of a convex set and give several example, and discuss how these examples arise when formulating problems.\nYour third homework assignment has been posted and is going to be due two Sundays from now.\nHere are more details on what you need to do this week:\n\nGo through module 5 and complete the week 4 readings.\nAttend our second meetup on Monday at 6:45 p.m. ET on Zoom\nBegin working on Lab 3"
   },
   {
-    "objectID": "posts/2025-04-07-Meetup-11-Statistics.html",
-    "href": "posts/2025-04-07-Meetup-11-Statistics.html",
-    "title": "Meetup 11: Statistics",
+    "objectID": "posts/2025-03-10-Week-7.html",
+    "href": "posts/2025-03-10-Week-7.html",
+    "title": "Week 7- Convex Functions",
     "section": "",
-    "text": "I have uploaded the slides for Meetup 11\nWe are going to talk about applications of convex optimization to statistics and classification.\n\nClick here for slides\nClick here to watch the meetup video"
+    "text": "During this week, we will begin learning about convex functions, which will be the objective functions for convex optimization problems. We will go over the definition of convexity and present a number of different examples of convex functions. We will discuss what convexity means and why it is such a crucial property for optimization theory. We will talk about Jensen’s inequality and discuss some applications to risk in uncertain situations.\nYour fourth homework assignment is available this Sunday at midnight.\nHere are more details on what you need to do this week:\n\nGo through module 7 and complete the week 7 readings.\nAttend our second meetup on Monday at 6:45 p.m. ET on Zoom\nBegin working on Lab 4"
   },
   {
-    "objectID": "posts/2025-03-24-Meetup-9-Slides.html",
-    "href": "posts/2025-03-24-Meetup-9-Slides.html",
-    "title": "Meetup 9: Convex Optimization Problems",
+    "objectID": "posts/2025-04-28-Week-13-Optimization-Algorithms.html",
+    "href": "posts/2025-04-28-Week-13-Optimization-Algorithms.html",
+    "title": "Week 13- Optimization Algorithms",
     "section": "",
-    "text": "I have uploaded the slides for Meetup 9.\nWe will discuss log-concave functions, a topic which was missed the past two weeks, and then discuss methods for transforming optimization problems, geometric programs, and multicriterion optimization.\n\nClick here for slides"
+    "text": "Welcome to Week 13. During this week, we will turn our attention to non-convex problems and methods for solving them. In general, we can only guarantee convergence to a local minimum, but there are several algorithms that can find a very advantageous local minimum in the context of machine learning problems like training neural networks. The focus will be on gradient descent, and improvement which handles large condition numbers better called gradient descent with momentum, and adaptive algorithms which are often the default choice for training neural networks such as ADAM.\nYour final homework assignment is due May 18th at the latest.\nHere are more details on what you need to do this week:\n\nGo through module 11 and complete the week 13 readings.\nAttend our second meetup on Monday at 6:45 p.m. ET on Zoom\nBegin working on Lab 7 (available soon)"
   },
   {
-    "objectID": "posts/2025-02-10-Data-Fitting.html",
-    "href": "posts/2025-02-10-Data-Fitting.html",
-    "title": "Week 3- Data Fitting",
+    "objectID": "posts/2025-03-31-Week-10-Data-Fitting.html",
+    "href": "posts/2025-03-31-Week-10-Data-Fitting.html",
+    "title": "Week 10- Data Fitting",
     "section": "",
-    "text": "This week, we will discuss applications of least squares methods to statistics and data fitting. This will include weighted least squares methods for linear regression, function interpolation, auto-regressive models, and feature engineering, and generalization/regularization.\nYour second homework assignment will be due Sunday February 23rd.\nHere are more details on what you need to do this week:\n\nGo through module 3 and complete the week 3 readings.\nAttend our second meetup on Monday at 6:45 p.m. ET on Zoom\nBegin working on Lab 2"
+    "text": "Welcome to Week 10. During this week we will cover Chapter 6 of CVX-book, which focuses on data fitting applications of convex optimization. We will talk about the meaning of different norms and penalty functions which can be imposed when trying to fit data. Three primary topics will be robustness to outliers, regularization and sparsity, and stochastic and worst case approximation, amongst others.\nYour fifth homework assignment is due next Sunday at midnight.\nHere are more details on what you need to do this week:\n\nGo through module 9 and complete the week 10 readings.\nAttend our second meetup on Monday at 6:45 p.m. ET on Zoom\nFinish working on Lab 5"
   },
   {
-    "objectID": "posts/2025-03-18-Meetup-8-Slides.html",
-    "href": "posts/2025-03-18-Meetup-8-Slides.html",
-    "title": "Meetup 8: Constructing Convex Functions",
+    "objectID": "posts/2025-02-24-Meetup-5-Slides.html",
+    "href": "posts/2025-02-24-Meetup-5-Slides.html",
+    "title": "Meetup 5: Introduction to Convex Sets",
     "section": "",
-    "text": "I have uploaded the slides for Meetup 8.\nWe discussed rules for constructing convex functions and showing that functions are convex. In particular, we learned that positive weighted sums of convex functions are convex (both finite and infinite), that this extends to integration, and that maximization of convex functions (both finite and infinite) both preserve convexity. Then we discussed composition, presenting both scalar and vector composition rules.\n\nClick here for slides\nWatch Meetup 8 Here"
+    "text": "I have uploaded the slides for Meetup 5, which happened tonight at 6:45PM\nWe will learn about convex optimization and examples of convex sets, which are used as constraints in convex optimization problems.\n\nClick here for slides"
+  },
+  {
+    "objectID": "posts/2025-02-10-Meetup-3-Slides.html",
+    "href": "posts/2025-02-10-Meetup-3-Slides.html",
+    "title": "Meetup 3: Least Squares Data Fitting",
+    "section": "",
+    "text": "Meetup 3 is tonight at 6:45PM. We will tall about applications of least squares to problems in statistics and data fitting, including the use of weighted least squares for problems with heterogeneous or dependent errors, function interpolation and autoregressive time-series models, validation and regularization, ridge regression, and feature engineering.\nHere is the information you need for the first meetup:\n\nGo through the course overview materials, and complete the week 3 readings.\nAttend our first meetup on Monday at 6:45 p.m. ET on Zoom\nClick here for slides"
   },
   {
     "objectID": "posts/2025-02-14-Linear-Algebra-In_R.html",
